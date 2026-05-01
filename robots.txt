@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://synchrovie.github.io/sitemap.xml
