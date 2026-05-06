@@ -1203,3 +1203,4 @@ footer {
     .whatsapp-float, .back-to-top, .top-bar, header { display: none; }
     body { background: white; color: black; }
 }
+/* Masquer les anciens prix sur l'ensemble du site */ del,s,.ancien-prix { display: none !important;}
