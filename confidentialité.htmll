@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité | Synchrovie - Protection de vos Données Personnelles</title>
+    <meta name="description" content="Découvrez comment Synchrovie protège vos données personnelles. Transparence totale sur la collecte, l'utilisation et la sécurité de vos informations médicales et commerciales.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://synchrovie.github.io/confidentialite.html">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span>🔒 Vos données sont protégées selon le RGPD</span>
+            <span>🛡️ Chiffrement SSL 256 bits</span>
+        </div>
+    </div>
+
+    <header id="mainHeader">
+        <div class="header-inner">
+            <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+            <a href="index.html" class="logo">SYNCHROVIE</a>
+            <nav class="nav-desktop">
+                <a href="index.html">Accueil</a>
+                <a href="index.html#boutique">Boutique</a>
+                <a href="blog.html">Blog</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container-small legal-page">
+        <a href="index.html" class="back-link">← Retour à l'accueil</a>
+        
+        <h1>Politique de Confidentialité</h1>
+        <p class="legal-intro">Dernière mise à jour : 15 janvier 2025</p>
+
+        <div class="legal-alert">
+            <strong>🔒 Votre vie privée est sacrée.</strong> Synchrovie s'engage à protéger vos données personnelles avec la rigueur d'un laboratoire médical. Cette politique explique en toute transparence comment nous collectons, utilisons et sécurisons vos informations.
+        </div>
+
+        <section class="legal-section">
+            <h2>1. Responsable du Traitement des Données</h2>
+            <div class="legal-box">
+                <p><strong>Synchrovie</strong><br>
+                Représenté par Diougamady Keita, Fondateur<br>
+                Adresse : Bamako, Mali<br>
+                Email : <a href="mailto:synchrovie@gmail.com">synchrovie@gmail.com</a><br>
+                Téléphone : <a href="tel:+22360625155">+223 60 62 51 55</a></p>
+            </div>
+        </section>
+
+        <section class="legal-section">
+            <h2>2. Données Collectées et Finalités</h2>
+            
+            <h3>2.1 Données de Navigation (Automatiques)</h3>
+            <ul>
+                <li><strong>Cookies techniques essentiels</strong> : panier, préférences langue, session de navigation</li>
+                <li><strong>Logs serveur</strong> : adresse IP anonymisée, navigateur, système d'exploitation, pages consultées</li>
+                <li><strong>Finalité</strong> : fonctionnement du site, sécurité, statistiques anonymes</li>
+                <li><strong>Base légale</strong> : intérêt légitime (art. 6.1.f RGPD)</li>
+                <li><strong>Durée de conservation</strong> : 13 mois maximum</li>
+            </ul>
+
+            <h3>2.2 Données de Commande (Vous les fournissez)</h3>
+            <ul>
+                <li><strong>Identité</strong> : nom, prénom, email, téléphone</li>
+                <li><strong>Livraison</strong> : adresse postale complète</li>
+                <li><strong>Paiement</strong> : données traitées par CinetPay (nous ne conservons JAMAIS vos coordonnées bancaires)</li>
+                <li><strong>Finalité</strong> : exécution de votre commande, facturation, service client, garantie légale</li>
+                <li><strong>Base légale</strong> : exécution du contrat (art. 6.1.b RGPD)</li>
+                <li><strong>Durée de conservation</strong> : 
+                    <ul>
+                        <li>Données transactionnelles : 10 ans (obligation fiscale)</li>
+                        <li>Données personnelles : supprimées 3 ans après votre dernière commande</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>2.3 Données Marketing (Avec votre consentement)</h3>
+            <ul>
+                <li><strong>Newsletter</strong> : email, prénom, centres d'intérêt (bio-monitoring, sommeil, etc.)</li>
+                <li><strong>Finalité</strong> : envoi de guides santé, protocoles experts, offres personnalisées</li>
+                <li><strong>Base légale</strong> : consentement explicite (opt-in)</li>
+                <li><strong>Fréquence</strong> : 1 email par semaine maximum, désabonnement en 1 clic</li>
+                <li><strong>Durée de conservation</strong> : jusqu'à votre désabonnement + 3 ans</li>
+            </ul>
+
+            <h3>2.4 Avis Clients</h3>
+            <ul>
+                <li><strong>Données</strong> : prénom, initiale du nom, ville, note, commentaire</li>
+                <li><strong>Finalité</strong> : affichage public d'avis vérifiés (preuve sociale)</li>
+                <li><strong>Base légale</strong> : consentement lors de la soumission</li>
+                <li><strong>Modération</strong> : nous vérifions que chaque avis provient d'un achat réel</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h2>3. Partage de Vos Données</h2>
+            <p><strong>Nous ne vendons JAMAIS vos données.</strong> Vos informations ne sont partagées qu'avec :</p>
+            
+            <div class="legal-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Partenaire</th>
+                            <th>Données Partagées</th>
+                            <th>Finalité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>CinetPay</strong> (paiement)</td>
+                            <td>Email, montant transaction</td>
+                            <td>Sécurisation du paiement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Transporteurs</strong> (DHL, Colissimo)</td>
+                            <td>Nom, adresse, téléphone</td>
+                            <td>Livraison de votre commande</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mailchimp/Brevo</strong> (emailing)</td>
+                            <td>Email, prénom</td>
+                            <td>Envoi de la newsletter (si abonné)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Google Analytics</strong> (stats)</td>
+                            <td>IP anonymisée, comportement</td>
+                            <td>Amélioration du site (désactivable)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p class="legal-note">🌍 <strong>Transferts hors UE</strong> : Mailchimp (USA) et Google sont certifiés Privacy Shield/clauses contractuelles types. Vos données bénéficient des mêmes protections qu'en Europe.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>4. Sécurité de Vos Données</h2>
+            <ul>
+                <li>🔒 <strong>Chiffrement SSL/TLS 256 bits</strong> pour toutes les communications</li>
+                <li>🛡️ <strong>Serveurs sécurisés</strong> avec pare-feu, sauvegardes quotidiennes</li>
+                <li>👤 <strong>Accès restreint</strong> : seuls les employés autorisés accèdent à vos données</li>
+                <li>🔐 <strong>Mots de passe hashés</strong> : même nous ne pouvons pas lire votre mot de passe</li>
+                <li>🚨 <strong>Notification de faille</strong> : en cas de violation, vous êtes informé sous 72h</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h2>5. Vos Droits (RGPD)</h2>
+            <p>Vous disposez d'un contrôle total sur vos données personnelles :</p>
+            
+            <div class="legal-rights">
+                <div class="right-card">
+                    <h4>✅ Droit d'Accès</h4>
+                    <p>Obtenez une copie de toutes les données que nous détenons sur vous.</p>
+                </div>
+                <div class="right-card">
+                    <h4>✏️ Droit de Rectification</h4>
+                    <p>Corrigez toute information incorrecte ou incomplète.</p>
+                </div>
+                <div class="right-card">
+                    <h4>🗑️ Droit à l'Effacement</h4>
+                    <p>Demandez la suppression de vos données (sauf obligations légales).</p>
+                </div>
+                <div class="right-card">
+                    <h4>⏸️ Droit à la Limitation</h4>
+                    <p>Suspendez temporairement l'utilisation de vos données.</p>
+                </div>
+                <div class="right-card">
+                    <h4>📤 Droit à la Portabilité</h4>
+                    <p>Récupérez vos données dans un format structuré (CSV, JSON).</p>
+                </div>
+                <div class="right-card">
+                    <h4>🚫 Droit d'Opposition</h4>
+                    <p>Refusez le traitement marketing ou profilage.</p>
+                </div>
+            </div>
+
+            <p class="legal-cta"><strong>Pour exercer ces droits :</strong><br>
+            📧 Email : <a href="mailto:synchrovie@gmail.com">synchrovie@gmail.com</a> (objet : "Exercice de mes droits RGPD")<br>
+            💬 WhatsApp : <a href="https://wa.me/22360625155">+223 60 62 51 55</a><br>
+            ⏱️ <strong>Délai de réponse</strong> : 1 mois maximum (renouvelable 2 mois si complexe)</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>6. Cookies et Technologies Similaires</h2>
+            <p>Voir notre <a href="cookies.html" class="legal-link">Politique de Gestion des Cookies</a> pour le détail. En résumé :</p>
+            <ul>
+                <li><strong>Cookies strictement nécessaires</strong> : activés par défaut (panier, sécurité)</li>
+                <li><strong>Cookies de performance</strong> (Google Analytics) : vous pouvez refuser via notre bandeau</li>
+                <li><strong>Cookies marketing</strong> (Facebook Pixel) : désactivables à tout moment</li>
+            </ul>
+        </section>
+
+        <section class="legal-section">
+            <h2>7. Mineurs</h2>
+            <p>Nos produits de santé sont destinés aux adultes. Nous ne collectons <strong>jamais</strong> sciemment de données d'enfants de moins de 16 ans sans consentement parental. Si vous pensez qu'un mineur a fourni des données, contactez-nous immédiatement.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>8. Modifications de Cette Politique</h2>
+            <p>Nous pouvons mettre à jour cette politique pour refléter les évolutions légales ou nos pratiques. Toute modification majeure sera notifiée par email (si abonné) ou via un bandeau sur le site. La version en vigueur est toujours disponible sur cette page avec sa date de mise à jour.</p>
+        </section>
+
+        <section class="legal-section">
+            <h2>9. Autorité de Contrôle</h2>
+            <p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez introduire une réclamation auprès de la <strong>Commission Nationale de l'Informatique et des Libertés (CNIL)</strong> en France :<br>
+            🌐 <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a><br>
+            📧 <a href="mailto:contact@cnil.fr">contact@cnil.fr</a></p>
+        </section>
+
+        <div class="legal-footer-cta">
+            <h3>Des Questions sur Vos Données ?</h3>
+            <p>Notre Data Protection Officer est à votre écoute.</p>
+            <a href="contact.html" class="btn btn-primary">💬 Nous Contacter</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-bottom">
+            <p class="footer-copyright">© 2025 Synchrovie. Vos données personnelles sont protégées selon le RGPD.</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
