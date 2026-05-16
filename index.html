@@ -40,6 +40,89 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
+        /* ===== HERO IMAGE ===== */
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-visual {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 420px;
+            padding: 60px 24px;
+        }
+        .hero-visual::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 70% 50%, rgba(0,224,255,0.08) 0%, transparent 60%),
+                        radial-gradient(ellipse at 30% 80%, rgba(0,201,167,0.06) 0%, transparent 50%);
+            z-index: 1;
+        }
+        .hero-img-wrap {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        .hero-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.35;
+            mask-image: linear-gradient(to left, rgba(0,0,0,0.6), transparent);
+            -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,0.6), transparent);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 680px;
+        }
+
+        /* ===== CATEGORY IMAGES ===== */
+        .category-card {
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .category-card-img {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+        .category-card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.3;
+            transition: opacity 0.4s, transform 0.6s;
+        }
+        .category-card:hover .category-card-img img {
+            opacity: 0.45;
+            transform: scale(1.05);
+        }
+        .category-card .category-icon,
+        .category-card h3,
+        .category-card p,
+        .category-card .category-count {
+            position: relative;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .hero-img-wrap { width: 100%; opacity: 0.2; }
+            .hero-visual { min-height: 360px; padding: 40px 16px; }
+            .category-card { min-height: 220px; }
+        }
+
         /* ===== BADGES DE CONFIANCE & RÉASSURANCE — BOOST CONVERSION ===== */
         .trust-strip {
             background: linear-gradient(135deg, #0d2137 0%, #0B1B3D 100%);
@@ -455,8 +538,12 @@
 
     <main>
         <section class="hero">
-            <div class="hero-content">
-                <h1>Synchronisez Votre Biologie<br>avec Vos <span class="highlight">Ambitions.</span></h1>
+            <div class="hero-visual">
+                <div class="hero-img-wrap">
+                    <img src="assets/img/hero/hero-synchrovie-2026.webp" alt="Synchrovie — Technologies de bio-optimisation et santé connectée" width="1344" height="768" fetchpriority="high">
+                </div>
+                <div class="hero-content">
+                    <h1>Synchronisez Votre Biologie<br>avec Vos <span class="highlight">Ambitions.</span></h1>
                 <p class="hero-subtitle">24 technologies d'élite pour mesurer, optimiser et transformer votre santé. Bio-monitoring, neuro-sommeil, biofeedback et performance physique — livrées en 3 à 7 jours en Europe.</p>
                 <div class="hero-cta">
                     <a href="#boutique" class="btn btn-primary btn-magnet">ACCÉDER AU CATALOGUE</a>
@@ -483,30 +570,35 @@
                     <span>Garantie 2 ans</span>
                 </div>
             </div>
+            </div>
         </section>
 
         <section class="categories-section" id="categories">
             <h2 class="section-title">Nos Univers de Performance</h2>
             <div class="categories-grid">
                 <a href="#cat-bio" class="category-card" data-category="bio">
+                    <div class="category-card-img"><img src="assets/img/categories/bio-monitoring.webp" alt="Bio-Monitoring et santé préventive — Technologies de suivi biométrique Synchrovie" loading="lazy" width="864" height="1152"></div>
                     <div class="category-icon">+</div>
                     <h3>Bio-Monitoring & Santé Préventive</h3>
                     <p>Mesurez ce qui compte. 6 instruments de précision pour vos données biologiques.</p>
                     <span class="category-count">6 produits</span>
                 </a>
                 <a href="#cat-sommeil" class="category-card" data-category="sommeil">
+                    <div class="category-card-img"><img src="assets/img/categories/neuro-sommeil.webp" alt="Neuro-Sommeil et récupération — Technologies d'optimisation du sommeil Synchrovie" loading="lazy" width="864" height="1152"></div>
                     <div class="category-icon">+</div>
                     <h3>Neuro-Sommeil & Récupération</h3>
                     <p>Reprogrammez vos nuits. +23% de sommeil profond garanti.</p>
                     <span class="category-count">6 produits</span>
                 </a>
                 <a href="#cat-biofeedback" class="category-card" data-category="biofeedback">
+                    <div class="category-card-img"><img src="assets/img/categories/biofeedback.webp" alt="Biofeedback et sérénité mentale — Technologies de gestion du stress Synchrovie" loading="lazy" width="864" height="1152"></div>
                     <div class="category-icon">+</div>
                     <h3>Biofeedback & Sérénité Mentale</h3>
                     <p>Reprenez le contrôle. Biofeedback en temps réel.</p>
                     <span class="category-count">6 produits</span>
                 </a>
                 <a href="#cat-performance" class="category-card" data-category="performance">
+                    <div class="category-card-img"><img src="assets/img/categories/performance-physique.webp" alt="Performance et équilibre physique — Technologies de stimulation et récupération Synchrovie" loading="lazy" width="864" height="1152"></div>
                     <div class="category-icon">+</div>
                     <h3>Performance & Équilibre Physique</h3>
                     <p>Dépassez vos limites. Renforcez, corrigez, récupérez.</p>
