@@ -3,7 +3,7 @@
   <!-- Page principale -->
   <url>
     <loc>https://synchrovie.github.io/Boutique-SynchroVie/</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,7 +11,7 @@
   <!-- Pages annexes -->
   <url>
     <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog.html</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -58,28 +58,94 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- ===== ARTICLES DE BLOG ===== -->
+  <!-- ===== ARTICLES DE BLOG (15 articles) ===== -->
   <url>
     <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/technologies-neuro-sommeil-2026.html</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/guide-bague-connectee-biometrique.html</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/coherence-cardiaque-biofeedback-guide.html</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/performance-physique-stimulation-ems.html</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/vfc-variabilite-frequence-cardiaque-biomarkeur-longevite.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/surveiller-coeur-domicile-moniteur-ecg-portable.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/glycemie-sans-piqure-analyseur-non-invasif.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/balance-impedancemetre-comprendre-composition-corporelle.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/tension-arterielle-connectee-5-erreurs-mesures.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/meditation-eeg-bandeau-cerebral-etats-flow.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/capteur-stress-eda-gerer-anxiete-temps-reel.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/bague-controle-cortisol-stress-invisible-mesurable.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/correcteur-posture-haptique-reeduquer-dos-intelligemment.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/recuperation-musculaire-technologies-pointe-athletes.html</loc>
+    <lastmod>2026-05-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/blog/biofeedback-respiration-pierre-vibratoire-calme.html</loc>
+    <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
