@@ -23,7 +23,7 @@
     <meta property="og:description" content="Mesurez votre glycémie sans piqûre. Technologie spectroscopie infrarouge. 298 EUR. Livraison offerte.">
     <meta property="og:url" content="https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html">
     <meta property="og:site_name" content="Synchrovie">
-    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp">
+    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie.webp">
     <meta property="og:locale" content="fr_FR">
     <meta property="product:price:amount" content="298">
     <meta property="product:price:currency" content="EUR">
@@ -31,7 +31,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Glucose-Check Air — Glycémie Sans Piqûre">
     <meta name="twitter:description" content="Analyseur non-invasif : mesurez votre glucose sans sang. 298 EUR.">
-    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp">
+    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie.webp">
 
     <meta name="theme-color" content="#0B1B3D">
 
@@ -48,7 +48,7 @@
           "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html#product",
           "name": "Glucose-Check Air — Analyseur Glycémie Non-Invasif",
           "description": "Analyseur métabolique non-invasif par spectroscopie infrarouge proche. Mesurez votre glycémie sans piqûre, sans sang, sans bandelette.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp",
+          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie.webp",
           "brand": { "@type": "Brand", "name": "Synchrovie" },
           "sku": "SV-GLUC-AIR-2026",
           "mpn": "SV-GLUC-AIR-2026",
@@ -254,49 +254,7 @@
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
             .footer-inner { grid-template-columns: 1fr 1fr; }
         }
-    
-/* ===== PRODUCT GALLERY ===== */
-.product-gallery { position: relative; }
-.product-main-img { 
-    background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02)); 
-    border: 1px solid rgba(0,224,255,0.1); 
-    border-radius: 16px; 
-    padding: 24px; 
-    position: relative; 
-    overflow: hidden; 
-    margin-bottom: 12px;
-}
-.product-main-img::before { 
-    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
-    background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
-    pointer-events: none; 
-}
-.product-main-img img { 
-    width: 100%; border-radius: 8px; position: relative; z-index: 1; 
-    transition: transform 0.3s ease;
-}
-.product-main-img:hover img { transform: scale(1.02); }
-.product-thumbs { 
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; 
-}
-.product-thumb { 
-    background: rgba(0,224,255,0.04); 
-    border: 2px solid rgba(0,224,255,0.1); 
-    border-radius: 10px; 
-    padding: 8px; 
-    cursor: pointer; 
-    transition: border-color 0.3s, transform 0.2s;
-    overflow: hidden;
-}
-.product-thumb:hover { border-color: rgba(0,224,255,0.4); transform: translateY(-2px); }
-.product-thumb.active { border-color: #00E0FF; box-shadow: 0 0 12px rgba(0,224,255,0.2); }
-.product-thumb img { width: 100%; border-radius: 6px; display: block; }
-@media (max-width: 768px) {
-    .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
-    .product-thumb { padding: 4px; }
-}
-
-</style>
+    </style>
 </head>
 <body>
 
@@ -353,6 +311,19 @@
     </div>
 
     <!-- ===== PRODUCT HERO ===== -->
+    
+    <!-- ===== PAYMENT INFO BANNER ===== -->
+    <div style="max-width:1200px;margin:0 auto;padding:12px 24px;">
+        <div style="background:linear-gradient(135deg, rgba(37,211,102,0.12), rgba(0,224,255,0.08));border:1px solid rgba(37,211,102,0.3);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:8px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.503 3.935 1.393 5.613L0 24l6.613-1.329A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.63-.506-5.138-1.388l-.367-.219-3.794.763.807-3.704-.24-.381A9.723 9.723 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+                <strong style="color:#25D366;font-size:14px;">Commande par WhatsApp</strong>
+            </div>
+            <p style="color:#CBD5E1;font-size:13px;margin:0;flex:1;">Cliquez sur "Commander" → Recevez la confirmation → Paiez par <strong style="color:#00E0FF;">Western Union / MoneyGram</strong> → Livraison en 3-7 jours</p>
+            <a href="https://wa.me/22360625155?text=Bonjour%20SynchroVie%2C%20j%27ai%20une%20question%20sur%20les%20modalit%C3%A9s%20de%20paiement." target="_blank" rel="noopener" style="background:linear-gradient(135deg,#25D366,#128C7E);color:white;font-size:13px;font-weight:600;padding:8px 16px;border-radius:8px;text-decoration:none;white-space:nowrap;">💬 Comment payer ?</a>
+        </div>
+    </div>
+    
     <section class="product-hero">
         <div class="product-image-wrap">
             <span class="badge-nouveau">Nouveau</span>
@@ -621,16 +592,6 @@
             <p>Conçu pour la performance humaine.</p>
         </div>
     </footer>
-
-
-<script>
-function switchImage(imgSrc, thumbEl) {
-    var mainImg = document.querySelector('.product-main-img img');
-    if (mainImg) { mainImg.src = imgSrc; }
-    document.querySelectorAll('.product-thumb').forEach(function(t) { t.classList.remove('active'); });
-    if (thumbEl) { thumbEl.classList.add('active'); }
-}
-</script>
 
 </body>
 </html>
