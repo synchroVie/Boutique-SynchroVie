@@ -109,26 +109,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3000);
     }
 
-    // Add to Cart buttons
+    // WhatsApp CTA buttons (replaced fake cart)
     document.querySelectorAll('.add-to-cart').forEach(btn => {
         btn.addEventListener('click', (e) => {
             e.preventDefault();
             const product = btn.dataset.product;
             const price = btn.dataset.price;
-            
-            cartCount++;
-            updateCartBadge();
-            showToast(`✓ ${product} ajouté au panier`);
-
-            // Button animation
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '✓ Ajouté';
-            btn.style.background = '#10B981';
-            
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.style.background = '';
-            }, 1500);
+            const waText = encodeURIComponent(`Bonjour Synchrovie, je souhaite commander le ${product} à ${price} EUR`);
+            window.open(`https://wa.me/22360625155?text=${waText}`, '_blank');
         });
     });
 
