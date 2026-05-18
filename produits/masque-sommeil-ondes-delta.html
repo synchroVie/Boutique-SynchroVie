@@ -23,7 +23,7 @@
     <meta property="og:description" content="+23% de sommeil profond en 14 nuits. Ondes Delta intégrées, isolation phonique, Bluetooth. 188 EUR. Livraison offerte.">
     <meta property="og:url" content="https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html">
     <meta property="og:site_name" content="Synchrovie">
-    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-delta.webp">
+    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp">
     <meta property="og:locale" content="fr_FR">
     <meta property="product:price:amount" content="188">
     <meta property="product:price:currency" content="EUR">
@@ -31,7 +31,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="NeuroRest G2 — Masque Sommeil Ondes Delta">
     <meta name="twitter:description" content="+23% de sommeil profond. Ondes Delta, isolation phonique, Bluetooth. 188 EUR.">
-    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-delta.webp">
+    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp">
 
     <meta name="theme-color" content="#0B1B3D">
 
@@ -48,7 +48,7 @@
           "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html#product",
           "name": "NeuroRest G2 — Masque Sommeil Ondes Delta",
           "description": "Masque d'isolation à ondes Delta intégrées. +23% de sommeil profond en 2 semaines. Isolation phonique 32 dB, Bluetooth, 8 programmes de fréquences.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-delta.webp",
+          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp",
           "brand": { "@type": "Brand", "name": "Synchrovie" },
           "sku": "SV-NEUROREST-G2-2026",
           "mpn": "SV-NEUROREST-G2-2026",
@@ -248,7 +248,49 @@
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
             .footer-inner { grid-template-columns: 1fr 1fr; }
         }
-    </style>
+    
+/* ===== PRODUCT GALLERY ===== */
+.product-gallery { position: relative; }
+.product-main-img { 
+    background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02)); 
+    border: 1px solid rgba(0,224,255,0.1); 
+    border-radius: 16px; 
+    padding: 24px; 
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 12px;
+}
+.product-main-img::before { 
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
+    background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
+    pointer-events: none; 
+}
+.product-main-img img { 
+    width: 100%; border-radius: 8px; position: relative; z-index: 1; 
+    transition: transform 0.3s ease;
+}
+.product-main-img:hover img { transform: scale(1.02); }
+.product-thumbs { 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; 
+}
+.product-thumb { 
+    background: rgba(0,224,255,0.04); 
+    border: 2px solid rgba(0,224,255,0.1); 
+    border-radius: 10px; 
+    padding: 8px; 
+    cursor: pointer; 
+    transition: border-color 0.3s, transform 0.2s;
+    overflow: hidden;
+}
+.product-thumb:hover { border-color: rgba(0,224,255,0.4); transform: translateY(-2px); }
+.product-thumb.active { border-color: #00E0FF; box-shadow: 0 0 12px rgba(0,224,255,0.2); }
+.product-thumb img { width: 100%; border-radius: 6px; display: block; }
+@media (max-width: 768px) {
+    .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .product-thumb { padding: 4px; }
+}
+
+</style>
 </head>
 <body>
 
@@ -306,8 +348,24 @@
 
     <!-- ===== PRODUCT HERO ===== -->
     <section class="product-hero">
-        <div class="product-image-wrap">
-            <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-delta.webp" alt="NeuroRest G2 — Masque sommeil ondes Delta — Synchrovie" width="600" height="450" loading="eager">
+        <div class="product-gallery">
+            <div class="product-main-img">
+                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp" alt="NeuroRest G2 — Masque sommeil Delta — Vue principale" width="864" height="1152" loading="eager" id="mainProductImg">
+            </div>
+            <div class="product-thumbs">
+                <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp" alt="NeuroRest G2 — Masque sommeil Delta — Principal" width="120" height="160" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-2.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-2.webp" alt="NeuroRest G2 — Masque sommeil Delta — En utilisation" width="120" height="160" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-3.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-3.webp" alt="NeuroRest G2 — Masque sommeil Delta — Détails" width="120" height="120" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-4.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-4.webp" alt="NeuroRest G2 — Masque sommeil Delta — Angle" width="120" height="160" loading="lazy">
+                </div>
+            </div>
         </div>
         <div class="product-info">
             <div class="product-subtitle">Neuro-Sommeil & Récupération</div>
