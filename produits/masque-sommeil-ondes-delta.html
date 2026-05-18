@@ -265,7 +265,7 @@
     background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
     pointer-events: none; 
 }
-.product-main-img img { 
+.product-main-img img { cursor: zoom-in; 
     width: 100%; border-radius: 8px; position: relative; z-index: 1; 
     transition: transform 0.3s ease;
 }
@@ -289,6 +289,78 @@
     .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
     .product-thumb { padding: 4px; }
 }
+
+
+/* ===== LIGHTBOX / ZOOM MODAL ===== */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    animation: lbFadeIn 0.25s ease;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,224,255,0.15);
+    animation: lbZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.2s;
+}
+.lightbox-nav:hover { background: rgba(0,224,255,0.2); }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+.lightbox-counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8899b0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+@keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lbZoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
 </style>
 </head>
@@ -363,20 +435,20 @@
     <section class="product-hero">
         <div class="product-gallery">
             <div class="product-main-img">
-                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp" alt="NeuroRest G2 — Masque sommeil Delta — Vue principale" width="864" height="1152" loading="eager" id="mainProductImg">
+                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp" alt="Masque de sommeil à ondes Delta NeuroRest G2 — Vue principale" width="864" height="1152" loading="eager" id="mainProductImg">
             </div>
             <div class="product-thumbs">
                 <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp" alt="NeuroRest G2 — Masque sommeil Delta — Principal" width="120" height="160" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp" alt="Masque de sommeil à ondes Delta NeuroRest G2 — Vue principale" width="120" height="160" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-2.webp" alt="NeuroRest G2 — Masque sommeil Delta — En utilisation" width="120" height="160" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-2.webp" alt="Masque NeuroRest G2 porté — Utilisation pendant le sommeil" width="120" height="160" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-3.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-3.webp" alt="NeuroRest G2 — Masque sommeil Delta — Détails" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-3.webp" alt="Masque NeuroRest G2 — Technologies intégrées" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-4.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-4.webp" alt="NeuroRest G2 — Masque sommeil Delta — Angle" width="120" height="160" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-4.webp" alt="Masque NeuroRest G2 — Fiche technique complète" width="120" height="160" loading="lazy">
                 </div>
             </div>
         </div>
@@ -645,5 +717,106 @@
         <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492a.5.5 0 00.611.611l4.458-1.495A11.952 11.952 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-2.387 0-4.595-.834-6.332-2.224l-.442-.356-3.22 1.08 1.08-3.22-.356-.442A9.935 9.935 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
     </a>
 
+<script>
+/* ===== LIGHTBOX SYSTEM ===== */
+(function(){
+    const BASE = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
+    let currentImages = [];
+    let currentIndex = 0;
+    
+    // Create lightbox HTML
+    const lb = document.createElement('div');
+    lb.className = 'lightbox-overlay';
+    lb.id = 'productLightbox';
+    lb.innerHTML = `
+        <span class="lightbox-close" id="lbClose">&times;</span>
+        <span class="lightbox-nav lightbox-prev" id="lbPrev">&#8249;</span>
+        <img id="lbImg" src="" alt="Zoom produit">
+        <span class="lightbox-nav lightbox-next" id="lbNext">&#8250;</span>
+        <span class="lightbox-counter" id="lbCounter"></span>
+    `;
+    document.body.appendChild(lb);
+    
+    function openLightbox(images, index) {
+        currentImages = images;
+        currentIndex = index;
+        updateLightbox();
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    function updateLightbox() {
+        document.getElementById('lbImg').src = currentImages[currentIndex];
+        document.getElementById('lbCounter').textContent = (currentIndex + 1) + ' / ' + currentImages.length;
+    }
+    
+    // Close
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
+    
+    // Navigation
+    document.getElementById('lbPrev').addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        updateLightbox();
+    });
+    document.getElementById('lbNext').addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        updateLightbox();
+    });
+    
+    // Keyboard
+    document.addEventListener('keydown', function(e) {
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; updateLightbox(); }
+        if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); }
+    });
+    
+    // Make main image and thumbnails clickable for lightbox
+    window.initProductLightbox = function(slug, count) {
+        const images = [];
+        for (let i = 1; i <= count; i++) images.push(BASE + slug + '-' + i + '.webp');
+        
+        const mainImg = document.querySelector('.product-main-img img, .product-image-wrap img');
+        if (mainImg) {
+            mainImg.style.cursor = 'zoom-in';
+            mainImg.addEventListener('click', function() { openLightbox(images, 0); });
+        }
+        
+        document.querySelectorAll('.product-thumb').forEach(function(thumb, idx) {
+            thumb.style.cursor = 'zoom-in';
+            thumb.addEventListener('click', function(e) {
+                e.stopPropagation();
+                // Update main image
+                const src = thumb.querySelector('img').src;
+                if (mainImg) mainImg.src = src;
+                document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            });
+            // Double-click for lightbox
+            thumb.addEventListener('dblclick', function() { openLightbox(images, idx); });
+        });
+        
+        // Make main image open lightbox for current thumb
+        if (mainImg) {
+            mainImg.addEventListener('click', function() {
+                let activeIdx = 0;
+                document.querySelectorAll('.product-thumb').forEach(function(t, i) {
+                    if (t.classList.contains('active')) activeIdx = i;
+                });
+                openLightbox(images, activeIdx);
+            });
+        }
+    };
+})();
+</script>
+<script>initProductLightbox('masque-sommeil-ondes-delta', 4);</script>
 </body>
 </html>
