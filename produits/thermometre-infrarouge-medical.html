@@ -23,7 +23,7 @@
     <meta property="og:description" content="Mesure frontale sans contact en 1 seconde. Précision 0,1°C. Certifié médical. 108 EUR. Livraison offerte.">
     <meta property="og:url" content="https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html">
     <meta property="og:site_name" content="Synchrovie">
-    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge.webp">
+    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp">
     <meta property="og:locale" content="fr_FR">
     <meta property="product:price:amount" content="108">
     <meta property="product:price:currency" content="EUR">
@@ -31,7 +31,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Thermo-Sense Ultra — Thermomètre Infrarouge Médical Sans Contact">
     <meta name="twitter:description" content="Thermomètre infrarouge médical sans contact. Précision 0,1°C en 1 seconde. 108 EUR. Livraison offerte.">
-    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge.webp">
+    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp">
 
     <meta name="theme-color" content="#0B1B3D">
 
@@ -48,7 +48,7 @@
           "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html#product",
           "name": "Thermo-Sense Ultra — Thermomètre Infrarouge Médical Sans Contact",
           "description": "Thermomètre infrarouge médical sans contact avec précision 0,1°C, mesure frontale en 1 seconde, certifié CE médical, mémoire 32 relevés, alarme fièvre tricolore.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge.webp",
+          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp",
           "brand": { "@type": "Brand", "name": "Synchrovie" },
           "sku": "SV-THERMO-ULTRA-2026",
           "mpn": "SV-THERMO-ULTRA-2026",
@@ -249,7 +249,49 @@
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
             .footer-inner { grid-template-columns: 1fr 1fr; }
         }
-    </style>
+    
+/* ===== PRODUCT GALLERY ===== */
+.product-gallery { position: relative; }
+.product-main-img { 
+    background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02)); 
+    border: 1px solid rgba(0,224,255,0.1); 
+    border-radius: 16px; 
+    padding: 24px; 
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 12px;
+}
+.product-main-img::before { 
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
+    background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
+    pointer-events: none; 
+}
+.product-main-img img { 
+    width: 100%; border-radius: 8px; position: relative; z-index: 1; 
+    transition: transform 0.3s ease;
+}
+.product-main-img:hover img { transform: scale(1.02); }
+.product-thumbs { 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; 
+}
+.product-thumb { 
+    background: rgba(0,224,255,0.04); 
+    border: 2px solid rgba(0,224,255,0.1); 
+    border-radius: 10px; 
+    padding: 8px; 
+    cursor: pointer; 
+    transition: border-color 0.3s, transform 0.2s;
+    overflow: hidden;
+}
+.product-thumb:hover { border-color: rgba(0,224,255,0.4); transform: translateY(-2px); }
+.product-thumb.active { border-color: #00E0FF; box-shadow: 0 0 12px rgba(0,224,255,0.2); }
+.product-thumb img { width: 100%; border-radius: 6px; display: block; }
+@media (max-width: 768px) {
+    .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .product-thumb { padding: 4px; }
+}
+
+</style>
 </head>
 <body>
 
@@ -307,8 +349,24 @@
 
     <!-- ===== PRODUCT HERO ===== -->
     <section class="product-hero">
-        <div class="product-image-wrap">
-            <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge.webp" alt="Thermo-Sense Ultra — Thermomètre infrarouge médical sans contact frontal — Synchrovie" width="600" height="450" loading="eager">
+        <div class="product-gallery">
+            <div class="product-main-img">
+                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp" alt="TempSense-M3 — Thermomètre infrarouge — Vue principale" width="864" height="1152" loading="eager" id="mainProductImg">
+            </div>
+            <div class="product-thumbs">
+                <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp" alt="TempSense-M3 — Thermomètre infrarouge — Principal" width="120" height="160" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-2.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-2.webp" alt="TempSense-M3 — Thermomètre infrarouge — En utilisation" width="120" height="160" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-3.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-3.webp" alt="TempSense-M3 — Thermomètre infrarouge — Détails" width="120" height="120" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-4.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-4.webp" alt="TempSense-M3 — Thermomètre infrarouge — Angle" width="120" height="160" loading="lazy">
+                </div>
+            </div>
         </div>
         <div class="product-info">
             <div class="product-subtitle">Bio-Monitoring & Santé Préventive</div>
