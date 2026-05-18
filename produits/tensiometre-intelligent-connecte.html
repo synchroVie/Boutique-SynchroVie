@@ -266,7 +266,7 @@
     background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
     pointer-events: none; 
 }
-.product-main-img img { 
+.product-main-img img { cursor: zoom-in; 
     width: 100%; border-radius: 8px; position: relative; z-index: 1; 
     transition: transform 0.3s ease;
 }
@@ -290,6 +290,78 @@
     .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
     .product-thumb { padding: 4px; }
 }
+
+
+/* ===== LIGHTBOX / ZOOM MODAL ===== */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    animation: lbFadeIn 0.25s ease;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,224,255,0.15);
+    animation: lbZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.2s;
+}
+.lightbox-nav:hover { background: rgba(0,224,255,0.2); }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+.lightbox-counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8899b0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+@keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lbZoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
 
 </style>
 </head>
@@ -364,20 +436,20 @@
     <section class="product-hero">
         <div class="product-gallery">
             <div class="product-main-img">
-                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-1.webp" alt="B-Pressure Connect — Tensiomètre intelligent — Vue principale" width="864" height="1152" loading="eager" id="mainProductImg">
+                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-1.webp" alt="Tensiomètre intelligent B-Pressure Connect — Vue principale" width="864" height="1152" loading="eager" id="mainProductImg">
             </div>
             <div class="product-thumbs">
                 <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-1.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-1.webp" alt="B-Pressure Connect — Tensiomètre intelligent — Principal" width="120" height="160" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-1.webp" alt="Tensiomètre intelligent B-Pressure Connect — Vue principale" width="120" height="160" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-2.webp" alt="B-Pressure Connect — Tensiomètre intelligent — En utilisation" width="120" height="160" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-2.webp" alt="Tensiomètre B-Pressure Connect en utilisation avec application mobile" width="120" height="160" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-3.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-3.webp" alt="B-Pressure Connect — Tensiomètre intelligent — Détails" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-3.webp" alt="Tensiomètre B-Pressure Connect — Détails techniques et batterie" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-4.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-4.webp" alt="B-Pressure Connect — Tensiomètre intelligent — Angle" width="120" height="160" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-4.webp" alt="Tensiomètre B-Pressure Connect — Vue complète" width="120" height="160" loading="lazy">
                 </div>
             </div>
         </div>
@@ -640,5 +712,106 @@
         </a>
     </div>
 
+<script>
+/* ===== LIGHTBOX SYSTEM ===== */
+(function(){
+    const BASE = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
+    let currentImages = [];
+    let currentIndex = 0;
+    
+    // Create lightbox HTML
+    const lb = document.createElement('div');
+    lb.className = 'lightbox-overlay';
+    lb.id = 'productLightbox';
+    lb.innerHTML = `
+        <span class="lightbox-close" id="lbClose">&times;</span>
+        <span class="lightbox-nav lightbox-prev" id="lbPrev">&#8249;</span>
+        <img id="lbImg" src="" alt="Zoom produit">
+        <span class="lightbox-nav lightbox-next" id="lbNext">&#8250;</span>
+        <span class="lightbox-counter" id="lbCounter"></span>
+    `;
+    document.body.appendChild(lb);
+    
+    function openLightbox(images, index) {
+        currentImages = images;
+        currentIndex = index;
+        updateLightbox();
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    function updateLightbox() {
+        document.getElementById('lbImg').src = currentImages[currentIndex];
+        document.getElementById('lbCounter').textContent = (currentIndex + 1) + ' / ' + currentImages.length;
+    }
+    
+    // Close
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
+    
+    // Navigation
+    document.getElementById('lbPrev').addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        updateLightbox();
+    });
+    document.getElementById('lbNext').addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        updateLightbox();
+    });
+    
+    // Keyboard
+    document.addEventListener('keydown', function(e) {
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; updateLightbox(); }
+        if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); }
+    });
+    
+    // Make main image and thumbnails clickable for lightbox
+    window.initProductLightbox = function(slug, count) {
+        const images = [];
+        for (let i = 1; i <= count; i++) images.push(BASE + slug + '-' + i + '.webp');
+        
+        const mainImg = document.querySelector('.product-main-img img, .product-image-wrap img');
+        if (mainImg) {
+            mainImg.style.cursor = 'zoom-in';
+            mainImg.addEventListener('click', function() { openLightbox(images, 0); });
+        }
+        
+        document.querySelectorAll('.product-thumb').forEach(function(thumb, idx) {
+            thumb.style.cursor = 'zoom-in';
+            thumb.addEventListener('click', function(e) {
+                e.stopPropagation();
+                // Update main image
+                const src = thumb.querySelector('img').src;
+                if (mainImg) mainImg.src = src;
+                document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+                thumb.classList.add('active');
+            });
+            // Double-click for lightbox
+            thumb.addEventListener('dblclick', function() { openLightbox(images, idx); });
+        });
+        
+        // Make main image open lightbox for current thumb
+        if (mainImg) {
+            mainImg.addEventListener('click', function() {
+                let activeIdx = 0;
+                document.querySelectorAll('.product-thumb').forEach(function(t, i) {
+                    if (t.classList.contains('active')) activeIdx = i;
+                });
+                openLightbox(images, activeIdx);
+            });
+        }
+    };
+})();
+</script>
+<script>initProductLightbox('tensiometre-intelligent-connecte', 4);</script>
 </body>
 </html>
