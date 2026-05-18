@@ -320,8 +320,24 @@
     </div>
     
     <section class="product-hero">
-        <div class="product-image-wrap">
-            <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge.webp" alt="Thermo-Sense Ultra — Thermomètre infrarouge médical sans contact frontal — Synchrovie" width="600" height="450" loading="eager">
+        <div class="product-gallery">
+            <div class="product-main-img">
+                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp" alt="Product image" width="600" height="450" loading="eager">
+            </div>
+            <div class="product-thumbs">
+                <div class="product-thumb active" onclick="switchImage('thermometre-infrarouge-medical-1.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp" alt="Vue principale" width="100" height="75">
+                </div>
+                <div class="product-thumb" onclick="switchImage('thermometre-infrarouge-medical-2.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-2.webp" alt="Vue détaillée" width="100" height="75">
+                </div>
+                <div class="product-thumb" onclick="switchImage('thermometre-infrarouge-medical-3.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-3.webp" alt="Vue angle" width="100" height="75">
+                </div>
+                <div class="product-thumb" onclick="switchImage('thermometre-infrarouge-medical-4.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-4.webp" alt="Vue utilisation" width="100" height="75">
+                </div>
+            </div>
         </div>
         <div class="product-info">
             <div class="product-subtitle">Bio-Monitoring & Santé Préventive</div>
@@ -558,16 +574,16 @@
         <div class="payment-strip">
             <div class="payment-strip-inner">
                 <span class="payment-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8899b0" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                    Visa
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#25D366" stroke-width="1.5"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/></svg>
+                    WhatsApp
                 </span>
                 <span class="payment-icon">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8899b0" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                    Mastercard
+                    Western Union
                 </span>
                 <span class="payment-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8899b0" stroke-width="1.5"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-                    Mobile Money
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#8899b0" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    MoneyGram
                 </span>
             </div>
         </div>
@@ -584,5 +600,16 @@
         </a>
     </div>
 
+
+<script>
+function switchImage(imgSrc, thumb) {
+    const mainImg = document.getElementById('mainProductImg');
+    if (mainImg) {
+        mainImg.src = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/' + imgSrc;
+    }
+    document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+    if (thumb) thumb.classList.add('active');
+}
+</script>
 </body>
 </html>
