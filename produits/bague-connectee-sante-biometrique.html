@@ -627,9 +627,25 @@
     </div>
     
     <section class="product-hero">
-        <div class="product-image-wrap">
-            <span class="badge-top-vente">Top Vente</span>
-            <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-1.webp" alt="Bague biométrique SynchroRing X1 — Trois finitions" width="600" height="450" loading="eager">
+        <div class="product-gallery">
+            <div class="product-main-img">
+                <span class="badge-top-vente">Top Vente</span>
+                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-1.webp" alt="Bague biométrique SynchroRing X1 — Trois finitions titane" width="720" height="571" loading="eager" id="mainProductImg" onclick="openLightbox(0)">
+            </div>
+            <div class="product-thumbs">
+                <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-1.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-1.webp" alt="SynchroRing X1 — Trois finitions" width="120" height="95" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-2.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-2.webp" alt="SynchroRing X1 — Bague au doigt" width="120" height="137" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-3.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-3.webp" alt="SynchroRing X1 — Fonctionnalités santé" width="120" height="120" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-4.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-4.webp" alt="SynchroRing X1 — Fonctionnalités avancées" width="120" height="121" loading="lazy">
+                </div>
+            </div>
         </div>
         <div class="product-info">
             <div class="product-subtitle">Bio-Monitoring & Santé Préventive</div>
@@ -897,114 +913,67 @@
 
 
 <script>
+// Gallery: switch main image on thumbnail click
 function switchImage(imgSrc, thumbEl) {
-    var mainImg = document.querySelector('.product-main-img img');
-    if (mainImg) { mainImg.src = imgSrc; }
-    document.querySelectorAll('.product-thumb').forEach(function(t) { t.classList.remove('active'); });
-    if (thumbEl) { thumbEl.classList.add('active'); }
+    var mainImg = document.getElementById('mainProductImg');
+    if (mainImg) mainImg.src = imgSrc;
+    var thumbs = document.querySelectorAll('.product-thumb');
+    thumbs.forEach(function(t) { t.classList.remove('active'); });
+    if (thumbEl) thumbEl.classList.add('active');
 }
-</script>
 
-<script>
-/* ===== LIGHTBOX SYSTEM ===== */
-(function(){
-    const BASE = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
-    let currentImages = [];
-    let currentIndex = 0;
+// Lightbox: open zoom overlay
+var lbImages = [];
+var lbIndex = 0;
+
+function openLightbox(idx) {
+    var thumbs = document.querySelectorAll('.product-thumb img');
+    lbImages = [];
+    thumbs.forEach(function(img) { lbImages.push(img.src); });
+    if (idx === undefined) idx = 0;
+    lbIndex = idx;
+    showLightbox();
+}
+
+function showLightbox() {
+    var existing = document.getElementById('synchroLightbox');
+    if (existing) existing.remove();
     
-    // Create lightbox HTML
-    const lb = document.createElement('div');
-    lb.className = 'lightbox-overlay';
-    lb.id = 'productLightbox';
-    lb.innerHTML = `
-        <span class="lightbox-close" id="lbClose">&times;</span>
-        <span class="lightbox-nav lightbox-prev" id="lbPrev">&#8249;</span>
-        <img id="lbImg" src="" alt="Zoom produit">
-        <span class="lightbox-nav lightbox-next" id="lbNext">&#8250;</span>
-        <span class="lightbox-counter" id="lbCounter"></span>
-    `;
+    var lb = document.createElement('div');
+    lb.id = 'synchroLightbox';
+    lb.className = 'lightbox-overlay active';
+    lb.innerHTML = '<span class="lightbox-close" onclick="closeLightbox()">&times;</span>' +
+        '<span class="lightbox-nav lightbox-prev" onclick="lbNav(-1)">&#8249;</span>' +
+        '<img src="' + lbImages[lbIndex] + '" alt="Zoom">' +
+        '<span class="lightbox-nav lightbox-next" onclick="lbNav(1)">&#8250;</span>' +
+        '<span class="lightbox-counter">' + (lbIndex+1) + ' / ' + lbImages.length + '</span>';
+    
+    lb.addEventListener('click', function(e) {
+        if (e.target === lb) closeLightbox();
+    });
     document.body.appendChild(lb);
-    
-    function openLightbox(images, index) {
-        currentImages = images;
-        currentIndex = index;
-        updateLightbox();
-        lb.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function closeLightbox() {
-        lb.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    
-    function updateLightbox() {
-        document.getElementById('lbImg').src = currentImages[currentIndex];
-        document.getElementById('lbCounter').textContent = (currentIndex + 1) + ' / ' + currentImages.length;
-    }
-    
-    // Close
-    document.getElementById('lbClose').addEventListener('click', closeLightbox);
-    lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
-    
-    // Navigation
-    document.getElementById('lbPrev').addEventListener('click', function(e) {
-        e.stopPropagation();
-        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-        updateLightbox();
-    });
-    document.getElementById('lbNext').addEventListener('click', function(e) {
-        e.stopPropagation();
-        currentIndex = (currentIndex + 1) % currentImages.length;
-        updateLightbox();
-    });
-    
-    // Keyboard
-    document.addEventListener('keydown', function(e) {
-        if (!lb.classList.contains('active')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; updateLightbox(); }
-        if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); }
-    });
-    
-    // Make main image and thumbnails clickable for lightbox
-    window.initProductLightbox = function(slug, count) {
-        const images = [];
-        for (let i = 1; i <= count; i++) images.push(BASE + slug + '-' + i + '.webp');
-        
-        const mainImg = document.querySelector('.product-main-img img, .product-image-wrap img');
-        if (mainImg) {
-            mainImg.style.cursor = 'zoom-in';
-            mainImg.addEventListener('click', function() { openLightbox(images, 0); });
-        }
-        
-        document.querySelectorAll('.product-thumb').forEach(function(thumb, idx) {
-            thumb.style.cursor = 'zoom-in';
-            thumb.addEventListener('click', function(e) {
-                e.stopPropagation();
-                // Update main image
-                const src = thumb.querySelector('img').src;
-                if (mainImg) mainImg.src = src;
-                document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
-                thumb.classList.add('active');
-            });
-            // Double-click for lightbox
-            thumb.addEventListener('dblclick', function() { openLightbox(images, idx); });
-        });
-        
-        // Make main image open lightbox for current thumb
-        if (mainImg) {
-            mainImg.addEventListener('click', function() {
-                let activeIdx = 0;
-                document.querySelectorAll('.product-thumb').forEach(function(t, i) {
-                    if (t.classList.contains('active')) activeIdx = i;
-                });
-                openLightbox(images, activeIdx);
-            });
-        }
-    };
-})();
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    var lb = document.getElementById('synchroLightbox');
+    if (lb) lb.remove();
+    document.body.style.overflow = '';
+}
+
+function lbNav(dir) {
+    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+    showLightbox();
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    var lb = document.getElementById('synchroLightbox');
+    if (!lb) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lbNav(-1);
+    if (e.key === 'ArrowRight') lbNav(1);
+});
 </script>
-<script>initProductLightbox('bague-connectee-sante-biometrique', 4);</script>
 </body>
 </html>
