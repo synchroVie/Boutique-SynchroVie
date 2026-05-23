@@ -23,7 +23,7 @@
     <meta property="og:description" content="Mesurez votre glycémie sans piqûre. Technologie spectroscopie infrarouge. 298 EUR. Livraison offerte.">
     <meta property="og:url" content="https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html">
     <meta property="og:site_name" content="Synchrovie">
-    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie.webp">
+    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp">
     <meta property="og:locale" content="fr_FR">
     <meta property="product:price:amount" content="298">
     <meta property="product:price:currency" content="EUR">
@@ -31,7 +31,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Glucose-Check Air — Glycémie Sans Piqûre">
     <meta name="twitter:description" content="Analyseur non-invasif : mesurez votre glucose sans sang. 298 EUR.">
-    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie.webp">
+    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp">
 
     <meta name="theme-color" content="#0B1B3D">
 
@@ -48,7 +48,7 @@
           "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html#product",
           "name": "Glucose-Check Air — Analyseur Glycémie Non-Invasif",
           "description": "Analyseur métabolique non-invasif par spectroscopie infrarouge proche. Mesurez votre glycémie sans piqûre, sans sang, sans bandelette.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie.webp",
+          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp",
           "brand": { "@type": "Brand", "name": "Synchrovie" },
           "sku": "SV-GLUC-AIR-2026",
           "mpn": "SV-GLUC-AIR-2026",
@@ -254,6 +254,118 @@
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
             .footer-inner { grid-template-columns: 1fr 1fr; }
         }
+
+/* ===== PRODUCT GALLERY ===== */
+.product-gallery { position: relative; }
+.product-main-img {
+    background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02));
+    border: 1px solid rgba(0,224,255,0.1);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.product-main-img::before {
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+.product-main-img img { cursor: zoom-in;
+    width: 100%; border-radius: 8px; position: relative; z-index: 1;
+    transition: transform 0.3s ease;
+}
+.product-main-img:hover img { transform: scale(1.02); }
+.product-thumbs {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+}
+.product-thumb {
+    background: rgba(0,224,255,0.04);
+    border: 2px solid rgba(0,224,255,0.1);
+    border-radius: 10px;
+    padding: 8px;
+    cursor: pointer;
+    transition: border-color 0.3s, transform 0.2s;
+    overflow: hidden;
+}
+.product-thumb:hover { border-color: rgba(0,224,255,0.4); transform: translateY(-2px); }
+.product-thumb.active { border-color: #00E0FF; box-shadow: 0 0 12px rgba(0,224,255,0.2); }
+.product-thumb img { width: 100%; border-radius: 6px; display: block; }
+@media (max-width: 768px) {
+    .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .product-thumb { padding: 4px; }
+}
+
+/* ===== LIGHTBOX / ZOOM MODAL ===== */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    animation: lbFadeIn 0.25s ease;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,224,255,0.15);
+    animation: lbZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.2s;
+}
+.lightbox-nav:hover { background: rgba(0,224,255,0.2); }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+.lightbox-counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8899b0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+@keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lbZoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     </style>
 </head>
 <body>
@@ -325,9 +437,25 @@
     </div>
     
     <section class="product-hero">
-        <div class="product-image-wrap">
-            <span class="badge-nouveau">Nouveau</span>
-            <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie.webp" alt="Glucose-Check Air — Analyseur glycémie non-invasif sans piqûre — Synchrovie" width="600" height="450" loading="eager">
+        <div class="product-gallery">
+            <div class="product-main-img">
+                <span class="badge-nouveau">Nouveau</span>
+                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp" alt="Glucose-Check Air — Analyseur glycémie non-invasif sans piqûre — Vue principale" width="720" height="724" loading="eager" id="mainProductImg">
+            </div>
+            <div class="product-thumbs">
+                <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp" alt="Glucose-Check Air — Vue principale" width="120" height="120" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-2.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-2.webp" alt="Glucose-Check Air — Interface logicielle" width="120" height="120" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-3.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-3.webp" alt="Glucose-Check Air — Tablette dashboard santé" width="120" height="120" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-4.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-4.webp" alt="Glucose-Check Air — Mallette de transport" width="120" height="120" loading="lazy">
+                </div>
+            </div>
         </div>
         <div class="product-info">
             <div class="product-subtitle">Bio-Monitoring & Santé Préventive</div>
@@ -593,5 +721,81 @@
         </div>
     </footer>
 
+
+<script>
+/* ===== GALLERY SWITCH + LIGHTBOX ===== */
+function switchImage(src, thumbEl) {
+    var mainImg = document.getElementById('mainProductImg');
+    if (mainImg) mainImg.src = src;
+    document.querySelectorAll('.product-thumb').forEach(function(t) { t.classList.remove('active'); });
+    if (thumbEl) thumbEl.classList.add('active');
+}
+
+(function(){
+    const BASE = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
+    let currentImages = [];
+    let currentIndex = 0;
+    
+    const lb = document.createElement('div');
+    lb.className = 'lightbox-overlay';
+    lb.id = 'productLightbox';
+    lb.innerHTML = '<span class="lightbox-close" id="lbClose">&times;</span><span class="lightbox-nav lightbox-prev" id="lbPrev">&#8249;</span><img id="lbImg" src="" alt="Zoom produit"><span class="lightbox-nav lightbox-next" id="lbNext">&#8250;</span><span class="lightbox-counter" id="lbCounter"></span>';
+    document.body.appendChild(lb);
+    
+    function openLightbox(images, index) {
+        currentImages = images;
+        currentIndex = index;
+        updateLightbox();
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    function updateLightbox() {
+        document.getElementById('lbImg').src = currentImages[currentIndex];
+        document.getElementById('lbCounter').textContent = (currentIndex + 1) + ' / ' + currentImages.length;
+    }
+    document.getElementById('lbClose').addEventListener('click', closeLightbox);
+    lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
+    document.getElementById('lbPrev').addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+        updateLightbox();
+    });
+    document.getElementById('lbNext').addEventListener('click', function(e) {
+        e.stopPropagation();
+        currentIndex = (currentIndex + 1) % currentImages.length;
+        updateLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; updateLightbox(); }
+        if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); }
+    });
+    
+    window.initProductLightbox = function(slug, count) {
+        const images = [];
+        for (let i = 1; i <= count; i++) images.push(BASE + slug + '-' + i + '.webp');
+        const mainImg = document.querySelector('.product-main-img img');
+        if (mainImg) {
+            mainImg.style.cursor = 'zoom-in';
+            mainImg.addEventListener('click', function() {
+                let activeIdx = 0;
+                document.querySelectorAll('.product-thumb').forEach(function(t, i) {
+                    if (t.classList.contains('active')) activeIdx = i;
+                });
+                openLightbox(images, activeIdx);
+            });
+        }
+        document.querySelectorAll('.product-thumb').forEach(function(thumb, idx) {
+            thumb.addEventListener('dblclick', function() { openLightbox(images, idx); });
+        });
+    };
+})();
+</script>
+<script>initProductLightbox('analyseur-glycemie-non-invasif', 4);</script>
 </body>
 </html>
