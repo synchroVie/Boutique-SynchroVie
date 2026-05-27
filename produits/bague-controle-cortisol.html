@@ -23,7 +23,7 @@
     <meta property="og:description" content="Bague anti-stress biométrique. Suivi cortisol estimé, VFC, température nocturne. Alertes avant la surcharge. 268 EUR. Livraison offerte.">
     <meta property="og:url" content="https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-controle-cortisol.html">
     <meta property="og:site_name" content="Synchrovie">
-    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-cortisol.webp">
+    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-1.webp">
     <meta property="og:locale" content="fr_FR">
     <meta property="product:price:amount" content="268">
     <meta property="product:price:currency" content="EUR">
@@ -31,7 +31,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Aura-Ring Calm — Bague Contrôle Cortisol">
     <meta name="twitter:description" content="Bague connectée anti-stress. Cortisol estimé en continu, VFC, alertes préventives. 268 EUR. Livraison offerte.">
-    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-cortisol.webp">
+    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-1.webp">
 
     <meta name="theme-color" content="#0B1B3D">
 
@@ -48,7 +48,7 @@
           "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-controle-cortisol.html#product",
           "name": "Aura-Ring Calm — Bague Contrôle Cortisol",
           "description": "Bague biométrique de contrôle du cortisol et suivi continu du stress. Estimation cortisol salivaire, VFC, température nocturne. Alertes préventives avant la surcharge. 268 EUR.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-cortisol.webp",
+          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-1.webp",
           "brand": { "@type": "Brand", "name": "Synchrovie" },
           "sku": "SV-AURARINGCALM-2026",
           "mpn": "SV-AURARINGCALM-2026",
@@ -444,6 +444,119 @@
             .specs-grid { grid-template-columns: 1fr 1fr; }
             .cross-sell-grid { grid-template-columns: 1fr; }
         }
+
+    /* ===== PRODUCT GALLERY ===== */
+    .product-gallery { position: relative; }
+    .product-main-img { 
+        background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02)); 
+        border: 1px solid rgba(0,224,255,0.1); 
+        border-radius: 16px; 
+        padding: 24px; 
+        position: relative; 
+        overflow: hidden; 
+        margin-bottom: 12px;
+    }
+    .product-main-img::before { 
+        content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
+        background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
+        pointer-events: none; 
+    }
+    .product-main-img img { cursor: zoom-in; 
+        width: 100%; border-radius: 8px; position: relative; z-index: 1; 
+        transition: transform 0.3s ease;
+    }
+    .product-main-img:hover img { transform: scale(1.02); }
+    .product-thumbs { 
+        display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; 
+    }
+    .product-thumb { 
+        background: rgba(0,224,255,0.04); 
+        border: 2px solid rgba(0,224,255,0.1); 
+        border-radius: 10px; 
+        padding: 8px; 
+        cursor: pointer; 
+        transition: border-color 0.3s, transform 0.2s;
+        overflow: hidden;
+    }
+    .product-thumb:hover { border-color: rgba(0,224,255,0.4); transform: translateY(-2px); }
+    .product-thumb.active { border-color: #00E0FF; box-shadow: 0 0 12px rgba(0,224,255,0.2); }
+    .product-thumb img { width: 100%; border-radius: 6px; display: block; }
+    @media (max-width: 768px) {
+        .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+        .product-thumb { padding: 4px; }
+    }
+
+    /* ===== LIGHTBOX / ZOOM MODAL ===== */
+    .lightbox-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: rgba(0,0,0,0.92);
+        backdrop-filter: blur(8px);
+        justify-content: center;
+        align-items: center;
+        cursor: zoom-out;
+        animation: lbFadeIn 0.25s ease;
+    }
+    .lightbox-overlay.active { display: flex; }
+    .lightbox-overlay img {
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0,224,255,0.15);
+        animation: lbZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .lightbox-close {
+        position: absolute;
+        top: 24px;
+        right: 32px;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+        z-index: 10000;
+        width: 44px;
+        height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.1);
+        transition: background 0.2s;
+    }
+    .lightbox-close:hover { background: rgba(255,255,255,0.2); }
+    .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 2.5rem;
+        cursor: pointer;
+        z-index: 10000;
+        width: 56px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.08);
+        transition: background 0.2s;
+    }
+    .lightbox-nav:hover { background: rgba(0,224,255,0.2); }
+    .lightbox-prev { left: 24px; }
+    .lightbox-next { right: 24px; }
+    .lightbox-counter {
+        position: absolute;
+        bottom: 24px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #8899b0;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+    @keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes lbZoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
     </style>
 </head>
 <body>
@@ -500,11 +613,39 @@
         </div>
     </div>
 
+    <!-- ===== PAYMENT INFO BANNER ===== -->
+    <div style="max-width:1200px;margin:0 auto;padding:12px 24px;">
+        <div style="background:linear-gradient(135deg, rgba(37,211,102,0.12), rgba(0,224,255,0.08));border:1px solid rgba(37,211,102,0.3);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:8px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.503 3.935 1.393 5.613L0 24l6.613-1.329A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.63-.506-5.138-1.388l-.367-.219-3.794.763.807-3.704-.24-.381A9.723 9.723 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+                <strong style="color:#25D366;font-size:14px;">Commande par WhatsApp</strong>
+            </div>
+            <p style="color:#CBD5E1;font-size:13px;margin:0;flex:1;">Cliquez sur "Commander" → Recevez la confirmation → Paiez par <strong style="color:#00E0FF;">Western Union / MoneyGram</strong> → Livraison en 3-7 jours</p>
+            <a href="https://wa.me/22360625155?text=Bonjour%20SynchroVie%2C%20j%27ai%20une%20question%20sur%20les%20modalit%C3%A9s%20de%20paiement." target="_blank" rel="noopener" style="background:linear-gradient(135deg,#25D366,#128C7E);color:white;font-size:13px;font-weight:600;padding:8px 16px;border-radius:8px;text-decoration:none;white-space:nowrap;">💬 Comment payer ?</a>
+        </div>
+    </div>
+
     <!-- ===== PRODUCT HERO ===== -->
     <section class="product-hero">
-        <div class="product-image-wrap">
-            <span class="badge-nouveau">Nouveau</span>
-            <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-cortisol.webp" alt="Aura-Ring Calm — Bague contrôle cortisol suivi stress continu biométrique — Synchrovie" width="600" height="450" loading="eager">
+        <div class="product-gallery">
+            <div class="product-main-img">
+                <span class="badge-nouveau">Nouveau</span>
+                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-1.webp" alt="Aura-Ring Calm — Bague contrôle cortisol suivi stress continu" width="864" height="893" loading="eager" id="mainProductImg" onclick="openLightbox(0)">
+            </div>
+            <div class="product-thumbs">
+                <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-1.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-1.webp" alt="Aura-Ring Calm — Bague design titane" width="120" height="124" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-2.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-2.webp" alt="Aura-Ring Calm — Spécifications techniques" width="120" height="147" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-3.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-3.webp" alt="Aura-Ring Calm — Suivi cortisol via application" width="120" height="197" loading="lazy">
+                </div>
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-4.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-4.webp" alt="Aura-Ring Calm — Alertes et suivi du stress" width="120" height="132" loading="lazy">
+                </div>
+            </div>
         </div>
         <div class="product-info">
             <div class="product-subtitle">Biofeedback & Sérénité Mentale</div>
@@ -769,5 +910,68 @@
         <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
+<script>
+// Gallery: switch main image on thumbnail click
+function switchImage(imgSrc, thumbEl) {
+    var mainImg = document.getElementById('mainProductImg');
+    if (mainImg) mainImg.src = imgSrc;
+    var thumbs = document.querySelectorAll('.product-thumb');
+    thumbs.forEach(function(t) { t.classList.remove('active'); });
+    if (thumbEl) thumbEl.classList.add('active');
+}
+
+// Lightbox: open zoom overlay
+var lbImages = [];
+var lbIndex = 0;
+
+function openLightbox(idx) {
+    var thumbs = document.querySelectorAll('.product-thumb img');
+    lbImages = [];
+    thumbs.forEach(function(img) { lbImages.push(img.src); });
+    if (idx === undefined) idx = 0;
+    lbIndex = idx;
+    showLightbox();
+}
+
+function showLightbox() {
+    var existing = document.getElementById('synchroLightbox');
+    if (existing) existing.remove();
+    
+    var lb = document.createElement('div');
+    lb.id = 'synchroLightbox';
+    lb.className = 'lightbox-overlay active';
+    lb.innerHTML = '<span class="lightbox-close" onclick="closeLightbox()">&times;</span>' +
+        '<span class="lightbox-nav lightbox-prev" onclick="lbNav(-1)">&#8249;</span>' +
+        '<img src="' + lbImages[lbIndex] + '" alt="Zoom">' +
+        '<span class="lightbox-nav lightbox-next" onclick="lbNav(1)">&#8250;</span>' +
+        '<span class="lightbox-counter">' + (lbIndex+1) + ' / ' + lbImages.length + '</span>';
+    
+    lb.addEventListener('click', function(e) {
+        if (e.target === lb) closeLightbox();
+    });
+    document.body.appendChild(lb);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    var lb = document.getElementById('synchroLightbox');
+    if (lb) lb.remove();
+    document.body.style.overflow = '';
+}
+
+function lbNav(dir) {
+    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
+    showLightbox();
+}
+
+// Keyboard navigation
+document.addEventListener('keydown', function(e) {
+    var lb = document.getElementById('synchroLightbox');
+    if (!lb) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lbNav(-1);
+    if (e.key === 'ArrowRight') lbNav(1);
+});
+</script>
 </body>
 </html>
