@@ -234,6 +234,119 @@
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
             .footer-inner { grid-template-columns: 1fr 1fr; }
         }
+
+/* ===== PRODUCT GALLERY ===== */
+.product-gallery { position: relative; }
+.product-main-img { 
+    background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02)); 
+    border: 1px solid rgba(0,224,255,0.1); 
+    border-radius: 16px; 
+    padding: 24px; 
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 12px;
+}
+.product-main-img::before { 
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
+    background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
+    pointer-events: none; 
+}
+.product-main-img img { cursor: zoom-in; 
+    width: 100%; border-radius: 8px; position: relative; z-index: 1; 
+    transition: transform 0.3s ease;
+}
+.product-main-img:hover img { transform: scale(1.02); }
+.product-thumbs { 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; 
+}
+.product-thumb { 
+    background: rgba(0,224,255,0.04); 
+    border: 2px solid rgba(0,224,255,0.1); 
+    border-radius: 10px; 
+    padding: 8px; 
+    cursor: pointer; 
+    transition: border-color 0.3s, transform 0.2s;
+    overflow: hidden;
+}
+.product-thumb:hover { border-color: rgba(0,224,255,0.4); transform: translateY(-2px); }
+.product-thumb.active { border-color: #00E0FF; box-shadow: 0 0 12px rgba(0,224,255,0.2); }
+.product-thumb img { width: 100%; border-radius: 6px; display: block; }
+@media (max-width: 768px) {
+    .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .product-thumb { padding: 4px; }
+}
+
+
+/* ===== LIGHTBOX / ZOOM MODAL ===== */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    animation: lbFadeIn 0.25s ease;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,224,255,0.15);
+    animation: lbZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.2s;
+}
+.lightbox-nav:hover { background: rgba(0,224,255,0.2); }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+.lightbox-counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8899b0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+@keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lbZoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     </style>
 </head>
 <body>
@@ -291,23 +404,35 @@
     </div>
 
     <!-- ===== PRODUCT HERO ===== -->
+    <!-- ===== PAYMENT INFO BANNER ===== -->
+    <div style="max-width:1200px;margin:0 auto;padding:12px 24px;">
+        <div style="background:linear-gradient(135deg, rgba(37,211,102,0.12), rgba(0,224,255,0.08));border:1px solid rgba(37,211,102,0.3);border-radius:12px;padding:16px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+            <div style="display:flex;align-items:center;gap:8px;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.025.503 3.935 1.393 5.613L0 24l6.613-1.329A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-1.875 0-3.63-.506-5.138-1.388l-.367-.219-3.794.763.807-3.704-.24-.381A9.723 9.723 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg>
+                <strong style="color:#25D366;font-size:14px;">Commande par WhatsApp</strong>
+            </div>
+            <p style="color:#CBD5E1;font-size:13px;margin:0;flex:1;">Cliquez sur "Commander" → Recevez la confirmation → Paiez par <strong style="color:#00E0FF;">Western Union / MoneyGram</strong> → Livraison en 3-7 jours</p>
+            <a href="https://wa.me/22360625155?text=Bonjour%20SynchroVie%2C%20j%27ai%20une%20question%20sur%20les%20modalit%C3%A9s%20de%20paiement." target="_blank" rel="noopener" style="background:linear-gradient(135deg,#25D366,#128C7E);color:white;font-size:13px;font-weight:600;padding:8px 16px;border-radius:8px;text-decoration:none;white-space:nowrap;">💬 Comment payer ?</a>
+        </div>
+    </div>
+    
     <section class="product-hero">
         <div class="product-gallery">
             <div class="product-main-img">
-                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-1.webp" alt="Product image" width="600" height="450" loading="eager">
+                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-1.webp" alt="Aura-Light Clock — Simulateur d'aube, modes affichés" width="864" height="864" loading="eager">
             </div>
             <div class="product-thumbs">
-                <div class="product-thumb active" onclick="switchImage('simulateur-aube-crepuscule-1.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-1.webp" alt="Vue principale" width="100" height="75">
+                <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-1.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-1.webp" alt="Aura-Light Clock — Simulateur d'aube, modes affichés" width="120" height="120" loading="lazy">
                 </div>
-                <div class="product-thumb" onclick="switchImage('simulateur-aube-crepuscule-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-2.webp" alt="Vue détaillée" width="100" height="75">
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-2.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-2.webp" alt="Aura-Light Clock — Fini les réveils brusques, réveil en douceur" width="120" height="120" loading="lazy">
                 </div>
-                <div class="product-thumb" onclick="switchImage('simulateur-aube-crepuscule-3.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-3.webp" alt="Vue angle" width="100" height="75">
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-3.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-3.webp" alt="Aura-Light Clock — Compagnon de chevet tout-en-un" width="120" height="125" loading="lazy">
                 </div>
-                <div class="product-thumb" onclick="switchImage('simulateur-aube-crepuscule-4.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-4.webp" alt="Vue utilisation" width="100" height="75">
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-4.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-4.webp" alt="Aura-Light Clock — 26 sons apaisants pour des nuits reposantes" width="120" height="120" loading="lazy">
                 </div>
             </div>
         </div>
@@ -578,14 +703,81 @@
 
 
 <script>
-function switchImage(imgSrc, thumb) {
-    const mainImg = document.getElementById('mainProductImg');
-    if (mainImg) {
-        mainImg.src = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/' + imgSrc;
-    }
-    document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
-    if (thumb) thumb.classList.add('active');
+function switchImage(imgSrc, thumbEl) {
+    var mainImg = document.getElementById('mainProductImg');
+    mainImg.src = imgSrc;
+    document.querySelectorAll('.product-thumb').forEach(function(t){ t.classList.remove('active'); });
+    if(thumbEl) thumbEl.classList.add('active');
 }
+
+function initProductLightbox(productSlug, imageCount) {
+    var images = [];
+    for (var i = 1; i <= imageCount; i++) {
+        images.push('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/' + productSlug + '-' + i + '.webp');
+    }
+    
+    // Create lightbox HTML
+    var lb = document.createElement('div');
+    lb.className = 'lightbox-overlay';
+    lb.innerHTML = '<span class="lightbox-close" id="lbClose">&times;</span>' +
+        '<span class="lightbox-nav lightbox-prev" id="lbPrev">&#8249;</span>' +
+        '<img src="" alt="Zoom" id="lbImg">' +
+        '<span class="lightbox-nav lightbox-next" id="lbNext">&#8250;</span>' +
+        '<span class="lightbox-counter" id="lbCounter"></span>';
+    document.body.appendChild(lb);
+    
+    var currentIdx = 0;
+    
+    function showImage(idx) {
+        if (idx < 0) idx = images.length - 1;
+        if (idx >= images.length) idx = 0;
+        currentIdx = idx;
+        document.getElementById('lbImg').src = images[idx];
+        document.getElementById('lbCounter').textContent = (idx + 1) + ' / ' + images.length;
+    }
+    
+    function openLightbox(idx) {
+        showImage(idx);
+        lb.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+    
+    function closeLightbox() {
+        lb.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+    
+    // Make main image and thumbnails clickable for lightbox
+    var mainImg = document.getElementById('mainProductImg');
+    if (mainImg) {
+        mainImg.style.cursor = 'zoom-in';
+        mainImg.addEventListener('click', function() { openLightbox(0); });
+    }
+    
+    var thumbs = document.querySelectorAll('.product-thumb');
+    thumbs.forEach(function(thumb, idx) {
+        thumb.addEventListener('click', function() {
+            var activeIdx = 0;
+            thumbs.forEach(function(t, i) { if (t.classList.contains('active')) activeIdx = i; });
+            openLightbox(activeIdx);
+        });
+    });
+    
+    // Lightbox controls
+    document.getElementById('lbClose').addEventListener('click', function(e) { e.stopPropagation(); closeLightbox(); });
+    document.getElementById('lbPrev').addEventListener('click', function(e) { e.stopPropagation(); showImage(currentIdx - 1); });
+    document.getElementById('lbNext').addEventListener('click', function(e) { e.stopPropagation(); showImage(currentIdx + 1); });
+    lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
+    
+    document.addEventListener('keydown', function(e) {
+        if (!lb.classList.contains('active')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowLeft') showImage(currentIdx - 1);
+        if (e.key === 'ArrowRight') showImage(currentIdx + 1);
+    });
+}
+
+initProductLightbox('simulateur-aube-crepuscule', 4);
 </script>
 </body>
 </html>
