@@ -233,6 +233,19 @@
         .whatsapp-float { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); z-index: 999; transition: transform 0.3s; }
         .whatsapp-float:hover { transform: scale(1.1); }
 
+
+        .product-gallery { display: flex; flex-direction: column; gap: 12px; }
+        .product-main-img { cursor: zoom-in; }
+        .product-main-img img { width: 100%; border-radius: 8px; }
+        .product-thumbs { display: flex; gap: 8px; }
+        .product-thumb { width: 70px; height: 70px; border: 2px solid rgba(0,224,255,0.1); border-radius: 6px; overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
+        .product-thumb:hover, .product-thumb.active { border-color: #00E0FF; }
+        .product-thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .complement-img { cursor: zoom-in; border-radius: 8px; margin: 20px 0; transition: transform 0.2s; }
+        .complement-img:hover { transform: scale(1.02); }
+        .lightbox-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center; cursor: zoom-out; }
+        .lightbox-overlay.active { display: flex; }
+        .lightbox-overlay img { max-width: 90vw; max-height: 90vh; border-radius: 8px; }
         @media (max-width: 768px) {
             .trust-strip-inner { flex-wrap: wrap; justify-content: center; gap: 6px; }
             .trust-strip-item { padding: 4px 12px; font-size: 0.72rem; }
@@ -307,7 +320,7 @@
     <!-- ===== PRODUCT HERO ===== -->
     <section class="product-hero">
         <div class="product-gallery">
-            <div class="product-main-img">
+            <div class="product-main-img" onclick="openLightbox(document.getElementById('mainProductImg').src)">
                 <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/genouillere-thermique-compressive-1.webp" alt="Product image" width="600" height="450" loading="eager">
             </div>
             <div class="product-thumbs">
@@ -411,15 +424,21 @@
 
             <p>Chaque pas, chaque escalier, chaque accroupissement charge l'articulation du genou de 3 à 5 fois le poids du corps. Un adulte marche en moyenne 6 000 pas par jour. Cela représente 18 000 à 30 000 fois son poids supporté par les deux genoux. Le cartilage s'use, le liquide synovial se raréfie, les ligaments se distendent. L'arthrose, les entorses, les tendinopathies patellaires ne sont pas des accidents — ce sont les conséquences mécaniques d'une articulation sous-protégée. La Knee-Tech Support combine les deux interventions que la science valide : la chaleur et la compression.</p>
 
+            <img class="complement-img" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/genouillere-thermique-compressive-2.webp" alt="Genouillère avec accessoires" onclick="openLightbox(this.src)" loading="lazy" width="600" height="400">
+
             <h3>Chaleur : l'anti-inflammatoire le plus ancien, enfin dosé avec précision</h3>
 
             <p>L'application de chaleur sur une articulation douloureuse n'est pas un remède de grand-mère — c'est un protocole médical. La thermothérapie augmente le flux sanguin local de 40 %, accélère la synthèse de collagène dans les tendons, fluidifie le liquide synovial et réduit la raideur matinale. La Knee-Tech Support délivre cette chaleur à trois températures calibrées. Niveau 1 (38°C) : thermothérapie douce pour la récupération post-effort. Niveau 2 (45°C) : chaleur thérapeutique pour la douleur arthrosique quotidienne. Niveau 3 (55°C) : chaleur intense pour les poussées inflammatoires et les raideurs persistantes. Un bouton, trois secondes, la bonne température.</p>
 
-            <p>Jean-Pierre, 58 ans, retraité à Toulouse, souffrait de gonarthrose bilatérale depuis 4 ans. « Le matin, je mettais 20 minutes à dérouiller mes genoux. Maintenant, j'enfile la Knee-Tech Support niveau 3 pendant 15 minutes en prenant mon café. Quand je me lève, mes genoux sont souples. Je ne pensais pas que la chaleur pouvait faire une telle différence. Mon rhumatologue m'avait bien dit d'appliquer du chaud, mais la bouillotte, c'est vite froid. Là, c'est constant. »</p>
+            <img class="complement-img" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/genouillere-thermique-compressive-3.webp" alt="Genouillère - Accessoires et gilet" onclick="openLightbox(this.src)" loading="lazy" width="600" height="400">
+
+            <p>Jean-Pierre, 58 ans, retraité à Toulouse, souffrait de arthrose sévère des deux genoux depuis 4 ans. « Le matin, je mettais 20 minutes à dérouiller mes genoux. Maintenant, j'enfile la Knee-Tech Support niveau 3 pendant 15 minutes en prenant mon café. Quand je me lève, mes genoux sont souples. Je ne pensais pas que la chaleur pouvait faire une telle différence. Mon rhumatologue m'avait bien dit d'appliquer du chaud, mais la bouillotte, c'est vite froid. Là, c'est constant. »</p>
 
             <h3>Compression : le soutien que votre genou réclame à chaque mouvement</h3>
 
-            <p>La compression stabilise la rotule, maintient l'alignement fémoro-tibial et réduit le gonflement par pression externe. Les sangles Velcro double densité de la Knee-Tech Support permettent un ajustement millimétrique — serré pour le sport, léger pour la vie quotidienne. Les charnières latérales en aluminium empêchent les mouvements de valgus/varus excessifs sans bloquer la flexion. Vous montez les escaliers, vous pédalez, vous marchez. La genouillère travaille avec vous, pas contre vous.</p>
+            <p>La compression stabilise la rotule, maintient l'alignement du genou et réduit le gonflement par pression externe. Les sangles Velcro double densité de la Knee-Tech Support permettent un ajustement millimétrique — serré pour le sport, léger pour la vie quotidienne. Les charnières latérales en aluminium empêchent les mouvements latéraux excessifs sans bloquer la flexion. Vous montez les escaliers, vous pédalez, vous marchez. La genouillère travaille avec vous, pas contre vous.</p>
+
+            <img class="complement-img" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/genouillere-thermique-compressive-4.webp" alt="Genouillère - Personne portant la genouillère" onclick="openLightbox(this.src)" loading="lazy" width="600" height="400">
 
             <div class="editorial-cta">
                 <p>Votre genou porte le poids de vos journées. Il mérite plus qu'une genouillère basique.</p>
@@ -583,15 +602,27 @@
     </a>
 
 
-<script>
-function switchImage(imgSrc, thumb) {
-    const mainImg = document.getElementById('mainProductImg');
-    if (mainImg) {
-        mainImg.src = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/' + imgSrc;
+
+
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <img src="" alt="Zoom">
+    </div>
+
+    <script>
+    function switchImage(filename, thumbEl) {
+        var baseUrl = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
+        document.getElementById('mainProductImg').src = baseUrl + filename;
+        document.querySelectorAll('.product-thumb').forEach(function(t) { t.classList.remove('active'); });
+        thumbEl.classList.add('active');
     }
-    document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
-    if (thumb) thumb.classList.add('active');
-}
-</script>
+    function openLightbox(src) {
+        var overlay = document.getElementById('lightbox');
+        overlay.querySelector('img').src = src;
+        overlay.classList.add('active');
+    }
+    function closeLightbox() {
+        document.getElementById('lightbox').classList.remove('active');
+    }
+    </script>
 </body>
 </html>
