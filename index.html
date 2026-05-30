@@ -316,6 +316,7 @@
           "foundingDate": "2024",
           "contactPoint": [{
             "@type": "ContactPoint",
+            "telephone": "+22360625155",
             "contactType": "customer service",
             "availableLanguage": ["French", "English"],
             "areaServed": ["FR", "BE", "CH", "ML", "SN", "CI"]
@@ -323,8 +324,8 @@
           "email": "synchrovie@gmail.com",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Bamako / Paris",
-            "addressCountry": ["ML","FR"]
+            "addressLocality": "Bamako",
+            "addressCountry": "ML"
           }
         },
         {
@@ -334,9 +335,10 @@
           "image": "https://synchrovie.github.io/Boutique-SynchroVie/logo.png",
           "address": {
             "@type": "PostalAddress",
-            "addressLocality": "Bamako / Paris",
-            "addressCountry": ["ML","FR"]
+            "addressLocality": "Bamako",
+            "addressCountry": "ML"
           },
+          "telephone": "+22360625155",
           "email": "synchrovie@gmail.com",
           "url": "https://synchrovie.github.io/Boutique-SynchroVie/",
           "priceRange": "EUR-EUR",
@@ -417,7 +419,7 @@
             <div class="trust-strip-divider"></div>
             <div class="trust-strip-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                <span><strong>2 400+ Clients</strong> 4.9/5 de satisfaction</span>
+                <span><strong>Garantie 2 Ans</strong> Satisfaction assurée</span>
             </div>
         </div>
     </div>
@@ -468,7 +470,7 @@
         </nav>
         <div class="mobile-menu-footer">
             <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20j%27ai%20une%20question." class="whatsapp-link" target="_blank" rel="noopener">
-                WhatsApp
+                WhatsApp — +223 60 62 51 55
             </a>
             <a href="mailto:synchrovie@gmail.com" class="email-link">synchrovie@gmail.com</a>
         </div>
@@ -487,11 +489,59 @@
                     <a href="#boutique" class="btn btn-primary btn-magnet">ACCÉDER AU CATALOGUE</a>
                     <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20je%20souhaite%20un%20conseil%20personnalise." class="btn btn-secondary" target="_blank" rel="noopener">Conseil WhatsApp Gratuit</a>
                 </div>
+                <!-- Badges de confiance flottants dans le hero -->
+                <div class="hero-badges">
+                    <div class="hero-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Paiement SSL 256-bit
+                    </div>
+                    <div class="hero-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        Livraison Offerte dès 130 EUR
+                    </div>
+                    <div class="hero-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        Livraison Offerte dès 130 EUR
+                    </div>
+                </div>
+
             </div>
             </div>
         </section>
 
-        
+        <section class="categories-section" id="categories">
+            <h2 class="section-title">Nos Univers de Performance</h2>
+            <div class="categories-grid">
+                <a href="#cat-bio" class="category-card" data-category="bio">
+                    <div class="category-card-img"><img src="assets/img/categories/bio-monitoring.webp" alt="Bio-Monitoring et santé préventive — Technologies de suivi biométrique Synchrovie" loading="lazy" width="864" height="1152"></div>
+                    <div class="category-icon">+</div>
+                    <h3>Bio-Monitoring & Santé Préventive</h3>
+                    <p>Mesurez ce qui compte. 6 instruments de précision pour vos données biologiques.</p>
+                    <span class="category-count">6 produits</span>
+                </a>
+                <a href="#cat-sommeil" class="category-card" data-category="sommeil">
+                    <div class="category-card-img"><img src="assets/img/categories/neuro-sommeil.webp" alt="Neuro-Sommeil et récupération — Technologies d'optimisation du sommeil Synchrovie" loading="lazy" width="864" height="1152"></div>
+                    <div class="category-icon">+</div>
+                    <h3>Neuro-Sommeil & Récupération</h3>
+                    <p>Reprogrammez vos nuits. +23% de sommeil profond garanti.</p>
+                    <span class="category-count">6 produits</span>
+                </a>
+                <a href="#cat-biofeedback" class="category-card" data-category="biofeedback">
+                    <div class="category-card-img"><img src="assets/img/categories/biofeedback.webp" alt="Biofeedback et sérénité mentale — Technologies de gestion du stress Synchrovie" loading="lazy" width="864" height="1152"></div>
+                    <div class="category-icon">+</div>
+                    <h3>Biofeedback & Sérénité Mentale</h3>
+                    <p>Reprenez le contrôle. Biofeedback en temps réel.</p>
+                    <span class="category-count">6 produits</span>
+                </a>
+                <a href="#cat-performance" class="category-card" data-category="performance">
+                    <div class="category-card-img"><img src="assets/img/categories/performance-physique.webp" alt="Performance et équilibre physique — Technologies de stimulation et récupération Synchrovie" loading="lazy" width="864" height="1152"></div>
+                    <div class="category-icon">+</div>
+                    <h3>Performance & Équilibre Physique</h3>
+                    <p>Dépassez vos limites. Renforcez, corrigez, récupérez.</p>
+                    <span class="category-count">6 produits</span>
+                </a>
+            </div>
+        </section>
 
         <div id="boutique">
             <!-- ===== CATÉGORIE 1 : BIO-MONITORING & SANTÉ PRÉVENTIVE ===== -->
@@ -715,15 +765,15 @@
                         </a>
                         <span class="badge-shipping">3-7j</span>
                         <h3 itemprop="name"><a href="produits/patch-nuque-auto-chauffant.html">Gravity-Tech Pad</a></h3>
-                        <p itemprop="description">Patch de nuque auto-chauffant. 4 modes de massage, détente cervicale programmable.</p>
+                        <p itemprop="description">Patch de nuque auto-chauffant régulé. Détente cervicale programmable.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="210" style="color: var(--cyan); font-weight:700;">210 EUR</span>
+                                <span itemprop="price" content="88" style="color: var(--cyan); font-weight:700;">88 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
                             <div class="card-actions">
-                                <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20je%20souhaite%20commander%20Gravity-Tech%20Pad%20%C3%A0%20210%20EUR" class="btn btn-primary btn-sm btn-magnet" target="_blank" rel="noopener">Commander via WhatsApp</a>
+                                <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20je%20souhaite%20commander%20Gravity-Tech%20Pad%20%C3%A0%2088%20EUR" class="btn btn-primary btn-sm btn-magnet" target="_blank" rel="noopener">Commander via WhatsApp</a>
                                 <a href="produits/patch-nuque-auto-chauffant.html" class="btn btn-outline btn-sm">En savoir +</a>
                             </div>
                         </div>
@@ -1010,12 +1060,54 @@
             </section>
         </div>
 
+        <!-- ===== SECTION RÉASSURANCE — BOOST CONVERSION ===== -->
+        <section class="reassurance-section" id="garanties">
+            <h2 class="section-title">Pourquoi Choisir Synchrovie ?</h2>
+            <div class="reassurance-grid">
+                <div class="reassurance-card">
+                    <div class="reassurance-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                    </div>
+                    <h3>Livraison Express Europe</h3>
+                    <p>Recevez vos technologies en 3 à 7 jours ouvrés. Emballage soigné et suivi en temps réel depuis notre entrepôt jusqu'à votre porte.</p>
+                </div>
+                <div class="reassurance-card">
+                    <div class="reassurance-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>Paiement 100% Sécurisé</h3>
+                    <p>Paiement via WhatsApp, Visa, MasterCard, Western Union ou MoneyGram. Transaction sécurisée et confirmée.</p>
+                </div>
+                <div class="reassurance-card">
+                    <div class="reassurance-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                    </div>
+                    <h3>Satisfait ou Remboursé</h3>
+                    <p>14 jours de test en conditions réelles. Retours simplifiés, remboursement intégr sous 48h après réception.</p>
+                </div>
+                <div class="reassurance-card">
+                    <div class="reassurance-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <h3>Garantie Technique 2 Ans</h3>
+                    <p>Protection intégrale contre tout défaut de fabrication. Remplacement gratuit, sans frais cachés, sans condition abusive.</p>
+                </div>
+                <div class="reassurance-card">
+                    <div class="reassurance-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h3>Support Expert 24/7</h3>
+                    <p>Assistance dédiée par WhatsApp, email ou téléphone. Réponse sous 2h en moyenne. Nous vous accompagnons de la commande à la maîtrise complète.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="avis" class="review-section">
             <h2 class="section-title">Ce Que Nos Clients Disent</h2>
             <div class="review-summary">
                 <span class="review-stars">*****</span>
-                <span class="review-score">4.9/5</span>
-                <span class="review-count">basé sur 127 avis vérifiés</span>
+                <span class="review-score">5/5</span>
+                <span class="review-count">avis clients</span>
             </div>
             <div class="reviews-grid">
                 <div class="review-card">
@@ -1051,7 +1143,7 @@
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
                 </div>
                 <h2>Rejoignez l'Élite de la Bio-Optimisation</h2>
-                <p>Recevez chaque semaine nos guides exclusifs, protocoles d'experts et offres réservées aux membres. Rejoignez les 2 400+ passionnés.</p>
+                <p>Recevez chaque semaine nos guides exclusifs, protocoles d'experts et offres réservées aux membres.</p>
                 <form class="newsletter-form" id="newsletterForm">
                     <input type="email" placeholder="votre@email.com" required aria-label="Votre email pour la newsletter">
                     <button type="submit" class="btn btn-primary btn-magnet">S'abonner</button>
@@ -1066,7 +1158,7 @@
             <div class="footer-col">
                 <div class="footer-logo">SYNCHROVIE</div>
                 <p class="footer-tagline">L'ingénierie de la performance humaine.</p>
-                <p class="footer-address">Mali — France</p>
+                <p class="footer-address">Bamako, Mali — Paris, France</p>
             </div>
             <div class="footer-col">
                 <h4>Navigation</h4>
@@ -1092,7 +1184,7 @@
         <div class="footer-bottom">
             <div class="footer-payment">
                 <span>Paiement sécurisé :</span>
-                <span class="payment-badges">WhatsApp — Western Union — MoneyGram</span>
+                <span class="payment-badges">Visa — MasterCard — WhatsApp — Western Union — MoneyGram</span>
             </div>
             <div class="footer-guarantees">
                 Livraison 3-7j Europe — Retours 14j — Garantie 2 ans

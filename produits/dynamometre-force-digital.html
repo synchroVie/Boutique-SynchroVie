@@ -92,7 +92,7 @@
               "name": "Quelle est la précision du dynamomètre digital Grip-Master Pro ?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Le Grip-Master Pro offre une précision de ±0,1 kg sur une plage de mesure de 0 à 90 kg. Le capteur de force de précision est calibré en usine. Cette précision est comparable aux dynamomètres médicaux utilisés en ergothérapie et en médecine du sport, qui coûtent 3 à 5 fois plus cher."
+                "text": "Le Grip-Master Pro offre une précision de ±0,1 kg sur une plage de mesure de 0 à 90 kg. Le capteur de force à jauge de contrainte est calibré en usine. Cette précision est comparable aux dynamomètres médicaux utilisés en ergothérapie et en médecine du sport, qui coûtent 3 à 5 fois plus cher."
               }
             },
             {
@@ -233,19 +233,6 @@
         .whatsapp-float { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); z-index: 999; transition: transform 0.3s; }
         .whatsapp-float:hover { transform: scale(1.1); }
 
-
-        .product-gallery { display: flex; flex-direction: column; gap: 12px; }
-        .product-main-img { cursor: zoom-in; }
-        .product-main-img img { width: 100%; border-radius: 8px; }
-        .product-thumbs { display: flex; gap: 8px; }
-        .product-thumb { width: 70px; height: 70px; border: 2px solid rgba(0,224,255,0.1); border-radius: 6px; overflow: hidden; cursor: pointer; transition: border-color 0.2s; }
-        .product-thumb:hover, .product-thumb.active { border-color: #00E0FF; }
-        .product-thumb img { width: 100%; height: 100%; object-fit: cover; }
-        .complement-img { cursor: zoom-in; border-radius: 8px; margin: 20px 0; transition: transform 0.2s; }
-        .complement-img:hover { transform: scale(1.02); }
-        .lightbox-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 9999; justify-content: center; align-items: center; cursor: zoom-out; }
-        .lightbox-overlay.active { display: flex; }
-        .lightbox-overlay img { max-width: 90vw; max-height: 90vh; border-radius: 8px; }
         @media (max-width: 768px) {
             .trust-strip-inner { flex-wrap: wrap; justify-content: center; gap: 6px; }
             .trust-strip-item { padding: 4px 12px; font-size: 0.72rem; }
@@ -320,7 +307,7 @@
     <!-- ===== PRODUCT HERO ===== -->
     <section class="product-hero">
         <div class="product-gallery">
-            <div class="product-main-img" onclick="openLightbox(document.getElementById('mainProductImg').src)">
+            <div class="product-main-img">
                 <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp" alt="Product image" width="600" height="450" loading="eager">
             </div>
             <div class="product-thumbs">
@@ -352,7 +339,7 @@
             <ul class="benefits-list">
                 <li>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                    Précision ±0,1 kg — Capteur de précision calibré en usine
+                    Précision ±0,1 kg — Capteur jauge de contrainte calibré usine
                 </li>
                 <li>
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
@@ -424,8 +411,6 @@
 
             <p>La force de préhension (grip strength) est le biomarqueur musculaire le plus étudié en gériatrie et en médecine du sport. Plus de 50 publications dans The Lancet, le BMJ et le JAMA montrent une corrélation directe entre la force de serrage et la mortalité toutes causes, le risque cardiovasculaire, la densité osseuse et la capacité fonctionnelle. Un adulte en bonne santé serre entre 30 et 55 kg. En dessous de 26 kg pour un homme ou 18 kg pour une femme, le risque de mortalité augmente significativement. Le Grip-Master Pro met ce biomarqueur entre vos mains — littéralement.</p>
 
-            <img class="complement-img" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-2.webp" alt="Dynamomètre - Test de force musculaire" onclick="openLightbox(this.src)" loading="lazy" width="600" height="400">
-
             <h3>0,1 kg de précision : le détecteur de déclin silencieux</h3>
 
             <p>La sarcopénie — la perte de masse musculaire liée à l'âge — commence vers 30 ans et accélère après 50. Vous ne la voyez pas. Vous ne la sentez pas. Mais votre grip strength baisse de 1 à 2 % par an. Le Grip-Master Pro, avec sa précision de ±0,1 kg, capte cette dérive bien avant qu'elle ne devienne problématique. Mesurez une fois par semaine. Si votre courbe descend sur 3 mois consécutifs, vous avez le signal d'ajuster votre entraînement, votre nutrition ou de consulter. Sans le dynamomètre, vous ne le sauriez qu'au moment de ne plus pouvoir ouvrir un bocal.</p>
@@ -466,7 +451,7 @@
                 <span class="faq-toggle">+</span>
             </div>
             <div class="faq-answer">
-                <p>Le Grip-Master Pro offre une précision de ±0,1 kg sur une plage de mesure de 0 à 90 kg. Le capteur de force de précision est calibré en usine. Cette précision est comparable aux dynamomètres médicaux utilisés en ergothérapie et en médecine du sport, qui coûtent 3 à 5 fois plus cher.</p>
+                <p>Le Grip-Master Pro offre une précision de ±0,1 kg sur une plage de mesure de 0 à 90 kg. Le capteur de force à jauge de contrainte est calibré en usine. Cette précision est comparable aux dynamomètres médicaux utilisés en ergothérapie et en médecine du sport, qui coûtent 3 à 5 fois plus cher.</p>
             </div>
         </div>
 
@@ -598,27 +583,15 @@
     </a>
 
 
-
-
-    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
-        <img src="" alt="Zoom">
-    </div>
-
-    <script>
-    function switchImage(filename, thumbEl) {
-        var baseUrl = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
-        document.getElementById('mainProductImg').src = baseUrl + filename;
-        document.querySelectorAll('.product-thumb').forEach(function(t) { t.classList.remove('active'); });
-        thumbEl.classList.add('active');
+<script>
+function switchImage(imgSrc, thumb) {
+    const mainImg = document.getElementById('mainProductImg');
+    if (mainImg) {
+        mainImg.src = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/' + imgSrc;
     }
-    function openLightbox(src) {
-        var overlay = document.getElementById('lightbox');
-        overlay.querySelector('img').src = src;
-        overlay.classList.add('active');
-    }
-    function closeLightbox() {
-        document.getElementById('lightbox').classList.remove('active');
-    }
-    </script>
+    document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+    if (thumb) thumb.classList.add('active');
+}
+</script>
 </body>
 </html>
