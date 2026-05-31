@@ -13,8 +13,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dynamomètre Force Digital — Grip-Master Pro | Synchrovie</title>
-    <meta name="description" content="Grip-Master Pro EH109 : dynamomètre force digital 180 kg, écran LED, mémoire intégrée, 2 profils Homme/Femme, poignée réglable, double alimentation USB + pile. 88 EUR. Livraison offerte.">
-    <meta name="keywords" content="dynamomètre force digital 180kg, mesure force préhension LED, dynamomètre main rechargeable, test force poignet mémoire, grip strength test digital">
+    <meta name="description" content="Grip-Master Pro EH109 : dynamomètre main numérique 0-180 kg, précision 0,1 kg, écran LED, mémoire 2 profils, poignée réglable, USB-C + pile. Mesurez votre force de préhension à domicile. 88 EUR. Livraison offerte.">
+    <meta name="keywords" content="dynamomètre main numérique, dynamomètre digital force préhension, mesure force préhension main, testeur force main LED, dynamomètre force digital 180kg, comment mesurer sa force de préhension à domicile, tableau norme force préhension homme femme âge, dynamomètre main rechargeable USB-C, grip strength test digital">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://synchrovie.github.io/Boutique-SynchroVie/produits/dynamometre-force-digital.html">
 
@@ -70,8 +70,8 @@
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "reviewCount": "89",
+            "ratingValue": "5.0",
+            "reviewCount": "3",
             "bestRating": "5",
             "worstRating": "1"
           }
@@ -246,6 +246,25 @@
         .payment-icon { display: inline-flex; align-items: center; gap: 6px; color: #8899b0; font-size: 0.8rem; font-weight: 600; }
         .payment-icon svg { opacity: 0.6; }
 
+        .product-gallery { display: flex; flex-direction: column; gap: 16px; }
+        .product-main-img { background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02)); border: 1px solid rgba(0,224,255,0.1); border-radius: 16px; padding: 24px; position: relative; overflow: hidden; }
+        .product-main-img::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); pointer-events: none; }
+        .product-main-img img { width: 100%; border-radius: 8px; position: relative; z-index: 1; }
+        .product-thumbs { display: flex; gap: 10px; }
+        .product-thumb { flex: 1; cursor: pointer; border: 2px solid rgba(0,224,255,0.1); border-radius: 8px; overflow: hidden; transition: border-color 0.3s, transform 0.2s; background: rgba(0,224,255,0.03); }
+        .product-thumb:hover { border-color: rgba(0,224,255,0.3); transform: translateY(-2px); }
+        .product-thumb.active { border-color: #00E0FF; }
+        .product-thumb img { width: 100%; height: auto; display: block; }
+
+        .norm-table-wrap { overflow-x: auto; margin: 24px 0; }
+        .norm-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+        .norm-table caption { font-size: 0.85rem; color: #8899b0; text-align: left; margin-bottom: 10px; font-style: italic; }
+        .norm-table th { background: rgba(0,224,255,0.08); color: #00E0FF; font-weight: 700; padding: 10px 14px; text-align: left; border: 1px solid rgba(0,224,255,0.1); }
+        .norm-table td { padding: 9px 14px; border: 1px solid rgba(0,224,255,0.06); color: #e0e8f0; }
+        .norm-table tr:nth-child(even) td { background: rgba(0,224,255,0.02); }
+        .norm-table .norm-low { color: #FF6B6B; font-weight: 600; }
+        .norm-table .norm-ok { color: #00C9A7; font-weight: 600; }
+
         .whatsapp-float { position: fixed; bottom: 24px; right: 24px; width: 56px; height: 56px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); z-index: 999; transition: transform 0.3s; }
         .whatsapp-float:hover { transform: scale(1.1); }
 
@@ -288,7 +307,7 @@
             <div class="trust-strip-divider"></div>
             <div class="trust-strip-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-                <span><strong>2 400+ Clients</strong> 4.9/5 de satisfaction</span>
+                <span><strong>Satisfaction assurée</strong> Remboursé 30j</span>
             </div>
         </div>
     </div>
@@ -324,14 +343,17 @@
     <section class="product-hero">
         <div class="product-gallery">
             <div class="product-main-img">
-                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp" alt="Dynamomètre force digital EH109 — Vue principale" width="600" height="450" loading="eager">
+                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp" alt="Dynamomètre force digital EH109 Grip-Master Pro — Poignée réglable" width="600" height="450" loading="eager">
             </div>
             <div class="product-thumbs">
                 <div class="product-thumb active" onclick="switchImage('dynamometre-force-digital-1.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp" alt="Vue principale" width="100" height="75">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp" alt="EH109 — Poignée réglable" width="100" height="75">
                 </div>
                 <div class="product-thumb" onclick="switchImage('dynamometre-force-digital-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-2.webp" alt="Vue détaillée" width="100" height="75">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-2.webp" alt="Écran LED, grip ajustable, 180 kg" width="100" height="75">
+                </div>
+                <div class="product-thumb" onclick="switchImage('dynamometre-force-digital-3.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-3.webp" alt="Spécifications MAX 180kg, boutons, double alimentation" width="100" height="75">
                 </div>
             </div>
         </div>
@@ -419,17 +441,75 @@
         <div class="editorial-wrap">
             <h2>La force de votre main en dit plus sur votre santé que votre poids.</h2>
 
-            <p>La force de préhension (grip strength) est le biomarqueur musculaire le plus étudié en gériatrie et en médecine du sport. Plus de 50 publications dans The Lancet, le BMJ et le JAMA montrent une corrélation directe entre la force de serrage et la mortalité toutes causes, le risque cardiovasculaire, la densité osseuse et la capacité fonctionnelle. Un adulte en bonne santé serre entre 30 et 55 kg. En dessous de 26 kg pour un homme ou 18 kg pour une femme, le risque de mortalité augmente significativement. Le Grip-Master Pro EH109 met ce biomarqueur entre vos mains — littéralement.</p>
+            <p>La force de préhension (grip strength) est le biomarqueur musculaire le plus étudié en gériatrie et en médecine du sport. Plus de 50 publications dans The Lancet, le BMJ et le JAMA montrent une corrélation directe entre la force de serrage et la mortalité toutes causes, le risque cardiovasculaire, la densité osseuse et la capacité fonctionnelle. Un adulte en bonne santé serre entre 30 et 55 kg. En dessous de 26 kg pour un homme ou 18 kg pour une femme, le risque de mortalité augmente significativement. Le Grip-Master Pro EH109, dynamomètre main numérique de précision, met ce biomarqueur entre vos mains — littéralement.</p>
 
             <h3>180 kg de plage de mesure : le détecteur de déclin silencieux</h3>
 
-            <p>La sarcopénie — la perte de masse musculaire liée à l'âge — commence vers 30 ans et accélère après 50. Vous ne la voyez pas. Vous ne la sentez pas. Mais votre grip strength baisse de 1 à 2 % par an. Le Grip-Master Pro EH109, avec sa plage de 0 à 180 kg et sa précision de 100 g, capte cette dérive bien avant qu'elle ne devienne problématique. Mesurez une fois par semaine. Si votre courbe descend sur 3 mois consécutifs, vous avez le signal d'ajuster votre entraînement, votre nutrition ou de consulter. Sans le dynamomètre, vous ne le sauriez qu'au moment de ne plus pouvoir ouvrir un bocal.</p>
+            <p>La sarcopénie — la perte de masse musculaire liée à l'âge — commence vers 30 ans et accélère après 50. Vous ne la voyez pas. Vous ne la sentez pas. Mais votre grip strength baisse de 1 à 2 % par an. Le Grip-Master Pro EH109, dynamomètre digital force préhension avec sa plage de 0 à 180 kg et sa précision de 0,1 kg (100 g), capte cette dérive bien avant qu'elle ne devienne problématique. Mesurez votre force de préhension à domicile une fois par semaine. Si votre courbe descend sur 3 mois consécutifs, vous avez le signal d'ajuster votre entraînement, votre nutrition ou de consulter. Sans le testeur de force main, vous ne le sauriez qu'au moment de ne plus pouvoir ouvrir un bocal.</p>
 
-            <p>La mémoire intégrée du EH109 enregistre automatiquement vos résultats par profil utilisateur. Avec 2 profils Homme / Femme, chaque membre du foyer peut suivre sa propre progression sans jamais mélanger les données. L'écran LED lumineux affiche simultanément les valeurs en kg et en lb, et les grandes touches claires — MARCHÉ/ARRÊT, ▲/UTILISATEUR, ▼/ÉPA, DÉMARRER — rendent l'utilisation intuitive même pour les personnes âgées.</p>
+            <p>La mémoire multi-utilisateurs du EH109 enregistre automatiquement vos résultats par profil. Avec 2 profils Homme / Femme, chaque membre du foyer peut suivre sa propre progression de force de préhension sans jamais mélanger les données. L'écran LED lumineux affiche simultanément les valeurs en kg et en lb, et les grandes touches claires — MARCHÉ/ARRÊT, ▲/UTILISATEUR, ▼/ÉPA, DÉMARRER — rendent l'utilisation intuitive même pour les personnes âgées. La recharge USB-C et les piles vous garantissent une autonomie sans faille.</p>
+
+            <h3>Tableau de normes : où vous situez-vous ?</h3>
+
+            <p>Vous vous demandez comment mesurer sa force de préhension et où vous situez par rapport aux normes ? Le tableau ci-dessous présente les valeurs de référence de force de préhension par âge et par sexe, issues des études epidemiologiques européennes. Comparez vos résultats EH109 à ces repères pour évaluer votre capital musculaire.</p>
+
+            <div class="norm-table-wrap">
+                <table class="norm-table">
+                    <caption>Normes de force de préhension (kg) par tranche d'âge et sexe — Valeurs médianes (5e–95e percentile)</caption>
+                    <thead>
+                        <tr>
+                            <th>Tranche d'âge</th>
+                            <th>Hommes (médiane)</th>
+                            <th>Femmes (médiane)</th>
+                            <th>Seuil critique</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>20–29 ans</td>
+                            <td class="norm-ok">46 kg</td>
+                            <td class="norm-ok">29 kg</td>
+                            <td>H &lt; 26 kg / F &lt; 18 kg</td>
+                        </tr>
+                        <tr>
+                            <td>30–39 ans</td>
+                            <td class="norm-ok">47 kg</td>
+                            <td class="norm-ok">30 kg</td>
+                            <td>H &lt; 26 kg / F &lt; 18 kg</td>
+                        </tr>
+                        <tr>
+                            <td>40–49 ans</td>
+                            <td class="norm-ok">44 kg</td>
+                            <td class="norm-ok">28 kg</td>
+                            <td>H &lt; 26 kg / F &lt; 18 kg</td>
+                        </tr>
+                        <tr>
+                            <td>50–59 ans</td>
+                            <td class="norm-ok">40 kg</td>
+                            <td class="norm-ok">25 kg</td>
+                            <td>H &lt; 26 kg / F &lt; 18 kg</td>
+                        </tr>
+                        <tr>
+                            <td>60–69 ans</td>
+                            <td class="norm-low">35 kg</td>
+                            <td class="norm-low">22 kg</td>
+                            <td>H &lt; 26 kg / F &lt; 18 kg</td>
+                        </tr>
+                        <tr>
+                            <td>70–79 ans</td>
+                            <td class="norm-low">29 kg</td>
+                            <td class="norm-low">18 kg</td>
+                            <td>H &lt; 26 kg / F &lt; 18 kg</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>Les seuils critiques de 26 kg (hommes) et 18 kg (femmes) sont issus de l'étude de Leong et al. publiée dans <em>The Lancet</em> (2015). En dessous de ces valeurs, le risque de mortalité toutes causes augmente significativement. Le EH109, avec sa précision de 100 g, vous permet de surveiller votre position par rapport à ces seuils année après année.</p>
 
             <h3>Pas seulement pour les sportifs : l'outil de rééducation que chaque kiné attend</h3>
 
-            <p>Après une fracture du poignet, une entorse du coude ou une chirurgie de l'épaule, la force de préhension est le premier indicateur de récupération fonctionnelle. Les kinésithérapies utilisent des dynamomètres médicaux à 300-500 EUR. Le Grip-Master Pro EH109 offre une précision de 100 g sur une plage étendue de 180 kg pour 88 EUR. La poignée réglable s'adapte à la morphologie de chaque patient — de l'adolescent à la personne âgée. La fonction de comptage intégrée permet de réaliser des tests répétitifs standardisés. Et grâce à la double alimentation (recharge USB + piles), vous n'êtes jamais interrompu en plein bilan fonctionnel.</p>
+            <p>Après une fracture du poignet, une entorse du coude ou une chirurgie de l'épaule, la mesure de force de préhension est le premier indicateur de récupération fonctionnelle. Les kinésithérapies utilisent des dynamomètres médicaux à 300-500 EUR. Le Grip-Master Pro EH109 offre une précision de 100 g sur une plage étendue de 180 kg pour 88 EUR — un rapport qualité-prix inégalé pour un testeur force main LED. La poignée réglable s'adapte à la morphologie de chaque patient — de l'adolescent à la personne âgée. La fonction de comptage intégrée permet de réaliser des tests répétitifs standardisés. Et grâce à la double alimentation (recharge USB + piles), vous n'êtes jamais interrompu en plein bilan fonctionnel.</p>
 
             <div class="editorial-cta">
                 <p>Votre force de préhension est le thermomètre de votre capital musculaire. Il était temps de pouvoir le lire.</p>
