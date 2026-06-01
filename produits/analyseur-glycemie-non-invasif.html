@@ -255,48 +255,154 @@
             .footer-inner { grid-template-columns: 1fr 1fr; }
         }
 
+
 /* ===== PRODUCT GALLERY ===== */
-.product-gallery { position: relative; }
-.product-main-img {
-    background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02));
-    border: 1px solid rgba(0,224,255,0.1);
-    border-radius: 16px;
-    padding: 24px;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 12px;
+.product-gallery { position: relative; display: flex; gap: 12px; }
+.product-main-col { flex: 1; min-width: 0; }
+.product-main-img { 
+    background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02)); 
+    border: 1px solid rgba(0,224,255,0.1); 
+    border-radius: 16px; 
+    padding: 24px; 
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 0;
 }
-.product-main-img::before {
-    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
-    background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%);
-    pointer-events: none;
+.product-main-img::before { 
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
+    background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
+    pointer-events: none; 
 }
-.product-main-img img { cursor: zoom-in;
-    width: 100%; border-radius: 8px; position: relative; z-index: 1;
+.product-main-img img { cursor: zoom-in; 
+    width: 100%; border-radius: 8px; position: relative; z-index: 1; 
     transition: transform 0.3s ease;
 }
 .product-main-img:hover img { transform: scale(1.02); }
-.product-thumbs {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px;
+
+/* Carousel navigation arrows on main image */
+.carousel-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    z-index: 5; width: 40px; height: 40px;
+    border-radius: 50%; border: none;
+    background: rgba(0,224,255,0.15); color: #fff;
+    font-size: 1.3rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background 0.3s, transform 0.2s;
+    backdrop-filter: blur(4px);
 }
-.product-thumb {
-    background: rgba(0,224,255,0.04);
-    border: 2px solid rgba(0,224,255,0.1);
-    border-radius: 10px;
-    padding: 8px;
-    cursor: pointer;
+.carousel-nav:hover { background: rgba(0,224,255,0.35); transform: translateY(-50%) scale(1.1); }
+.carousel-prev { left: 12px; }
+.carousel-next { right: 12px; }
+
+/* Image counter badge */
+.carousel-counter {
+    position: absolute; bottom: 12px; left: 50%; transform: translateX(-50%);
+    z-index: 5; background: rgba(11,27,61,0.85); color: #b8c9e0;
+    font-size: 0.75rem; font-weight: 600; padding: 4px 12px;
+    border-radius: 20px; backdrop-filter: blur(4px);
+    border: 1px solid rgba(0,224,255,0.15);
+}
+
+/* Vertical thumbnails */
+.product-thumbs-col { 
+    display: flex; flex-direction: column; gap: 8px; 
+    width: 80px; flex-shrink: 0;
+}
+.product-thumb { 
+    background: rgba(0,224,255,0.04); 
+    border: 2px solid rgba(0,224,255,0.1); 
+    border-radius: 10px; 
+    padding: 6px; 
+    cursor: pointer; 
     transition: border-color 0.3s, transform 0.2s;
     overflow: hidden;
 }
-.product-thumb:hover { border-color: rgba(0,224,255,0.4); transform: translateY(-2px); }
+.product-thumb:hover { border-color: rgba(0,224,255,0.4); transform: scale(1.05); }
 .product-thumb.active { border-color: #00E0FF; box-shadow: 0 0 12px rgba(0,224,255,0.2); }
 .product-thumb img { width: 100%; border-radius: 6px; display: block; }
+
 @media (max-width: 768px) {
-    .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
-    .product-thumb { padding: 4px; }
+    .product-gallery { flex-direction: column; }
+    .product-thumbs-col { 
+        flex-direction: row; width: 100%; 
+        overflow-x: auto; -webkit-overflow-scrolling: touch;
+    }
+    .product-thumb { min-width: 64px; }
+    .carousel-nav { width: 32px; height: 32px; font-size: 1rem; }
 }
 
 /* ===== LIGHTBOX / ZOOM MODAL ===== */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    animation: lbFadeIn 0.25s ease;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,224,255,0.15);
+    animation: lbZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.2s;
+}
+.lightbox-nav:hover { background: rgba(0,224,255,0.2); }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+.lightbox-counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8899b0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+@keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lbZoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+</style> / ZOOM MODAL ===== */
 .lightbox-overlay {
     display: none;
     position: fixed;
@@ -437,23 +543,27 @@
     </div>
     
     <section class="product-hero">
-        <div class="product-gallery">
-            <div class="product-main-img">
-                <span class="badge-nouveau">Nouveau</span>
-                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp" alt="Glucose-Check Air — Analyseur glycémie non-invasif sans piqûre — Vue principale" width="720" height="724" loading="eager" id="mainProductImg">
-            </div>
-            <div class="product-thumbs">
+                <div class="product-gallery">
+            <div class="product-thumbs-col">
                 <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp" alt="Glucose-Check Air — Vue principale" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp" alt="Vue 1" width="68" height="68" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-2.webp" alt="Glucose-Check Air — Interface logicielle" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-2.webp" alt="Vue 2" width="68" height="68" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-3.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-3.webp" alt="Glucose-Check Air — Tablette dashboard santé" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-3.webp" alt="Vue 3" width="68" height="68" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-4.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-4.webp" alt="Glucose-Check Air — Mallette de transport" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-4.webp" alt="Vue 4" width="68" height="68" loading="lazy">
+                </div>
+            </div>
+            <div class="product-main-col">
+                <div class="product-main-img">
+                    <button class="carousel-nav carousel-prev" aria-label="Image pr&eacute;c&eacute;dente">&#8249;</button>
+                    <button class="carousel-nav carousel-next" aria-label="Image suivante">&#8250;</button>
+                    <div class="carousel-counter">1 / 4</div>
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp" alt="Vue 1" width="864" height="864" loading="eager" id="mainProductImg">
                 </div>
             </div>
         </div>
@@ -797,5 +907,15 @@ function switchImage(src, thumbEl) {
 })();
 </script>
 <script>initProductLightbox('analyseur-glycemie-non-invasif', 4);</script>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox-overlay" id="lightboxOverlay">
+    <div class="lightbox-close">&times;</div>
+    <div class="lightbox-nav lightbox-prev">&#8249;</div>
+    <img src="" alt="Zoom produit">
+    <div class="lightbox-nav lightbox-next">&#8250;</div>
+    <div class="lightbox-counter">1 / 4</div>
+</div>
+
 </body>
 </html>
