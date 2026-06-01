@@ -392,27 +392,22 @@
     </div>
     
     <section class="product-hero">
-                <div class="product-gallery">
-            <div class="product-thumbs-col">
+        <div class="product-gallery">
+            <div class="product-main-img">
+                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp" alt="Thermomètre infrarouge médical Thermo-Sense Ultra — Vue principale" width="720" height="812" loading="eager">
+            </div>
+            <div class="product-thumbs">
                 <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp" alt="Vue 1" width="68" height="68" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp" alt="Thermo-Sense Ultra — Thermomètre seul" width="120" height="135" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-2.webp" alt="Vue 2" width="68" height="68" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-2.webp" alt="Thermo-Sense Ultra — Compartiment piles" width="120" height="156" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-3.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-3.webp" alt="Vue 3" width="68" height="68" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-3.webp" alt="Thermo-Sense Ultra — Alarme fièvre tricolore" width="120" height="160" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-4.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-4.webp" alt="Vue 4" width="68" height="68" loading="lazy">
-                </div>
-            </div>
-            <div class="product-main-col">
-                <div class="product-main-img">
-                    <button class="carousel-nav carousel-prev" aria-label="Image pr&eacute;c&eacute;dente">&#8249;</button>
-                    <button class="carousel-nav carousel-next" aria-label="Image suivante">&#8250;</button>
-                    <div class="carousel-counter">1 / 4</div>
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp" alt="Vue 1" width="864" height="864" loading="eager" id="mainProductImg">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-4.webp" alt="Thermo-Sense Ultra — En utilisation" width="120" height="99" loading="lazy">
                 </div>
             </div>
         </div>
@@ -652,7 +647,16 @@
     </div>
 
 
-
+<script>
+function switchImage(imgSrc, thumb) {
+    const mainImg = document.getElementById('mainProductImg');
+    if (mainImg) {
+        mainImg.src = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/' + imgSrc;
+    }
+    document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
+    if (thumb) thumb.classList.add('active');
+}
+</script>
 <script>
 /* ===== LIGHTBOX SYSTEM ===== */
 (function(){
@@ -754,15 +758,5 @@
 })();
 </script>
 <script>initProductLightbox('thermometre-infrarouge-medical', 4);</script>
-
-<!-- ===== LIGHTBOX ===== -->
-<div class="lightbox-overlay" id="lightboxOverlay">
-    <div class="lightbox-close">&times;</div>
-    <div class="lightbox-nav lightbox-prev">&#8249;</div>
-    <img src="" alt="Zoom produit">
-    <div class="lightbox-nav lightbox-next">&#8250;</div>
-    <div class="lightbox-counter">1 / 4</div>
-</div>
-
 </body>
 </html>
