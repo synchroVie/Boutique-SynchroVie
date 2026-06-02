@@ -70,8 +70,8 @@
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "4.7",
-            "reviewCount": "89",
+            "ratingValue": "5",
+            "reviewCount": "3",
             "bestRating": "5",
             "worstRating": "1"
           }
@@ -264,6 +264,119 @@
             .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
             .footer-inner { grid-template-columns: 1fr 1fr; }
         }
+    
+/* ===== PRODUCT GALLERY ===== */
+.product-gallery { position: relative; }
+.product-main-img { 
+    background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02)); 
+    border: 1px solid rgba(0,224,255,0.1); 
+    border-radius: 16px; 
+    padding: 24px; 
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 12px;
+}
+.product-main-img::before { 
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
+    background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
+    pointer-events: none; 
+}
+.product-main-img img { cursor: zoom-in; 
+    width: 100%; border-radius: 8px; position: relative; z-index: 1; 
+    transition: transform 0.3s ease;
+}
+.product-main-img:hover img { transform: scale(1.02); }
+.product-thumbs { 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; 
+}
+.product-thumb { 
+    background: rgba(0,224,255,0.04); 
+    border: 2px solid rgba(0,224,255,0.1); 
+    border-radius: 10px; 
+    padding: 8px; 
+    cursor: pointer; 
+    transition: border-color 0.3s, transform 0.2s;
+    overflow: hidden;
+}
+.product-thumb:hover { border-color: rgba(0,224,255,0.4); transform: translateY(-2px); }
+.product-thumb.active { border-color: #00E0FF; box-shadow: 0 0 12px rgba(0,224,255,0.2); }
+.product-thumb img { width: 100%; border-radius: 6px; display: block; }
+@media (max-width: 768px) {
+    .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .product-thumb { padding: 4px; }
+}
+
+
+/* ===== LIGHTBOX / ZOOM MODAL ===== */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    animation: lbFadeIn 0.25s ease;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,224,255,0.15);
+    animation: lbZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.2s;
+}
+.lightbox-nav:hover { background: rgba(0,224,255,0.2); }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+.lightbox-counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8899b0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+@keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lbZoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     </style>
 </head>
 <body>
@@ -322,22 +435,22 @@
 
     <!-- ===== PRODUCT HERO ===== -->
     <section class="product-hero">
-        <div class="product-gallery">
+                <div class="product-gallery">
             <div class="product-main-img">
-                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp" alt="Dynamomètre force digital EH109 — Vue principale" width="600" height="450" loading="eager">
+                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp" alt="Dynamomètre force digital EH109 — Vue principale" width="864" height="864" loading="eager">
             </div>
             <div class="product-thumbs">
-                <div class="product-thumb active" onclick="switchImage('dynamometre-force-digital-1.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp" alt="Dynamomètre EH109 — Vue principale" width="100" height="75">
+                <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp" alt="Dynamomètre force digital EH109 — Vue principale" width="120" height="120" loading="lazy">
                 </div>
-                <div class="product-thumb" onclick="switchImage('dynamometre-force-digital-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-2.webp" alt="Utilisation — Homme serrant le dynamomètre" width="100" height="75">
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-2.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-2.webp" alt="Dynamomètre force digital EH109 — Vue principale" width="120" height="120" loading="lazy">
                 </div>
-                <div class="product-thumb" onclick="switchImage('dynamometre-force-digital-3.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-3.webp" alt="Écran LED — Caractéristiques détaillées" width="100" height="75">
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-3.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-3.webp" alt="Dynamomètre force digital EH109 — Vue principale" width="120" height="120" loading="lazy">
                 </div>
-                <div class="product-thumb" onclick="switchImage('dynamometre-force-digital-4.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-4.webp" alt="Vue angle — Détails produit" width="100" height="75">
+                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-4.webp', this)">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-4.webp" alt="Dynamomètre force digital EH109 — Vue principale" width="120" height="120" loading="lazy">
                 </div>
             </div>
         </div>
@@ -389,6 +502,14 @@
             </div>
         </div>
     </section>
+
+        <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();lightboxNav(-1)">&#8249;</span>
+        <img id="lightboxImg" src="" alt="Zoom">
+        <span class="lightbox-nav lightbox-next" onclick="event.stopPropagation();lightboxNav(1)">&#8250;</span>
+        <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
 
     <!-- ===== SPECIFICATIONS ===== -->
     <section class="specs-section">
@@ -586,7 +707,7 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp +223 60 62 51 55</a>
+                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp Synchrovie</a>
                 <a href="mailto:synchrovie@gmail.com">synchrovie@gmail.com</a>
                 <p>Bamako, Mali<br>Livraison Europe & Afrique</p>
             </div>
@@ -627,15 +748,54 @@
     </a>
 
 
+
+
+
 <script>
-function switchImage(imgSrc, thumb) {
-    const mainImg = document.getElementById('mainProductImg');
-    if (mainImg) {
-        mainImg.src = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/' + imgSrc;
-    }
-    document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
-    if (thumb) thumb.classList.add('active');
+const BASE='https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
+const SLUG='dynamometre-force-digital';
+const IMGS=[SLUG+'-1.webp',SLUG+'-2.webp',SLUG+'-3.webp',SLUG+'-4.webp'];
+let currentImg=0;
+function switchImage(src,el){
+    document.getElementById('mainProductImg').src=src;
+    document.querySelectorAll('.product-thumb').forEach(t=>t.classList.remove('active'));
+    if(el)el.classList.add('active');
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
 }
+document.getElementById('mainProductImg').addEventListener('click',function(){
+    openLightbox(this.src);
+});
+function openLightbox(src){
+    const o=document.getElementById('lightboxOverlay');
+    document.getElementById('lightboxImg').src=src;
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
+    updateCounter();
+    o.classList.add('active');
+    document.body.style.overflow='hidden';
+}
+function closeLightbox(e){
+    if(e&&e.target&&(e.target.classList.contains('lightbox-overlay')||e.target.classList.contains('lightbox-close'))){
+        document.getElementById('lightboxOverlay').classList.remove('active');
+        document.body.style.overflow='';
+    }
+}
+function lightboxNav(dir){
+    currentImg=(currentImg+dir+IMGS.length)%IMGS.length;
+    document.getElementById('lightboxImg').src=BASE+IMGS[currentImg];
+    document.getElementById('mainProductImg').src=BASE+IMGS[currentImg];
+    updateCounter();
+    document.querySelectorAll('.product-thumb').forEach((t,i)=>{t.classList.toggle('active',i===currentImg);});
+}
+function updateCounter(){document.getElementById('lightboxCounter').textContent=(currentImg+1)+' / '+IMGS.length;}
+document.addEventListener('keydown',function(e){
+    if(!document.getElementById('lightboxOverlay').classList.contains('active'))return;
+    if(e.key==='Escape'){closeLightbox({target:{classList:{contains:c=>c==='lightbox-overlay'}}});}
+    if(e.key==='ArrowLeft')lightboxNav(-1);
+    if(e.key==='ArrowRight')lightboxNav(1);
+});
 </script>
+
 </body>
 </html>

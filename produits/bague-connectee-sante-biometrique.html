@@ -627,23 +627,22 @@
     </div>
     
     <section class="product-hero">
-        <div class="product-gallery">
+                <div class="product-gallery">
             <div class="product-main-img">
-                <span class="badge-top-vente">Top Vente</span>
-                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-1.webp" alt="Bague Smart Ring SynchroRing X1 — Design métallique futuriste" width="864" height="893" loading="eager" id="mainProductImg" onclick="openLightbox(0)">
+                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-1.webp" alt="Bague Smart Ring SynchroRing X1 — Design métallique futuriste" width="864" height="864" loading="eager">
             </div>
             <div class="product-thumbs">
                 <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-1.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-1.webp" alt="SynchroRing X1 — Design métallique futuriste" width="120" height="124" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-1.webp" alt="Bague Smart Ring SynchroRing X1 — Design métallique futuriste" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-2.webp" alt="SynchroRing X1 — Spécifications techniques sur base de charge" width="120" height="147" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-2.webp" alt="Bague Smart Ring SynchroRing X1 — Design métallique futuriste" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-3.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-3.webp" alt="SynchroRing X1 — Surveillance FC et SpO2 via smartphone" width="120" height="197" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-3.webp" alt="Bague Smart Ring SynchroRing X1 — Design métallique futuriste" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-4.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-4.webp" alt="SynchroRing X1 — Suivi du sommeil avec application" width="120" height="132" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-connectee-sante-biometrique-4.webp" alt="Bague Smart Ring SynchroRing X1 — Design métallique futuriste" width="120" height="120" loading="lazy">
                 </div>
             </div>
         </div>
@@ -695,6 +694,14 @@
             </div>
         </div>
     </section>
+
+        <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();lightboxNav(-1)">&#8249;</span>
+        <img id="lightboxImg" src="" alt="Zoom">
+        <span class="lightbox-nav lightbox-next" onclick="event.stopPropagation();lightboxNav(1)">&#8250;</span>
+        <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
 
     <!-- ===== SPECIFICATIONS ===== -->
     <section class="specs-section">
@@ -884,7 +891,7 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp +223 60 62 51 55</a>
+                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp Synchrovie</a>
                 <a href="mailto:synchrovie@gmail.com">synchrovie@gmail.com</a>
                 <p>Bamako, Mali<br>Livraison Europe & Afrique</p>
             </div>
@@ -912,68 +919,54 @@
     </footer>
 
 
+
+
+
 <script>
-// Gallery: switch main image on thumbnail click
-function switchImage(imgSrc, thumbEl) {
-    var mainImg = document.getElementById('mainProductImg');
-    if (mainImg) mainImg.src = imgSrc;
-    var thumbs = document.querySelectorAll('.product-thumb');
-    thumbs.forEach(function(t) { t.classList.remove('active'); });
-    if (thumbEl) thumbEl.classList.add('active');
+const BASE='https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
+const SLUG='bague-connectee-sante-biometrique';
+const IMGS=[SLUG+'-1.webp',SLUG+'-2.webp',SLUG+'-3.webp',SLUG+'-4.webp'];
+let currentImg=0;
+function switchImage(src,el){
+    document.getElementById('mainProductImg').src=src;
+    document.querySelectorAll('.product-thumb').forEach(t=>t.classList.remove('active'));
+    if(el)el.classList.add('active');
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
 }
-
-// Lightbox: open zoom overlay
-var lbImages = [];
-var lbIndex = 0;
-
-function openLightbox(idx) {
-    var thumbs = document.querySelectorAll('.product-thumb img');
-    lbImages = [];
-    thumbs.forEach(function(img) { lbImages.push(img.src); });
-    if (idx === undefined) idx = 0;
-    lbIndex = idx;
-    showLightbox();
+document.getElementById('mainProductImg').addEventListener('click',function(){
+    openLightbox(this.src);
+});
+function openLightbox(src){
+    const o=document.getElementById('lightboxOverlay');
+    document.getElementById('lightboxImg').src=src;
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
+    updateCounter();
+    o.classList.add('active');
+    document.body.style.overflow='hidden';
 }
-
-function showLightbox() {
-    var existing = document.getElementById('synchroLightbox');
-    if (existing) existing.remove();
-    
-    var lb = document.createElement('div');
-    lb.id = 'synchroLightbox';
-    lb.className = 'lightbox-overlay active';
-    lb.innerHTML = '<span class="lightbox-close" onclick="closeLightbox()">&times;</span>' +
-        '<span class="lightbox-nav lightbox-prev" onclick="lbNav(-1)">&#8249;</span>' +
-        '<img src="' + lbImages[lbIndex] + '" alt="Zoom">' +
-        '<span class="lightbox-nav lightbox-next" onclick="lbNav(1)">&#8250;</span>' +
-        '<span class="lightbox-counter">' + (lbIndex+1) + ' / ' + lbImages.length + '</span>';
-    
-    lb.addEventListener('click', function(e) {
-        if (e.target === lb) closeLightbox();
-    });
-    document.body.appendChild(lb);
-    document.body.style.overflow = 'hidden';
+function closeLightbox(e){
+    if(e&&e.target&&(e.target.classList.contains('lightbox-overlay')||e.target.classList.contains('lightbox-close'))){
+        document.getElementById('lightboxOverlay').classList.remove('active');
+        document.body.style.overflow='';
+    }
 }
-
-function closeLightbox() {
-    var lb = document.getElementById('synchroLightbox');
-    if (lb) lb.remove();
-    document.body.style.overflow = '';
+function lightboxNav(dir){
+    currentImg=(currentImg+dir+IMGS.length)%IMGS.length;
+    document.getElementById('lightboxImg').src=BASE+IMGS[currentImg];
+    document.getElementById('mainProductImg').src=BASE+IMGS[currentImg];
+    updateCounter();
+    document.querySelectorAll('.product-thumb').forEach((t,i)=>{t.classList.toggle('active',i===currentImg);});
 }
-
-function lbNav(dir) {
-    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
-    showLightbox();
-}
-
-// Keyboard navigation
-document.addEventListener('keydown', function(e) {
-    var lb = document.getElementById('synchroLightbox');
-    if (!lb) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') lbNav(-1);
-    if (e.key === 'ArrowRight') lbNav(1);
+function updateCounter(){document.getElementById('lightboxCounter').textContent=(currentImg+1)+' / '+IMGS.length;}
+document.addEventListener('keydown',function(e){
+    if(!document.getElementById('lightboxOverlay').classList.contains('active'))return;
+    if(e.key==='Escape'){closeLightbox({target:{classList:{contains:c=>c==='lightbox-overlay'}}});}
+    if(e.key==='ArrowLeft')lightboxNav(-1);
+    if(e.key==='ArrowRight')lightboxNav(1);
 });
 </script>
+
 </body>
 </html>

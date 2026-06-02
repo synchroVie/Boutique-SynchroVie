@@ -437,23 +437,22 @@
     </div>
     
     <section class="product-hero">
-        <div class="product-gallery">
+                <div class="product-gallery">
             <div class="product-main-img">
-                <span class="badge-nouveau">Nouveau</span>
-                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp" alt="Glucose-Check Air — Analyseur glycémie non-invasif sans piqûre — Vue principale" width="720" height="724" loading="eager" id="mainProductImg">
+                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp" alt="Glucose-Check Air — Analyseur glycémie non-invasif sans piqûre — Vue principale" width="864" height="864" loading="eager">
             </div>
             <div class="product-thumbs">
                 <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp" alt="Glucose-Check Air — Vue principale" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp" alt="Glucose-Check Air — Analyseur glycémie non-invasif sans piqûre — Vue principale" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-2.webp" alt="Glucose-Check Air — Interface logicielle" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-2.webp" alt="Glucose-Check Air — Analyseur glycémie non-invasif sans piqûre — Vue principale" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-3.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-3.webp" alt="Glucose-Check Air — Tablette dashboard santé" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-3.webp" alt="Glucose-Check Air — Analyseur glycémie non-invasif sans piqûre — Vue principale" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-4.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-4.webp" alt="Glucose-Check Air — Mallette de transport" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-4.webp" alt="Glucose-Check Air — Analyseur glycémie non-invasif sans piqûre — Vue principale" width="120" height="120" loading="lazy">
                 </div>
             </div>
         </div>
@@ -505,6 +504,14 @@
             </div>
         </div>
     </section>
+
+        <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();lightboxNav(-1)">&#8249;</span>
+        <img id="lightboxImg" src="" alt="Zoom">
+        <span class="lightbox-nav lightbox-next" onclick="event.stopPropagation();lightboxNav(1)">&#8250;</span>
+        <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
 
     <!-- ===== SPECIFICATIONS ===== -->
     <section class="specs-section">
@@ -694,7 +701,7 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp +223 60 62 51 55</a>
+                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp Synchrovie</a>
                 <a href="mailto:synchrovie@gmail.com">synchrovie@gmail.com</a>
                 <p>Bamako, Mali<br>Livraison Europe & Afrique</p>
             </div>
@@ -722,80 +729,55 @@
     </footer>
 
 
-<script>
-/* ===== GALLERY SWITCH + LIGHTBOX ===== */
-function switchImage(src, thumbEl) {
-    var mainImg = document.getElementById('mainProductImg');
-    if (mainImg) mainImg.src = src;
-    document.querySelectorAll('.product-thumb').forEach(function(t) { t.classList.remove('active'); });
-    if (thumbEl) thumbEl.classList.add('active');
-}
 
-(function(){
-    const BASE = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
-    let currentImages = [];
-    let currentIndex = 0;
-    
-    const lb = document.createElement('div');
-    lb.className = 'lightbox-overlay';
-    lb.id = 'productLightbox';
-    lb.innerHTML = '<span class="lightbox-close" id="lbClose">&times;</span><span class="lightbox-nav lightbox-prev" id="lbPrev">&#8249;</span><img id="lbImg" src="" alt="Zoom produit"><span class="lightbox-nav lightbox-next" id="lbNext">&#8250;</span><span class="lightbox-counter" id="lbCounter"></span>';
-    document.body.appendChild(lb);
-    
-    function openLightbox(images, index) {
-        currentImages = images;
-        currentIndex = index;
-        updateLightbox();
-        lb.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-        lb.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    function updateLightbox() {
-        document.getElementById('lbImg').src = currentImages[currentIndex];
-        document.getElementById('lbCounter').textContent = (currentIndex + 1) + ' / ' + currentImages.length;
-    }
-    document.getElementById('lbClose').addEventListener('click', closeLightbox);
-    lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
-    document.getElementById('lbPrev').addEventListener('click', function(e) {
-        e.stopPropagation();
-        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-        updateLightbox();
-    });
-    document.getElementById('lbNext').addEventListener('click', function(e) {
-        e.stopPropagation();
-        currentIndex = (currentIndex + 1) % currentImages.length;
-        updateLightbox();
-    });
-    document.addEventListener('keydown', function(e) {
-        if (!lb.classList.contains('active')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; updateLightbox(); }
-        if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); }
-    });
-    
-    window.initProductLightbox = function(slug, count) {
-        const images = [];
-        for (let i = 1; i <= count; i++) images.push(BASE + slug + '-' + i + '.webp');
-        const mainImg = document.querySelector('.product-main-img img');
-        if (mainImg) {
-            mainImg.style.cursor = 'zoom-in';
-            mainImg.addEventListener('click', function() {
-                let activeIdx = 0;
-                document.querySelectorAll('.product-thumb').forEach(function(t, i) {
-                    if (t.classList.contains('active')) activeIdx = i;
-                });
-                openLightbox(images, activeIdx);
-            });
-        }
-        document.querySelectorAll('.product-thumb').forEach(function(thumb, idx) {
-            thumb.addEventListener('dblclick', function() { openLightbox(images, idx); });
-        });
-    };
-})();
-</script>
 <script>initProductLightbox('analyseur-glycemie-non-invasif', 4);</script>
+
+
+<script>
+const BASE='https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
+const SLUG='analyseur-glycemie-non-invasif';
+const IMGS=[SLUG+'-1.webp',SLUG+'-2.webp',SLUG+'-3.webp',SLUG+'-4.webp'];
+let currentImg=0;
+function switchImage(src,el){
+    document.getElementById('mainProductImg').src=src;
+    document.querySelectorAll('.product-thumb').forEach(t=>t.classList.remove('active'));
+    if(el)el.classList.add('active');
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
+}
+document.getElementById('mainProductImg').addEventListener('click',function(){
+    openLightbox(this.src);
+});
+function openLightbox(src){
+    const o=document.getElementById('lightboxOverlay');
+    document.getElementById('lightboxImg').src=src;
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
+    updateCounter();
+    o.classList.add('active');
+    document.body.style.overflow='hidden';
+}
+function closeLightbox(e){
+    if(e&&e.target&&(e.target.classList.contains('lightbox-overlay')||e.target.classList.contains('lightbox-close'))){
+        document.getElementById('lightboxOverlay').classList.remove('active');
+        document.body.style.overflow='';
+    }
+}
+function lightboxNav(dir){
+    currentImg=(currentImg+dir+IMGS.length)%IMGS.length;
+    document.getElementById('lightboxImg').src=BASE+IMGS[currentImg];
+    document.getElementById('mainProductImg').src=BASE+IMGS[currentImg];
+    updateCounter();
+    document.querySelectorAll('.product-thumb').forEach((t,i)=>{t.classList.toggle('active',i===currentImg);});
+}
+function updateCounter(){document.getElementById('lightboxCounter').textContent=(currentImg+1)+' / '+IMGS.length;}
+document.addEventListener('keydown',function(e){
+    if(!document.getElementById('lightboxOverlay').classList.contains('active'))return;
+    if(e.key==='Escape'){closeLightbox({target:{classList:{contains:c=>c==='lightbox-overlay'}}});}
+    if(e.key==='ArrowLeft')lightboxNav(-1);
+    if(e.key==='ArrowRight')lightboxNav(1);
+});
+</script>
+
 </body>
 </html>

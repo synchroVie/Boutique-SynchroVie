@@ -246,6 +246,8 @@
             .footer-inner { grid-template-columns: 1fr 1fr; }
         }
     
+
+
 /* ===== PRODUCT GALLERY ===== */
 .product-gallery { position: relative; }
 .product-main-img { 
@@ -262,13 +264,13 @@
     background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
     pointer-events: none; 
 }
-.product-main-img img { 
+.product-main-img img { cursor: zoom-in; 
     width: 100%; border-radius: 8px; position: relative; z-index: 1; 
     transition: transform 0.3s ease;
 }
 .product-main-img:hover img { transform: scale(1.02); }
 .product-thumbs { 
-    display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; 
 }
 .product-thumb { 
     background: rgba(0,224,255,0.04); 
@@ -283,11 +285,82 @@
 .product-thumb.active { border-color: #00E0FF; box-shadow: 0 0 12px rgba(0,224,255,0.2); }
 .product-thumb img { width: 100%; border-radius: 6px; display: block; }
 @media (max-width: 768px) {
-    .product-thumbs { grid-template-columns: repeat(5, 1fr); gap: 6px; }
+    .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
     .product-thumb { padding: 4px; }
 }
 
-</style>
+
+/* ===== LIGHTBOX / ZOOM MODAL ===== */
+.lightbox-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,0.92);
+    backdrop-filter: blur(8px);
+    justify-content: center;
+    align-items: center;
+    cursor: zoom-out;
+    animation: lbFadeIn 0.25s ease;
+}
+.lightbox-overlay.active { display: flex; }
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0,224,255,0.15);
+    animation: lbZoomIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.lightbox-close {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.1);
+    transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.2); }
+.lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    z-index: 10000;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.08);
+    transition: background 0.2s;
+}
+.lightbox-nav:hover { background: rgba(0,224,255,0.2); }
+.lightbox-prev { left: 24px; }
+.lightbox-next { right: 24px; }
+.lightbox-counter {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8899b0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+@keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lbZoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    </style>
 </head>
 <body>
 
@@ -358,25 +431,22 @@
     </div>
     
     <section class="product-hero">
-        <div class="product-gallery">
+                <div class="product-gallery">
             <div class="product-main-img">
-                <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-1.webp" alt="Scale-Master Pro — Balance impédancemètre — Vue principale" width="720" height="727" loading="eager" id="mainProductImg" onclick="openLightbox(0)">
+                <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-1.webp" alt="Scale-Master Pro — Balance impédancemètre — Vue principale" width="864" height="864" loading="eager">
             </div>
             <div class="product-thumbs">
                 <div class="product-thumb active" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-1.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-1.webp" alt="Scale-Master Pro — Principal" width="120" height="121" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-1.webp" alt="Scale-Master Pro — Balance impédancemètre — Vue principale" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-2.webp" alt="Scale-Master Pro — En utilisation" width="120" height="121" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-2.webp" alt="Scale-Master Pro — Balance impédancemètre — Vue principale" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-3.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-3.webp" alt="Scale-Master Pro — Électrodes et capteurs" width="120" height="122" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-3.webp" alt="Scale-Master Pro — Balance impédancemètre — Vue principale" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-4.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-4.webp" alt="Scale-Master Pro — Batterie et USB-C" width="120" height="121" loading="lazy">
-                </div>
-                <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-5.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-5.webp" alt="Scale-Master Pro — Rapport composition corporelle" width="120" height="117" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/balance-impedancemetre-connectee-4.webp" alt="Scale-Master Pro — Balance impédancemètre — Vue principale" width="120" height="120" loading="lazy">
                 </div>
             </div>
         </div>
@@ -428,6 +498,14 @@
             </div>
         </div>
     </section>
+
+        <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();lightboxNav(-1)">&#8249;</span>
+        <img id="lightboxImg" src="" alt="Zoom">
+        <span class="lightbox-nav lightbox-next" onclick="event.stopPropagation();lightboxNav(1)">&#8250;</span>
+        <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
 
     <!-- ===== SPECIFICATIONS ===== -->
     <section class="specs-section">
@@ -617,7 +695,7 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp +223 60 62 51 55</a>
+                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp Synchrovie</a>
                 <a href="mailto:synchrovie@gmail.com">synchrovie@gmail.com</a>
                 <p>Bamako, Mali<br>Livraison Europe & Afrique</p>
             </div>
@@ -645,68 +723,54 @@
     </footer>
 
 
+
+
+
 <script>
-// Gallery: switch main image on thumbnail click
-function switchImage(imgSrc, thumbEl) {
-    var mainImg = document.getElementById('mainProductImg');
-    if (mainImg) mainImg.src = imgSrc;
-    var thumbs = document.querySelectorAll('.product-thumb');
-    thumbs.forEach(function(t) { t.classList.remove('active'); });
-    if (thumbEl) thumbEl.classList.add('active');
+const BASE='https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
+const SLUG='balance-impedancemetre-connectee';
+const IMGS=[SLUG+'-1.webp',SLUG+'-2.webp',SLUG+'-3.webp',SLUG+'-4.webp'];
+let currentImg=0;
+function switchImage(src,el){
+    document.getElementById('mainProductImg').src=src;
+    document.querySelectorAll('.product-thumb').forEach(t=>t.classList.remove('active'));
+    if(el)el.classList.add('active');
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
 }
-
-// Lightbox: open zoom overlay
-var lbImages = [];
-var lbIndex = 0;
-
-function openLightbox(idx) {
-    var thumbs = document.querySelectorAll('.product-thumb img');
-    lbImages = [];
-    thumbs.forEach(function(img) { lbImages.push(img.src); });
-    if (idx === undefined) idx = 0;
-    lbIndex = idx;
-    showLightbox();
+document.getElementById('mainProductImg').addEventListener('click',function(){
+    openLightbox(this.src);
+});
+function openLightbox(src){
+    const o=document.getElementById('lightboxOverlay');
+    document.getElementById('lightboxImg').src=src;
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
+    updateCounter();
+    o.classList.add('active');
+    document.body.style.overflow='hidden';
 }
-
-function showLightbox() {
-    var existing = document.getElementById('synchroLightbox');
-    if (existing) existing.remove();
-    
-    var lb = document.createElement('div');
-    lb.id = 'synchroLightbox';
-    lb.className = 'lightbox-overlay active';
-    lb.innerHTML = '<span class="lightbox-close" onclick="closeLightbox()">&times;</span>' +
-        '<span class="lightbox-nav lightbox-prev" onclick="lbNav(-1)">&#8249;</span>' +
-        '<img src="' + lbImages[lbIndex] + '" alt="Zoom">' +
-        '<span class="lightbox-nav lightbox-next" onclick="lbNav(1)">&#8250;</span>' +
-        '<span class="lightbox-counter">' + (lbIndex+1) + ' / ' + lbImages.length + '</span>';
-    
-    lb.addEventListener('click', function(e) {
-        if (e.target === lb) closeLightbox();
-    });
-    document.body.appendChild(lb);
-    document.body.style.overflow = 'hidden';
+function closeLightbox(e){
+    if(e&&e.target&&(e.target.classList.contains('lightbox-overlay')||e.target.classList.contains('lightbox-close'))){
+        document.getElementById('lightboxOverlay').classList.remove('active');
+        document.body.style.overflow='';
+    }
 }
-
-function closeLightbox() {
-    var lb = document.getElementById('synchroLightbox');
-    if (lb) lb.remove();
-    document.body.style.overflow = '';
+function lightboxNav(dir){
+    currentImg=(currentImg+dir+IMGS.length)%IMGS.length;
+    document.getElementById('lightboxImg').src=BASE+IMGS[currentImg];
+    document.getElementById('mainProductImg').src=BASE+IMGS[currentImg];
+    updateCounter();
+    document.querySelectorAll('.product-thumb').forEach((t,i)=>{t.classList.toggle('active',i===currentImg);});
 }
-
-function lbNav(dir) {
-    lbIndex = (lbIndex + dir + lbImages.length) % lbImages.length;
-    showLightbox();
-}
-
-// Keyboard navigation
-document.addEventListener('keydown', function(e) {
-    var lb = document.getElementById('synchroLightbox');
-    if (!lb) return;
-    if (e.key === 'Escape') closeLightbox();
-    if (e.key === 'ArrowLeft') lbNav(-1);
-    if (e.key === 'ArrowRight') lbNav(1);
+function updateCounter(){document.getElementById('lightboxCounter').textContent=(currentImg+1)+' / '+IMGS.length;}
+document.addEventListener('keydown',function(e){
+    if(!document.getElementById('lightboxOverlay').classList.contains('active'))return;
+    if(e.key==='Escape'){closeLightbox({target:{classList:{contains:c=>c==='lightbox-overlay'}}});}
+    if(e.key==='ArrowLeft')lightboxNav(-1);
+    if(e.key==='ArrowRight')lightboxNav(1);
 });
 </script>
+
 </body>
 </html>

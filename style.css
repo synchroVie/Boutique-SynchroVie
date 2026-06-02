@@ -582,7 +582,7 @@ header.scrolled {
     justify-content: flex-end;
     align-items: flex-start;
     gap: 10px;
-    min-height: 280px;
+    min-height: 200px;
 }
 .category-card-img {
     position: absolute;

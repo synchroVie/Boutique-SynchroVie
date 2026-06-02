@@ -417,7 +417,7 @@
     </div>
     
     <section class="product-hero">
-        <div class="product-gallery">
+                <div class="product-gallery">
             <div class="product-main-img">
                 <img id="mainProductImg" src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-1.webp" alt="Aura-Light Clock — Simulateur d'aube, modes affichés" width="864" height="864" loading="eager">
             </div>
@@ -426,13 +426,13 @@
                     <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-1.webp" alt="Aura-Light Clock — Simulateur d'aube, modes affichés" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-2.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-2.webp" alt="Aura-Light Clock — Fini les réveils brusques, réveil en douceur" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-2.webp" alt="Aura-Light Clock — Simulateur d'aube, modes affichés" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-3.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-3.webp" alt="Aura-Light Clock — Compagnon de chevet tout-en-un" width="120" height="125" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-3.webp" alt="Aura-Light Clock — Simulateur d'aube, modes affichés" width="120" height="120" loading="lazy">
                 </div>
                 <div class="product-thumb" onclick="switchImage('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-4.webp', this)">
-                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-4.webp" alt="Aura-Light Clock — 26 sons apaisants pour des nuits reposantes" width="120" height="120" loading="lazy">
+                    <img src="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube-crepuscule-4.webp" alt="Aura-Light Clock — Simulateur d'aube, modes affichés" width="120" height="120" loading="lazy">
                 </div>
             </div>
         </div>
@@ -484,6 +484,14 @@
             </div>
         </div>
     </section>
+
+        <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();lightboxNav(-1)">&#8249;</span>
+        <img id="lightboxImg" src="" alt="Zoom">
+        <span class="lightbox-nav lightbox-next" onclick="event.stopPropagation();lightboxNav(1)">&#8250;</span>
+        <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
 
     <!-- ===== SPECIFICATIONS ===== -->
     <section class="specs-section">
@@ -586,7 +594,7 @@
             <div class="cross-sell-card">
                 <h3>NeuroRest G2</h3>
                 <p>Masque sommeil ondes Delta. +23 % de sommeil profond, isolation phonique.</p>
-                <span class="cs-price">188 EUR</span><br>
+                <span class="cs-price">369 EUR</span><br>
                 <a href="https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html">Voir le produit →</a>
             </div>
             <div class="cross-sell-card">
@@ -669,7 +677,7 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp +223 60 62 51 55</a>
+                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp Synchrovie</a>
                 <a href="mailto:synchrovie@gmail.com">synchrovie@gmail.com</a>
                 <p>Bamako, Mali<br>Livraison Europe & Afrique</p>
             </div>
@@ -702,82 +710,54 @@
     </a>
 
 
+
+
+
 <script>
-function switchImage(imgSrc, thumbEl) {
-    var mainImg = document.getElementById('mainProductImg');
-    mainImg.src = imgSrc;
-    document.querySelectorAll('.product-thumb').forEach(function(t){ t.classList.remove('active'); });
-    if(thumbEl) thumbEl.classList.add('active');
+const BASE='https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
+const SLUG='simulateur-aube-crepuscule';
+const IMGS=[SLUG+'-1.webp',SLUG+'-2.webp',SLUG+'-3.webp',SLUG+'-4.webp'];
+let currentImg=0;
+function switchImage(src,el){
+    document.getElementById('mainProductImg').src=src;
+    document.querySelectorAll('.product-thumb').forEach(t=>t.classList.remove('active'));
+    if(el)el.classList.add('active');
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
 }
-
-function initProductLightbox(productSlug, imageCount) {
-    var images = [];
-    for (var i = 1; i <= imageCount; i++) {
-        images.push('https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/' + productSlug + '-' + i + '.webp');
-    }
-    
-    // Create lightbox HTML
-    var lb = document.createElement('div');
-    lb.className = 'lightbox-overlay';
-    lb.innerHTML = '<span class="lightbox-close" id="lbClose">&times;</span>' +
-        '<span class="lightbox-nav lightbox-prev" id="lbPrev">&#8249;</span>' +
-        '<img src="" alt="Zoom" id="lbImg">' +
-        '<span class="lightbox-nav lightbox-next" id="lbNext">&#8250;</span>' +
-        '<span class="lightbox-counter" id="lbCounter"></span>';
-    document.body.appendChild(lb);
-    
-    var currentIdx = 0;
-    
-    function showImage(idx) {
-        if (idx < 0) idx = images.length - 1;
-        if (idx >= images.length) idx = 0;
-        currentIdx = idx;
-        document.getElementById('lbImg').src = images[idx];
-        document.getElementById('lbCounter').textContent = (idx + 1) + ' / ' + images.length;
-    }
-    
-    function openLightbox(idx) {
-        showImage(idx);
-        lb.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function closeLightbox() {
-        lb.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    
-    // Make main image and thumbnails clickable for lightbox
-    var mainImg = document.getElementById('mainProductImg');
-    if (mainImg) {
-        mainImg.style.cursor = 'zoom-in';
-        mainImg.addEventListener('click', function() { openLightbox(0); });
-    }
-    
-    var thumbs = document.querySelectorAll('.product-thumb');
-    thumbs.forEach(function(thumb, idx) {
-        thumb.addEventListener('click', function() {
-            var activeIdx = 0;
-            thumbs.forEach(function(t, i) { if (t.classList.contains('active')) activeIdx = i; });
-            openLightbox(activeIdx);
-        });
-    });
-    
-    // Lightbox controls
-    document.getElementById('lbClose').addEventListener('click', function(e) { e.stopPropagation(); closeLightbox(); });
-    document.getElementById('lbPrev').addEventListener('click', function(e) { e.stopPropagation(); showImage(currentIdx - 1); });
-    document.getElementById('lbNext').addEventListener('click', function(e) { e.stopPropagation(); showImage(currentIdx + 1); });
-    lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
-    
-    document.addEventListener('keydown', function(e) {
-        if (!lb.classList.contains('active')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') showImage(currentIdx - 1);
-        if (e.key === 'ArrowRight') showImage(currentIdx + 1);
-    });
+document.getElementById('mainProductImg').addEventListener('click',function(){
+    openLightbox(this.src);
+});
+function openLightbox(src){
+    const o=document.getElementById('lightboxOverlay');
+    document.getElementById('lightboxImg').src=src;
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
+    updateCounter();
+    o.classList.add('active');
+    document.body.style.overflow='hidden';
 }
-
-initProductLightbox('simulateur-aube-crepuscule', 4);
+function closeLightbox(e){
+    if(e&&e.target&&(e.target.classList.contains('lightbox-overlay')||e.target.classList.contains('lightbox-close'))){
+        document.getElementById('lightboxOverlay').classList.remove('active');
+        document.body.style.overflow='';
+    }
+}
+function lightboxNav(dir){
+    currentImg=(currentImg+dir+IMGS.length)%IMGS.length;
+    document.getElementById('lightboxImg').src=BASE+IMGS[currentImg];
+    document.getElementById('mainProductImg').src=BASE+IMGS[currentImg];
+    updateCounter();
+    document.querySelectorAll('.product-thumb').forEach((t,i)=>{t.classList.toggle('active',i===currentImg);});
+}
+function updateCounter(){document.getElementById('lightboxCounter').textContent=(currentImg+1)+' / '+IMGS.length;}
+document.addEventListener('keydown',function(e){
+    if(!document.getElementById('lightboxOverlay').classList.contains('active'))return;
+    if(e.key==='Escape'){closeLightbox({target:{classList:{contains:c=>c==='lightbox-overlay'}}});}
+    if(e.key==='ArrowLeft')lightboxNav(-1);
+    if(e.key==='ArrowRight')lightboxNav(1);
+});
 </script>
+
 </body>
 </html>

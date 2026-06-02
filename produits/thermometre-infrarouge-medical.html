@@ -70,7 +70,7 @@
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": "5.0",
+            "ratingValue": "5",
             "reviewCount": "3",
             "bestRating": "5",
             "worstRating": "1"
@@ -250,6 +250,48 @@
             .footer-inner { grid-template-columns: 1fr 1fr; }
         }
     
+/* ===== PRODUCT GALLERY ===== */
+.product-gallery { position: relative; }
+.product-main-img { 
+    background: linear-gradient(145deg, rgba(0,224,255,0.04), rgba(0,201,167,0.02)); 
+    border: 1px solid rgba(0,224,255,0.1); 
+    border-radius: 16px; 
+    padding: 24px; 
+    position: relative; 
+    overflow: hidden; 
+    margin-bottom: 12px;
+}
+.product-main-img::before { 
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; 
+    background: radial-gradient(circle at 30% 40%, rgba(0,224,255,0.06) 0%, transparent 60%); 
+    pointer-events: none; 
+}
+.product-main-img img { cursor: zoom-in; 
+    width: 100%; border-radius: 8px; position: relative; z-index: 1; 
+    transition: transform 0.3s ease;
+}
+.product-main-img:hover img { transform: scale(1.02); }
+.product-thumbs { 
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; 
+}
+.product-thumb { 
+    background: rgba(0,224,255,0.04); 
+    border: 2px solid rgba(0,224,255,0.1); 
+    border-radius: 10px; 
+    padding: 8px; 
+    cursor: pointer; 
+    transition: border-color 0.3s, transform 0.2s;
+    overflow: hidden;
+}
+.product-thumb:hover { border-color: rgba(0,224,255,0.4); transform: translateY(-2px); }
+.product-thumb.active { border-color: #00E0FF; box-shadow: 0 0 12px rgba(0,224,255,0.2); }
+.product-thumb img { width: 100%; border-radius: 6px; display: block; }
+@media (max-width: 768px) {
+    .product-thumbs { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .product-thumb { padding: 4px; }
+}
+
+
 /* ===== LIGHTBOX / ZOOM MODAL ===== */
 .lightbox-overlay {
     display: none;
@@ -460,6 +502,14 @@
         </div>
     </section>
 
+        <div class="lightbox-overlay" id="lightboxOverlay" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();lightboxNav(-1)">&#8249;</span>
+        <img id="lightboxImg" src="" alt="Zoom">
+        <span class="lightbox-nav lightbox-next" onclick="event.stopPropagation();lightboxNav(1)">&#8250;</span>
+        <span class="lightbox-counter" id="lightboxCounter"></span>
+    </div>
+
     <!-- ===== SPECIFICATIONS ===== -->
     <section class="specs-section">
         <div class="specs-grid">
@@ -612,7 +662,7 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp +223 60 62 51 55</a>
+                <a href="https://wa.me/22360625155" target="_blank" rel="noopener">WhatsApp</a>
                 <a href="mailto:synchrovie@gmail.com">synchrovie@gmail.com</a>
                 <p>Bamako, Mali<br>Livraison Europe & Afrique</p>
             </div>
@@ -647,116 +697,56 @@
     </div>
 
 
+
+
+
+
+
 <script>
-function switchImage(imgSrc, thumb) {
-    const mainImg = document.getElementById('mainProductImg');
-    if (mainImg) {
-        mainImg.src = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/' + imgSrc;
-    }
-    document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
-    if (thumb) thumb.classList.add('active');
+const BASE='https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
+const SLUG='thermometre-infrarouge-medical';
+const IMGS=[SLUG+'-1.webp',SLUG+'-2.webp',SLUG+'-3.webp',SLUG+'-4.webp'];
+let currentImg=0;
+function switchImage(src,el){
+    document.getElementById('mainProductImg').src=src;
+    document.querySelectorAll('.product-thumb').forEach(t=>t.classList.remove('active'));
+    if(el)el.classList.add('active');
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
 }
+document.getElementById('mainProductImg').addEventListener('click',function(){
+    openLightbox(this.src);
+});
+function openLightbox(src){
+    const o=document.getElementById('lightboxOverlay');
+    document.getElementById('lightboxImg').src=src;
+    currentImg=IMGS.findIndex(i=>src.endsWith(i));
+    if(currentImg<0)currentImg=0;
+    updateCounter();
+    o.classList.add('active');
+    document.body.style.overflow='hidden';
+}
+function closeLightbox(e){
+    if(e&&e.target&&(e.target.classList.contains('lightbox-overlay')||e.target.classList.contains('lightbox-close'))){
+        document.getElementById('lightboxOverlay').classList.remove('active');
+        document.body.style.overflow='';
+    }
+}
+function lightboxNav(dir){
+    currentImg=(currentImg+dir+IMGS.length)%IMGS.length;
+    document.getElementById('lightboxImg').src=BASE+IMGS[currentImg];
+    document.getElementById('mainProductImg').src=BASE+IMGS[currentImg];
+    updateCounter();
+    document.querySelectorAll('.product-thumb').forEach((t,i)=>{t.classList.toggle('active',i===currentImg);});
+}
+function updateCounter(){document.getElementById('lightboxCounter').textContent=(currentImg+1)+' / '+IMGS.length;}
+document.addEventListener('keydown',function(e){
+    if(!document.getElementById('lightboxOverlay').classList.contains('active'))return;
+    if(e.key==='Escape'){closeLightbox({target:{classList:{contains:c=>c==='lightbox-overlay'}}});}
+    if(e.key==='ArrowLeft')lightboxNav(-1);
+    if(e.key==='ArrowRight')lightboxNav(1);
+});
 </script>
-<script>
-/* ===== LIGHTBOX SYSTEM ===== */
-(function(){
-    const BASE = 'https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/';
-    let currentImages = [];
-    let currentIndex = 0;
-    
-    // Create lightbox HTML
-    const lb = document.createElement('div');
-    lb.className = 'lightbox-overlay';
-    lb.id = 'productLightbox';
-    lb.innerHTML = `
-        <span class="lightbox-close" id="lbClose">&times;</span>
-        <span class="lightbox-nav lightbox-prev" id="lbPrev">&#8249;</span>
-        <img id="lbImg" src="" alt="Zoom produit">
-        <span class="lightbox-nav lightbox-next" id="lbNext">&#8250;</span>
-        <span class="lightbox-counter" id="lbCounter"></span>
-    `;
-    document.body.appendChild(lb);
-    
-    function openLightbox(images, index) {
-        currentImages = images;
-        currentIndex = index;
-        updateLightbox();
-        lb.classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-    
-    function closeLightbox() {
-        lb.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-    
-    function updateLightbox() {
-        document.getElementById('lbImg').src = currentImages[currentIndex];
-        document.getElementById('lbCounter').textContent = (currentIndex + 1) + ' / ' + currentImages.length;
-    }
-    
-    // Close
-    document.getElementById('lbClose').addEventListener('click', closeLightbox);
-    lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
-    
-    // Navigation
-    document.getElementById('lbPrev').addEventListener('click', function(e) {
-        e.stopPropagation();
-        currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-        updateLightbox();
-    });
-    document.getElementById('lbNext').addEventListener('click', function(e) {
-        e.stopPropagation();
-        currentIndex = (currentIndex + 1) % currentImages.length;
-        updateLightbox();
-    });
-    
-    // Keyboard
-    document.addEventListener('keydown', function(e) {
-        if (!lb.classList.contains('active')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') { currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length; updateLightbox(); }
-        if (e.key === 'ArrowRight') { currentIndex = (currentIndex + 1) % currentImages.length; updateLightbox(); }
-    });
-    
-    // Make main image and thumbnails clickable for lightbox
-    window.initProductLightbox = function(slug, count) {
-        const images = [];
-        for (let i = 1; i <= count; i++) images.push(BASE + slug + '-' + i + '.webp');
-        
-        const mainImg = document.querySelector('.product-main-img img, .product-image-wrap img');
-        if (mainImg) {
-            mainImg.style.cursor = 'zoom-in';
-            mainImg.addEventListener('click', function() { openLightbox(images, 0); });
-        }
-        
-        document.querySelectorAll('.product-thumb').forEach(function(thumb, idx) {
-            thumb.style.cursor = 'zoom-in';
-            thumb.addEventListener('click', function(e) {
-                e.stopPropagation();
-                // Update main image
-                const src = thumb.querySelector('img').src;
-                if (mainImg) mainImg.src = src;
-                document.querySelectorAll('.product-thumb').forEach(t => t.classList.remove('active'));
-                thumb.classList.add('active');
-            });
-            // Double-click for lightbox
-            thumb.addEventListener('dblclick', function() { openLightbox(images, idx); });
-        });
-        
-        // Make main image open lightbox for current thumb
-        if (mainImg) {
-            mainImg.addEventListener('click', function() {
-                let activeIdx = 0;
-                document.querySelectorAll('.product-thumb').forEach(function(t, i) {
-                    if (t.classList.contains('active')) activeIdx = i;
-                });
-                openLightbox(images, activeIdx);
-            });
-        }
-    };
-})();
-</script>
-<script>initProductLightbox('thermometre-infrarouge-medical', 4);</script>
+
 </body>
 </html>
