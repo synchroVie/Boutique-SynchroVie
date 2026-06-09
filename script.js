@@ -184,11 +184,41 @@ document.addEventListener('DOMContentLoaded', () => {
     // ---- Newsletter Form ----
     const newsletterForm = document.getElementById('newsletterForm');
     if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
+        newsletterForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const email = newsletterForm.querySelector('input[type="email"]').value;
-            showToast('✓ Merci ! Vous recevrez nos prochaines actualités.');
-            newsletterForm.reset();
+            const btn = newsletterForm.querySelector('button[type="submit"]');
+
+            btn.textContent = 'Envoi...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch('https://api.brevo.com/v3/contacts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'api-key': 'TA_CLE_API_BREVO'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        listIds: [ID_LISTE_BREVO],
+                        updateEnabled: true
+                    })
+                });
+
+                if (res.ok || res.status === 204) {
+                    btn.textContent = '✓ Vous êtes inscrit !';
+                    btn.style.background = 'linear-gradient(90deg,#00C9A7,#00C9A7)';
+                    newsletterForm.querySelector('input').value = '';
+                    showToast('✓ Merci ! Vous recevrez nos prochaines actualités.');
+                } else {
+                    throw new Error('Erreur');
+                }
+            } catch(err) {
+                btn.textContent = 'Réessayer';
+                btn.disabled = false;
+                showToast('Erreur d\'inscription. Réessayez.');
+            }
         });
     }
 

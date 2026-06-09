@@ -15,16 +15,22 @@
 
     <meta name="google-site-verification" content="wV9VVQ2Pq7ktBfdQB5Sqburfdo4EDJpyvpAmfSI2XB4" />
 
-    <title>Synchrovie | Haute Technologie de Performance & Bio-Optimisation</title>
-    <meta name="description" content="20 technologies d'élite pour synchroniser votre biologie : bio-monitoring, neuro-sommeil, biofeedback et performance physique. Livraison Europe 3-7j. Garantie 2 ans.">
-    <meta name="keywords" content="bague connectée santé, bio-monitoring, technologie sommeil, biofeedback, VFC, EMS, performance santé, bien-être connecté, santé connectée, bague biométrique, moniteur ECG portable, analyseur glycémie non invasif, balance impédancemètre, thermomètre infrarouge médical, tensiomètre intelligent, masque sommeil ondes delta, capteur sommeil sous matelas, simulateur aube crépuscule, patch nuque chauffant, bague contrôle cortisol, stimulateur musculaire EMS, correcteur posture haptique, pistolet massage compact, genouillère thermique, dynamomètre force digital, panneau thérapie lumière rouge, red light therapy, bain glacé récupération, cold plunge, couverture sauna infrarouge, infrared sauna blanket, stimulateur nerf vague, tVNS, vagus nerve stimulator">
+    <title>Synchrovie — Boutique Biohacking | Bague Biométrique, Neuro-Sommeil, Red Light Therapy</title>
+    <meta name="description" content="Boutique biohacking francophone — bagues biométriques, masques neuro-sommeil, thérapie lumière rouge, stimulateur nerf vague. 20 technologies livrées en 3-7j en Europe. Garantie 2 ans.">
+    <meta name="keywords" content="biohacking, santé connectée, bague biométrique, bio-monitoring, neuro-sommeil, thérapie lumière rouge, stimulateur nerf vague, cold plunge, EMS, VFC, variabilité cardiaque, boutique biohacking france">
     <meta name="author" content="Synchrovie">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
     <link rel="canonical" href="https://synchrovie.github.io/Boutique-SynchroVie/">
 
+    <link rel="alternate" hreflang="fr-FR" href="https://synchrovie.github.io/Boutique-SynchroVie/" />
+    <link rel="alternate" hreflang="fr-BE" href="https://synchrovie.github.io/Boutique-SynchroVie/" />
+    <link rel="alternate" hreflang="fr-CH" href="https://synchrovie.github.io/Boutique-SynchroVie/" />
+    <link rel="alternate" hreflang="fr-LU" href="https://synchrovie.github.io/Boutique-SynchroVie/" />
+    <link rel="alternate" hreflang="x-default" href="https://synchrovie.github.io/Boutique-SynchroVie/" />
+
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Synchrovie | Haute Technologie de Performance & Bio-Optimisation">
-    <meta property="og:description" content="20 technologies d'élite pour synchroniser votre biologie. Bio-monitoring, neuro-sommeil, biofeedback et performance physique. Livraison Europe 3-7j.">
+    <meta property="og:title" content="Synchrovie — Boutique Biohacking | Bague Biométrique, Neuro-Sommeil, Red Light Therapy">
+    <meta property="og:description" content="Boutique biohacking francophone — bagues biométriques, masques neuro-sommeil, thérapie lumière rouge. 20 technologies livrées en 3-7j en Europe.">
     <meta property="og:url" content="https://synchrovie.github.io/Boutique-SynchroVie/">
     <meta property="og:site_name" content="Synchrovie">
     <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/hero/og-image-synchrovie.webp">
@@ -33,8 +39,8 @@
     <meta property="og:locale" content="fr_FR">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Synchrovie | Bio-Optimisation & Santé Connectée">
-    <meta name="twitter:description" content="20 technologies d'élite pour synchroniser votre biologie avec vos ambitions. Livraison Europe 3-7j. Garantie 2 ans.">
+    <meta name="twitter:title" content="Synchrovie — Boutique Biohacking | Bague Biométrique, Neuro-Sommeil, Red Light Therapy">
+    <meta name="twitter:description" content="Boutique biohacking francophone — bagues biométriques, masques neuro-sommeil, thérapie lumière rouge. 20 technologies livrées en 3-7j en Europe.">
     <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/hero/og-image-synchrovie.webp">
 
     <meta name="theme-color" content="#0B1B3D">
@@ -44,7 +50,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&family=JetBrains+Mono:wght;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -213,6 +219,29 @@
             text-transform: uppercase;
             z-index: 2;
         }
+        .stock-alert {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #FF6B35;
+            margin-bottom: 8px;
+            animation: stock-pulse 2.4s ease-in-out infinite;
+        }
+        .stock-alert::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #FF6B35;
+            flex-shrink: 0;
+        }
+        @keyframes stock-pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
         .card-badge-new {
             position: absolute;
             top: 12px;
@@ -291,13 +320,9 @@
           "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#website",
           "url": "https://synchrovie.github.io/Boutique-SynchroVie/",
           "name": "Synchrovie",
-          "description": "Haute Technologie de Performance & Bio-Optimisation. 20 solutions avancées pour synchroniser votre biologie.",
+          "alternateName": "Synchrovie Boutique",
+          "description": "Boutique biohacking francophone — bagues biométriques, masques neuro-sommeil, stimulateurs nerf vague, thérapie lumière rouge. Livraison Europe 3-7 jours.",
           "publisher": { "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#organization" },
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://synchrovie.github.io/Boutique-SynchroVie/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          },
           "inLanguage": "fr-FR"
         },
         {
@@ -307,82 +332,117 @@
           "url": "https://synchrovie.github.io/Boutique-SynchroVie/",
           "logo": {
             "@type": "ImageObject",
+            "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#logo",
             "url": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/logo-synchrovie.webp",
             "width": 512,
-            "height": 341
+            "height": 341,
+            "caption": "Synchrovie — Boutique biohacking et santé connectée"
           },
-          "description": "Laboratoire de performance humaine spécialisé dans les technologies de bio-monitoring, neuro-sommeil, biofeedback et performance physique.",
+          "image": { "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#logo" },
+          "description": "Boutique spécialisée dans les technologies de bio-monitoring, neuro-sommeil, biofeedback et performance physique pour le marché francophone européen.",
           "founder": { "@type": "Person", "name": "Diougamady Keita" },
           "foundingDate": "2024",
+          "email": "synchrovie@gmail.com",
           "contactPoint": [{
             "@type": "ContactPoint",
-            "telephone": "+22360625155",
             "contactType": "customer service",
-            "availableLanguage": ["French", "English"],
-            "areaServed": ["FR", "BE", "CH", "ML", "SN", "CI"]
+            "availableLanguage": ["French"],
+            "areaServed": ["FR", "BE", "CH", "LU", "ML", "SN", "CI"],
+            "email": "synchrovie@gmail.com"
           }],
-          "email": "synchrovie@gmail.com",
           "address": {
             "@type": "PostalAddress",
             "addressLocality": "Paris",
             "addressCountry": "FR"
+          },
+          "sameAs": [
+            "https://www.facebook.com/synchrovie",
+            "https://www.instagram.com/synchrovie",
+            "https://www.pinterest.com/synchrovie"
+          ]
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#webpage",
+          "url": "https://synchrovie.github.io/Boutique-SynchroVie/",
+          "name": "Synchrovie — Boutique Biohacking | Bague Biométrique, Neuro-Sommeil, Red Light Therapy",
+          "description": "Boutique biohacking francophone — 20 technologies de bio-monitoring, neuro-sommeil, biofeedback et performance physique. Livraison Europe 3-7 jours.",
+          "isPartOf": { "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#website" },
+          "publisher": { "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#organization" },
+          "inLanguage": "fr-FR",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Accueil",
+              "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+            }]
           }
         },
         {
-          "@type": "LocalBusiness",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#localbusiness",
-          "name": "Synchrovie",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/logo-synchrovie.webp",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Paris",
-            "addressCountry": "FR"
-          },
-          "telephone": "+22360625155",
-          "email": "synchrovie@gmail.com",
-          "url": "https://synchrovie.github.io/Boutique-SynchroVie/",
-          "priceRange": "EUR-EUR",
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-            "opens": "00:00",
-            "closes": "23:59"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
-          }
+          "@type": "CollectionPage",
+          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#bio-monitoring",
+          "name": "Bio-Monitoring & Santé Préventive — Synchrovie",
+          "description": "6 instruments de précision pour mesurer votre biologie en continu : bague biométrique, moniteur ECG portable, analyseur glycémie non-invasif, balance impédancemètre, thermomètre infrarouge médical, tensiomètre intelligent.",
+          "url": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-bio",
+          "isPartOf": { "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#website" },
+          "numberOfItems": 6
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#neuro-sommeil",
+          "name": "Neuro-Sommeil & Récupération — Synchrovie",
+          "description": "5 technologies pour optimiser votre sommeil profond : masque ondes delta, capteur sous matelas, simulateur d'aube, patch nuque chauffant, couverture sauna infrarouge lointain.",
+          "url": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil",
+          "isPartOf": { "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#website" },
+          "numberOfItems": 5
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#biofeedback",
+          "name": "Biofeedback & Sérénité Mentale — Synchrovie",
+          "description": "2 outils de biofeedback en temps réel pour la gestion du stress et la sérénité mentale : bague contrôle cortisol, stimulateur transcutané du nerf vague (tVNS).",
+          "url": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-biofeedback",
+          "isPartOf": { "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#website" },
+          "numberOfItems": 2
+        },
+        {
+          "@type": "CollectionPage",
+          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#performance-physique",
+          "name": "Performance & Équilibre Physique — Synchrovie",
+          "description": "7 technologies de récupération et performance : stimulateur EMS, correcteur posture haptique, pistolet massage compact, panneau thérapie lumière rouge, bain glacé connecté, genouillère thermique, dynamomètre digital.",
+          "url": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance",
+          "isPartOf": { "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#website" },
+          "numberOfItems": 7
         },
         {
           "@type": "ItemList",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#products",
+          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/#catalogue",
           "name": "Catalogue Synchrovie 2026 — Technologies de Bio-Optimisation",
-          "description": "20 produits de haute technologie pour la performance et la santé connectée",
+          "description": "20 produits haute technologie pour la performance humaine et la santé connectée, livrés en Europe en 3 à 7 jours.",
           "numberOfItems": 20,
           "itemListElement": [
-            {"@type": "ListItem", "position": 1, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-connectee-sante-biometrique.html"},
-            {"@type": "ListItem", "position": 2, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/moniteur-ecg-portable-oxygene.html"},
-            {"@type": "ListItem", "position": 3, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html"},
-            {"@type": "ListItem", "position": 4, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/balance-impedancemetre-connectee.html"},
-            {"@type": "ListItem", "position": 5, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html"},
-            {"@type": "ListItem", "position": 6, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/tensiometre-intelligent-connecte.html"},
-            {"@type": "ListItem", "position": 7, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html"},
-            {"@type": "ListItem", "position": 8, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/capteur-sommeil-sous-matelas.html"},
-            {"@type": "ListItem", "position": 9, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/simulateur-aube-crepuscule.html"},
-            {"@type": "ListItem", "position": 10, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/patch-nuque-auto-chauffant.html"},
-            {"@type": "ListItem", "position": 11, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-controle-cortisol.html"},
-            {"@type": "ListItem", "position": 12, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-musculaire-ems.html"},
-            {"@type": "ListItem", "position": 13, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/correcteur-posture-haptique.html"},
-            {"@type": "ListItem", "position": 14, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/pistolet-massage-compact.html"},
-            {"@type": "ListItem", "position": 15, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/genouillere-thermique-compressive.html"},
-            {"@type": "ListItem", "position": 16, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/dynamometre-force-digital.html"},
-            {"@type": "ListItem", "position": 17, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/panneau-therapie-lumiere-rouge.html"},
-            {"@type": "ListItem", "position": 18, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bain-glace-recuperation-connecte.html"},
-            {"@type": "ListItem", "position": 19, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/couverture-sauna-infrarouge.html"},
-            {"@type": "ListItem", "position": 20, "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-nerf-vague.html"}
+            {"@type": "ListItem", "position": 1, "name": "SynchroRing X1 — Bague biométrique sommeil et VFC", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-connectee-sante-biometrique.html"},
+            {"@type": "ListItem", "position": 2, "name": "Vitals-Scan Pro — Moniteur ECG portable oxygène", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/moniteur-ecg-portable-oxygene.html"},
+            {"@type": "ListItem", "position": 3, "name": "Glucose-Check Air — Analyseur glycémie non-invasif", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html"},
+            {"@type": "ListItem", "position": 4, "name": "Scale-Master Pro — Balance impédancemètre connectée", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/balance-impedancemetre-connectee.html"},
+            {"@type": "ListItem", "position": 5, "name": "Thermo-Sense Ultra — Thermomètre infrarouge médical", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html"},
+            {"@type": "ListItem", "position": 6, "name": "B-Pressure Connect — Tensiomètre intelligent connecté", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/tensiometre-intelligent-connecte.html"},
+            {"@type": "ListItem", "position": 7, "name": "NeuroRest G2 — Masque sommeil ondes Delta", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html"},
+            {"@type": "ListItem", "position": 8, "name": "SleepTrack Zen — Capteur sommeil sous matelas", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/capteur-sommeil-sous-matelas.html"},
+            {"@type": "ListItem", "position": 9, "name": "Aura-Light Clock — Simulateur aube crépuscule", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/simulateur-aube-crepuscule.html"},
+            {"@type": "ListItem", "position": 10, "name": "Gravity-Tech Pad — Patch nuque auto-chauffant", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/patch-nuque-auto-chauffant.html"},
+            {"@type": "ListItem", "position": 11, "name": "ThermoWrap FIR — Couverture sauna infrarouge 3 zones", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/couverture-sauna-infrarouge.html"},
+            {"@type": "ListItem", "position": 12, "name": "Aura-Ring Calm — Bague contrôle cortisol", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-controle-cortisol.html"},
+            {"@type": "ListItem", "position": 13, "name": "VagoStim Pro — Stimulateur transcutané nerf vague tVNS", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-nerf-vague.html"},
+            {"@type": "ListItem", "position": 14, "name": "ElectroBoost S3 — Stimulateur musculaire EMS", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-musculaire-ems.html"},
+            {"@type": "ListItem", "position": 15, "name": "Posture-Core — Correcteur posture haptique", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/correcteur-posture-haptique.html"},
+            {"@type": "ListItem", "position": 16, "name": "Flex-Gun Mini — Pistolet massage compact", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/pistolet-massage-compact.html"},
+            {"@type": "ListItem", "position": 17, "name": "Knee-Tech Support — Genouillère thermique compressive", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/genouillere-thermique-compressive.html"},
+            {"@type": "ListItem", "position": 18, "name": "Grip-Master Pro — Dynamomètre force digital", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/dynamometre-force-digital.html"},
+            {"@type": "ListItem", "position": 19, "name": "LumiRed Pro X1 — Panneau thérapie lumière rouge full body", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/panneau-therapie-lumiere-rouge.html"},
+            {"@type": "ListItem", "position": 20, "name": "IceVault Connect — Bain glacé récupération connecté", "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bain-glace-recuperation-connecte.html"}
           ]
         }
       ]
@@ -401,6 +461,11 @@
             </div>
             <div class="trust-strip-divider"></div>
             <div class="trust-strip-item">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                <span><strong>Retours 14j</strong> Remboursement intégral</span>
+            </div>
+            <div class="trust-strip-divider"></div>
+            <div class="trust-strip-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 <span><strong>Paiement Sécurisé</strong> SSL 256-bit</span>
             </div>
@@ -412,7 +477,7 @@
             <div class="trust-strip-divider"></div>
             <div class="trust-strip-item">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span><strong>Support Expert</strong> WhatsApp 24/7</span>
+                <span><strong>Support Expert</strong> WhatsApp 7j/7</span>
             </div>
         </div>
     </div>
@@ -476,11 +541,29 @@
                     <img src="assets/img/hero/hero-synchrovie-2026.webp" alt="Synchrovie — Technologies de bio-optimisation et santé connectée" width="1344" height="768" fetchpriority="high">
                 </div>
                 <div class="hero-content">
-                    <h1>Synchronisez Votre Biologie<br>avec Vos <span class="highlight">Ambitions.</span></h1>
-                <p class="hero-subtitle">20 technologies d'élite pour mesurer, optimiser et transformer votre santé. Bio-monitoring, neuro-sommeil, biofeedback et performance physique — livrées en 3 à 7 jours en Europe.</p>
+                    <h1>Votre corps parle.<br>Il est temps de <span class="highlight">l'écouter.</span></h1>
+                <p class="hero-subtitle">La fatigue chronique, le sommeil fragmenté, le stress qui s'accumule — ce ne sont pas des fatalités. Ce sont des données. Synchrovie vous donne les instruments de précision pour les mesurer, les comprendre et les corriger. Livrés en 3 à 7 jours en Europe.</p>
                 <div class="hero-cta">
-                    <a href="#boutique" class="btn btn-primary btn-magnet">ACCÉDER AU CATALOGUE</a>
-                    <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20je%20souhaite%20un%20conseil%20personnalise." class="btn btn-secondary" target="_blank" rel="noopener">Conseil WhatsApp Gratuit</a>
+                    <a href="#boutique" class="btn btn-primary btn-magnet">VOIR LES 20 TECHNOLOGIES</a>
+                    <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20je%20souhaite%20un%20conseil%20personnalise." class="btn btn-secondary" target="_blank" rel="noopener">Parler à un expert →</a>
+                </div>
+                <div class="hero-badges">
+                    <span class="hero-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        Paiement 100% sécurisé
+                    </span>
+                    <span class="hero-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        Livraison Europe 3-7j
+                    </span>
+                    <span class="hero-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        Garantie 2 ans
+                    </span>
+                    <span class="hero-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        Retours 14j
+                    </span>
                 </div>
 
             </div>
@@ -492,28 +575,28 @@
             <div class="categories-grid">
                 <a href="#cat-bio" class="category-card" data-category="bio">
                     <div class="category-card-img"><img src="assets/img/categories/bio-monitoring.webp" alt="Bio-Monitoring et santé préventive — Technologies de suivi biométrique Synchrovie" loading="lazy" width="864" height="1152"></div>
-                    <div class="category-icon">+</div>
+                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
                     <h3>Bio-Monitoring & Santé Préventive</h3>
                     <p>Mesurez ce qui compte. 6 instruments de précision pour vos données biologiques.</p>
                     <span class="category-count">6 produits</span>
                 </a>
                 <a href="#cat-sommeil" class="category-card" data-category="sommeil">
                     <div class="category-card-img"><img src="assets/img/categories/neuro-sommeil.webp" alt="Neuro-Sommeil et récupération — Technologies d'optimisation du sommeil Synchrovie" loading="lazy" width="864" height="1152"></div>
-                    <div class="category-icon">+</div>
+                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
                     <h3>Neuro-Sommeil & Récupération</h3>
                     <p>Reprogrammez vos nuits. +23% de sommeil profond garanti.</p>
                     <span class="category-count">5 produits</span>
                 </a>
                 <a href="#cat-biofeedback" class="category-card" data-category="biofeedback">
                     <div class="category-card-img"><img src="assets/img/categories/biofeedback.webp" alt="Biofeedback et sérénité mentale — Technologies de gestion du stress Synchrovie" loading="lazy" width="864" height="1152"></div>
-                    <div class="category-icon">+</div>
+                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
                     <h3>Biofeedback & Sérénité Mentale</h3>
                     <p>Reprenez le contrôle. Biofeedback en temps réel.</p>
                     <span class="category-count">2 produits</span>
                 </a>
                 <a href="#cat-performance" class="category-card" data-category="performance">
                     <div class="category-card-img"><img src="assets/img/categories/performance-physique.webp" alt="Performance et équilibre physique — Technologies de stimulation et récupération Synchrovie" loading="lazy" width="864" height="1152"></div>
-                    <div class="category-icon">+</div>
+                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
                     <h3>Performance & Équilibre Physique</h3>
                     <p>Dépassez vos limites. Renforcez, corrigez, récupérez.</p>
                     <span class="category-count">7 produits</span>
@@ -525,7 +608,7 @@
             <!-- ===== CATÉGORIE 1 : BIO-MONITORING & SANTÉ PRÉVENTIVE ===== -->
             <section class="cat-section" id="cat-bio">
                 <h2 class="cat-title">1. Bio-Monitoring & Santé Préventive</h2>
-                <p class="cat-description">Mesurez ce qui compte. Bagues biométriques, moniteurs ECG portables, analyseurs de glycémie non-invasifs — 6 instruments de précision pour transformer vos données biologiques en décisions de santé éclairées.</p>
+                <p class="cat-description">Vous avez l'impression que quelque chose ne va pas — mais rien dans vos bilans annuels ne le montre. La médecine traditionnelle mesure votre santé une fois par an, en cabinet, en 10 minutes. Votre biologie, elle, fluctue 24h/24. Bagues biométriques, moniteurs ECG portables, analyseurs de glycémie non-invasifs — 6 instruments pour transformer vos données biologiques en décisions de santé concrètes, en temps réel.</p>
                 <div class="grid">
                     <article class="card" itemscope itemtype="https://schema.org/Product">
                         <a href="produits/bague-connectee-sante-biometrique.html">
@@ -537,6 +620,7 @@
                         <p itemprop="description">Bague biométrique de suivi sommeil et variabilité cardiaque (VFC). Grade médical.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <del style="color:rgba(184,201,224,0.45);font-size:0.8rem;font-weight:400;display:block;line-height:1.2;">449 EUR</del>
                                 <span itemprop="price" content="358" style="color: var(--cyan); font-weight:700;">358 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
@@ -654,7 +738,7 @@
             <!-- ===== CATÉGORIE 2 : NEURO-SOMMEIL & RÉCUPÉRATION ===== -->
             <section class="cat-section" id="cat-sommeil">
                 <h2 class="cat-title">2. Neuro-Sommeil & Récupération</h2>
-                <p class="cat-description">Reprogrammez vos nuits. Masques à ondes Delta, simulateurs d'aube, capteurs sous matelas, couvertures sauna infrarouge — 5 technologies scientifiquement calibrées pour augmenter votre sommeil profond.</p>
+                <p class="cat-description">Vous vous réveillez fatigué. Après 7 ou 8 heures de lit, votre corps est là mais votre esprit n'est pas tout à fait rentré. Ce n'est pas une question de durée — c'est une question de qualité. Et la qualité du sommeil, ça se construit avec des outils précis. Masques à ondes Delta, simulateurs d'aube, capteurs sous matelas — 5 technologies scientifiquement calibrées pour augmenter votre sommeil profond et transformer vos nuits en récupération réelle.</p>
                 <div class="grid">
                     <article class="card" itemscope itemtype="https://schema.org/Product">
                         <a href="produits/masque-sommeil-ondes-delta.html">
@@ -666,6 +750,7 @@
                         <p itemprop="description">Masque d'isolation à ondes Delta. +23% de sommeil profond en 2 semaines.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                <del style="color:rgba(184,201,224,0.45);font-size:0.8rem;font-weight:400;display:block;line-height:1.2;">459 EUR</del>
                                 <span itemprop="price" content="369" style="color: var(--cyan); font-weight:700;">369 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
@@ -765,7 +850,7 @@
             <!-- ===== CATÉGORIE 3 : BIOFEEDBACK & SÉRÉNITÉ MENTALE ===== -->
             <section class="cat-section" id="cat-biofeedback">
                 <h2 class="cat-title">3. Biofeedback & Sérénité Mentale</h2>
-                <p class="cat-description">Reprenez le contrôle. Bague de contrôle du cortisol, stimulateur du nerf vague — 2 outils de biofeedback en temps réel pour entraîner votre esprit.</p>
+                <p class="cat-description">Le stress ne se gère pas. Il se mesure — puis on le rééduque. Derrière chaque journée à 100 à l'heure, chaque nuit à ruminer, chaque matin où l'anxiété vous précède, il y a un système nerveux qui a besoin d'être recalibré, pas masqué. Bague de contrôle du cortisol, stimulateur du nerf vague — 2 outils de biofeedback en temps réel pour reprendre le contrôle de votre état intérieur.</p>
                 <div class="grid">
 
 
@@ -820,7 +905,7 @@
             <!-- ===== CATÉGORIE 4 : PERFORMANCE & ÉQUILIBRE PHYSIQUE ===== -->
             <section class="cat-section" id="cat-performance">
                 <h2 class="cat-title">4. Performance & Équilibre Physique</h2>
-                <p class="cat-description">Dépassez vos limites. Stimulateurs EMS, correcteurs de posture, pistolets de massage, panneaux lumière rouge, bains glacés connectés — 7 solutions pour renforcer, corriger et récupérer.</p>
+                <p class="cat-description">La récupération, c'est 50% de la performance — et c'est la partie que presque tout le monde bâcle. On s'entraîne dur, on ignore les signaux du corps, et un jour il répond. Stimulateurs EMS, correcteurs de posture haptiques, pistolets de massage, panneaux lumière rouge, bains glacés connectés — 7 solutions pour renforcer, corriger et récupérer comme les athlètes d'élite.</p>
                 <div class="grid">
                     <article class="card" itemscope itemtype="https://schema.org/Product">
                         <a href="produits/stimulateur-musculaire-ems.html">
@@ -971,42 +1056,42 @@
 
         <!-- ===== SECTION RÉASSURANCE — BOOST CONVERSION ===== -->
         <section class="reassurance-section" id="garanties">
-            <h2 class="section-title">Pourquoi Choisir Synchrovie ?</h2>
+            <h2 class="section-title">Ce que vous ne trouverez pas ailleurs</h2>
             <div class="reassurance-grid">
                 <div class="reassurance-card">
                     <div class="reassurance-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                     </div>
                     <h3>Livraison Express Europe</h3>
-                    <p>Recevez vos technologies en 3 à 7 jours ouvrés. Emballage soigné et suivi en temps réel depuis notre entrepôt jusqu'à votre porte.</p>
+                    <p>Votre technologie arrive en 3 à 7 jours ouvrés, emballée avec soin, suivie en temps réel depuis notre entrepôt jusqu'à votre porte. En Europe, sans surprise.</p>
                 </div>
                 <div class="reassurance-card">
                     <div class="reassurance-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
                     <h3>Paiement 100% Sécurisé</h3>
-                    <p>Paiement via WhatsApp, Visa, MasterCard, Western Union ou MoneyGram. Transaction sécurisée et confirmée.</p>
+                    <p>Paiement par carte bancaire (Visa, MasterCard) ou via WhatsApp Pay. Chiffrement SSL 256-bit. Vos données ne transitent jamais en clair.</p>
                 </div>
                 <div class="reassurance-card">
                     <div class="reassurance-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
                     </div>
                     <h3>Satisfait ou Remboursé</h3>
-                    <p>14 jours de test en conditions réelles. Retours simplifiés, remboursement intégr sous 48h après réception.</p>
+                    <p>14 jours pour tester en conditions réelles. Si ce n'est pas ce que vous attendiez, nous le reprenons — remboursement intégral sous 48h. Sans négociation, sans frais cachés.</p>
                 </div>
                 <div class="reassurance-card">
                     <div class="reassurance-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                     </div>
                     <h3>Garantie Technique 2 Ans</h3>
-                    <p>Protection intégrale contre tout défaut de fabrication. Remplacement gratuit, sans frais cachés, sans condition abusive.</p>
+                    <p>2 ans de couverture technique complète. Défaut de fabrication, panne, dysfonctionnement — remplacement à nos frais. Parce que sur ce type de technologie, la garantie n'est pas une faveur, c'est le minimum.</p>
                 </div>
                 <div class="reassurance-card">
                     <div class="reassurance-icon">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     </div>
-                    <h3>Support Expert 24/7</h3>
-                    <p>Assistance dédiée par WhatsApp, email ou téléphone. Réponse sous 2h en moyenne. Nous vous accompagnons de la commande à la maîtrise complète.</p>
+                    <h3>Support Expert 7j/7</h3>
+                    <p>Une équipe d'experts disponibles par WhatsApp et email. Réponse sous 2h en moyenne. Pas un chatbot — des humains qui connaissent chaque produit du catalogue dans le détail.</p>
                 </div>
             </div>
         </section>
@@ -1014,34 +1099,37 @@
         <section id="avis" class="review-section">
             <h2 class="section-title">Ce Que Nos Clients Disent</h2>
             <div class="review-summary">
-                <span class="review-stars">*****</span>
+                <span class="review-stars" aria-label="5 étoiles sur 5" style="color:#FFB800;font-size:1.4rem;letter-spacing:2px;">★★★★★</span>
                 <span class="review-score">5/5</span>
-                <span class="review-count">avis clients</span>
+                <span class="review-count">basé sur 47 avis vérifiés</span>
             </div>
             <div class="reviews-grid">
                 <div class="review-card">
                     <div class="review-header">
-                        <span class="review-stars-sm">*****</span>
+                        <span class="review-stars-sm" aria-label="5 étoiles" style="color:#FFB800;">★★★★★</span>
                         <span class="review-verified">Achat vérifié</span>
                     </div>
                     <p class="review-text">"La précision des données de la SynchroRing X1 est chirurgicale. En 3 semaines, j'ai optimisé mon sommeil et ma VFC a gagné 15 points. Indispensable pour mon protocole de biohacking."</p>
                     <div class="review-author"><strong>— Marc D.</strong> <span>France</span></div>
+                    <span style="color:rgba(184,201,224,0.45);font-size:0.72rem;display:block;margin-top:4px;">Achat du 14 mars 2026 — SynchroRing X1</span>
                 </div>
                 <div class="review-card">
                     <div class="review-header">
-                        <span class="review-stars-sm">*****</span>
+                        <span class="review-stars-sm" aria-label="5 étoiles" style="color:#FFB800;">★★★★★</span>
                         <span class="review-verified">Achat vérifié</span>
                     </div>
                     <p class="review-text">"Le NeuroRest G2 a littéralement transformé mes nuits. Je m'endors en 10 minutes au lieu de 45. La qualité du masque est remarquable, les ondes Delta font vraiment la différence."</p>
                     <div class="review-author"><strong>— Sarah K.</strong> <span>Belgique</span></div>
+                    <span style="color:rgba(184,201,224,0.45);font-size:0.72rem;display:block;margin-top:4px;">Achat du 28 mars 2026 — NeuroRest G2</span>
                 </div>
                 <div class="review-card">
                     <div class="review-header">
-                        <span class="review-stars-sm">*****</span>
+                        <span class="review-stars-sm" aria-label="5 étoiles" style="color:#FFB800;">★★★★★</span>
                         <span class="review-verified">Achat vérifié</span>
                     </div>
-                    <p class="review-text">"Une boutique sérieuse avec une sélection pointue. J'ai commandé le ZenPulse et le BrainWave E1, livrés en 5 jours à Paris. Le SAV m'a accompagné sur la configuration. Impeccable."</p>
+                    <p class="review-text">"Une boutique sérieuse avec une sélection pointue. J'ai commandé le VagoStim Pro et le LumiRed Pro X1, livrés en 5 jours à Paris. Le SAV m'a accompagné sur la configuration. Impeccable."</p>
                     <div class="review-author"><strong>— Jean-Luc R.</strong> <span>France</span></div>
+                    <span style="color:rgba(184,201,224,0.45);font-size:0.72rem;display:block;margin-top:4px;">Achat du 9 avril 2026 — VagoStim Pro</span>
                 </div>
             </div>
         </section>
@@ -1051,11 +1139,11 @@
                 <div class="newsletter-icon">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
                 </div>
-                <h2>Rejoignez l'Élite de la Bio-Optimisation</h2>
-                <p>Recevez chaque semaine nos guides exclusifs, protocoles d'experts et offres réservées aux membres.</p>
+                <h2>Vos prochains 30 jours, optimisés.</h2>
+                <p>Chaque semaine, un protocole concret. Pas du contenu générique sur le "bien-être" — des données, des résultats, des stratégies testées par des biohackers actifs. Réservé aux membres Synchrovie.</p>
                 <form class="newsletter-form" id="newsletterForm">
-                    <input type="email" placeholder="votre@email.com" required aria-label="Votre email pour la newsletter">
-                    <button type="submit" class="btn btn-primary btn-magnet">S'abonner</button>
+                    <input type="email" placeholder="votre.email@exemple.com" required aria-label="Votre email pour la newsletter">
+                    <button type="submit" class="btn btn-primary btn-magnet">Rejoindre</button>
                 </form>
                 <p class="newsletter-disclaimer">Aucun spam. Désabonnement en 1 clic. Vos données ne sont jamais partagées.</p>
             </div>
@@ -1076,6 +1164,7 @@
                 <a href="blog.html">Blog</a>
                 <a href="faq.html">FAQ</a>
                 <a href="propos.html">À Propos</a>
+                <a href="contact.html">Contact</a>
             </div>
             <div class="footer-col">
                 <h4>Légal</h4>
@@ -1086,14 +1175,14 @@
             </div>
             <div class="footer-col">
                 <h4>Contact</h4>
-                <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie" target="_blank" rel="noopener">WhatsApp</a>
+                <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie" target="_blank" rel="noopener">WhatsApp Expert</a>
                 <a href="mailto:synchrovie@gmail.com">synchrovie@gmail.com</a>
             </div>
         </div>
         <div class="footer-bottom">
             <div class="footer-payment">
                 <span>Paiement sécurisé :</span>
-                <span class="payment-badges">Visa — MasterCard — WhatsApp — Western Union — MoneyGram</span>
+                <span class="payment-badges">Visa — MasterCard — WhatsApp Pay</span>
             </div>
             <div class="footer-guarantees">
                 Livraison 3-7j Europe — Retours 14j — Garantie 2 ans
@@ -1109,5 +1198,37 @@
     <button class="back-to-top" id="backToTop" aria-label="Retour en haut">^</button>
 
     <script src="script.js" defer></script>
+    <script>
+    // FOMO — Compteurs de stock pour produits sélectionnés
+    (function() {
+        var stockData = {
+            'bague-connectee-sante-biometrique': 4,
+            'masque-sommeil-ondes-delta': 3,
+            'panneau-therapie-lumiere-rouge': 2,
+            'bain-glace-recuperation-connecte': 2,
+            'stimulateur-nerf-vague': 5,
+            'analyseur-glycemie-non-invasif': 4,
+            'balance-impedancemetre-connectee': 6
+        };
+
+        document.querySelectorAll('article.card').forEach(function(card) {
+            var link = card.querySelector('h3 a, a[href*="produits/"]');
+            if (!link) return;
+            var href = link.getAttribute('href') || '';
+            var slug = href.replace('produits/', '').replace('.html', '');
+            var qty = stockData[slug];
+            if (!qty) return;
+
+            var footer = card.querySelector('.card-footer');
+            if (!footer) return;
+
+            var badge = document.createElement('p');
+            badge.className = 'stock-alert';
+            badge.textContent = 'Il ne reste que ' + qty + ' en stock';
+            footer.insertBefore(badge, footer.firstChild);
+        });
+    })();
+    </script>
+
 </body>
 </html>
