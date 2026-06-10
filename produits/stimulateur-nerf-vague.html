@@ -39,91 +39,158 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-nerf-vague.html#product",
-          "name": "VagoStim Pro — Stimulateur Nerf Vague Transcutané",
-          "description": "Stimulateur transcutané du nerf vague (tVNS) avec 4 modes de stimulation, plage de fréquence 1-1000 Hz, impulsions biphasiques alternées, électrodes interchangeables oreille et cou. 268 EUR.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/stimulateur-nerf-vague-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-VAGOSTIM-PRO-2026",
-          "mpn": "SV-VAGOSTIM-PRO-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-nerf-vague.html",
-            "price": "268",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-nerf-vague.html#product",
+      "name": "VagoStim Pro — Stimulateur Nerf Vague Transcutané",
+      "description": "Stimulateur transcutané du nerf vague (tVNS) avec 4 modes de stimulation, plage de fréquence 1-1000 Hz, impulsions biphasiques alternées, électrodes interchangeables oreille et cou. 268 EUR.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/stimulateur-nerf-vague-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-vago-stim-pro",
+      "mpn": "synchrovie-vago-stim-pro",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-nerf-vague.html",
+        "price": "268",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que la stimulation du nerf vague et comment ça fonctionne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le nerf vague est le plus long nerf du corps, reliant le cerveau aux principaux organes. La stimulation transcutanée (tVNS) envoie des impulsions électriques douces à travers la peau pour activer les fibres afférentes du nerf vague, principalement au niveau de l'oreille (concha) ou du cou. Ce signal indique au cerveau d'activer le système parasympathique — diminution du rythme cardiaque, réduction du cortisol, augmentation de la VFC. C'est une technique non-invasive utilisée en médecine depuis plus de 20 ans pour l'épilepsie et la dépression, aujourd'hui accessible pour le bien-être général."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Qu'est-ce que la stimulation du nerf vague et comment ça fonctionne ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le nerf vague est le plus long nerf du corps, reliant le cerveau aux principaux organes. La stimulation transcutanée (tVNS) envoie des impulsions électriques douces à travers la peau pour activer les fibres afférentes du nerf vague, principalement au niveau de l'oreille (concha) ou du cou. Ce signal indique au cerveau d'activer le système parasympathique — diminution du rythme cardiaque, réduction du cortisol, augmentation de la VFC. C'est une technique non-invasive utilisée en médecine depuis plus de 20 ans pour l'épilepsie et la dépression, aujourd'hui accessible pour le bien-être général."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Où placer les électrodes : oreille ou cou ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Les deux zones sont efficaces. L'oreille (concha auriculaire) est le point d'accès le plus étudié cliniquement — la branche auriculaire du nerf vague est superficielle et facilement accessible. Le cou (nerf vague cervical) offre une stimulation plus diffuse mais potentiellement plus forte. Commencez par l'oreille avec l'électrode clip, plus simple et plus confortable. Si vous souhaitez une stimulation plus intense, passez au patch cervical. Humidifiez légèrement les contacts avec de l'eau salée ou du gel conducteur pour optimiser la conductivité."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "À quelle fréquence utiliser le VagoStim Pro ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Pour la gestion du stress : 1 à 2 séances de 15-20 minutes par jour (mode Calm ou Balance). Pour l'amélioration du sommeil : 1 séance de 15-20 minutes avant le coucher (mode Calm). Pour la concentration : 1 séance de 10-15 minutes le matin (mode Rapid). Les effets se font sentir dès la première séance (réduction du rythme cardiaque, sensation de calme). Les effets cumulatifs (amélioration du tonus vagal, réduction de l'anxiété chronique) s'installent après 2 à 4 semaines d'utilisation régulière."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Le VagoStim Pro est-il sûr ? Y a-t-il des contre-indications ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La stimulation transcutanée du nerf vague est considérée comme sûre et non-invasive. Les contre-indications incluent : porteurs de pacemaker ou de défibrillateur implantable, épilepsie non contrôlée, Grossesse, et troubles cardiaques sévères. Les effets secondaires possibles sont légers : picotement au point d'application, légère irritation cutanée. Ne pas utiliser en conduisant ou en manipulant des machines. Commencez toujours par la plus faible intensité et augmentez progressivement. En cas de doute, consultez votre médecin."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Où placer les électrodes : oreille ou cou ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les deux zones sont efficaces. L'oreille (concha auriculaire) est le point d'accès le plus étudié cliniquement — la branche auriculaire du nerf vague est superficielle et facilement accessible. Le cou (nerf vague cervical) offre une stimulation plus diffuse mais potentiellement plus forte. Commencez par l'oreille avec l'électrode clip, plus simple et plus confortable. Si vous souhaitez une stimulation plus intense, passez au patch cervical. Humidifiez légèrement les contacts avec de l'eau salée ou du gel conducteur pour optimiser la conductivité."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Biofeedback & Sérénité Mentale", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-biofeedback" },
-            { "@type": "ListItem", "position": 3, "name": "VagoStim Pro — Stimulateur Nerf Vague Transcutané", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-nerf-vague.html" }
-          ]
+          "@type": "Question",
+          "name": "À quelle fréquence utiliser le VagoStim Pro ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour la gestion du stress : 1 à 2 séances de 15-20 minutes par jour (mode Calm ou Balance). Pour l'amélioration du sommeil : 1 séance de 15-20 minutes avant le coucher (mode Calm). Pour la concentration : 1 séance de 10-15 minutes le matin (mode Rapid). Les effets se font sentir dès la première séance (réduction du rythme cardiaque, sensation de calme). Les effets cumulatifs (amélioration du tonus vagal, réduction de l'anxiété chronique) s'installent après 2 à 4 semaines d'utilisation régulière."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le VagoStim Pro est-il sûr ? Y a-t-il des contre-indications ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La stimulation transcutanée du nerf vague est considérée comme sûre et non-invasive. Les contre-indications incluent : porteurs de pacemaker ou de défibrillateur implantable, épilepsie non contrôlée, Grossesse, et troubles cardiaques sévères. Les effets secondaires possibles sont légers : picotement au point d'application, légère irritation cutanée. Ne pas utiliser en conduisant ou en manipulant des machines. Commencez toujours par la plus faible intensité et augmentez progressivement. En cas de doute, consultez votre médecin."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biofeedback & Sérénité Mentale",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-biofeedback"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "VagoStim Pro — Stimulateur Nerf Vague Transcutané",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-nerf-vague.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

@@ -39,91 +39,158 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/panneau-therapie-lumiere-rouge.html#product",
-          "name": "LumiRed Pro X1 — Panneau Thérapie Lumière Rouge Full Body",
-          "description": "Panneau de thérapie par lumière rouge professionnelle 2400W. 480 LEDs dual chip, 5 longueurs d'onde (630nm, 660nm, 810nm, 830nm, 850nm), mode pulsé 1-40Hz, angle 30°, support debout inclus. Certifié CE, FCC, RoHS. Garantie 5 ans. Usage domestique et commercial.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/panneau-therapie-lumiere-rouge-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-LUMIRED-PRO-X1-2026",
-          "mpn": "SV-LUMIRED-PRO-X1-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/panneau-therapie-lumiere-rouge.html",
-            "price": "849",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/panneau-therapie-lumiere-rouge.html#product",
+      "name": "LumiRed Pro X1 — Panneau Thérapie Lumière Rouge Full Body",
+      "description": "Panneau de thérapie par lumière rouge professionnelle 2400W. 480 LEDs dual chip, 5 longueurs d'onde (630nm, 660nm, 810nm, 830nm, 850nm), mode pulsé 1-40Hz, angle 30°, support debout inclus. Certifié CE, FCC, RoHS. Garantie 5 ans. Usage domestique et commercial.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/panneau-therapie-lumiere-rouge-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-lumi-red-pro-x1",
+      "mpn": "synchrovie-lumi-red-pro-x1",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/panneau-therapie-lumiere-rouge.html",
+        "price": "849",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre les longueurs d'onde rouge et infrarouge ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le rouge (630-660nm) pénètre les couches superficielles de la peau — épiderme et derme. Il stimule la production de collagène, améliore la texture cutanée et accélère la cicatrisation. Le proche infrarouge (810-850nm) traverse la peau pour atteindre les tissus profonds — muscles, tendons, articulations et mitochondries. Il stimule la chaîne respiratoire mitochondriale et augmente la production d'ATP (énergie cellulaire). Les deux sont complémentaires : le rouge pour la peau, l'infrarouge pour les muscles et la récupération."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Quelle est la différence entre les longueurs d'onde rouge et infrarouge ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le rouge (630-660nm) pénètre les couches superficielles de la peau — épiderme et derme. Il stimule la production de collagène, améliore la texture cutanée et accélère la cicatrisation. Le proche infrarouge (810-850nm) traverse la peau pour atteindre les tissus profonds — muscles, tendons, articulations et mitochondries. Il stimule la chaîne respiratoire mitochondriale et augmente la production d'ATP (énergie cellulaire). Les deux sont complémentaires : le rouge pour la peau, l'infrarouge pour les muscles et la récupération."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Combien de temps durent les séances et à quelle distance se placer ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Pour une séance complète, positionnez-vous à 15-30 cm du panneau pendant 10-20 minutes par zone. Pour le corps entier, 2 zones suffisent (haut du corps puis bas du corps) soit 20-40 minutes au total. Commencez par 10 minutes et augmentez progressivement. 3 à 5 séances par semaine sont recommandées pour des résultats optimaux. Le timer intégré vous permet de programmer la durée exacte."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Le panneau consomme-t-il beaucoup d'électricité ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Avec 2400W de puissance LED, le panneau consomme environ 2,4 kWh par heure d'utilisation. À un tarif moyen européen de 0,25€/kWh, une séance de 20 minutes coûte environ 0,20€. Soit moins de 1€ par semaine pour 5 séances — un investissement négligeable comparé aux séances en cabinet de photothérapie (30-60€ la séance)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Le LumiRed Pro X1 est-il adapté à un usage professionnel ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. Le LumiRed Pro X1 est certifié CE, FCC et RoHS, conformément aux normes européennes. Sa puissance de 2400W, ses 480 LEDs et sa garantie de 5 ans en font un appareil adapté aux cabinets de kinésithérapie, centres de récupération sportive et clinics esthétiques. Le mode pulsé et les 5 longueurs d'onde offrent une polyvalence thérapeutique que les panneaux d'entrée de gamme ne proposent pas."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Combien de temps durent les séances et à quelle distance se placer ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour une séance complète, positionnez-vous à 15-30 cm du panneau pendant 10-20 minutes par zone. Pour le corps entier, 2 zones suffisent (haut du corps puis bas du corps) soit 20-40 minutes au total. Commencez par 10 minutes et augmentez progressivement. 3 à 5 séances par semaine sont recommandées pour des résultats optimaux. Le timer intégré vous permet de programmer la durée exacte."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Performance & Équilibre Physique", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance" },
-            { "@type": "ListItem", "position": 3, "name": "LumiRed Pro X1 — Panneau Thérapie Lumière Rouge", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/panneau-therapie-lumiere-rouge.html" }
-          ]
+          "@type": "Question",
+          "name": "Le panneau consomme-t-il beaucoup d'électricité ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Avec 2400W de puissance LED, le panneau consomme environ 2,4 kWh par heure d'utilisation. À un tarif moyen européen de 0,25€/kWh, une séance de 20 minutes coûte environ 0,20€. Soit moins de 1€ par semaine pour 5 séances — un investissement négligeable comparé aux séances en cabinet de photothérapie (30-60€ la séance)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Le LumiRed Pro X1 est-il adapté à un usage professionnel ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le LumiRed Pro X1 est certifié CE, FCC et RoHS, conformément aux normes européennes. Sa puissance de 2400W, ses 480 LEDs et sa garantie de 5 ans en font un appareil adapté aux cabinets de kinésithérapie, centres de récupération sportive et clinics esthétiques. Le mode pulsé et les 5 longueurs d'onde offrent une polyvalence thérapeutique que les panneaux d'entrée de gamme ne proposent pas."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Performance & Équilibre Physique",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "LumiRed Pro X1 — Panneau Thérapie Lumière Rouge",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/panneau-therapie-lumiere-rouge.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

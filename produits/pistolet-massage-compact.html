@@ -39,91 +39,158 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/pistolet-massage-compact.html#product",
-          "name": "Flex-Gun Mini — Pistolet Massage Compact",
-          "description": "Pistolet de massage compact à percussion profonde. 6 têtes interchangeables, intensités réglables, 3200 percussions/min, amplitude 12 mm, 0,8 kg, moteur silencieux. Étui de transport inclus. Récupération musculaire nomade.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/pistolet-massage-compact-4.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-FLEXGUN-MINI-2026",
-          "mpn": "SV-FLEXGUN-MINI-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/pistolet-massage-compact.html",
-            "price": "158",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/pistolet-massage-compact.html#product",
+      "name": "Flex-Gun Mini — Pistolet Massage Compact",
+      "description": "Pistolet de massage compact à percussion profonde. 6 têtes interchangeables, intensités réglables, 3200 percussions/min, amplitude 12 mm, 0,8 kg, moteur silencieux. Étui de transport inclus. Récupération musculaire nomade.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/pistolet-massage-compact-4.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-flex-gun-mini",
+      "mpn": "synchrovie-flex-gun-mini",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/pistolet-massage-compact.html",
+        "price": "158",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le Flex-Gun Mini est-il assez puissant pour les muscles profonds ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Malgré son format compact, le Flex-Gun Mini délivre jusqu'à 3200 percussions par minute avec une amplitude de 12 mm — le seuil reconnu pour les tissus profonds. Cette amplitude atteint les couches musculaires profondes (fascias et muscles squelettiques), comparable aux pistolets de massage pleine taille utilisés en kinésithérapie sportive. Le moteur sans balais garantit une percussion constante même sous charge."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Le Flex-Gun Mini est-il assez puissant pour les muscles profonds ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. Malgré son format compact, le Flex-Gun Mini délivre jusqu'à 3200 percussions par minute avec une amplitude de 12 mm — le seuil reconnu pour les tissus profonds. Cette amplitude atteint les couches musculaires profondes (fascias et muscles squelettiques), comparable aux pistolets de massage pleine taille utilisés en kinésithérapie sportive. Le moteur sans balais garantit une percussion constante même sous charge."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Combien de temps dure la batterie du pistolet de massage Flex-Gun Mini ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La batterie longue durée offre une autonomie prolongée selon l'intensité sélectionnée. En utilisation typique (2 séances de 10 minutes par jour), une charge suffit pour plusieurs semaines. La recharge USB-C complète prend environ 90 minutes. L'étui de transport rigide inclus permet de le ranger et de l'emporter partout."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelle tête de massage utiliser pour quelle zone musculaire ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Balle plate : grands groupes musculaires (quadriceps, mollets). Balle ronde : muscles délicats (épaules, trapèzes). Balle en U : muscles paraspinaux et tendons d'Achille. Tête conique : points de déclenchement et zones ciblées. Tête plate large : muscles larges (dos, fessiers). Tête coussin : zones sensibles et recovery léger."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelles zones du corps faut-il éviter avec un pistolet de massage ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ne jamais utiliser le pistolet de massage sur le cou (risque de lésion de l'artère carotidienne ou vertébrale), ni sur les zones où passent des artères superficielles (poignet, aine, creux poplité). Évitez également les zones osseuses sans rembourrage musculaire (tibias, colonne vertébrale directe), le visage et toute blessure ouverte. Limitez chaque zone à 60 secondes maximum. En cas de doute, consultez un kinésithérapeute avant utilisation."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Combien de temps dure la batterie du pistolet de massage Flex-Gun Mini ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La batterie longue durée offre une autonomie prolongée selon l'intensité sélectionnée. En utilisation typique (2 séances de 10 minutes par jour), une charge suffit pour plusieurs semaines. La recharge USB-C complète prend environ 90 minutes. L'étui de transport rigide inclus permet de le ranger et de l'emporter partout."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Performance & Équilibre Physique", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance" },
-            { "@type": "ListItem", "position": 3, "name": "Flex-Gun Mini — Pistolet Massage Compact", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/pistolet-massage-compact.html" }
-          ]
+          "@type": "Question",
+          "name": "Quelle tête de massage utiliser pour quelle zone musculaire ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Balle plate : grands groupes musculaires (quadriceps, mollets). Balle ronde : muscles délicats (épaules, trapèzes). Balle en U : muscles paraspinaux et tendons d'Achille. Tête conique : points de déclenchement et zones ciblées. Tête plate large : muscles larges (dos, fessiers). Tête coussin : zones sensibles et recovery léger."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles zones du corps faut-il éviter avec un pistolet de massage ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ne jamais utiliser le pistolet de massage sur le cou (risque de lésion de l'artère carotidienne ou vertébrale), ni sur les zones où passent des artères superficielles (poignet, aine, creux poplité). Évitez également les zones osseuses sans rembourrage musculaire (tibias, colonne vertébrale directe), le visage et toute blessure ouverte. Limitez chaque zone à 60 secondes maximum. En cas de doute, consultez un kinésithérapeute avant utilisation."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Performance & Équilibre Physique",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Flex-Gun Mini — Pistolet Massage Compact",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/pistolet-massage-compact.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

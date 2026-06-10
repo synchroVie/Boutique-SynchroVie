@@ -39,83 +39,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html#product",
-          "name": "Thermo-Sense Ultra — Thermomètre Infrarouge Médical Sans Contact",
-          "description": "Thermomètre infrarouge médical sans contact avec précision 0,1°C, mesure frontale en 1 seconde, certifié CE médical, mémoire 32 relevés, alarme fièvre tricolore.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-THERMO-ULTRA-2026",
-          "mpn": "SV-THERMO-ULTRA-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html",
-            "price": "108",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html#product",
+      "name": "Thermo-Sense Ultra — Thermomètre Infrarouge Médical Sans Contact",
+      "description": "Thermomètre infrarouge médical sans contact avec précision 0,1°C, mesure frontale en 1 seconde, certifié CE médical, mémoire 32 relevés, alarme fièvre tricolore.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/thermometre-infrarouge-medical-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-thermo-sense-ultra",
+      "mpn": "synchrovie-thermo-sense-ultra",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html",
+        "price": "108",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le thermomètre infrarouge Thermo-Sense Ultra est-il fiable pour les bébés ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le Thermo-Sense Ultra est certifié CE médical (directive 93/42/CEE). Sa mesure frontale sans contact élimine le risque de contamination croisée et ne nécessite aucun contact physique, ce qui est idéal pour les nourrissons. La précision de ±0,1°C est validée par étalonnage en usine à 37°C."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Le thermomètre infrarouge Thermo-Sense Ultra est-il fiable pour les bébés ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. Le Thermo-Sense Ultra est certifié CE médical (directive 93/42/CEE). Sa mesure frontale sans contact élimine le risque de contamination croisée et ne nécessite aucun contact physique, ce qui est idéal pour les nourrissons. La précision de ±0,1°C est validée par étalonnage en usine à 37°C."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelle est la précision du thermomètre frontal Thermo-Sense Ultra ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le Thermo-Sense Ultra offre une précision de ±0,1°C dans la plage 34,0–42,5°C. Le capteur infrarouge allemand (Heimann) capte le rayonnement thermique de l'artère temporale superficielle à 3–5 cm de distance, sans contact physique."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Peut-on utiliser le thermomètre pour mesurer la température d'un objet ou d'une pièce ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. Le Thermo-Sense Ultra dispose d'un mode Objets/Ambiance accessible par simple pression. Il mesure la température de surface des biberons (0–100°C), de l'eau du bain, ou de la pièce. Ce mode est distinct du mode Corps pour éviter toute confusion dans les relevés."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Quelle est la précision du thermomètre frontal Thermo-Sense Ultra ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le Thermo-Sense Ultra offre une précision de ±0,1°C dans la plage 34,0–42,5°C. Le capteur infrarouge allemand (Heimann) capte le rayonnement thermique de l'artère temporale superficielle à 3–5 cm de distance, sans contact physique."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Bio-Monitoring & Santé Préventive", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-bio" },
-            { "@type": "ListItem", "position": 3, "name": "Thermo-Sense Ultra — Thermomètre Infrarouge Médical Sans Contact", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html" }
-          ]
+          "@type": "Question",
+          "name": "Peut-on utiliser le thermomètre pour mesurer la température d'un objet ou d'une pièce ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le Thermo-Sense Ultra dispose d'un mode Objets/Ambiance accessible par simple pression. Il mesure la température de surface des biberons (0–100°C), de l'eau du bain, ou de la pièce. Ce mode est distinct du mode Corps pour éviter toute confusion dans les relevés."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bio-Monitoring & Santé Préventive",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-bio"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Thermo-Sense Ultra — Thermomètre Infrarouge Médical Sans Contact",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

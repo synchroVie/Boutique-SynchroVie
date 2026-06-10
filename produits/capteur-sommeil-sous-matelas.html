@@ -39,83 +39,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/capteur-sommeil-sous-matelas.html#product",
-          "name": "SleepTrack Zen — Capteur Sommeil Sous Matelas Sans Contact",
-          "description": "Capteur de sommeil sous matelas sans contact. Analyse des cycles (léger, profond, REM), variabilité cardiaque, fréquence respiratoire, détection de ronflements. Bluetooth, app iOS/Android.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/capteur-sommeil-matelas.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-SLEEPTRACK-ZEN-2026",
-          "mpn": "SV-SLEEPTRACK-ZEN-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/capteur-sommeil-sous-matelas.html",
-            "price": "168",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/capteur-sommeil-sous-matelas.html#product",
+      "name": "SleepTrack Zen — Capteur Sommeil Sous Matelas Sans Contact",
+      "description": "Capteur de sommeil sous matelas sans contact. Analyse des cycles (léger, profond, REM), variabilité cardiaque, fréquence respiratoire, détection de ronflements. Bluetooth, app iOS/Android.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/capteur-sommeil-matelas.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-sleep-track-zen",
+      "mpn": "synchrovie-sleep-track-zen",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/capteur-sommeil-sous-matelas.html",
+        "price": "168",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le capteur SleepTrack Zen fonctionne-t-il avec tous les types de matelas ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le SleepTrack Zen est compatible avec les matelas à ressorts, mousse, latex et hybrides d'une épaisseur allant jusqu'à 35 cm. Il ne fonctionne pas avec les matelas à eau. Il se glisse simplement sous le matelas, au niveau du torax, sans fixation ni adhésif."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Le capteur SleepTrack Zen fonctionne-t-il avec tous les types de matelas ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le SleepTrack Zen est compatible avec les matelas à ressorts, mousse, latex et hybrides d'une épaisseur allant jusqu'à 35 cm. Il ne fonctionne pas avec les matelas à eau. Il se glisse simplement sous le matelas, au niveau du torax, sans fixation ni adhésif."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Comment le capteur sous matelas détecte-t-il les cycles de sommeil sans contact ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le SleepTrack Zen utilise des capteurs piézoélectriques haute sensibilité qui détectent les micro-mouvements cardiaques et respiratoires à travers le matelas. Un algorithme d'intelligence artificielle classifie ces signaux en phases de sommeil (léger, profond, REM) et en éveil, avec une concordance de 92 % par rapport à une polysomnographie clinique."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Faut-il recharger le capteur SleepTrack Zen régulièrement ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Non. Le SleepTrack Zen fonctionne sur secteur en continu. Branchez-le une fois, il analyse chaque nuit sans interruption. Pas de batterie à recharger, pas d'autonomie limitée. Les données sont transmises en Bluetooth à l'application dès le matin."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Comment le capteur sous matelas détecte-t-il les cycles de sommeil sans contact ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le SleepTrack Zen utilise des capteurs piézoélectriques haute sensibilité qui détectent les micro-mouvements cardiaques et respiratoires à travers le matelas. Un algorithme d'intelligence artificielle classifie ces signaux en phases de sommeil (léger, profond, REM) et en éveil, avec une concordance de 92 % par rapport à une polysomnographie clinique."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Neuro-Sommeil & Récupération", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil" },
-            { "@type": "ListItem", "position": 3, "name": "SleepTrack Zen — Capteur Sommeil Sous Matelas", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/capteur-sommeil-sous-matelas.html" }
-          ]
+          "@type": "Question",
+          "name": "Faut-il recharger le capteur SleepTrack Zen régulièrement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Le SleepTrack Zen fonctionne sur secteur en continu. Branchez-le une fois, il analyse chaque nuit sans interruption. Pas de batterie à recharger, pas d'autonomie limitée. Les données sont transmises en Bluetooth à l'application dès le matin."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Neuro-Sommeil & Récupération",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SleepTrack Zen — Capteur Sommeil Sous Matelas",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/capteur-sommeil-sous-matelas.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

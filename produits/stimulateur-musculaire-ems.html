@@ -39,83 +39,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-musculaire-ems.html#product",
-          "name": "ElectroBoost S3 — Stimulateur Musculaire EMS",
-          "description": "Stimulateur musculaire EMS portable avec 24 modes de stimulation, 20 niveaux d'intensité et 12 électrodes. Renforcement musculaire électrique, récupération sportive et soulagement des tensions à domicile.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/stimulateur-musculaire-ems-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-EMS-S3-2026",
-          "mpn": "SV-EMS-S3-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-musculaire-ems.html",
-            "price": "398",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-musculaire-ems.html#product",
+      "name": "ElectroBoost S3 — Stimulateur Musculaire EMS",
+      "description": "Stimulateur musculaire EMS portable avec 24 modes de stimulation, 20 niveaux d'intensité et 12 électrodes. Renforcement musculaire électrique, récupération sportive et soulagement des tensions à domicile.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/stimulateur-musculaire-ems-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-electro-boost-s3",
+      "mpn": "synchrovie-electro-boost-s3",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-musculaire-ems.html",
+        "price": "248",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le stimulateur musculaire EMS ElectroBoost S3 est-il efficace pour le renforcement musculaire ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. L'ElectroBoost S3 génère des impulsions électriques qui provoquent des contractions musculaires involontaires profondes, inaccessibles par l'effort volontaire seul. Les études cliniques montrent un gain de force de 15 à 25 % en 6 semaines d'utilisation régulière (3 séances de 20 minutes par semaine), en complément d'une activité physique."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Le stimulateur musculaire EMS ElectroBoost S3 est-il efficace pour le renforcement musculaire ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. L'ElectroBoost S3 génère des impulsions électriques qui provoquent des contractions musculaires involontaires profondes, inaccessibles par l'effort volontaire seul. Les études cliniques montrent un gain de force de 15 à 25 % en 6 semaines d'utilisation régulière (3 séances de 20 minutes par semaine), en complément d'une activité physique."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Combien d'électrodes inclus l'ElectroBoost S3 et sur quelles zones du corps ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "L'ElectroBoost S3 est fourni avec 12 électrodes auto-adhésives (6 paires) et 2 câbles doubles. Vous pouvez cibler abdominaux, lombaires, quadriceps, biceps, triceps, épaules et mollets simultanément ou séparément."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "L'électrostimulation peut-elle remplacer l'entraînement sportif ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Non. L'EMS est un complément, pas un substitut. Il renforce et tonifie les fibres musculaires profondes, accélère la récupération et soulage les tensions. Pour des résultats optimaux, combinez 3 séances EMS par semaine avec votre activité physique habituelle."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Combien d'électrodes inclus l'ElectroBoost S3 et sur quelles zones du corps ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'ElectroBoost S3 est fourni avec 12 électrodes auto-adhésives (6 paires) et 2 câbles doubles. Vous pouvez cibler abdominaux, lombaires, quadriceps, biceps, triceps, épaules et mollets simultanément ou séparément."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Performance & Équilibre Physique", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance" },
-            { "@type": "ListItem", "position": 3, "name": "ElectroBoost S3 — Stimulateur Musculaire EMS", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-musculaire-ems.html" }
-          ]
+          "@type": "Question",
+          "name": "L'électrostimulation peut-elle remplacer l'entraînement sportif ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. L'EMS est un complément, pas un substitut. Il renforce et tonifie les fibres musculaires profondes, accélère la récupération et soulage les tensions. Pour des résultats optimaux, combinez 3 séances EMS par semaine avec votre activité physique habituelle."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Performance & Équilibre Physique",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ElectroBoost S3 — Stimulateur Musculaire EMS",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/stimulateur-musculaire-ems.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

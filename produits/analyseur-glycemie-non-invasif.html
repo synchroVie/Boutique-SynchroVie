@@ -39,91 +39,158 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html#product",
-          "name": "Glucose-Check Air — Analyseur Glycémie Non-Invasif",
-          "description": "Analyseur métabolique non-invasif par spectroscopie infrarouge proche. Mesurez votre glycémie sans piqûre, sans sang, sans bandelette.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-GLUC-AIR-2026",
-          "mpn": "SV-GLUC-AIR-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html",
-            "price": "298",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html#product",
+      "name": "Glucose-Check Air — Analyseur Glycémie Non-Invasif",
+      "description": "Analyseur métabolique non-invasif par spectroscopie infrarouge proche. Mesurez votre glycémie sans piqûre, sans sang, sans bandelette.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/analyseur-glycemie-non-invasif-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-glucose-check-air",
+      "mpn": "synchrovie-glucose-check-air",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html",
+        "price": "298",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "L'analyseur Glucose-Check Air est-il vraiment sans piqûre ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le Glucose-Check Air utilise la spectroscopie infrarouge proche (NIR) pour mesurer la glycémie à travers la peau, sans aucun prélèvement sanguin. Il suffit de poser le doigt sur le capteur pendant 8 secondes."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "L'analyseur Glucose-Check Air est-il vraiment sans piqûre ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. Le Glucose-Check Air utilise la spectroscopie infrarouge proche (NIR) pour mesurer la glycémie à travers la peau, sans aucun prélèvement sanguin. Il suffit de poser le doigt sur le capteur pendant 8 secondes."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelle est la précision du glucomètre non invasif ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le Glucose-Check Air atteint une déviation moyenne absolue (MARD) de 8,3 % par rapport à un glucomètre invasif de référence, dans la plage 70-300 mg/dL. Ce niveau de précision est adapté au suivi quotidien et au dépistage précoce des variations glycémiques."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Faut-il des bandelettes ou des consommables ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Non. Le Glucose-Check Air ne nécessite aucune bandelette, aucune lancette, aucun réactif. Zéro consommable. Zéro coût récurrent. La mesure repose entièrement sur la spectroscopie optique."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "À qui s'adresse l'analyseur de glycémie non-invasif ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le Glucose-Check Air s'adresse aux pré-diabétiques souhaitant surveiller leur glycémie, aux diabétiques de type 2 en complément de leur glucomètre prescrit, aux sportifs optimisant leur métabolisme, et à toute personne pratiquant le jeûne intermittent ou le suivi métabolique préventif."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Quelle est la précision du glucomètre non invasif ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le Glucose-Check Air atteint une déviation moyenne absolue (MARD) de 8,3 % par rapport à un glucomètre invasif de référence, dans la plage 70-300 mg/dL. Ce niveau de précision est adapté au suivi quotidien et au dépistage précoce des variations glycémiques."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Bio-Monitoring & Santé Préventive", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-bio" },
-            { "@type": "ListItem", "position": 3, "name": "Glucose-Check Air — Analyseur Glycémie Non-Invasif", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html" }
-          ]
+          "@type": "Question",
+          "name": "Faut-il des bandelettes ou des consommables ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Le Glucose-Check Air ne nécessite aucune bandelette, aucune lancette, aucun réactif. Zéro consommable. Zéro coût récurrent. La mesure repose entièrement sur la spectroscopie optique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "À qui s'adresse l'analyseur de glycémie non-invasif ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le Glucose-Check Air s'adresse aux pré-diabétiques souhaitant surveiller leur glycémie, aux diabétiques de type 2 en complément de leur glucomètre prescrit, aux sportifs optimisant leur métabolisme, et à toute personne pratiquant le jeûne intermittent ou le suivi métabolique préventif."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bio-Monitoring & Santé Préventive",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-bio"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Glucose-Check Air — Analyseur Glycémie Non-Invasif",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/analyseur-glycemie-non-invasif.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

@@ -39,83 +39,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/simulateur-aube-crepuscule.html#product",
-          "name": "Aura-Light Clock — Simulateur Aube Crépuscule",
-          "description": "Simulateur d'aube et de crépuscule avec réveil lumière naturelle progressive. 20 000 lux, 16 millions de couleurs, sons de la nature, Bluetooth. Lampe circadienne intelligente.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-AURALIGHT-CLOCK-2026",
-          "mpn": "SV-AURALIGHT-CLOCK-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/simulateur-aube-crepuscule.html",
-            "price": "148",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/simulateur-aube-crepuscule.html#product",
+      "name": "Aura-Light Clock — Simulateur Aube Crépuscule",
+      "description": "Simulateur d'aube et de crépuscule avec réveil lumière naturelle progressive. 20 000 lux, 16 millions de couleurs, sons de la nature, Bluetooth. Lampe circadienne intelligente.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/simulateur-aube.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-aura-light-clock",
+      "mpn": "synchrovie-aura-light-clock",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/simulateur-aube-crepuscule.html",
+        "price": "148",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment le simulateur d'aube Aura-Light Clock imite-t-il le lever du soleil ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'Aura-Light Clock allume sa LED progressivement sur 30 minutes avant l'heure de réveil programmée. L'intensité passe de 0 à 20 000 lux et la température de couleur évolue du rouge profond (1800 K) à la lumière du jour (6500 K), reproduisant la séquence chromatique d'un lever de soleil réel. Ce signal lumineux inhibe la mélatonine avant le réveil sonore."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Comment le simulateur d'aube Aura-Light Clock imite-t-il le lever du soleil ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "L'Aura-Light Clock allume sa LED progressivement sur 30 minutes avant l'heure de réveil programmée. L'intensité passe de 0 à 20 000 lux et la température de couleur évolue du rouge profond (1800 K) à la lumière du jour (6500 K), reproduisant la séquence chromatique d'un lever de soleil réel. Ce signal lumineux inhibe la mélatonine avant le réveil sonore."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "L'Aura-Light Clock peut-il aussi aider à s'endormir le soir ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. Le mode crépuscule inverse le processus : la lumière diminue progressivement sur 15 à 60 minutes (réglable), passant du blanc chaud au rouge orangé puis à l'extinction. Ce gradient stimule la production de mélatonine et prépare le cerveau au sommeil. Vous pouvez y associer des sons de la nature (pluie, vague, forêt) pour renforcer la relaxation."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelle est l'intensité lumineuse maximale et est-elle suffisante contre la dépression saisonnière ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "L'Aura-Light Clock atteint 20 000 lux à 30 cm, ce qui correspond au seuil recommandé pour la luminothérapie anti-dépression saisonnière. Pour un effet thérapeutique, utilisez le mode luminothérapie 30 minutes chaque matin. Attention : cet appareil ne remplace pas un suivi médical pour la dépression."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "L'Aura-Light Clock peut-il aussi aider à s'endormir le soir ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le mode crépuscule inverse le processus : la lumière diminue progressivement sur 15 à 60 minutes (réglable), passant du blanc chaud au rouge orangé puis à l'extinction. Ce gradient stimule la production de mélatonine et prépare le cerveau au sommeil. Vous pouvez y associer des sons de la nature (pluie, vague, forêt) pour renforcer la relaxation."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Neuro-Sommeil & Récupération", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil" },
-            { "@type": "ListItem", "position": 3, "name": "Aura-Light Clock — Simulateur Aube Crépuscule", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/simulateur-aube-crepuscule.html" }
-          ]
+          "@type": "Question",
+          "name": "Quelle est l'intensité lumineuse maximale et est-elle suffisante contre la dépression saisonnière ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'Aura-Light Clock atteint 20 000 lux à 30 cm, ce qui correspond au seuil recommandé pour la luminothérapie anti-dépression saisonnière. Pour un effet thérapeutique, utilisez le mode luminothérapie 30 minutes chaque matin. Attention : cet appareil ne remplace pas un suivi médical pour la dépression."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Neuro-Sommeil & Récupération",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Aura-Light Clock — Simulateur Aube Crépuscule",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/simulateur-aube-crepuscule.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

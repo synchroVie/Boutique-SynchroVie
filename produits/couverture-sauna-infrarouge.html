@@ -39,91 +39,158 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/couverture-sauna-infrarouge.html#product",
-          "name": "ThermoWrap FIR — Couverture Sauna Infrarouge 3 Zones",
-          "description": "Couverture sauna infrarouge lointain à 3 zones chauffantes indépendantes. 36 000 fibres de carbone, longueur d'onde FIR 4-15μm, température max 80°C, Low EMF. Détoxification et récupération à domicile.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/couverture-sauna-infrarouge-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-THERMOWRAP-FIR-2026",
-          "mpn": "SV-THERMOWRAP-FIR-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/couverture-sauna-infrarouge.html",
-            "price": "169",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/couverture-sauna-infrarouge.html#product",
+      "name": "ThermoWrap FIR — Couverture Sauna Infrarouge 3 Zones",
+      "description": "Couverture sauna infrarouge lointain à 3 zones chauffantes indépendantes. 36 000 fibres de carbone, longueur d'onde FIR 4-15μm, température max 80°C, Low EMF. Détoxification et récupération à domicile.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/couverture-sauna-infrarouge-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-thermo-wrap-fir",
+      "mpn": "synchrovie-thermo-wrap-fir",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/couverture-sauna-infrarouge.html",
+        "price": "169",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Quelle est la différence entre un sauna infrarouge et un sauna traditionnel ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le sauna traditionnel chauffe l'air ambiant à 70-100°C, ce qui chauffe la peau par convection. Le sauna infrarouge chauffe directement le corps par rayonnement, sans chauffer excessivement l'air. Résultat : vous transpirez davantage à une température ressentie plus basse (40-60°C). L'infrarouge lointain (4-15μm) pénètre plus profondément dans les tissus que la chaleur convective, stimulant la sudation profonde et l'élimination des toxines liposolubles. Le ThermoWrap FIR offre ces bénéfices dans un format pliable qui se range sous un lit."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Quelle est la différence entre un sauna infrarouge et un sauna traditionnel ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le sauna traditionnel chauffe l'air ambiant à 70-100°C, ce qui chauffe la peau par convection. Le sauna infrarouge chauffe directement le corps par rayonnement, sans chauffer excessivement l'air. Résultat : vous transpirez davantage à une température ressentie plus basse (40-60°C). L'infrarouge lointain (4-15μm) pénètre plus profondément dans les tissus que la chaleur convective, stimulant la sudation profonde et l'élimination des toxines liposolubles. Le ThermoWrap FIR offre ces bénéfices dans un format pliable qui se range sous un lit."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Combien de séances par semaine sont recommandées ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Pour la détoxification, 2 à 3 séances de 30-45 minutes par semaine sont recommandées. Pour la relaxation et la récupération musculaire, une séance quotidienne de 20-30 minutes est possible. Commencez par 20 minutes à 50°C et augmentez progressivement la température et la durée. Hydratez-vous abondamment avant et après chaque séance. Les résultats se font sentir dès les premières séances — sommeil amélioré, peau plus douce, récupération accélérée."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Le ThermoWrap FIR est-il sûr pour une utilisation quotidienne ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. Le ThermoWrap FIR est certifié CE, RoHS, ISO 9001 et SGS. Sa technologie Low EMF garantit une exposition minimale aux champs électromagnétiques. Le système de sécurité coupe automatiquement l'alimentation en cas de surchauffe. Le matériau intérieur est imperméable et résistant à la chaleur. Cependant, les personnes souffrant de problèmes cardiaques, de fièvre ou de grossesse doivent consulter un médecin avant utilisation."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Comment nettoyer la couverture sauna ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Après chaque séance, essuyez l'intérieur avec un chiffon humide pour retirer la sueur. Laissez la couverture ouverte pendant 10-15 minutes pour qu'elle sèche complètement avant de la ranger. Pour un nettoyage en profondeur, utilisez un chiffon avec du savon doux. Ne plongez jamais le boîtier de contrôle dans l'eau. N'utilisez pas de produits chimiques agressifs. Le matériau PVC imperméable facilite le nettoyage et empêche l'absorption de la sueur."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Combien de séances par semaine sont recommandées ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour la détoxification, 2 à 3 séances de 30-45 minutes par semaine sont recommandées. Pour la relaxation et la récupération musculaire, une séance quotidienne de 20-30 minutes est possible. Commencez par 20 minutes à 50°C et augmentez progressivement la température et la durée. Hydratez-vous abondamment avant et après chaque séance. Les résultats se font sentir dès les premières séances — sommeil amélioré, peau plus douce, récupération accélérée."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Neuro-Sommeil & Récupération", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil" },
-            { "@type": "ListItem", "position": 3, "name": "ThermoWrap FIR — Couverture Sauna Infrarouge", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/couverture-sauna-infrarouge.html" }
-          ]
+          "@type": "Question",
+          "name": "Le ThermoWrap FIR est-il sûr pour une utilisation quotidienne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le ThermoWrap FIR est certifié CE, RoHS, ISO 9001 et SGS. Sa technologie Low EMF garantit une exposition minimale aux champs électromagnétiques. Le système de sécurité coupe automatiquement l'alimentation en cas de surchauffe. Le matériau intérieur est imperméable et résistant à la chaleur. Cependant, les personnes souffrant de problèmes cardiaques, de fièvre ou de grossesse doivent consulter un médecin avant utilisation."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment nettoyer la couverture sauna ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Après chaque séance, essuyez l'intérieur avec un chiffon humide pour retirer la sueur. Laissez la couverture ouverte pendant 10-15 minutes pour qu'elle sèche complètement avant de la ranger. Pour un nettoyage en profondeur, utilisez un chiffon avec du savon doux. Ne plongez jamais le boîtier de contrôle dans l'eau. N'utilisez pas de produits chimiques agressifs. Le matériau PVC imperméable facilite le nettoyage et empêche l'absorption de la sueur."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Neuro-Sommeil & Récupération",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ThermoWrap FIR — Couverture Sauna Infrarouge",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/couverture-sauna-infrarouge.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

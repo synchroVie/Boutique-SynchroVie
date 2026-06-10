@@ -39,92 +39,166 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-controle-cortisol.html#product",
-          "name": "Aura-Ring Calm — Bague Contrôle Cortisol",
-          "description": "Bague biométrique de contrôle du cortisol et suivi continu du stress. Estimation cortisol salivaire, VFC, température nocturne. Alertes préventives avant la surcharge. 268 EUR.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-AURARINGCALM-2026",
-          "mpn": "SV-AURARINGCALM-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-controle-cortisol.html",
-            "price": "268",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-controle-cortisol.html#product",
+      "name": "Aura-Ring Calm — Bague Contrôle Cortisol",
+      "description": "Bague biométrique de contrôle du cortisol et suivi continu du stress. Estimation cortisol salivaire, VFC, température nocturne. Alertes préventives avant la surcharge. 268 EUR.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bague-controle-cortisol-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-aura-ring-calm",
+      "mpn": "synchrovie-aura-ring-calm",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-controle-cortisol.html",
+        "price": "268",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Émilie R."
+          },
+          "datePublished": "2026-02-08",
+          "reviewRating": {
+            "@type": "Rating",
             "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+            "bestRating": "5"
           },
-          "review": [
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Émilie R." },
-              "datePublished": "2026-02-08",
-              "reviewRating": { "@type": "Rating", "ratingValue": "5.0", "bestRating": "5" },
-              "reviewBody": "Mon cortisol matinal a baissé de 23 % en 6 semaines grâce aux alertes de l'Aura-Ring. Je savais que le stress me bouffait, mais sans données, impossible d'agir concrètement."
-            }
-          ]
+          "reviewBody": "Mon cortisol matinal a baissé de 23 % en 6 semaines grâce aux alertes de l'Aura-Ring. Je savais que le stress me bouffait, mais sans données, impossible d'agir concrètement."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment l'Aura-Ring Calm estime-t-elle le cortisol sans prise de sang ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'Aura-Ring Calm ne mesure pas le cortisol directement. Elle combine trois biomarqués corrélés au cortisol salivaire : la variabilité fréquence cardiaque (RMSSD), la température cutanée périphérique et la fréquence respiratoire. Un algorithme entraîné sur 12 000 échantillons de cortisol salivaire validés en laboratoire produit une estimation dont la corrélation atteint r=0,87 avec les dosages ELISA. C'est un indice de tendance, pas un diagnostic médical."
+          }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Comment l'Aura-Ring Calm estime-t-elle le cortisol sans prise de sang ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "L'Aura-Ring Calm ne mesure pas le cortisol directement. Elle combine trois biomarqués corrélés au cortisol salivaire : la variabilité fréquence cardiaque (RMSSD), la température cutanée périphérique et la fréquence respiratoire. Un algorithme entraîné sur 12 000 échantillons de cortisol salivaire validés en laboratoire produit une estimation dont la corrélation atteint r=0,87 avec les dosages ELISA. C'est un indice de tendance, pas un diagnostic médical."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "La bague anti-stress peut-elle prévenir un burn-out ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "L'Aura-Ring Calm détecte les patrons de cortisol chroniquement élevé — cortisol matinal supérieur à la norme personnelle pendant 5 jours consécutifs, effondrement de la VFC, température nocturne anormalement haute. L'application déclenche une alerte « Surcharge détectée » avec recommandations (réduction d'activité, récupération prioritaire). Ce système prévient l'accumulation silencieuse qui mène au burn-out, mais ne constitue pas un outil diagnostique. En cas de symptômes persistants, une consultation médicale reste indispensable."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Faut-il porter l'Aura-Ring Calm la nuit pour que ça fonctionne ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le port nocturne est essentiel. Le cortisol suit un rythme circadien : il doit être élevé au réveil (pic matinal) et bas au coucher. L'Aura-Ring mesure ce ratio cortisol matinal/cortisol vespéral grâce aux données de température nocturne et de VFC pendant le sommeil. Sans port nocturne, l'estimation du cortisol vespéral et la qualité de récupération ne peuvent pas être calculées. La bague est conçue pour un port 24h/24 — 2,8 g, titane hypoallergénique, étanche IP68."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "La bague anti-stress peut-elle prévenir un burn-out ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'Aura-Ring Calm détecte les patrons de cortisol chroniquement élevé — cortisol matinal supérieur à la norme personnelle pendant 5 jours consécutifs, effondrement de la VFC, température nocturne anormalement haute. L'application déclenche une alerte « Surcharge détectée » avec recommandations (réduction d'activité, récupération prioritaire). Ce système prévient l'accumulation silencieuse qui mène au burn-out, mais ne constitue pas un outil diagnostique. En cas de symptômes persistants, une consultation médicale reste indispensable."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Biofeedback & Sérénité Mentale", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-biofeedback" },
-            { "@type": "ListItem", "position": 3, "name": "Aura-Ring Calm — Bague Contrôle Cortisol", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-controle-cortisol.html" }
-          ]
+          "@type": "Question",
+          "name": "Faut-il porter l'Aura-Ring Calm la nuit pour que ça fonctionne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le port nocturne est essentiel. Le cortisol suit un rythme circadien : il doit être élevé au réveil (pic matinal) et bas au coucher. L'Aura-Ring mesure ce ratio cortisol matinal/cortisol vespéral grâce aux données de température nocturne et de VFC pendant le sommeil. Sans port nocturne, l'estimation du cortisol vespéral et la qualité de récupération ne peuvent pas être calculées. La bague est conçue pour un port 24h/24 — 2,8 g, titane hypoallergénique, étanche IP68."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biofeedback & Sérénité Mentale",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-biofeedback"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Aura-Ring Calm — Bague Contrôle Cortisol",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-controle-cortisol.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         /* ===== RESET & BASE ===== */

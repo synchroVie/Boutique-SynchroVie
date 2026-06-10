@@ -39,83 +39,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/tensiometre-intelligent-connecte.html#product",
-          "name": "B-Pressure Connect — Tensiomètre Intelligent Connecté Bluetooth",
-          "description": "Tensiomètre intelligent connecté avec Bluetooth, double mesure bras et poignet, suivi automatique de la tension artérielle, mémoire 2×120 relevés, alarme arythmie, application iOS/Android.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-BPRESS-CONNECT-2026",
-          "mpn": "SV-BPRESS-CONNECT-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/tensiometre-intelligent-connecte.html",
-            "price": "158",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/tensiometre-intelligent-connecte.html#product",
+      "name": "B-Pressure Connect — Tensiomètre Intelligent Connecté Bluetooth",
+      "description": "Tensiomètre intelligent connecté avec Bluetooth, double mesure bras et poignet, suivi automatique de la tension artérielle, mémoire 2×120 relevés, alarme arythmie, application iOS/Android.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/tensiometre-intelligent-connecte-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-b-pressure-connect",
+      "mpn": "synchrovie-b-pressure-connect",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/tensiometre-intelligent-connecte.html",
+        "price": "158",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le tensiomètre B-Pressure Connect détecte-t-il l'arythmie cardiaque ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le B-Pressure Connect intègre un algorithme de détection d'arythmie pendant chaque mesure. Si un rythme irrégulier est détecté, un symbole clignotant s'affiche sur l'écran et la mesure est signalée dans l'application. Cette alerte ne remplace pas un diagnostic médical mais permet de consulter rapidement un professionnel de santé."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Le tensiomètre B-Pressure Connect détecte-t-il l'arythmie cardiaque ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. Le B-Pressure Connect intègre un algorithme de détection d'arythmie pendant chaque mesure. Si un rythme irrégulier est détecté, un symbole clignotant s'affiche sur l'écran et la mesure est signalée dans l'application. Cette alerte ne remplace pas un diagnostic médical mais permet de consulter rapidement un professionnel de santé."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Comment fonctionne la synchronisation Bluetooth du tensiomètre B-Pressure Connect ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Après chaque mesure, le B-Pressure Connect se connecte automatiquement en Bluetooth 5.0 à votre smartphone (iOS ou Android). Les données de tension systolique, diastolique et pouls sont transférées dans l'application Synchrovie Health sans manipulation. Vous pouvez aussi consulter l'historique complet, exporter un rapport PDF pour votre médecin, et suivre les tendances sur des graphiques mensuels."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Faut-il mesurer la tension au bras ou au poignet avec le B-Pressure Connect ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le B-Pressure Connect propose les deux modes. La mesure au bras est la référence médicale (plus précise, recommandée par les cardiologues). La mesure au poignet est plus pratique en déplacement. Pour un suivi à domicile fiable, privilégiez le bras. Pour un contrôle rapide au bureau ou en voyage, le poignet suffit à condition de placer le brassard à hauteur du cœur."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Comment fonctionne la synchronisation Bluetooth du tensiomètre B-Pressure Connect ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Après chaque mesure, le B-Pressure Connect se connecte automatiquement en Bluetooth 5.0 à votre smartphone (iOS ou Android). Les données de tension systolique, diastolique et pouls sont transférées dans l'application Synchrovie Health sans manipulation. Vous pouvez aussi consulter l'historique complet, exporter un rapport PDF pour votre médecin, et suivre les tendances sur des graphiques mensuels."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Bio-Monitoring & Santé Préventive", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-bio" },
-            { "@type": "ListItem", "position": 3, "name": "B-Pressure Connect — Tensiomètre Intelligent Connecté Bluetooth", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/tensiometre-intelligent-connecte.html" }
-          ]
+          "@type": "Question",
+          "name": "Faut-il mesurer la tension au bras ou au poignet avec le B-Pressure Connect ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le B-Pressure Connect propose les deux modes. La mesure au bras est la référence médicale (plus précise, recommandée par les cardiologues). La mesure au poignet est plus pratique en déplacement. Pour un suivi à domicile fiable, privilégiez le bras. Pour un contrôle rapide au bureau ou en voyage, le poignet suffit à condition de placer le brassard à hauteur du cœur."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Bio-Monitoring & Santé Préventive",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-bio"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "B-Pressure Connect — Tensiomètre Intelligent Connecté Bluetooth",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/tensiometre-intelligent-connecte.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

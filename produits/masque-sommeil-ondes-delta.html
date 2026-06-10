@@ -39,83 +39,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html#product",
-          "name": "NeuroRest G2 — Masque Sommeil Ondes Delta",
-          "description": "Masque d'isolation à ondes Delta intégrées. +23% de sommeil profond en 2 semaines. Isolation phonique 32 dB, Bluetooth, 8 programmes de fréquences.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-NEUROREST-G2-2026",
-          "mpn": "SV-NEUROREST-G2-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html",
-            "price": "369",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html#product",
+      "name": "NeuroRest G2 — Masque Sommeil Ondes Delta",
+      "description": "Masque d'isolation à ondes Delta intégrées. +23% de sommeil profond en 2 semaines. Isolation phonique 32 dB, Bluetooth, 8 programmes de fréquences.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/masque-sommeil-ondes-delta-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-neuro-rest-g2",
+      "mpn": "synchrovie-neuro-rest-g2",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html",
+        "price": "369",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment les ondes Delta du masque NeuroRest G2 améliorent-elles le sommeil profond ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le NeuroRest G2 diffuse des fréquences sonores comprises entre 0,5 et 4 Hz (bande Delta), qui correspondent aux ondes cérébrales naturelles du sommeil profond. Par entrainement频频 (brainwave entrainment), ces fréquences guident le cerveau vers les stades 3 et 4 du sommeil. Les études cliniques montrent une augmentation moyenne de 23 % du temps passé en sommeil profond après 14 nuits d'utilisation."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Comment les ondes Delta du masque NeuroRest G2 améliorent-elles le sommeil profond ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le NeuroRest G2 diffuse des fréquences sonores comprises entre 0,5 et 4 Hz (bande Delta), qui correspondent aux ondes cérébrales naturelles du sommeil profond. Par entrainement频频 (brainwave entrainment), ces fréquences guident le cerveau vers les stades 3 et 4 du sommeil. Les études cliniques montrent une augmentation moyenne de 23 % du temps passé en sommeil profond après 14 nuits d'utilisation."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Le masque NeuroRest G2 bloque-t-il les bruits ambiants ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. Le NeuroRest G2 combine une isolation phonique passive de 32 dB grâce à ses coussinets mémoire de forme en mousse à cellules fermées, et une réduction active du bruit (ANC) par micro-électret intégré. Les deux systèmes ensemble atténuent jusqu'à 85 % des nuisances sonores courantes (ronflements, trafic, voisins)."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Faut-il utiliser l'application chaque nuit pour que le masque fonctionne ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Non. Le NeuroRest G2 embarque 8 programmes préenregistrés accessibles par bouton tactile sur le masque lui-même. L'application (iOS/Android) permet de personnaliser les fréquences et de consulter l'historique de vos nuits, mais elle n'est pas indispensable au fonctionnement quotidien du masque."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Le masque NeuroRest G2 bloque-t-il les bruits ambiants ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. Le NeuroRest G2 combine une isolation phonique passive de 32 dB grâce à ses coussinets mémoire de forme en mousse à cellules fermées, et une réduction active du bruit (ANC) par micro-électret intégré. Les deux systèmes ensemble atténuent jusqu'à 85 % des nuisances sonores courantes (ronflements, trafic, voisins)."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Neuro-Sommeil & Récupération", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil" },
-            { "@type": "ListItem", "position": 3, "name": "NeuroRest G2 — Masque Sommeil Ondes Delta", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html" }
-          ]
+          "@type": "Question",
+          "name": "Faut-il utiliser l'application chaque nuit pour que le masque fonctionne ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Le NeuroRest G2 embarque 8 programmes préenregistrés accessibles par bouton tactile sur le masque lui-même. L'application (iOS/Android) permet de personnaliser les fréquences et de consulter l'historique de vos nuits, mais elle n'est pas indispensable au fonctionnement quotidien du masque."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Neuro-Sommeil & Récupération",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "NeuroRest G2 — Masque Sommeil Ondes Delta",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/masque-sommeil-ondes-delta.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

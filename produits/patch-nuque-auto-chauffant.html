@@ -39,83 +39,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/patch-nuque-auto-chauffant.html#product",
-          "name": "Gravity-Tech Pad — Patch Nuque Auto-Chauffant 4 Modes",
-          "description": "Patch cervical auto-chauffant avec 4 modes de massage et chaleur programmable (42°C, 48°C, 54°C). Détente musculaire profonde, vibration percussive, autonomie 8h. Idéal avant le sommeil.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/patch-nuque-auto-chauffant-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-GRAVITY-PAD-2026",
-          "mpn": "SV-GRAVITY-PAD-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/patch-nuque-auto-chauffant.html",
-            "price": "210",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/patch-nuque-auto-chauffant.html#product",
+      "name": "Gravity-Tech Pad — Patch Nuque Auto-Chauffant 4 Modes",
+      "description": "Patch cervical auto-chauffant avec 4 modes de massage et chaleur programmable (42°C, 48°C, 54°C). Détente musculaire profonde, vibration percussive, autonomie 8h. Idéal avant le sommeil.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/patch-nuque-auto-chauffant-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-gravity-tech-pad",
+      "mpn": "synchrovie-gravity-tech-pad",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/patch-nuque-auto-chauffant.html",
+        "price": "210",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Le patch Gravity-Tech Pad peut-il être porté pendant le sommeil ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le Gravity-Tech Pad est conçu pour une utilisation avant le sommeil (15 à 30 minutes) pour détendre les muscles cervicaux et préparer l'endormissement. Il peut aussi être porté pendant le sommeil en mode faible (42°C) avec la minuterie d'extinction automatique. Le système de sécurité coupe le chauffage après 60 minutes continues."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Le patch Gravity-Tech Pad peut-il être porté pendant le sommeil ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le Gravity-Tech Pad est conçu pour une utilisation avant le sommeil (15 à 30 minutes) pour détendre les muscles cervicaux et préparer l'endormissement. Il peut aussi être porté pendant le sommeil en mode faible (42°C) avec la minuterie d'extinction automatique. Le système de sécurité coupe le chauffage après 60 minutes continues."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Comment le patch se fixe-t-il sur la nuque ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le Gravity-Tech Pad utilise une bande élastique ajustable (tour de cou 30-55 cm) avec fermeture magnétique. Il s'enfile en 3 secondes et reste en place en position allongée, assise ou debout. Le centre de gravité est conçu pour ne pas glisser pendant la nuit."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelle est la différence entre les 3 niveaux de chaleur ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Niveau 1 (42°C) : chaleur douce pour détente légère et port prolongé. Niveau 2 (48°C) : chaleur modérée pour dénouer les contractures musculaires. Niveau 3 (54°C) : chaleur intense pour les blocages cervicaux sévères, à utiliser 15 minutes maximum. Chaque niveau est sélectionnable par bouton tactile."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Comment le patch se fixe-t-il sur la nuque ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le Gravity-Tech Pad utilise une bande élastique ajustable (tour de cou 30-55 cm) avec fermeture magnétique. Il s'enfile en 3 secondes et reste en place en position allongée, assise ou debout. Le centre de gravité est conçu pour ne pas glisser pendant la nuit."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Neuro-Sommeil & Récupération", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil" },
-            { "@type": "ListItem", "position": 3, "name": "Gravity-Tech Pad — Patch Nuque Auto-Chauffant", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/patch-nuque-auto-chauffant.html" }
-          ]
+          "@type": "Question",
+          "name": "Quelle est la différence entre les 3 niveaux de chaleur ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Niveau 1 (42°C) : chaleur douce pour détente légère et port prolongé. Niveau 2 (48°C) : chaleur modérée pour dénouer les contractures musculaires. Niveau 3 (54°C) : chaleur intense pour les blocages cervicaux sévères, à utiliser 15 minutes maximum. Chaque niveau est sélectionnable par bouton tactile."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Neuro-Sommeil & Récupération",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-sommeil"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Gravity-Tech Pad — Patch Nuque Auto-Chauffant",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/patch-nuque-auto-chauffant.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

@@ -39,99 +39,166 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/dynamometre-force-digital.html#product",
-          "name": "Grip-Master Pro — Dynamomètre Force Digital EH109",
-          "description": "Dynamomètre digital EH109 de mesure de force de préhension. Plage 0-180 kg / 0-396 lb, précision 100 g, écran LED lumineux, mémoire intégrée, 2 profils Homme/Femme, poignée réglable, double alimentation USB + pile. Grip strength test pour sportifs et rééducation.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-GRIP-PRO-2026",
-          "mpn": "EH109",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/dynamometre-force-digital.html",
-            "price": "88",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/dynamometre-force-digital.html#product",
+      "name": "Grip-Master Pro — Dynamomètre Force Digital EH109",
+      "description": "Dynamomètre digital EH109 de mesure de force de préhension. Plage 0-180 kg / 0-396 lb, précision 100 g, écran LED lumineux, mémoire intégrée, 2 profils Homme/Femme, poignée réglable, double alimentation USB + pile. Grip strength test pour sportifs et rééducation.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/dynamometre-force-digital-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-grip-master-pro",
+      "mpn": "synchrovie-grip-master-pro",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/dynamometre-force-digital.html",
+        "price": "88",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment mesurer sa force de préhension avec le dynamomètre Grip-Master Pro EH109 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tenez le Grip-Master Pro EH109 en main, poignet neutre, bras le long du corps. Serrez la poignée avec force maximale pendant 3 à 5 secondes. L'écran LED affiche le résultat en kg et en livres simultanément. Répétez 3 fois par main et retenez la meilleure valeur. Le protocole standardisé recommande 1 minute de repos entre chaque essai. Les 2 profils Homme/Femme permettent un suivi individualisé."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Comment mesurer sa force de préhension avec le dynamomètre Grip-Master Pro EH109 ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Tenez le Grip-Master Pro EH109 en main, poignet neutre, bras le long du corps. Serrez la poignée avec force maximale pendant 3 à 5 secondes. L'écran LED affiche le résultat en kg et en livres simultanément. Répétez 3 fois par main et retenez la meilleure valeur. Le protocole standardisé recommande 1 minute de repos entre chaque essai. Les 2 profils Homme/Femme permettent un suivi individualisé."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelle est la précision et la plage de mesure du dynamomètre digital EH109 ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le Grip-Master Pro EH109 offre une précision de 100 g (d=100g/0.2lb) sur une plage de mesure de 0 à 180 kg / 0 à 396 lb. Cette large plage couvre aussi bien la rééducation post-opératoire que le suivi des athlètes de force. La précision est comparable aux dynamomètres médicaux utilisés en ergothérapie et en médecine du sport, qui coûtent 3 à 5 fois plus cher."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Comment fonctionne la mémoire intégrée du dynamomètre EH109 ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le EH109 dispose d'une mémoire intégrée qui stocke automatiquement les résultats par utilisateur. Les 2 profils Homme/Femme permettent de différencier les mesures. Chaque profil conserve l'historique des mesures, ce qui facilite le suivi de la progression sans avoir à noter les valeurs manuellement. Idéal pour un usage familial ou en cabinet de kinésithérapie."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Pourquoi le dynamomètre EH109 propose-t-il une double alimentation ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le Grip-Master Pro EH109 fonctionne en double alimentation : recharge USB et piles. Cette double source d'énergie garantit que vous n'êtes jamais sans énergie — si la batterie est vide, insérez des piles et continuez vos mesures. La recharge USB est pratique pour un usage quotidien au cabinet ou à domicile, tandis que les piles offrent une autonomie de secours en déplacement."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Pourquoi mesurer sa force de préhension régulièrement ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La force de préhension est un biomarqueur de santé globale validé par plus de 50 études. Elle corrèle avec la mortalité toutes causes, la sarcopénie, le risque cardiovasculaire et la capacité fonctionnelle. Un déclin de 5 kg en grip strength signale une perte de masse musculaire significative. Le suivi régulier avec la mémoire intégrée du EH109 permet de détecter ce déclin avant les symptômes visibles."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Quelle est la précision et la plage de mesure du dynamomètre digital EH109 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le Grip-Master Pro EH109 offre une précision de 100 g (d=100g/0.2lb) sur une plage de mesure de 0 à 180 kg / 0 à 396 lb. Cette large plage couvre aussi bien la rééducation post-opératoire que le suivi des athlètes de force. La précision est comparable aux dynamomètres médicaux utilisés en ergothérapie et en médecine du sport, qui coûtent 3 à 5 fois plus cher."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Performance & Équilibre Physique", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance" },
-            { "@type": "ListItem", "position": 3, "name": "Grip-Master Pro — Dynamomètre Force Digital", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/dynamometre-force-digital.html" }
-          ]
+          "@type": "Question",
+          "name": "Comment fonctionne la mémoire intégrée du dynamomètre EH109 ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le EH109 dispose d'une mémoire intégrée qui stocke automatiquement les résultats par utilisateur. Les 2 profils Homme/Femme permettent de différencier les mesures. Chaque profil conserve l'historique des mesures, ce qui facilite le suivi de la progression sans avoir à noter les valeurs manuellement. Idéal pour un usage familial ou en cabinet de kinésithérapie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi le dynamomètre EH109 propose-t-il une double alimentation ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le Grip-Master Pro EH109 fonctionne en double alimentation : recharge USB et piles. Cette double source d'énergie garantit que vous n'êtes jamais sans énergie — si la batterie est vide, insérez des piles et continuez vos mesures. La recharge USB est pratique pour un usage quotidien au cabinet ou à domicile, tandis que les piles offrent une autonomie de secours en déplacement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pourquoi mesurer sa force de préhension régulièrement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La force de préhension est un biomarqueur de santé globale validé par plus de 50 études. Elle corrèle avec la mortalité toutes causes, la sarcopénie, le risque cardiovasculaire et la capacité fonctionnelle. Un déclin de 5 kg en grip strength signale une perte de masse musculaire significative. Le suivi régulier avec la mémoire intégrée du EH109 permet de détecter ce déclin avant les symptômes visibles."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Performance & Équilibre Physique",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Grip-Master Pro — Dynamomètre Force Digital",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/dynamometre-force-digital.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

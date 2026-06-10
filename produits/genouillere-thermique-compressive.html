@@ -39,83 +39,150 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/genouillere-thermique-compressive.html#product",
-          "name": "Knee-Tech Support — Genouillère Thermique Compressive",
-          "description": "Genouillère thermique compressive avec 3 niveaux de chaleur, compression ajustable par sangles, tissu néoprène respirant. Soutien genou technologique pour arthrose, entorses et récupération sportive.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/genouillere-thermique.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-KNEE-TECH-2026",
-          "mpn": "SV-KNEE-TECH-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/genouillere-thermique-compressive.html",
-            "price": "98",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/genouillere-thermique-compressive.html#product",
+      "name": "Knee-Tech Support — Genouillère Thermique Compressive",
+      "description": "Genouillère thermique compressive avec 3 niveaux de chaleur, compression ajustable par sangles, tissu néoprène respirant. Soutien genou technologique pour arthrose, entorses et récupération sportive.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/genouillere-thermique.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-knee-tech-support",
+      "mpn": "synchrovie-knee-tech-support",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/genouillere-thermique-compressive.html",
+        "price": "98",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "La genouillère Knee-Tech Support est-elle adaptée à l'arthrose du genou ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. La chaleur délivrée par la Knee-Tech Support (3 niveaux : 55°C, 65°C, 75°C) augmente la circulation synoviale, assouplit les tissus périarticulaires et réduit la raideur matinale caractéristique de l'arthrose. La compression ajustable stabilise l'articulation sans limiter la mobilité. Les 3 modes de vibration complètent l'effet thérapeutique en relâchant les muscles périarticulaires. Les rhumatologues recommandent la thermothérapie comme traitement de première ligne de la gonarthrose."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "La genouillère Knee-Tech Support est-elle adaptée à l'arthrose du genou ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. La chaleur délivrée par la Knee-Tech Support (3 niveaux : 55°C, 65°C, 75°C) augmente la circulation synoviale, assouplit les tissus périarticulaires et réduit la raideur matinale caractéristique de l'arthrose. La compression ajustable stabilise l'articulation sans limiter la mobilité. Les 3 modes de vibration complètent l'effet thérapeutique en relâchant les muscles périarticulaires. Les rhumatologues recommandent la thermothérapie comme traitement de première ligne de la gonarthrose."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Combien de temps dure la batterie de la genouillère chauffante ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "La batterie lithium 2200 mAh offre 2h30 à niveau élevé (75°C), 3h30 à niveau moyen (65°C) et 5h à niveau bas (55°C). La recharge USB-C complète prend 2 heures. La batterie se clips discrètement sur le côté de la genouillère et ne gêne pas la marche."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Peut-on marcher avec la genouillère Knee-Tech Support ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. La Knee-Tech Support est conçue pour la mobilité. Le tissu flexible est extensible dans les 4 directions, les 3 modes de vibration complètent la thermothérapie pour un relâchement musculaire en mouvement, et la batterie amovible ne pèse que 65 g. Vous pouvez marcher, monter des escaliers et faire du vélo statique avec."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Combien de temps dure la batterie de la genouillère chauffante ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La batterie lithium 2200 mAh offre 2h30 à niveau élevé (75°C), 3h30 à niveau moyen (65°C) et 5h à niveau bas (55°C). La recharge USB-C complète prend 2 heures. La batterie se clips discrètement sur le côté de la genouillère et ne gêne pas la marche."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Performance & Équilibre Physique", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance" },
-            { "@type": "ListItem", "position": 3, "name": "Knee-Tech Support — Genouillère Thermique Compressive", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/genouillere-thermique-compressive.html" }
-          ]
+          "@type": "Question",
+          "name": "Peut-on marcher avec la genouillère Knee-Tech Support ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. La Knee-Tech Support est conçue pour la mobilité. Le tissu flexible est extensible dans les 4 directions, les 3 modes de vibration complètent la thermothérapie pour un relâchement musculaire en mouvement, et la batterie amovible ne pèse que 65 g. Vous pouvez marcher, monter des escaliers et faire du vélo statique avec."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Performance & Équilibre Physique",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Knee-Tech Support — Genouillère Thermique Compressive",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/genouillere-thermique-compressive.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }

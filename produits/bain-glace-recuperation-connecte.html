@@ -39,91 +39,158 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght;700&display=swap" rel="stylesheet">
 
-    <script type="application/ld+json">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "Product",
-          "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bain-glace-recuperation-connecte.html#product",
-          "name": "IceVault Connect — Bain Glacé Récupération Connecté",
-          "description": "Bain de récupération thermique tout-en-un avec compresseur 1 HP intégré, cuve en acier inoxydable 304, plage de température 2°C à 42°C, contrôle WiFi via application iOS/Android, stérilisation ozone intégrée. Cold plunge et thermothérapie chaude dans un seul appareil.",
-          "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bain-glace-recuperation-connecte-1.webp",
-          "brand": { "@type": "Brand", "name": "Synchrovie" },
-          "sku": "SV-ICEVAULT-CONNECT-2026",
-          "mpn": "SV-ICEVAULT-CONNECT-2026",
-          "offers": {
-            "@type": "Offer",
-            "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bain-glace-recuperation-connecte.html",
-            "price": "1285",
-            "priceCurrency": "EUR",
-            "priceValidUntil": "2027-12-31",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "Organization", "name": "Synchrovie" },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-              "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR","BE","CH","LU","DE"] }
-            }
+      "@type": "Product",
+      "@id": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bain-glace-recuperation-connecte.html#product",
+      "name": "IceVault Connect — Bain Glacé Récupération Connecté",
+      "description": "Bain de récupération thermique tout-en-un avec compresseur 1 HP intégré, cuve en acier inoxydable 304, plage de température 2°C à 42°C, contrôle WiFi via application iOS/Android, stérilisation ozone intégrée. Cold plunge et thermothérapie chaude dans un seul appareil.",
+      "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/produits/bain-glace-recuperation-connecte-1.webp",
+      "brand": {
+        "@type": "Brand",
+        "name": "Synchrovie"
+      },
+      "sku": "synchrovie-ice-vault-connect",
+      "mpn": "synchrovie-ice-vault-connect",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bain-glace-recuperation-connecte.html",
+        "price": "1285",
+        "priceCurrency": "EUR",
+        "priceValidUntil": "2027-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "Synchrovie"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "3",
-            "bestRating": "5",
-            "worstRating": "1"
+          "shippingDestination": [
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "FR"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "BE"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "CH"
+            },
+            {
+              "@type": "DefinedRegion",
+              "addressCountry": "LU"
+            }
+          ],
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Combien de temps faut-il pour refroidir l'eau à 2°C ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le compresseur 1 HP refroidit l'eau d'environ 3 à 5°C par heure selon la température ambiante et le volume d'eau (~300L). Pour passer de l'eau du robinet (15-20°C) à 5°C, comptez environ 3 à 4 heures. Une fois la température atteinte, le compresseur maintient automatiquement la température cible. Vous pouvez programmer la température via l'application WiFi avant votre retour — l'eau sera prête quand vous arriverez."
           }
         },
         {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Combien de temps faut-il pour refroidir l'eau à 2°C ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le compresseur 1 HP refroidit l'eau d'environ 3 à 5°C par heure selon la température ambiante et le volume d'eau (~300L). Pour passer de l'eau du robinet (15-20°C) à 5°C, comptez environ 3 à 4 heures. Une fois la température atteinte, le compresseur maintient automatiquement la température cible. Vous pouvez programmer la température via l'application WiFi avant votre retour — l'eau sera prête quand vous arriverez."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelle est la consommation électrique de l'IceVault Connect ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Le compresseur consomme entre 350W (maintenance) et 2000W (refroidissement actif). En régime de maintien à basse température, la consommation moyenne est de 350-500W, soit environ 2-3€ par jour en utilisation continue. En mode programmé (refroidissement uniquement avant utilisation), la consommation est encore plus faible. Le dégivrage automatique optimise le rendement du compresseur."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "L'IceVault Connect nécessite-t-il une installation particulière ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Non. L'IceVault Connect est un système tout-en-un freestanding. Il suffit de le placer sur une surface plane, de le brancher sur une prise standard 220V, et de remplir la cuve d'eau. Aucune plomberie ni installation fixe n'est requise. Le drainage se fait par un robinet de vidange intégré. L'application WiFi permet de tout contrôler à distance."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Peut-on utiliser l'IceVault Connect en extérieur ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui. La cuve en acier inoxydable 304 et la jupe extérieure en bois ou composite WPC sont conçues pour résister aux intempéries. Le groupe froid est protégé par un capot étanche. Pour les régions où la température descend sous 0°C en hiver, il est recommandé de vidanger le système ou de maintenir le chauffage à basse température pour éviter le gel des tuyaux. L'application vous alertera en cas de température critique."
-              }
-            }
-          ]
+          "@type": "Question",
+          "name": "Quelle est la consommation électrique de l'IceVault Connect ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le compresseur consomme entre 350W (maintenance) et 2000W (refroidissement actif). En régime de maintien à basse température, la consommation moyenne est de 350-500W, soit environ 2-3€ par jour en utilisation continue. En mode programmé (refroidissement uniquement avant utilisation), la consommation est encore plus faible. Le dégivrage automatique optimise le rendement du compresseur."
+          }
         },
         {
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
-            { "@type": "ListItem", "position": 2, "name": "Performance & Équilibre Physique", "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance" },
-            { "@type": "ListItem", "position": 3, "name": "IceVault Connect — Bain Glacé Récupération Connecté", "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bain-glace-recuperation-connecte.html" }
-          ]
+          "@type": "Question",
+          "name": "L'IceVault Connect nécessite-t-il une installation particulière ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. L'IceVault Connect est un système tout-en-un freestanding. Il suffit de le placer sur une surface plane, de le brancher sur une prise standard 220V, et de remplir la cuve d'eau. Aucune plomberie ni installation fixe n'est requise. Le drainage se fait par un robinet de vidange intégré. L'application WiFi permet de tout contrôler à distance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Peut-on utiliser l'IceVault Connect en extérieur ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. La cuve en acier inoxydable 304 et la jupe extérieure en bois ou composite WPC sont conçues pour résister aux intempéries. Le groupe froid est protégé par un capot étanche. Pour les régions où la température descend sous 0°C en hiver, il est recommandé de vidanger le système ou de maintenir le chauffage à basse température pour éviter le gel des tuyaux. L'application vous alertera en cas de température critique."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Performance & Équilibre Physique",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/#cat-performance"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "IceVault Connect — Bain Glacé Récupération Connecté",
+          "item": "https://synchrovie.github.io/Boutique-SynchroVie/produits/bain-glace-recuperation-connecte.html"
         }
       ]
     }
-    </script>
+  ]
+}</script>
 
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
