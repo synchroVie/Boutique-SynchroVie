@@ -183,7 +183,19 @@
   <!-- ===== CATÉGORIE 1 : BIO-MONITORING & SANTÉ PRÉVENTIVE (6 produits) ===== -->
   <url>
     <loc>https://synchrovie.github.io/Boutique-SynchroVie/produits/bague-connectee-sante-biometrique.html</loc>
-    <lastmod>2026-05-10</lastmod>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/produits/tensiometre-intelligent-connecte.html</loc>
+    <lastmod>2026-06-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://synchrovie.github.io/Boutique-SynchroVie/produits/balance-impedancemetre-connectee.html</loc>
+    <lastmod>2026-06-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -200,19 +212,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://synchrovie.github.io/Boutique-SynchroVie/produits/balance-impedancemetre-connectee.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://synchrovie.github.io/Boutique-SynchroVie/produits/thermometre-infrarouge-medical.html</loc>
-    <lastmod>2026-05-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://synchrovie.github.io/Boutique-SynchroVie/produits/tensiometre-intelligent-connecte.html</loc>
     <lastmod>2026-05-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
