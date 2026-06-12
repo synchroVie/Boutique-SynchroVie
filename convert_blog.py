@@ -1,110 +1,43 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7FXCZJQVT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-R7FXCZJQVT');
-    </script>
+#!/usr/bin/env python3
+"""
+Convert all 19 SynchroVie blog pages from dark cyan design to Claude's Gold/Cream/Indigo luxury design.
 
+PRESERVES: All article content, meta tags, OG tags, schema.org, gtag.js, canonical URLs, internal links
+CHANGES: CSS, fonts, and HTML wrapper (header, footer, trust bar, breadcrumb, etc.)
+"""
 
-<meta charset="utf-8"/>
+import os
+import re
+from bs4 import BeautifulSoup, Comment
 
+BLOG_DIR = '/home/z/my-project/Boutique-SynchroVie/blog'
 
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+BLOG_FILES = [
+    'abonnement-bague-connectee-donnees-sante.html',
+    'vfc-variabilite-frequence-cardiaque-biomarqueur-longevite.html',
+    'performance-physique-stimulation-ems.html',
+    'guide-bague-connectee-biometrique.html',
+    'glycemie-sans-piqure-analyseur-non-invasif.html',
+    'technologies-neuro-sommeil-2026.html',
+    'balance-impedancemetre-comprendre-composition-corporelle.html',
+    'bio-monitoring-sante-connectee-erreur-diagnostic.html',
+    'sommeil-profond-90-premieres-minutes.html',
+    'tension-arterielle-connectee-5-erreurs-mesures.html',
+    'nerf-vague-stopper-crise-angoisse.html',
+    'biofeedback-gestion-stress-rythme-cardiaque.html',
+    'optimisation-sommeil-profond-micro-reveils.html',
+    'photobiomodulation-irradiance-panneau-led.html',
+    'biohacking-performance-physique-respiration-nasale.html',
+    'recuperation-musculaire-technologies-pointe-athletes.html',
+    'correcteur-posture-haptique-reeduquer-dos-intelligemment.html',
+    'surveiller-coeur-domicile-moniteur-ecg-portable.html',
+    'bague-controle-cortisol-stress-invisible-mesurable.html',
+]
 
-
-<title>Bio-Monitoring Sante Connectee : Corriger une Erreur de Diagnostic | Synchrovie</title>
-
-
-<meta content="Erreur de diagnostic pendant des mois ? La VFC continue et le bio-monitoring sante connectee vous donnent les donnees objectives pour affiner votre diagnostic medical. Guide complet." name="description"/>
-
-
-<link href="https://synchrovie.github.io/Boutique-SynchroVie/blog/bio-monitoring-sante-connectee-erreur-diagnostic.html" rel="canonical"/>
-
-
-<meta content="index, follow" name="robots"/>
-
-
-<meta content="Bio-Monitoring Sante Connectee : Comment Vos Donnees Biometriques Peuvent Corriger une Erreur de Diagnostic" property="og:title"/>
-
-
-<meta content="Erreur de diagnostic pendant des mois ? La VFC continue et le bio-monitoring sante connectee vous donnent les donnees objectives pour affiner votre diagnostic medical." property="og:description"/>
-
-
-<meta content="article" property="og:type"/>
-
-
-<meta content="https://synchrovie.github.io/Boutique-SynchroVie/blog/bio-monitoring-sante-connectee-erreur-diagnostic.html" property="og:url"/>
-
-
-<meta content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/hero/og-image-synchrovie.webp" property="og:image"/>
-
-
-<meta content="Synchrovie" property="og:site_name"/>
-
-
-<meta content="fr_FR" property="og:locale"/>
-
-
-<meta content="summary_large_image" name="twitter:card"/>
-
-
-<meta content="Bio-Monitoring Sante Connectee : Corriger une Erreur de Diagnostic" name="twitter:title"/>
-
-
-<meta content="Erreur de diagnostic pendant des mois ? La VFC continue et le bio-monitoring sante connectee vous donnent les donnees objectives pour affiner votre diagnostic." name="twitter:description"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Bio-Monitoring Sante Connectee : Comment Vos Donnees Biometriques Peuvent Corriger une Erreur de Diagnostic",
-  "description": "Erreur de diagnostic pendant des mois ? La VFC continue et le bio-monitoring sante connectee vous donnent les donnees objectives pour affiner votre diagnostic medical. Guide complet.",
-  "datePublished": "2026-05-25",
-  "dateModified": "2026-05-25",
-  "author": {
-    "@type": "Organization",
-    "name": "Synchrovie"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Synchrovie",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://synchrovie.github.io/Boutique-SynchroVie/logo.png"
-    }
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://synchrovie.github.io/Boutique-SynchroVie/blog/bio-monitoring-sante-connectee-erreur-diagnostic.html"
-  },
-  "url": "https://synchrovie.github.io/Boutique-SynchroVie/blog/bio-monitoring-sante-connectee-erreur-diagnostic.html",
-  "image": "https://synchrovie.github.io/Boutique-SynchroVie/assets/img/hero/og-image-synchrovie.webp",
-  "inLanguage": "fr",
-  "articleSection": "Bio-Monitoring",
-  "wordCount": 3600,
-  "about": [
-    {"@type": "Thing", "name": "Bio-monitoring sante connectee"},
-    {"@type": "Thing", "name": "Erreur de diagnostic"},
-    {"@type": "Thing", "name": "VFC continue"},
-    {"@type": "Thing", "name": "SynchroRing X1"}
-  ]
-}
-</script>
-
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
-
-<style>
-
+# ==============================================================================
+# CLAUDE'S DESIGN CSS
+# ==============================================================================
+CLAUDE_CSS = r"""
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -765,11 +698,160 @@ ul, ol { padding-left: 1.5rem; }
 ::-webkit-scrollbar-track { background: var(--cream); }
 ::-webkit-scrollbar-thumb { background: var(--gold-light); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+"""
 
-</style>
-</head>
 
-<!-- ============ TRUST STRIP ============ -->
+def convert_inline_styles(html):
+    """Convert inline styles from cyan/green to gold/cream design."""
+    # Replace cyan gradient hr styles
+    html = re.sub(
+        r'background:linear-gradient\(90deg,transparent,rgba\(0,224,255,0\.2\),transparent\)',
+        'background:linear-gradient(90deg,transparent,rgba(201,169,110,0.25),transparent)',
+        html
+    )
+    # Replace other common inline cyan references
+    html = html.replace('stroke="#00E0FF"', 'stroke="#C9A96E"')
+    html = html.replace('stroke="#00C9A7"', 'stroke="#C9A96E"')
+    html = html.replace('stroke="#8899B4"', 'stroke="#4a5568"')
+    html = html.replace('stroke="#5a7a9e"', 'stroke="#4a5568"')
+    html = html.replace('stroke="#8fa8c8"', 'stroke="#4a5568"')
+    # Logo gradient stops
+    html = html.replace('stop-color="#00E0FF"', 'stop-color="#C9A96E"')
+    html = html.replace('stop-color="#00C9A7"', 'stop-color="#e8d5b0"')
+    # Fix the <<title>> issue that some pages have
+    html = re.sub(r'<<title>(.*?)</title>>', r'<title>\1</title>', html)
+    # Fix OG title with OG_ prefix
+    html = html.replace('content="OG_<title>', 'content="')
+    html = html.replace('</title>">', '"')
+    # Fix Twitter title with TWITTER_ prefix
+    html = html.replace('content="TWITTER_<title>', 'content="')
+    return html
+
+
+def extract_article_content(soup):
+    """Extract the article body content from the page, regardless of structure."""
+    # Try Structure A: <article class="article-body">
+    article = soup.find('article', class_='article-body')
+    if article:
+        return article.decode_contents(), 'article-body'
+    
+    # Try Structure B: <article class="article-content">
+    article = soup.find('article', class_='article-content')
+    if article:
+        return article.decode_contents(), 'article-content'
+    
+    # Fallback: try any article tag
+    article = soup.find('article')
+    if article:
+        return article.decode_contents(), 'article-body'
+    
+    return None, None
+
+
+def extract_toc_items(soup):
+    """Extract TOC items from the page."""
+    toc_items = []
+    
+    # Try Structure A: <ol class="toc-list">
+    toc_list = soup.find('ol', class_='toc-list')
+    if toc_list:
+        for li in toc_list.find_all('li'):
+            a = li.find('a')
+            if a:
+                toc_items.append({'href': a.get('href', ''), 'text': a.get_text()})
+        return toc_items
+    
+    # Try Structure B: <ul class="toc-list">
+    toc_list = soup.find('ul', class_='toc-list')
+    if toc_list:
+        for li in toc_list.find_all('li'):
+            a = li.find('a')
+            if a:
+                toc_items.append({'href': a.get('href', ''), 'text': a.get_text()})
+        return toc_items
+    
+    return toc_items
+
+
+def extract_breadcrumb_current(soup):
+    """Extract the current breadcrumb item text."""
+    # Structure A
+    current = soup.find('span', class_='current')
+    if current:
+        return current.get_text(strip=True)
+    
+    # Structure B - last span in breadcrumb
+    breadcrumb = soup.find('nav', class_='breadcrumb')
+    if breadcrumb:
+        spans = breadcrumb.find_all('span')
+        for span in spans:
+            if span.get('style') and 'color' in span.get('style', ''):
+                return span.get_text(strip=True)
+    
+    return ''
+
+
+def extract_hero_data(soup):
+    """Extract hero section data."""
+    data = {'category': '', 'title': '', 'date': '', 'read_time': '', 'author': '', 'excerpt': ''}
+    
+    # Try Structure A hero
+    hero = soup.find('header', class_='article-hero')
+    if hero:
+        cat = hero.find('span', class_='hero-category')
+        if not cat:
+            cat = hero.find('span', class_='category-badge')
+        if cat:
+            data['category'] = cat.get_text(strip=True)
+        
+        title = hero.find('h1')
+        if title:
+            data['title'] = str(title.decode_contents())
+        
+        # Extract meta items
+        meta_items = hero.find_all('span', class_='hero-meta-item')
+        if meta_items:
+            texts = [m.get_text(strip=True) for m in meta_items]
+            if len(texts) >= 1:
+                data['date'] = texts[0]
+            if len(texts) >= 2:
+                data['read_time'] = texts[1]
+            if len(texts) >= 3:
+                data['author'] = texts[2]
+        
+        # Structure B excerpt
+        excerpt = hero.find('p', class_='article-hero-excerpt')
+        if excerpt:
+            data['excerpt'] = excerpt.get_text(strip=True)
+    
+    # Try Structure B section hero
+    if not hero:
+        hero = soup.find('section', class_='article-hero')
+        if hero:
+            cat = hero.find('span', class_='category-badge')
+            if not cat:
+                cat = hero.find('span', class_='hero-category')
+            if cat:
+                data['category'] = cat.get_text(strip=True)
+            
+            title = hero.find('h1')
+            if title:
+                data['title'] = str(title.decode_contents())
+            
+            read_time = hero.find('span', class_='read-time')
+            if read_time:
+                data['read_time'] = read_time.get_text(strip=True)
+            
+            excerpt = hero.find('p', class_='article-hero-excerpt')
+            if excerpt:
+                data['excerpt'] = excerpt.get_text(strip=True)
+    
+    return data
+
+
+def build_trust_strip():
+    """Build Claude's design trust strip."""
+    return '''<!-- ============ TRUST STRIP ============ -->
 <div class="trust-strip">
   <div class="trust-strip-inner">
     <div class="trust-strip-item">
@@ -789,10 +871,12 @@ ul, ol { padding-left: 1.5rem; }
       <span>Garantie 2 ans</span>
     </div>
   </div>
-</div>
+</div>'''
 
 
-<!-- ============ HEADER ============ -->
+def build_header():
+    """Build Claude's design header."""
+    return '''<!-- ============ HEADER ============ -->
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
     <a href="https://synchrovie.github.io/Boutique-SynchroVie/" class="logo-link" aria-label="Accueil Synchrovie">
@@ -810,9 +894,12 @@ ul, ol { padding-left: 1.5rem; }
       <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20conseil%20bague%20biom%C3%A9trique" target="_blank" rel="noopener">Contact</a>
     </nav>
   </div>
-</header>
+</header>'''
 
-<nav class="breadcrumb-wrap" aria-label="Fil d'Ariane">
+
+def build_breadcrumb(current_text):
+    """Build Claude's design breadcrumb."""
+    return f'''<nav class="breadcrumb-wrap" aria-label="Fil d'Ariane">
   <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
       <a itemprop="item" href="https://synchrovie.github.io/Boutique-SynchroVie/"><span itemprop="name">Accueil</span></a>
@@ -825,20 +912,51 @@ ul, ol { padding-left: 1.5rem; }
     </li>
     <span class="sep" aria-hidden="true">›</span>
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <span itemprop="name" class="current">Bio-Monitoring Sante Connectee</span>
+      <span itemprop="name" class="current">{current_text}</span>
       <meta itemprop="position" content="3"/>
     </li>
   </ol>
-</nav>
-<header class="article-hero">
-  <span class="hero-category">Bio-Monitoring</span>
-  <h1 class="hero-title">Bio-Monitoring Sante Connectee : Comment Vos Donnees Biometriques Peuvent Corriger une Erreur de Diagnostic</h1>
-  <p class="article-hero-excerpt">Erreur de diagnostic pendant des mois ? La VFC continue et le bio-monitoring sante connectee vous donnent les donnees objectives pour affiner votre diagnostic medical. Guide complet avec le SynchroRing X1 et le Vitals-Scan Pro.</p>
+</nav>'''
+
+
+def build_hero(hero_data):
+    """Build Claude's design hero section."""
+    date_svg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>'
+    time_svg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>'
+    author_svg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4a5568" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>'
+    
+    meta_parts = []
+    if hero_data.get('date'):
+        meta_parts.append(f'<span class="hero-meta-item">{date_svg} {hero_data["date"]}</span>')
+    if hero_data.get('read_time'):
+        meta_parts.append(f'<span class="hero-meta-item">{time_svg} {hero_data["read_time"]}</span>')
+    if hero_data.get('author'):
+        meta_parts.append(f'<span class="hero-meta-item">{author_svg} {hero_data["author"]}</span>')
+    
+    excerpt_html = ''
+    if hero_data.get('excerpt'):
+        excerpt_html = f'<p class="article-hero-excerpt">{hero_data["excerpt"]}</p>'
+    
+    return f'''<header class="article-hero">
+  <span class="hero-category">{hero_data.get("category", "")}</span>
+  <h1 class="hero-title">{hero_data.get("title", "")}</h1>
+  {excerpt_html}
   <div class="hero-meta">
-    <span class="hero-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> 15 min de lecture</span>
+    {''.join(meta_parts)}
   </div>
-</header>
-<div class="hero-divider"><hr></div>
+</header>'''
+
+
+def build_toc(toc_items):
+    """Build Claude's design TOC section."""
+    if not toc_items:
+        return ''
+    
+    toc_links = []
+    for item in toc_items:
+        toc_links.append(f'<li><a href="{item["href"]}">{item["text"]}</a></li>')
+    
+    return f'''<div class="hero-divider"><hr></div>
 <section class="toc-section" aria-label="Sommaire">
   <div class="toc-card">
     <div class="toc-card-title">
@@ -846,110 +964,15 @@ ul, ol { padding-left: 1.5rem; }
       Sommaire
     </div>
     <ol class="toc-list">
-      <li><a href="#corps-dossier">Quand votre corps dit une chose et votre dossier en dit une autre</a></li><li><a href="#deux-ans">Deux ans. C'est le temps qu'a dure l'erreur.</a></li><li><a href="#vfc-marqueur">La VFC : le marqueur biologique que votre psychiatre n'utilise pas</a></li><li><a href="#synchro-ring">Le SynchroRing X1 : votre allie de bio-monitoring</a></li><li><a href="#contre-expertise">Comment construire votre dossier de contre-expertise</a></li><li><a href="#pieges">Les pieges a eviter dans le bio-monitoring</a></li><li><a href="#droit-patient">Le bio-monitoring comme droit du patient</a></li><li><a href="#passer-action">Reprenez le controle de vos donnees. Reprenez le controle de votre sante.</a></li>
+      {''.join(toc_links)}
     </ol>
   </div>
-</section>
-<article class="article-body" itemscope itemtype="https://schema.org/Article">
+</section>'''
 
-<h2 id="corps-dossier">Quand votre corps dit une chose et votre dossier medical en dit une autre</h2>
-<p>Vous savez que quelque chose ne va pas. Votre corps vous l'envoie chaque matin : fatigue persistante, brain fog, palpitations, troubles du sommeil. Mais votre dossier medical dit autre chose. Bilan sanguin normal. ECG normal. Thyroide normale. Conclusion : "pas de pathologie identifiee". Traduction non dite : "c'est dans votre tete".</p>
-<p>Ce scenario est plus courant qu'on ne le pense. <strong>Les examens medicaux standards sont des photographies instantanees</strong>. Un bilan sanguin pris un mardi a 8h du matin ne reflete pas votre etat metabolique du mercredi a 3h du matin, quand votre cortisol explose et que votre systeme nerveux bascule en mode sympathique. Un ECG de 30 secondes au cabinet ne detectera pas l'arythmie paroxystique qui survient uniquement la nuit.</p>
-<p>Le bio-monitoring sante connectee change cette dynamique. Il vous donne <strong>des donnees longitudinales, continues, objectives</strong> — des donnees que votre medecin n'a jamais eues a sa disposition.</p>
-<div class="stat-highlight">
-<span class="stat-number">12%</span>
-<span class="stat-label">des diagnostics en medecine generale sont modifies par les donnees de monitoring continu</span>
-</div>
-<p class="source-ref">Source : Steinhubl, S.R., et al. (2018). "Effect of a home-based wearable continuous ECG monitoring patch on detection of undiagnosed atrial fibrillation." <em>JAMA Cardiology</em>, 3(3), 241-246.</p>
-<h2 id="deux-ans">Deux ans. C'est le temps qu'a dure l'erreur.</h2>
-<p>Marie, 42 ans, consultant en management, est diagnostiquee avec un trouble anxieux generalise. Symptomes : fatigue chronique, insomnie, irritabilite, palpitations. Traitement : sertraline 50 mg (antidepresseur ISRS) + lorazepam au besoin (anxiolytique). Resultat : les symptomes persistent, avec en plus des effets secondaires (prise de poids, baisse de libido, brouillard mental).</p>
-<p>Deux ans plus tard, Marie achete une bague connectee (SynchroRing X1) pour suivre son sommeil. Les donnees revelent quelque chose d'inattendu : sa VFC est anormalement basse la nuit (RMSSD moyen : 12 ms, alors que la normale pour son age est de 30-70 ms). Mais sa VFC diurne est dans les normes. Ce pattern n'est pas compatible avec un trouble anxieux generalise. En revanche, il est <strong>typique d'une hyperactivite sympathique nocturne d'origine physiologique</strong>.</p>
-<p>Marie partage ses donnees avec un cardiologue. Une polysomnographie est prescrite. Diagnostic reel : <strong>apnee du sommeil positionnelle legere</strong>, non detectee par les examens standards. Apres traitement par orthese d'avancee mandibulaire, sa VFC nocturne remonte a 38 ms en 6 semaines. Les symptomes d'anxiete disparaissent.</p>
-<p>Les symptomes anxieux n'etaient pas la cause. Ils etaient la consequence de nuits fragmentees par des apnees que personne n'avait cherche a identifier.</p>
-<h2 id="vfc-marqueur">La VFC : le marqueur biologique que votre psychiatre n'utilise pas (encore)</h2>
-<p>La variabilite de la frequence cardiaque (VFC) est le biomarqueur le plus sensible de l'equilibre du systeme nerveux autonome. Elle mesure la capacite de votre corps a alterner entre activation (sympathique) et recuperation (parasympathique). Une VFC chroniquement basse n'est pas un symptome — c'est un <strong>signal biologique objectif</strong>.</p>
-<h3>Ce que la VFC revele reellement</h3>
-<ul>
-<li><strong>VFC basse permanente</strong> (jour et nuit) : hyperactivite sympathique chronique — stress, surmenage, pathologie sous-jacente</li>
-<li><strong>VFC basse uniquement la nuit</strong> : fragmentation du sommeil, apnee, bruxisme, hyperactivite sympathique nocturne</li>
-<li><strong>VFC qui chute apres les repas</strong> : possible dysregulation metabolique, resistance insulinique</li>
-<li><strong>VFC qui ne remonte pas apres l'effort</strong> : surentrainement, recuperation insuffisante</li>
-</ul>
-<p>Ces patterns sont invisibles avec un examen medical ponctuel. Seul le monitoring continu les revele.</p>
-<h2 id="synchro-ring">Le SynchroRing X1 : votre allie de bio-monitoring sante connectee au quotidien</h2>
-<p>Le SynchroRing X1 est une bague connectee qui mesure en continu votre frequence cardiaque, votre VFC, votre temperature cutanee et votre saturation en oxygene. Elle porteuse jour et nuit, discrete, et fournit des donnees medicalement exploitables.</p>
-<div class="product-card">
-<div class="product-card-header">
-<div>
-<h3 class="product-card-title">SynchroRing X1</h3>
-<p class="product-card-subtitle">Bague connectee de bio-monitoring continu</p>
-</div>
-<span class="product-price">349 €</span>
-</div>
-<ul class="product-features">
-<li>VFC continue 24h/24 (RMSSD, SDNN, LF/HF)</li>
-<li>Frequence cardiaque, SpO2, temperature cutanee</li>
-<li>Detection automatique des anomalies de pattern</li>
-<li>Rapports PDF partageables avec votre medecin</li>
-<li>Autonomie 5 jours, recharge sans fil</li>
-</ul>
-<a class="cta-button pulse-cta" href="https://synchrovie.github.io/Boutique-SynchroVie/">Decouvrir le SynchroRing X1</a>
-</div>
-<h3>Le Vitals-Scan Pro : le bilan complet a la demande</h3>
-<p>Le Vitals-Scan Pro est un analyseur biometrique portable qui complete le SynchroRing X1 avec des mesures ponctuelles de haute precision : ECG 12 derivations, spirometrie, pression arterielle, glycemie non invasive. Il permet de realiser chez vous des bilans que votre medecin ne peut faire qu'au cabinet.</p>
-<div class="product-card">
-<div class="product-card-header">
-<div>
-<h3 class="product-card-title">Vitals-Scan Pro</h3>
-<p class="product-card-subtitle">Analyseur biometrique portable multi-parametres</p>
-</div>
-<span class="product-price">499 €</span>
-</div>
-<ul class="product-features">
-<li>ECG 12 derivations medical a domicile</li>
-<li>Spirometre integre (VEF1, CVF)</li>
-<li>Tensiometre automatique avec memoire</li>
-<li>Glycemie non invasive par spectroscopie</li>
-<li>Synchronisation avec SynchroRing X1</li>
-</ul>
-<a class="cta-button pulse-cta" href="https://synchrovie.github.io/Boutique-SynchroVie/">Decouvrir le Vitals-Scan Pro</a>
-</div>
-<h2 id="contre-expertise">Comment construire votre dossier de contre-expertise (sans confrontation)</h2>
-<p>Le bio-monitoring n'est pas un outil de confrontation avec votre medecin. C'est un outil de collaboration. L'objectif est d'apporter des donnees supplementaires qui aident votre medecin a affiner son diagnostic, pas a le remettre en cause.</p>
-<h3>Etape 1 : Collecter sans modifier</h3>
-<p>Pendant 14 jours, portez le SynchroRing X1 sans changer vos habitudes. L'objectif est d'obtenir un profil de reference objectif. Ne modifiez pas votre traitement, votre alimentation ou votre activite physique pendant cette periode.</p>
-<h3>Etape 2 : Identifier les patterns</h3>
-<p>Apres 14 jours, examinez vos donnees avec l'application SynchroRing. Recherchez : les periodes de VFC anormalement basse, les correlations avec certains moments de la journee, les anomalies nocturnes. Notez les patterns qui ne correspondent pas a votre diagnostic actuel.</p>
-<h3>Etape 3 : Preparer le dialogue</h3>
-<p>Exportez un rapport PDF de vos 14 jours de monitoring. Preparez 3 observations cles, avec les donnees chiffrees. Formulez-les comme des questions, pas comme des affirmations : "J'ai constate que ma VFC nocturne est systematiquement sous 15 ms. Est-ce que ca pourrait indiquer un trouble du sommeil ?"</p>
-<h3>Etape 4 : Le rendez-vous</h3>
-<p>Presentez vos donnees comme une contribution au diagnostic, pas comme une contestation. Votre medecin appreciera les donnees objectives. S'il est reactif, il les integrera. S'il est defensif, demandez simplement : "Est-ce que ces donnees justifieraient un examen complementaire ?"</p>
-<h2 id="pieges">Les pieges a eviter dans le bio-monitoring sante connectee</h2>
-<h3>Piege 1 : L'auto-diagnostic</h3>
-<p>Le bio-monitoring vous donne des donnees, pas un diagnostic. Une VFC basse peut avoir des dizaines de causes. Votre role est de collecter les donnees, pas de les interpreter. Laissez l'interpretation a votre medecin.</p>
-<h3>Piege 2 : L'arret unilateral du traitement</h3>
-<p>Meme si vos donnees suggerent que votre diagnostic est incorrect, n'arretez jamais un traitement sans avis medical. L'arret brutal d'un antidepresseur, par exemple, peut provoquer un syndrome de sevrage severe.</p>
-<h3>Piege 3 : La surinterpretation des variations normales</h3>
-<p>La VFC varie naturellement d'un jour a l'autre. Une baisse ponctuelle n'est pas un signal d'alarme. Seules les tendances persistantes sur plusieurs semaines meritent une attention medicale.</p>
-<div class="warning-box">
-<p><strong>Attention</strong> : le bio-monitoring sante connectee est un outil de surveillance, pas de diagnostic. Il ne remplace jamais l'avis d'un professionnel de sante. Si vos donnees montrent des anomalies significatives et persistantes, consultez votre medecin.</p>
-</div>
-<h2 id="droit-patient">Le bio-monitoring comme droit du patient</h2>
-<p>Dans un systeme de sante ou les consultations sont courtes et les examens ponctuels, le bio-monitoring continu represente un droit : celui de <strong>posseder des donnees objectives sur son propre corps</strong>. Vous avez le droit de savoir ce que votre corps fait la nuit. Vous avez le droit de mesurer l'impact d'un traitement. Vous avez le droit de fournir a votre medecin des donnees qu'il ne peut pas obtenir autrement.</p>
-<p>Le SynchroRing X1 et le Vitals-Scan Pro ne sont pas des gadgets. Ce sont des outils d'emancipation sanitaire. Ils vous donnent les moyens de participer activement a votre propre diagnostic, plutot que de le subir passivement.</p>
-<h2 id="passer-action">Reprenez le controle de vos donnees. Reprenez le controle de votre sante.</h2>
-<p>Si vous sentez que votre diagnostic ne correspond pas a votre realite, ne vous resignez pas. Collectez les donnees. Objectiver ce que votre corps vous dit. Apportez ces donnees a votre medecin comme une contribution, pas comme une contestation.</p>
-<p>Le SynchroRing X1 mesure votre VFC 24h/24. Le Vitals-Scan Pro realise des bilans complets a domicile. Ensemble, ils vous donnent les donnees que votre medecin n'a jamais eues.</p>
-<div class="cta-box">
-<h3>Vos donnees. Votre diagnostic. Votre sante.</h3>
-<p>Decouvrez le SynchroRing X1 et le Vitals-Scan Pro — les outils de bio-monitoring qui vous redonnent le controle de votre parcours de sante.</p>
-<a class="cta-button pulse-cta" href="https://synchrovie.github.io/Boutique-SynchroVie/">Voir les produits Bio-Monitoring</a>
-<a class="cta-button-secondary" href="https://synchrovie.github.io/Boutique-SynchroVie/blog.html">Lire plus d'articles</a>
-</div>
 
-</article>
-
-<!-- ============ FOOTER ============ -->
+def build_footer():
+    """Build Claude's design footer."""
+    return '''<!-- ============ FOOTER ============ -->
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-logo">SYNCHROVIE</div>
@@ -962,16 +985,20 @@ ul, ol { padding-left: 1.5rem; }
     </div>
     <p class="footer-copy">&copy; 2026 Synchrovie. Tous droits reserves.</p>
   </div>
-</footer>
+</footer>'''
 
 
-<!-- ============ WHATSAPP FLOAT ============ -->
+def build_whatsapp():
+    """Build Claude's design WhatsApp float."""
+    return '''<!-- ============ WHATSAPP FLOAT ============ -->
 <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20j%27ai%20une%20question" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contact WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+</a>'''
 
 
-<script>
+def build_scripts():
+    """Build the JavaScript for scroll animations and header effect."""
+    return '''<script>
 // Scroll animations
 document.addEventListener('DOMContentLoaded', function() {
   var fadeEls = document.querySelectorAll('.fade-up, .fade-in-up');
@@ -993,7 +1020,152 @@ window.addEventListener('scroll', function() {
     header.classList.toggle('scrolled', window.scrollY > 40);
   }
 });
-</script>
+</script>'''
 
-</body>
-</html>
+
+def convert_file(filename):
+    """Convert a single blog file from dark cyan to Claude's design."""
+    filepath = os.path.join(BLOG_DIR, filename)
+    
+    with open(filepath, 'r', encoding='utf-8') as f:
+        html = f.read()
+    
+    # Fix known issues with some pages
+    html = convert_inline_styles(html)
+    
+    soup = BeautifulSoup(html, 'html.parser')
+    
+    # ---- Extract data from the page ----
+    
+    # Extract head content (everything before <style>)
+    # We need to preserve: gtag.js, meta tags, OG tags, schema.org, canonical, Twitter
+    
+    # Get the <head> element
+    head = soup.find('head')
+    
+    # Extract all elements from head, excluding <style> and old font links
+    head_elements = []
+    for child in head.children:
+        if child.name == 'style':
+            continue  # Skip old CSS
+        if child.name == 'link' and child.get('href', '').find('fonts.googleapis.com') != -1:
+            continue  # Skip old font link
+        if child.name == 'link' and child.get('rel') == ['preconnect']:
+            continue  # Skip old preconnect
+        head_elements.append(str(child))
+    
+    head_html = '\n'.join(head_elements)
+    
+    # Clean up head HTML
+    head_html = head_html.replace('&lt;', '<').replace('&gt;', '>')
+    
+    # Extract article content
+    article_content, article_class = extract_article_content(soup)
+    if article_content is None:
+        print(f"  WARNING: Could not find article content in {filename}")
+        return False
+    
+    # Convert inline styles in article content
+    article_content = convert_inline_styles(article_content)
+    
+    # Extract other data
+    breadcrumb_current = extract_breadcrumb_current(soup)
+    hero_data = extract_hero_data(soup)
+    toc_items = extract_toc_items(soup)
+    
+    # ---- Build the new page ----
+    
+    # Build new head
+    new_head = f"""<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7FXCZJQVT"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){{dataLayer.push(arguments);}}
+      gtag('js', new Date());
+      gtag('config', 'G-R7FXCZJQVT');
+    </script>
+
+{head_html}
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+
+<style>
+{CLAUDE_CSS}
+</style>
+</head>"""
+    
+    # Build body
+    body_parts = []
+    body_parts.append('')
+    body_parts.append(build_trust_strip())
+    body_parts.append('')
+    body_parts.append('')
+    body_parts.append(build_header())
+    body_parts.append('')
+    body_parts.append(build_breadcrumb(breadcrumb_current))
+    body_parts.append(build_hero(hero_data))
+    body_parts.append(build_toc(toc_items))
+    body_parts.append(f'<article class="article-body" itemscope itemtype="https://schema.org/Article">')
+    body_parts.append(article_content)
+    body_parts.append('</article>')
+    body_parts.append('')
+    body_parts.append(build_footer())
+    body_parts.append('')
+    body_parts.append('')
+    body_parts.append(build_whatsapp())
+    body_parts.append('')
+    body_parts.append('')
+    body_parts.append(build_scripts())
+    body_parts.append('')
+    body_parts.append('</body>')
+    
+    new_body = '\n'.join(body_parts)
+    
+    # Assemble final page
+    new_html = f'<!DOCTYPE html>\n<html lang="fr">\n{new_head}\n{new_body}\n</html>'
+    
+    # Final cleanup - BeautifulSoup may double-encode some entities
+    # Fix &amp; that should just be & in visible text (but keep valid HTML entities)
+    # We need to be careful: &amp; in href attributes is valid, but in text it may be over-encoded
+    # Let's just fix the most common issue: &amp;copy; should be &copy;
+    new_html = new_html.replace('&amp;copy;', '&copy;')
+    new_html = new_html.replace('&amp;euro;', '&euro;')
+    new_html = new_html.replace('&amp;rsquo;', '&rsquo;')
+    
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(new_html)
+    
+    return True
+
+
+def main():
+    print(f"Converting {len(BLOG_FILES)} blog pages to Claude's design...")
+    print("=" * 60)
+    
+    success = 0
+    fail = 0
+    
+    for i, filename in enumerate(BLOG_FILES, 1):
+        print(f"[{i}/{len(BLOG_FILES)}] Converting {filename}...", end=" ")
+        try:
+            result = convert_file(filename)
+            if result:
+                print("OK")
+                success += 1
+            else:
+                print("FAILED")
+                fail += 1
+        except Exception as e:
+            print(f"ERROR: {e}")
+            fail += 1
+    
+    print("=" * 60)
+    print(f"Done! {success} succeeded, {fail} failed out of {len(BLOG_FILES)} files.")
+
+
+if __name__ == '__main__':
+    main()

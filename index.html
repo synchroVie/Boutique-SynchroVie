@@ -50,7 +50,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 
@@ -97,8 +97,8 @@
 
         /* ===== BADGES DE CONFIANCE & RÉASSURANCE — BOOST CONVERSION ===== */
         .trust-strip {
-            background: linear-gradient(135deg, #0d2137 0%, #0B1B3D 100%);
-            border-bottom: 1px solid rgba(0,224,255,0.08);
+            background: linear-gradient(135deg, #1e1b4b 0%, #0B1B3D 100%);
+            border-bottom: 1px solid rgba(201,169,110,0.12);
             padding: 14px 0;
             overflow: hidden;
         }
@@ -117,7 +117,7 @@
             gap: 8px;
             padding: 0 22px;
             white-space: nowrap;
-            color: #b8c9e0;
+            color: #e8d5b0;
             font-size: 0.82rem;
             font-weight: 500;
             letter-spacing: 0.02em;
@@ -128,11 +128,11 @@
         .trust-strip-divider {
             width: 1px;
             height: 22px;
-            background: rgba(0,224,255,0.12);
+            background: rgba(201,169,110,0.2);
             flex-shrink: 0;
         }
         .trust-strip-item strong {
-            color: #00E0FF;
+            color: #C9A96E;
             font-weight: 700;
         }
 
@@ -147,13 +147,13 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: rgba(0,224,255,0.08);
-            border: 1px solid rgba(0,224,255,0.18);
+            background: rgba(201,169,110,0.1);
+            border: 1px solid rgba(201,169,110,0.25);
             border-radius: 8px;
             padding: 8px 14px;
             font-size: 0.78rem;
             font-weight: 600;
-            color: #00E0FF;
+            color: #C9A96E;
             letter-spacing: 0.03em;
             backdrop-filter: blur(4px);
         }
@@ -182,10 +182,10 @@
         }
         .btn-magnet:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,224,255,0.25);
+            box-shadow: 0 8px 25px rgba(201,169,110,0.3);
         }
         .btn-secure-cta {
-            background: linear-gradient(135deg, #00C9A7 0%, #00E0FF 100%);
+            background: linear-gradient(135deg, #C9A96E 0%, #e8d5b0 100%);
             color: #0B1B3D;
             font-weight: 800;
             border: none;
@@ -201,7 +201,7 @@
         }
         .btn-secure-cta:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(0,224,255,0.35);
+            box-shadow: 0 8px 30px rgba(201,169,110,0.4);
         }
 
         /* Card product badge "Top Vente" / "Nouveau" */
@@ -246,7 +246,7 @@
             position: absolute;
             top: 12px;
             left: 12px;
-            background: linear-gradient(135deg, #00C9A7, #00E0FF);
+            background: linear-gradient(135deg, #C9A96E, #e8d5b0);
             color: #0B1B3D;
             font-size: 0.68rem;
             font-weight: 700;
@@ -259,9 +259,9 @@
 
         /* Reassurance section améliorée */
         .reassurance-section {
-            background: linear-gradient(180deg, rgba(11,27,61,0.5) 0%, rgba(11,27,61,0.95) 100%);
-            border-top: 1px solid rgba(0,224,255,0.06);
-            border-bottom: 1px solid rgba(0,224,255,0.06);
+            background: var(--white);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
         }
         .reassurance-card {
             position: relative;
@@ -269,7 +269,7 @@
         }
         .reassurance-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 35px rgba(0,224,255,0.1);
+            box-shadow: 0 12px 35px rgba(201,169,110,0.12);
         }
 
         /* Livraison gratuite badge */
@@ -277,9 +277,9 @@
             display: inline-flex;
             align-items: center;
             gap: 5px;
-            background: rgba(0,201,167,0.1);
-            border: 1px solid rgba(0,201,167,0.25);
-            color: #00C9A7;
+            background: rgba(45,106,79,0.08);
+            border: 1px solid rgba(45,106,79,0.2);
+            color: #2d6a4f;
             font-size: 0.72rem;
             font-weight: 700;
             padding: 3px 10px;
@@ -456,27 +456,27 @@
     <div class="trust-strip">
         <div class="trust-strip-inner">
             <div class="trust-strip-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                 <span><strong>Livraison Express</strong> 3-7j Europe</span>
             </div>
             <div class="trust-strip-divider"></div>
             <div class="trust-strip-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
                 <span><strong>Retours 14j</strong> Remboursement intégral</span>
             </div>
             <div class="trust-strip-divider"></div>
             <div class="trust-strip-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                 <span><strong>Paiement Sécurisé</strong> SSL 256-bit</span>
             </div>
             <div class="trust-strip-divider"></div>
             <div class="trust-strip-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 <span><strong>Garantie 2 Ans</strong> Satisfaction assurée</span>
             </div>
             <div class="trust-strip-divider"></div>
             <div class="trust-strip-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                 <span><strong>Support Expert</strong> WhatsApp 7j/7</span>
             </div>
         </div>
@@ -575,28 +575,28 @@
             <div class="categories-grid">
                 <a href="#cat-bio" class="category-card" data-category="bio">
                     <div class="category-card-img"><img src="assets/img/categories/bio-monitoring.webp" alt="Bio-Monitoring et santé préventive — Technologies de suivi biométrique Synchrovie" loading="lazy" width="864" height="1152"></div>
-                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
                     <h3>Bio-Monitoring & Santé Préventive</h3>
                     <p>Mesurez ce qui compte. 6 instruments de précision pour vos données biologiques.</p>
                     <span class="category-count">6 produits</span>
                 </a>
                 <a href="#cat-sommeil" class="category-card" data-category="sommeil">
                     <div class="category-card-img"><img src="assets/img/categories/neuro-sommeil.webp" alt="Neuro-Sommeil et récupération — Technologies d'optimisation du sommeil Synchrovie" loading="lazy" width="864" height="1152"></div>
-                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
+                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></div>
                     <h3>Neuro-Sommeil & Récupération</h3>
                     <p>Reprogrammez vos nuits. +23% de sommeil profond garanti.</p>
                     <span class="category-count">5 produits</span>
                 </a>
                 <a href="#cat-biofeedback" class="category-card" data-category="biofeedback">
                     <div class="category-card-img"><img src="assets/img/categories/biofeedback.webp" alt="Biofeedback et sérénité mentale — Technologies de gestion du stress Synchrovie" loading="lazy" width="864" height="1152"></div>
-                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
                     <h3>Biofeedback & Sérénité Mentale</h3>
                     <p>Reprenez le contrôle. Biofeedback en temps réel.</p>
                     <span class="category-count">2 produits</span>
                 </a>
                 <a href="#cat-performance" class="category-card" data-category="performance">
                     <div class="category-card-img"><img src="assets/img/categories/performance-physique.webp" alt="Performance et équilibre physique — Technologies de stimulation et récupération Synchrovie" loading="lazy" width="864" height="1152"></div>
-                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+                    <div class="category-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
                     <h3>Performance & Équilibre Physique</h3>
                     <p>Dépassez vos limites. Renforcez, corrigez, récupérez.</p>
                     <span class="category-count">7 produits</span>
@@ -619,7 +619,7 @@
                         <p itemprop="description">Moniteur ECG et oxygène de poche. Précision clinique, format compact.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="238" style="color: var(--cyan); font-weight:700;">238 EUR</span>
+                                <span itemprop="price" content="238" style="color: var(--gold); font-weight:700;">238 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -640,7 +640,7 @@
                         <p itemprop="description">Analyseur métabolique non-invasif. Mesurez votre glycémie sans piqûre.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="298" style="color: var(--cyan); font-weight:700;">298 EUR</span>
+                                <span itemprop="price" content="298" style="color: var(--gold); font-weight:700;">298 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -660,7 +660,7 @@
                         <p itemprop="description">Thermomètre infrarouge médical. Mesure sans contact, résultat en 1 seconde.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="108" style="color: var(--cyan); font-weight:700;">108 EUR</span>
+                                <span itemprop="price" content="108" style="color: var(--gold); font-weight:700;">108 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -681,7 +681,7 @@
                         <p itemprop="description">Bague biométrique VFC et sommeil. Précision médicale 98,7%, autonomie 7 jours.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="358" style="color: var(--cyan); font-weight:700;"><del style="color:rgba(184,201,224,0.4);font-weight:400;font-size:0.85em;">449 EUR</del> 358 EUR</span>
+                                <span itemprop="price" content="358" style="color: var(--gold); font-weight:700;"><del style="color:rgba(184,201,224,0.4);font-weight:400;font-size:0.85em;">449 EUR</del> 358 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -701,7 +701,7 @@
                         <p itemprop="description">Tensiomètre bras connecté. Double mesure, détection arythmie, Bluetooth.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="158" style="color: var(--cyan); font-weight:700;">158 EUR</span>
+                                <span itemprop="price" content="158" style="color: var(--gold); font-weight:700;">158 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -721,7 +721,7 @@
                         <p itemprop="description">Balance impédancemètre 13 indicateurs. Masse grasse, viscérale, musculaire, eau.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="168" style="color: var(--cyan); font-weight:700;">168 EUR</span>
+                                <span itemprop="price" content="168" style="color: var(--gold); font-weight:700;">168 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -751,7 +751,7 @@
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
                                 <del style="color:rgba(184,201,224,0.45);font-size:0.8rem;font-weight:400;display:block;line-height:1.2;">459 EUR</del>
-                                <span itemprop="price" content="369" style="color: var(--cyan); font-weight:700;">369 EUR</span>
+                                <span itemprop="price" content="369" style="color: var(--gold); font-weight:700;">369 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -771,7 +771,7 @@
                         <p itemprop="description">Capteur de sommeil sous matelas. Zéro contact, données complètes.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="168" style="color: var(--cyan); font-weight:700;">168 EUR</span>
+                                <span itemprop="price" content="168" style="color: var(--gold); font-weight:700;">168 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -792,7 +792,7 @@
                         <p itemprop="description">Simulateur d'aube et crépuscule. Régulation circadienne 24h/24.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="148" style="color: var(--cyan); font-weight:700;">148 EUR</span>
+                                <span itemprop="price" content="148" style="color: var(--gold); font-weight:700;">148 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -812,7 +812,7 @@
                         <p itemprop="description">Patch de nuque auto-chauffant 4 modes de massage. Chaleur cervicale programmable.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="210" style="color: var(--cyan); font-weight:700;">210 EUR</span>
+                                <span itemprop="price" content="210" style="color: var(--gold); font-weight:700;">210 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -834,7 +834,7 @@
                         <p itemprop="description">Couverture sauna infrarouge lointain 3 zones. 600W, 36 000 fibres de carbone, détox profonde.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="169" style="color: var(--cyan); font-weight:700;">169 EUR</span>
+                                <span itemprop="price" content="169" style="color: var(--gold); font-weight:700;">169 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -868,7 +868,7 @@
                         <p itemprop="description">Bague de contrôle du cortisol. Suivi du stress en continu.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="268" style="color: var(--cyan); font-weight:700;">268 EUR</span>
+                                <span itemprop="price" content="268" style="color: var(--gold); font-weight:700;">268 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -889,7 +889,7 @@
                         <p itemprop="description">Stimulateur transcutané du nerf vague. 4 modes, fréquence 1-1000Hz, électrodes oreille et cou.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="268" style="color: var(--cyan); font-weight:700;">268 EUR</span>
+                                <span itemprop="price" content="268" style="color: var(--gold); font-weight:700;">268 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -917,7 +917,7 @@
                         <p itemprop="description">Stimulateur musculaire EMS. 4 programmes professionnels.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="248" style="color: var(--cyan); font-weight:700;">248 EUR</span>
+                                <span itemprop="price" content="248" style="color: var(--gold); font-weight:700;">248 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -937,7 +937,7 @@
                         <p itemprop="description">Correcteur de posture intelligent. Rééducation par vibration.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="108" style="color: var(--cyan); font-weight:700;">108 EUR</span>
+                                <span itemprop="price" content="108" style="color: var(--gold); font-weight:700;">108 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -957,7 +957,7 @@
                         <p itemprop="description">Pistolet de massage compact. 450g, 4 embouts, 6h d'autonomie.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="158" style="color: var(--cyan); font-weight:700;">158 EUR</span>
+                                <span itemprop="price" content="158" style="color: var(--gold); font-weight:700;">158 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -977,7 +977,7 @@
                         <p itemprop="description">Genouillère thermique compressive. Soutien et chaleur ciblée.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="98" style="color: var(--cyan); font-weight:700;">98 EUR</span>
+                                <span itemprop="price" content="98" style="color: var(--gold); font-weight:700;">98 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -998,7 +998,7 @@
                         <p itemprop="description">Dynamomètre force digital 180 kg. Mesure précise, mémoire intégrée, écran LED.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="88" style="color: var(--cyan); font-weight:700;">88 EUR</span>
+                                <span itemprop="price" content="88" style="color: var(--gold); font-weight:700;">88 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -1019,7 +1019,7 @@
                         <p itemprop="description">Panneau thérapie lumière rouge full body. 2400W, 480 LEDs, 5 longueurs d'onde, CE/FCC.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="849" style="color: var(--cyan); font-weight:700;">849 EUR</span>
+                                <span itemprop="price" content="849" style="color: var(--gold); font-weight:700;">849 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -1040,7 +1040,7 @@
                         <p itemprop="description">Bain glacé récupération connecté. 1 HP, Inox 304, WiFi App, stérilisation ozone.</p>
                         <div class="card-footer">
                             <span class="price" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                                <span itemprop="price" content="1285" style="color: var(--cyan); font-weight:700;">1 285 EUR</span>
+                                <span itemprop="price" content="1285" style="color: var(--gold); font-weight:700;">1 285 EUR</span>
                                 <meta itemprop="priceCurrency" content="EUR">
                                 <link itemprop="availability" href="https://schema.org/InStock">
                             </span>
@@ -1060,35 +1060,35 @@
             <div class="reassurance-grid">
                 <div class="reassurance-card">
                     <div class="reassurance-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                     </div>
                     <h3>Livraison Express Europe</h3>
                     <p>Votre technologie arrive en 3 à 7 jours ouvrés, emballée avec soin, suivie en temps réel depuis notre entrepôt jusqu'à votre porte. En Europe, sans surprise.</p>
                 </div>
                 <div class="reassurance-card">
                     <div class="reassurance-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                     </div>
                     <h3>Paiement 100% Sécurisé</h3>
                     <p>Paiement par carte bancaire (Visa, MasterCard) ou via WhatsApp Pay. Chiffrement SSL 256-bit. Vos données ne transitent jamais en clair.</p>
                 </div>
                 <div class="reassurance-card">
                     <div class="reassurance-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
                     </div>
                     <h3>Satisfait ou Remboursé</h3>
                     <p>14 jours pour tester en conditions réelles. Si ce n'est pas ce que vous attendiez, nous le reprenons — remboursement intégral sous 48h. Sans négociation, sans frais cachés.</p>
                 </div>
                 <div class="reassurance-card">
                     <div class="reassurance-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
                     </div>
                     <h3>Garantie Technique 2 Ans</h3>
                     <p>2 ans de couverture technique complète. Défaut de fabrication, panne, dysfonctionnement — remplacement à nos frais. Parce que sur ce type de technologie, la garantie n'est pas une faveur, c'est le minimum.</p>
                 </div>
                 <div class="reassurance-card">
                     <div class="reassurance-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                     </div>
                     <h3>Support Expert 7j/7</h3>
                     <p>Une équipe d'experts disponibles par WhatsApp et email. Réponse sous 2h en moyenne. Pas un chatbot — des humains qui connaissent chaque produit du catalogue dans le détail.</p>
@@ -1137,7 +1137,7 @@
         <section class="newsletter-section">
             <div class="newsletter-inner">
                 <div class="newsletter-icon">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
                 </div>
                 <h2>Vos prochains 30 jours, optimisés.</h2>
                 <p>Chaque semaine, un protocole concret. Pas du contenu générique sur le "bien-être" — des données, des résultats, des stratégies testées par des biohackers actifs. Réservé aux membres Synchrovie.</p>
