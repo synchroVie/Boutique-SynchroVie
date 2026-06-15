@@ -51,6 +51,7 @@
     @keyframes lbFadeIn{from{opacity:0}to{opacity:1}}@keyframes lbZoomIn{from{transform:scale(0.85);opacity:0}to{transform:scale(1);opacity:1}}
     @media(max-width:900px){.product-wrapper{grid-template-columns:1fr;gap:32px;padding:24px 20px}.gallery{position:static}.content-section,.faq-section,.reviews-section,.upsell-section,.europe-trust{padding:0 20px 40px}nav.main-nav{padding:14px 20px}.nav-links{display:none}.europe-points{grid-template-columns:1fr}.features{grid-template-columns:1fr}.specs-grid{grid-template-columns:repeat(2,1fr)}.result-banner{flex-direction:column;text-align:center;gap:10px}.breadcrumb{padding:12px 20px}.reviews-grid{grid-template-columns:1fr}.upsell-grid{grid-template-columns:repeat(2,1fr)}}
     @media(max-width:480px){.product-h1{font-size:1.6rem}.upsell-grid{grid-template-columns:1fr}}
+    @keyframes pulse-stock { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
   </style>
 </head>
 <body>
@@ -73,6 +74,7 @@
     <div class="product-info">
       <div class="badge-row"><span class="badge badge-cat">Performance</span><span class="badge badge-result">450g ultra-léger</span></div>
       <h1 class="product-h1" itemprop="name">Flex-Gun Mini / Les noeuds dans les épaules, les mollets durs. Défaits en quelques minutes.</h1>
+      <span class="badge-stock" style="display:inline-block;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.4);color:#f87171;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:4px;animation:pulse-stock 2s ease-in-out infinite;">Il ne reste que 4 en stock</span>
       <p class="h1-sub">Pistolet massage compact : 450g, 4 embouts, 6h autonomie, 3 vitesses, ultra-silencieux</p>
       <div class="rating-row" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="rating-text"><strong itemprop="ratingValue">4.7</strong>/5 moyenne générale — <span itemprop="reviewCount">47</span> avis vérifiés</span><meta itemprop="bestRating" content="5"></div>
       <div class="result-banner"><span class="result-number">450g</span><div class="result-text"><p>seulement</p><p><strong>L'un des plus légers du marché.</strong> Tient dans un sac de sport, se glisse dans un bagage cabine.</p></div></div>

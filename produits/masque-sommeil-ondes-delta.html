@@ -323,6 +323,7 @@
       .result-number{font-size:2.4rem}
       .upsell-grid{grid-template-columns:1fr}
     }
+    @keyframes pulse-stock { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
   </style>
 </head>
 <body>
@@ -404,6 +405,7 @@
       </div>
 
       <h1 itemprop="name">NeuroRest G2 <span style="color:var(--text-soft);font-weight:400">/</span> Le sommeil qui ne réparait plus. Maintenant, oui.</h1>
+      <span class="badge-stock" style="display:inline-block;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.4);color:#f87171;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:4px;animation:pulse-stock 2s ease-in-out infinite;">Il ne reste que 4 en stock</span>
       <p class="h1-sub">Masque sommeil ondes Delta — Isolation 32 dB + ANC — Résultat en 14 nuits</p>
 
       <div class="rating-row" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">

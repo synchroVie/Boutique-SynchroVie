@@ -414,6 +414,24 @@ nav.main-nav {
   text-transform: uppercase;
   z-index: 2;
 }
+.card .badge-stock {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  color: #f87171;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 4px;
+  z-index: 2;
+  animation: pulse-stock 2s ease-in-out infinite;
+}
+@keyframes pulse-stock {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
 .card h3 {
   font-family: var(--font-display);
   font-size: 1.1rem;

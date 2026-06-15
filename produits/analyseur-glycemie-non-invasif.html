@@ -275,6 +275,7 @@
     .lightbox-counter { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); color: #8899b0; font-size: 0.9rem; font-weight: 600; }
     @keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes lbZoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @keyframes pulse-stock { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
     @media (max-width: 900px) { .product-wrapper { grid-template-columns: 1fr; gap: 32px; padding: 24px 20px; } .gallery { position: static; } .content-section, .faq-section, .upsell-section, .product-reviews { padding: 0 20px 40px; } .features { grid-template-columns: 1fr; } .specs-grid { grid-template-columns: repeat(2, 1fr); padding: 0 20px 32px; } .result-banner { flex-direction: column; text-align: center; gap: 10px; } .upsell-grid { grid-template-columns: repeat(2, 1fr); } .breadcrumb { padding: 14px 20px; } }
   </style>
 </head>
@@ -346,6 +347,7 @@
     </div>
 
     <h1>Glucose-Check Air <span style="color:var(--blue)">/</span> Les coups de fatigue de 16h, enfin visibles.</h1>
+    <span class="badge-stock" style="display:inline-block;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.4);color:#f87171;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:4px;animation:pulse-stock 2s ease-in-out infinite;">Il ne reste que 4 en stock</span>
     <p class="h1-sub">Bracelet bioimpédance : suivi des tendances métaboliques après les repas — ne remplace pas un glucomètre</p>
 
     <div class="disclaimer-banner">
