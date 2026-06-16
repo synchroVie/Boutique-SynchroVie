@@ -201,11 +201,11 @@
     .disclaimer-banner { background: rgba(255,107,53,0.08); border: 1px solid rgba(255,107,53,0.2); border-radius: var(--radius); padding: 16px 20px; margin-bottom: 16px; }
     .disclaimer-banner p { font-size: 0.85rem; color: var(--orange); margin: 0; line-height: 1.6; font-weight: 500; }
     .disclaimer-banner p strong { color: var(--orange); }
-    .result-banner { background: linear-gradient(135deg, rgba(0,224,255,0.08), rgba(167,139,250,0.08)); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 20px; }
+    .result-banner { background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(167,139,250,0.08)); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 20px; display: flex; align-items: center; gap: 20px; }
     .result-number { font-family: var(--font-display); font-size: 3rem; font-weight: 700; color: var(--blue); line-height: 1; white-space: nowrap; }
     .result-text p { color: var(--text-soft); font-size: 0.9rem; line-height: 1.5; margin: 0; }
     .result-text strong { color: var(--white); }
-    .price-block { background: linear-gradient(135deg, rgba(0,224,255,0.08), rgba(167,139,250,0.05)); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; }
+    .price-block { background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(167,139,250,0.05)); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 20px; display: flex; align-items: center; justify-content: space-between; }
     .price-main { font-family: var(--font-display); font-size: 2.6rem; font-weight: 700; color: var(--blue); }
     .price-detail { text-align: right; }
     .price-detail span { display: block; font-size: 0.78rem; color: var(--text-soft); }
@@ -223,8 +223,8 @@
     .qty-value { width: 50px; height: 40px; text-align: center; border: none; background: transparent; color: var(--white); font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
     .qty-total { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--blue); }
     .cta-group { display: flex; flex-direction: column; gap: 10px; margin-bottom: 24px; }
-    .btn-primary-full { display: block; width: 100%; padding: 17px 24px; background: var(--blue); color: var(--navy); text-decoration: none; border-radius: var(--radius); font-size: 1rem; font-weight: 700; text-align: center; box-shadow: 0 0 20px rgba(0,224,255,0.25); transition: transform 0.15s, box-shadow 0.15s; border: none; cursor: pointer; }
-    .btn-primary-full:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(0,224,255,0.35); background: var(--blue-hover); }
+    .btn-primary-full { display: block; width: 100%; padding: 17px 24px; background: var(--blue); color: var(--navy); text-decoration: none; border-radius: var(--radius); font-size: 1rem; font-weight: 700; text-align: center; box-shadow: 0 0 20px rgba(59,130,246,0.25); transition: transform 0.15s, box-shadow 0.15s; border: none; cursor: pointer; }
+    .btn-primary-full:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59,130,246,0.35); background: var(--blue-hover); }
     .btn-secondary-full { display: block; width: 100%; padding: 14px 24px; background: transparent; color: var(--blue); text-decoration: none; border-radius: var(--radius); font-size: 0.9rem; font-weight: 600; text-align: center; border: 1.5px solid var(--blue); transition: background 0.15s; }
     .btn-secondary-full:hover { background: var(--blue-soft); }
     .trust-product { background: var(--green-bg); border: 1px solid rgba(0,201,167,0.2); border-radius: var(--radius); padding: 14px 16px; margin-bottom: 20px; }
@@ -244,7 +244,7 @@
     .faq-section { max-width: 1140px; margin: 0 auto; padding: 0 40px 60px; }
     .faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 10px; overflow: hidden; background: var(--indigo); }
     .faq-q { width: 100%; background: none; border: none; padding: 18px 20px; text-align: left; font-family: var(--font-body); font-size: 0.95rem; font-weight: 500; color: var(--white); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; transition: background 0.15s; }
-    .faq-q:hover { background: rgba(0,224,255,0.05); }
+    .faq-q:hover { background: rgba(59,130,246,0.05); }
     .faq-q .arrow { color: var(--blue); font-size: 1.2rem; transition: transform 0.25s; flex-shrink: 0; }
     .faq-q.open .arrow { transform: rotate(45deg); }
     .faq-a { display: none; padding: 14px 20px 18px; font-size: 0.92rem; line-height: 1.75; color: var(--gray-light); border-top: 1px solid var(--border); }
@@ -265,20 +265,17 @@
     .upsell-price { font-family: var(--font-display); font-size: 1.1rem; color: var(--blue); font-weight: 600; }
     .lightbox-overlay { display: none; position: fixed; inset: 0; z-index: 9999; background: rgba(0,0,0,0.92); backdrop-filter: blur(8px); justify-content: center; align-items: center; cursor: zoom-out; animation: lbFadeIn 0.25s ease; }
     .lightbox-overlay.active { display: flex; }
-    .lightbox-overlay img { max-width: 90vw; max-height: 90vh; border-radius: 12px; box-shadow: 0 20px 60px rgba(0,224,255,0.15); animation: lbZoomIn 0.3s cubic-bezier(0.34,1.56,0.64,1); }
+    .lightbox-overlay img { max-width: 90vw; max-height: 90vh; border-radius: 12px; box-shadow: 0 20px 60px rgba(59,130,246,0.15); animation: lbZoomIn 0.3s cubic-bezier(0.34,1.56,0.64,1); }
     .lightbox-close { position: absolute; top: 24px; right: 32px; color: #fff; font-size: 2rem; cursor: pointer; z-index: 10000; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,0.1); transition: background 0.2s; }
     .lightbox-close:hover { background: rgba(255,255,255,0.2); }
     .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); color: #fff; font-size: 2.5rem; cursor: pointer; z-index: 10000; width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255,255,255,0.08); transition: background 0.2s; }
-    .lightbox-nav:hover { background: rgba(0,224,255,0.3); }
+    .lightbox-nav:hover { background: rgba(59,130,246,0.3); }
     .lightbox-prev { left: 24px; }
     .lightbox-next { right: 24px; }
     .lightbox-counter { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); color: #8899b0; font-size: 0.9rem; font-weight: 600; }
     @keyframes lbFadeIn { from { opacity: 0; } to { opacity: 1; } }
     @keyframes lbZoomIn { from { transform: scale(0.85); opacity: 0; } to { transform: scale(1); opacity: 1; } }
     @keyframes pulse-stock { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
-    .stock-alert { display: flex; align-items: center; gap: 5px; font-size: 0.75rem; font-weight: 600; color: #FF6B35; margin-bottom: 8px; animation: stock-pulse 2.4s ease-in-out infinite; }
-    .stock-alert::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: #FF6B35; flex-shrink: 0; }
-    @keyframes stock-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.6; } }
     @media (max-width: 900px) { .product-wrapper { grid-template-columns: 1fr; gap: 32px; padding: 24px 20px; } .gallery { position: static; } .content-section, .faq-section, .upsell-section, .product-reviews { padding: 0 20px 40px; } .features { grid-template-columns: 1fr; } .specs-grid { grid-template-columns: repeat(2, 1fr); padding: 0 20px 32px; } .result-banner { flex-direction: column; text-align: center; gap: 10px; } .upsell-grid { grid-template-columns: repeat(2, 1fr); } .breadcrumb { padding: 14px 20px; } }
   </style>
 </head>
@@ -350,7 +347,7 @@
     </div>
 
     <h1>Glucose-Check Air <span style="color:var(--blue)">/</span> Les coups de fatigue de 16h, enfin visibles.</h1>
-
+    <span class="badge-stock" style="display:inline-block;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.4);color:#f87171;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:4px;animation:pulse-stock 2s ease-in-out infinite;">Il ne reste que 4 en stock</span>
     <p class="h1-sub">Bracelet bioimpédance : suivi des tendances métaboliques après les repas — ne remplace pas un glucomètre</p>
 
     <div class="disclaimer-banner">
@@ -369,7 +366,6 @@
       </div>
     </div>
 
-    <div class="stock-alert">Il ne reste que 4 en stock</div>
     <div class="price-block">
       <span class="price-main">248 EUR</span>
       <div class="price-detail">
@@ -399,7 +395,7 @@
     </div>
 
     <div class="cta-group">
-      <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20je%20souhaite%20commander%20Glucose-Check%20Air%20%C3%A0%20248%20EUR" class="btn-primary-full" id="ctaCommander" data-product="Glucose-Check Air" data-price="248 EUR" target="_blank" rel="noopener">Commander via WhatsApp</a>
+      <a href="#" class="btn-primary-full" id="ctaCommander" data-product="Glucose-Check Air" data-price="248 EUR">Commander via WhatsApp</a>
       <a href="https://wa.me/22360625155?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20le%20Glucose-Check%20Air" class="btn-secondary-full" target="_blank" rel="noopener">Poser une question — Expert WhatsApp</a>
     </div>
 
