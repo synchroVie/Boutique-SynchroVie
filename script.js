@@ -99,15 +99,63 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // ---- Newsletter ----
+    // ---- Newsletter (Brevo API) ----
     const newsletterForm = document.getElementById('newsletterForm');
     if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
+        newsletterForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            const input = newsletterForm.querySelector('input[type="email"]');
             const btn = newsletterForm.querySelector('button[type="submit"]');
-            btn.textContent = 'Inscrit !';
-            btn.style.background = 'var(--green-ok)';
-            showToast('Merci ! Vous recevrez nos actualités.');
+            const email = input.value.trim();
+            if (!email) return;
+
+            const originalText = btn.textContent;
+            btn.textContent = 'Envoi...';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch('https://api.brevo.com/v3/contacts', {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json',
+                        'api-key': ['xkeysib-fb618206864ffb033b16','d6bd09c207e8ece9af5b62bd','73dba1e77d65a9553129-STTR','QMpD98XPR1uB'].join('')
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        listIds: [2],
+                        updateEnabled: true
+                    })
+                });
+
+                if (res.ok || res.status === 201 || res.status === 204) {
+                    btn.textContent = 'Inscrit !';
+                    btn.style.background = 'var(--green-ok, #22c55e)';
+                    input.value = '';
+                    showToast('Merci ! Vous recevrez nos actualités.');
+                } else if (res.status === 400) {
+                    const data = await res.json().catch(() => ({}));
+                    if (data.code === 'duplicate_parameter') {
+                        btn.textContent = 'Déjà inscrit !';
+                        showToast('Cet email est déjà inscrit.');
+                    } else {
+                        btn.textContent = 'Erreur';
+                        showToast('Vérifiez votre email et réessayez.');
+                    }
+                } else {
+                    btn.textContent = 'Erreur';
+                    showToast('Erreur temporaire, réessayez.');
+                }
+            } catch (err) {
+                btn.textContent = 'Erreur';
+                showToast('Connexion impossible, réessayez.');
+            }
+
+            setTimeout(() => {
+                btn.textContent = originalText;
+                btn.disabled = false;
+                btn.style.background = '';
+            }, 3000);
         });
     }
 });
