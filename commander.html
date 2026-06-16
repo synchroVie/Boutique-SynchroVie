@@ -22,16 +22,16 @@
   --bg: #050a14;
   --surface: #0a1628;
   --card: #0f1f38;
-  --border: rgba(59,130,246,0.15);
-  --border-hover: rgba(59,130,246,0.4);
-  --blue: #3B82F6;
-  --blue-hover: #60A5FA;
+  --border: rgba(0,224,255,0.15);
+  --border-hover: rgba(0,224,255,0.4);
+  --blue: #00E0FF;
+  --blue-hover: #33E5FF;
   --green: #00C9A7;
   --text: #b8c9e0;
   --white: #e8f4ff;
   --orange: #FF6B35;
   --gold: #FFB800;
-  --gradient: linear-gradient(135deg, #3B82F6, #60A5FA);
+  --gradient: linear-gradient(135deg, #00E0FF, #33E5FF);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
@@ -100,7 +100,7 @@ body {
   position: relative; background: var(--card); border: 2px solid var(--border); border-radius: 10px; padding: 14px; cursor: pointer; transition: all .2s;
 }
 .product-option:hover { border-color: var(--border-hover); }
-.product-option.selected { border-color: var(--blue); background: rgba(59,130,246,0.06); }
+.product-option.selected { border-color: var(--blue); background: rgba(0,224,255,0.06); }
 .product-option input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
 .product-check {
   position: absolute; top: 10px; right: 10px; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--border); background: var(--card);
@@ -122,7 +122,7 @@ body {
   background: rgba(255,255,255,0.04); border: 1.5px solid var(--border); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--white);
   font-family: 'Inter', system-ui, sans-serif; transition: border-color .2s; outline: none; width: 100%;
 }
-.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue); background: rgba(59,130,246,0.04); }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue); background: rgba(0,224,255,0.04); }
 .field select { cursor: pointer; }
 .field select option { background: #0f1f38; color: var(--white); }
 .field textarea { resize: vertical; min-height: 80px; }
@@ -134,7 +134,7 @@ body {
 }
 .qty-btn:first-child { border-radius: 8px 0 0 8px; }
 .qty-btn:last-child { border-radius: 0 8px 8px 0; }
-.qty-btn:hover { background: rgba(59,130,246,0.1); }
+.qty-btn:hover { background: rgba(0,224,255,0.1); }
 .qty-val {
   width: 56px; height: 44px; background: rgba(255,255,255,0.04); border: 1.5px solid var(--border); border-left: none; border-right: none;
   text-align: center; font-size: 15px; font-weight: 700; color: var(--white); display: flex; align-items: center; justify-content: center;
@@ -157,7 +157,7 @@ body {
 .summary-body { padding: 20px; }
 .summary-product-name { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
 .summary-product-cat { font-size: 11px; color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
-.summary-line { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(59,130,246,0.06); font-size: 13px; }
+.summary-line { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(0,224,255,0.06); font-size: 13px; }
 .summary-line:last-of-type { border-bottom: none; }
 .summary-line .label { color: var(--text); }
 .summary-line .value { color: var(--white); font-weight: 600; }
@@ -185,7 +185,7 @@ body {
 }
 .summary-wa-btn:hover { background: #1fb855; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,211,102,0.4); }
 .guarantee-list { margin-top: 20px; }
-.guarantee-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; font-size: 12px; color: var(--text); border-bottom: 1px solid rgba(59,130,246,0.06); }
+.guarantee-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; font-size: 12px; color: var(--text); border-bottom: 1px solid rgba(0,224,255,0.06); }
 .guarantee-item:last-child { border-bottom: none; }
 .guarantee-item svg { flex-shrink: 0; margin-top: 1px; }
 .success-overlay {
@@ -428,7 +428,7 @@ body {
   <div class="order-summary">
     <div class="summary-card">
       <div class="summary-header">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
         Récapitulatif
       </div>
       <div class="summary-body">

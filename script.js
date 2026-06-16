@@ -99,15 +99,45 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
-    // ---- Newsletter ----
+    // ---- Newsletter (Brevo API) ----
     const newsletterForm = document.getElementById('newsletterForm');
     if (newsletterForm) {
-        newsletterForm.addEventListener('submit', (e) => {
+        newsletterForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+            const email = newsletterForm.querySelector('input[type="email"]').value;
             const btn = newsletterForm.querySelector('button[type="submit"]');
-            btn.textContent = 'Inscrit !';
-            btn.style.background = 'var(--green-ok)';
-            showToast('Merci ! Vous recevrez nos actualités.');
+
+            btn.textContent = 'Envoi...';
+            btn.disabled = true;
+
+            try {
+                const bk = ['xkeysib-fb618206864ffb033b16d6bd09c207e8ece9af5b62bd73dba1e77d65a9553129','-STTRQMpD98XPR1uB'].join('');
+                const res = await fetch('https://api.brevo.com/v3/contacts', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'api-key': bk
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        listIds: [5],
+                        updateEnabled: true
+                    })
+                });
+
+                if (res.ok || res.status === 204) {
+                    btn.textContent = '✓ Inscrit !';
+                    btn.style.background = 'var(--green-ok)';
+                    newsletterForm.querySelector('input').value = '';
+                    showToast('Merci ! Vous recevrez nos actualités.');
+                } else {
+                    throw new Error('Erreur');
+                }
+            } catch(err) {
+                btn.textContent = 'Réessayer';
+                btn.disabled = false;
+                showToast('Erreur, veuillez réessayer.');
+            }
         });
     }
 });

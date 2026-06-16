@@ -82,7 +82,7 @@ body {
   overflow-x: hidden;
 }
 img { max-width: 100%; height: auto; display: block; }
-a { color: #3B82F6; text-decoration: none; transition: color 0.25s, opacity 0.25s; }
+a { color: #00E0FF; text-decoration: none; transition: color 0.25s, opacity 0.25s; }
 a:hover { color: #00C9A7; }
 ul, ol { padding-left: 1.5rem; }
 
@@ -91,7 +91,7 @@ ul, ol { padding-left: 1.5rem; }
   --navy: #0B1B3D;
   --navy-light: #0F2449;
   --navy-mid: #132D5E;
-  --cyan: #3B82F6;
+  --cyan: #00E0FF;
   --green: #00C9A7;
   --white: #FFFFFF;
   --gray-100: #F1F5F9;
@@ -167,7 +167,7 @@ ul, ol { padding-left: 1.5rem; }
   font-size: 1.4rem;
   font-weight: 700;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #3B82F6 0%, #00C9A7 100%);
+  background: linear-gradient(135deg, #00E0FF 0%, #00C9A7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -209,8 +209,8 @@ ul, ol { padding-left: 1.5rem; }
 }
 .hero-category {
   display: inline-block;
-  background: linear-gradient(135deg, rgba(59,130,246,0.15), rgba(0,201,167,0.15));
-  border: 1px solid rgba(59,130,246,0.25);
+  background: linear-gradient(135deg, rgba(0,224,255,0.15), rgba(0,201,167,0.15));
+  border: 1px solid rgba(0,224,255,0.25);
   color: var(--blue);
   font-size: 0.75rem;
   font-weight: 600;
@@ -245,7 +245,7 @@ ul, ol { padding-left: 1.5rem; }
 .hero-divider hr {
   border: none;
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(59,130,246,0.2), transparent);
+  background: linear-gradient(90deg, transparent, rgba(0,224,255,0.2), transparent);
 }
 
 /* ===== TABLE OF CONTENTS ===== */
@@ -256,7 +256,7 @@ ul, ol { padding-left: 1.5rem; }
 }
 .toc-card {
   background: var(--navy-light);
-  border: 1px solid rgba(59,130,246,0.12);
+  border: 1px solid rgba(0,224,255,0.12);
   border-radius: var(--radius);
   padding: 24px 28px;
 }
@@ -331,7 +331,7 @@ ul, ol { padding-left: 1.5rem; }
 .article-body li { margin-bottom: 8px; line-height: 1.7; }
 .article-body blockquote {
   border-left: 3px solid var(--blue);
-  background: linear-gradient(135deg, rgba(59,130,246,0.06), rgba(0,201,167,0.06));
+  background: linear-gradient(135deg, rgba(0,224,255,0.06), rgba(0,201,167,0.06));
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   padding: 20px 24px;
   margin: 28px 0;
@@ -342,7 +342,7 @@ ul, ol { padding-left: 1.5rem; }
 
 /* Highlight box */
 .highlight-box {
-  background: linear-gradient(135deg, rgba(59,130,246,0.06), rgba(0,201,167,0.06));
+  background: linear-gradient(135deg, rgba(0,224,255,0.06), rgba(0,201,167,0.06));
   border-left: 3px solid var(--blue);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
   padding: 20px 24px;
@@ -356,7 +356,7 @@ ul, ol { padding-left: 1.5rem; }
   align-items: center;
   gap: 20px;
   background: var(--navy-mid);
-  border: 1px solid rgba(59,130,246,0.12);
+  border: 1px solid rgba(0,224,255,0.12);
   border-radius: var(--radius);
   padding: 22px 24px;
   margin: 28px 0;
@@ -380,7 +380,7 @@ ul, ol { padding-left: 1.5rem; }
   overflow-x: auto;
   margin: 28px 0;
   border-radius: var(--radius);
-  border: 1px solid rgba(59,130,246,0.12);
+  border: 1px solid rgba(0,224,255,0.12);
 }
 .comparison-table {
   width: 100%;
@@ -402,7 +402,7 @@ ul, ol { padding-left: 1.5rem; }
   border-top: 1px solid rgba(255,255,255,0.05);
   color: var(--text-light);
 }
-.comparison-table tr:hover td { background: rgba(59,130,246,0.03); }
+.comparison-table tr:hover td { background: rgba(0,224,255,0.03); }
 .comparison-table .best { color: var(--green); font-weight: 600; }
 
 /* Source reference */
@@ -417,7 +417,7 @@ ul, ol { padding-left: 1.5rem; }
 /* ===== CTA BOXES ===== */
 .cta-box {
   background: linear-gradient(135deg, #0F2449 0%, #132D5E 100%);
-  border: 1px solid rgba(59,130,246,0.2);
+  border: 1px solid rgba(0,224,255,0.2);
   border-radius: var(--radius-lg);
   padding: 32px 28px;
   margin: 40px 0;
@@ -451,7 +451,7 @@ ul, ol { padding-left: 1.5rem; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #00C9A7, #3B82F6);
+  background: linear-gradient(135deg, #00C9A7, #00E0FF);
   color: #0B1B3D;
   font-family: 'Space Grotesk', sans-serif;
   font-size: 0.95rem;
@@ -475,15 +475,15 @@ ul, ol { padding-left: 1.5rem; }
   margin-left: 12px;
 }
 .cta-button-secondary:hover {
-  background: rgba(59,130,246,0.1);
-  box-shadow: 0 8px 24px rgba(59,130,246,0.15);
+  background: rgba(0,224,255,0.1);
+  box-shadow: 0 8px 24px rgba(0,224,255,0.15);
   color: var(--blue);
 }
 
 /* ===== FOOTER ===== */
 .site-footer {
   background: #050C1A;
-  border-top: 1px solid rgba(59,130,246,0.06);
+  border-top: 1px solid rgba(0,224,255,0.06);
   padding: 40px 20px 24px;
 }
 .footer-inner {
@@ -495,7 +495,7 @@ ul, ol { padding-left: 1.5rem; }
   font-family: 'Space Grotesk', sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
-  background: linear-gradient(135deg, #3B82F6, #00C9A7);
+  background: linear-gradient(135deg, #00E0FF, #00C9A7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -576,7 +576,7 @@ ul, ol { padding-left: 1.5rem; }
 <div class="trust-strip">
   <div class="trust-strip-inner">
     <div class="trust-strip-item">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
       <span>Paiement 100% securise</span>
     </div>
     <div class="trust-strip-item">
@@ -584,7 +584,7 @@ ul, ol { padding-left: 1.5rem; }
       <span>Livraison Afrique et Europe</span>
     </div>
     <div class="trust-strip-item">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       <span>Support WhatsApp 7j/7</span>
     </div>
     <div class="trust-strip-item">
@@ -602,7 +602,7 @@ ul, ol { padding-left: 1.5rem; }
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
         <circle cx="16" cy="16" r="14" stroke="url(#logoGrad)" stroke-width="2.5"/>
         <path d="M10 16 L14 20 L22 12" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#3B82F6"/><stop offset="1" stop-color="#00C9A7"/></linearGradient></defs>
+        <defs><linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#00E0FF"/><stop offset="1" stop-color="#00C9A7"/></linearGradient></defs>
       </svg>
       <span class="logo-text">SYNCHROVIE</span>
     </a>
@@ -638,7 +638,7 @@ ul, ol { padding-left: 1.5rem; }
   <h1 class="hero-title">Votre Panneau LED à 50€ Ne Fait Strictement Rien à Vos Cellules. Voici la Physique Pour le Prouver.</h1>
   <div class="hero-meta">
     <span class="hero-meta-item">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       2 juin 2026
     </span>
     <span class="hero-meta-item">
@@ -655,7 +655,7 @@ ul, ol { padding-left: 1.5rem; }
 <section class="toc-section" aria-label="Sommaire">
   <div class="toc-card">
     <div class="toc-card-title">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00E0FF" stroke-width="2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
       Sommaire
     </div>
     <ol class="toc-list">
@@ -684,7 +684,7 @@ ul, ol { padding-left: 1.5rem; }
 
 <p>Et c'est sur ce point précis que 95% des appareils grand public échouent.</p>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <h2 id="la-physique-qui-separe-un-gadget-dun-dispositif-medical">La physique qui sépare un gadget d'un dispositif médical</h2>
 
@@ -724,7 +724,7 @@ ul, ol { padding-left: 1.5rem; }
 
 <p><strong>Ce que vos mitochondries reçoivent de votre panneau à 50€ : statistiquement, rien de significatif.</strong></p>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <h2 id="ce-que-la-photobiomodulation-fait-reellement-quand-elle-est-correctement-dosee">Ce que la photobiomodulation fait réellement quand elle est correctement dosée</h2>
 
@@ -764,7 +764,7 @@ ul, ol { padding-left: 1.5rem; }
 
 <p><strong>La position consensuelle dans la littérature :</strong> un panneau full-body efficace doit combiner les deux bandes. La 660nm pour les effets cutanés et vasculaires superficiels, la 850nm pour la pénétration en profondeur. Les panneaux "rouge seulement" ou "NIR seulement" sont moins complets.</p>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <h2 id="le-marche-actuel-ce-que-les-grandes-marques-ne-vous-disent-pas">Le marché actuel : ce que les grandes marques ne vous disent pas</h2>
 
@@ -793,7 +793,7 @@ ul, ol { padding-left: 1.5rem; }
 
 <p>Un panneau de photobiomodulation certifié CE/FCC vous garantit que la conception électrique et les émissions lumineuses respectent des standards de sécurité vérifiés. Pas de surtension, pas d'émissions RF parasites, pas de flicker à des fréquences qui provoquent des maux de tête.</p>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <h2 id="panneau-pro-vs-gadget-low-cost-le-vrai-comparatif">Panneau Pro vs Gadget Low-Cost : Le Vrai Comparatif</h2>
 
@@ -865,7 +865,7 @@ ul, ol { padding-left: 1.5rem; }
 </tr>
 </tbody></table></div>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <h2 id="lumired-pro-x1-la-physique-qui-justifie-le-prix">LumiRed Pro X1 : la physique qui justifie le prix</h2>
 
@@ -891,7 +891,7 @@ ul, ol { padding-left: 1.5rem; }
 
 <p>Des panneaux moins sophistiqués alternent des LEDs rouge et des LEDs NIR en rangées séparées — vous obtenez 100% de 660nm sur certaines zones et 100% de 850nm sur d'autres. Les doubles chips vous donnent les deux simultanément sur chaque centimètre carré de peau.</p>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <h2 id="protocole-lumired-pro-x1-recuperation-performance-et-sante">Protocole LumiRed Pro X1 — Récupération, Performance et Santé</h2>
 
@@ -931,7 +931,7 @@ ul, ol { padding-left: 1.5rem; }
 
 <p>Des recherches en cours (notamment les travaux de Gonzalez-Lima à l'UT Austin) explorent le rôle de la PBM en mode NIR sur la fonction neurologique : activation du métabolisme cérébral, amélioration de la mémoire de travail, réduction de la neuro-inflammation.</p>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <h2 id="ce-que-vous-devez-savoir-avant-dacheter">Ce que vous devez savoir avant d'acheter</h2>
 
@@ -947,7 +947,7 @@ ul, ol { padding-left: 1.5rem; }
 <p><strong>"Pourquoi 849€ et pas 300€ ?"</strong></p>
 <p>Parce que les 480 LEDs double chip certifiées, le driver constant current (zéro flicker), le timer intégré, la certification CE/FCC, et le SAV européen sur 2 ans ont un coût réel. Un panneau qui vous délivre de la dose thérapeutique en 10 minutes remplace une séance chez un kinésithérapeute avec laser thérapeutique à 60-80€. L'amortissement est à 15-20 séances.</p>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <h2 id="le-calcul-que-les-biohackers-serieux-font">Le calcul que les biohackers sérieux font</h2>
 
@@ -985,17 +985,17 @@ ul, ol { padding-left: 1.5rem; }
 
 <p>Si vous avez déjà acheté un panneau à 50€ sans résultat, vous n'avez pas perdu votre temps — vous avez prouvé que c'est l'irradiance qui compte. Maintenant vous savez.</p>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <p><strong>→ [Voir la LumiRed Pro X1 sur Synchrovie — La puissance qui change tout]()</strong></p>
 
 <p><em>Paiement en 3x disponible. Livraison France et Belgique sous 5-7 jours ouvrés. 2 ans de garantie constructeur avec support technique francophone.</em></p>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <p><em>Synchrovie — Des outils de biohacking qui fonctionnent. Ou on vous rembourse.</em></p>
 
-<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(59,130,246,0.2),transparent);margin:40px 0;">
+<hr style="border:none;height:1px;background:linear-gradient(90deg,transparent,rgba(0,224,255,0.2),transparent);margin:40px 0;">
 
 <blockquote><p><strong>Note éditoriale :</strong> Les articles ci-dessus sont rédigés à titre informatif. Les dispositifs mentionnés ne sont pas des médicaments. Consultez un professionnel de santé avant d'utiliser tout dispositif de neurostimulation si vous avez des antécédents médicaux cardiovasculaires, épileptiques ou psychiatriques.</p></blockquote>
 
