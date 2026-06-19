@@ -1027,3 +1027,120 @@ footer {
   .reassurance-mini { grid-template-columns: repeat(2, 1fr); }
   body.has-sticky-cta { padding-bottom: 64px; }
 }
+
+/* ===== BREVO POPUP (exit-intent desktop + 60s mobile) ===== */
+.brevo-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7, 17, 38, 0.85);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.brevo-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+.brevo-popup {
+  background: linear-gradient(145deg, #0a1628 0%, #0B1B3D 100%);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 20px;
+  max-width: 520px;
+  width: 100%;
+  padding: 40px 36px 32px;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(59, 130, 246, 0.15);
+  animation: brevoPopIn 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes brevoPopIn {
+  from { transform: scale(0.85) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+.brevo-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  color: var(--text-soft);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  transition: color 0.2s;
+}
+.brevo-close:hover { color: var(--white); }
+.brevo-eyebrow {
+  color: var(--blue);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+.brevo-title-desktop,
+.brevo-title-mobile {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--white);
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+.brevo-title-mobile { display: none; }
+.brevo-subtitle-desktop,
+.brevo-subtitle-mobile {
+  color: var(--gray-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+.brevo-subtitle-mobile { display: none; }
+.brevo-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.brevo-form input {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 16px;
+  color: var(--white);
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+}
+.brevo-form input::placeholder { color: var(--text-soft); }
+.brevo-form input:focus {
+  outline: none;
+  border-color: var(--blue);
+  background: rgba(59, 130, 246, 0.08);
+}
+.brevo-form .btn-primary { white-space: nowrap; }
+.brevo-disclaimer {
+  color: var(--text-soft);
+  font-size: 0.75rem;
+  margin: 0;
+  text-align: center;
+}
+.brevo-disclaimer a { color: var(--blue); text-decoration: underline; }
+
+@media (max-width: 768px) {
+  .brevo-popup {
+    padding: 32px 24px 24px;
+    max-width: 100%;
+  }
+  .brevo-title-desktop { display: none; }
+  .brevo-title-mobile { display: block; font-size: 1.45rem; }
+  .brevo-subtitle-desktop { display: none; }
+  .brevo-subtitle-mobile { display: block; font-size: 0.9rem; }
+  .brevo-form { flex-direction: column; }
+  .brevo-form .btn-primary { width: 100%; }
+}

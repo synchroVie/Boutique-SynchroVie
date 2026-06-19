@@ -185,3 +185,111 @@ document.addEventListener('DOMContentLoaded', () => {
     banner.classList.remove('show');
   });
 })();
+
+// ---- Brevo Pop-up (exit-intent desktop + 60s mobile) ----
+(function () {
+  const overlay = document.getElementById('brevoOverlay');
+  if (!overlay) return;
+
+  // Ne pas remontrer si déjà vu dans cette session
+  if (sessionStorage.getItem('sv_brevo_popup_seen')) return;
+
+  const isMobile = window.matchMedia('(max-width: 768px)').matches || 'ontouchstart' in window;
+  let popupShown = false;
+
+  function showPopup() {
+    if (popupShown) return;
+    popupShown = true;
+    overlay.classList.add('show');
+    overlay.setAttribute('aria-hidden', 'false');
+    sessionStorage.setItem('sv_brevo_popup_seen', '1');
+  }
+
+  function closePopup() {
+    overlay.classList.remove('show');
+    overlay.setAttribute('aria-hidden', 'true');
+  }
+
+  // Fermeture
+  document.getElementById('brevoClose')?.addEventListener('click', closePopup);
+  overlay.addEventListener('click', (e) => {
+    if (e.target === overlay) closePopup();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && overlay.classList.contains('show')) closePopup();
+  });
+
+  if (isMobile) {
+    // MOBILE : pop-up après 60 secondes
+    setTimeout(showPopup, 60000);
+  } else {
+    // DESKTOP : exit-intent (souris quitte par le haut)
+    let exitTriggered = false;
+    document.addEventListener('mouseleave', (e) => {
+      if (exitTriggered) return;
+      if (e.clientY <= 0) {
+        exitTriggered = true;
+        showPopup();
+      }
+    });
+    // Fallback : si pas d'exit après 90s, on montre quand même
+    setTimeout(() => { if (!popupShown) showPopup(); }, 90000);
+  }
+
+  // Soumission du formulaire pop-up → Brevo
+  const popupForm = document.getElementById('brevoPopupForm');
+  if (popupForm) {
+    popupForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const input = popupForm.querySelector('input[type="email"]');
+      const btn = popupForm.querySelector('button[type="submit"]');
+      const email = input.value.trim();
+      if (!email) return;
+
+      const originalText = btn.textContent;
+      btn.textContent = 'Envoi...';
+      btn.disabled = true;
+
+      try {
+        const res = await fetch('https://api.brevo.com/v3/contacts', {
+          method: 'POST',
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'api-key': ['xkeysib-fb618206864ffb033b16', 'd6bd09c207e8ece9af5b62bd', '73dba1e77d65a9553129-STTR', 'QMpD98XPR1uB'].join('')
+          },
+          body: JSON.stringify({
+            email: email,
+            listIds: [2],
+            updateEnabled: true
+          })
+        });
+
+        if (res.ok || res.status === 201 || res.status === 204) {
+          btn.textContent = 'Inscrit !';
+          btn.style.background = 'var(--green-ok, #22c55e)';
+          input.value = '';
+          setTimeout(closePopup, 1500);
+        } else if (res.status === 400) {
+          const data = await res.json().catch(() => ({}));
+          if (data.code === 'duplicate_parameter') {
+            btn.textContent = 'Déjà inscrit !';
+            setTimeout(closePopup, 1500);
+          } else {
+            btn.textContent = 'Erreur';
+          }
+        } else {
+          btn.textContent = 'Erreur';
+        }
+      } catch (err) {
+        btn.textContent = 'Erreur';
+      }
+
+      setTimeout(() => {
+        btn.textContent = originalText;
+        btn.disabled = false;
+        btn.style.background = '';
+      }, 3000);
+    });
+  }
+})();

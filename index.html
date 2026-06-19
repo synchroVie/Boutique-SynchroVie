@@ -22,6 +22,7 @@
   <title>Synchrovie | Objets connectés santé & biohacking — Sommeil, tension, récupération</title>
   <meta name="description" content="Bagues connectées, tensiomètres, masques à ondes delta, pistolets de massage : les objets qui révèlent ce que votre corps ne dit pas. Livraison Europe 3-7j.">
   <link rel="canonical" href="https://synchrovie.github.io/Boutique-SynchroVie/">
+  <link rel="sitemap" type="application/xml" href="/Boutique-SynchroVie/sitemap.xml">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta name="google-site-verification" content="wV9VVQ2Pq7ktBfdQB5Sqburfdo4EDJpyvpAmfSI2XB4" />
 
@@ -391,6 +392,25 @@
 
 <!-- Back to Top -->
 <button class="back-to-top" id="backToTop">^</button>
+
+<!-- Pop-up Brevo (exit-intent desktop + 60s mobile) -->
+<div class="brevo-overlay" id="brevoOverlay" aria-hidden="true">
+  <div class="brevo-popup" role="dialog" aria-modal="true" aria-labelledby="brevoTitle">
+    <button class="brevo-close" id="brevoClose" aria-label="Fermer">&times;</button>
+    <div class="brevo-popup-inner">
+      <p class="brevo-eyebrow">Lettre Synchrovie</p>
+      <h3 id="brevoTitle" class="brevo-title-desktop">Attendez, avant de partir…</h3>
+      <h3 id="brevoTitleMobile" class="brevo-title-mobile">Un email par semaine, zéro spam</h3>
+      <p class="brevo-subtitle-desktop">Recevez ce que mesurent vraiment vos appareils, les retours d'autres utilisateurs, et les nouveautés en avant-première. Pas de promo quotidienne, promis.</p>
+      <p class="brevo-subtitle-mobile">Pendant que vous explorez la boutique, laissez votre email : on vous envoie un récap des technologies qui peuvent vous concerner, sans spam.</p>
+      <form class="brevo-form" id="brevoPopupForm">
+        <input type="email" placeholder="Votre email" required aria-label="Votre email">
+        <button type="submit" class="btn btn-primary">Rejoindre</button>
+      </form>
+      <p class="brevo-disclaimer">Désinscription en un clic. <a href="politique-de-confidentialite.html">Politique de confidentialité</a>.</p>
+    </div>
+  </div>
+</div>
 
 <script src="script.js" defer></script>
 </body>
