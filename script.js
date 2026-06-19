@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     body: JSON.stringify({
                         email: email,
-                        listIds: [2],
+                        listIds: [5],
                         updateEnabled: true
                     })
                 });
@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
           },
           body: JSON.stringify({
             email: email,
-            listIds: [2],
+            listIds: [5],
             updateEnabled: true
           })
         });
