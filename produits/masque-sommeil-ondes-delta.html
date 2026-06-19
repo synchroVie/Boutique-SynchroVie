@@ -742,5 +742,24 @@ function changeQty(d){
   });
 })();
 </script>
+<script src="../brevo.js" defer></script>
+<!-- Pop-up Brevo (exit-intent desktop + 60s mobile) -->
+<div class="brevo-overlay" id="brevoOverlay" aria-hidden="true">
+  <div class="brevo-popup" role="dialog" aria-modal="true" aria-labelledby="brevoTitle">
+    <button class="brevo-close" id="brevoClose" aria-label="Fermer">&times;</button>
+    <div class="brevo-popup-inner">
+      <p class="brevo-eyebrow">Lettre SynchroVie</p>
+      <h3 id="brevoTitle" class="brevo-title-desktop">Attendez, avant de partir…</h3>
+      <h3 id="brevoTitleMobile" class="brevo-title-mobile">Un email par semaine, zéro spam</h3>
+      <p class="brevo-subtitle-desktop">Recevez ce que mesurent vraiment vos appareils, les retours d'autres utilisateurs, et les nouveautés en avant-première. Pas de promo quotidienne, promis.</p>
+      <p class="brevo-subtitle-mobile">Pendant que vous explorez la boutique, laissez votre email : on vous envoie un récap des technologies qui peuvent vous concerner, sans spam.</p>
+      <form class="brevo-form" id="brevoPopupForm">
+        <input type="email" placeholder="Votre email" required aria-label="Votre email">
+        <button type="submit" class="btn btn-primary">Rejoindre</button>
+      </form>
+      <p class="brevo-disclaimer">Désinscription en un clic. <a href="../politique-de-confidentialite.html">Politique de confidentialité</a>.</p>
+    </div>
+  </div>
+</div>
 </body>
 </html>

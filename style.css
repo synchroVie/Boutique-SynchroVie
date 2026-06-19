@@ -620,6 +620,38 @@ nav.main-nav {
   margin-top: 12px;
 }
 
+/* ===== TOAST (notifications newsletter / Brevo) ===== */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--indigo, #0a1628);
+  color: var(--white, #F8FAFC);
+  padding: 14px 22px;
+  border-radius: 10px;
+  border: 1px solid var(--blue, #3B82F6);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  max-width: 90vw;
+  text-align: center;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+@media (max-width: 768px) {
+  .toast {
+    bottom: 16px;
+    font-size: 0.8rem;
+    padding: 12px 18px;
+  }
+}
+
 /* ===== FOOTER ===== */
 footer {
   background: var(--navy);
