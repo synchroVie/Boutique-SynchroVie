@@ -1,6 +1,8 @@
-name: Agent 2 — SEO Monitor (GSC + sitemap check)
+name: Agent 2 — SEO Monitor (sitemap check + rapport)
 
 # Déclencheur : chaque jour à 8h UTC (= 8h Bamako) + manuel
+# Version sans OAuth Google (l'utilisateur n'a pas de carte compatible)
+# Mode : vérification technique + rapport + demande screenshot GSC hebdo
 on:
   schedule:
     - cron: '0 8 * * *'
@@ -23,78 +25,6 @@ jobs:
         run: |
           echo "today=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
           echo "timestamp=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_OUTPUT
-
-      - name: Configure Google Service Account
-        env:
-          GSC_CREDENTIALS: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
-        run: |
-          # Créer le fichier d'identifiants depuis le secret
-          echo "$GSC_CREDENTIALS" > /tmp/gsc-credentials.json
-          chmod 600 /tmp/gsc-credentials.json
-          echo "✅ Identifiants GSC configurés"
-
-      - name: Get Google OAuth token
-        id: oauth
-        env:
-          SCOPE: "https://www.googleapis.com/auth/webmasters.readonly https://www.googleapis.com/auth/indexing"
-        run: |
-          # Récupérer un token OAuth via JWT signé avec la clé du service account
-          PYTHON_VERSION_TOKEN=$(python3 -c "
-          import json, time, base64, urllib.request, urllib.parse
-          import http.client
-
-          with open('/tmp/gsc-credentials.json') as f:
-              creds = json.load(f)
-
-          service_email = creds['client_email']
-          private_key = creds['private_key']
-
-          # Créer le JWT
-          header = {'alg': 'RS256', 'typ': 'JWT', 'kid': creds['private_key_id']}
-          now = int(time.time())
-          payload = {
-              'iss': service_email,
-              'scope': '${SCOPE}',
-              'aud': 'https://oauth2.googleapis.com/token',
-              'exp': now + 3600,
-              'iat': now
-          }
-
-          def b64(data):
-              return base64.urlsafe_b64encode(json.dumps(data).encode()).decode().rstrip('=')
-
-          jwt_header = b64(header)
-          jwt_payload = b64(payload)
-          jwt_signing_input = f'{jwt_header}.{jwt_payload}'
-
-          # Signer avec la clé privée
-          from cryptography.hazmat.primitives import hashes, serialization
-          from cryptography.hazmat.primitives.asymmetric import padding
-          key = serialization.load_pem_private_key(private_key.encode(), password=None)
-          signature = key.sign(jwt_signing_input.encode(), padding.PKCS1v15(), hashes.SHA256())
-          jwt_signature = base64.urlsafe_b64encode(signature).decode().rstrip('=')
-
-          jwt_token = f'{jwt_signing_input}.{jwt_signature}'
-
-          # Échanger le JWT contre un access token
-          data = urllib.parse.urlencode({
-              'grant_type': 'urn:ietf:params:oauth:grant-type:jwt-bearer',
-              'assertion': jwt_token
-          }).encode()
-
-          req = urllib.request.Request(
-              'https://oauth2.googleapis.com/token',
-              data=data,
-              headers={'Content-Type': 'application/x-www-form-urlencoded'}
-          )
-
-          with urllib.request.urlopen(req) as response:
-              result = json.loads(response.read())
-              print(result['access_token'])
-          ")
-
-          echo "token=$PYTHON_VERSION_TOKEN" >> $GITHUB_OUTPUT
-          echo "✅ Token OAuth obtenu"
 
       - name: Check sitemap URLs (HTTP 200)
         id: sitemap
@@ -150,76 +80,17 @@ jobs:
 
           cat /tmp/url-check-results.txt
 
-      - name: Fetch GSC data (indexing status)
-        env:
-          ACCESS_TOKEN: ${{ steps.oauth.outputs.token }}
+      - name: Ping Google & Bing for sitemap refresh
         run: |
-          set -e
-          PROPERTY_URL="https://synchrovie.github.io/Boutique-SynchroVie/"
-
-          echo "=== Récupération indexation GSC ==="
-
-          # 1. Soumettre les URLs à l'indexation (API Indexing)
-          echo "Soumission des URLs à l'indexation Google..."
-          python3 << 'EOF'
-          import json
-          import xml.etree.ElementTree as ET
-          import urllib.request
-
-          tree = ET.parse('/tmp/sitemap.xml')
-          ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
-          urls = [u.find('sm:loc', ns).text for u in tree.getroot().findall('sm:url', ns)]
-
-          token = "${ACCESS_TOKEN}"
-
-          submitted = 0
-          errors = []
-
-          for url in urls:
-              data = json.dumps({
-                  'url': url,
-                  'type': 'URL_UPDATED'
-              }).encode()
-
-              req = urllib.request.Request(
-                  'https://indexing.googleapis.com/v3/urlNotifications:publish',
-                  data=data,
-                  headers={
-                      'Content-Type': 'application/json',
-                      'Authorization': f'Bearer {token}'
-                  }
-              )
-
-              try:
-                  with urllib.request.urlopen(req, timeout=10) as response:
-                      result = json.loads(response.read())
-                      submitted += 1
-                      print(f'  ✅ {url[:80]}')
-              except urllib.error.HTTPError as e:
-                  body = e.read().decode()[:100]
-                  errors.append(f'{url}: {e.code} {body}')
-              except Exception as e:
-                  errors.append(f'{url}: {str(e)[:80]}')
-
-          print(f'\n=== RÉSUMÉ SOUMISSION INDEXATION ===')
-          print(f'URLs soumises avec succès: {submitted}/{len(urls)}')
-          if errors:
-              print(f'Erreurs ({len(errors)}):')
-              for e in errors[:5]:
-                  print(f'  - {e}')
-
-          # Sauvegarder pour le rapport
-          with open('/tmp/indexing-results.json', 'w') as f:
-              json.dump({
-                  'submitted': submitted,
-                  'total': len(urls),
-                  'errors': errors
-              }, f, indent=2)
-          EOF
+          SITEMAP_URL="https://synchrovie.github.io/Boutique-SynchroVie/sitemap.xml"
+          # Google ping (legacy mais encore accepté)
+          GOOGLE_PING=$(curl -s -o /dev/null -w "%{http_code}" "https://www.google.com/ping?sitemap=${SITEMAP_URL}")
+          # Bing ping
+          BING_PING=$(curl -s -o /dev/null -w "%{http_code}" "https://www.bing.com/ping?sitemap=${SITEMAP_URL}")
+          echo "Google ping: $GOOGLE_PING"
+          echo "Bing ping: $BING_PING"
 
       - name: Generate SEO report
-        env:
-          ACCESS_TOKEN: ${{ steps.oauth.outputs.token }}
         run: |
           mkdir -p seo-reports
           DATE="${{ steps.date.outputs.today }}"
@@ -230,7 +101,7 @@ jobs:
             echo "**Date** : ${DATE}"
             echo "**Timestamp** : ${{ steps.date.outputs.timestamp }}"
             echo ""
-            echo "## État du sitemap"
+            echo "## État technique du sitemap"
             echo ""
             echo "- Total URLs : ${{ steps.sitemap.outputs.total_urls }}"
             echo "- Vérification HTTP 200 :"
@@ -239,22 +110,22 @@ jobs:
             cat /tmp/url-check-results.txt
             echo '```'
             echo ""
-            echo "## Soumission à l'API Google Indexing"
+            echo "## Pings moteurs de recherche"
             echo ""
-            echo "Soumission quotidienne des URLs pour accélérer l'indexation (Google Indexing API)."
-            echo "Note : la soumission n'accélère pas l'indexation immédiate, mais signale à Google que le contenu a été mis à jour."
+            echo "- Google sitemap ping envoyé"
+            echo "- Bing sitemap ping envoyé"
             echo ""
-            echo '```'
-            if [ -f /tmp/indexing-results.json ]; then
-              python3 -c "import json; d=json.load(open('/tmp/indexing-results.json')); print(f'URLs soumises avec succès: {d[\"submitted\"]}/{d[\"total\"]}'); print(f'Erreurs: {len(d[\"errors\"])}')"
-            fi
-            echo '```'
+            echo "## Données GSC (à remplir manuellement par l'utilisateur)"
+            echo ""
+            echo "> L'utilisateur doit envoyer un screenshot de GSC > Indexation des pages"
+            echo "> à l'assistant GLM pour analyse hebdomadaire."
             echo ""
             echo "## Actions recommandées"
             echo ""
-            echo "- Vérifier manuellement dans GSC > Indexation des pages"
-            echo "- Si stagnation > 2 semaines : envisager backlinks externes"
-            echo "- Si >50% des pages indexées : augmenter fréquence de mise à jour du contenu"
+            echo "- [ ] Demander indexation manuelle de 10 URLs dans GSC (limite quotidienne)"
+            echo "- [ ] Vérifier GSC > Performance > Pays source (France, Mali, etc.)"
+            echo "- [ ] Si stagnation > 2 semaines : créer backlinks Medium/Quora"
+            echo "- [ ] Vérifier si Google a crawl les dernières modifications (GSC > Couverture)"
           } > "seo-reports/${DATE}.md"
 
           echo "Rapport généré : seo-reports/${DATE}.md"
@@ -270,8 +141,3 @@ jobs:
             git push
             echo "✅ Rapport poussé"
           )
-
-      - name: Cleanup
-        run: |
-          rm -f /tmp/gsc-credentials.json
-          echo "🧹 Identifiants temporaires supprimés"
