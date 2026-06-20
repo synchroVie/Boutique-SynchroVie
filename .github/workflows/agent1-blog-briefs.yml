@@ -61,14 +61,14 @@ jobs:
                   'word_count': 1800,
               },
               {
-                  'category': 'Stress / Cortisol',
+                  'category': 'Stress-Cortisol',
                   'angle': 'Cortisol invisible : pourquoi vous vous sentez épuisé sans raison apparente',
                   'keywords': ['cortisol élevé', 'fatigue chronique', 'bague cortisol', 'biofeedback stress'],
                   'product_link': 'produits/bague-controle-cortisol.html',
                   'word_count': 1500,
               },
               {
-                  'category': 'Récupération',
+                  'category': 'Recuperation',
                   'angle': 'Récupération musculaire : ce que les athlètes pro font (et que vous pouvez copier)',
                   'keywords': ['récupération musculaire', 'bain de glace', 'EMS récupération', 'inflammation musculaire'],
                   'product_link': 'produits/bain-glace-recuperation-connecte.html',
