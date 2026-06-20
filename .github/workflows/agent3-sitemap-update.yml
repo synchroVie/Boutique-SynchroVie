@@ -76,6 +76,11 @@ jobs:
             echo "  <!-- ===== PRODUITS (20) ===== -->"
             for f in produits/*.html; do
               [ -f "$f" ] || continue
+              # Skip les fichiers redirect (noindex) — ne pas inclure dans sitemap
+              if grep -q 'noindex' "$f" 2>/dev/null; then
+                echo "  <!-- Skip redirect: $f -->"
+                continue
+              fi
               filename=$(basename "$f")
               echo "  <url>"
               echo "    <loc>${BASE_URL}${f}</loc>"
