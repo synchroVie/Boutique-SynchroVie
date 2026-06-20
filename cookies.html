@@ -6,7 +6,7 @@
     <title>Politique de Gestion des Cookies | Synchrovie</title>
     <meta name="description" content="Comment Synchrovie utilise les cookies : types, finalités, durée, paramétrage. Contrôlez vos préférences en toute transparence.">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://synchrovie.github.io/cookies.html">
+    <link rel="canonical" href="https://synchrovie.github.io/Boutique-SynchroVie/cookies.html">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -208,7 +208,7 @@
 
         <section class="legal-section">
             <h2>6. Vos Droits RGPD</h2>
-            <p>Concernant les données collectées via cookies, vous disposez des droits suivants (voir <a href="confidentialite.html" class="legal-link">Politique de Confidentialité</a> pour le détail) :</p>
+            <p>Concernant les données collectées via cookies, vous disposez des droits suivants (voir <a href="politique-de-confidentialite.html" class="legal-link">Politique de Confidentialité</a> pour le détail) :</p>
             <ul>
                 <li><strong>Droit d'accès</strong> : demandez quelles données sont collectées</li>
                 <li><strong>Droit d'opposition</strong> : refusez les cookies marketing</li>
@@ -252,5 +252,17 @@
     </div>
 
     <script src="script.js" defer></script>
+
+<script>
+// Handler pour "Paramètres des Cookies"
+document.getElementById('openCookieSettings')?.addEventListener('click', function(e) {
+  e.preventDefault();
+  const banner = document.getElementById('cookieBanner');
+  if (banner) {
+    banner.classList.add('show');
+    banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+});
+</script>
 </body>
 </html>
