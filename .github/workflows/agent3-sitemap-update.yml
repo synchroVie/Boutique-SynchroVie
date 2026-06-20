@@ -1,0 +1,118 @@
+name: Agent 3 — Sitemap Auto-Update
+
+# Déclencheur : à chaque push sur main + manuel
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set date
+        id: date
+        run: echo "today=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
+
+      - name: Generate sitemap.xml
+        run: |
+          set -e
+          BASE_URL="https://synchrovie.github.io/Boutique-SynchroVie/"
+          TODAY="${{ steps.date.outputs.today }}"
+
+          # Liste tous les fichiers HTML à la racine + sous-dossiers
+          {
+            echo '<?xml version="1.0" encoding="UTF-8"?>'
+            echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+            echo "  <!-- ===== PAGE PRINCIPALE ===== -->"
+            
+            # Homepage (priorité 1.0)
+            echo "  <url>"
+            echo "    <loc>${BASE_URL}</loc>"
+            echo "    <lastmod>${TODAY}</lastmod>"
+            echo "    <changefreq>weekly</changefreq>"
+            echo "    <priority>1.0</priority>"
+            echo "  </url>"
+
+            # Pages racine (sauf index.html déjà fait)
+            for f in blog.html commander.html contact.html faq.html cgv.html cookies.html legal.html propos.html politique-de-confidentialite.html; do
+              if [ -f "$f" ]; then
+                # CGV et légal : priorité plus faible
+                case "$f" in
+                  cgv.html|cookies.html|legal.html|politique-de-confidentialite.html)
+                    PRIORITY="0.3"
+                    CHANGEFREQ="yearly"
+                    ;;
+                  commander.html)
+                    PRIORITY="0.6"
+                    CHANGEFREQ="monthly"
+                    ;;
+                  *)
+                    PRIORITY="0.8"
+                    CHANGEFREQ="weekly"
+                    ;;
+                esac
+                echo "  <url>"
+                echo "    <loc>${BASE_URL}${f}</loc>"
+                echo "    <lastmod>${TODAY}</lastmod>"
+                echo "    <changefreq>${CHANGEFREQ}</changefreq>"
+                echo "    <priority>${PRIORITY}</priority>"
+                echo "  </url>"
+              fi
+            done
+
+            # Pages produits
+            echo ""
+            echo "  <!-- ===== PRODUITS (20) ===== -->"
+            for f in produits/*.html; do
+              [ -f "$f" ] || continue
+              filename=$(basename "$f")
+              echo "  <url>"
+              echo "    <loc>${BASE_URL}${f}</loc>"
+              echo "    <lastmod>${TODAY}</lastmod>"
+              echo "    <changefreq>weekly</changefreq>"
+              echo "    <priority>0.9</priority>"
+              echo "  </url>"
+            done
+
+            # Articles blog
+            echo ""
+            echo "  <!-- ===== BLOG (19) ===== -->"
+            for f in blog/*.html; do
+              [ -f "$f" ] || continue
+              filename=$(basename "$f")
+              echo "  <url>"
+              echo "    <loc>${BASE_URL}${f}</loc>"
+              echo "    <lastmod>${TODAY}</lastmod>"
+              echo "    <changefreq>weekly</changefreq>"
+              echo "    <priority>0.7</priority>"
+              echo "  </url>"
+            done
+
+            echo '</urlset>'
+          } > sitemap.xml
+
+          echo "Sitemap généré :"
+          wc -l sitemap.xml
+          grep -c "<url>" sitemap.xml
+
+      - name: Commit & Push if changed
+        run: |
+          git config user.name "SynchroVie SEO Bot"
+          git config user.email "actions@github.com"
+          git diff --quiet sitemap.xml && echo "Aucun changement" || (
+            git add sitemap.xml
+            git commit -m "chore(sitemap): auto-update lastmod to ${{ steps.date.outputs.today }}"
+            git push
+            echo "Sitemap mis à jour et poussé"
+          )

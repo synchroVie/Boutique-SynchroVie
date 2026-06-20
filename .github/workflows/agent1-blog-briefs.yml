@@ -1,0 +1,272 @@
+name: Agent 1 — Rédaction Hebdo (Brief Auto)
+
+# Déclencheur : chaque lundi 9h UTC (= 9h Bamako) + manuel
+on:
+  schedule:
+    - cron: '0 9 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  generate-brief:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set date
+        id: date
+        run: |
+          echo "today=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
+          echo "week=$(date -u +%Y-W%V)" >> $GITHUB_OUTPUT
+
+      - name: Install Python deps
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install requests
+
+      - name: Generate 4 article briefs
+        env:
+          ZAI_API_KEY: ${{ secrets.ZAI_API_KEY }}
+        run: |
+          mkdir -p drafts/briefs
+          python3 << 'EOF'
+          import os
+          import json
+          import requests
+          import datetime
+
+          today = datetime.date.today().isoformat()
+          week = datetime.date.today().strftime('%Y-W%V')
+
+          # 4 sujets tournants (basés sur les catégories produits SynchroVie)
+          topics = [
+              {
+                  'category': 'Bio-Monitoring',
+                  'angle': 'VFC (variabilité fréquence cardiaque) — pourquoi ce biomarqueur devient incontournable en 2026',
+                  'keywords': ['variabilité fréquence cardiaque', 'VFC biohacking', 'stress mesurable', 'récupération cardiaque'],
+                  'product_link': 'produits/stimulateur-nerf-vague.html',
+                  'word_count': 1800,
+              },
+              {
+                  'category': 'Sommeil',
+                  'angle': 'Sommeil profond : les 90 premières minutes décident de tout',
+                  'keywords': ['sommeil profond', 'ondes delta', 'micro-réveils', 'capital sommeil'],
+                  'product_link': 'produits/masque-sommeil-ondes-delta.html',
+                  'word_count': 1800,
+              },
+              {
+                  'category': 'Stress / Cortisol',
+                  'angle': 'Cortisol invisible : pourquoi vous vous sentez épuisé sans raison apparente',
+                  'keywords': ['cortisol élevé', 'fatigue chronique', 'bague cortisol', 'biofeedback stress'],
+                  'product_link': 'produits/bague-controle-cortisol.html',
+                  'word_count': 1500,
+              },
+              {
+                  'category': 'Récupération',
+                  'angle': 'Récupération musculaire : ce que les athlètes pro font (et que vous pouvez copier)',
+                  'keywords': ['récupération musculaire', 'bain de glace', 'EMS récupération', 'inflammation musculaire'],
+                  'product_link': 'produits/bain-glace-recuperation-connecte.html',
+                  'word_count': 1500,
+              },
+          ]
+
+          # Voix éditoriale SynchroVie (règles absolues)
+          editorial_rules = """
+          VOIX ÉDITORIALE SYNCHROVIE — À RESPECTER IMPÉRATIVEMENT
+
+          1. Structure obligatoire :
+             - H1 unique
+             - Intro : douleur avant promesse (la situation difficile AVANT la solution)
+             - 4 à 6 sections H2
+             - Conclusion orientée action (CTA vers le produit SynchroVie lié)
+             - Longueur : respecter le word_count cible
+
+          2. MOTS INTERDITS (jAMAIS utiliser) :
+             - Découvrez
+             - Dans le monde d'aujourd'hui
+             - Que vous soyez... ou...
+             - N'attendez plus
+             - Révolutionnaire
+             - Optimisez votre
+             - Prenez soin de vous
+             - Plongez dans
+             - À portée de main
+             - Véritable allié du quotidien
+
+          3. Ton : professionnel mais humain, jamais commercial agressif
+          4. Style : phrases courtes, ancrées dans des situations réelles, jamais génériques
+          5. Liens internes : 2-3 vers d'autres articles blog ou produits SynchroVie
+          6. CTA final : un seul, discret, vers le produit lié
+          7. SEO : mot-clé primaire dans H1, premier paragraphe, 2 H2
+          8. Sources : citer au moins 2 études scientifiques (format [1], [2])
+          9. Pas de promesses médicales — SynchroVie vend du biohacking, pas des traitements
+          10. Format HTML conforme aux autres articles blog (voir blog/sommeil-profond-90-premieres-minutes.html)
+          """
+
+          # Si on a une clé API ZAI, on génère via LLM
+          zai_key = os.environ.get('ZAI_API_KEY')
+
+          for i, topic in enumerate(topics, 1):
+              brief_filename = f"drafts/briefs/{today}-brief-{i:02d}-{topic['category'].lower().replace(' ', '-')}.md"
+
+              brief_content = f"""# Brief Article — {topic['category']} (Semaine {week})
+
+          ## Sujet
+          {topic['angle']}
+
+          ## Mots-clés SEO
+          {', '.join(topic['keywords'])}
+
+          ## Produit SynchroVie à lier
+          `{topic['product_link']}`
+
+          ## Longueur cible
+          {topic['word_count']} mots
+
+          ## Date de rédaction
+          {today}
+
+          ---
+
+          ## RÈGLES ÉDITORIALES À RESPECTER
+          {editorial_rules}
+
+          ## Structure attendue
+
+          ### H1 (titre)
+          [Titre accrocheur, contenant le mot-clé primaire, max 60 caractères]
+
+          ### Introduction (200 mots)
+          - Décrire une situation de douleur / problème vécu par le lecteur
+          - PAS de "Découvrez" ni "Plongez dans"
+          - Annoncer la solution sans dévoiler tout
+
+          ### Section H2 n°1 : [La cause cachée du problème]
+          - Expliquer le mécanisme physiologique
+          - Donner 1 étude scientifique en référence
+
+          ### Section H2 n°2 : [Pourquoi les solutions classiques échouent]
+          - Critique constructive des solutions traditionnelles
+          - Pas de bashing, juste des faits
+
+          ### Section H2 n°3 : [La technologie qui change la donne]
+          - Présenter la catégorie de technologie (pas le produit directement)
+          - Citer 1 étude sur cette technologie
+
+          ### Section H2 n°4 : [Comment l'utiliser concrètement]
+          - Protocole pratique (durée, fréquence, moment)
+          - Conseils d'utilisation
+
+          ### Section H2 n°5 : [Ce que vous allez ressentir]
+          - Effets attendus semaine par semaine
+          - Témoignage anonymisé (optionnel)
+
+          ### Conclusion + CTA (100 mots)
+          - Résumé en 2 phrases
+          - Lien discret vers `{topic['product_link']}`
+
+          ### Méta-données SEO
+          - Meta title : [titre] | SynchroVie
+          - Meta description : [150 caractères max, contenant le mot-clé primaire]
+          - URL slug : [proposer un slug propre]
+
+          ---
+
+          ## Action requise
+          1. Copier ce brief
+          2. Le coller dans Claude (Sonnet 4.5 ou Opus)
+          3. Demander à Claude d'écrire l'article complet en HTML (format blog SynchroVie)
+          4. Coller le résultat dans `drafts/articles/{today}-article-{i:02d}.html`
+          5. L'agent GLM fera la révision SEO + intégration
+
+          """
+
+              with open(brief_filename, 'w', encoding='utf-8') as f:
+                  f.write(brief_content)
+
+              print(f"  ✅ Brief {i}: {brief_filename}")
+
+          # Créer le sommaire des briefs de la semaine
+          summary = f"""# Briefs Semaine {week} — SynchroVie
+
+          Date de génération : {today}
+
+          ## 4 briefs d'articles à rédiger cette semaine
+
+          """
+
+          for i, topic in enumerate(topics, 1):
+              summary += f"""### {i}. {topic['category']} — {topic['angle'][:60]}...
+          - Mots-clés : {', '.join(topic['keywords'][:2])}
+          - Longueur : {topic['word_count']} mots
+          - Produit lié : `{topic['product_link']}`
+          - Brief complet : `drafts/briefs/{today}-brief-{i:02d}-{topic['category'].lower().replace(' ', '-')}.md`
+
+          """
+
+          summary += f"""## Workflow de rédaction
+
+          1. GLM (moi) génère ce brief automatiquement chaque lundi 9h
+          2. Tu copies le brief → Claude (un de tes comptes gratuits)
+          3. Claude écrit l'article HTML complet
+          4. Tu colles le résultat dans `drafts/articles/{today}-article-XX.html`
+          5. Tu commit + push
+          6. L'Agent 1bis (révision GLM) vérifie :
+             - mots interdits absents
+             - structure HTML conforme
+             - liens internes corrects
+             - SEO meta-tags complets
+             - JSON-LD Article valide
+          7. Si OK → intégration dans `blog/` + MAJ `blog.html` + sitemap
+          """
+
+          with open(f"drafts/briefs/{today}-SUMMARY.md", 'w', encoding='utf-8') as f:
+              f.write(summary)
+
+          print(f"\n✅ Sommaire : drafts/briefs/{today}-SUMMARY.md")
+          EOF
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "feat(content): briefs articles semaine ${{ steps.date.outputs.week }}"
+          title: "📝 Briefs articles — Semaine ${{ steps.date.outputs.week }}"
+          body: |
+            ## Briefs de rédaction hebdomadaires
+
+            4 briefs d'articles générés automatiquement par l'Agent 1.
+
+            ### Workflow
+            1. Copier chaque brief de `drafts/briefs/`
+            2. Les coller dans Claude (Sonnet 4.5 ou Opus)
+            3. Demander à Claude d'écrire l'article HTML complet
+            4. Coller les résultats dans `drafts/articles/`
+            5. Commit + push sur cette PR
+            6. L'Agent 1bis révisera automatiquement les articles
+
+            ### Briefs inclus
+            - Brief 1 : Bio-Monitoring (VFC)
+            - Brief 2 : Sommeil (90 premières minutes)
+            - Brief 3 : Stress / Cortisol
+            - Brief 4 : Récupération musculaire
+
+            Chaque brief contient :
+            - Sujet précis et angle
+            - Mots-clés SEO
+            - Produit SynchroVie à lier
+            - Règles éditoriales complètes
+            - Structure H1/H2 attendue
+            - Méta-données SEO à produire
+          branch: content/briefs-${{ steps.date.outputs.week }}
+          delete-branch: true
+          labels: |
+            content
+            automated
+            needs-review
