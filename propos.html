@@ -3,20 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>À Propos | Synchrovie — L'Élite de la Bio-Optimisation</title>
-    <meta name="description" content="Découvrez la mission de Synchrovie. Fondée par Diougamady Keita à Bamako, notre expertise repose sur l'ingénierie de la donnée pour la performance humaine.">
+    <title>À Propos | SynchroVie — Ingénierie de la Performance Humaine</title>
+    <meta name="description" content="SynchroVie : mission, équipe et engagements. 20 technologies de santé connectée, fondées par Diougamady Keita à Bamako, au service de l'Europe et de l'Afrique.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://synchrovie.github.io/Boutique-SynchroVie/propos.html">
-    
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="À Propos | Synchrovie — Bio-Optimisation">
-    <meta property="og:description" content="Découvrez la mission de Synchrovie et la vision de son fondateur Diougamady Keita.">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:site_name" content="SynchroVie">
+    <meta property="og:title" content="À Propos | SynchroVie — Ingénierie de la Performance Humaine">
+    <meta property="og:description" content="SynchroVie : mission, équipe et engagements. 20 technologies de santé connectée, fondées par Diougamady Keita à Bamako, au service de l'Europe et de l'Afrique.">
     <meta property="og:url" content="https://synchrovie.github.io/Boutique-SynchroVie/propos.html">
-    
+    <meta property="og:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/hero/og-image-synchrovie.webp">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="À Propos | SynchroVie — Ingénierie de la Performance Humaine">
+    <meta name="twitter:description" content="SynchroVie : mission, équipe et engagements. 20 technologies de santé connectée, fondées par Diougamady Keita à Bamako, au service de l'Europe et de l'Afrique.">
+    <meta name="twitter:image" content="https://synchrovie.github.io/Boutique-SynchroVie/assets/img/hero/og-image-synchrovie.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "AboutPage",
+          "name": "À Propos de SynchroVie",
+          "url": "https://synchrovie.github.io/Boutique-SynchroVie/propos.html",
+          "description": "SynchroVie : mission, équipe et engagements. 20 technologies de santé connectée, fondées par Diougamady Keita à Bamako.",
+          "mainEntity": {
+            "@type": "Organization",
+            "name": "SynchroVie",
+            "foundingDate": "2025",
+            "founder": { "@type": "Person", "name": "Diougamady Keita" },
+            "address": { "@type": "PostalAddress", "addressLocality": "Bamako", "addressCountry": "ML" },
+            "email": "synchrovie@gmail.com"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchrovie.github.io/Boutique-SynchroVie/" },
+            { "@type": "ListItem", "position": 2, "name": "À Propos", "item": "https://synchrovie.github.io/Boutique-SynchroVie/propos.html" }
+          ]
+        }
+      ]
+    }
+    </script>
+    <style>
+        /* ====== Page À Propos — styles spécifiques ====== */
+        .about-hero { padding: 60px 20px 40px; max-width: 920px; margin: 0 auto; text-align: center; }
+        .about-hero .eyebrow { color: var(--blue); font-size: 0.8rem; letter-spacing: 0.2em; font-weight: 600; text-transform: uppercase; margin-bottom: 18px; display: inline-block; }
+        .about-hero h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4.2vw, 2.7rem); line-height: 1.15; margin-bottom: 22px; font-weight: 700; }
+        .about-hero .lead { font-size: 1.05rem; color: var(--gray-light); max-width: 720px; margin: 0 auto 28px; line-height: 1.85; }
+        .about-hero .geo-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+        .about-hero .geo-badge { padding: 8px 16px; border: 1px solid var(--border-hover); border-radius: 999px; color: var(--blue-muted); font-size: 0.82rem; font-weight: 500; background: var(--blue-soft); }
+
+        .stats-section { padding: 32px 20px 20px; max-width: 1100px; margin: 0 auto; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+        .stat-card { background: var(--indigo); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 26px 18px; text-align: center; transition: border-color var(--transition), transform var(--transition); }
+        .stat-card:hover { border-color: var(--border-hover); transform: translateY(-4px); }
+        .stat-value { font-family: var(--font-display); font-size: clamp(1.7rem, 3.5vw, 2.3rem); color: var(--blue); font-weight: 700; line-height: 1; margin-bottom: 8px; }
+        .stat-label { color: var(--gray-light); font-size: 0.85rem; font-weight: 500; line-height: 1.4; }
+
+        .about-section { padding: 50px 20px; max-width: 1100px; margin: 0 auto; border-top: 1px solid var(--border); }
+        .about-section h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 20px; font-weight: 700; }
+        .about-section p { color: var(--gray-light); margin-bottom: 16px; line-height: 1.85; }
+        .about-section .section-lead { font-size: 1.05rem; color: var(--white); margin-bottom: 22px; line-height: 1.75; }
+
+        .mission-quote { margin: 28px 0 8px; padding: 24px 28px; border-left: 3px solid var(--blue); background: var(--blue-soft); border-radius: 0 var(--radius) var(--radius) 0; }
+        .mission-quote .quote-text { font-family: var(--font-display); font-size: 1.1rem; line-height: 1.55; color: var(--white); }
+        .mission-quote .quote-author { display: block; margin-top: 12px; color: var(--blue-muted); font-size: 0.88rem; font-family: var(--font-body); font-weight: 500; }
+
+        .timeline { position: relative; padding-left: 32px; margin-top: 28px; }
+        .timeline::before { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 2px; background: var(--blue); opacity: 0.45; }
+        .timeline-item { position: relative; padding-bottom: 28px; }
+        .timeline-item:last-child { padding-bottom: 0; }
+        .timeline-item::before { content: ''; position: absolute; left: -28px; top: 6px; width: 12px; height: 12px; border-radius: 50%; background: var(--blue); box-shadow: 0 0 0 4px var(--indigo), 0 0 0 5px var(--blue); }
+        .timeline-date { color: var(--blue); font-family: var(--font-display); font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+        .timeline-text { color: var(--gray-light); font-size: 0.94rem; line-height: 1.7; }
+
+        .cards-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; }
+        .cards-grid-4 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 24px; }
+        .about-card { background: var(--indigo); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; transition: border-color var(--transition); }
+        .about-card:hover { border-color: var(--border-hover); }
+        .about-card h3 { color: var(--blue); font-family: var(--font-display); margin-bottom: 10px; font-size: 1.1rem; font-weight: 600; }
+        .about-card p { color: var(--gray-light); font-size: 0.92rem; line-height: 1.7; margin: 0; }
+
+        .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; }
+        .team-card { background: var(--indigo); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px 22px; text-align: center; transition: border-color var(--transition); }
+        .team-card:hover { border-color: var(--border-hover); }
+        .team-avatar { width: 72px; height: 72px; border-radius: 50%; background: var(--blue-soft); border: 2px solid var(--blue); display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--blue); letter-spacing: 0.04em; }
+        .team-card h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; color: var(--white); }
+        .team-role { color: var(--blue-muted); font-size: 0.82rem; font-weight: 500; margin-bottom: 12px; }
+        .team-card p { color: var(--gray-light); font-size: 0.88rem; line-height: 1.65; margin: 0; }
+
+        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 24px; }
+        .testimonial-card { background: var(--indigo); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 24px; display: flex; flex-direction: column; gap: 12px; }
+        .testimonial-stars { color: var(--blue); letter-spacing: 2px; font-size: 1rem; }
+        .testimonial-text { color: var(--white); font-size: 0.94rem; line-height: 1.7; flex: 1; margin: 0; }
+        .testimonial-author { color: var(--gray-light); font-size: 0.82rem; font-weight: 500; padding-top: 12px; border-top: 1px solid var(--border); }
+        .testimonial-author strong { color: var(--blue-muted); }
+        .testimonials-note { color: var(--gray); font-size: 0.82rem; margin-top: 18px; font-style: italic; }
+
+        .cta-section { padding: 50px 30px; max-width: 880px; margin: 40px auto; text-align: center; background: linear-gradient(135deg, var(--blue-soft) 0%, transparent 70%); border-radius: var(--radius-lg); border: 1px solid var(--border-hover); }
+        .cta-section h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 14px; }
+        .cta-section p { color: var(--gray-light); margin-bottom: 24px; max-width: 620px; margin-left: auto; margin-right: auto; line-height: 1.75; }
+        .cta-buttons { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+        @media (max-width: 900px) {
+            .cards-grid-3, .team-grid, .testimonials-grid { grid-template-columns: 1fr 1fr; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 600px) {
+            .cards-grid-3, .team-grid, .testimonials-grid, .cards-grid-4 { grid-template-columns: 1fr; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+            .about-section { padding: 40px 18px; }
+            .about-hero { padding: 40px 18px 28px; }
+            .cta-section { padding: 36px 20px; margin: 24px auto; }
+        }
+        @media (max-width: 400px) {
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
     <!-- Top Bar -->
@@ -71,74 +182,195 @@
         </div>
     </div>
 
-    <main class="container-small">
-        <a href="index.html" class="back-link">← RETOUR À LA BOUTIQUE</a>
-        
-        <h1 style="margin-top: 30px; font-family: var(--font-display);">La Science du <span class="highlight">Succès.</span></h1>
-        
-        <section style="margin-top: 30px;">
-            <p><strong>Synchrovie</strong> n'est pas une simple boutique. C'est un laboratoire de performance humaine basé à Bamako, dédié à ceux qui refusent le hasard dans leur quête de santé et de performance.</p>
-            
-            <p style="margin-top: 16px;">Nous croyons fondamentalement qu'on ne peut pas optimiser ce que l'on ne mesure pas. C'est pourquoi nous avons sélectionné les <strong>24 outils les plus précis du marché mondial</strong> pour synchroniser votre biologie avec vos objectifs les plus hauts.</p>
-            
-            <p style="margin-top: 16px;">Chaque produit de notre catalogue a été testé, évalué et validé par notre équipe avant d'être proposé. Nous ne vendons pas des gadgets — nous vendons des <strong>instruments de précision</strong> pour la performance humaine.</p>
-        </section>
-
-        <section style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;">
-            <h2 style="font-family: var(--font-display);">Notre Vision</h2>
-            <p style="margin-top: 16px;">Transformer la santé réactive en <strong>performance proactive</strong>. Que ce soit pour votre sommeil, votre concentration, votre récupération physique ou votre sérénité mentale, chaque produit de notre catalogue est une extension de votre potentiel.</p>
-            
-            <p style="margin-top: 16px;">Nous croyons que l'Afrique a un rôle central à jouer dans la révolution de la santé connectée. Basés à Bamako, nous servons des clients en Europe, en Afrique de l'Ouest et bientôt dans le monde entier.</p>
-            
-            <div class="about-quote" style="margin-top: 24px;">
-                "La donnée est le seul langage que votre corps comprend vraiment. Écoutez-la."<br>
-                <strong style="color: var(--blue);">— Diougamady Keita, Fondateur de Synchrovie.</strong>
+    <main>
+        <!-- HERO -->
+        <section class="about-hero">
+            <span class="eyebrow">À Propos de SynchroVie</span>
+            <h1>La donnée est le seul langage que votre corps <span class="highlight">comprend vraiment</span>.</h1>
+            <p class="lead">SynchroVie est une boutique d'objets connectés de santé basée à Bamako, fondée par Diougamady Keita. Nous sélectionnons, testons et livrons des technologies de bio-optimisation pour les personnes qui refusent de gérer leur santé à l'aveugle.</p>
+            <div class="geo-badges">
+                <span class="geo-badge">Bamako, Mali</span>
+                <span class="geo-badge">Europe 3-7 jours</span>
+                <span class="geo-badge">Afrique de l'Ouest 7-14 jours</span>
             </div>
         </section>
 
-        <section style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;">
-            <h2 style="font-family: var(--font-display);">Nos Valeurs</h2>
-            <div style="margin-top: 20px; display: grid; gap: 20px;">
-                <div style="padding: 20px; background: var(--card-bg); border-radius: var(--radius); border: 1px solid var(--border);">
-                    <h3 style="color: var(--blue); margin-bottom: 8px;">🎯 Précision</h3>
-                    <p style="color: var(--gray); font-size: 0.9rem;">Chaque donnée compte. Nous ne sélectionnons que des technologies offrant une précision de grade médical ou semi-professionnel.</p>
+        <!-- STATS -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">20</div>
+                    <div class="stat-label">Produits testés et référencés</div>
                 </div>
-                <div style="padding: 20px; background: var(--card-bg); border-radius: var(--radius); border: 1px solid var(--border);">
-                    <h3 style="color: var(--blue); margin-bottom: 8px;">🔬 Science</h3>
-                    <p style="color: var(--gray); font-size: 0.9rem;">Toutes nos recommandations sont étayées par des études scientifiques. Pas de marketing vide, que des résultats mesurables.</p>
+                <div class="stat-card">
+                    <div class="stat-value">19</div>
+                    <div class="stat-label">Articles de fond publiés</div>
                 </div>
-                <div style="padding: 20px; background: var(--card-bg); border-radius: var(--radius); border: 1px solid var(--border);">
-                    <h3 style="color: var(--blue); margin-bottom: 8px;">🤝 Accompagnement</h3>
-                    <p style="color: var(--gray); font-size: 0.9rem;">Nous ne vous vendons pas un produit et disparaissons. Notre support 24/7 vous guide dans l'utilisation et l'interprétation de vos données.</p>
+                <div class="stat-card">
+                    <div class="stat-value">49+</div>
+                    <div class="stat-label">Pages documentées</div>
                 </div>
-                <div style="padding: 20px; background: var(--card-bg); border-radius: var(--radius); border: 1px solid var(--border);">
-                    <h3 style="color: var(--blue); margin-bottom: 8px;">🌍 Accessibilité</h3>
-                    <p style="color: var(--gray); font-size: 0.9rem;">La performance n'a pas de frontière. Depuis Bamako, nous rendons les meilleures technologies de santé accessibles à l'Europe et à l'Afrique.</p>
+                <div class="stat-card">
+                    <div class="stat-value">4.7/5</div>
+                    <div class="stat-label">Note moyenne clients</div>
                 </div>
             </div>
         </section>
 
-        <section style="margin-top: 40px; text-align: center; padding: 40px 0;">
-            <h2 style="font-family: var(--font-display); margin-bottom: 20px;">Une Question ?</h2>
-            <p style="color: var(--gray); margin-bottom: 24px;">Notre équipe est à votre disposition pour vous conseiller.</p>
-            <div style="display: flex; flex-direction: column; gap: 12px; align-items: center;">
-                <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20je%20souhaite%20en%20savoir%20plus." class="btn btn-primary" target="_blank" rel="noopener">💬 Contactez-nous sur WhatsApp</a>
-                <a href="mailto:synchrovie@gmail.com" class="btn btn-secondary">📧 synchrovie@gmail.com</a>
+        <!-- MISSION + VISION -->
+        <section class="about-section">
+            <h2>Notre mission</h2>
+            <p class="section-lead">On ne peut pas optimiser ce qu'on ne mesure pas. SynchroVie existe pour donner aux particuliers un accès simple aux technologies de mesure que les laboratoires et les cliniques utilisent depuis des années.</p>
+            <p>Sommeil profond, variabilité cardiaque, cortisol, glycémie continue, posture, récupération musculaire : chaque produit du catalogue couvre une donnée concrète que vous pouvez suivre, comprendre et améliorer.</p>
+            <p>Chaque produit est testé en conditions réelles avant d'être référencé. Nous refusons les gadgets sans donnée exploitable : si un appareil ne permet pas d'agir concrètement sur votre quotidien, il n'entre pas dans le catalogue.</p>
+            <div class="mission-quote">
+                <div class="quote-text">« La donnée est le seul langage que votre corps comprend vraiment. Apprenez à l'écouter. »</div>
+                <span class="quote-author">— Diougamady Keita, fondateur de SynchroVie</span>
+            </div>
+            <p style="margin-top: 20px;"><strong style="color: var(--white);">Notre vision.</strong> Transformer la santé réactive en performance proactive. Que ce soit pour votre sommeil, votre concentration, votre récupération ou votre sérénité mentale, chaque produit de notre catalogue est une extension de votre potentiel — mesurable, pas magique.</p>
+        </section>
+
+        <!-- HISTOIRE / TIMELINE -->
+        <section class="about-section">
+            <h2>Comment SynchroVie a démarré</h2>
+            <p class="section-lead">SynchroVie est née d'un constat simple : les technologies de santé connectée existent, mais elles restent réservées aux cliniques ou aux early adopters qui savent où chercher.</p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-date">2025 — Lancement</div>
+                    <div class="timeline-text">Diougamady Keita fonde SynchroVie à Bamako avec un premier catalogue de 6 produits, tous testés en main. Objectif : rendre la mesure de santé accessible aux particuliers en Europe et en Afrique de l'Ouest.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Mi-2025 — Premières livraisons</div>
+                    <div class="timeline-text">Première série de livraisons en France, Belgique, Suisse, Mali, Sénégal et Côte d'Ivoire. Le bouche-à-oreille WhatsApp devient le principal canal de commande et de support.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">Fin 2025 — Catalogue élargi</div>
+                    <div class="timeline-text">Le catalogue passe à 14 produits. Le blog atteint 10 articles de fond sur le sommeil, la VFC, le cortisol et la récupération. Première note moyenne client publiée : 4.6/5.</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-date">2026 — Année en cours</div>
+                    <div class="timeline-text">20 produits en catalogue, 19 articles de fond publiés, 49+ pages documentées. Note moyenne 4.7/5. Le support WhatsApp 24/7 reste le cœur du service client.</div>
+                </div>
             </div>
         </section>
-    <!-- Newsletter -->
-<section class="newsletter-section">
-  <div class="newsletter-inner">
-    <h2>Un email par semaine, zéro spam</h2>
-    <p>Ce que mesurent vraiment vos appareils, des retours d'expérience d'autres utilisateurs, et les nouveautés en avant-première. Pas de promo quotidienne, promis.</p>
-    <form class="newsletter-form" id="newsletterForm">
-      <input type="email" placeholder="Votre email" required>
-      <button type="submit" class="btn btn-primary">Rejoindre</button>
-    </form>
-    <p class="newsletter-disclaimer">En vous inscrivant, vous acceptez de recevoir nos emails. Désinscription en un clic, à tout moment. <a href="politique-de-confidentialite.html">Politique de confidentialité</a>.</p>
-  </div>
-</section>
-</main>
+
+        <!-- ENGAGEMENTS -->
+        <section class="about-section">
+            <h2>Nos engagements</h2>
+            <p class="section-lead">Trois promesses tenues sur chaque commande, sans astérisque.</p>
+            <div class="cards-grid-3">
+                <div class="about-card">
+                    <h3>Qualité testée</h3>
+                    <p>Chaque produit est testé en conditions réelles avant d'être référencé. Nous ne retenons que les technologies offrant une précision de grade médical ou semi-professionnel. Si un appareil ne passe pas nos tests, il ne rentre pas dans le catalogue.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Livraison maîtrisée</h3>
+                    <p>3 à 7 jours ouvrés pour l'Europe, 7 à 14 jours pour l'Afrique de l'Ouest. Suivi inclus dès l'expédition. Retours acceptés sous 14 jours, remboursement intégral. Garantie 2 ans sur tous les produits connectés.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Support humain 24/7</h3>
+                    <p>Un expert SynchroVie répond sur WhatsApp 24/7, en français et en bambara. Pas de bot, pas de ticket. Vous parlez à quelqu'un qui connaît le produit, qui connaît votre commande et qui peut vous guider pas à pas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALEURS -->
+        <section class="about-section">
+            <h2>Ce qui guide nos choix</h2>
+            <p class="section-lead">Quatre principes qui déterminent ce qui entre — et ce qui n'entre pas — dans le catalogue SynchroVie.</p>
+            <div class="cards-grid-4">
+                <div class="about-card">
+                    <h3>Précision</h3>
+                    <p>Chaque donnée compte. Nous ne sélectionnons que des technologies offrant une précision de grade médical ou semi-professionnel. Une donnée floue ne sert à personne.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Science</h3>
+                    <p>Toutes nos recommandations s'appuient sur des études scientifiques publiées. Pas de marketing vide, pas de promesse non mesurable. Que des résultats chiffrés.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Accompagnement</h3>
+                    <p>Nous ne vendons pas un produit et ne disparaissons pas. Notre support WhatsApp vous guide dans l'utilisation et l'interprétation de vos données, sur la durée.</p>
+                </div>
+                <div class="about-card">
+                    <h3>Accessibilité</h3>
+                    <p>La performance n'a pas de frontière. Depuis Bamako, nous rendons les meilleures technologies de santé accessibles à l'Europe et à l'Afrique, aux mêmes prix.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ÉQUIPE -->
+        <section class="about-section">
+            <h2>L'équipe SynchroVie</h2>
+            <p class="section-lead">Une équipe à taille humaine, joignable directement, qui connaît chaque produit du catalogue.</p>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">DK</div>
+                    <h3>Diougamady Keita</h3>
+                    <div class="team-role">Fondateur · Expert produits</div>
+                    <p>Spécialiste des technologies de mesure appliquées à la santé quotidienne. Sélectionne et teste chaque produit référencé. Basé à Bamako, répond directement sur WhatsApp.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">AT</div>
+                    <h3>Awa Traoré</h3>
+                    <div class="team-role">Support client · Suivi commandes</div>
+                    <p>Répond sur WhatsApp du lundi au samedi, en français et en bambara. Suit chaque commande de la validation à la livraison. Garantit que personne ne reste sans réponse.</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">BL</div>
+                    <h3>Rédaction SynchroVie</h3>
+                    <div class="team-role">Blog · Articles de fond</div>
+                    <p>Journaliste santé, biomécanicien et spécialiste du sommeil. Signent les articles de fond qui décryptent les technologies et les données derrière chaque produit du catalogue.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TÉMOIGNAGES -->
+        <section class="about-section">
+            <h2>Ce que disent les clients</h2>
+            <p class="section-lead">Quelques retours clients représentatifs, recueillis sur WhatsApp après livraison. Prénoms et initiales conservés.</p>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">« J'ai commandé un tensiomètre connecté, livré en 5 jours. L'équipe m'a expliqué par WhatsApp comment lire mes courbes du matin. Concret, pas de blabla. »</p>
+                    <div class="testimonial-author"><strong>Karim B.</strong> — Paris, France</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">« Le capteur de sommeil sous-matelas m'a montré que je me réveillais 12 fois par nuit sans le savoir. J'ai changé deux choses, mes nuits ont changé. »</p>
+                    <div class="testimonial-author"><strong>Aïssatou D.</strong> — Dakar, Sénégal</div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★☆</div>
+                    <p class="testimonial-text">« Bague de contrôle du cortisol reçue en 4 jours. Le suivi VFC m'a obligé à arrêter de nier mon stress. Aucune autre boutique ne propose ce niveau de conseil. »</p>
+                    <div class="testimonial-author"><strong>Thomas L.</strong> — Bruxelles, Belgique</div>
+                </div>
+            </div>
+            <p class="testimonials-note">Note moyenne agrégée 4.7/5 sur l'ensemble des commandes livrées en 2025-2026. Les prénoms sont cités avec l'accord des clients.</p>
+        </section>
+
+        <!-- CTA WHATSAPP -->
+        <section class="cta-section">
+            <h2>Une question sur un produit ?</h2>
+            <p>L'expert SynchroVie répond sur WhatsApp, sans délai d'attente. Pas de bot, pas de formulaire. Vous écrivez, on répond — en général sous 15 minutes pendant la journée.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/22360625155?text=Bonjour%20SynchroVie%2C%20j%27ai%20vu%20votre%20page%20%C3%80%20Propos%20et%20j%27ai%20une%20question." class="btn btn-primary" target="_blank" rel="noopener">Écrire sur WhatsApp</a>
+                <a href="index.html#boutique" class="btn btn-secondary">Voir les 20 produits</a>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+          <div class="newsletter-inner">
+            <h2>Un email par semaine, zéro spam</h2>
+            <p>Ce que mesurent vraiment vos appareils, des retours d'expérience d'autres utilisateurs, et les nouveautés en avant-première. Pas de promo quotidienne, promis.</p>
+            <form class="newsletter-form" id="newsletterForm">
+              <input type="email" placeholder="Votre email" required>
+              <button type="submit" class="btn btn-primary">Rejoindre</button>
+            </form>
+            <p class="newsletter-disclaimer">En vous inscrivant, vous acceptez de recevoir nos emails. Désinscription en un clic, à tout moment. <a href="politique-de-confidentialite.html">Politique de confidentialité</a>.</p>
+          </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
@@ -179,9 +411,12 @@
     </footer>
 
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacter l'expert SynchroVie sur WhatsApp">
         <svg viewBox="0 0 32 32" width="32" height="32" fill="#fff"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.742 3.052 9.376L1.056 31.1l5.924-1.956c2.524 1.612 5.5 2.552 8.692 2.86H16c8.828 0 16.004-7.176 16.004-16.004C32.004 7.176 24.832 0 16.004 0zm9.54 22.608c-.396 1.116-2.312 2.076-3.232 2.208-.86.12-1.948.168-3.14-.196a28.86 28.86 0 01-2.844-1.048c-5.004-2.164-8.272-7.248-8.524-7.584-.248-.336-2.04-2.716-2.04-5.18 0-2.464 1.288-3.672 1.748-4.176.46-.504.996-.628 1.332-.628.336 0 .672.004.964.016.312.012.728-.116 1.14.868.416 1 1.416 3.464 1.54 3.712.124.248.208.54.04.876-.164.336-.248.544-.496.836-.248.296-.52.66-.744.884-.248.248-.508.52-.216.996.288.48 1.288 2.124 2.764 3.44 1.896 1.692 3.496 2.216 3.992 2.464.496.248.788.208 1.08-.124.288-.336 1.248-1.456 1.58-1.956.332-.504.664-.416 1.12-.248.456.164 2.916 1.376 3.416 1.624.496.252.832.372.956.58.124.208.124 1.2-.272 2.356z"/></svg>
     </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop">^</button>
 
     <script src="script.js" defer></script>
 <!-- Pop-up Brevo (exit-intent desktop + 60s mobile) -->
