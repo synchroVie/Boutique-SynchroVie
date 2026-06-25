@@ -35,7 +35,23 @@ jobs:
         run: |
           mkdir -p /tmp/seo-audit
           
-          python3 << 'EOF' > /tmp/seo-audit/results.txt
+          # Déterminer le domaine actif (synchro-vie.com ou fallback synchrovie.github.io)
+          LIVE_DOMAIN="https://synchro-vie.com/"
+          HTTP_TEST=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 10 "$LIVE_DOMAIN" || echo "000")
+          if [ "$HTTP_TEST" != "200" ]; then
+            echo "⚠️ synchro-vie.com non accessible (HTTP $HTTP_TEST). Utilisation fallback synchrovie.github.io"
+            LIVE_DOMAIN="https://synchrovie.github.io/Boutique-SynchroVie/"
+            SITEMAP_URL="${LIVE_DOMAIN}sitemap.xml"
+          else
+            SITEMAP_URL="${LIVE_DOMAIN}sitemap.xml"
+          fi
+          echo "Domaine live : $LIVE_DOMAIN"
+          echo "Sitemap URL : $SITEMAP_URL"
+          
+          # Télécharger le sitemap
+          curl -s -L --max-time 30 "$SITEMAP_URL" -o /tmp/sitemap.xml
+          
+          python3 << 'PYEOF' > /tmp/seo-audit/results.txt
           import os
           import re
           import json
@@ -46,7 +62,6 @@ jobs:
           import xml.etree.ElementTree as ET
 
           ROOT = Path('.')
-          BASE_URL = "https://synchro-vie.com/"
           
           ctx = ssl.create_default_context()
           ctx.check_hostname = False
@@ -67,16 +82,32 @@ jobs:
               'summary': {}
           }
 
-          # 1. Sitemap
+          # 1. Sitemap (local file d'abord, fallback distant)
           sitemap_path = ROOT / 'sitemap.xml'
           if sitemap_path.exists():
-              tree = ET.parse(sitemap_path)
-              ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
-              urls = [u.find('sm:loc', ns).text for u in tree.getroot().findall('sm:url', ns)]
-              results['sitemap_urls'] = urls
-              print(f"Sitemap: {len(urls)} URLs")
-          else:
-              print("⚠️ sitemap.xml manquant!")
+              try:
+                  tree = ET.parse(sitemap_path)
+                  ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+                  urls = [u.find('sm:loc', ns).text for u in tree.getroot().findall('sm:url', ns)]
+                  results['sitemap_urls'] = urls
+                  print(f"Sitemap (local): {len(urls)} URLs")
+              except Exception as e:
+                  print(f"⚠️ Erreur sitemap local: {e}")
+          
+          # Alternative : charger sitemap distant si local vide
+          if not results['sitemap_urls']:
+              sitemap_dist_url = os.environ.get('SITEMAP_URL', 'https://synchro-vie.com/sitemap.xml')
+              try:
+                  req = urllib.request.Request(sitemap_dist_url, headers={'User-Agent': 'Mozilla/5.0'})
+                  with urllib.request.urlopen(req, context=ctx, timeout=30) as r:
+                      sitemap_content = r.read()
+                  tree = ET.fromstring(sitemap_content)
+                  ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+                  urls = [u.find('sm:loc', ns).text for u in tree.findall('sm:url', ns)]
+                  results['sitemap_urls'] = urls
+                  print(f"Sitemap (distant): {len(urls)} URLs")
+              except Exception as e:
+                  print(f"⚠️ Erreur sitemap distant: {e}")
 
           # 2. HTTP check des URLs sitemap
           print("\n=== Vérification HTTP 200 ===")
@@ -93,7 +124,7 @@ jobs:
 
           print(f"HTTP 200: {results['http_check']['ok']}/{len(results['sitemap_urls'])}")
 
-          # 3. Audit des fichiers HTML
+          # 3. Audit des fichiers HTML locaux
           print("\n=== Audit fichiers HTML ===")
           html_files = (
               list(ROOT.glob('*.html')) +
@@ -174,19 +205,17 @@ jobs:
                       src = src_match.group(1) if src_match else '?'
                       results['images_missing_alt'].append(f'{rel_path}: img sans alt ({src[:50]})')
 
-          # 4. Broken internal links
+          # 4. Broken internal links (vérifier que les fichiers locaux existent)
           print("\n=== Vérification liens internes cassés ===")
           for html_file in html_files:
               rel_path = str(html_file.relative_to(ROOT))
               content = html_file.read_text(encoding='utf-8')
               
-              # Liens relatifs (href="xxx.html" ou href="../xxx.html")
               links = re.findall(r'href="([^"]+\.html)"', content)
               for link in links:
                   if link.startswith('http'):
                       continue
                   
-                  # Résoudre chemin
                   if link.startswith('../'):
                       target = (html_file.parent / link).resolve()
                   else:
@@ -256,7 +285,7 @@ jobs:
           # Sauvegarder JSON
           with open('/tmp/seo-audit/results.json', 'w') as f:
               json.dump(results, f, indent=2, ensure_ascii=False)
-          EOF
+          PYEOF
 
           cat /tmp/seo-audit/results.txt
 
