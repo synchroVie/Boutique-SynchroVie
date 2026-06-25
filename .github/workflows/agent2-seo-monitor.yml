@@ -1,8 +1,7 @@
-name: Agent 2 — SEO Monitor (sitemap check + rapport)
+name: Agent 2 — SEO Monitor V2 (sitemap + audit SEO + rapport)
 
-# Déclencheur : chaque jour à 8h UTC (= 8h Bamako) + manuel
-# Version sans OAuth Google (l'utilisateur n'a pas de carte compatible)
-# Mode : vérification technique + rapport + demande screenshot GSC hebdo
+# Déclencheur : chaque jour à 8h UTC + manuel
+# Version 2 : audit SEO complet + vérification canonical + broken links + meta tags
 on:
   schedule:
     - cron: '0 8 * * *'
@@ -26,108 +25,396 @@ jobs:
           echo "today=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
           echo "timestamp=$(date -u +%Y-%m-%dT%H:%M:%SZ)" >> $GITHUB_OUTPUT
 
-      - name: Check sitemap URLs (HTTP 200)
-        id: sitemap
+      - name: Install Python deps
         run: |
-          set -e
-          # Télécharger le sitemap
-          SITEMAP_URL="https://synchrovie.github.io/Boutique-SynchroVie/sitemap.xml"
-          curl -s "$SITEMAP_URL" -o /tmp/sitemap.xml
+          python3 -m pip install --upgrade pip
+          pip install requests beautifulsoup4 lxml
 
-          # Compter et vérifier les URLs
-          TOTAL=$(python3 -c "
+      - name: Comprehensive SEO audit
+        id: audit
+        run: |
+          mkdir -p /tmp/seo-audit
+          
+          python3 << 'EOF' > /tmp/seo-audit/results.txt
+          import os
+          import re
+          import json
+          from pathlib import Path
+          from urllib.parse import urlparse
+          import urllib.request
+          import ssl
           import xml.etree.ElementTree as ET
-          tree = ET.parse('/tmp/sitemap.xml')
-          ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
-          urls = [u.find('sm:loc', ns).text for u in tree.getroot().findall('sm:url', ns)]
-          print(len(urls))
-          ")
 
-          echo "total_urls=$TOTAL" >> $GITHUB_OUTPUT
-          echo "📊 Total URLs dans sitemap: $TOTAL"
-
-          # Vérifier chaque URL
-          python3 << 'EOF' > /tmp/url-check-results.txt
-          import xml.etree.ElementTree as ET
-          import urllib.request, ssl
+          ROOT = Path('.')
+          BASE_URL = "https://synchro-vie.com/"
+          
           ctx = ssl.create_default_context()
           ctx.check_hostname = False
           ctx.verify_mode = ssl.CERT_NONE
 
-          tree = ET.parse('/tmp/sitemap.xml')
-          ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
-          urls = [u.find('sm:loc', ns).text for u in tree.getroot().findall('sm:url', ns)]
+          results = {
+              'sitemap_urls': [],
+              'http_check': {'ok': 0, 'errors': []},
+              'canonical_issues': [],
+              'meta_issues': [],
+              'h1_issues': [],
+              'og_issues': [],
+              'broken_internal_links': [],
+              'emails_to_fix': [],
+              'old_domain_refs': [],
+              'jsonld_invalid': [],
+              'images_missing_alt': [],
+              'summary': {}
+          }
 
-          ok = 0
-          errors = []
-          for url in urls:
+          # 1. Sitemap
+          sitemap_path = ROOT / 'sitemap.xml'
+          if sitemap_path.exists():
+              tree = ET.parse(sitemap_path)
+              ns = {'sm': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+              urls = [u.find('sm:loc', ns).text for u in tree.getroot().findall('sm:url', ns)]
+              results['sitemap_urls'] = urls
+              print(f"Sitemap: {len(urls)} URLs")
+          else:
+              print("⚠️ sitemap.xml manquant!")
+
+          # 2. HTTP check des URLs sitemap
+          print("\n=== Vérification HTTP 200 ===")
+          for url in results['sitemap_urls']:
               try:
                   req = urllib.request.Request(url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0'})
                   with urllib.request.urlopen(req, context=ctx, timeout=15) as r:
                       if r.status == 200:
-                          ok += 1
+                          results['http_check']['ok'] += 1
                       else:
-                          errors.append(f'[{r.status}] {url}')
+                          results['http_check']['errors'].append(f'[{r.status}] {url}')
               except Exception as e:
-                  errors.append(f'[ERR] {url}: {str(e)[:80]}')
+                  results['http_check']['errors'].append(f'[ERR] {url}: {str(e)[:80]}')
 
-          print(f'OK: {ok}/{len(urls)}')
-          if errors:
-              print('Errors:')
-              for e in errors:
-                  print(f'  {e}')
+          print(f"HTTP 200: {results['http_check']['ok']}/{len(results['sitemap_urls'])}")
+
+          # 3. Audit des fichiers HTML
+          print("\n=== Audit fichiers HTML ===")
+          html_files = (
+              list(ROOT.glob('*.html')) +
+              list(ROOT.glob('produits/*.html')) +
+              list(ROOT.glob('blog/*.html'))
+          )
+
+          for html_file in html_files:
+              rel_path = str(html_file.relative_to(ROOT))
+              content = html_file.read_text(encoding='utf-8')
+              
+              # Canonical
+              canonical_match = re.search(r'<link\s+rel="canonical"\s+href="([^"]+)"', content)
+              if not canonical_match:
+                  results['canonical_issues'].append(f'{rel_path}: canonical MANQUANT')
+              else:
+                  canonical = canonical_match.group(1)
+                  if 'synchrovie.github.io' in canonical:
+                      results['canonical_issues'].append(f'{rel_path}: ancien domaine ({canonical})')
+              
+              # Title length
+              title_match = re.search(r'<title>([^<]+)</title>', content)
+              if title_match:
+                  title_len = len(title_match.group(1))
+                  if title_len > 70:
+                      results['meta_issues'].append(f'{rel_path}: title trop long ({title_len} car.)')
+                  elif title_len < 30:
+                      results['meta_issues'].append(f'{rel_path}: title trop court ({title_len} car.)')
+              else:
+                  results['meta_issues'].append(f'{rel_path}: title MANQUANT')
+              
+              # Meta description
+              desc_match = re.search(r'<meta\s+name="description"\s+content="([^"]+)"', content)
+              if desc_match:
+                  desc_len = len(desc_match.group(1))
+                  if desc_len > 170:
+                      results['meta_issues'].append(f'{rel_path}: description trop longue ({desc_len} car.)')
+                  elif desc_len < 120:
+                      results['meta_issues'].append(f'{rel_path}: description trop courte ({desc_len} car.)')
+              else:
+                  results['meta_issues'].append(f'{rel_path}: meta description MANQUANTE')
+              
+              # H1
+              h1_count = len(re.findall(r'<h1[^>]*>', content))
+              if h1_count == 0:
+                  results['h1_issues'].append(f'{rel_path}: 0 H1')
+              elif h1_count > 1:
+                  results['h1_issues'].append(f'{rel_path}: {h1_count} H1 (doit être 1)')
+              
+              # Open Graph
+              og_keys = ['og:title', 'og:description', 'og:url', 'og:image']
+              for key in og_keys:
+                  if f'property="{key}"' not in content:
+                      results['og_issues'].append(f'{rel_path}: {key} MANQUANT')
+              
+              # Email ancien
+              if 'synchrovie@gmail.com' in content:
+                  results['emails_to_fix'].append(f'{rel_path}: contient encore synchrovie@gmail.com')
+              
+              # Ancien domaine
+              if 'synchrovie.github.io/Boutique-SynchroVie' in content:
+                  count = content.count('synchrovie.github.io/Boutique-SynchroVie')
+                  results['old_domain_refs'].append(f'{rel_path}: {count} référence(s) ancien domaine')
+              
+              # JSON-LD validation
+              jsonld_blocks = re.findall(r'<script\s+type="application/ld\+json">(.+?)</script>', content, re.DOTALL)
+              for i, block in enumerate(jsonld_blocks):
+                  try:
+                      json.loads(block.strip())
+                  except json.JSONDecodeError as e:
+                      results['jsonld_invalid'].append(f'{rel_path}: bloc {i+1} invalide - {str(e)[:50]}')
+              
+              # Images sans alt
+              img_tags = re.findall(r'<img[^>]+>', content)
+              for img in img_tags:
+                  if 'alt=' not in img:
+                      src_match = re.search(r'src="([^"]+)"', img)
+                      src = src_match.group(1) if src_match else '?'
+                      results['images_missing_alt'].append(f'{rel_path}: img sans alt ({src[:50]})')
+
+          # 4. Broken internal links
+          print("\n=== Vérification liens internes cassés ===")
+          for html_file in html_files:
+              rel_path = str(html_file.relative_to(ROOT))
+              content = html_file.read_text(encoding='utf-8')
+              
+              # Liens relatifs (href="xxx.html" ou href="../xxx.html")
+              links = re.findall(r'href="([^"]+\.html)"', content)
+              for link in links:
+                  if link.startswith('http'):
+                      continue
+                  
+                  # Résoudre chemin
+                  if link.startswith('../'):
+                      target = (html_file.parent / link).resolve()
+                  else:
+                      target = (html_file.parent / link).resolve()
+                  
+                  if not target.exists():
+                      results['broken_internal_links'].append(f'{rel_path}: lien cassé → {link}')
+
+          # 5. Résumé
+          results['summary'] = {
+              'total_files_audited': len(html_files),
+              'total_sitemap_urls': len(results['sitemap_urls']),
+              'http_200_count': results['http_check']['ok'],
+              'canonical_issues_count': len(results['canonical_issues']),
+              'meta_issues_count': len(results['meta_issues']),
+              'h1_issues_count': len(results['h1_issues']),
+              'og_issues_count': len(results['og_issues']),
+              'broken_links_count': len(results['broken_internal_links']),
+              'emails_to_fix_count': len(results['emails_to_fix']),
+              'old_domain_refs_count': len(results['old_domain_refs']),
+              'jsonld_invalid_count': len(results['jsonld_invalid']),
+              'images_missing_alt_count': len(results['images_missing_alt']),
+          }
+
+          print("\n" + "=" * 60)
+          print("RÉSUMÉ AUDIT SEO V2")
+          print("=" * 60)
+          for key, value in results['summary'].items():
+              print(f"  {key}: {value}")
+
+          print("\n=== CANONICAL ISSUES ===")
+          for issue in results['canonical_issues'][:10]:
+              print(f"  {issue}")
+
+          print("\n=== META ISSUES ===")
+          for issue in results['meta_issues'][:10]:
+              print(f"  {issue}")
+
+          print("\n=== H1 ISSUES ===")
+          for issue in results['h1_issues'][:10]:
+              print(f"  {issue}")
+
+          print("\n=== OG ISSUES ===")
+          for issue in results['og_issues'][:10]:
+              print(f"  {issue}")
+
+          print("\n=== BROKEN LINKS ===")
+          for issue in results['broken_internal_links'][:10]:
+              print(f"  {issue}")
+
+          print("\n=== EMAILS À CORRIGER ===")
+          for issue in results['emails_to_fix'][:10]:
+              print(f"  {issue}")
+
+          print("\n=== ANCIEN DOMAINE RESTANT ===")
+          for issue in results['old_domain_refs'][:10]:
+              print(f"  {issue}")
+
+          print("\n=== JSON-LD INVALIDES ===")
+          for issue in results['jsonld_invalid'][:10]:
+              print(f"  {issue}")
+
+          print("\n=== IMAGES SANS ALT ===")
+          for issue in results['images_missing_alt'][:10]:
+              print(f"  {issue}")
+
+          # Sauvegarder JSON
+          with open('/tmp/seo-audit/results.json', 'w') as f:
+              json.dump(results, f, indent=2, ensure_ascii=False)
           EOF
 
-          cat /tmp/url-check-results.txt
+          cat /tmp/seo-audit/results.txt
 
       - name: Ping Google & Bing for sitemap refresh
         run: |
-          SITEMAP_URL="https://synchrovie.github.io/Boutique-SynchroVie/sitemap.xml"
-          # Google ping (legacy mais encore accepté)
+          SITEMAP_URL="https://synchro-vie.com/sitemap.xml"
           GOOGLE_PING=$(curl -s -o /dev/null -w "%{http_code}" "https://www.google.com/ping?sitemap=${SITEMAP_URL}")
-          # Bing ping
           BING_PING=$(curl -s -o /dev/null -w "%{http_code}" "https://www.bing.com/ping?sitemap=${SITEMAP_URL}")
           echo "Google ping: $GOOGLE_PING"
           echo "Bing ping: $BING_PING"
 
-      - name: Generate SEO report
+      - name: Check new domain DNS propagation
+        run: |
+          echo "=== Vérification DNS synchro-vie.com ==="
+          # Vérifier que le domaine résout
+          DIG_RESULT=$(dig +short synchro-vie.com A 2>/dev/null || echo "dig indisponible")
+          echo "DNS A records: $DIG_RESULT"
+          
+          # HTTP check du nouveau domaine
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 10 "https://synchro-vie.com/" || echo "inaccessible")
+          echo "HTTP synchro-vie.com: $HTTP_CODE"
+
+      - name: Generate SEO report V2
         run: |
           mkdir -p seo-reports
           DATE="${{ steps.date.outputs.today }}"
-
-          {
-            echo "# Rapport SEO Quotidien — SynchroVie"
-            echo ""
-            echo "**Date** : ${DATE}"
-            echo "**Timestamp** : ${{ steps.date.outputs.timestamp }}"
-            echo ""
-            echo "## État technique du sitemap"
-            echo ""
-            echo "- Total URLs : ${{ steps.sitemap.outputs.total_urls }}"
-            echo "- Vérification HTTP 200 :"
-            echo ""
-            echo '```'
-            cat /tmp/url-check-results.txt
-            echo '```'
-            echo ""
-            echo "## Pings moteurs de recherche"
-            echo ""
-            echo "- Google sitemap ping envoyé"
-            echo "- Bing sitemap ping envoyé"
-            echo ""
-            echo "## Données GSC (à remplir manuellement par l'utilisateur)"
-            echo ""
-            echo "> L'utilisateur doit envoyer un screenshot de GSC > Indexation des pages"
-            echo "> à l'assistant GLM pour analyse hebdomadaire."
-            echo ""
-            echo "## Actions recommandées"
-            echo ""
-            echo "- [ ] Demander indexation manuelle de 10 URLs dans GSC (limite quotidienne)"
-            echo "- [ ] Vérifier GSC > Performance > Pays source (France, Mali, etc.)"
-            echo "- [ ] Si stagnation > 2 semaines : créer backlinks Medium/Quora"
-            echo "- [ ] Vérifier si Google a crawl les dernières modifications (GSC > Couverture)"
-          } > "seo-reports/${DATE}.md"
-
+          
+          python3 << 'EOF' > /tmp/report-content.md
+          import json
+          with open('/tmp/seo-audit/results.json') as f:
+              data = json.load(f)
+          
+          print(f"# Rapport SEO V2 — SynchroVie")
+          print()
+          print(f"**Date** : $(date -u +%Y-%m-%d)")
+          print(f"**Domaine** : https://synchro-vie.com/")
+          print()
+          print(f"## État technique")
+          print()
+          print(f"- Total URLs sitemap : {data['summary']['total_sitemap_urls']}")
+          print(f"- URLs en HTTP 200 : {data['summary']['http_200_count']}/{data['summary']['total_sitemap_urls']}")
+          print(f"- Fichiers HTML audités : {data['summary']['total_files_audited']}")
+          print()
+          print(f"## Anomalies détectées")
+          print()
+          print(f"| Catégorie | Nombre |")
+          print(f"|---|---|")
+          print(f"| Canonicals | {data['summary']['canonical_issues_count']} |")
+          print(f"| Meta tags (title/desc) | {data['summary']['meta_issues_count']} |")
+          print(f"| H1 manquants/multiples | {data['summary']['h1_issues_count']} |")
+          print(f"| Open Graph manquants | {data['summary']['og_issues_count']} |")
+          print(f"| Liens internes cassés | {data['summary']['broken_links_count']} |")
+          print(f"| Emails à corriger | {data['summary']['emails_to_fix_count']} |")
+          print(f"| Ancien domaine restant | {data['summary']['old_domain_refs_count']} |")
+          print(f"| JSON-LD invalides | {data['summary']['jsonld_invalid_count']} |")
+          print(f"| Images sans alt | {data['summary']['images_missing_alt_count']} |")
+          print()
+          
+          if data['http_check']['errors']:
+              print(f"## Erreurs HTTP")
+              print()
+              for err in data['http_check']['errors'][:10]:
+                  print(f"- {err}")
+              print()
+          
+          if data['canonical_issues']:
+              print(f"## Canonicals à corriger")
+              print()
+              for issue in data['canonical_issues'][:10]:
+                  print(f"- {issue}")
+              print()
+          
+          if data['meta_issues']:
+              print(f"## Meta tags à corriger")
+              print()
+              for issue in data['meta_issues'][:15]:
+                  print(f"- {issue}")
+              print()
+          
+          if data['h1_issues']:
+              print(f"## H1 à corriger")
+              print()
+              for issue in data['h1_issues'][:10]:
+                  print(f"- {issue}")
+              print()
+          
+          if data['og_issues']:
+              print(f"## Open Graph manquants")
+              print()
+              for issue in data['og_issues'][:15]:
+                  print(f"- {issue}")
+              print()
+          
+          if data['broken_internal_links']:
+              print(f"## Liens internes cassés")
+              print()
+              for issue in data['broken_internal_links'][:15]:
+                  print(f"- {issue}")
+              print()
+          
+          if data['old_domain_refs']:
+              print(f"## ⚠️ Ancien domaine restant")
+              print()
+              for issue in data['old_domain_refs'][:10]:
+                  print(f"- {issue}")
+              print()
+          
+          if data['emails_to_fix']:
+              print(f"## ⚠️ Emails à corriger")
+              print()
+              for issue in data['emails_to_fix'][:10]:
+                  print(f"- {issue}")
+              print()
+          
+          if data['jsonld_invalid']:
+              print(f"## JSON-LD invalides")
+              print()
+              for issue in data['jsonld_invalid'][:10]:
+                  print(f"- {issue}")
+              print()
+          
+          if data['images_missing_alt']:
+              print(f"## Images sans alt")
+              print()
+              for issue in data['images_missing_alt'][:10]:
+                  print(f"- {issue}")
+              print()
+          
+          print(f"## Score SEO estimé")
+          print()
+          # Calcul score
+          score = 100
+          score -= min(20, data['summary']['canonical_issues_count'] * 2)
+          score -= min(15, data['summary']['meta_issues_count'] * 1)
+          score -= min(10, data['summary']['h1_issues_count'] * 3)
+          score -= min(10, data['summary']['og_issues_count'] * 1)
+          score -= min(20, data['summary']['broken_links_count'] * 2)
+          score -= min(15, data['summary']['jsonld_invalid_count'] * 3)
+          score -= min(5, data['summary']['images_missing_alt_count'])
+          score = max(0, score)
+          print(f"**Score SEO** : {score}/100")
+          print()
+          
+          if score >= 90:
+              print("✅ Excellent — site techniquement sain")
+          elif score >= 75:
+              print("⚠️ Correct — quelques optimisations à prévoir")
+          elif score >= 60:
+              print("⚠️ Moyen — plusieurs anomalies à corriger")
+          else:
+              print("❌ Critique — nombreuses anomalies bloquantes")
+          EOF
+          
+          # Remplacer $(date) par la vraie date
+          sed -i "s|\$(date -u +%Y-%m-%d)|${{ steps.date.outputs.today }}|g" /tmp/report-content.md
+          
+          cp /tmp/report-content.md "seo-reports/${DATE}.md"
+          
           echo "Rapport généré : seo-reports/${DATE}.md"
           cat "seo-reports/${DATE}.md"
 
@@ -137,7 +424,7 @@ jobs:
           git config user.email "actions@github.com"
           git add seo-reports/
           git diff --staged --quiet && echo "Aucun nouveau rapport" || (
-            git commit -m "chore(seo): rapport quotidien ${{ steps.date.outputs.today }}"
+            git commit -m "chore(seo): rapport quotidien V2 ${{ steps.date.outputs.today }}"
             git push
             echo "✅ Rapport poussé"
           )
