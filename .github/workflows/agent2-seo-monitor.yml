@@ -310,7 +310,7 @@ jobs:
 
       - name: Generate SEO report V2
         run: |
-          mkdir -p seo-reports
+          mkdir -p /tmp/seo-reports
           DATE="${{ steps.date.outputs.today }}"
           
           python3 << 'EOF' > /tmp/report-content.md
@@ -442,18 +442,14 @@ jobs:
           # Remplacer $(date) par la vraie date
           sed -i "s|\$(date -u +%Y-%m-%d)|${{ steps.date.outputs.today }}|g" /tmp/report-content.md
           
-          cp /tmp/report-content.md "seo-reports/${DATE}.md"
+          cp /tmp/report-content.md "/tmp/seo-reports/${DATE}.md"
           
-          echo "Rapport généré : seo-reports/${DATE}.md"
-          cat "seo-reports/${DATE}.md"
+          echo "Rapport généré : /tmp/seo-reports/${DATE}.md"
+          cat "/tmp/seo-reports/${DATE}.md"
 
-      - name: Commit & Push report
-        run: |
-          git config user.name "SynchroVie SEO Bot"
-          git config user.email "actions@github.com"
-          git add seo-reports/
-          git diff --staged --quiet && echo "Aucun nouveau rapport" || (
-            git commit -m "chore(seo): rapport quotidien V2 ${{ steps.date.outputs.today }}"
-            git push
-            echo "✅ Rapport poussé"
-          )
+      - name: Upload SEO report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: seo-report-${{ steps.date.outputs.today }}
+          path: /tmp/seo-reports/${{ steps.date.outputs.today }}.md
+          retention-days: 30
