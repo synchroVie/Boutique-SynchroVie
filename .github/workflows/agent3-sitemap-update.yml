@@ -27,7 +27,7 @@ jobs:
       - name: Generate sitemap.xml
         run: |
           set -e
-          BASE_URL="https://synchrovie.github.io/Boutique-SynchroVie/"
+          BASE_URL="https://synchro-vie.com/"
           TODAY="${{ steps.date.outputs.today }}"
 
           # Liste tous les fichiers HTML à la racine + sous-dossiers
