@@ -44,37 +44,88 @@ jobs:
           today = datetime.date.today().isoformat()
           week = datetime.date.today().strftime('%Y-W%V')
 
-          # 4 sujets tournants (basés sur les catégories produits SynchroVie)
-          topics = [
-              {
-                  'category': 'Bio-Monitoring',
-                  'angle': 'VFC (variabilité fréquence cardiaque) — pourquoi ce biomarqueur devient incontournable en 2026',
-                  'keywords': ['variabilité fréquence cardiaque', 'VFC biohacking', 'stress mesurable', 'récupération cardiaque'],
-                  'product_link': 'produits/stimulateur-nerf-vague.html',
-                  'word_count': 1800,
-              },
-              {
-                  'category': 'Sommeil',
-                  'angle': 'Sommeil profond : les 90 premières minutes décident de tout',
-                  'keywords': ['sommeil profond', 'ondes delta', 'micro-réveils', 'capital sommeil'],
-                  'product_link': 'produits/masque-sommeil-ondes-delta.html',
-                  'word_count': 1800,
-              },
-              {
-                  'category': 'Stress-Cortisol',
-                  'angle': 'Cortisol invisible : pourquoi vous vous sentez épuisé sans raison apparente',
-                  'keywords': ['cortisol élevé', 'fatigue chronique', 'bague cortisol', 'biofeedback stress'],
-                  'product_link': 'produits/bague-controle-cortisol.html',
-                  'word_count': 1500,
-              },
-              {
-                  'category': 'Recuperation',
-                  'angle': 'Récupération musculaire : ce que les athlètes pro font (et que vous pouvez copier)',
-                  'keywords': ['récupération musculaire', 'bain de glace', 'EMS récupération', 'inflammation musculaire'],
-                  'product_link': 'produits/bain-glace-recuperation-connecte.html',
-                  'word_count': 1500,
-              },
+          # 8 sujets tournants (2 par semaine × 4 semaines = 1 mois de contenu frais)
+          # Semaine 1 (W28) : Photothérapie + Biofeedback stress
+          # Semaine 2 (W29) : Posture haptique + Glycémie sans piqure
+          # Semaine 3 (W30) : Balance impédancemètre + Nerf vague
+          # Semaine 4 (W31) : EMS performance + Thermomètre infrarouge
+          import datetime
+          week_num = datetime.date.today().isocalendar()[1]
+          week_index = (week_num - 28) % 4  # W28→0, W29→1, W30→2, W31→3
+          
+          all_topics = [
+              # Semaine 1 (W28)
+              [
+                  {
+                      'category': 'Photothérapie',
+                      'angle': 'Photothérapie LED rouge : l\'irradiance qui sépare un gadget d\'un dispositif médical',
+                      'keywords': ['photothérapie LED', 'lumière rouge', 'irradiance', 'récupération musculaire'],
+                      'product_link': 'produits/panneau-therapie-lumiere-rouge.html',
+                      'word_count': 1800,
+                  },
+                  {
+                      'category': 'Biofeedback',
+                      'angle': 'Biofeedback cardiaque : comment votre rythme cardiaque révèle votre stress réel',
+                      'keywords': ['biofeedback', 'rythme cardiaque', 'gestion du stress', 'cohérence cardiaque'],
+                      'product_link': 'produits/stimulateur-nerf-vague.html',
+                      'word_count': 1800,
+                  },
+              ],
+              # Semaine 2 (W29)
+              [
+                  {
+                      'category': 'Posture',
+                      'angle': 'Correcteur de posture haptique : rééduquer son dos sans y penser',
+                      'keywords': ['correcteur posture', 'biofeedback haptique', 'mal de dos', 'rééducation posturale'],
+                      'product_link': 'produits/correcteur-posture-haptique.html',
+                      'word_count': 1500,
+                  },
+                  {
+                      'category': 'Glycémie',
+                      'angle': 'Capteur glucose continu OTC : 14 jours de données sans une seule piqûre',
+                      'keywords': ['capteur glucose', 'CGM OTC', 'glycémie continue', 'sans ordonnance'],
+                      'product_link': 'produits/capteur-glucose-continu.html',
+                      'word_count': 1500,
+                  },
+              ],
+              # Semaine 3 (W30)
+              [
+                  {
+                      'category': 'Composition corporelle',
+                      'angle': 'Balance impédancemètre : comprendre vos pourcentages masse grasse/musculaire',
+                      'keywords': ['balance impédancemètre', 'composition corporelle', 'masse grasse', 'masse musculaire'],
+                      'product_link': 'produits/balance-impedancemetre-connectee.html',
+                      'word_count': 1800,
+                  },
+                  {
+                      'category': 'Nerf vague',
+                      'angle': 'Nerf vague : la clé physiologique du stress que personne ne surveille',
+                      'keywords': ['nerf vague', 'stimulation vagale', 'stress chronique', 'système parasympathique'],
+                      'product_link': 'produits/stimulateur-nerf-vague.html',
+                      'word_count': 1800,
+                  },
+              ],
+              # Semaine 4 (W31)
+              [
+                  {
+                      'category': 'EMS Performance',
+                      'angle': 'EMS (électrostimulation) : la science de la contraction musculaire sans charge',
+                      'keywords': ['EMS', 'électrostimulation', 'performance musculaire', 'récupération active'],
+                      'product_link': 'produits/stimulateur-musculaire-ems.html',
+                      'word_count': 1500,
+                  },
+                  {
+                      'category': 'Thermométrie médicale',
+                      'angle': 'Thermomètre infrarouge médical : précision, fiabilité et erreurs à éviter',
+                      'keywords': ['thermomètre infrarouge', 'fièvre', 'mesure température', 'précision médicale'],
+                      'product_link': 'produits/thermometre-infrarouge-medical.html',
+                      'word_count': 1500,
+                  },
+              ],
           ]
+          
+          topics = all_topics[week_index]
+          print(f"Semaine W{week_num} (index {week_index}) — {len(topics)} sujets sélectionnés")
 
           # Voix éditoriale SynchroVie (règles absolues)
           editorial_rules = """
