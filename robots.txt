@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://synchrovie.github.io/Boutique-SynchroVie/sitemap.xml
+Sitemap: https://synchro-vie.com/sitemap.xml
