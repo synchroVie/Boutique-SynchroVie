@@ -296,6 +296,7 @@
   ]
 }
 </script>
+<script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
 </head>
 <body>
 
@@ -410,6 +411,14 @@
 
     <div class="cta-group">
       <a href="#" class="btn-primary-full" id="ctaCommander" data-product="SynchroRing X1" data-price="358 EUR">Commander via WhatsApp</a>
+      <div id="paypal-container-RVJCDF68TF2DL" style="margin-top:10px;"></div>
+      <script>
+        if (typeof paypal !== 'undefined' && paypal.HostedButtons) {
+          paypal.HostedButtons({
+            hostedButtonId: "RVJCDF68TF2DL",
+          }).render("#paypal-container-RVJCDF68TF2DL");
+        }
+      </script>
       <a href="https://wa.me/22360625155?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20la%20SynchroRing%20X1" class="btn-secondary-full" target="_blank" rel="noopener">Poser une question — Expert WhatsApp</a>
     </div>
 
