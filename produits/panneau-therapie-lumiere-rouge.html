@@ -125,6 +125,10 @@
     
   </div></section>
 </main>
+
+<!-- Section Commentaires -->
+<section id="commentsSection"></section>
+
 <footer><div class="footer-grid"><div class="footer-col"><a href="../index.html" class="nav-brand" style="margin-bottom:8px;display:inline-block;">SYNCHROVIE</a><p class="footer-tagline">L'ingénierie de la performance humaine.</p><p class="footer-address">Paris, France</p></div><div class="footer-col"><h4>Navigation</h4><a href="../index.html">Accueil</a><a href="../index.html#boutique">Boutique</a><a href="../blog.html">Blog</a><a href="../faq.html">FAQ</a><a href="../propos.html">À Propos</a><a href="../contact.html">Contact</a></div><div class="footer-col"><h4>Légal</h4><a href="../legal.html">Mentions Légales</a><a href="../cgv.html">CGV</a><a href="../politique-de-confidentialite.html">Confidentialité</a><a href="../cookies.html">Cookies</a></div><div class="footer-col"><h4>Contact</h4><a href="https://wa.me/22360625155" target="_blank">WhatsApp Expert</a><a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a></div></div><div class="footer-bottom"><div class="footer-payment"><span>Paiement sécurisé :</span> <span class="payment-badges">Visa — MasterCard — WhatsApp Pay</span></div><div class="footer-guarantees">Livraison 3-7j Europe — Retours 30j — Garantie 2 ans</div><p class="footer-copyright">2026 Synchrovie. Tous droits réservés.</p></div></footer>
 <a href="https://wa.me/22360625155" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacter l'expert SynchroVie sur WhatsApp"><svg viewBox="0 0 32 32" width="32" height="32" fill="#fff"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.742 3.052 9.376L1.056 31.1l5.924-1.956c2.524 1.612 5.5 2.552 8.692 2.86H16c8.828 0 16.004-7.176 16.004-16.004C32.004 7.176 24.832 0 16.004 0z"/></svg></a>
 <button class="back-to-top" id="backToTop" aria-label="Retour en haut">&#8593;</button>
@@ -142,7 +146,6 @@ var unitPrice=849;var currentQty=1;function changeQty(d){var n=currentQty+d;if(n
 window.addEventListener('scroll',function(){var btn=document.getElementById('backToTop');if(window.scrollY>400)btn.classList.add('show');else btn.classList.remove('show');});document.getElementById('backToTop').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});
 (function(){var banner=document.getElementById('cookieBanner');var acceptBtn=document.getElementById('cookieAccept');var refuseBtn=document.getElementById('cookieRefuse');if(localStorage.getItem('cookie_consent')){banner.style.display='none';return;}setTimeout(function(){banner.classList.add('show');},800);acceptBtn.addEventListener('click',function(){localStorage.setItem('cookie_consent','accepted');gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted'});banner.classList.remove('show');});refuseBtn.addEventListener('click',function(){localStorage.setItem('cookie_consent','refused');banner.classList.remove('show');});})();
 </script>
-<script src="../script.js" defer></script>
 <script src="../brevo.js" defer></script>
 <!-- Pop-up Brevo (exit-intent desktop + 60s mobile) -->
 <div class="brevo-overlay" id="brevoOverlay" aria-hidden="true">
@@ -162,5 +165,6 @@ window.addEventListener('scroll',function(){var btn=document.getElementById('bac
     </div>
   </div>
 </div>
+<script src="../comments.js" defer></script>
 </body>
 </html>
