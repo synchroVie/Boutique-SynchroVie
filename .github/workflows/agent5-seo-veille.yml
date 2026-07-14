@@ -1,0 +1,178 @@
+name: Agent 5 — Veille SEO Automatisée
+
+# Déclencheur : chaque jour à 7h UTC (= 9h Bamako/Paris en été) + manuel
+# Inspiré du dashboard Claude Cowork vu dans les captures utilisateur
+# Scan les sources SEO francophones + internationales pour détecter les changements
+on:
+  schedule:
+    - cron: '0 7 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  seo-veille:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set date
+        id: date
+        run: echo "today=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
+
+      - name: Install Python deps
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Scan SEO news sources
+        run: |
+          mkdir -p /tmp/veille
+          
+          python3 << 'PYEOF'
+          import urllib.request
+          import ssl
+          import json
+          from datetime import datetime
+          from html.parser import HTMLParser
+
+          ctx = ssl.create_default_context()
+          ctx.check_hostname = False
+          ctx.verify_mode = ssl.CERT_NONE
+
+          DATE = "$(date -u +%Y-%m-%d)"
+
+          # Sources SEO à scanner
+          SOURCES = [
+              {
+                  'name': 'Search Engine Land',
+                  'url': 'https://searchengineland.com/feed',
+                  'type': 'rss',
+                  'lang': 'EN',
+                  'keywords': ['google', 'algorithm', 'update', 'search', 'core update', 'helpful content', 'seo']
+              },
+              {
+                  'name': 'Abondance',
+                  'url': 'https://www.abondance.com/feed/',
+                  'type': 'rss',
+                  'lang': 'FR',
+                  'keywords': ['google', 'algorithme', 'mise à jour', 'seo', 'référencement', 'indexation']
+              },
+              {
+                  'name': 'Blog du Modérateur',
+                  'url': 'https://www.blogdumoderateur.com/feed/',
+                  'type': 'rss',
+                  'lang': 'FR',
+                  'keywords': ['google', 'seo', 'tiktok', 'réseaux sociaux', 'algorithme']
+              },
+              {
+                  'name': 'Search Engine Journal',
+                  'url': 'https://www.searchenginejournal.com/feed/',
+                  'type': 'rss',
+                  'lang': 'EN',
+                  'keywords': ['google', 'algorithm', 'seo', 'core update', 'search console']
+              },
+              {
+                  'name': 'Ahrefs Blog',
+                  'url': 'https://ahrefs.com/blog/feed/',
+                  'type': 'rss',
+                  'lang': 'EN',
+                  'keywords': ['seo', 'google', 'ranking', 'backlink', 'keyword']
+              },
+          ]
+
+          class RSSParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.in_item = False
+                  self.in_title = False
+                  self.in_link = False
+                  self.in_desc = False
+                  self.in_pubdate = False
+              def handle_starttag(self, tag, attrs):
+                  if tag == 'item': self.in_item = True; self.current = {'title': '', 'link': '', 'desc': '', 'date': ''}
+                  elif tag == 'title' and self.in_item: self.in_title = True
+                  elif tag == 'link' and self.in_item: self.in_link = True
+                  elif tag == 'description' and self.in_item: self.in_desc = True
+                  elif tag == 'pubdate' and self.in_item: self.in_pubdate = True
+              def handle_data(self, data):
+                  if self.in_title: self.current['title'] += data
+                  elif self.in_desc: self.current['desc'] += data
+                  elif self.in_pubdate: self.current['date'] += data
+              def handle_endtag(self, tag):
+                  if tag == 'item': self.in_item = False; self.items.append(self.current.copy())
+                  elif tag == 'title': self.in_title = False
+                  elif tag == 'link': self.in_link = False
+                  elif tag == 'description': self.in_desc = False
+                  elif tag == 'pubdate': self.in_pubdate = False
+
+          all_items = []
+          for source in SOURCES:
+              try:
+                  req = urllib.request.Request(source['url'], headers={'User-Agent': 'Mozilla/5.0'})
+                  with urllib.request.urlopen(req, context=ctx, timeout=15) as r:
+                      content = r.read().decode('utf-8', errors='ignore')
+                  parser = RSSParser()
+                  parser.items = []
+                  parser.feed(content)
+                  for item in parser.items[:5]:
+                      title = item['title'].strip()
+                      desc = item['desc'].strip()[:300]
+                      # Filtrer par mots-clés
+                      if any(kw.lower() in (title + desc).lower() for kw in source['keywords']):
+                          all_items.append({
+                              'source': source['name'],
+                              'lang': source['lang'],
+                              'title': title,
+                              'desc': desc,
+                              'date': item['date'].strip()
+                          })
+                  print(f"✅ {source['name']}: {len(parser.items)} articles scannés")
+              except Exception as e:
+                  print(f"⚠️ {source['name']}: {str(e)[:80]}")
+
+          # Générer le rapport
+          report = f"""# Veille SEO — SynchroVie
+          **Date** : {DATE}
+          **Sources scannées** : {len(SOURCES)}
+          **Articles pertinents** : {len(all_items)}
+
+          ## Articles détectés
+
+          """
+          for i, item in enumerate(all_items, 1):
+              report += f"""### {i}. [{item['lang']}] {item['title']}
+          - **Source** : {item['source']}
+          - **Date** : {item['date']}
+          - **Extrait** : {item['desc']}
+
+          """
+
+          report += """## Actions recommandées pour SynchroVie
+
+          - Vérifier si un article mentionne un changement d'algorithme Google qui pourrait impacter le site
+          - Si "core update" mentionné : vérifier les positions dans GSC dans les 7 jours suivants
+          - Si "indexation" mentionné : vérifier le sitemap et les pages indexées
+          - Si "TikTok" mentionné : ajuster la stratégie contenu si pertinent
+
+          ## Impact potentiel sur SynchroVie
+
+          À évaluer manuellement en fonction des articles ci-dessus.
+          """
+
+          with open('/tmp/veille/rapport.txt', 'w', encoding='utf-8') as f:
+              f.write(report)
+
+          print(f"\n✅ Rapport généré : {len(all_items)} articles pertinents")
+          PYEOF
+
+          cat /tmp/veille/rapport.txt
+
+      - name: Upload veille report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: veille-seo-${{ steps.date.outputs.today }}
+          path: /tmp/veille/rapport.txt
+          retention-days: 14
