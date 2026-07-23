@@ -447,6 +447,24 @@ jobs:
           echo "Rapport généré : /tmp/seo-reports/${DATE}.md"
           cat "/tmp/seo-reports/${DATE}.md"
 
+
+      - name: Send report via Brevo email
+        run: |
+          DATE="${{ steps.date.outputs.today }}"
+          REPORT=$(cat /tmp/seo-reports/${DATE}.md)
+          
+          curl -s -X POST "https://api.brevo.com/v3/smtp/email" \
+            -H "Accept: application/json" \
+            -H "Content-Type: application/json" \
+            -H "api-key: ${{ secrets.BREVO_API_KEY }}" \
+            -d '{
+              "sender": {"email": "contact@synchro-vie.com", "name": "SynchroVie SEO Bot"},
+              "to": [{"email": "diougamady96@gmail.com"}],
+              "subject": "Rapport SEO quotidien SynchroVie — '"$DATE"'",
+              "htmlContent": "<html><body><h1>Rapport SEO SynchroVie</h1><p>Date : '"$DATE"'</p><pre>'"$(echo "$REPORT" | head -100)"'</pre></body></html>"
+            }'
+          echo "✅ Email envoyé à diougamady96@gmail.com"
+
       - name: Upload SEO report as artifact
         uses: actions/upload-artifact@v4
         with:

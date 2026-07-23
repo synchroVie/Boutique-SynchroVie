@@ -44,88 +44,71 @@ jobs:
           today = datetime.date.today().isoformat()
           week = datetime.date.today().strftime('%Y-W%V')
 
-          # 8 sujets tournants (2 par semaine × 4 semaines = 1 mois de contenu frais)
-          # Semaine 1 (W28) : Photothérapie + Biofeedback stress
-          # Semaine 2 (W29) : Posture haptique + Glycémie sans piqure
-          # Semaine 3 (W30) : Balance impédancemètre + Nerf vague
-          # Semaine 4 (W31) : EMS performance + Thermomètre infrarouge
+          # 5 produits phares en rotation hebdomadaire (1 sujet/semaine)
+          # Semaine 1 : SynchroRing X1
+          # Semaine 2 : NeuroRest G2 (masque sommeil)
+          # Semaine 3 : Flex-Gun Mini (pistolet massage)
+          # Semaine 4 : B-Pressure Connect (tensiomètre)
+          # Semaine 5 : Aura-Ring Calm (bague cortisol)
           import datetime
           week_num = datetime.date.today().isocalendar()[1]
-          week_index = (week_num - 28) % 4  # W28→0, W29→1, W30→2, W31→3
+          week_index = (week_num - 30) % 5  # Rotation sur 5 semaines
           
           all_topics = [
-              # Semaine 1 (W28)
+              # Semaine 1 — SynchroRing X1
               [
                   {
-                      'category': 'Photothérapie',
-                      'angle': 'Photothérapie LED rouge : l\'irradiance qui sépare un gadget d\'un dispositif médical',
-                      'keywords': ['photothérapie LED', 'lumière rouge', 'irradiance', 'récupération musculaire'],
-                      'product_link': 'produits/panneau-therapie-lumiere-rouge.html',
-                      'word_count': 1800,
-                  },
-                  {
-                      'category': 'Biofeedback',
-                      'angle': 'Biofeedback cardiaque : comment votre rythme cardiaque révèle votre stress réel',
-                      'keywords': ['biofeedback', 'rythme cardiaque', 'gestion du stress', 'cohérence cardiaque'],
-                      'product_link': 'produits/stimulateur-nerf-vague.html',
+                      'category': 'Bio-Monitoring',
+                      'angle': 'SynchroRing X1 : 24 jours d\'autonomie, VFC, SpO2 et sommeil sans abonnement',
+                      'keywords': ['bague connectée santé', 'smart ring sans abonnement', 'VFC bague', 'SpO2 sommeil'],
+                      'product_link': 'produits/bague-connectee-sante-biometrique.html',
                       'word_count': 1800,
                   },
               ],
-              # Semaine 2 (W29)
+              # Semaine 2 — NeuroRest G2 (masque sommeil)
               [
                   {
-                      'category': 'Posture',
-                      'angle': 'Correcteur de posture haptique : rééduquer son dos sans y penser',
-                      'keywords': ['correcteur posture', 'biofeedback haptique', 'mal de dos', 'rééducation posturale'],
-                      'product_link': 'produits/correcteur-posture-haptique.html',
-                      'word_count': 1500,
-                  },
-                  {
-                      'category': 'Glycémie',
-                      'angle': 'Capteur glucose continu OTC : 14 jours de données sans une seule piqûre',
-                      'keywords': ['capteur glucose', 'CGM OTC', 'glycémie continue', 'sans ordonnance'],
-                      'product_link': 'produits/capteur-glucose-continu.html',
-                      'word_count': 1500,
-                  },
-              ],
-              # Semaine 3 (W30)
-              [
-                  {
-                      'category': 'Composition corporelle',
-                      'angle': 'Balance impédancemètre : comprendre vos pourcentages masse grasse/musculaire',
-                      'keywords': ['balance impédancemètre', 'composition corporelle', 'masse grasse', 'masse musculaire'],
-                      'product_link': 'produits/balance-impedancemetre-connectee.html',
-                      'word_count': 1800,
-                  },
-                  {
-                      'category': 'Nerf vague',
-                      'angle': 'Nerf vague : la clé physiologique du stress que personne ne surveille',
-                      'keywords': ['nerf vague', 'stimulation vagale', 'stress chronique', 'système parasympathique'],
-                      'product_link': 'produits/stimulateur-nerf-vague.html',
+                      'category': 'Neuro-Sommeil',
+                      'angle': 'NeuroRest G2 : +23% de sommeil profond mesuré, pas promis',
+                      'keywords': ['masque sommeil ondes delta', 'insomnie solutions', 'sommeil profond technologie'],
+                      'product_link': 'produits/masque-sommeil-ondes-delta.html',
                       'word_count': 1800,
                   },
               ],
-              # Semaine 4 (W31)
+              # Semaine 3 — Flex-Gun Mini (pistolet massage)
               [
                   {
-                      'category': 'EMS Performance',
-                      'angle': 'EMS (électrostimulation) : la science de la contraction musculaire sans charge',
-                      'keywords': ['EMS', 'électrostimulation', 'performance musculaire', 'récupération active'],
-                      'product_link': 'produits/stimulateur-musculaire-ems.html',
+                      'category': 'Récupération',
+                      'angle': 'Flex-Gun Mini : 450g, 45dB — le pistolet massage que vous oublierez de ranger',
+                      'keywords': ['pistolet massage musculaire', 'massage gun compact', 'récupération musculaire maison'],
+                      'product_link': 'produits/pistolet-massage-compact.html',
                       'word_count': 1500,
                   },
+              ],
+              # Semaine 4 — B-Pressure Connect (tensiomètre)
+              [
                   {
-                      'category': 'Thermométrie médicale',
-                      'angle': 'Thermomètre infrarouge médical : précision, fiabilité et erreurs à éviter',
-                      'keywords': ['thermomètre infrarouge', 'fièvre', 'mesure température', 'précision médicale'],
-                      'product_link': 'produits/thermometre-infrarouge-medical.html',
+                      'category': 'Cardiaque',
+                      'angle': 'B-Pressure Connect : le tueur silencieux ne prévient pas, celui-ci oui',
+                      'keywords': ['tensiomètre connecté', 'surveillance tension domicile', 'automesure tension'],
+                      'product_link': 'produits/tensiometre-intelligent-connecte.html',
+                      'word_count': 1500,
+                  },
+              ],
+              # Semaine 5 — Aura-Ring Calm (bague cortisol)
+              [
+                  {
+                      'category': 'Stress',
+                      'angle': 'Aura-Ring Calm : le stress que vous ne sentez plus, cette bague le détecte',
+                      'keywords': ['bague cortisol', 'stress mesurable', 'biofeedback stress', 'fatigue chronique'],
+                      'product_link': 'produits/bague-controle-cortisol.html',
                       'word_count': 1500,
                   },
               ],
           ]
           
           topics = all_topics[week_index]
-          print(f"Semaine W{week_num} (index {week_index}) — {len(topics)} sujets sélectionnés")
+          print(f"Semaine W{week_num} (index {week_index}) — {len(topics)} sujet sélectionné")) — {len(topics)} sujets sélectionnés")
 
           # Voix éditoriale SynchroVie (règles absolues)
           editorial_rules = """
