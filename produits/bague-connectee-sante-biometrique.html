@@ -447,13 +447,20 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     </div>
 
     <div class="cta-group">
-      
-      <div id="paypal-container-RVJCDF68TF2DL" style="margin-top:10px;"></div>
+      <p style="text-align:center;color:#F8FAFC;font-weight:700;font-size:1rem;margin-bottom:8px;font-family:Space Grotesk,sans-serif;">Commander avec PayPal</p><div id="paypal-container-RVJCDF68TF2DL" style="margin-top:0;"></div>
       <script>
         if (typeof paypal !== 'undefined' && paypal.HostedButtons) {
           paypal.HostedButtons({
             hostedButtonId: "RVJCDF68TF2DL",
           }).render("#paypal-container-RVJCDF68TF2DL");
+        } else {
+          window.addEventListener('load', function() {
+            if (typeof paypal !== 'undefined' && paypal.HostedButtons) {
+              paypal.HostedButtons({
+                hostedButtonId: "RVJCDF68TF2DL",
+              }).render("#paypal-container-RVJCDF68TF2DL");
+            }
+          });
         }
       </script>
       <a href="https://wa.me/22360625155?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20la%20SynchroRing%20X1" class="btn-secondary-full" target="_blank" rel="nofollow noopener">Poser une question — Expert WhatsApp</a>
@@ -737,10 +744,7 @@ function changeQty(delta) {
 function updateTotal(qty) {
   const total = UNIT_PRICE * qty;
   document.getElementById('qtyTotal').textContent = total.toLocaleString('fr-FR') + ' EUR';
-  const cta = document.getElementById('ctaCommander');
-  if (cta) {
-    const href = cta.getAttribute('href').split('&qty=')[0] + '&qty=' + qty;
-    cta.setAttribute('href', href);
+  
   }
 }
 function toggleFaq(btn) {
@@ -750,15 +754,7 @@ function toggleFaq(btn) {
   document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
   if (!isOpen) { answer.classList.add('open'); btn.classList.add('open'); }
 }
-document.getElementById('ctaCommander')?.addEventListener('click', function(e) {
-  e.preventDefault();
-  const product = this.dataset.product;
-  const price = this.dataset.price;
-  const qty = document.getElementById('qtyInput').value;
-  const total = UNIT_PRICE * parseInt(qty);
-  const waText = encodeURIComponent('Bonjour Synchrovie, je souhaite commander ' + qty + 'x ' + product + ' à ' + price + ' EUR/unité (total: ' + total + ' EUR)');
-  window.open('https://wa.me/22360625155?text=' + waText, '_blank');
-});
+
 const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => { backToTop?.classList.toggle('show', window.pageYOffset > 400); }, { passive: true });
 backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
