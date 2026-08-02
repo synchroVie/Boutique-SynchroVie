@@ -181,7 +181,7 @@ jobs:
             -H "Content-Type: application/json" \
             -H "api-key: ${{ secrets.BREVO_API_KEY }}" \
             -d '{
-              "sender": {"email": "contact@synchro-vie.com", "name": "SynchroVie Veille SEO"},
+              "sender": {"email": "synchrovie@gmail.com", "name": "SynchroVie Veille SEO"},
               "to": [{"email": "diougamady96@gmail.com"}],
               "subject": "Veille SEO SynchroVie — '"$DATE"'",
               "htmlContent": "<html><body><h1>Veille SEO SynchroVie</h1><p>Date : '"$DATE"'</p><pre>'"$(echo "$REPORT" | head -150)"'</pre></body></html>"
