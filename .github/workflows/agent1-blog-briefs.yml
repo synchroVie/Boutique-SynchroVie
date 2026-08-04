@@ -108,7 +108,7 @@ jobs:
           ]
           
           topics = all_topics[week_index]
-          print(f"Semaine W{week_num} (index {week_index}) — {len(topics)} sujet sélectionné")) — {len(topics)} sujets sélectionnés")
+          print(f"Semaine W{week_num} (index {week_index}) — {len(topics)} sujet sélectionné")
 
           # Voix éditoriale SynchroVie (règles absolues)
           editorial_rules = """

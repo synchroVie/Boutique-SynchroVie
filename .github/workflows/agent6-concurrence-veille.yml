@@ -1,0 +1,144 @@
+name: Agent 6 — Veille Concurrence
+
+# Déclencheur : chaque lundi 10h UTC (12h Bamako) + manuel
+# Analyse les concurrents biohacking francophone
+on:
+  schedule:
+    - cron: '0 10 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  concurrence-veille:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set date
+        id: date
+        run: echo "today=$(date -u +%Y-%m-%d)" >> $GITHUB_OUTPUT
+
+      - name: Install deps
+        run: python3 -m pip install --upgrade pip && pip install requests beautifulsoup4
+
+      - name: Analyse concurrents
+        run: |
+          mkdir -p /tmp/concurrence
+          python3 << 'PYEOF'
+          import urllib.request, ssl, json, re
+          from html.parser import HTMLParser
+
+          ctx = ssl.create_default_context()
+          ctx.check_hostname = False
+          ctx.verify_mode = ssl.CERT_NONE
+
+          DATE = "$(date -u +%Y-%m-%d)"
+
+          # Concurrents à analyser
+          CONCURRENTS = [
+              {"name": "Oura Ring", "url": "https://ouraring.com/fr", "type": "Bague connectée"},
+              {"name": "Circular Ring", "url": "https://circular.xyz/fr", "type": "Bague connectée"},
+              {"name": "Whoop", "url": "https://www.whoop.com", "type": "Bracelet récupération"},
+              {"name": "Withings", "url": "https://www.withings.com/fr/fr/", "type": "Santé connectée"},
+              {"name": "Garmin Health", "url": "https://www.garmin.com/fr-FR/", "type": "Sport connecté"},
+          ]
+
+          class TitleParser(HTMLParser):
+              def __init__(self):
+                  super().__init__()
+                  self.in_title = False
+                  self.title = ""
+              def handle_starttag(self, tag, attrs):
+                  if tag == "title": self.in_title = True
+              def handle_data(self, data):
+                  if self.in_title: self.title += data
+              def handle_endtag(self, tag):
+                  if tag == "title": self.in_title = False
+
+          results = []
+          for conc in CONCURRENTS:
+              try:
+                  req = urllib.request.Request(conc["url"], headers={"User-Agent": "Mozilla/5.0"})
+                  with urllib.request.urlopen(req, context=ctx, timeout=15) as r:
+                      content = r.read().decode("utf-8", errors="ignore")
+                  parser = TitleParser()
+                  parser.feed(content)
+                  
+                  # Extraire meta description
+                  desc_match = re.search(r'<meta\s+name="description"\s+content="([^"]+)"', content)
+                  desc = desc_match.group(1)[:200] if desc_match else "N/A"
+                  
+                  # Compter les produits/pages
+                  product_count = len(re.findall(r'class="[^"]*product[^"]*"', content, re.IGNORECASE))
+                  
+                  # Vérifier présence blog
+                  has_blog = "/blog" in content.lower() or "/blog/" in content.lower()
+                  
+                  # Vérifier présence FAQ
+                  has_faq = "faq" in content.lower()
+                  
+                  results.append({
+                      "name": conc["name"],
+                      "type": conc["type"],
+                      "url": conc["url"],
+                      "title": parser.title.strip()[:100],
+                      "description": desc,
+                      "products_detected": product_count,
+                      "has_blog": has_blog,
+                      "has_faq": has_faq,
+                  })
+                  print(f"✅ {conc['name']}: {product_count} produits, blog={has_blog}, faq={has_faq}")
+              except Exception as e:
+                  print(f"⚠️ {conc['name']}: {str(e)[:80]}")
+                  results.append({"name": conc["name"], "type": conc["type"], "url": conc["url"], "error": str(e)[:100]})
+
+          # Générer rapport
+          report = f"# Veille Concurrence — SynchroVie\n\n**Date** : {DATE}\n**Concurrents analysés** : {len(results)}\n\n"
+          report += "## Analyse par concurrent\n\n"
+          for r in results:
+              report += f"### {r['name']} ({r['type']})\n"
+              report += f"- **URL** : {r['url']}\n"
+              if 'title' in r:
+                  report += f"- **Title** : {r['title']}\n"
+                  report += f"- **Description** : {r['description']}\n"
+                  report += f"- **Produits détectés** : {r['products_detected']}\n"
+                  report += f"- **Blog** : {'✅' if r['has_blog'] else '❌'}\n"
+                  report += f"- **FAQ** : {'✅' if r['has_faq'] else '❌'}\n"
+              else:
+                  report += f"- **Erreur** : {r.get('error', 'N/A')}\n"
+              report += "\n"
+
+          report += """## Recommandations pour SynchroVie
+
+- Comparer les prix SynchroVie vs concurrents
+- Identifier les fonctionnalités que les concurrents ont et SynchroVie n'a pas
+- Analyser leur stratégie de contenu (blog, FAQ, guides)
+- Vérifier leur présence sur les réseaux sociaux
+- Identifier les mots-clés SEO où ils rankent
+"""
+
+          with open("/tmp/concurrence/rapport.txt", "w", encoding="utf-8") as f:
+              f.write(report)
+          print(f"\n✅ Rapport généré : {len(results)} concurrents analysés")
+          PYEOF
+
+          cat /tmp/concurrence/rapport.txt
+
+      - name: Send via Brevo email
+        env:
+          BREVO_KEY: ${{ secrets.BREVO_API_KEY }}
+        run: |
+          DATE="${{ steps.date.outputs.today }}"
+          REPORT=$(cat /tmp/concurrence/rapport.txt)
+
+          curl -s -X POST "https://api.brevo.com/v3/smtp/email" \
+            -H "Accept: application/json" \
+            -H "Content-Type: application/json" \
+            -H "api-key: $BREVO_KEY" \
+            -d '{
+              "sender": {"email": "synchrovie@gmail.com", "name": "SynchroVie Veille Concurrence"},
+              "to": [{"email": "diougamady96@gmail.com"}],
+              "subject": "Veille Concurrence SynchroVie — '"$DATE"'",
+              "htmlContent": "<html><body><h1>Veille Concurrence SynchroVie</h1><p>Date : '"$DATE"'</p><pre>'"$(echo "$REPORT" | head -200)"'</pre></body></html>"
+            }'
+          echo "✅ Email envoyé"
