@@ -293,3 +293,240 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 })();
+
+/* =================================================================
+   UX/UI SECTIONS 1-7 — SynchroVie (intégration Août 2026)
+   Adapté aux classes existantes (.btn-primary, .prod-img, .main-nav, .menu-toggle, .faq-item, .product-gallery, .qty-selector, .product-tab-btn, .back-to-top)
+   ================================================================= */
+
+(function() {
+  'use strict';
+
+  /* ---------- Injection dynamique des éléments UX manquants (back-to-top, reading-progress) ---------- */
+  /* Évite de modifier 45 pages HTML à la main — les éléments sont créés ici */
+  document.addEventListener('DOMContentLoaded', function() {
+    /* Reading progress bar (sur pages article) */
+    if (!document.querySelector('.reading-progress') && (document.querySelector('article.article-content') || document.querySelector('.article-content'))) {
+      var rp = document.createElement('div');
+      rp.className = 'reading-progress';
+      rp.setAttribute('aria-hidden', 'true');
+      document.body.appendChild(rp);
+    }
+    /* Back-to-top button (toutes les pages) */
+    if (!document.querySelector('.back-to-top')) {
+      var btt = document.createElement('button');
+      btt.className = 'back-to-top';
+      btt.setAttribute('aria-label', 'Retour en haut');
+      btt.innerHTML = '&uarr;';
+      document.body.appendChild(btt);
+    }
+  });
+
+  /* ---------- SECTION 1 : Ripple effect sur boutons Commander ---------- */
+  document.querySelectorAll('.btn-primary, .btn-commander').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      var rect = this.getBoundingClientRect();
+      var ripple = document.createElement('span');
+      var size = Math.max(rect.width, rect.height);
+      ripple.classList.add('ripple');
+      ripple.style.width = ripple.style.height = size + 'px';
+      ripple.style.left = (e.clientX - rect.left - size / 2) + 'px';
+      ripple.style.top = (e.clientY - rect.top - size / 2) + 'px';
+      this.appendChild(ripple);
+      setTimeout(function() { ripple.remove(); }, 600);
+    });
+  });
+
+  /* ---------- SECTION 1 : Skeleton loading sur .prod-img ---------- */
+  document.querySelectorAll('.card .prod-img').forEach(function(img) {
+    var wrap = img.closest('a') || img.parentElement;
+    if (wrap) wrap.classList.add('loading');
+    if (img.complete) {
+      if (wrap) wrap.classList.remove('loading');
+    } else {
+      img.addEventListener('load', function() { if (wrap) wrap.classList.remove('loading'); });
+      img.addEventListener('error', function() { if (wrap) wrap.classList.remove('loading'); });
+    }
+  });
+
+  /* ---------- SECTION 3 : Galerie produit (changement d'image au clic) ---------- */
+  document.querySelectorAll('.product-gallery-thumbs img').forEach(function(thumb) {
+    thumb.addEventListener('click', function() {
+      var mainImg = document.querySelector('.product-gallery-main img');
+      if (!mainImg) return;
+      var newSrc = this.dataset.full || this.src;
+      mainImg.classList.add('fading');
+      var self = this;
+      setTimeout(function() {
+        mainImg.src = newSrc;
+        mainImg.classList.remove('fading');
+      }, 150);
+      document.querySelectorAll('.product-gallery-thumbs img').forEach(function(t) { t.classList.remove('active'); });
+      self.classList.add('active');
+    });
+  });
+
+  /* ---------- SECTION 3 : Lightbox ---------- */
+  var lightbox = document.querySelector('.lightbox-overlay');
+  var lightboxImg = lightbox ? lightbox.querySelector('img') : null;
+  var galleryMain = document.querySelector('.product-gallery-main');
+  if (galleryMain && lightbox) {
+    galleryMain.addEventListener('click', function() {
+      var src = this.querySelector('img').src;
+      if (lightboxImg) lightboxImg.src = src;
+      lightbox.classList.add('active');
+    });
+  }
+  var lightboxClose = document.querySelector('.lightbox-close');
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', function() { lightbox.classList.remove('active'); });
+  }
+  if (lightbox) {
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) lightbox.classList.remove('active');
+    });
+  }
+
+  /* ---------- SECTION 3 : Qty selector ---------- */
+  document.querySelectorAll('.qty-selector').forEach(function(sel) {
+    var input = sel.querySelector('input');
+    var minus = sel.querySelector('.qty-minus');
+    var plus = sel.querySelector('.qty-plus');
+    if (minus) {
+      minus.addEventListener('click', function() {
+        input.value = Math.max(1, parseInt(input.value || 1, 10) - 1);
+      });
+    }
+    if (plus) {
+      plus.addEventListener('click', function() {
+        input.value = parseInt(input.value || 1, 10) + 1;
+      });
+    }
+  });
+
+  /* ---------- SECTION 3 : FAQ accordéon ---------- */
+  document.querySelectorAll('.faq-question').forEach(function(q) {
+    q.addEventListener('click', function() {
+      var item = this.closest('.faq-item');
+      var answer = item.querySelector('.faq-answer');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(el) {
+        el.classList.remove('open');
+        var a = el.querySelector('.faq-answer');
+        if (a) a.style.maxHeight = null;
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ---------- SECTION 3 : Onglets specs / reviews ---------- */
+  document.querySelectorAll('.product-tab-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var target = this.dataset.tab;
+      document.querySelectorAll('.product-tab-btn').forEach(function(b) { b.classList.remove('active'); });
+      document.querySelectorAll('.product-tab-panel').forEach(function(p) { p.classList.remove('active'); });
+      this.classList.add('active');
+      var panel = document.querySelector('.product-tab-panel[data-tab="' + target + '"]');
+      if (panel) panel.classList.add('active');
+    });
+  });
+
+  /* ---------- SECTION 4 : Header sticky : réduction au scroll ---------- */
+  var mainNav = document.querySelector('nav.main-nav');
+  var scrollHandler = function() {
+    if (window.scrollY > 40) {
+      if (mainNav) mainNav.classList.add('scrolled');
+    } else {
+      if (mainNav) mainNav.classList.remove('scrolled');
+    }
+    /* Back-to-top visibilité */
+    var backToTop = document.querySelector('.back-to-top');
+    if (backToTop) {
+      if (window.scrollY > 500) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    }
+    /* Barre de progression lecture */
+    var rp = document.querySelector('.reading-progress');
+    if (rp) {
+      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      var scrolled = (winScroll / height) * 100;
+      rp.style.width = scrolled + '%';
+    }
+  };
+  window.addEventListener('scroll', scrollHandler, { passive: true });
+
+  /* ---------- SECTION 4 : Hamburger menu (compatible avec .menu-toggle existant) ---------- */
+  var hamburgerBtn = document.querySelector('.hamburger') || document.querySelector('.menu-toggle');
+  var mobileOverlay = document.querySelector('.mobile-nav-overlay');
+  if (hamburgerBtn && mobileOverlay) {
+    hamburgerBtn.addEventListener('click', function() {
+      hamburgerBtn.classList.toggle('open');
+      hamburgerBtn.classList.toggle('active');
+      mobileOverlay.classList.toggle('open');
+      document.body.style.overflow = mobileOverlay.classList.contains('open') ? 'hidden' : '';
+    });
+    mobileOverlay.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburgerBtn.classList.remove('open');
+        hamburgerBtn.classList.remove('active');
+        mobileOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  /* ---------- SECTION 4 : Back-to-top ---------- */
+  var backToTopBtn = document.querySelector('.back-to-top');
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ---------- SECTION 5 : Validation en temps réel des formulaires ---------- */
+  document.querySelectorAll('form').forEach(function(form) {
+    form.querySelectorAll('input[required], textarea[required]').forEach(function(field) {
+      var validate = function() {
+        var isValid = field.value.trim().length > 0;
+        if (field.type === 'email' && isValid) {
+          isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value.trim());
+        }
+        field.classList.toggle('valid', isValid);
+        field.classList.toggle('invalid', !isValid);
+      };
+      field.addEventListener('input', validate);
+      field.addEventListener('blur', validate);
+    });
+  });
+
+  /* ---------- SECTION 7 : Lazy loading de sécurité ---------- */
+  document.querySelectorAll('img:not([loading])').forEach(function(img) {
+    img.setAttribute('loading', 'lazy');
+  });
+
+  /* ---------- SECTION 7 : Préchargement des images de hover ---------- */
+  document.querySelectorAll('[data-hover-src]').forEach(function(el) {
+    var preload = new Image();
+    preload.src = el.dataset.hoverSrc;
+  });
+
+  /* ---------- SECTION 7 : Skeleton générique ---------- */
+  document.querySelectorAll('.img-skeleton-target').forEach(function(img) {
+    var wrap = img.parentElement;
+    if (wrap) wrap.classList.add('img-skeleton');
+    if (img.complete) {
+      if (wrap) wrap.classList.remove('img-skeleton');
+    } else {
+      img.addEventListener('load', function() { if (wrap) wrap.classList.remove('img-skeleton'); });
+    }
+  });
+
+})();
+

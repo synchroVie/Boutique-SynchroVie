@@ -1176,3 +1176,820 @@ footer {
   .brevo-form { flex-direction: column; }
   .brevo-form .btn-primary { width: 100%; }
 }
+
+/* =================================================================
+   UX/UI SECTIONS 1-7 — SynchroVie (intégration Août 2026)
+   Adapté aux classes existantes (.card, .btn-primary, .main-nav, .menu-toggle, .hamburger)
+   ================================================================= */
+
+/* ---------- SECTION 1 : CARTES PRODUITS (améliorations) ---------- */
+/* Le site utilise déjà .card avec .prod-img, .card-footer, .card-actions.
+   On ajoute les effets manquants (lift, ripple, skeleton, pulse stock). */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 480px;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(59,130,246,0.25), var(--shadow-lg);
+}
+
+.card .prod-img-wrap, .card > a:first-child {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--navy);
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.card .prod-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease;
+  will-change: transform;
+}
+
+.card:hover .prod-img {
+  transform: scale(1.06);
+}
+
+/* Badge stock bas avec pulse */
+.badge-stock {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,107,53,0.12);
+  border: 1px solid rgba(255,107,53,0.4);
+  color: var(--orange);
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+
+.badge-stock::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--orange);
+  animation: pulse-dot 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Bouton Commander (utilise .btn-primary existant) : effet ripple */
+.btn-primary, .btn-commander {
+  position: relative;
+  overflow: hidden;
+  min-height: 44px;
+  min-width: 44px;
+  transition: background var(--transition), transform 0.15s ease, box-shadow var(--transition);
+}
+
+.btn-primary:hover, .btn-commander:hover {
+  background: var(--blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59,130,246,0.35);
+}
+
+.btn-primary:active, .btn-commander:active {
+  transform: translateY(0);
+}
+
+.btn-primary .ripple, .btn-commander .ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.35);
+  transform: scale(0);
+  animation: ripple-anim 0.6s linear;
+  pointer-events: none;
+}
+
+@keyframes ripple-anim {
+  to { transform: scale(4); opacity: 0; }
+}
+
+/* Skeleton shimmer pour images en chargement */
+.prod-img-wrap.loading, .card > a.loading {
+  background: linear-gradient(90deg, var(--navy) 25%, rgba(59,130,246,0.06) 50%, var(--navy) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+
+/* ---------- SECTION 2 : BLOG (cartes articles) ---------- */
+/* Le site utilise déjà .article-card dans blog.html. On ajoute les améliorations. */
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--indigo);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(59,130,246,0.08);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(59,130,246,0.2), var(--shadow-lg);
+  border-color: rgba(59,130,246,0.3);
+}
+
+.article-card .article-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--navy);
+}
+
+.article-card .article-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform;
+}
+
+.article-card:hover .article-card-image img {
+  transform: scale(1.05);
+}
+
+.article-card .article-card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-card .article-card-excerpt {
+  color: var(--text-soft);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-card .article-read-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--blue);
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-top: auto;
+}
+
+.article-card .article-read-link::after {
+  content: '→';
+  transition: transform var(--transition);
+}
+
+.article-card:hover .article-read-link::after {
+  transform: translateX(4px);
+}
+
+
+/* ---------- SECTION 3 : PAGE PRODUIT (galerie, FAQ accordéon, onglets) ---------- */
+
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.product-gallery-main {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--navy);
+  cursor: zoom-in;
+}
+
+.product-gallery-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.product-gallery-main img.fading { opacity: 0; }
+
+.product-gallery-thumbs {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.product-gallery-thumbs img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  cursor: pointer;
+  opacity: 0.55;
+  border: 2px solid transparent;
+  transition: opacity var(--transition), border-color var(--transition);
+  flex-shrink: 0;
+}
+
+.product-gallery-thumbs img:hover { opacity: 0.85; }
+.product-gallery-thumbs img.active {
+  opacity: 1;
+  border-color: var(--blue);
+}
+
+/* Lightbox */
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7,17,38,0.95);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-overlay img {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  color: var(--white);
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Bloc prix */
+.product-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.product-price-current {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+
+.product-price-old {
+  font-size: 1.1rem;
+  color: var(--text-soft);
+  text-decoration: line-through;
+}
+
+/* Qty selector touch-friendly */
+.qty-selector {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid rgba(148,163,184,0.25);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.qty-selector button {
+  width: 44px;
+  height: 44px;
+  background: var(--indigo);
+  border: none;
+  color: var(--white);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background var(--transition);
+}
+
+.qty-selector button:hover {
+  background: rgba(59,130,246,0.15);
+}
+
+.qty-selector input {
+  width: 48px;
+  height: 44px;
+  text-align: center;
+  background: transparent;
+  border: none;
+  border-left: 1px solid rgba(148,163,184,0.25);
+  border-right: 1px solid rgba(148,163,184,0.25);
+  color: var(--white);
+  font-size: 1rem;
+}
+
+/* FAQ accordéons */
+.faq-item {
+  border-bottom: 1px solid rgba(148,163,184,0.15);
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 4px;
+  cursor: pointer;
+  font-weight: 600;
+  min-height: 44px;
+}
+
+.faq-question .icon {
+  transition: transform var(--transition);
+  flex-shrink: 0;
+  margin-left: 12px;
+}
+
+.faq-item.open .faq-question .icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.35s ease;
+  color: var(--text-soft);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.faq-item.open .faq-answer {
+  padding-bottom: 18px;
+}
+
+/* Onglets specs / reviews */
+.product-tabs {
+  display: flex;
+  gap: 4px;
+  border-bottom: 1px solid rgba(148,163,184,0.15);
+  margin-bottom: 24px;
+  overflow-x: auto;
+}
+
+.product-tab-btn {
+  padding: 14px 20px;
+  background: none;
+  border: none;
+  color: var(--text-soft);
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  min-height: 44px;
+  white-space: nowrap;
+}
+
+.product-tab-btn.active { color: var(--white); }
+
+.product-tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--blue);
+}
+
+.product-tab-panel {
+  display: none;
+  animation: fade-in 0.3s ease;
+}
+
+.product-tab-panel.active { display: block; }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ---------- SECTION 4 : NAVIGATION MOBILE ---------- */
+/* Le site utilise déjà .main-nav et .menu-toggle (avec animation croix existante).
+   On ajoute : réduction au scroll, overlay mobile, back-to-top, touch targets. */
+
+nav.main-nav {
+  transition: padding var(--transition), background var(--transition), box-shadow var(--transition);
+}
+
+nav.main-nav.scrolled {
+  background: rgba(7,17,38,0.98);
+  box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+
+/* Overlay menu mobile (en complément du menu-toggle existant) */
+.mobile-nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--navy);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  padding: 100px 32px 40px;
+  transform: translateX(100%);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+}
+
+.mobile-nav-overlay.open {
+  transform: translateX(0);
+}
+
+.mobile-nav-overlay a {
+  padding: 16px 4px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-size: 1.15rem;
+  font-family: var(--font-display);
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(148,163,184,0.12);
+}
+
+/* Back-to-top */
+.back-to-top {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+  z-index: 90;
+  box-shadow: var(--shadow);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Touch targets minimum 44x44 sur tous les liens/boutons nav */
+nav.main-nav a, nav.main-nav button, .header-nav a, .header-nav button {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ---------- SECTION 5 : MICRO-INTERACTIONS ---------- */
+
+button, .btn, a.btn-primary, a.btn-secondary {
+  transition: transform 0.15s ease, box-shadow var(--transition), background var(--transition);
+}
+
+button:active, .btn:active {
+  transform: scale(0.97);
+}
+
+/* Liens texte : underline animation */
+a.link-animated {
+  position: relative;
+  text-decoration: none;
+  color: var(--blue);
+}
+
+a.link-animated::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+a.link-animated:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Formulaires : focus visible + validation temps réel */
+input, textarea, select {
+  transition: border-color var(--transition), box-shadow var(--transition);
+  border: 1px solid rgba(148,163,184,0.25);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+input.valid, textarea.valid {
+  border-color: var(--green-ok);
+}
+
+input.invalid, textarea.invalid {
+  border-color: #EF4444;
+}
+
+.field-error {
+  color: #EF4444;
+  font-size: 0.78rem;
+  margin-top: 4px;
+  display: none;
+}
+
+input.invalid + .field-error,
+textarea.invalid + .field-error {
+  display: block;
+}
+
+/* Transition de page : fade-in au chargement */
+body {
+  animation: page-fade-in 0.4s ease;
+}
+
+@keyframes page-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Cards génériques : lift au hover */
+.interactive-card {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.interactive-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+
+/* ---------- SECTION 6 : FOOTER ---------- */
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-col h4 {
+  font-family: var(--font-display);
+  color: var(--white);
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+}
+
+.footer-col a {
+  display: block;
+  color: var(--text-soft);
+  text-decoration: none;
+  font-size: 0.88rem;
+  padding: 6px 0;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.footer-col a:hover {
+  color: var(--blue);
+  transform: translateX(3px);
+}
+
+/* Badges paiement visuels */
+.footer-payment-badges {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-payment-badges .badge-icon {
+  width: 44px;
+  height: 30px;
+  border-radius: 6px;
+  background: rgba(148,163,184,0.1);
+  border: 1px solid rgba(148,163,184,0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-soft);
+  font-size: 1.1rem;
+  transition: border-color var(--transition), color var(--transition);
+}
+
+.footer-payment-badges .badge-icon:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(148,163,184,0.12);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: var(--text-soft);
+  font-size: 0.78rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    text-align: left;
+  }
+}
+
+
+/* ---------- SECTION 7 : PERFORMANCE VISUELLE ---------- */
+
+.hamburger span,
+.mobile-nav-overlay,
+.back-to-top,
+.blog-card-image img,
+.article-card-image img {
+  will-change: transform;
+}
+
+/* Skeleton générique réutilisable */
+.img-skeleton {
+  background: linear-gradient(90deg, var(--navy) 25%, rgba(59,130,246,0.06) 50%, var(--navy) 75%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+/* ---------- SNIPPETS UX (Annexe G de l'audit) ---------- */
+
+/* G1. Sticky CTA mobile (fiches produit) */
+@media (max-width: 768px) {
+  .sticky-cta-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--navy);
+    border-top: 1px solid rgba(148,163,184,0.15);
+    padding: 12px 16px;
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+  }
+  .sticky-cta-mobile .btn-primary {
+    flex: 1;
+    padding: 14px;
+    font-size: 16px;
+    text-align: center;
+  }
+  body.has-sticky-cta { padding-bottom: 70px; }
+}
+
+/* G2. Barre de progression de lecture */
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--blue), var(--green-ok));
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.1s;
+}
+
+/* G3. Overlay dégradé images catégories */
+.category-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.category-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+  pointer-events: none;
+}
+
+.category-card h3, .category-card p {
+  position: relative;
+  z-index: 2;
+}
+
+/* G4. Zoom image produit (survahover) */
+.product-image-container {
+  overflow: hidden;
+  cursor: zoom-in;
+  border-radius: 12px;
+}
+
+.product-image-container img {
+  transition: transform 0.3s ease;
+  width: 100%;
+  display: block;
+}
+
+.product-image-container:hover img {
+  transform: scale(1.15);
+}
+
+/* G5. Preuve sociale dynamique */
+.social-proof {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #8a9bb8;
+  margin-top: 12px;
+}
+
+.social-proof .pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--blue);
+  border-radius: 50%;
+  display: inline-block;
+  animation: social-pulse 2s infinite;
+}
+
+@keyframes social-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Fin UX/UI Sections 1-7 */
+

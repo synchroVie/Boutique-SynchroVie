@@ -237,6 +237,67 @@ li { margin-bottom: 0.4em; }
 @media (max-width: 768px) { .trust-strip-inner { gap: 12px; font-size: 0.75rem; } .header-nav { display: none; } .menu-toggle { display: block; } .header-nav.open { display: flex; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: rgba(11, 27, 61, 0.98); padding: 20px 24px; border-bottom: 1px solid rgba(0, 224, 255, 0.1); gap: 16px; } .article-hero h1 { font-size: 1.7rem; } .footer-inner { grid-template-columns: 1fr; } .product-card { padding: 24px 20px; } .cta-button-secondary { margin-left: 0; margin-top: 10px; display: inline-block; } }
 @media (max-width: 480px) { .stat-number { font-size: 2.2rem; } .article-content h2 { font-size: 1.35rem; } }
 
+/* ===== MOBILE READABILITY (max-width: 768px + 480px) ===== */
+@media (max-width: 768px) {
+  body { font-size: 17px; line-height: 1.7; }
+  .article-hero { padding: 28px 18px 32px; }
+  .article-hero h1 { font-size: 1.7rem; line-height: 1.2; }
+  .article-hero-excerpt { font-size: 1rem; line-height: 1.6; }
+  .article-layout { padding: 0 18px 40px; gap: 24px; }
+  .article-content { font-size: 17px; line-height: 1.75; }
+  .article-content h2 { font-size: 1.4rem; margin: 36px 0 16px; }
+  .article-content h3 { font-size: 1.1rem; margin: 26px 0 12px; }
+  .article-content p { font-size: 17px; line-height: 1.75; margin-bottom: 16px; }
+  .article-content ol, .article-content ul { padding-left: 1.3em; }
+  .article-content li { font-size: 17px; line-height: 1.7; margin-bottom: 8px; }
+  .article-meta { gap: 10px; flex-wrap: wrap; }
+  .category-badge { font-size: 0.7rem; padding: 4px 12px; }
+  .read-time { font-size: 0.78rem; }
+  .toc-sidebar { padding: 18px 16px; }
+  .toc-list a { font-size: 0.82rem; padding: 7px 0; }
+  .stat-highlight { padding: 22px 18px; margin: 24px 0; }
+  .stat-number { font-size: 2.4rem; }
+  .stat-label { font-size: 0.92rem; line-height: 1.5; }
+  .info-box, .warning-box, .alert-list { padding: 16px 18px; margin: 20px 0; }
+  .info-box p, .warning-box p, .alert-list li { font-size: 0.95rem; line-height: 1.6; }
+  .faq-block { padding: 16px 18px; margin: 20px 0; }
+  .faq-block h3 { font-size: 1rem; line-height: 1.35; }
+  .faq-block p { font-size: 0.95rem; line-height: 1.65; }
+  .sources-list { font-size: 0.78rem; padding-left: 1.2em; }
+  .sources-list li { margin-bottom: 10px; line-height: 1.5; word-break: break-word; }
+  .cta-box { padding: 26px 18px; margin: 28px 0; }
+  .cta-box h3 { font-size: 1.15rem; }
+  .cta-box p { font-size: 0.9rem; }
+  .cta-button { width: 100%; padding: 14px 24px; font-size: 1rem; }
+  .cta-button-secondary { width: 100%; margin-left: 0; margin-top: 10px; padding: 12px 24px; }
+  .breadcrumb { padding: 12px 18px 0; font-size: 0.78rem; }
+  .article-content h2:first-child { margin-top: 0; }
+  .article-content h2[id], .article-content h3[id] { scroll-margin-top: 80px; }
+  /* Tableaux : scroll horizontal + taille lisible */
+  .data-table { font-size: 0.85rem; display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; white-space: nowrap; max-width: 100%; }
+  .data-table thead, .data-table tbody { display: table; width: 100%; min-width: 480px; }
+  .data-table th { padding: 10px 12px; font-size: 0.75rem; }
+  .data-table td { padding: 10px 12px; }
+}
+@media (max-width: 480px) {
+  body { font-size: 16px; }
+  .article-hero { padding: 22px 14px 24px; }
+  .article-hero h1 { font-size: 1.5rem; }
+  .article-hero-excerpt { font-size: 0.95rem; }
+  .article-layout { padding: 0 14px 32px; }
+  .article-content { font-size: 16px; }
+  .article-content h2 { font-size: 1.25rem; margin: 28px 0 14px; }
+  .article-content h3 { font-size: 1.02rem; margin: 22px 0 10px; }
+  .article-content p { font-size: 16px; margin-bottom: 14px; }
+  .stat-number { font-size: 2rem; }
+  .stat-label { font-size: 0.88rem; }
+  .data-table { font-size: 0.8rem; }
+  .data-table th, .data-table td { padding: 8px 10px; }
+  .cta-box h3 { font-size: 1.05rem; }
+  .sources-list { font-size: 0.75rem; }
+  .breadcrumb { padding: 10px 14px 0; font-size: 0.72rem; }
+}
+
 @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 .fade-in-up { animation: fadeInUp 0.6s ease-out forwards; opacity: 0; }
 .delay-1 { animation-delay: 0.1s; }
