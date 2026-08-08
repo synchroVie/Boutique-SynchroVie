@@ -1,0 +1,60 @@
+{
+  "name": "SynchroVie — Objets connectés santé & biohacking",
+  "short_name": "SynchroVie",
+  "description": "Boutique biohacking francophone. 17 objets connectés santé sans abonnement.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#050d1e",
+  "theme_color": "#0B2545",
+  "lang": "fr-FR",
+  "dir": "ltr",
+  "categories": ["health", "shopping", "lifestyle"],
+  "icons": [
+    {
+      "src": "/assets/img/logo-synchrovie.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/logo-synchrovie.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/img/logo-synchrovie.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/img/logo-synchrovie.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Boutique",
+      "short_name": "Boutique",
+      "description": "Voir les 17 produits SynchroVie",
+      "url": "/#boutique"
+    },
+    {
+      "name": "Blog",
+      "short_name": "Blog",
+      "description": "Journal de la bio-optimisation",
+      "url": "/blog.html"
+    },
+    {
+      "name": "SynchroRing X1",
+      "short_name": "Bague",
+      "description": "Best-seller — bague connectée santé",
+      "url": "/produits/bague-connectee-sante-biometrique.html"
+    }
+  ]
+}

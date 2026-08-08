@@ -1,0 +1,21 @@
+/* TEAM */
+
+Fondateur: Diougamady Keita
+Contact: synchrovie@gmail.com
+Site: https://synchro-vie.com
+Twitter: @synchrovie
+
+/* THANKS */
+
+Merci à nos clients qui ont noté la SynchroRing X1 4,7/5.
+Merci aux chercheurs, médecins et ingénieurs qui font avancer la bio-optimisation francophone.
+
+/* SITE */
+
+Standards: HTML5, CSS3, JavaScript vanilla
+Composants: Font Awesome 6.5.1, Google Fonts (Inter, Space Grotesk)
+Hébergement: GitHub Pages
+CDN: Fastly
+Analytics: Google Analytics 4 (G-H7EXCJZQYT), TikTok Pixel (D9A3IORC77UEFAL2KKS0)
+Newsletter: Brevo
+Paiement: PayPal (bouton hébergé RVJCDF68TF2DL)
