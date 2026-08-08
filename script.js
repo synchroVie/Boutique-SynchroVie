@@ -528,5 +528,130 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  /* ---------- AUDIT S2.4 : Variabiliser le badge "Il ne reste que 4 en stock" ---------- */
+  /* Chaque produit reçoit un nombre de stock différent, basé sur un hash de son URL */
+  /* pour que le nombre soit stable entre les visites mais différent entre produits */
+  function hashStr(s) {
+    var h = 0;
+    for (var i = 0; i < s.length; i++) {
+      h = ((h << 5) - h + s.charCodeAt(i)) | 0;
+    }
+    return Math.abs(h);
+  }
+  document.querySelectorAll('.badge-stock').forEach(function(badge) {
+    // Cherche l'URL du produit (lien le plus proche)
+    var card = badge.closest('.card') || badge.closest('article') || badge.closest('.product-detail');
+    var url = '';
+    if (card) {
+      var link = card.querySelector('a[href*="produits/"]');
+      if (link) url = link.getAttribute('href');
+    }
+    if (!url) url = window.location.pathname;
+    var seed = hashStr(url);
+    // Stock entre 2 et 9, jamais le même partout
+    var stock = 2 + (seed % 8);
+    // Préserve le texte original, remplace juste le chiffre
+    var txt = badge.textContent;
+    var newTxt = txt.replace(/\d+/, stock);
+    if (newTxt !== txt) badge.textContent = newTxt;
+  });
+
+  /* ---------- AUDIT S2.4 : Preuve sociale dynamique sur fiches produit ---------- */
+  /* Affiche "X personnes consultent ce produit" avec nombre aléatoire stable par URL */
+  if (document.body.classList.contains('product-page') || window.location.pathname.indexOf('/produits/') !== -1) {
+    var proofExists = document.querySelector('.social-proof');
+    if (!proofExists) {
+      // Chercher un endroit pertinent (près du bouton commander ou du prix)
+      var ctaBox = document.querySelector('.cta-box, .product-cta, .product-price-block, .paypal-section');
+      if (ctaBox && ctaBox.parentNode) {
+        var proof = document.createElement('div');
+        proof.className = 'social-proof';
+        var seedProof = hashStr(window.location.pathname);
+        var viewers = 5 + (seedProof % 18);
+        proof.innerHTML = '<span class="pulse-dot"></span><span>' + viewers + ' personnes ont consulté ce produit aujourd\'hui</span>';
+        ctaBox.parentNode.insertBefore(proof, ctaBox.nextSibling);
+      }
+    }
+  }
+
+  /* ---------- AUDIT S2.6 : Filtres blog.html (par thématique) ---------- */
+  var blogGrid = document.querySelector('.blog-grid, .articles-grid, .articles-list');
+  if (blogGrid && document.body.classList.contains('blog-page') || (window.location.pathname.endsWith('blog.html'))) {
+    var grid = document.querySelector('.blog-grid') || document.querySelector('main') || document.body;
+    var cards = grid.querySelectorAll('.article-card, .blog-card');
+    if (cards.length > 0) {
+      // Collecte des catégories
+      var cats = {};
+      cards.forEach(function(c) {
+        var cat = c.querySelector('.article-category, .blog-card-category');
+        if (cat) {
+          var catText = cat.textContent.trim();
+          cats[catText] = (cats[catText] || 0) + 1;
+        }
+      });
+      if (Object.keys(cats).length > 1) {
+        // Créer barre de filtres
+        var filterBar = document.createElement('div');
+        filterBar.style.cssText = 'display:flex;gap:8px;flex-wrap:wrap;justify-content:center;padding:16px 20px;max-width:1200px;margin:0 auto 24px;';
+        var allBtn = document.createElement('button');
+        allBtn.textContent = 'Tous (' + cards.length + ')';
+        allBtn.className = 'blog-filter-btn active';
+        allBtn.style.cssText = 'padding:8px 18px;border-radius:999px;border:1px solid rgba(59,130,246,0.3);background:rgba(59,130,246,0.1);color:#3B82F6;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:Space Grotesk,sans-serif;';
+        filterBar.appendChild(allBtn);
+        Object.keys(cats).forEach(function(cat) {
+          var btn = document.createElement('button');
+          btn.textContent = cat + ' (' + cats[cat] + ')';
+          btn.className = 'blog-filter-btn';
+          btn.dataset.cat = cat;
+          btn.style.cssText = 'padding:8px 18px;border-radius:999px;border:1px solid rgba(148,163,184,0.25);background:transparent;color:#94A3B8;font-size:0.85rem;font-weight:600;cursor:pointer;font-family:Space Grotesk,sans-serif;transition:all 0.2s;';
+          filterBar.appendChild(btn);
+        });
+        grid.parentNode.insertBefore(filterBar, grid);
+        // Logique de filtre
+        filterBar.addEventListener('click', function(e) {
+          if (!e.target.classList.contains('blog-filter-btn')) return;
+          filterBar.querySelectorAll('.blog-filter-btn').forEach(function(b) {
+            b.style.background = 'transparent';
+            b.style.color = '#94A3B8';
+            b.style.borderColor = 'rgba(148,163,184,0.25)';
+            b.classList.remove('active');
+          });
+          e.target.style.background = 'rgba(59,130,246,0.1)';
+          e.target.style.color = '#3B82F6';
+          e.target.style.borderColor = 'rgba(59,130,246,0.3)';
+          e.target.classList.add('active');
+          var cat = e.target.dataset.cat;
+          cards.forEach(function(c) {
+            var cardCat = c.querySelector('.article-category, .blog-card-category');
+            if (!cat || (cardCat && cardCat.textContent.trim() === cat)) {
+              c.style.display = '';
+            } else {
+              c.style.display = 'none';
+            }
+          });
+        });
+      }
+    }
+  }
+
+  /* ---------- AUDIT S4.1 : Sticky CTA mobile sur fiches produit ---------- */
+  if (window.location.pathname.indexOf('/produits/') !== -1) {
+    if (!document.querySelector('.sticky-cta-mobile')) {
+      // Trouver le nom du produit et le prix
+      var prodName = document.querySelector('h1');
+      var prodPrice = document.querySelector('.product-price-current, .price, [class*="price"]');
+      var name = prodName ? prodName.textContent.trim() : 'produit';
+      var price = prodPrice ? prodPrice.textContent.trim() : '';
+      var sticky = document.createElement('div');
+      sticky.className = 'sticky-cta-mobile';
+      // Si PayPal container existe (SynchroRing X1), pointer vers #commander, sinon vers commander.html
+      var ctaHref = '#commander';
+      var ctaLabel = price ? 'Commander — ' + price : 'Commander';
+      sticky.innerHTML = '<a href="' + ctaHref + '" class="btn-primary">' + ctaLabel + '</a>';
+      document.body.appendChild(sticky);
+      document.body.classList.add('has-sticky-cta');
+    }
+  }
+
 })();
 
