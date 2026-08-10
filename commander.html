@@ -244,6 +244,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0B2545">
+<!-- PayPal SDK pour bouton hébergé (SynchroRing X1) -->
+<script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
 </head>
 <body>
 <header class="site-header">
@@ -348,14 +350,35 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 </div>
 <div class="success-overlay" id="successOverlay">
   <div class="success-card">
+    <button class="success-close" id="successClose" aria-label="Fermer" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.8rem;color:#4a6278;cursor:pointer;line-height:1;">&times;</button>
     <div class="success-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
-    <div class="success-title">Commande prête !</div>
-    <div class="success-sub" id="successMessage">Votre commande est prête. Notre expert vous contacte sous 2h pour confirmer la disponibilité et finaliser le paiement (PayPal, virement ou carte).</div>
-    <a href="#" id="waLink" class="success-wa" target="_blank" rel="noopener">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      Confirmer la commande
-    </a>
-    <a href="index.html#boutique" class="btn-back-shop">← Retourner au catalogue</a>
+    <div class="success-title" id="successTitle">Commande prête !</div>
+    <div class="success-sub" id="successMessage">Votre commande est prête. Choisissez votre mode de paiement ci-dessous.</div>
+
+    <!-- Section PayPal (visible si SynchroRing X1) -->
+    <div id="paypalSection" style="display:none;margin-top:16px;">
+      <p style="text-align:center;color:#F8FAFC;font-weight:700;font-size:0.95rem;margin-bottom:10px;font-family:Space Grotesk,sans-serif;">Payer avec PayPal ou carte bancaire</p>
+      <div id="paypal-container-RVJCDF68TF2DL" style="margin-top:0;"></div>
+      <p style="text-align:center;font-size:0.75rem;color:#4a6278;margin-top:8px;">PayPal accepte aussi Visa, Mastercard. Paiement sécurisé SSL.</p>
+      <div style="display:flex;justify-content:center;gap:10px;margin-top:8px;">
+        <i class="fa-brands fa-cc-visa" style="font-size:28px;color:#1A1F71;" aria-label="Visa"></i>
+        <i class="fa-brands fa-cc-mastercard" style="font-size:28px;color:#EB001B;" aria-label="Mastercard"></i>
+        <i class="fa-brands fa-paypal" style="font-size:28px;color:#003087;" aria-label="PayPal"></i>
+      </div>
+    </div>
+
+    <!-- Section Email (visible si pas SynchroRing X1) -->
+    <div id="emailSection" style="display:none;margin-top:16px;">
+      <a href="#" id="emailConfirmBtn" class="success-wa" style="background:linear-gradient(135deg,#3B82F6,#00C9A7);color:#0B1B3D;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:10px;font-weight:700;font-family:Space Grotesk,sans-serif;font-size:1rem;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Confirmer par email
+      </a>
+      <p style="text-align:center;font-size:0.78rem;color:#4a6278;margin-top:10px;">Notre expert vous répond sous 2h (jours ouvrés) avec les modalités de paiement (PayPal, virement ou carte).</p>
+    </div>
+
+    <div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(148,163,184,0.15);">
+      <a href="index.html#boutique" class="btn-back-shop" style="color:#94A3B8;text-decoration:none;font-size:0.88rem;">← Retourner au catalogue</a>
+    </div>
   </div>
 </div>
 <script>
@@ -405,11 +428,11 @@ function updateSummary() {
     '<div class="summary-line"><span class="label">Livraison</span><span class="value" style="color:#00C9A7;">Offerte</span></div>' +
     '<div class="summary-total"><span class="total-label">Total estimé</span><span class="total-price">' + total.toLocaleString('fr-FR') + ' EUR</span></div>' +
     '<p style="font-size:11px;color:#4a6278;margin-top:8px;">Notre expert vous contacte sous 2h pour finaliser le paiement (PayPal, virement ou carte).</p>' +
-    '<a  id="summaryWaBtn" class="btn-summary-wa visible"  href="mailto:synchrovie@gmail.com">Email</a>';
+    '<a id="summaryWaBtn" class="btn-summary-wa visible" href="mailto:synchrovie@gmail.com?subject=' + encodeURIComponent('Commande SynchroVie - ' + selectedProduct) + '&body=' + encodeURIComponent('Bonjour,\n\nJe souhaite commander :\n\nProduit : ' + selectedProduct + '\nQuantité : ' + qty + '\nTotal : ' + total.toLocaleString('fr-FR') + ' EUR\n\nMerci de confirmer.') + '">Confirmer par email</a>';
   // Update the static summary Email button with product details
   var staticWaBtn = document.querySelector('.summary-wa-btn');
   if (staticWaBtn) {
-    staticWaBtn.href = 'https://wa.me/synchrovie@gmail.com?text=' + encodeURIComponent('Bonjour SynchroVie \n\nJe souhaite commander :\n\n Produit : ' + selectedProduct + '\n Quantité : ' + qty + '\n Total estimé : ' + total.toLocaleString('fr-FR') + ' EUR\n\nMerci de confirmer la disponibilité et les modalités de paiement.');
+    staticWaBtn.href = 'mailto:synchrovie@gmail.com?subject=' + encodeURIComponent('Commande SynchroVie - ' + selectedProduct) + '&body=' + encodeURIComponent('Bonjour,\n\nJe souhaite commander :\n\nProduit : ' + selectedProduct + '\nQuantité : ' + qty + '\nTotal : ' + total.toLocaleString('fr-FR') + ' EUR\n\nMerci de confirmer la disponibilité et les modalités de paiement.');
     staticWaBtn.style.display = 'none'; // Hide static btn since dynamic one is now visible
   }
 }
@@ -431,24 +454,70 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
     return;
   }
   var total = (selectedPrice * qty).toLocaleString('fr-FR');
-  var waText =
-    'Bonjour SynchroVie \n\n' +
+  var totalNum = selectedPrice * qty;
+
+  // Construire le corps email
+  var emailBody =
+    'Bonjour SynchroVie,\n\n' +
     'Je souhaite passer une commande :\n\n' +
     ' Produit : ' + selectedProduct + '\n' +
     ' Quantité : ' + qty + '\n' +
-    ' Total estimé : ' + total + ' EUR\n\n' +
+    ' Total : ' + total + ' EUR\n\n' +
     ' Nom : ' + firstName + ' ' + lastName + '\n' +
     ' Email : ' + email + '\n' +
     ' Pays : ' + country + '\n' +
     (message ? ' Message : ' + message + '\n' : '') +
     '\nMerci de confirmer la disponibilité et les modalités de paiement.';
-  var waUrl = 'https://wa.me/synchrovie@gmail.com?text=' + encodeURIComponent(waText);
+  var mailtoUrl = 'mailto:synchrovie@gmail.com?subject=' + encodeURIComponent('Commande SynchroVie - ' + selectedProduct + ' x' + qty) + '&body=' + encodeURIComponent(emailBody);
+
+  // Mettre à jour le message de succès
   document.getElementById('successMessage').textContent =
-    selectedProduct + ' × ' + qty + ' — ' + total + ' EUR. Cliquez pour finaliser par email.';
-  document.getElementById('waLink').href = waUrl;
+    selectedProduct + ' × ' + qty + ' — ' + total + ' EUR. Choisissez votre mode de paiement ci-dessous.';
+
+  // Détecter si SynchroRing X1 (PayPal disponible)
+  var isSynchroRing = selectedProduct.toLowerCase().indexOf('synchro') !== -1 && selectedProduct.toLowerCase().indexOf('ring') !== -1;
+
+  var paypalSection = document.getElementById('paypalSection');
+  var emailSection = document.getElementById('emailSection');
+
+  if (isSynchroRing && totalNum === 458 * qty) {
+    // SynchroRing X1 : afficher PayPal en priorité
+    if (paypalSection) paypalSection.style.display = 'block';
+    if (emailSection) emailSection.style.display = 'none';
+    document.getElementById('successTitle').textContent = 'PayPal ou carte bancaire';
+
+    // Rendre le bouton PayPal hébergé
+    if (typeof paypal !== 'undefined' && paypal.HostedButtons) {
+      paypal.HostedButtons({
+        hostedButtonId: "RVJCDF68TF2DL"
+      }).render("#paypal-container-RVJCDF68TF2DL");
+    } else {
+      // Fallback : si PayPal SDK ne charge pas, afficher email
+      if (paypalSection) paypalSection.style.display = 'none';
+      if (emailSection) emailSection.style.display = 'block';
+      var emailBtn = document.getElementById('emailConfirmBtn');
+      if (emailBtn) emailBtn.href = mailtoUrl;
+    }
+  } else {
+    // Autre produit : afficher email
+    if (paypalSection) paypalSection.style.display = 'none';
+    if (emailSection) emailSection.style.display = 'block';
+    document.getElementById('successTitle').textContent = 'Confirmer votre commande';
+    var emailBtn = document.getElementById('emailConfirmBtn');
+    if (emailBtn) emailBtn.href = mailtoUrl;
+  }
+
+  // Afficher l'overlay
   document.getElementById('successOverlay').classList.add('show');
+
+  // Bouton email dans le summary aussi
   var summaryBtn = document.getElementById('summaryWaBtn');
-  if (summaryBtn) { summaryBtn.href = waUrl; }
+  if (summaryBtn) { summaryBtn.href = mailtoUrl; }
+});
+
+// Bouton fermer l'overlay
+document.getElementById('successClose').addEventListener('click', function() {
+  document.getElementById('successOverlay').classList.remove('show');
 });
 
 (function() {
