@@ -755,8 +755,6 @@ function changeQty(delta) {
 function updateTotal(qty) {
   const total = UNIT_PRICE * qty;
   document.getElementById('qtyTotal').textContent = total.toLocaleString('fr-FR') + ' EUR';
-  
-  }
 }
 function toggleFaq(btn) {
   const answer = btn.nextElementSibling;
