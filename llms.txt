@@ -1,0 +1,28 @@
+# SynchroVie
+
+> Boutique e-commerce francophone spécialisée dans les objets connectés santé et biohacking, sans abonnement.
+
+## Catalogue
+
+17 produits organisés en 4 familles :
+- Bio-Monitoring (SynchroRing X1, B-Pressure Connect, Scale-Master Pro, Vitals-Scan Pro, Thermo-Sense Ultra)
+- Neuro-Sommeil (NeuroRest G2, SleepTrack Zen, Aura-Light Clock)
+- Biofeedback (Aura-Ring Calm, Gravity-Tech Pad)
+- Performance (ThermoWrap FIR, ElectroBoost S3, Posture-Core, Flex-Gun Mini, Knee-Tech Support, Grip-Master Pro, LumiRed Pro X1)
+
+## Contenu éditorial
+
+22 articles blog sur la variabilité de la fréquence cardiaque (VFC), le sommeil profond, le cortisol, la récupération musculaire et la photobiomodulation.
+
+## Zones de livraison
+
+France, Belgique, Suisse, Luxembourg. Délai 7-10 jours ouvrables.
+
+## Contact
+
+Email : synchrovie@gmail.com
+
+## URL
+
+Site : https://synchro-vie.com
+Sitemap : https://synchro-vie.com/sitemap.xml
