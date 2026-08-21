@@ -210,6 +210,7 @@ body {
 .payment-badges { display: flex; align-items: center; gap: 14px; background: #ffffff; padding: 10px 16px; border-radius: 8px; width: fit-content; margin-top: 8px; }
 .payment-badges i { font-size: 26px; color: #0B1B3D; transition: color 0.2s ease; }
 .payment-badges i:hover { color: #3B82F6; }
+.field-input-error { border-color: #EF4444 !important; box-shadow: 0 0 0 3px rgba(239,68,68,0.15) !important; }
 
 </style>
     <!-- Open Graph -->
@@ -472,6 +473,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <div class="success-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
     <div class="success-title" id="successTitle">Commande prête !</div>
     <div class="success-sub" id="successMessage">Votre commande est prête. Choisissez votre mode de paiement ci-dessous.</div>
+    <button id="backToFormBtn" style="background:none;border:1px solid rgba(148,163,184,0.3);color:#94A3B8;padding:10px 20px;border-radius:8px;font-size:0.85rem;cursor:pointer;margin-top:12px;font-family:inherit;transition:all 0.2s;" onmouseover="this.style.borderColor='#3B82F6';this.style.color='#3B82F6'" onmouseout="this.style.borderColor='rgba(148,163,184,0.3)';this.style.color='#94A3B8'">✏️ Modifier mes informations</button>
 
     <!-- Section PayPal (visible si SynchroRing X1) -->
     <div id="paypalSection" style="display:none;margin-top:16px;">
@@ -552,8 +554,12 @@ function updateSummary() {
 
 function finaliserCommande() {
   if (!selectedProduct) {
-    alert('Veuillez sélectionner un produit.');
     document.getElementById('productGrid').scrollIntoView({ behavior: 'smooth' });
+    var productOptions = document.querySelectorAll('.product-option');
+    productOptions.forEach(function(o) {
+      o.classList.add('field-input-error');
+      setTimeout(function() { o.classList.remove('field-input-error'); }, 3000);
+    });
     return;
   }
   var firstName = document.getElementById('firstName').value.trim();
@@ -562,7 +568,22 @@ function finaliserCommande() {
   var country   = document.getElementById('country').value;
   var message   = document.getElementById('message').value.trim();
   if (!firstName || !lastName || !email || !country) {
-    alert('Veuillez remplir tous les champs obligatoires (*).');
+    var requiredFields = [
+      { id: 'firstName', val: firstName },
+      { id: 'lastName', val: lastName },
+      { id: 'email', val: email },
+      { id: 'country', val: country }
+    ];
+    var firstEmpty = null;
+    requiredFields.forEach(function(f) {
+      var el = document.getElementById(f.id);
+      if (!f.val) {
+        el.classList.add('field-input-error');
+        setTimeout(function() { el.classList.remove('field-input-error'); }, 3000);
+        if (!firstEmpty) firstEmpty = el;
+      }
+    });
+    if (firstEmpty) firstEmpty.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
   }
   var total = (selectedPrice * qty).toLocaleString('fr-FR');
@@ -647,6 +668,11 @@ if (finaliserBtn) {
 // Bouton fermer l'overlay
 document.getElementById('successClose').addEventListener('click', function() {
   document.getElementById('successOverlay').classList.remove('show');
+});
+
+document.getElementById('backToFormBtn')?.addEventListener('click', function() {
+  document.getElementById('successOverlay').classList.remove('show');
+  document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
 });
 
 (function() {

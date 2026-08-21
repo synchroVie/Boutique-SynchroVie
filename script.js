@@ -684,7 +684,7 @@ document.querySelectorAll('form[id^="lead-magnet-form"]').forEach(form => {
     const email = this.querySelector('input[name="email"]').value;
     // Brancher sur la liste Brevo existante (liste ID 5)
     // fetch('/api/brevo-subscribe', { method: 'POST', body: JSON.stringify({ email }) });
-    this.innerHTML = '<p style="color:var(--green-ok); font-size:0.88rem;">Merci ! Vérifie ta boîte mail pour recevoir le guide.</p>';
+    this.innerHTML = '<p style="color:var(--green-ok); font-size:0.88rem; margin-bottom:12px;">Merci ! Vérifie ta boîte mail.</p><a href="/assets/guide-5-signaux-burnout-synchrovie.pdf" download style="display:inline-block; background:var(--blue); color:#fff; padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:600; font-size:0.85rem;">Télécharger le guide PDF</a>';
   });
 });
 

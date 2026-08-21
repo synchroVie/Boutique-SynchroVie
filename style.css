@@ -758,9 +758,18 @@ footer {
   transition: transform 0.3s, opacity 0.3s;
   border-radius: 2px;
 }
+.menu-toggle .menu-label {
+  display: none;
+  color: var(--white);
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-left: 8px;
+  letter-spacing: 0.04em;
+}
 .menu-toggle.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .menu-toggle.active span:nth-child(2) { opacity: 0; }
 .menu-toggle.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.menu-toggle.active .menu-label { display: none; }
 
 .mobile-menu {
   display: none;
@@ -814,7 +823,7 @@ footer {
   .categories-section { padding: 40px 20px; }
   nav.main-nav { padding: 14px 20px; }
   .nav-links { display: none; }
-  .menu-toggle { display: block; }
+  .menu-toggle { display: flex; align-items: center; }
   .footer-grid { grid-template-columns: 1fr; gap: 24px; }
   .newsletter-form { flex-direction: column; }
   .trust-bar { gap: 12px; font-size: 0.72rem; }
