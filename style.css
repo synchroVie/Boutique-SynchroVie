@@ -759,7 +759,6 @@ footer {
   border-radius: 2px;
 }
 .menu-toggle .menu-label {
-  display: none;
   color: var(--white);
   font-size: 0.82rem;
   font-weight: 600;

@@ -1332,7 +1332,46 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 <!-- ═══ Header ═══ -->
 <header class="header">
   <div class="header-inner">
-    
+    <a href="index.html" class="logo">
+      <div class="logo-mark">SV</div>
+      <span class="logo-text">SYNCHROVIE</span>
+    </a>
+    <nav class="nav-desktop">
+      <a href="index.html">Accueil</a>
+      <a href="blog.html">Blog</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a href="mailto:synchrovie@gmail.com" class="whatsapp-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Email
+    </a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Fermer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <a href="index.html">Accueil</a>
+  <a href="blog.html">Blog</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <a href="mailto:synchrovie@gmail.com">Email Expert</a>
+</div>
+
+<!-- ═══ Articles ═══ -->
+<main>
+<section class="articles-section">
+  <div class="articles-section-header">
+    <h2>Derniers articles</h2>
+    <span class="articles-count">24 articles</span>
+  </div>
+  <div class="articles-grid">
 
     <!-- Article: Fréquence cardiaque -->
     <a href="https://synchro-vie.com/blog/comment-interpreter-frequence-cardiaque.html" class="article-card">
@@ -1897,6 +1936,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
   </div>
 </section>
+</main>
 
 <!-- ═══ CTA Section ═══ -->
 <section class="cta-section">
@@ -2038,6 +2078,15 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     </div>
   </div>
 </footer>
+<script>
+// Mobile menu toggle
+document.getElementById('mobileToggle').addEventListener('click', function() {
+  document.getElementById('mobileMenu').classList.add('active');
+});
+document.getElementById('mobileMenuClose').addEventListener('click', function() {
+  document.getElementById('mobileMenu').classList.remove('active');
+});
+</script>
 <script src="brevo.js" defer></script>
 <!-- Pop-up Brevo (exit-intent desktop + 60s mobile) -->
 <div class="brevo-overlay" id="brevoOverlay" aria-hidden="true">

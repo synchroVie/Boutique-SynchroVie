@@ -152,8 +152,13 @@ body {
 .summary-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
 .summary-header {
   padding: 16px 20px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; color: var(--white);
-  display: flex; align-items: center; gap: 8px;
+  display: flex; align-items: center; justify-content: space-between;
 }
+.summary-close-btn {
+  background: none; border: none; color: var(--text); font-size: 1.4rem; cursor: pointer;
+  padding: 0 4px; line-height: 1; transition: color .2s;
+}
+.summary-close-btn:hover { color: var(--blue); }
 .summary-body { padding: 20px; }
 .summary-product-name { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
 .summary-product-cat { font-size: 11px; color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
@@ -448,8 +453,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   <div class="order-summary">
     <div class="summary-card">
       <div class="summary-header">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-        Récapitulatif
+        <div style="display:flex;align-items:center;gap:8px;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          Récapitulatif
+        </div>
+        <button class="summary-close-btn" id="summaryCloseBtn" aria-label="Masquer le récapitulatif" title="Fermer">&times;</button>
       </div>
       <div class="summary-body">
         <div id="summaryContent"><div class="summary-empty">Aucun produit sélectionné</div></div>
@@ -665,6 +673,10 @@ if (finaliserBtn) {
   });
 }
 
+// Bouton fermer le récapitulatif
+document.getElementById('summaryCloseBtn').addEventListener('click', function() {
+  document.querySelector('.order-summary').style.display = 'none';
+});
 // Bouton fermer l'overlay
 document.getElementById('successClose').addEventListener('click', function() {
   document.getElementById('successOverlay').classList.remove('show');
