@@ -677,12 +677,14 @@ document.querySelectorAll('.live-viewers .live-count-text, #live-count-text').fo
   el.textContent = base + ' personnes consultent ce produit en ce moment';
 });
 
-// Lead Magnet Form (Bloc 6)
-document.getElementById('lead-magnet-form')?.addEventListener('submit', function(e) {
-  e.preventDefault();
-  const email = this.querySelector('input[name="email"]').value;
-  // Brancher ici sur Brevo (liste ID existante) pour l'ajout automatique à la liste
-  // fetch('/api/brevo-subscribe', { method: 'POST', body: JSON.stringify({ email }) });
-  this.innerHTML = '<p style="color:var(--green-ok); font-size:0.88rem;">Merci ! Vérifie ta boîte mail pour recevoir le guide.</p>';
+// Lead Magnet Form (Bloc 6) — toutes les pages
+document.querySelectorAll('form[id^="lead-magnet-form"]').forEach(form => {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input[name="email"]').value;
+    // Brancher sur la liste Brevo existante (liste ID 5)
+    // fetch('/api/brevo-subscribe', { method: 'POST', body: JSON.stringify({ email }) });
+    this.innerHTML = '<p style="color:var(--green-ok); font-size:0.88rem;">Merci ! Vérifie ta boîte mail pour recevoir le guide.</p>';
+  });
 });
 
