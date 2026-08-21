@@ -1993,3 +1993,309 @@ body {
 
 /* Fin UX/UI Sections 1-7 */
 
+/* =================================================================
+   LEVIERS DE CONVERSION — Blocs 1-6
+   ================================================================= */
+
+/* ---------- BLOC 1 : BANNIÈRE STICKY PREUVE SOCIALE ---------- */
+.social-bar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: rgba(10,22,50,0.97);
+  border-bottom: 1px solid rgba(59,130,246,0.2);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 0.82rem;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+}
+.social-bar .stars {
+  color: var(--gold);
+  letter-spacing: 1px;
+  flex-shrink: 0;
+}
+.social-bar .rating-text {
+  color: var(--white);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.social-carousel {
+  position: relative;
+  height: 20px;
+  flex: 1;
+  max-width: 340px;
+  overflow: hidden;
+}
+.social-slide {
+  position: absolute;
+  inset: 0;
+  color: var(--text-soft);
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.social-slide.active {
+  opacity: 1;
+}
+@media (max-width: 480px) {
+  .social-bar .rating-text { display: none; }
+  .social-carousel { max-width: 220px; }
+}
+
+/* ---------- BLOC 2 : CARTE PRODUIT — ANCRAGE PRIX + URGENCE ---------- */
+.badge-top {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--gold);
+  color: var(--navy);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.live-viewers {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.live-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--green-ok);
+  animation: pulse-dot 1.6s ease-in-out infinite;
+  flex-shrink: 0;
+}
+.price-old {
+  color: var(--text-soft);
+  text-decoration: line-through;
+  font-size: 0.95rem;
+  margin-right: 10px;
+}
+.price-current {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--blue);
+}
+.price-daily {
+  display: block;
+  color: var(--green-ok);
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+.btn-cta {
+  width: 100%;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 14px;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  min-height: 48px;
+  transition: background var(--transition), transform 0.15s ease, box-shadow var(--transition);
+}
+.btn-cta:hover {
+  background: var(--blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(59,130,246,0.35);
+}
+.btn-cta:active {
+  transform: translateY(0);
+}
+
+/* ---------- BLOC 3 : GARANTIE ---------- */
+.guarantee-block {
+  background: rgba(0,201,167,0.06);
+  border: 1px solid rgba(0,201,167,0.25);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+.guarantee-title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  margin: 0 0 14px;
+  color: var(--white);
+}
+.guarantee-item {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 14px;
+  align-items: flex-start;
+}
+.guarantee-item:last-child {
+  margin-bottom: 0;
+}
+.guarantee-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: rgba(0,201,167,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--green-ok);
+  font-weight: 700;
+}
+.guarantee-item strong {
+  display: block;
+  font-size: 0.88rem;
+  margin-bottom: 2px;
+  color: var(--white);
+}
+.guarantee-item span {
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
+/* ---------- BLOC 4 : AVANT / PENDANT / APRÈS ---------- */
+.transform-track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scroll-snap-type: x mandatory;
+}
+.transform-step {
+  flex: 0 0 150px;
+  background: var(--indigo);
+  border-radius: var(--radius);
+  padding: 16px;
+  border: 1px solid rgba(148,163,184,0.1);
+  scroll-snap-align: start;
+}
+.transform-step .tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-soft);
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+.transform-step p {
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--white);
+}
+.transform-step.after .tag {
+  color: var(--green-ok);
+}
+@media (min-width: 768px) {
+  .transform-track {
+    overflow-x: visible;
+  }
+  .transform-step {
+    flex: 1;
+  }
+}
+
+/* ---------- BLOC 5 : AUTORITÉ SCIENTIFIQUE ---------- */
+.authority-block {
+  text-align: center;
+}
+.authority-stat {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  color: var(--blue);
+  font-weight: 700;
+}
+.authority-stat-label {
+  color: var(--text-soft);
+  font-size: 0.82rem;
+  margin: 4px 0 0;
+}
+.authority-quote {
+  background: var(--indigo);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  margin-top: 16px;
+  text-align: left;
+  border-left: 3px solid var(--blue);
+}
+.authority-quote p {
+  font-size: 0.86rem;
+  line-height: 1.55;
+  margin: 0 0 10px;
+  color: var(--white);
+  font-style: italic;
+}
+.authority-quote footer {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+}
+
+/* ---------- BLOC 6 : GUIDE GRATUIT (LEAD MAGNET) ---------- */
+.lead-block {
+  background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(59,130,246,0.02));
+  border: 1px solid rgba(59,130,246,0.25);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  text-align: center;
+}
+.lead-block h4 {
+  font-family: var(--font-display);
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+}
+.lead-block p {
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+.lead-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.lead-form input {
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(148,163,184,0.25);
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.9rem;
+  min-height: 44px;
+}
+.lead-form input:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+.lead-form button {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: none;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  min-height: 44px;
+  transition: background var(--transition);
+}
+.lead-form button:hover {
+  background: var(--blue-hover);
+}
+
+/* Fin Leviers de Conversion */
+

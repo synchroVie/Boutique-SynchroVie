@@ -655,3 +655,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })();
 
+/* =================================================================
+   LEVIERS DE CONVERSION — JS Blocs 1-6
+   ================================================================= */
+
+// Carrousel avis dans la bannière sticky (Bloc 1)
+(function() {
+  const slides = document.querySelectorAll('.social-bar .social-slide');
+  if (!slides.length) return;
+  let i = 0;
+  setInterval(() => {
+    slides[i].classList.remove('active');
+    i = (i + 1) % slides.length;
+    slides[i].classList.add('active');
+  }, 4000);
+})();
+
+// Variation du nombre de viewers (Bloc 2)
+document.querySelectorAll('.live-viewers .live-count-text, #live-count-text').forEach(el => {
+  const base = 8 + Math.floor(Math.random() * 12);
+  el.textContent = base + ' personnes consultent ce produit en ce moment';
+});
+
+// Lead Magnet Form (Bloc 6)
+document.getElementById('lead-magnet-form')?.addEventListener('submit', function(e) {
+  e.preventDefault();
+  const email = this.querySelector('input[name="email"]').value;
+  // Brancher ici sur Brevo (liste ID existante) pour l'ajout automatique à la liste
+  // fetch('/api/brevo-subscribe', { method: 'POST', body: JSON.stringify({ email }) });
+  this.innerHTML = '<p style="color:var(--green-ok); font-size:0.88rem;">Merci ! Vérifie ta boîte mail pour recevoir le guide.</p>';
+});
+
