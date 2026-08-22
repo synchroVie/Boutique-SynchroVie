@@ -9,512 +9,350 @@
       gtag('js', new Date());
       gtag('config', 'G-R7FXCZJQVT');
     </script>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Commander — SynchroVie | Haute Technologie de Bio-Optimisation</title>
-<meta name="description" content="Passez votre commande SynchroVie en 60 secondes. Sélectionnez votre produit, quantité et infos de livraison. Paiement sécurisé PayPal, virement ou carte.">
+<meta name="description" content="Passez votre commande SynchroVie en 60 secondes. Paiement securise PayPal, Visa ou MasterCard. Livraison Europe 7-10j.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://synchro-vie.com/commander.html">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 <style>
 :root {
-  --bg: #050a14;
-  --surface: #0a1628;
-  --card: #0f1f38;
-  --border: rgba(59,130,246,0.15);
-  --border-hover: rgba(59,130,246,0.4);
-  --blue: #3B82F6;
-  --blue-hover: #60A5FA;
-  --green: #00C9A7;
-  --text: #b8c9e0;
-  --white: #e8f4ff;
-  --orange: #FF6B35;
-  --gold: #FFB800;
+  --bg: #050a14; --surface: #0a1628; --card: #0f1f38;
+  --border: rgba(59,130,246,0.15); --border-hover: rgba(59,130,246,0.4);
+  --blue: #3B82F6; --blue-hover: #60A5FA; --green: #00C9A7;
+  --text: #b8c9e0; --white: #e8f4ff;
   --gradient: linear-gradient(135deg, #3B82F6, #60A5FA);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
-  min-height: 100vh;
-}
-.site-header {
-  position: sticky; top: 0; z-index: 100;
-  background: rgba(5,10,20,0.95);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
-  padding: 0 32px;
-  height: 64px;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.logo { font-size: 18px; font-weight: 800; color: var(--blue); letter-spacing: 2px; text-decoration: none; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; font-size: 15px; line-height: 1.6; min-height: 100vh; }
+.site-header { position: sticky; top: 0; z-index: 100; background: rgba(5,10,20,0.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; height: 60px; display: flex; align-items: center; justify-content: space-between; }
+.logo { font-size: 18px; font-weight: 800; color: var(--blue); letter-spacing: 2px; text-decoration: none; font-family: 'Space Grotesk', sans-serif; }
 .header-back { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text); text-decoration: none; transition: color .2s; }
 .header-back:hover { color: var(--blue); }
 .header-back svg { flex-shrink: 0; }
-.trust-strip {
-  background: rgba(16,185,129,0.05);
-  border-bottom: 1px solid rgba(16,185,129,0.15);
-  padding: 8px 32px;
-  display: flex; align-items: center; justify-content: center; gap: 24px;
-  flex-wrap: wrap;
-}
+.trust-strip { background: rgba(16,185,129,0.05); border-bottom: 1px solid rgba(16,185,129,0.15); padding: 8px 24px; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
 .trust-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: var(--text); }
 .trust-item strong { color: var(--white); }
 .trust-sep { color: var(--border); }
-.page-wrap {
-  max-width: 1040px; margin: 0 auto;
-  padding: 40px 24px 80px;
-  display: grid;
-  grid-template-columns: 1fr 380px;
-  gap: 32px;
-  align-items: start;
-}
-@media (max-width: 800px) {
-  .page-wrap { grid-template-columns: 1fr; }
-  .order-summary { order: -1; }
-}
+.page-wrap { max-width: 680px; margin: 0 auto; padding: 32px 20px 80px; }
 .page-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); margin-bottom: 6px; }
-.page-title { font-size: 28px; font-weight: 800; color: var(--white); margin-bottom: 6px; line-height: 1.2; }
-.page-sub { font-size: 14px; color: var(--text); margin-bottom: 32px; }
-.steps-bar { display: flex; align-items: center; gap: 0; margin-bottom: 32px; }
-.step-dot { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; }
-.step-dot .num { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 800; flex-shrink: 0; }
-.step-dot.done .num { background: var(--green); color: #050a14; }
-.step-dot.active .num { background: var(--blue); color: #050a14; }
-.step-dot.todo .num { background: var(--card); border: 1px solid var(--border); color: var(--text); }
-.step-dot.done .label { color: var(--green); }
-.step-dot.active .label { color: var(--blue); }
-.step-dot.todo .label { color: #4a6278; }
-.step-line { flex: 1; height: 2px; background: var(--border); margin: 0 8px; }
-.form-section { margin-bottom: 28px; }
+.page-title { font-size: 26px; font-weight: 800; color: var(--white); margin-bottom: 4px; line-height: 1.2; font-family: 'Space Grotesk', sans-serif; }
+.page-sub { font-size: 14px; color: var(--text); margin-bottom: 28px; }
+.form-section { margin-bottom: 24px; }
 .section-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--blue); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
 .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 .product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-bottom: 8px; }
 @media (max-width: 560px) { .product-grid { grid-template-columns: 1fr; } }
-.product-option {
-  position: relative; background: var(--card); border: 2px solid var(--border); border-radius: 10px; padding: 14px; cursor: pointer; transition: all .2s;
-}
+.product-option { position: relative; background: var(--card); border: 2px solid var(--border); border-radius: 10px; padding: 14px; cursor: pointer; transition: all .2s; }
 .product-option:hover { border-color: var(--border-hover); }
 .product-option.selected { border-color: var(--blue); background: rgba(59,130,246,0.06); }
 .product-option input[type="radio"] { position: absolute; opacity: 0; width: 0; height: 0; }
-.product-check {
-  position: absolute; top: 10px; right: 10px; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--border); background: var(--card);
-  display: flex; align-items: center; justify-content: center; transition: all .2s;
-}
+.product-check { position: absolute; top: 10px; right: 10px; width: 18px; height: 18px; border-radius: 50%; border: 2px solid var(--border); background: var(--card); display: flex; align-items: center; justify-content: center; transition: all .2s; }
 .product-option.selected .product-check { background: var(--blue); border-color: var(--blue); }
-.product-option.selected .product-check::after { content: ''; font-size: 10px; font-weight: 800; color: #050a14; }
 .product-cat { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--green); margin-bottom: 4px; }
 .product-name { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 2px; padding-right: 20px; }
 .product-price { font-size: 14px; font-weight: 800; color: var(--blue); }
-.product-price del { font-size: 11px; color: rgba(184,201,224,0.4); font-weight: 400; margin-right: 4px; }
 .field-group { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 @media (max-width: 560px) { .field-group { grid-template-columns: 1fr; } }
 .field { display: flex; flex-direction: column; gap: 6px; }
 .field.full { grid-column: 1 / -1; }
 .field label { font-size: 12px; font-weight: 600; color: var(--white); }
 .field label .req { color: var(--blue); }
-.field input, .field select, .field textarea {
-  background: rgba(255,255,255,0.04); border: 1.5px solid var(--border); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--white);
-  font-family: 'Inter', system-ui, sans-serif; transition: border-color .2s; outline: none; width: 100%;
-}
+.field input, .field select, .field textarea { background: rgba(255,255,255,0.04); border: 1.5px solid var(--border); border-radius: 8px; padding: 11px 14px; font-size: 14px; color: var(--white); font-family: 'Inter', system-ui, sans-serif; transition: border-color .2s; outline: none; width: 100%; }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--blue); background: rgba(59,130,246,0.04); }
 .field select { cursor: pointer; }
 .field select option { background: #0f1f38; color: var(--white); }
-.field textarea { resize: vertical; min-height: 80px; }
-.field-hint { font-size: 11px; color: #4a6278; }
+.field textarea { resize: vertical; min-height: 60px; }
 .qty-row { display: flex; align-items: center; gap: 0; }
-.qty-btn {
-  width: 40px; height: 44px; background: var(--card); border: 1.5px solid var(--border); color: var(--blue); font-size: 18px; font-weight: 700; cursor: pointer;
-  display: flex; align-items: center; justify-content: center; transition: all .2s;
-}
+.qty-btn { width: 40px; height: 44px; background: var(--card); border: 1.5px solid var(--border); color: var(--blue); font-size: 18px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all .2s; }
 .qty-btn:first-child { border-radius: 8px 0 0 8px; }
 .qty-btn:last-child { border-radius: 0 8px 8px 0; }
 .qty-btn:hover { background: rgba(59,130,246,0.1); }
-.qty-val {
-  width: 56px; height: 44px; background: rgba(255,255,255,0.04); border: 1.5px solid var(--border); border-left: none; border-right: none;
-  text-align: center; font-size: 15px; font-weight: 700; color: var(--white); display: flex; align-items: center; justify-content: center;
-}
-.submit-section { margin-top: 8px; }
-.btn-submit {
-  width: 100%; background: var(--gradient); color: #050a14; font-size: 15px; font-weight: 800; padding: 16px 24px; border-radius: 10px; border: none; cursor: pointer;
-  display: flex; align-items: center; justify-content: center; gap: 10px; transition: opacity .2s, transform .15s; letter-spacing: 0.3px;
-}
+.qty-val { width: 56px; height: 44px; background: rgba(255,255,255,0.04); border: 1.5px solid var(--border); border-left: none; border-right: none; text-align: center; font-size: 15px; font-weight: 700; color: var(--white); display: flex; align-items: center; justify-content: center; }
+.inline-total { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin: 20px 0; display: flex; justify-content: space-between; align-items: center; }
+.inline-total-label { font-size: 14px; color: var(--text); }
+.inline-total-price { font-size: 22px; font-weight: 800; color: var(--blue); font-family: 'Space Grotesk', sans-serif; }
+.btn-submit { width: 100%; background: var(--gradient); color: #050a14; font-size: 15px; font-weight: 800; padding: 16px 24px; border-radius: 10px; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; transition: opacity .2s, transform .15s; }
 .btn-submit:hover { opacity: 0.9; transform: translateY(-1px); }
-.btn-submit:active { transform: translateY(0); }
-.btn-submit svg { flex-shrink: 0; }
 .submit-note { font-size: 11px; color: #4a6278; text-align: center; margin-top: 8px; }
-.order-summary { position: sticky; top: 80px; }
-.summary-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
-.summary-header {
-  padding: 16px 20px; border-bottom: 1px solid var(--border); font-size: 13px; font-weight: 700; color: var(--white);
-  display: flex; align-items: center; justify-content: space-between;
-}
-.summary-close-btn {
-  background: none; border: none; color: var(--text); font-size: 1.4rem; cursor: pointer;
-  padding: 0 4px; line-height: 1; transition: color .2s;
-}
-.summary-close-btn:hover { color: var(--blue); }
-.summary-body { padding: 20px; }
-.summary-product-name { font-size: 15px; font-weight: 700; color: var(--white); margin-bottom: 4px; }
-.summary-product-cat { font-size: 11px; color: var(--green); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
-.summary-line { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid rgba(59,130,246,0.06); font-size: 13px; }
-.summary-line:last-of-type { border-bottom: none; }
-.summary-line .label { color: var(--text); }
-.summary-line .value { color: var(--white); font-weight: 600; }
-.summary-line .value.price { color: var(--blue); font-size: 15px; font-weight: 800; }
-.summary-total {
-  display: flex; justify-content: space-between; align-items: center; padding: 14px 0 0; font-size: 15px; font-weight: 800;
-  border-top: 2px solid var(--border); margin-top: 8px;
-}
-.summary-total .total-label { color: var(--white); }
-.summary-total .total-price { color: var(--blue); font-size: 20px; }
-.summary-empty { font-size: 13px; color: #4a6278; text-align: center; padding: 8px 0; }
-.btn-summary-wa {
-  display: none; width: 100%; background: #25D366; color: #fff; font-size: 14px; font-weight: 700;
-  padding: 14px 20px; border-radius: 10px; border: none; cursor: pointer; margin-top: 16px;
-  align-items: center; justify-content: center; gap: 10px; text-decoration: none;
-  transition: background .2s, transform .15s;
-}
-.btn-summary-wa:hover { background: #1fb855; transform: translateY(-1px); }
-.btn-summary-wa.visible { display: flex; }
-.summary-wa-btn {
-  display: flex; width: 100%; background: #25D366; color: #fff; font-size: 15px; font-weight: 700;
-  padding: 16px 20px; border-radius: 10px; border: none; cursor: pointer; margin-top: 20px;
-  align-items: center; justify-content: center; gap: 10px; text-decoration: none;
-  transition: background .2s, transform .15s; box-shadow: 0 4px 16px rgba(37,211,102,0.3);
-}
-.summary-wa-btn:hover { background: #1fb855; transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,211,102,0.4); }
-.guarantee-list { margin-top: 20px; }
-.guarantee-item { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; font-size: 12px; color: var(--text); border-bottom: 1px solid rgba(59,130,246,0.06); }
-.guarantee-item:last-child { border-bottom: none; }
-.guarantee-item svg { flex-shrink: 0; margin-top: 1px; }
-.success-overlay {
-  display: none; position: fixed; inset: 0; background: rgba(5,10,20,0.9); backdrop-filter: blur(8px); z-index: 200;
-  align-items: center; justify-content: center;
-}
-.success-overlay.show { display: flex; }
-.success-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 40px 32px; max-width: 440px; width: 90%; text-align: center; }
-.success-icon {
-  width: 72px; height: 72px; background: rgba(16,185,129,0.1); border: 2px solid var(--green); border-radius: 50%;
-  display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
-}
-.success-title { font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 10px; }
-.success-sub { font-size: 13px; color: var(--text); line-height: 1.7; margin-bottom: 24px; }
-.success-wa {
-  display: inline-flex; align-items: center; gap: 10px; background: #25D366; color: #fff; font-size: 14px; font-weight: 700;
-  padding: 14px 24px; border-radius: 10px; text-decoration: none; margin-bottom: 12px; width: 100%; justify-content: center;
-}
-.btn-back-shop { display: block; font-size: 13px; color: var(--text); text-decoration: none; margin-top: 8px; }
-.btn-back-shop:hover { color: var(--blue); }
-
-.payment-badges { display: flex; align-items: center; gap: 14px; background: #ffffff; padding: 10px 16px; border-radius: 8px; width: fit-content; margin-top: 8px; }
-.payment-badges i { font-size: 26px; color: #0B1B3D; transition: color 0.2s ease; }
-.payment-badges i:hover { color: #3B82F6; }
 .field-input-error { border-color: #EF4444 !important; box-shadow: 0 0 0 3px rgba(239,68,68,0.15) !important; }
-
+.payment-icons { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 12px; }
+.payment-icons span { font-size: 11px; color: #4a6278; }
+.payment-icons i { font-size: 28px; }
+.guarantee-row { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border); }
+.guarantee-chip { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text); }
+.guarantee-chip svg { flex-shrink: 0; color: var(--green); }
+.payment-overlay { display: none; position: fixed; inset: 0; background: rgba(5,10,20,0.92); backdrop-filter: blur(8px); z-index: 200; align-items: center; justify-content: center; padding: 20px; }
+.payment-overlay.show { display: flex; }
+.payment-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 32px 28px; max-width: 480px; width: 100%; max-height: 90vh; overflow-y: auto; position: relative; }
+.payment-close { position: absolute; top: 16px; right: 20px; background: none; border: none; color: #4a6278; font-size: 1.8rem; cursor: pointer; line-height: 1; }
+.payment-close:hover { color: var(--white); }
+.payment-card h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.1rem; color: var(--white); margin-bottom: 4px; }
+.payment-card .pay-sub { font-size: 0.85rem; color: var(--text); margin-bottom: 20px; }
+.payment-total-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; margin-bottom: 16px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.payment-total-row .pt-label { font-size: 13px; color: var(--text); }
+.payment-total-row .pt-price { font-size: 20px; font-weight: 800; color: var(--blue); font-family: 'Space Grotesk', sans-serif; }
+#paypal-button-container { margin-bottom: 12px; min-height: 50px; }
+.pay-divider { display: flex; align-items: center; gap: 12px; margin: 16px 0; font-size: 12px; color: #4a6278; }
+.pay-divider::before, .pay-divider::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+.email-pay-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 14px; border-radius: 10px; border: 1.5px solid var(--border); background: none; color: var(--white); font-size: 14px; font-weight: 600; cursor: pointer; font-family: 'Inter', sans-serif; transition: all .2s; text-decoration: none; }
+.email-pay-btn:hover { border-color: var(--blue); background: rgba(59,130,246,0.06); }
+.email-pay-btn svg { flex-shrink: 0; }
+.success-screen { display: none; text-align: center; padding: 20px 0; }
+.success-screen.show { display: block; }
+.success-icon { width: 64px; height: 64px; background: rgba(16,185,129,0.1); border: 2px solid var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; }
+.success-screen h3 { font-family: 'Space Grotesk', sans-serif; font-size: 1.3rem; color: var(--white); margin-bottom: 8px; }
+.success-screen p { font-size: 0.88rem; color: var(--text); line-height: 1.6; margin-bottom: 16px; }
+.btn-back-shop { display: inline-block; font-size: 13px; color: var(--blue); text-decoration: none; margin-top: 12px; }
+.btn-back-shop:hover { text-decoration: underline; }
 </style>
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="fr_FR">
     <meta property="og:site_name" content="SynchroVie">
-    <meta property="og:title" content="Commander — SynchroVie | Haute Technologie de Bio-Optimisation">
-    <meta property="og:description" content="Passez votre commande SynchroVie en 60 secondes. Sélectionnez votre produit, quantité et infos de livraison. Paiement sécurisé PayPal, virement ou carte.">
+    <meta property="og:title" content="Commander — SynchroVie">
+    <meta property="og:description" content="Passez votre commande SynchroVie en 60 secondes.">
     <meta property="og:url" content="https://synchro-vie.com/commander.html">
     <meta property="og:image" content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Commander — SynchroVie | Haute Technologie de Bio-Optimisation">
-    <meta name="twitter:description" content="Passez votre commande SynchroVie en 60 secondes. Sélectionnez votre produit, quantité et infos de livraison. Paiement sécurisé PayPal, virement ou carte.">
+    <meta name="twitter:title" content="Commander — SynchroVie">
+    <meta name="twitter:description" content="Passez votre commande SynchroVie en 60 secondes.">
     <meta name="twitter:image" content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
-<!-- TikTok Pixel Code Start -->
 <script>
 !function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
 var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e);};
   ttq.load('D9A3IORC77UEFAL2KKS0');
   ttq.page();
 }(window, document, 'ttq');
 </script>
-<!-- TikTok Pixel Code End -->
-  
-  
-  
-  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0B2545">
-<!-- PayPal SDK pour bouton hébergé (SynchroRing X1) -->
-<script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&currency=EUR&intent=capture&components=buttons"></script>
 </head>
 <body>
 <header class="site-header">
   <a href="index.html" class="logo">SYNCHROVIE</a>
   <a href="index.html#boutique" class="header-back">
     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-    Retour au catalogue
+    Retour
   </a>
 </header>
 <div class="trust-strip">
-  <div class="trust-item">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-    <strong>Paiement SSL</strong>
-  </div>
+  <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><strong>Paiement SSL</strong></div>
   <span class="trust-sep">·</span>
-  <div class="trust-item">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-    <strong>Livraison 7-10j</strong> Europe
-  </div>
+  <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><strong>Livraison 7-10j</strong> Europe</div>
   <span class="trust-sep">·</span>
-  <div class="trust-item">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg>
-    <strong>Retours 14j</strong>
-  </div>
+  <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg><strong>Retours 14j</strong></div>
   <span class="trust-sep">·</span>
-  <div class="trust-item">
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-    <strong>Garantie 2 ans</strong>
-  </div>
+  <div class="trust-item"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><strong>Garantie 2 ans</strong></div>
 </div>
 <div class="page-wrap">
-  <div class="form-col">
-    <div class="page-eyebrow">Commander</div>
-    <h1 class="page-title">Votre commande en 60 secondes.</h1>
-<h2 class="page-subtitle" style="text-align:center;color:#94A3B8;font-size:1.1rem;margin-top:8px;">Commande sécurisée — paiement PayPal, virement ou carte bancaire</h2>
-    <div class="page-sub">Sélectionnez votre produit et vos infos de livraison. Notre expert vous confirme la disponibilité sous 2h.</div>
-    <div class="steps-bar">
-      <div class="step-dot active"><div class="num">1</div><div class="label">Produit</div></div>
-      <div class="step-line"></div>
-      <div class="step-dot todo"><div class="num">2</div><div class="label">Vos infos</div></div>
-      <div class="step-line"></div>
-      <div class="step-dot todo"><div class="num">3</div><div class="label">Confirmation</div></div>
-    </div>
-    <form id="orderForm" novalidate>
-      <div class="form-section">
-        <div class="section-label">Choisir un produit</div>
-        <div class="product-grid" id="productGrid">
-          <label class="product-option" data-price="458" data-cat="Bio-Monitoring">
-            <input type="radio" name="product" value="SynchroRing X1">
-            <div class="product-check"></div>
-            <div class="product-cat">Bio-Monitoring</div>
-            <div class="product-name">SynchroRing X1</div>
-            <div class="product-price">458 EUR</div>
-          </label>
-          <label class="product-option" data-price="99" data-cat="Bio-Monitoring">
-            <input type="radio" name="product" value="B-Pressure Connect">
-            <div class="product-check"></div>
-            <div class="product-cat">Bio-Monitoring</div>
-            <div class="product-name">B-Pressure Connect</div>
-            <div class="product-price">99 EUR</div>
-          </label>
-          <label class="product-option" data-price="168" data-cat="Bio-Monitoring">
-            <input type="radio" name="product" value="Scale-Master Pro">
-            <div class="product-check"></div>
-            <div class="product-cat">Bio-Monitoring</div>
-            <div class="product-name">Scale-Master Pro</div>
-            <div class="product-price">168 EUR</div>
-          </label>
-          <label class="product-option" data-price="169" data-cat="Bio-Monitoring">
-            <input type="radio" name="product" value="Vitals-Scan Pro">
-            <div class="product-check"></div>
-            <div class="product-cat">Bio-Monitoring</div>
-            <div class="product-name">Vitals-Scan Pro</div>
-            <div class="product-price">169 EUR</div>
-          </label>
-          <label class="product-option" data-price="45" data-cat="Bio-Monitoring">
-            <input type="radio" name="product" value="Thermo-Sense Ultra">
-            <div class="product-check"></div>
-            <div class="product-cat">Bio-Monitoring</div>
-            <div class="product-name">Thermo-Sense Ultra</div>
-            <div class="product-price">45 EUR</div>
-          </label>
-          <label class="product-option" data-price="369" data-cat="Neuro-Sommeil">
-            <input type="radio" name="product" value="NeuroRest G2">
-            <div class="product-check"></div>
-            <div class="product-cat">Neuro-Sommeil</div>
-            <div class="product-name">NeuroRest G2</div>
-            <div class="product-price">369 EUR</div>
-          </label>
-          <label class="product-option" data-price="149" data-cat="Neuro-Sommeil">
-            <input type="radio" name="product" value="SleepTrack Zen">
-            <div class="product-check"></div>
-            <div class="product-cat">Neuro-Sommeil</div>
-            <div class="product-name">SleepTrack Zen</div>
-            <div class="product-price">149 EUR</div>
-          </label>
-          <label class="product-option" data-price="78" data-cat="Neuro-Sommeil">
-            <input type="radio" name="product" value="Aura-Light Clock">
-            <div class="product-check"></div>
-            <div class="product-cat">Neuro-Sommeil</div>
-            <div class="product-name">Aura-Light Clock</div>
-            <div class="product-price">78 EUR</div>
-          </label>
-          <label class="product-option" data-price="299" data-cat="Biofeedback">
-            <input type="radio" name="product" value="Aura-Ring Calm">
-            <div class="product-check"></div>
-            <div class="product-cat">Biofeedback</div>
-            <div class="product-name">Aura-Ring Calm</div>
-            <div class="product-price">299 EUR</div>
-          </label>
-          <label class="product-option" data-price="269" data-cat="Biofeedback">
-            <input type="radio" name="product" value="Gravity-Tech Pad">
-            <div class="product-check"></div>
-            <div class="product-cat">Biofeedback</div>
-            <div class="product-name">Gravity-Tech Pad</div>
-            <div class="product-price">269 EUR</div>
-          </label>
-          <label class="product-option" data-price="420" data-cat="Performance">
-            <input type="radio" name="product" value="ThermoWrap FIR">
-            <div class="product-check"></div>
-            <div class="product-cat">Performance</div>
-            <div class="product-name">ThermoWrap FIR</div>
-            <div class="product-price">420 EUR</div>
-          </label>
-          <label class="product-option" data-price="178" data-cat="Performance">
-            <input type="radio" name="product" value="ElectroBoost S3">
-            <div class="product-check"></div>
-            <div class="product-cat">Performance</div>
-            <div class="product-name">ElectroBoost S3</div>
-            <div class="product-price">178 EUR</div>
-          </label>
-          <label class="product-option" data-price="68" data-cat="Performance">
-            <input type="radio" name="product" value="Posture-Core">
-            <div class="product-check"></div>
-            <div class="product-cat">Performance</div>
-            <div class="product-name">Posture-Core</div>
-            <div class="product-price">68 EUR</div>
-          </label>
-          <label class="product-option" data-price="158" data-cat="Performance">
-            <input type="radio" name="product" value="Flex-Gun Mini">
-            <div class="product-check"></div>
-            <div class="product-cat">Performance</div>
-            <div class="product-name">Flex-Gun Mini</div>
-            <div class="product-price">158 EUR</div>
-          </label>
-          <label class="product-option" data-price="99" data-cat="Performance">
-            <input type="radio" name="product" value="Knee-Tech Support">
-            <div class="product-check"></div>
-            <div class="product-cat">Performance</div>
-            <div class="product-name">Knee-Tech Support</div>
-            <div class="product-price">99 EUR</div>
-          </label>
-          <label class="product-option" data-price="88" data-cat="Performance">
-            <input type="radio" name="product" value="Grip-Master Pro">
-            <div class="product-check"></div>
-            <div class="product-cat">Performance</div>
-            <div class="product-name">Grip-Master Pro</div>
-            <div class="product-price">88 EUR</div>
-          </label>
-          <label class="product-option" data-price="549" data-cat="Performance">
-            <input type="radio" name="product" value="LumiRed Pro X1">
-            <div class="product-check"></div>
-            <div class="product-cat">Performance</div>
-            <div class="product-name">LumiRed Pro X1</div>
-            <div class="product-price">549 EUR</div>
-          </label>
-        </div>
-      </div>
-      <div class="form-section">
-        <div class="section-label">Quantité</div>
-        <div style="display:flex;align-items:center;gap:16px;">
-          <div class="qty-row">
-            <button type="button" class="qty-btn" id="qtyMinus">−</button>
-            <div class="qty-val" id="qtyDisplay">1</div>
-            <button type="button" class="qty-btn" id="qtyPlus">+</button>
-          </div>
-          <span id="qtyNote" style="font-size:12px;color:#4a6278;">Commande de 2+ ? Notre équipe vous propose un tarif préférentiel.</span>
-        </div>
-      </div>
-      <div class="form-section">
-        <div class="section-label">Vos coordonnées</div>
-        <div class="field-group">
-          <div class="field"><label>Prénom <span class="req">*</span></label><input type="text" id="firstName" name="firstName" placeholder="Jean-Paul" required autocomplete="given-name"></div>
-          <div class="field"><label>Nom <span class="req">*</span></label><input type="text" id="lastName" name="lastName" placeholder="Dupont" required autocomplete="family-name"></div>
-          <div class="field full"><label>Email <span class="req">*</span></label><input type="email" id="email" name="email" placeholder="votre@email.com" required autocomplete="email"><span class="field-hint">Pour recevoir la confirmation de commande</span></div>
-          <div class="field full"><label>Pays de livraison <span class="req">*</span></label><select id="country" name="country" required><option value="">Sélectionnez votre pays</option><option value="France"> France</option><option value="Belgique"> Belgique</option><option value="Suisse"> Suisse</option><option value="Luxembourg"> Luxembourg</option><option value="France"> France</option><option value=""> </option><option value=""> </option><option value="Autre">Autre pays</option></select></div>
-          <div class="field full"><label>Message ou question (facultatif)</label><textarea name="message" id="message" placeholder="Ex : Livraison urgente, question sur le produit, code promo à appliquer..."></textarea></div>
-        </div>
-      </div>
-      <div class="submit-section">
-        <button type="submit" class="btn-submit" id="submitBtn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-          ENVOYER MA COMMANDE par email
-        </button>
-        <p class="submit-note">Aucun paiement maintenant · Notre expert confirme sous 2h · Livraison 7-10j</p>
-      </div>
-    </form>
-  </div>
-  <div class="order-summary">
-    <div class="summary-card">
-      <div class="summary-header">
-        <div style="display:flex;align-items:center;gap:8px;">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-          Récapitulatif
-        </div>
-        <button class="summary-close-btn" id="summaryCloseBtn" aria-label="Masquer le récapitulatif" title="Fermer">&times;</button>
-      </div>
-      <div class="summary-body">
-        <div id="summaryContent"><div class="summary-empty">Aucun produit sélectionné</div></div>
-        <div class="guarantee-list">
-          <div class="guarantee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span>Paiement sécurisé via Visa, MasterCard ou PayPal</span></div>
-          <div class="guarantee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg><span>Livraison suivie 7-10jours ouvrés en Europe</span></div>
-          <div class="guarantee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/></svg><span>Retours 14j — remboursement intégral sous 7-10 jours ouvrables</span></div>
-          <div class="guarantee-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Garantie technique 2 ans — remplacement à nos frais</span></div>
-        </div>
-        <button type="button" class="summary-wa-btn" id="finaliserBtn" style="border:none;cursor:pointer;font-family:inherit;width:100%;display:flex;align-items:center;justify-content:center;gap:10px;">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Finaliser ma commande
-        </button>
+  <div class="page-eyebrow">Commander</div>
+  <h1 class="page-title">Votre commande en 60 secondes.</h1>
+  <p class="page-sub">Selectionnez votre produit et vos infos. Paiement securise PayPal, Visa ou MasterCard.</p>
+  <form id="orderForm" novalidate>
+    <div class="form-section">
+      <div class="section-label">Choisir un produit</div>
+      <div class="product-grid" id="productGrid">
+        <label class="product-option" data-price="458" data-cat="Bio-Monitoring">
+          <input type="radio" name="product" value="SynchroRing X1">
+          <div class="product-check"></div>
+          <div class="product-cat">Bio-Monitoring</div>
+          <div class="product-name">SynchroRing X1</div>
+          <div class="product-price">458 EUR</div>
+        </label>
+        <label class="product-option" data-price="99" data-cat="Bio-Monitoring">
+          <input type="radio" name="product" value="B-Pressure Connect">
+          <div class="product-check"></div>
+          <div class="product-cat">Bio-Monitoring</div>
+          <div class="product-name">B-Pressure Connect</div>
+          <div class="product-price">99 EUR</div>
+        </label>
+        <label class="product-option" data-price="168" data-cat="Bio-Monitoring">
+          <input type="radio" name="product" value="Scale-Master Pro">
+          <div class="product-check"></div>
+          <div class="product-cat">Bio-Monitoring</div>
+          <div class="product-name">Scale-Master Pro</div>
+          <div class="product-price">168 EUR</div>
+        </label>
+        <label class="product-option" data-price="169" data-cat="Bio-Monitoring">
+          <input type="radio" name="product" value="Vitals-Scan Pro">
+          <div class="product-check"></div>
+          <div class="product-cat">Bio-Monitoring</div>
+          <div class="product-name">Vitals-Scan Pro</div>
+          <div class="product-price">169 EUR</div>
+        </label>
+        <label class="product-option" data-price="45" data-cat="Bio-Monitoring">
+          <input type="radio" name="product" value="Thermo-Sense Ultra">
+          <div class="product-check"></div>
+          <div class="product-cat">Bio-Monitoring</div>
+          <div class="product-name">Thermo-Sense Ultra</div>
+          <div class="product-price">45 EUR</div>
+        </label>
+        <label class="product-option" data-price="369" data-cat="Neuro-Sommeil">
+          <input type="radio" name="product" value="NeuroRest G2">
+          <div class="product-check"></div>
+          <div class="product-cat">Neuro-Sommeil</div>
+          <div class="product-name">NeuroRest G2</div>
+          <div class="product-price">369 EUR</div>
+        </label>
+        <label class="product-option" data-price="149" data-cat="Neuro-Sommeil">
+          <input type="radio" name="product" value="SleepTrack Zen">
+          <div class="product-check"></div>
+          <div class="product-cat">Neuro-Sommeil</div>
+          <div class="product-name">SleepTrack Zen</div>
+          <div class="product-price">149 EUR</div>
+        </label>
+        <label class="product-option" data-price="78" data-cat="Neuro-Sommeil">
+          <input type="radio" name="product" value="Aura-Light Clock">
+          <div class="product-check"></div>
+          <div class="product-cat">Neuro-Sommeil</div>
+          <div class="product-name">Aura-Light Clock</div>
+          <div class="product-price">78 EUR</div>
+        </label>
+        <label class="product-option" data-price="299" data-cat="Biofeedback">
+          <input type="radio" name="product" value="Aura-Ring Calm">
+          <div class="product-check"></div>
+          <div class="product-cat">Biofeedback</div>
+          <div class="product-name">Aura-Ring Calm</div>
+          <div class="product-price">299 EUR</div>
+        </label>
+        <label class="product-option" data-price="269" data-cat="Biofeedback">
+          <input type="radio" name="product" value="Gravity-Tech Pad">
+          <div class="product-check"></div>
+          <div class="product-cat">Biofeedback</div>
+          <div class="product-name">Gravity-Tech Pad</div>
+          <div class="product-price">269 EUR</div>
+        </label>
+        <label class="product-option" data-price="420" data-cat="Performance">
+          <input type="radio" name="product" value="ThermoWrap FIR">
+          <div class="product-check"></div>
+          <div class="product-cat">Performance</div>
+          <div class="product-name">ThermoWrap FIR</div>
+          <div class="product-price">420 EUR</div>
+        </label>
+        <label class="product-option" data-price="178" data-cat="Performance">
+          <input type="radio" name="product" value="ElectroBoost S3">
+          <div class="product-check"></div>
+          <div class="product-cat">Performance</div>
+          <div class="product-name">ElectroBoost S3</div>
+          <div class="product-price">178 EUR</div>
+        </label>
+        <label class="product-option" data-price="68" data-cat="Performance">
+          <input type="radio" name="product" value="Posture-Core">
+          <div class="product-check"></div>
+          <div class="product-cat">Performance</div>
+          <div class="product-name">Posture-Core</div>
+          <div class="product-price">68 EUR</div>
+        </label>
+        <label class="product-option" data-price="158" data-cat="Performance">
+          <input type="radio" name="product" value="Flex-Gun Mini">
+          <div class="product-check"></div>
+          <div class="product-cat">Performance</div>
+          <div class="product-name">Flex-Gun Mini</div>
+          <div class="product-price">158 EUR</div>
+        </label>
+        <label class="product-option" data-price="99" data-cat="Performance">
+          <input type="radio" name="product" value="Knee-Tech Support">
+          <div class="product-check"></div>
+          <div class="product-cat">Performance</div>
+          <div class="product-name">Knee-Tech Support</div>
+          <div class="product-price">99 EUR</div>
+        </label>
+        <label class="product-option" data-price="88" data-cat="Performance">
+          <input type="radio" name="product" value="Grip-Master Pro">
+          <div class="product-check"></div>
+          <div class="product-cat">Performance</div>
+          <div class="product-name">Grip-Master Pro</div>
+          <div class="product-price">88 EUR</div>
+        </label>
+        <label class="product-option" data-price="549" data-cat="Performance">
+          <input type="radio" name="product" value="LumiRed Pro X1">
+          <div class="product-check"></div>
+          <div class="product-cat">Performance</div>
+          <div class="product-name">LumiRed Pro X1</div>
+          <div class="product-price">549 EUR</div>
+        </label>
       </div>
     </div>
+    <div class="form-section">
+      <div class="section-label">Quantite</div>
+      <div style="display:flex;align-items:center;gap:16px;">
+        <div class="qty-row">
+          <button type="button" class="qty-btn" id="qtyMinus">−</button>
+          <div class="qty-val" id="qtyDisplay">1</div>
+          <button type="button" class="qty-btn" id="qtyPlus">+</button>
+        </div>
+        <span id="qtyNote" style="font-size:12px;color:#4a6278;">Commande de 2+ ? Tarif preferentiel.</span>
+      </div>
+    </div>
+    <div class="inline-total">
+      <span class="inline-total-label">Total (livraison offerte)</span>
+      <span class="inline-total-price" id="inlineTotal">— EUR</span>
+    </div>
+    <div class="form-section">
+      <div class="section-label">Vos coordonnees</div>
+      <div class="field-group">
+        <div class="field"><label>Prenom <span class="req">*</span></label><input type="text" id="firstName" name="firstName" placeholder="Jean-Paul" required autocomplete="given-name"></div>
+        <div class="field"><label>Nom <span class="req">*</span></label><input type="text" id="lastName" name="lastName" placeholder="Dupont" required autocomplete="family-name"></div>
+        <div class="field full"><label>Email <span class="req">*</span></label><input type="email" id="email" name="email" placeholder="votre@email.com" required autocomplete="email"><span class="field-hint">Pour la confirmation de commande</span></div>
+        <div class="field full"><label>Pays de livraison <span class="req">*</span></label><select id="country" name="country" required><option value="">Selectionnez votre pays</option><option value="France">France</option><option value="Belgique">Belgique</option><option value="Suisse">Suisse</option><option value="Luxembourg">Luxembourg</option><option value="Autre">Autre pays</option></select></div>
+        <div class="field full"><label>Message (facultatif)</label><textarea name="message" id="message" placeholder="Ex : Livraison urgente, question sur le produit..."></textarea></div>
+      </div>
+    </div>
+    <div class="form-section">
+      <button type="submit" class="btn-submit" id="submitBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        PAYER MAINTENANT — PayPal, Visa ou MasterCard
+      </button>
+      <p class="submit-note">Paiement 100% securise. Redirection vers PayPal pour le paiement.</p>
+      <div class="payment-icons">
+        <i class="fa-brands fa-cc-paypal" style="color:#003087;" aria-label="PayPal"></i>
+        <i class="fa-brands fa-cc-visa" style="color:#1A1F71;" aria-label="Visa"></i>
+        <i class="fa-brands fa-cc-mastercard" style="color:#EB001B;" aria-label="Mastercard"></i>
+      </div>
+      <div class="guarantee-row">
+        <div class="guarantee-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Paiement SSL</div>
+        <div class="guarantee-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Livraison offerte</div>
+        <div class="guarantee-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Retours 14j</div>
+        <div class="guarantee-chip"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Garantie 2 ans</div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="payment-overlay" id="paymentOverlay">
+  <div class="payment-card">
+    <button class="payment-close" id="paymentClose" aria-label="Fermer">&times;</button>
+    <h3 id="payProductName">—</h3>
+    <p class="pay-sub" id="payProductDetails">—</p>
+    <div class="payment-total-row">
+      <span class="pt-label">Total</span>
+      <span class="pt-price" id="payTotalPrice">— EUR</span>
+    </div>
+    <div id="paypal-button-container"></div>
+    <div class="pay-divider">ou</div>
+    <a href="#" id="emailPayBtn" class="email-pay-btn">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Confirmer par email (virement ou carte)
+    </a>
+    <p style="text-align:center;font-size:0.75rem;color:#4a6278;margin-top:10px;">Notre expert repond sous 2h.</p>
   </div>
 </div>
-<div class="success-overlay" id="successOverlay">
-  <div class="success-card">
-    <button class="success-close" id="successClose" aria-label="Fermer" style="position:absolute;top:12px;right:16px;background:none;border:none;font-size:1.8rem;color:#4a6278;cursor:pointer;line-height:1;">&times;</button>
-    <div class="success-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
-    <div class="success-title" id="successTitle">Commande prête !</div>
-    <div class="success-sub" id="successMessage">Votre commande est prête. Choisissez votre mode de paiement ci-dessous.</div>
-    <button id="backToFormBtn" style="background:none;border:1px solid rgba(148,163,184,0.3);color:#94A3B8;padding:10px 20px;border-radius:8px;font-size:0.85rem;cursor:pointer;margin-top:12px;font-family:inherit;transition:all 0.2s;" onmouseover="this.style.borderColor='#3B82F6';this.style.color='#3B82F6'" onmouseout="this.style.borderColor='rgba(148,163,184,0.3)';this.style.color='#94A3B8'">✏️ Modifier mes informations</button>
 
-    <!-- Section PayPal (visible si SynchroRing X1) -->
-    <div id="paypalSection" style="display:none;margin-top:16px;">
-      <p style="text-align:center;color:#F8FAFC;font-weight:700;font-size:0.95rem;margin-bottom:10px;font-family:Space Grotesk,sans-serif;">Payer avec PayPal ou carte bancaire</p>
-      <div id="paypal-container-RVJCDF68TF2DL" style="margin-top:0;"></div>
-      <p style="text-align:center;font-size:0.75rem;color:#4a6278;margin-top:8px;">PayPal accepte aussi Visa, Mastercard. Paiement sécurisé SSL.</p>
-      <div style="display:flex;justify-content:center;gap:10px;margin-top:8px;">
-        <i class="fa-brands fa-cc-visa" style="font-size:28px;color:#1A1F71;" aria-label="Visa"></i>
-        <i class="fa-brands fa-cc-mastercard" style="font-size:28px;color:#EB001B;" aria-label="Mastercard"></i>
-        <i class="fa-brands fa-paypal" style="font-size:28px;color:#003087;" aria-label="PayPal"></i>
-      </div>
-    </div>
+<div class="page-wrap"><div class="success-screen" id="successScreen">
+  <div class="success-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></div>
+  <h3>Commande confirmée !</h3>
+  <p id="successMsg">Merci pour votre commande.</p>
+  <a href="index.html" class="btn-back-shop">&larr; Retourner a la boutique</a>
+</div></div>
 
-    <!-- Section Email (visible si pas SynchroRing X1) -->
-    <div id="emailSection" style="display:none;margin-top:16px;">
-      <a href="#" id="emailConfirmBtn" class="success-wa" style="background:linear-gradient(135deg,#3B82F6,#00C9A7);color:#0B1B3D;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 24px;border-radius:10px;font-weight:700;font-family:Space Grotesk,sans-serif;font-size:1rem;">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-        Confirmer par email
-      </a>
-      <p style="text-align:center;font-size:0.78rem;color:#4a6278;margin-top:10px;">Notre expert vous répond sous 2h (jours ouvrés) avec les modalités de paiement (PayPal, virement ou carte).</p>
-    </div>
-
-    <div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(148,163,184,0.15);">
-      <a href="index.html#boutique" class="btn-back-shop" style="color:#94A3B8;text-decoration:none;font-size:0.88rem;">← Retourner au catalogue</a>
-    </div>
-  </div>
-</div>
 <script>
-let selectedProduct = null;
-let selectedPrice = 0;
-let selectedCat = '';
-let qty = 1;
-
+let selectedProduct = null, selectedPrice = 0, selectedCat = '', qty = 1;
 document.querySelectorAll('.product-option').forEach(function(opt) {
   opt.addEventListener('click', function() {
     document.querySelectorAll('.product-option').forEach(o => o.classList.remove('selected'));
@@ -523,201 +361,111 @@ document.querySelectorAll('.product-option').forEach(function(opt) {
     selectedProduct = this.querySelector('input').value;
     selectedPrice = parseInt(this.dataset.price);
     selectedCat = this.dataset.cat;
-    updateSummary();
+    updateTotal();
   });
 });
-
-document.getElementById('qtyMinus').addEventListener('click', function() {
-  if (qty > 1) { qty--; updateQty(); }
-});
-document.getElementById('qtyPlus').addEventListener('click', function() {
-  if (qty < 10) { qty++; updateQty(); }
-});
+document.getElementById('qtyMinus').addEventListener('click', function() { if (qty > 1) { qty--; updateQty(); } });
+document.getElementById('qtyPlus').addEventListener('click', function() { if (qty < 10) { qty++; updateQty(); } });
 function updateQty() {
   document.getElementById('qtyDisplay').textContent = qty;
-  document.getElementById('qtyNote').textContent = qty >= 2
-    ? '\uD83D\uDCAC Notre équipe vous propose un tarif préférentiel pour cette quantité.'
-    : 'Commande de 2+ ? Notre équipe vous propose un tarif préférentiel.';
-  updateSummary();
+  document.getElementById('qtyNote').textContent = qty >= 2 ? 'Tarif preferentiel pour cette quantite.' : 'Commande de 2+ ? Tarif preferentiel.';
+  updateTotal();
 }
-
-function updateSummary() {
-  var el = document.getElementById('summaryContent');
-  if (!selectedProduct) {
-    el.innerHTML = '<div class="summary-empty">Aucun produit sélectionné</div>';
-    return;
-  }
-  var total = selectedPrice * qty;
-  el.innerHTML =
-    '<div class="summary-product-name">' + selectedProduct + '</div>' +
-    '<div class="summary-product-cat">' + selectedCat + '</div>' +
-    '<div class="summary-line"><span class="label">Prix unitaire</span><span class="value price">' + selectedPrice.toLocaleString('fr-FR') + ' EUR</span></div>' +
-    '<div class="summary-line"><span class="label">Quantité</span><span class="value">' + qty + '</span></div>' +
-    '<div class="summary-line"><span class="label">Livraison</span><span class="value" style="color:#00C9A7;">Offerte</span></div>' +
-    '<div class="summary-total"><span class="total-label">Total estimé</span><span class="total-price">' + total.toLocaleString('fr-FR') + ' EUR</span></div>' +
-    '<p style="font-size:11px;color:#4a6278;margin-top:8px;">Notre expert vous contacte sous 2h pour finaliser le paiement (PayPal, virement ou carte).</p>';
-  // Le bouton "Finaliser ma commande" (.summary-wa-btn) reste visible et fonctionnel.
-  // NE PAS le cacher ni modifier son href (c'est un <button type="submit">, pas un <a>).
+function updateTotal() {
+  var el = document.getElementById('inlineTotal');
+  if (!selectedProduct) { el.textContent = '— EUR'; return; }
+  el.textContent = (selectedPrice * qty).toLocaleString('fr-FR') + ' EUR';
 }
-
-function finaliserCommande() {
-  if (!selectedProduct) {
-    document.getElementById('productGrid').scrollIntoView({ behavior: 'smooth' });
-    var productOptions = document.querySelectorAll('.product-option');
-    productOptions.forEach(function(o) {
-      o.classList.add('field-input-error');
-      setTimeout(function() { o.classList.remove('field-input-error'); }, 3000);
-    });
-    return;
-  }
-  var firstName = document.getElementById('firstName').value.trim();
-  var lastName  = document.getElementById('lastName').value.trim();
-  var email     = document.getElementById('email').value.trim();
-  var country   = document.getElementById('country').value;
-  var message   = document.getElementById('message').value.trim();
-  if (!firstName || !lastName || !email || !country) {
-    var requiredFields = [
-      { id: 'firstName', val: firstName },
-      { id: 'lastName', val: lastName },
-      { id: 'email', val: email },
-      { id: 'country', val: country }
-    ];
-    var firstEmpty = null;
-    requiredFields.forEach(function(f) {
-      var el = document.getElementById(f.id);
-      if (!f.val) {
-        el.classList.add('field-input-error');
-        setTimeout(function() { el.classList.remove('field-input-error'); }, 3000);
-        if (!firstEmpty) firstEmpty = el;
-      }
-    });
-    if (firstEmpty) firstEmpty.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    return;
-  }
-  var total = (selectedPrice * qty).toLocaleString('fr-FR');
-  var totalNum = selectedPrice * qty;
-
-  // Construire le corps email
-  var emailBody =
-    'Bonjour SynchroVie,\n\n' +
-    'Je souhaite passer une commande :\n\n' +
-    ' Produit : ' + selectedProduct + '\n' +
-    ' Quantité : ' + qty + '\n' +
-    ' Total : ' + total + ' EUR\n\n' +
-    ' Nom : ' + firstName + ' ' + lastName + '\n' +
-    ' Email : ' + email + '\n' +
-    ' Pays : ' + country + '\n' +
-    (message ? ' Message : ' + message + '\n' : '') +
-    '\nMerci de confirmer la disponibilité et les modalités de paiement.';
-  var mailtoUrl = 'mailto:synchrovie@gmail.com?subject=' + encodeURIComponent('Commande SynchroVie - ' + selectedProduct + ' x' + qty) + '&body=' + encodeURIComponent(emailBody);
-
-  // Mettre à jour le message de succès
-  document.getElementById('successMessage').textContent =
-    selectedProduct + ' × ' + qty + ' — ' + total + ' EUR. Choisissez votre mode de paiement ci-dessous.';
-
-  // Détecter si SynchroRing X1 (PayPal disponible)
-  var isSynchroRing = selectedProduct.toLowerCase().indexOf('synchro') !== -1 && selectedProduct.toLowerCase().indexOf('ring') !== -1;
-
-  var paypalSection = document.getElementById('paypalSection');
-  var emailSection = document.getElementById('emailSection');
-
-  if (isSynchroRing && totalNum === 458 * qty) {
-    // SynchroRing X1 : afficher PayPal en priorité
-    if (paypalSection) paypalSection.style.display = 'block';
-    if (emailSection) emailSection.style.display = 'none';
-    document.getElementById('successTitle').textContent = 'PayPal ou carte bancaire';
-
-    // Rendre le bouton PayPal hébergé
-    if (typeof paypal !== 'undefined' && paypal.HostedButtons) {
-      try {
-        paypal.HostedButtons({
-          hostedButtonId: "RVJCDF68TF2DL"
-        }).render("#paypal-container-RVJCDF68TF2DL");
-      } catch(err) {
-        console.error('PayPal render error:', err);
-        if (paypalSection) paypalSection.style.display = 'none';
-        if (emailSection) emailSection.style.display = 'block';
-        var emailBtn = document.getElementById('emailConfirmBtn');
-        if (emailBtn) emailBtn.href = mailtoUrl;
-      }
-    } else {
-      // Fallback : si PayPal SDK ne charge pas, afficher email
-      if (paypalSection) paypalSection.style.display = 'none';
-      if (emailSection) emailSection.style.display = 'block';
-      var emailBtn = document.getElementById('emailConfirmBtn');
-      if (emailBtn) emailBtn.href = mailtoUrl;
-    }
-  } else {
-    // Autre produit : afficher email
-    if (paypalSection) paypalSection.style.display = 'none';
-    if (emailSection) emailSection.style.display = 'block';
-    document.getElementById('successTitle').textContent = 'Confirmer votre commande';
-    var emailBtn = document.getElementById('emailConfirmBtn');
-    if (emailBtn) emailBtn.href = mailtoUrl;
-  }
-
-  // Afficher l'overlay
-  document.getElementById('successOverlay').classList.add('show');
-}
-
-// Attacher au formulaire (submit) et au bouton (click) — les deux déclenchent finaliserCommande
 document.getElementById('orderForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  finaliserCommande();
-});
-var finaliserBtn = document.getElementById('finaliserBtn');
-if (finaliserBtn) {
-  finaliserBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    finaliserCommande();
+  if (!selectedProduct) { document.getElementById('productGrid').scrollIntoView({behavior:'smooth'}); return; }
+  var fn = document.getElementById('firstName').value.trim();
+  var ln = document.getElementById('lastName').value.trim();
+  var em = document.getElementById('email').value.trim();
+  var co = document.getElementById('country').value;
+  var fields = [{id:'firstName',v:fn},{id:'lastName',v:ln},{id:'email',v:em},{id:'country',v:co}];
+  var firstErr = null;
+  fields.forEach(function(f) {
+    var el = document.getElementById(f.id);
+    if (!f.v) { el.classList.add('field-input-error'); setTimeout(function(){el.classList.remove('field-input-error')},3000); if (!firstErr) firstErr=el; }
   });
+  if (firstErr) { firstErr.scrollIntoView({behavior:'smooth',block:'center'}); return; }
+  var total = selectedPrice * qty;
+  document.getElementById('payProductName').textContent = selectedProduct;
+  document.getElementById('payProductDetails').textContent = selectedCat + ' x ' + qty + ' — ' + fn + ' ' + ln + ', ' + co;
+  document.getElementById('payTotalPrice').textContent = total.toLocaleString('fr-FR') + ' EUR';
+  var body = 'Commande SynchroVie:
+ Produit: '+selectedProduct+'
+ Quantite: '+qty+'
+ Total: '+total.toLocaleString('fr-FR')+' EUR
+ Nom: '+fn+' '+ln+'
+ Email: '+em+'
+ Pays: '+co;
+  document.getElementById('emailPayBtn').href = 'mailto:synchrovie@gmail.com?subject='+encodeURIComponent('Commande - '+selectedProduct+' x'+qty)+'&body='+encodeURIComponent(body);
+  document.getElementById('paymentOverlay').classList.add('show');
+  renderPayPalButtons(total);
+});
+document.getElementById('paymentClose').addEventListener('click', function() {
+  document.getElementById('paymentOverlay').classList.remove('show');
+});
+function renderPayPalButtons(total) {
+  var container = document.getElementById('paypal-button-container');
+  container.innerHTML = '';
+  if (typeof paypal === 'undefined') {
+    container.innerHTML = '<p style="text-align:center;color:#EF4444;font-size:0.85rem;">PayPal indisponible. Utilisez le bouton email.</p>';
+    return;
+  }
+  paypal.Buttons({
+    style: { layout: 'vertical', color: 'blue', shape: 'rect', label: 'paypal', height: 45 },
+    createOrder: function(data, actions) {
+      return actions.order.create({
+        purchase_units: [{ description: 'SynchroVie - '+selectedProduct+' x'+qty, amount: { currency_code: 'EUR', value: total.toFixed(2) } }]
+      });
+    },
+    onApprove: function(data, actions) {
+      return actions.order.capture().then(function(details) {
+        document.getElementById('paymentOverlay').classList.remove('show');
+        document.getElementById('orderForm').style.display = 'none';
+        document.querySelector('.trust-strip').style.display = 'none';
+        var s = document.getElementById('successScreen');
+        s.classList.add('show');
+        document.getElementById('successMsg').textContent = 'Merci '+document.getElementById('firstName').value+' ! Votre commande de '+selectedProduct+' x'+qty+' est confirmee. Email de confirmation envoye.';
+        s.scrollIntoView({behavior:'smooth'});
+      });
+    },
+    onError: function(err) {
+      console.error('PayPal error:', err);
+      container.innerHTML = '<p style="text-align:center;color:#EF4444;font-size:0.85rem;">Erreur PayPal. Utilisez le bouton email ci-dessous.</p>';
+    }
+  }).render('#paypal-button-container');
 }
-
-// Bouton fermer le récapitulatif
-document.getElementById('summaryCloseBtn').addEventListener('click', function() {
-  document.querySelector('.order-summary').style.display = 'none';
-});
-// Bouton fermer l'overlay
-document.getElementById('successClose').addEventListener('click', function() {
-  document.getElementById('successOverlay').classList.remove('show');
-});
-
-document.getElementById('backToFormBtn')?.addEventListener('click', function() {
-  document.getElementById('successOverlay').classList.remove('show');
-  document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth' });
-});
-
 (function() {
   var params = new URLSearchParams(window.location.search);
   var prod = params.get('produit');
   if (!prod) return;
   document.querySelectorAll('.product-option input').forEach(function(input) {
-    if (input.value.toLowerCase().replace(/\s/g,'-') === prod.toLowerCase() ||
-        input.value === prod) {
+    if (input.value.toLowerCase().replace(/\s/g,'-') === prod.toLowerCase() || input.value === prod) {
       input.closest('.product-option').click();
-      setTimeout(function() {
-        input.closest('.product-option').scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 100);
+      setTimeout(function() { input.closest('.product-option').scrollIntoView({behavior:'smooth',block:'center'}); }, 100);
     }
   });
 })();
 </script>
 <script src="brevo.js" defer></script>
-<!-- Pop-up Brevo (exit-intent desktop + 60s mobile) -->
 <div class="brevo-overlay" id="brevoOverlay" aria-hidden="true">
   <div class="brevo-popup" role="dialog" aria-modal="true" aria-labelledby="brevoTitle">
     <button class="brevo-close" id="brevoClose" aria-label="Fermer">&times;</button>
     <div class="brevo-popup-inner">
       <p class="brevo-eyebrow">Lettre SynchroVie</p>
-      <h3 id="brevoTitle" class="brevo-title-desktop">Attendez, avant de partir…</h3>
-      <h3 id="brevoTitleMobile" class="brevo-title-mobile">Un email par semaine, zéro spam</h3>
-      <p class="brevo-subtitle-desktop">Recevez ce que mesurent vraiment vos appareils, les retours d'autres utilisateurs, et les nouveautés en avant-première. Pas de promo quotidienne, promis.</p>
-      <p class="brevo-subtitle-mobile">Pendant que vous explorez la boutique, laissez votre email : on vous envoie un récap des technologies qui peuvent vous concerner, sans spam.</p>
+      <h3 id="brevoTitle" class="brevo-title-desktop">Attendez, avant de partir...</h3>
+      <h3 id="brevoTitleMobile" class="brevo-title-mobile">Un email par semaine, zero spam</h3>
+      <p class="brevo-subtitle-desktop">Recevez ce que mesurent vraiment vos appareils, les retours d'autres utilisateurs, et les nouveautes en avant-premiere.</p>
+      <p class="brevo-subtitle-mobile">Laissez votre email pour recevoir un recap des technologies qui peuvent vous concerner.</p>
       <form class="brevo-form" id="brevoPopupForm">
         <input type="email" placeholder="Votre email" required aria-label="Votre email">
         <button type="submit" class="btn btn-primary">Rejoindre</button>
       </form>
-      <p class="brevo-disclaimer">Désinscription en un clic. <a href="politique-de-confidentialite.html">Politique de confidentialité</a>.</p>
+      <p class="brevo-disclaimer">Desinscription en un clic. <a href="politique-de-confidentialite.html">Politique de confidentialite</a>.</p>
     </div>
   </div>
 </div>
