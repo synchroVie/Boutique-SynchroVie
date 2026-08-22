@@ -73,6 +73,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0B2545">
+<script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
 </head>
 <body>
 
@@ -140,10 +141,60 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <li><span class="feat-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><path d="M3 6h18M16 10a4 4 0 01-8 0"/></svg></span> Sac de transport inclus</li>
       </ul>
       <div class="qty-selector"><div class="qty-row"><div class="qty-left"><span class="qty-label">Quantité</span><div class="qty-controls"><button type="button" class="qty-btn" onclick="changeQty(-1)">&#8722;</button><span class="qty-value" id="qtyValue">1</span><button type="button" class="qty-btn" onclick="changeQty(1)">+</button></div></div><div><div class="qty-total-label">Total estimé</div><div class="qty-total" id="qtyTotal">158 EUR</div></div></div><div class="qty-note" id="qtyNote">Commande de 2+ ? Notre équipe vous propose un tarif préférentiel.</div></div>
-      <div class="cta-group">
-        
-        <a  class="btn-wa" href="mailto:synchrovie@gmail.com">Email</a>
+          <div class="cta-group">
+      <!-- Formulaire de commande -->
+      <div id="productOrderForm" style="background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:12px;padding:20px;margin-bottom:20px;">
+        <p style="color:#F8FAFC;font-weight:700;font-size:0.95rem;margin-bottom:14px;font-family:Space Grotesk,sans-serif;">Vos coordonnées de livraison</p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px;">
+          <input type="text" id="prodFirstName" placeholder="Prénom *" required style="padding:10px 12px;background:#0a1628;border:1px solid rgba(148,163,184,0.25);border-radius:8px;color:#F8FAFC;font-size:0.9rem;font-family:Inter,sans-serif;">
+          <input type="text" id="prodLastName" placeholder="Nom *" required style="padding:10px 12px;background:#0a1628;border:1px solid rgba(148,163,184,0.25);border-radius:8px;color:#F8FAFC;font-size:0.9rem;font-family:Inter,sans-serif;">
+        </div>
+        <input type="email" id="prodEmail" placeholder="Email *" required style="width:100%;padding:10px 12px;background:#0a1628;border:1px solid rgba(148,163,184,0.25);border-radius:8px;color:#F8FAFC;font-size:0.9rem;font-family:Inter,sans-serif;margin-bottom:10px;box-sizing:border-box;">
+        <input type="tel" id="prodPhone" placeholder="Numéro de téléphone" style="width:100%;padding:10px 12px;background:#0a1628;border:1px solid rgba(148,163,184,0.25);border-radius:8px;color:#F8FAFC;font-size:0.9rem;font-family:Inter,sans-serif;margin-bottom:10px;box-sizing:border-box;">
+        <select id="prodCountry" required style="width:100%;padding:10px 12px;background:#0a1628;border:1px solid rgba(148,163,184,0.25);border-radius:8px;color:#F8FAFC;font-size:0.9rem;font-family:Inter,sans-serif;margin-bottom:10px;box-sizing:border-box;">
+          <option value="">Sélectionnez votre pays *</option>
+          <option value="France">France</option>
+          <option value="Belgique">Belgique</option>
+          <option value="Suisse">Suisse</option>
+          <option value="Luxembourg">Luxembourg</option>
+          <option value="Autre">Autre pays</option>
+        </select>
+        <input type="text" id="prodAddress" placeholder="Adresse de livraison" style="width:100%;padding:10px 12px;background:#0a1628;border:1px solid rgba(148,163,184,0.25);border-radius:8px;color:#F8FAFC;font-size:0.9rem;font-family:Inter,sans-serif;margin-bottom:10px;box-sizing:border-box;">
+        <textarea id="prodMessage" placeholder="Message (optionnel)" rows="2" style="width:100%;padding:10px 12px;background:#0a1628;border:1px solid rgba(148,163,184,0.25);border-radius:8px;color:#F8FAFC;font-size:0.9rem;font-family:Inter,sans-serif;resize:vertical;box-sizing:border-box;"></textarea>
+        <p style="font-size:0.75rem;color:#94A3B8;margin-top:8px;">* Champs obligatoires. Paiement sécurisé ci-dessous.</p>
       </div>
+
+      <!-- Checkout principal -->
+      <div id="checkout-section" style="margin-bottom:12px;">
+        <p style="text-align:center;color:#F8FAFC;font-weight:700;font-size:1.1rem;margin-bottom:10px;font-family:Space Grotesk,sans-serif;">Paiement sécurisé</p>
+        <div id="paypal-container-RVJCDF68TF2DL" style="margin-top:0;"></div>
+      </div>
+
+      <script>
+        if (typeof paypal !== 'undefined' && paypal.HostedButtons) {
+          paypal.HostedButtons({
+            hostedButtonId: "RVJCDF68TF2DL",
+          }).render("#paypal-container-RVJCDF68TF2DL");
+        } else {
+          window.addEventListener('load', function() {
+            if (typeof paypal !== 'undefined' && paypal.HostedButtons) {
+              paypal.HostedButtons({
+                hostedButtonId: "RVJCDF68TF2DL",
+              }).render("#paypal-container-RVJCDF68TF2DL");
+            }
+          });
+        }
+      </script>
+
+      <!-- Boutons paiement actionnables -->
+      <div style="display:flex;gap:8px;margin-bottom:12px;">
+        <button onclick="document.getElementById('paypal-container-RVJCDF68TF2DL').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'" onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brands fa-paypal" style="color:#00457C;font-size:1.1rem;"></i> PayPal</button>
+        <button onclick="document.getElementById('paypal-container-RVJCDF68TF2DL').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'" onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brands fa-cc-visa" style="color:#1A1F71;font-size:1.1rem;"></i> Visa</button>
+        <button onclick="document.getElementById('paypal-container-RVJCDF68TF2DL').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'" onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brands fa-cc-mastercard" style="color:#EB001B;font-size:1.1rem;"></i> MasterCard</button>
+      </div>
+
+      <a class="btn-secondary-full" href="mailto:synchrovie@gmail.com">Poser une question — Expert SynchroVie</a>
+    </div>
       <div class="trust-product"><p><strong>Expédié sous 7-10 jours ouvrables.</strong> Retours gratuits sous 30 jours — sans paperasse, sans friction.</p></div>
 
 
