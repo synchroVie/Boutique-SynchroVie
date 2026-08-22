@@ -644,7 +644,7 @@ document.addEventListener('DOMContentLoaded', () => {
       var price = prodPrice ? prodPrice.textContent.trim() : '';
       var sticky = document.createElement('div');
       sticky.className = 'sticky-cta-mobile';
-      // Si PayPal container existe (SynchroRing X1), pointer vers #commander, sinon vers commander.html
+      // Le bouton Checkout/PayPal est sur la page produit, on scroll vers la section paiement
       var ctaHref = '#commander';
       var ctaLabel = price ? 'Commander — ' + price : 'Commander';
       sticky.innerHTML = '<a href="' + ctaHref + '" class="btn-primary">' + ctaLabel + '</a>';
