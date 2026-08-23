@@ -14,12 +14,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://synchro-vie.com/commander.html</loc>
-    <lastmod>2026-08-23</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://synchro-vie.com/contact.html</loc>
     <lastmod>2026-08-23</lastmod>
     <changefreq>weekly</changefreq>
@@ -62,7 +56,7 @@
     <priority>0.3</priority>
   </url>
 
-  <!-- ===== PRODUITS (20) ===== -->
+  <!-- ===== PRODUITS (17) ===== -->
   <url>
     <loc>https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html</loc>
     <lastmod>2026-08-23</lastmod>
@@ -166,6 +160,12 @@
     <priority>0.9</priority>
   </url>
 
+    <url>
+    <loc>https://synchro-vie.com/promotions.html</loc>
+    <lastmod>2026-08-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <!-- ===== BLOG (19) ===== -->
   <url>
     <loc>https://synchro-vie.com/blog/abonnement-bague-connectee-donnees-sante.html</loc>
