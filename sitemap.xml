@@ -227,8 +227,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
- (fix: Fiches de marchand GSC + prix SynchroRing 458€ + témoignages + audit SEO)
+  <url>
+    <loc>https://synchro-vie.com/blog/cortisol-invisible-fatigue-chronique-2026.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://synchro-vie.com/blog/guide-bague-connectee-biometrique.html</loc>
     <lastmod>2026-08-23</lastmod>
@@ -259,8 +263,12 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-
- (fix: Fiches de marchand GSC + prix SynchroRing 458€ + témoignages + audit SEO)
+  <url>
+    <loc>https://synchro-vie.com/blog/recuperation-musculaire-technologies-2026.html</loc>
+    <lastmod>2026-08-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
   <url>
     <loc>https://synchro-vie.com/blog/recuperation-musculaire-technologies-pointe-athletes.html</loc>
     <lastmod>2026-08-23</lastmod>
