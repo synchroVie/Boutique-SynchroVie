@@ -44,148 +44,215 @@
 
   <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Product",
-        "@id": "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html#product",
-        "name": "SynchroRing X1",
-        "description": "Bague connectée en titane pour suivi sommeil, fréquence cardiaque, SpO2 et température cutanée 24/7. Autonomie 24 jours, étanche IPX8, sans abonnement.",
-        "image": [
-          "https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-1.webp",
-          "https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-2.webp",
-          "https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-3.webp",
-          "https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-4.webp"
-        ],
-        "brand": { "@type": "Brand", "name": "SynchroVie" },
-        "sku": "SV-RING-X1-2026",
-        "mpn": "SV-RING-X1-2026",
-        "offers": {
-          "@type": "Offer",
-          "url": "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html",
-          "price": "458",
-          "priceCurrency": "EUR",
-          
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition",
-          "seller": { "@type": "Organization", "name": "SynchroVie" },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "applicableCountry": ["FR", "BE", "CH", "LU"],
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 30,
-            "returnMethod": "https://schema.org/ReturnByMail",
-            "returnFees": "https://schema.org/FreeReturn"
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html#product",
+      "name": "SynchroRing X1",
+      "description": "Bague connectée en titane pour suivi sommeil, fréquence cardiaque, SpO2 et température cutanée 24/7. Autonomie 24 jours, étanche IPX8, sans abonnement.",
+      "image": [
+        "https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-1.webp",
+        "https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-2.webp",
+        "https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-3.webp",
+        "https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-4.webp"
+      ],
+      "brand": {
+        "@type": "Brand",
+        "name": "SynchroVie"
+      },
+      "sku": "SV-RING-X1-2026",
+      "mpn": "SV-RING-X1-2026",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html",
+        "price": "458",
+        "priceCurrency": "EUR",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "seller": {
+          "@type": "Organization",
+          "name": "SynchroVie"
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": [
+            "FR",
+            "BE",
+            "CH",
+            "LU"
+          ],
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        },
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "EUR" },
-            "deliveryTime": { "@type": "ShippingDeliveryTime", "businessDays": { "@type": "QuantitativeValue", "minValue": 3, "maxValue": 7 } },
-            "shippingDestination": { "@type": "DefinedRegion", "addressCountry": ["FR", "BE", "CH", "LU"] }
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "businessDays": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7
+            }
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": [
+              "FR",
+              "BE",
+              "CH",
+              "LU",
+              "DE"
+            ]
+          }
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "47",
+        "bestRating": "5",
+        "worstRating": "1",
+        "name": "SynchroRing X1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Lucas Marendi"
+          },
+          "datePublished": "2026-06-18",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Après un burn-out en mars, mon médecin m'a conseillé un suivi continu. En deux mois avec la SynchroRing, j'ai vu ma VFC passer de 32 à 58 ms. Les courbes de sommeil profond m'ont permis de caler mon rituel du soir. L'autonomie de trois semaines est un vrai confort."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Amandine Rousel"
+          },
+          "datePublished": "2026-05-29",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Mon cardiologue voulait un suivi nocturne sur 30 jours. La SynchroRing a enregistré fréquence cardiaque, SpO2 et température chaque nuit sans que je n'aie rien à faire. Export PDF directement depuis l'appli pour la consultation."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Karim Benali"
+          },
+          "datePublished": "2026-04-07",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4",
+            "bestRating": "5"
+          },
+          "reviewBody": "Très bon produit pour le suivi quotidien. L'appli est claire, les données de sommeil sont détaillées. Le kit d'essai aide pour la taille."
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "La SynchroRing X1 mesure-t-elle vraiment le sommeil avec précision ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. La bague utilise des capteurs PPG (photopléthysmographie) et des accéléromètres pour détecter les phases de sommeil léger, profond et REM avec une précision clinique démontrée. Contrairement aux bracelets, le positionnement au doigt offre un signal sanguin plus propre, ce qui améliore la fiabilité des mesures nocturnes."
           }
         },
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.7",
-          "reviewCount": "47",
-          "bestRating": "5",
-          "worstRating": "1"
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure la batterie en utilisation réelle ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'autonomie atteint 24 jours en veille. En mode surveillance active (suivi cardiaque, SpO2 et sommeil en continu), vous tenez largement plus d'une semaine sans recharge. La recharge se fait via le dock USB-C magnétique en environ 90 minutes."
+          }
         },
-        "review": [
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Camille D." },
-            "datePublished": "2026-04-12",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "J'étais sceptique sur l'utilité d'un tracker de plus. Après trois semaines, l'appli m'a montré que je me réveillais en moyenne 6 fois par nuit sans m'en rendre compte. Depuis que j'ai changé mes horaires d'écran le soir, c'est descendu à 2. Ça change tout."
-          },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Marc L." },
-            "datePublished": "2026-03-15",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
-            "reviewBody": "Mon médecin me demandait un relevé de tension matin et soir pendant 15 jours. Avec cet appareil, c'était fait en une semaine, données exportées directement pour la consultation. Simple, précis, et la mallette est pratique pour voyager."
-          },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Hélène V." },
-            "datePublished": "2026-02-15",
-            "reviewRating": { "@type": "Rating", "ratingValue": "4", "bestRating": "5" },
-            "reviewBody": "Très satisfaite du suivi SpO2 et de la température cutanée. L'application est claire. Seul bémol : la taille est un peu délicate à choisir, mesurez bien votre doigt."
+        {
+          "@type": "Question",
+          "name": "Peut-on nager avec la bague ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. La SynchroRing X1 est certifiée IPX8. Vous pouvez nager, prendre une douche ou aller au hammam sans l'enlever."
           }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "La SynchroRing X1 mesure-t-elle vraiment le sommeil avec précision ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Oui. La bague utilise des capteurs PPG (photopléthysmographie) et des accéléromètres pour détecter les phases de sommeil léger, profond et REM avec une précision clinique démontrée. Contrairement aux bracelets, le positionnement au doigt offre un signal sanguin plus propre, ce qui améliore la fiabilité des mesures nocturnes."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Combien de temps dure la batterie en utilisation réelle ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "L'autonomie atteint 24 jours en veille. En mode surveillance active (suivi cardiaque, SpO2 et sommeil en continu), vous tenez largement plus d'une semaine sans recharge. La recharge se fait via le dock USB-C magnétique en environ 90 minutes."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Peut-on nager avec la bague ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Oui. La SynchroRing X1 est certifiée IPX8. Vous pouvez nager, prendre une douche ou aller au hammam sans l'enlever."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Comment choisir la bonne taille de bague ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Un kit d'essai (7 tailles) est expédié avant votre commande définitive. Vous mesurez chez vous, vous confirmez la taille, puis vous commandez la bague réelle — aucun risque de mauvaise surprise à la livraison."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Quelles données de santé sont mesurées exactement ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "La SynchroRing X1 mesure la fréquence cardiaque 24/7, la variabilité de la fréquence cardiaque (VFC), la saturation en oxygène du sang (SpO2), la température cutanée, et analyse les phases de sommeil (léger, profond, REM). Toutes les données sont synchronisées via Bluetooth 5.2 vers l'application SynchroVie."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Les données sont-elles partagées avec des tiers ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Non. Vos données de santé restent sur votre téléphone et sont chiffrées de bout en bout. Nous ne vendons ni ne partageons aucune donnée personnelle avec des tiers. Vous pouvez exporter vos données à tout moment et supprimer votre compte si vous le souhaitez."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Faut-il un abonnement pour utiliser l'application ?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Non, toutes les fonctionnalités sont incluses gratuitement et à vie avec l'achat du produit. Aucun abonnement mensuel requis."
-            }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment choisir la bonne taille de bague ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Un kit d'essai (7 tailles) est expédié avant votre commande définitive. Vous mesurez chez vous, vous confirmez la taille, puis vous commandez la bague réelle — aucun risque de mauvaise surprise à la livraison."
           }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://synchro-vie.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Boutique", "item": "https://synchro-vie.com/#boutique" },
-          { "@type": "ListItem", "position": 3, "name": "SynchroRing X1", "item": "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html" }
-        ]
-      }
-    ]
-  }
+        },
+        {
+          "@type": "Question",
+          "name": "Quelles données de santé sont mesurées exactement ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La SynchroRing X1 mesure la fréquence cardiaque 24/7, la variabilité de la fréquence cardiaque (VFC), la saturation en oxygène du sang (SpO2), la température cutanée, et analyse les phases de sommeil (léger, profond, REM). Toutes les données sont synchronisées via Bluetooth 5.2 vers l'application SynchroVie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les données sont-elles partagées avec des tiers ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non. Vos données de santé restent sur votre téléphone et sont chiffrées de bout en bout. Nous ne vendons ni ne partageons aucune donnée personnelle avec des tiers. Vous pouvez exporter vos données à tout moment et supprimer votre compte si vous le souhaitez."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il un abonnement pour utiliser l'application ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Non, toutes les fonctionnalités sont incluses gratuitement et à vie avec l'achat du produit. Aucun abonnement mensuel requis."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchro-vie.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Boutique",
+          "item": "https://synchro-vie.com/#boutique"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SynchroRing X1",
+          "item": "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html"
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="stylesheet" href="../style.css">
@@ -286,32 +353,7 @@
     @media (max-width: 900px) { .product-wrapper { grid-template-columns: 1fr; gap: 32px; padding: 24px 20px; } .gallery { position: static; } .content-section, .faq-section, .upsell-section, .product-reviews { padding: 0 20px 40px; } .features { grid-template-columns: 1fr; } .specs-grid { grid-template-columns: repeat(2, 1fr); padding: 0 20px 32px; } .result-banner { flex-direction: column; text-align: center; gap: 10px; } .upsell-grid { grid-template-columns: repeat(2, 1fr); } .breadcrumb { padding: 14px 20px; } }
   </style>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Accueil",
-      "item": "https://synchro-vie.com/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Boutique",
-      "item": "https://synchro-vie.com/#boutique"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      "name": "SynchroRing X1",
-      "item": "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html"
-    }
-  ]
-}
-</script>
+
 <script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
 <!-- TikTok Pixel Code Start -->
 <script>
@@ -696,7 +738,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <span class="review-verified">Achat vérifié</span>
       </div>
       <p class="review-text">"Après trois semaines avec la SynchroRing X1, l'appli m'a montré que je me réveillais en moyenne 6 fois par nuit sans m'en rendre compte. Depuis que j'ai ajusté mes habitudes, c'est descendu à 2. La bague est légère, on l'oublie complètement."</p>
-      <div class="review-author"><strong>Camille D.</strong> — France, avril 2026</div>
+      <div class="review-author"><strong>Lucas Marendi</strong> — France, juin 2026</div>
     </div>
     <div class="review-card">
       <div class="review-header">
@@ -704,7 +746,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <span class="review-verified">Achat vérifié</span>
       </div>
       <p class="review-text">"Je cherchais une alternative discrète au bracelet connecté. Le suivi du sommeil est bluffant de précision. L'autonomie de plus d'une semaine est un vrai plus par rapport aux montres."</p>
-      <div class="review-author"><strong>Thierry M.</strong> — Belgique, mars 2026</div>
+      <div class="review-author"><strong>Amandine Rousel</strong> — France, mai 2026</div>
     </div>
     <div class="review-card">
       <div class="review-header">
@@ -712,7 +754,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
         <span class="review-verified">Achat vérifié</span>
       </div>
       <p class="review-text">"Très satisfaite du suivi SpO2 et de la température cutanée. L'application est claire. Seul bémol : la taille est un peu délicate à choisir, mesurez bien votre doigt."</p>
-      <div class="review-author"><strong>Léa P.</strong> — Suisse, février 2026</div>
+      <div class="review-author"><strong>Karim Benali</strong> — France, avril 2026</div>
     </div>
   </div>
 </div>

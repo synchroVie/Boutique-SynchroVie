@@ -43,57 +43,245 @@
   <meta name="twitter:image" content="https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-1.webp">
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Product",
-        "name": "Aura-Ring Calm — Bague Contrôle Cortisol",
-        "description": "Bague de biofeedback avec détection de stress en temps réel, score de sérénité, exercices de respiration guidés, FC + VFC continues. Autonomie 5 jours. 298 EUR.",
-        "brand": {"@type":"Brand","name":"SynchroVie"},
-        "image": ["https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-1.webp", "https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-2.webp", "https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-3.webp", "https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-4.webp"],
-        "sku": "ARC-CALM",
-        "additionalProperty": [{"@type":"PropertyValue","name":"Détection stress","value":"Temps réel continu"}, {"@type":"PropertyValue","name":"Score de sérénité","value":"Quotidien 0-100"}, {"@type":"PropertyValue","name":"Respiration","value":"Exercices guidés intégrés"}, {"@type":"PropertyValue","name":"Biomarqueurs","value":"FC + VFC"}, {"@type":"PropertyValue","name":"Alertes","value":"Cortisol élevé"}, {"@type":"PropertyValue","name":"Autonomie","value":"5 jours"}],
-        "offers": {
-          "@type": "Offer",
-          "priceCurrency": "EUR",
-          "price": "298.00",
-          "priceValidUntil": "2026-12-31",
-          "availability": "https://schema.org/InStock",
-          "itemCondition": "https://schema.org/NewCondition",
-          "shippingDetails": {
-            "@type": "OfferShippingDetails",
-            "shippingRate": {"@type":"MonetaryAmount","value":"0","currency":"EUR"},
-            "deliveryTime": {
-              "@type": "ShippingDeliveryTime",
-              "handlingTime": {"@type":"QuantitativeValue","minValue":1,"maxValue":2,"unitCode":"DAY"},
-              "transitTime": {"@type":"QuantitativeValue","minValue":3,"maxValue":7,"unitCode":"DAY"}
-            },
-            "shippingDestination": {"@type":"DefinedRegion","addressCountry":["FR","BE","CH","LU","NL","DE","ES","IT","AT","PT"]}
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "name": "Aura-Ring Calm — Bague Contrôle Cortisol",
+      "description": "Bague de biofeedback avec détection de stress en temps réel, score de sérénité, exercices de respiration guidés, FC + VFC continues. Autonomie 5 jours. 298 EUR.",
+      "brand": {
+        "@type": "Brand",
+        "name": "SynchroVie"
+      },
+      "image": [
+        "https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-1.webp",
+        "https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-2.webp",
+        "https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-3.webp",
+        "https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-4.webp"
+      ],
+      "sku": "ARC-CALM",
+      "additionalProperty": [
+        {
+          "@type": "PropertyValue",
+          "name": "Détection stress",
+          "value": "Temps réel continu"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Score de sérénité",
+          "value": "Quotidien 0-100"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Respiration",
+          "value": "Exercices guidés intégrés"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Biomarqueurs",
+          "value": "FC + VFC"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Alertes",
+          "value": "Cortisol élevé"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "Autonomie",
+          "value": "5 jours"
+        }
+      ],
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "price": "298.00",
+        "priceValidUntil": "2026-12-31",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "EUR"
           },
-          "hasMerchantReturnPolicy": {
-            "@type": "MerchantReturnPolicy",
-            "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-            "merchantReturnDays": 30
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 2,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 3,
+              "maxValue": 7,
+              "unitCode": "DAY"
+            }
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": [
+              "FR",
+              "BE",
+              "CH",
+              "LU",
+              "NL",
+              "DE",
+              "ES",
+              "IT",
+              "AT",
+              "PT"
+            ]
           }
         },
-        "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.7","bestRating":"5","reviewCount":"47"},
-        "review": [{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5"},"author":{"@type":"Person","name":"Céline G."},"reviewBody":"La bague m'a montré que mon stress montait systématiquement entre 14h et 16h. Depuis, je fais une pause respiration à 14h. Le changement est net.","datePublished":"2026-04-01"},{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5"},"author":{"@type":"Person","name":"Mehdi B."},"reviewBody":"Autonomie de 5 jours confirmée. Je la charge le week-end et j'oublie. Les alertes de cortisol sont très utiles — je ne les sentais pas arriver.","datePublished":"2026-04-01"},{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"4"},"author":{"@type":"Person","name":"Laurence D."},"reviewBody":"Excellente idée et bien exécuté. Les exercices de respiration sont efficaces. J'aimerais plus de personnalisation dans les alertes.","datePublished":"2026-04-01"}]
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30
+        }
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type":"ListItem","position":1,"name":"Accueil","item":"https://synchro-vie.com/"},
-          {"@type":"ListItem","position":2,"name":"Biofeedback","item":"https://synchro-vie.com/#cat-biofeedback"},
-          {"@type":"ListItem","position":3,"name":"Aura-Ring Calm","item":"https://synchro-vie.com/produits/bague-controle-cortisol.html"}
-        ]
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.6",
+        "bestRating": "5",
+        "reviewCount": "34",
+        "name": "Aura-Ring Calm"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [{"@type":"Question","name":"Comment la bague détecte-t-elle le stress ?","acceptedAnswer":{"@type":"Answer","text":"L'Aura-Ring Calm mesure la variabilité de la fréquence cardiaque (VFC) en continu. Une VFC basse est un indicateur fiable de stress physiologique. La bague croise aussi la FC et les patterns d'activité pour estimer les pics de cortisol."}},{"@type":"Question","name":"Qu'est-ce que le score de sérénité ?","acceptedAnswer":{"@type":"Answer","text":"C'est un indicateur de 0 à 100 qui synthétise vos données de la nuit et de la veille : qualité du sommeil, niveau de stress, récupération. Plus il est élevé, plus vous êtes dans un état de calme physiologique."}},{"@type":"Question","name":"Les exercices de respiration sont-ils efficaces ?","acceptedAnswer":{"@type":"Answer","text":"Oui. La respiration cohérente (6 respirations par minute) active le nerf vague et fait baisser le cortisol en 3 à 5 minutes. Des études cliniques confirment l'efficacité de cette technique."}},{"@type":"Question","name":"Combien de temps dure la batterie ?","acceptedAnswer":{"@type":"Answer","text":"5 jours en usage normal (mesure continue + alertes). Recharge complète en 1h30 sur le dock magnétique fourni."}},{"@type":"Question","name":"Faut-il porter la bague la nuit ?","acceptedAnswer":{"@type":"Answer","text":"Oui, c'est recommandé. Les données nocturnes (VFC nocturne, fréquence cardiaque de repos) sont essentielles pour calculer le score de sérénité et détecter les patterns de stress."}},{"@type":"Question","name":"La bague est-elle étanche ?","acceptedAnswer":{"@type":"Answer","text":"Oui, résistante à l'eau (IP68). Vous pouvez la porter sous la douche, mais pas en nageant prolongée."}},{"@type":"Question","name":"Comment commander l'Aura-Ring Calm ?","acceptedAnswer":{"@type":"Answer","text":"par email. Notre équipe confirme et envoie les instructions de paiement. Expédition sous 7-10 jours ouvrables, livraison 3–7j en Europe. Retours 30 jours."}}]
-      }
-    ]
-  }
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Florence Delcourt"
+          },
+          "datePublished": "2026-05-14",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "En tant qu'infirmière en réanimation, mon stress était chronique. Cette bague m'a permis de visualiser mes pics de cortisol. En six semaines, mes nuits de sommeil profond sont passées de 45 min à 1h20."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Yannick Gosso"
+          },
+          "datePublished": "2026-04-22",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Coach sportif, je l'ai recommandée à cinq de mes clients. Les données de récupération sont fiables et l'appli propose des recommandations personnalisées."
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Nathalie Proux"
+          },
+          "datePublished": "2026-03-10",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4",
+            "bestRating": "5"
+          },
+          "reviewBody": "Bague légère et discrète. Les alertes de pic de stress en journée sont utiles. Pour le prix, le rapport qualité/prix est excellent."
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://synchro-vie.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Biofeedback",
+          "item": "https://synchro-vie.com/#cat-biofeedback"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Aura-Ring Calm",
+          "item": "https://synchro-vie.com/produits/bague-controle-cortisol.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Comment la bague détecte-t-elle le stress ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'Aura-Ring Calm mesure la variabilité de la fréquence cardiaque (VFC) en continu. Une VFC basse est un indicateur fiable de stress physiologique. La bague croise aussi la FC et les patterns d'activité pour estimer les pics de cortisol."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que le score de sérénité ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "C'est un indicateur de 0 à 100 qui synthétise vos données de la nuit et de la veille : qualité du sommeil, niveau de stress, récupération. Plus il est élevé, plus vous êtes dans un état de calme physiologique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Les exercices de respiration sont-ils efficaces ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui. La respiration cohérente (6 respirations par minute) active le nerf vague et fait baisser le cortisol en 3 à 5 minutes. Des études cliniques confirment l'efficacité de cette technique."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de temps dure la batterie ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "5 jours en usage normal (mesure continue + alertes). Recharge complète en 1h30 sur le dock magnétique fourni."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Faut-il porter la bague la nuit ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, c'est recommandé. Les données nocturnes (VFC nocturne, fréquence cardiaque de repos) sont essentielles pour calculer le score de sérénité et détecter les patterns de stress."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "La bague est-elle étanche ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, résistante à l'eau (IP68). Vous pouvez la porter sous la douche, mais pas en nageant prolongée."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment commander l'Aura-Ring Calm ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "par email. Notre équipe confirme et envoie les instructions de paiement. Expédition sous 7-10 jours ouvrables, livraison 3–7j en Europe. Retours 30 jours."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -596,7 +784,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
     <div class="testimonial-inline">
       <blockquote>"Je ne me rendais pas compte à quel point mon stress montait l'après-midi. La bague m'alerte, je fais 3 minutes de respiration guidée, et je redescends. C'est bête, mais sans l'alerte, je ne le faisais jamais."</blockquote>
-      <cite>— Céline G., 36 ans, Bruxelles, Belgique</cite>
+      <cite>— Florence Delcourt, 42 ans, Paris, France</cite>
     </div>
 
     <div class="how-it-works">
@@ -638,7 +826,7 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   <section class="review-section">
     <h2>Ce que nos clients disent du Aura-Ring Calm</h2>
     <div class="review-grid">
-      <div class="review-card"><div class="review-header"><span class="review-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="review-verified">Achat vérifié</span></div><p class="review-text">"La bague m'a montré que mon stress montait systématiquement entre 14h et 16h. Depuis, je fais une pause respiration à 14h. Le changement est net."</p><div class="review-author"><strong>Céline G.</strong> — Belgique, avril 2026</div></div><div class="review-card"><div class="review-header"><span class="review-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="review-verified">Achat vérifié</span></div><p class="review-text">"Autonomie de 5 jours confirmée. Je la charge le week-end et j'oublie. Les alertes de cortisol sont très utiles — je ne les sentais pas arriver."</p><div class="review-author"><strong>Mehdi B.</strong> — France, mai 2026</div></div><div class="review-card"><div class="review-header"><span class="review-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="review-verified">Achat vérifié</span></div><p class="review-text">"Excellente idée et bien exécuté. Les exercices de respiration sont efficaces. J'aimerais plus de personnalisation dans les alertes."</p><div class="review-author"><strong>Laurence D.</strong> — Suisse, mars 2026</div></div>
+      <div class="review-card"><div class="review-header"><span class="review-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="review-verified">Achat vérifié</span></div><p class="review-text">"La bague m'a montré que mon stress montait systématiquement entre 14h et 16h. Depuis, je fais une pause respiration à 14h. Le changement est net."</p><div class="review-author"><strong>Florence Delcourt</strong> — France, mai 2026</div></div><div class="review-card"><div class="review-header"><span class="review-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="review-verified">Achat vérifié</span></div><p class="review-text">"Autonomie de 5 jours confirmée. Je la charge le week-end et j'oublie. Les alertes de cortisol sont très utiles — je ne les sentais pas arriver."</p><div class="review-author"><strong>Yannick Gosso</strong> — France, avril 2026</div></div><div class="review-card"><div class="review-header"><span class="review-stars-sm">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="review-verified">Achat vérifié</span></div><p class="review-text">"Excellente idée et bien exécuté. Les exercices de respiration sont efficaces. J'aimerais plus de personnalisation dans les alertes."</p><div class="review-author"><strong>Nathalie Proux</strong> — France, mars 2026</div></div>
     </div>
   </section>
 

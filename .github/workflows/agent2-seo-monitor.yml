@@ -35,16 +35,9 @@ jobs:
         run: |
           mkdir -p /tmp/seo-audit
           
-          # Déterminer le domaine actif (synchrovie.github.io/Boutique-SynchroVie ou fallback synchrovie.github.io)
-          LIVE_DOMAIN="https://synchrovie.github.io/Boutique-SynchroVie/"
-          HTTP_TEST=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 10 "$LIVE_DOMAIN" || echo "000")
-          if [ "$HTTP_TEST" != "200" ]; then
-            echo "⚠️ synchrovie.github.io/Boutique-SynchroVie non accessible (HTTP $HTTP_TEST). Utilisation fallback synchrovie.github.io"
-            LIVE_DOMAIN="https://synchrovie.github.io/Boutique-SynchroVie/"
-            SITEMAP_URL="${LIVE_DOMAIN}sitemap.xml"
-          else
-            SITEMAP_URL="${LIVE_DOMAIN}sitemap.xml"
-          fi
+          # Domaine principal
+          LIVE_DOMAIN="https://synchro-vie.com/"
+          SITEMAP_URL="${LIVE_DOMAIN}sitemap.xml"
           echo "Domaine live : $LIVE_DOMAIN"
           echo "Sitemap URL : $SITEMAP_URL"
           
@@ -96,7 +89,7 @@ jobs:
           
           # Alternative : charger sitemap distant si local vide
           if not results['sitemap_urls']:
-              sitemap_dist_url = os.environ.get('SITEMAP_URL', 'https://synchrovie.github.io/Boutique-SynchroVie/sitemap.xml')
+              sitemap_dist_url = os.environ.get('SITEMAP_URL', 'https://synchro-vie.com/sitemap.xml')
               try:
                   req = urllib.request.Request(sitemap_dist_url, headers={'User-Agent': 'Mozilla/5.0'})
                   with urllib.request.urlopen(req, context=ctx, timeout=30) as r:
@@ -291,7 +284,7 @@ jobs:
 
       - name: Ping Google & Bing for sitemap refresh
         run: |
-          SITEMAP_URL="https://synchrovie.github.io/Boutique-SynchroVie/sitemap.xml"
+          SITEMAP_URL="https://synchro-vie.com/sitemap.xml"
           GOOGLE_PING=$(curl -s -o /dev/null -w "%{http_code}" "https://www.google.com/ping?sitemap=${SITEMAP_URL}")
           BING_PING=$(curl -s -o /dev/null -w "%{http_code}" "https://www.bing.com/ping?sitemap=${SITEMAP_URL}")
           echo "Google ping: $GOOGLE_PING"
@@ -299,14 +292,14 @@ jobs:
 
       - name: Check new domain DNS propagation
         run: |
-          echo "=== Vérification DNS synchrovie.github.io/Boutique-SynchroVie ==="
+          echo "=== Vérification DNS synchro-vie.com ==="
           # Vérifier que le domaine résout
-          DIG_RESULT=$(dig +short synchrovie.github.io/Boutique-SynchroVie A 2>/dev/null || echo "dig indisponible")
+          DIG_RESULT=$(dig +short synchro-vie.com A 2>/dev/null || echo "dig indisponible")
           echo "DNS A records: $DIG_RESULT"
           
-          # HTTP check du nouveau domaine
-          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 10 "https://synchrovie.github.io/Boutique-SynchroVie/" || echo "inaccessible")
-          echo "HTTP synchrovie.github.io/Boutique-SynchroVie: $HTTP_CODE"
+          # HTTP check du domaine
+          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" -L --max-time 10 "https://synchro-vie.com/" || echo "inaccessible")
+          echo "HTTP synchro-vie.com: $HTTP_CODE"
 
       - name: Generate SEO report V2
         run: |
@@ -321,7 +314,7 @@ jobs:
           print(f"# Rapport SEO V2 — SynchroVie")
           print()
           print(f"**Date** : $(date -u +%Y-%m-%d)")
-          print(f"**Domaine** : https://synchrovie.github.io/Boutique-SynchroVie/")
+          print(f"**Domaine** : https://synchro-vie.com/")
           print()
           print(f"## État technique")
           print()
