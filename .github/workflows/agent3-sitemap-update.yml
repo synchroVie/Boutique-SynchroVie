@@ -44,18 +44,19 @@ jobs:
             echo "    <priority>1.0</priority>"
             echo "  </url>"
 
-            # Pages racine (sauf index.html déjà fait)
-            for f in blog.html commander.html contact.html faq.html cgv.html cookies.html legal.html propos.html politique-de-confidentialite.html; do
+            # Pages racine (sauf index.html déjà fait, et sauf commander.html qui est noindex)
+            for f in blog.html contact.html faq.html cgv.html cookies.html legal.html propos.html politique-de-confidentialite.html; do
               if [ -f "$f" ]; then
+                # Skip les fichiers redirect (noindex)
+                if grep -q 'noindex' "$f" 2>/dev/null; then
+                  echo "  <!-- Skip noindex: $f -->"
+                  continue
+                fi
                 # CGV et légal : priorité plus faible
                 case "$f" in
                   cgv.html|cookies.html|legal.html|politique-de-confidentialite.html)
                     PRIORITY="0.3"
                     CHANGEFREQ="yearly"
-                    ;;
-                  commander.html)
-                    PRIORITY="0.6"
-                    CHANGEFREQ="monthly"
                     ;;
                   *)
                     PRIORITY="0.8"
@@ -73,12 +74,12 @@ jobs:
 
             # Pages produits
             echo ""
-            echo "  <!-- ===== PRODUITS (20) ===== -->"
+            echo "  <!-- ===== PRODUITS ===== -->"
             for f in produits/*.html; do
               [ -f "$f" ] || continue
               # Skip les fichiers redirect (noindex) — ne pas inclure dans sitemap
               if grep -q 'noindex' "$f" 2>/dev/null; then
-                echo "  <!-- Skip redirect: $f -->"
+                echo "  <!-- Skip noindex: $f -->"
                 continue
               fi
               filename=$(basename "$f")
@@ -92,9 +93,14 @@ jobs:
 
             # Articles blog
             echo ""
-            echo "  <!-- ===== BLOG (19) ===== -->"
+            echo "  <!-- ===== BLOG ===== -->"
             for f in blog/*.html; do
               [ -f "$f" ] || continue
+              # Skip les fichiers redirect (noindex) — ne pas inclure dans sitemap
+              if grep -q 'noindex' "$f" 2>/dev/null; then
+                echo "  <!-- Skip noindex: $f -->"
+                continue
+              fi
               filename=$(basename "$f")
               echo "  <url>"
               echo "    <loc>${BASE_URL}${f}</loc>"
