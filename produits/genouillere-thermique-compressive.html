@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<script>
+// Redirection forcée GitHub Pages → domaine personnalisé (anti duplicate content)
+(function() {
+  if (window.location.hostname === 'synchrovie.github.io' || window.location.hostname === 'synchroVie.github.io') {
+    var newPath = window.location.pathname.replace(/^\/Boutique-SynchroVie/, '');
+    var newUrl = 'https://synchro-vie.com' + newPath + window.location.search + window.location.hash;
+    window.location.replace(newUrl);
+  }
+})();
+</script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('consent','default',{'analytics_storage':'denied','ad_storage':'denied'});</script>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7FXCZJQVT"></script>
   <script>gtag('js',new Date());gtag('config','G-R7FXCZJQVT');</script>
