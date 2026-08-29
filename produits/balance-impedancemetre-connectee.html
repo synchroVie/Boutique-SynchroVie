@@ -376,7 +376,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#0B2545">
-<script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
 <link rel="icon" type="image/webp" href="/assets/img/logo-synchrovie.webp">
   <link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
   </head>
@@ -545,46 +544,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       <!-- Checkout principal -->
       <div id="checkout-section" style="margin-bottom:12px;">
         <p style="text-align:center;color:#F8FAFC;font-weight:700;font-size:1.1rem;margin-bottom:10px;font-family:Space Grotesk,sans-serif;">Paiement sécurisé</p>
-        <div id="paypal-container-RVJCDF68TF2DL" style="margin-top:0;"></div>
-      </div>
-
-      <script>
-        if (typeof paypal !== 'undefined' && paypal.HostedButtons) {
-          paypal.HostedButtons({
-            hostedButtonId: "RVJCDF68TF2DL",
-          }).render("#paypal-container-RVJCDF68TF2DL");
-        } else {
-          window.addEventListener('load', function() {
-            if (typeof paypal !== 'undefined' && paypal.HostedButtons) {
-              paypal.HostedButtons({
-                hostedButtonId: "RVJCDF68TF2DL",
-              }).render("#paypal-container-RVJCDF68TF2DL");
-            }
-          });
-        }
-      </script>
-
-      <!-- Boutons paiement actionnables -->
-      <div style="display:flex;gap:8px;margin-bottom:12px;">
-        <button onclick="document.getElementById('paypal-container-RVJCDF68TF2DL').scrollIntoView({behavior:'smooth',block:'center'});setTimeout(function(){var b=document.querySelector('#paypal-container-RVJCDF68TF2DL iframe');if(b)b.contentWindow.document.querySelector('button')?.click();},600);" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'" onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brands fa-paypal" style="color:#00457C;font-size:1.1rem;"></i> PayPal</button>
-        <button onclick="document.getElementById('paypal-container-RVJCDF68TF2DL').scrollIntoView({behavior:'smooth',block:'center'});setTimeout(function(){var b=document.querySelector('#paypal-container-RVJCDF68TF2DL iframe');if(b)b.contentWindow.document.querySelector('button')?.click();},600);" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'" onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brands fa-cc-visa" style="color:#1A1F71;font-size:1.1rem;"></i> Visa</button>
-        <button onclick="document.getElementById('paypal-container-RVJCDF68TF2DL').scrollIntoView({behavior:'smooth',block:'center'});setTimeout(function(){var b=document.querySelector('#paypal-container-RVJCDF68TF2DL iframe');if(b)b.contentWindow.document.querySelector('button')?.click();},600);" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'" onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brands fa-cc-mastercard" style="color:#EB001B;font-size:1.1rem;"></i> MasterCard</button>
-      </div>
-
-      <a class="btn-secondary-full" href="mailto:synchrovie@gmail.com">Poser une question — Expert SynchroVie</a>
-    </div>
-
-    <div class="trust-product">
-      <p><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Livraison offerte en Europe &mdash; Retours 30 jours &mdash; Garantie 2 ans &mdash; Support expert 7j/7</p>
-    </div>
-
-
-    <!-- Bloc Garantie -->
-    <div class="guarantee-block">
-      <p class="guarantee-title">Votre tranquillité d'esprit, notre priorité</p>
-      <div class="guarantee-item">
-        <div class="guarantee-icon">↺</div>
-        <div><strong>30 jours satisfait ou remboursé</strong><span>Testez, mesurez, décidez. Remboursement intégral, sans question.</span></div>
+        <div style="background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.3);border-radius:12px;padding:24px 20px;text-align:center;">
+          <p style="color:#94A3B8;font-size:0.9rem;margin-bottom:12px;font-family:Inter,sans-serif;">Paiement en ligne bientôt disponible.</p>
+          <p style="color:#F8FAFC;font-size:0.95rem;margin-bottom:16px;font-family:Inter,sans-serif;">Pour commander ce produit, contactez-nous par email — nous vous enverrons les instructions de paiement sécurisé (virement bancaire ou PayPal).</p>
+          <a href="mailto:synchrovie@gmail.com?subject=Commande%20produit" style="display:inline-block;padding:12px 28px;background:#3B82F6;color:#fff;text-decoration:none;border-radius:8px;font-weight:600;font-family:Inter,sans-serif;font-size:0.95rem;">Commander par email</a>
+        </div>
       </div>
       <div class="guarantee-item">
         <div class="guarantee-icon">2</div>
