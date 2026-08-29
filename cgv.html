@@ -2,395 +2,480 @@
 <html lang="fr">
 <head>
 <script>
-// Redirection forcée GitHub Pages → domaine personnalisé (anti duplicate content)
+// Redirection forcée GitHub Pages → domaine personnalisé (anti duplicate
+content)
 (function() {
-  if (window.location.hostname === 'synchrovie.github.io' || window.location.hostname === 'synchroVie.github.io') {
-    var newPath = window.location.pathname.replace(/^\/Boutique-SynchroVie/, '');
-    var newUrl = 'https://synchro-vie.com' + newPath + window.location.search + window.location.hash;
-    window.location.replace(newUrl);
-  }
+if (window.location.hostname === 'synchrovie.github.io' ||
+window.location.hostname === 'synchroVie.github.io') {
+var newPath = window.location.pathname.replace(/^\/Boutique-SynchroVie/, '');
+var newUrl = 'https://synchro-vie.com' + newPath + window.location.search +
+window.location.hash;
+window.location.replace(newUrl);
+}
 })();
 </script>
-    <meta charset="UTF-8">
-<meta name="google-site-verification" content="wV9VVQ2Pq7ktBfdQB5Sqburfdo4EDJpyvpAmfSI2XB4" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CGV - Conditions Générales de Vente | SynchroVie</title>
-    <meta name="description" content="Conditions générales de vente SynchroVie : commande, livraison Europe 7-10j, retour sous 30 jours, garantie 2 ans. Transparence totale sur vos achats de technologies santé.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://synchro-vie.com/cgv.html">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:site_name" content="SynchroVie">
-    <meta property="og:title" content="CGV - Conditions Générales de Vente | SynchroVie">
-    <meta property="og:description" content="Conditions générales de vente SynchroVie : commande, livraison Europe 7-10j, retour sous 30 jours, garantie 2 ans. Transparence totale sur vos achats de technologies santé.">
-    <meta property="og:url" content="https://synchro-vie.com/cgv.html">
-    <meta property="og:image" content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="CGV - Conditions Générales de Vente | SynchroVie">
-    <meta name="twitter:description" content="Conditions générales de vente SynchroVie : commande, livraison Europe 7-10j, retour sous 30 jours, garantie 2 ans. Transparence totale sur vos achats de technologies santé.">
-    <meta name="twitter:image" content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
-
+<meta charset="UTF-8">
+<meta name="google-site-verification"
+content="wV9VVQ2Pq7ktBfdQB5Sqburfdo4EDJpyvpAmfSI2XB4" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CGV - Conditions Générales de Vente | SynchroVie</title>
+<meta name="description" content="Conditions générales de vente SynchroVie : commande, livraison Europe 7-10j, retour sous 30 jours, garantie 2 ans. Transparence totale sur vos achats de technologies santé.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://synchro-vie.com/cgv.html">
+<link rel="alternate" hreflang="fr-FR" href="https://synchro-vie.com/cgv.html">
+<link rel="alternate" hreflang="fr-BE" href="https://synchro-vie.com/cgv.html">
+<link rel="alternate" hreflang="fr-CH" href="https://synchro-vie.com/cgv.html">
+<link rel="alternate" hreflang="fr-LU" href="https://synchro-vie.com/cgv.html">
+<link rel="alternate" hreflang="x-default" href="https://synchro-vie.com/cgv.html">
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SynchroVie">
+<meta property="og:title" content="CGV - Conditions Générales de Vente | SynchroVie">
+<meta property="og:description" content="Conditions générales de vente SynchroVie : commande, livraison Europe 7-10j, retour sous 30 jours, garantie 2 ans. Transparence totale sur vos achats de technologies santé.">
+<meta property="og:url" content="https://synchro-vie.com/cgv.html">
+<meta property="og:image"
+content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="CGV - Conditions Générales de Vente | SynchroVie">
+<meta name="twitter:description" content="Conditions générales de vente SynchroVie : commande, livraison Europe 7-10j, retour sous 30 jours, garantie 2 ans. Transparence totale sur vos achats de technologies santé.">
+<meta name="twitter:image"
+content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
 <style>
-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
-
-.payment-badges { display: flex; align-items: center; gap: 14px; background: #ffffff; padding: 10px 16px; border-radius: 8px; width: fit-content; margin-top: 8px; }
-.payment-badges i { font-size: 26px; color: #0B1B3D; transition: color 0.2s ease; }
+table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
+max-width: 100%; }
+.payment-badges { display: flex; align-items: center; gap: 14px; background:
+#ffffff; padding: 10px 16px; border-radius: 8px; width: fit-content; margin-top:
+8px; }
+.payment-badges i { font-size: 26px; color: #0B1B3D; transition: color 0.2s
+ease; }
 .payment-badges i:hover { color: #3B82F6; }
-
 </style>
 <!-- TikTok Pixel Code Start -->
 <script>
 !function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-  ttq.load('D9A3IORC77UEFAL2KKS0');
-  ttq.page();
+w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","ide
+ntify","instances","debug","on","off","once","ready","alias","group","enableCook
+ie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefe
+r=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arg
+uments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.metho
+ds[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
+]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pix el/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._
+t=ttq._t||{},ttq._t[e]=+new
+Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.ge tElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+ttq.load('D9A3IORC77UEFAL2KKS0');
+ttq.page();
 }(window, document, 'ttq');
 </script>
 <!-- TikTok Pixel Code End -->
-  
-  
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#0B2545">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0B2545">
 <link rel="icon" type="image/webp" href="/assets/img/logo-synchrovie.webp">
-  <link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
-  </head>
+<link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
+</head>
 <body>
-    <div class="top-bar">
-        <div class="top-bar-inner">
-            <span> Livraison Europe 7-10j</span>
-            <span> retour sous 30 jours</span>
-            <span> Garantie 2 ans</span>
-        </div>
-    </div>
+<div class="top-bar">
+<div class="top-bar-inner">
 
-    <header id="mainHeader">
-        <div class="header-inner">
-            <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
-            <a href="https://synchro-vie.com/" class="logo">SYNCHROVIE</a>
-            <nav class="nav-desktop">
-                <a href="https://synchro-vie.com/">Accueil</a>
-                <a href="index.html#boutique">Boutique</a>
-                <a href="https://synchro-vie.com/blog.html">Blog</a>
-                <a href="https://synchro-vie.com/faq.html">FAQ</a>
-                <a href="https://synchro-vie.com/contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
 
-    <main class="container-small legal-page">
-        <a href="https://synchro-vie.com/" class="back-link">← Retour à l'accueil</a>
-        
-        <h1>Conditions Générales de Vente (CGV)</h1>
-        <p class="legal-intro">En vigueur au 7 août 2026 - Version 2.2</p>
+<span> Livraison Europe 7-10j</span>
+<span> retour sous 30 jours</span>
+<span> Garantie 2 ans</span>
+</div>
+</div>
+<header id="mainHeader">
+<div class="header-inner">
+<button class="hamburger" id="hamburgerBtn"
+aria-label="Menu"><span></span><span></span><span></span></button>
+<a href="https://synchro-vie.com/" class="logo">SYNCHROVIE</a>
+<nav class="nav-desktop">
+<a href="https://synchro-vie.com/">Accueil</a>
+<a href="index.html#boutique">Boutique</a>
+<a href="https://synchro-vie.com/blog.html">Blog</a>
+<a href="https://synchro-vie.com/faq.html">FAQ</a>
+<a href="https://synchro-vie.com/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<main class="container-small legal-page">
+<a href="https://synchro-vie.com/" class="back-link">← Retour à l'accueil</a>
+<h1>Conditions Générales de Vente (CGV)</h1>
+<p class="legal-intro">En vigueur au 7 août 2026 - Version 2.2</p>
+<div class="legal-alert">
+<strong> Lisez-moi avant de commander.</strong> Ces CGV définissent les droits
+et obligations de SynchroVie et de ses clients. En passant commande, vous
+acceptez ces conditions dans leur intégralité.
+</div>
+<section class="legal-section">
+<h2>Article 1 - Informations Légales</h2>
+<div class="legal-box">
+<p><strong>Dénomination sociale</strong> : SynchroVie<br>
+<strong>Forme juridique</strong> : Entreprise individuelle<br>
+<strong>Siège social</strong> : Paris, France<br>
+<strong>Représentant légal</strong> : Diougamady Keita, Fondateur<br>
+<strong>Email</strong> : <a
+href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a><br>
+<strong>Téléphone</strong> : <a href="mailto:contact@synchro-vie.com"
+style="color: var(--blue);">Nous contacter</a><br>
+<strong>Hébergeur</strong> : GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St,
+San Francisco, CA 94107, USA)</p>
+</div>
+</section>
+<section class="legal-section">
+<h2>Article 2 - Champ d'Application</h2>
+<p>Les présentes CGV s'appliquent à toute commande passée par un client
+(ci-après "le Client") sur le site <a
+href="https://synchro-vie.com">synchro-vie.com</a> pour l'achat de technologies
+de bio-optimisation (bagues connectées, moniteurs ECG, stimulateurs, etc.).</p>
+<p><strong>Zones de livraison</strong> : France métropolitaine, Belgique,
+Suisse, Luxembourg (autres pays sur demande via le formulaire de contact).</p>
+</section>
+<section class="legal-section">
+<h2>Article 3 - Produits et Prix</h2>
+<h3>3.1 Description des Produits</h3>
+<p>Chaque fiche produit contient :</p>
+<ul>
+<li>Photos haute résolution (non contractuelles, design pouvant légèrement
+varier)</li>
+<li>Descriptif technique détaillé (capteurs, autonomie, compatibilité)</li>
+<li>Spécifications médicales (le cas échéant, certifications CE, FDA)</li>
+<li>Notice d'utilisation téléchargeable (PDF)</li>
+</ul>
+<p class="legal-note"> <strong>Dispositifs médicaux</strong> : Certains produits
+(ex: Vitals-Scan Pro) sont des dispositifs médicaux de classe I/IIa. Ils ne
+remplacent PAS un avis médical professionnel. Consultez votre médecin pour toute
+question de santé.</p>
+<h3>3.2 Prix</h3>
+<ul>
+<li>Prix en <strong>euros (€)</strong>, TTC (TVA européenne incluse si
+applicable)</li>
+<li>Prix affichés = prix fermes et définitifs au moment de la commande</li>
+<li><strong>Frais de port OFFERTS</strong> dès 150€ d'achat en Europe, sinon
+9,90€ (France/Belgique) ou 14,90€ (Suisse/Europe)</li>
+<li>Aucun frais caché : le montant total est affiché AVANT validation du
+paiement</li>
+</ul>
+<p class="legal-warning"> <strong>Taxes douanières (hors UE)</strong> : Pour la
+Suisse et tout pays hors Union Européenne, des droits de douane/TVA locale
+peuvent s'appliquer à réception. Ils sont à la charge du Client (montants
+variables selon les pays, estimés à 10-25% de la valeur).</p>
+<h3>3.3 Promotions et Codes Promo</h3>
+<p>Les offres promotionnelles (ex: -15% sur la SynchroRing X1) sont valables
+dans la limite des stocks disponibles et pour une durée limitée indiquée sur le
+site. <strong>Non cumulables</strong> sauf mention contraire. Les codes promo
+doivent être saisis avant paiement.</p>
+</section>
+<section class="legal-section">
+<h2>Article 4 - Commande</h2>
 
-        <div class="legal-alert">
-            <strong> Lisez-moi avant de commander.</strong> Ces CGV définissent les droits et obligations de SynchroVie et de ses clients. En passant commande, vous acceptez ces conditions dans leur intégralité.
-        </div>
 
-        <section class="legal-section">
-            <h2>Article 1 - Informations Légales</h2>
-            <div class="legal-box">
-                <p><strong>Dénomination sociale</strong> : SynchroVie<br>
-                <strong>Forme juridique</strong> : Entreprise individuelle<br>
-                <strong>Siège social</strong> : Paris, France<br>
-                <strong>Représentant légal</strong> : Diougamady Keita, Fondateur<br>
-                <strong>Email</strong> : <a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a><br>
-                <strong>Téléphone</strong> : <a href="mailto:contact@synchro-vie.com" style="color: var(--blue);">Nous contacter</a><br>
-                <strong>Hébergeur</strong> : GitHub Pages (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA)</p>
-            </div>
-        </section>
+<h3>4.1 Processus de Commande</h3>
+<ol>
+<li><strong>Sélection produit</strong> : Ajoutez au panier (pour les bagues,
+sélectionnez impérativement votre taille de doigt)</li>
+<li><strong>Validation panier</strong> : Vérifiez quantités, taille,
+options</li>
+<li><strong>Coordonnées</strong> : Renseignez nom, email, adresse de livraison,
+téléphone</li>
+<li><strong>Mode de livraison</strong> : Colissimo Suivi, Chronopost Express,
+DHL International</li>
+<li><strong>Paiement</strong> : Visa, Mastercard ou PayPal</li>
+<li><strong>Confirmation</strong> : Email immédiat avec récapitulatif et numéro
+de commande</li>
+</ol>
+<h3>4.2 Validation de la Commande</h3>
+<p>La commande est <strong>définitivement validée</strong> lorsque :</p>
+<ul>
+<li>Le paiement est confirmé par notre équipe par email après réception du
+transfert</li>
+<li>Vous recevez l'email de confirmation (vérifiez vos spams)</li>
+</ul>
+<p>En cas de refus bancaire, la commande est automatiquement annulée (stock
+remis en vente).</p>
+<h3>4.3 Erreur de Commande</h3>
+<p>Vous avez commandé le mauvais produit ou la mauvaise taille ?
+<strong>Contactez-nous IMMÉDIATEMENT</strong> (avant expédition) via <a
+href="mailto:synchrovie@gmail.com">Email</a>. Nous modifierons la commande sans
+frais. Après expédition, seul le droit de rétractation s'applique (voir Article
+7).</p>
+</section>
+<section class="legal-section">
+<h2>Article 5 - Paiement</h2>
+<h3>5.1 Moyens de Paiement Acceptés</h3>
+<ul>
+<li> <strong>Email</strong> (CB, PayPal, ) : paiement sécurisé via PayPal/
+(chiffrement SSL 256 bits)</li>
+<li> <strong>PayPal</strong> : transfert rapide et sécurisé. Le client paie en
+EUR, nous recevons en EUR à Paris.</li>
+<li> <strong>Virement bancaire</strong> (délai 2-5 jours) : RIB envoyé par email
+après commande</li>
+<li><strong>France, Belgique, Suisse, Luxembourg</strong> : paiement via PayPal
+ou virement bancaire</li>
+</ul>
+<h3>5.2 Sécurité</h3>
+<p><strong>Nous ne conservons AUCUNE donnée bancaire.</strong> Le paiement est
+géré par des prestataires certifiés PCI-DSS niveau 1 (norme bancaire mondiale).
+Vos coordonnées bancaires ne transitent jamais par nos serveurs.</p>
+<h3>5.3 Facturation</h3>
+<p>Une facture PDF est envoyée par email dans les 24h suivant l'expédition.
+Conservez-la pour votre garantie.</p>
+</section>
+<section class="legal-section">
+<h2>Article 6 - Livraison</h2>
+<h3>6.1 Délais (Indicatifs)</h3>
+<div class="legal-table">
+<table>
+<thead>
+<tr>
+<th>Zone</th>
+<th>Délai Standard</th>
+<th>Délai Express (option)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>France métropolitaine</td>
+<td>3-5 jours ouvrés</td>
+<td>7-10 jours ouvrables (standard)</td>
+</tr>
+<tr>
+<td>Belgique, Luxembourg</td>
+<td>4-6 jours ouvrés</td>
+<td>48-72h (+12€)</td>
+</tr>
+<tr>
+<td>Suisse</td>
+<td>5-7 jours ouvrés</td>
+<td>3-4 jours (+15€)</td>
+</tr>
+<tr>
+<td>Dom Tom (sur demande)</td>
+<td>7-10 jours ouvrés</td>
+<td>Non disponible</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="legal-note"> Les délais courent à partir de l'expédition (email de
+confirmation avec tracking). Périodes de forte activité (Noël, Black Friday) :
++2-3 jours.</p>
+<h3>6.2 Suivi de Livraison</h3>
+<p>Dès expédition, vous recevez un <strong>numéro de tracking</strong>
 
-        <section class="legal-section">
-            <h2>Article 2 - Champ d'Application</h2>
-            <p>Les présentes CGV s'appliquent à toute commande passée par un client (ci-après "le Client") sur le site <a href="https://synchro-vie.com">synchro-vie.com</a> pour l'achat de technologies de bio-optimisation (bagues connectées, moniteurs ECG, stimulateurs, etc.).</p>
-            <p><strong>Zones de livraison</strong> : France métropolitaine, Belgique, Suisse, Luxembourg (autres pays sur demande via le formulaire de contact).</p>
-        </section>
+(Colissimo, DHL, Chronopost) pour suivre votre colis en temps réel. Consultez-le
+régulièrement pour organiser votre réception.</p>
+<h3>6.3 Réception du Colis</h3>
+<ul>
+<li><strong>Vérifiez l'état du colis</strong> devant le livreur. Si endommagé,
+<strong>refusez-le</strong> ou notez les réserves sur le bordereau de
+livraison</li>
+<li><strong>Signez la réception</strong> = acceptation de la livraison</li>
+<li><strong>Colis non reçu après 15 jours</strong> ? Contactez-nous
+immédiatement, nous lançons une enquête avec le transporteur</li>
+</ul>
+<h3>6.4 Livraison en Point Relais</h3>
+<p>Vous pouvez choisir un point relais (Mondial Relay, Colissimo) lors de la
+commande. Colis disponible 30 jours pour le retourné (frais de réexpédition à
+votre charge sauf erreur de notre part).</p>
+</section>
+<section class="legal-section">
+<h2>Article 7 - Droit de Rétractation (14 Jours)</h2>
+<h3>7.1 Principe</h3>
+<p>Conformément au Code de la consommation européen (Directive 2011/83/UE), vous
+disposez d'un délai de <strong>14 jours calendaires</strong> à compter de la
+réception du produit pour changer d'avis, <strong>sans
+justification</strong>.</p>
+<h3>7.2 Procédure de Retour</h3>
+<ol>
+<li><strong>Contactez-nous</strong> par email (<a
+href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a>) ou Email avec
+:
+<ul>
+<li>Numéro de commande</li>
+<li>Nom du produit</li>
+<li>Motif de retour (facultatif mais apprécié pour améliorer nos services)</li>
+</ul>
+</li>
+<li>Nous vous envoyons un <strong>bon de retour prépayé</strong>
+(France/Belgique) ou les instructions (autres pays)</li>
+<li>Renvoyez le produit dans son <strong>emballage d'origine</strong>, complet
+(accessoires, notice, boîte) et en parfait état</li>
+<li>Remboursement sous <strong>30 jours pour le retour (même moyen de paiement
+utilisé)</li>
+</ol>
+<h3>7.3 Produits Non Retournables (Hygiène)</h3>
+<p>Pour des raisons d'hygiène et de santé publique, les produits suivants
+<strong>ne peuvent être retournés</strong> si le sceau/emballage est ouvert
+:</p>
+<ul>
+<li>Masques de sommeil (NeuroRest G2)</li>
+<li>Patchs cutanés (Gravity-Tech Pad)</li>
+</ul>
+<p class="legal-note"> Ces produits sont éligibles au retour <strong>uniquement
+si l'emballage est intact</strong>.</p>
+<h3>7.4 Frais de Retour</h3>
+<ul>
+<li><strong>France/Belgique</strong> : retour GRATUIT (nous envoyons une
+étiquette prépayée)</li>
+<li><strong>Suisse/Europe</strong> : frais de retour à votre charge (estimés
+15-30€), remboursés si produit défectueux</li>
+</ul>
+</section>
+<section class="legal-section">
+<h2>Article 8 - Garantie Légale et Commerciale</h2>
+<h3>8.1 Garantie Légale de Conformité (2 Ans)</h3>
+<p>Tout produit acheté bénéficie de la garantie légale de conformité (articles
+L217-4 et suivants du Code de la consommation) pendant <strong>2 ans</strong> à
+compter de la livraison. Cette garantie couvre :</p>
+<ul>
+<li>Défauts de fabrication (batterie défectueuse, capteur HS, etc.)</li>
+<li>Non-conformité par rapport à la description (précision annoncée non
+respectée)</li>
+</ul>
+<p><strong>En cas de défaut</strong> : réparation, remplacement ou remboursement
+(au choix du client si la réparation est impossible).</p>
+<h3>8.2 Garantie Commerciale SynchroVie (2 Ans)</h3>
+<p>En plus de la garantie légale, SynchroVie offre une <strong>garantie
+commerciale étendue</strong> :</p>
+<ul>
+<li><strong>Remplacement express</strong> : en cas de panne, nous expédions un
+produit neuf sous 7-10 jours ouvrables (France/Belgique)</li>
+<li><strong>Assistance technique gratuite</strong> : support Email/email
+illimité pendant 2 ans</li>
+<li><strong>Mise à jour logicielle</strong> : firmware/apps mis à jour
+gratuitement</li>
+</ul>
+<h3>8.3 Exclusions de Garantie</h3>
+<p>La garantie ne couvre PAS :</p>
+<ul>
+<li>Dommages résultant d'une utilisation non conforme (chutes, immersion hors
+norme IP, etc.)</li>
+<li>Usure normale (batterie après 500 cycles, rayures cosmétiques)</li>
 
-        <section class="legal-section">
-            <h2>Article 3 - Produits et Prix</h2>
-            
-            <h3>3.1 Description des Produits</h3>
-            <p>Chaque fiche produit contient :</p>
-            <ul>
-                <li>Photos haute résolution (non contractuelles, design pouvant légèrement varier)</li>
-                <li>Descriptif technique détaillé (capteurs, autonomie, compatibilité)</li>
-                <li>Spécifications médicales (le cas échéant, certifications CE, FDA)</li>
-                <li>Notice d'utilisation téléchargeable (PDF)</li>
-            </ul>
-            <p class="legal-note"> <strong>Dispositifs médicaux</strong> : Certains produits (ex: Vitals-Scan Pro) sont des dispositifs médicaux de classe I/IIa. Ils ne remplacent PAS un avis médical professionnel. Consultez votre médecin pour toute question de santé.</p>
+<li>Modifications/réparations effectuées par un tiers non agréé</li>
+<li>Produits achetés auprès de revendeurs non officiels</li>
+</ul>
+<h3>8.4 Procédure de Garantie</h3>
+<ol>
+<li>Contactez notre SAV : <a
+href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a> avec numéro de
+commande + description du problème</li>
+<li>Diagnostic à distance (80% des problèmes résolus sans retour)</li>
+<li>Si retour nécessaire : bon de retour gratuit + produit de remplacement
+expédié en parallèle</li>
+<li>Délai total de traitement : 7-10 jours maximum</li>
+</ol>
+</section>
+<section class="legal-section">
+<h2>Article 9 - Responsabilité</h2>
+<h3>9.1 Limitation de Responsabilité</h3>
+<p>SynchroVie s'engage à fournir des produits conformes et de qualité.
+Toutefois, notre responsabilité est limitée au <strong>montant de la
+commande</strong>. Nous ne saurions être tenus responsables de :</p>
+<ul>
+<li>Dommages indirects (perte de temps, manque à gagner, etc.)</li>
+<li>Retards de livraison dus au transporteur (grèves, catastrophes
+naturelles)</li>
+<li>Utilisation non conforme aux notices fournies</li>
+</ul>
+<h3>9.2 Usage Médical</h3>
+<p class="legal-warning"> <strong>AVERTISSEMENT SANTÉ</strong> : Les dispositifs
+vendus (bagues connectées, moniteurs ECG, etc.) sont des <strong>outils de suivi
+et de bien-être</strong>. Ils ne remplacent EN AUCUN CAS un diagnostic médical
+professionnel. En cas de symptômes (douleur thoracique, essoufflement, etc.),
+consultez immédiatement un médecin. SynchroVie décline toute responsabilité en
+cas d'utilisation à des fins de diagnostic médical sans supervision
+professionnelle.</p>
+</section>
+<section class="legal-section">
+<h2>Article 10 - Propriété Intellectuelle</h2>
+<p>Tous les contenus du site (textes, images, logos, vidéos, code source) sont
+la propriété exclusive de SynchroVie ou de ses partenaires. Toute reproduction,
+même partielle, est interdite sans autorisation écrite préalable (peine de
+contrefaçon : 3 ans de prison, 300 000€ d'amende selon le Code de la Propriété
+Intellectuelle).</p>
+<p>Les marques citées (Oura, Withings, Apple, etc.) appartiennent à leurs
+propriétaires respectifs et sont mentionnées à titre comparatif uniquement.</p>
+</section>
+<section class="legal-section">
+<h2>Article 11 - Données Personnelles</h2>
+<p>Les données collectées lors de votre commande sont traitées conformément au
+RGPD. Consultez notre <a
+href="https://synchro-vie.com/politique-de-confidentialite.html"
+class="legal-link">Politique de Confidentialité</a> pour le détail de vos droits
+(accès, rectification, suppression, portabilité).</p>
+</section>
+<section class="legal-section">
+<h2>Article 12 - Litiges et Médiation</h2>
+<h3>12.1 Réclamation Amiable</h3>
+<p>En cas de litige, contactez d'abord notre service client :</p>
+<ul>
+<li> Email : <a
+href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a></li>
+<li> Email : <a href="mailto:synchrovie@gmail.com">Email Expert</a></li>
+<li> Délai de réponse : 48h maximum</li>
+</ul>
+<p>Nous nous engageons à trouver une solution amiable dans 95% des cas.</p>
+<h3>12.2 Médiation de la Consommation</h3>
+<p>Si aucun accord n'est trouvé, vous pouvez saisir gratuitement un médiateur de
+la consommation :</p>
+<div class="legal-box">
+<p><strong>Médiateur de la Consommation (France)</strong><br>
+Centre de Médiation de la Consommation de Conciliateurs de Justice (CM2C)<br>
+14 rue Saint Jean, 75017 Paris<br>
+<a href="https://www.cm2c.net" target="_blank"
+rel="noopener">www.cm2c.net</a></p>
+</div>
+<h3>12.3 Droit Applicable et Juridiction</h3>
+<p>Les présentes CGV sont régies par le droit français (pour les clients
+européens) ou malien (pour les clients africains). En cas de litige persistant,
+compétence exclusive des tribunaux du ressort du siège social de SYNCHROVIE,
+situé à <strong>Paris (France)</strong>, sauf disposition légale impérative
+contraire.</p>
+</section>
+<section class="legal-section">
+<h2>Article 13 - Force Majeure</h2>
+<p>SynchroVie ne saurait être tenue responsable en cas d'impossibilité
+d'exécuter ses obligations du fait d'un événement de force majeure (guerre,
+catastrophe naturelle, pandémie, grève générale, cyberattaque, défaillance d'un
+fournisseur clé, etc.). Dans ce cas, les commandes seront suspendues ou annulées
+avec remboursement intégral.</p>
+</section>
 
-            <h3>3.2 Prix</h3>
-            <ul>
-                <li>Prix en <strong>euros (€)</strong>, TTC (TVA européenne incluse si applicable)</li>
-                <li>Prix affichés = prix fermes et définitifs au moment de la commande</li>
-                <li><strong>Frais de port OFFERTS</strong> dès 150€ d'achat en Europe, sinon 9,90€ (France/Belgique) ou 14,90€ (Suisse/Europe)</li>
-                <li>Aucun frais caché : le montant total est affiché AVANT validation du paiement</li>
-            </ul>
-            <p class="legal-warning"> <strong>Taxes douanières (hors UE)</strong> : Pour la Suisse et tout pays hors Union Européenne, des droits de douane/TVA locale peuvent s'appliquer à réception. Ils sont à la charge du Client (montants variables selon les pays, estimés à 10-25% de la valeur).</p>
 
-            <h3>3.3 Promotions et Codes Promo</h3>
-            <p>Les offres promotionnelles (ex: -15% sur la SynchroRing X1) sont valables dans la limite des stocks disponibles et pour une durée limitée indiquée sur le site. <strong>Non cumulables</strong> sauf mention contraire. Les codes promo doivent être saisis avant paiement.</p>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 4 - Commande</h2>
-            
-            <h3>4.1 Processus de Commande</h3>
-            <ol>
-                <li><strong>Sélection produit</strong> : Ajoutez au panier (pour les bagues, sélectionnez impérativement votre taille de doigt)</li>
-                <li><strong>Validation panier</strong> : Vérifiez quantités, taille, options</li>
-                <li><strong>Coordonnées</strong> : Renseignez nom, email, adresse de livraison, téléphone</li>
-                <li><strong>Mode de livraison</strong> : Colissimo Suivi, Chronopost Express, DHL International</li>
-                <li><strong>Paiement</strong> : Visa, Mastercard ou PayPal</li>
-                <li><strong>Confirmation</strong> : Email immédiat avec récapitulatif et numéro de commande</li>
-            </ol>
-
-            <h3>4.2 Validation de la Commande</h3>
-            <p>La commande est <strong>définitivement validée</strong> lorsque :</p>
-            <ul>
-                <li>Le paiement est confirmé par notre équipe par email après réception du transfert</li>
-                <li>Vous recevez l'email de confirmation (vérifiez vos spams)</li>
-            </ul>
-            <p>En cas de refus bancaire, la commande est automatiquement annulée (stock remis en vente).</p>
-
-            <h3>4.3 Erreur de Commande</h3>
-            <p>Vous avez commandé le mauvais produit ou la mauvaise taille ? <strong>Contactez-nous IMMÉDIATEMENT</strong> (avant expédition) via <a  href="mailto:synchrovie@gmail.com">Email</a>. Nous modifierons la commande sans frais. Après expédition, seul le droit de rétractation s'applique (voir Article 7).</p>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 5 - Paiement</h2>
-            
-            <h3>5.1 Moyens de Paiement Acceptés</h3>
-            <ul>
-                <li> <strong>Email</strong> (CB, PayPal, ) : paiement sécurisé via PayPal/ (chiffrement SSL 256 bits)</li>
-                <li> <strong>PayPal</strong> : transfert rapide et sécurisé. Le client paie en EUR, nous recevons en EUR à Paris.</li>
-                <li> <strong>Virement bancaire</strong> (délai 2-5 jours) : RIB envoyé par email après commande</li>
-                <li><strong>France, Belgique, Suisse, Luxembourg</strong> : paiement via PayPal ou virement bancaire</li>
-            </ul>
-
-            <h3>5.2 Sécurité</h3>
-            <p><strong>Nous ne conservons AUCUNE donnée bancaire.</strong> Le paiement est géré par des prestataires certifiés PCI-DSS niveau 1 (norme bancaire mondiale). Vos coordonnées bancaires ne transitent jamais par nos serveurs.</p>
-
-            <h3>5.3 Facturation</h3>
-            <p>Une facture PDF est envoyée par email dans les 24h suivant l'expédition. Conservez-la pour votre garantie.</p>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 6 - Livraison</h2>
-            
-            <h3>6.1 Délais (Indicatifs)</h3>
-            <div class="legal-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Zone</th>
-                            <th>Délai Standard</th>
-                            <th>Délai Express (option)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>France métropolitaine</td>
-                            <td>3-5 jours ouvrés</td>
-                            <td>7-10 jours ouvrables (standard)</td>
-                        </tr>
-                        <tr>
-                            <td>Belgique, Luxembourg</td>
-                            <td>4-6 jours ouvrés</td>
-                            <td>48-72h (+12€)</td>
-                        </tr>
-                        <tr>
-                            <td>Suisse</td>
-                            <td>5-7 jours ouvrés</td>
-                            <td>3-4 jours (+15€)</td>
-                        </tr>
-                        <tr>
-                            <td>Dom Tom (sur demande)</td>
-                            <td>7-10 jours ouvrés</td>
-                            <td>Non disponible</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <p class="legal-note"> Les délais courent à partir de l'expédition (email de confirmation avec tracking). Périodes de forte activité (Noël, Black Friday) : +2-3 jours.</p>
-
-            <h3>6.2 Suivi de Livraison</h3>
-            <p>Dès expédition, vous recevez un <strong>numéro de tracking</strong> (Colissimo, DHL, Chronopost) pour suivre votre colis en temps réel. Consultez-le régulièrement pour organiser votre réception.</p>
-
-            <h3>6.3 Réception du Colis</h3>
-            <ul>
-                <li><strong>Vérifiez l'état du colis</strong> devant le livreur. Si endommagé, <strong>refusez-le</strong> ou notez les réserves sur le bordereau de livraison</li>
-                <li><strong>Signez la réception</strong> = acceptation de la livraison</li>
-                <li><strong>Colis non reçu après 15 jours</strong> ? Contactez-nous immédiatement, nous lançons une enquête avec le transporteur</li>
-            </ul>
-
-            <h3>6.4 Livraison en Point Relais</h3>
-            <p>Vous pouvez choisir un point relais (Mondial Relay, Colissimo) lors de la commande. Colis disponible 30 jours pour le retourné (frais de réexpédition à votre charge sauf erreur de notre part).</p>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 7 - Droit de Rétractation (14 Jours)</h2>
-            
-            <h3>7.1 Principe</h3>
-            <p>Conformément au Code de la consommation européen (Directive 2011/83/UE), vous disposez d'un délai de <strong>14 jours calendaires</strong> à compter de la réception du produit pour changer d'avis, <strong>sans justification</strong>.</p>
-
-            <h3>7.2 Procédure de Retour</h3>
-            <ol>
-                <li><strong>Contactez-nous</strong> par email (<a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a>) ou Email avec :
-                    <ul>
-                        <li>Numéro de commande</li>
-                        <li>Nom du produit</li>
-                        <li>Motif de retour (facultatif mais apprécié pour améliorer nos services)</li>
-                    </ul>
-                </li>
-                <li>Nous vous envoyons un <strong>bon de retour prépayé</strong> (France/Belgique) ou les instructions (autres pays)</li>
-                <li>Renvoyez le produit dans son <strong>emballage d'origine</strong>, complet (accessoires, notice, boîte) et en parfait état</li>
-                <li>Remboursement sous <strong>30 jours pour le retour (même moyen de paiement utilisé)</li>
-            </ol>
-
-            <h3>7.3 Produits Non Retournables (Hygiène)</h3>
-            <p>Pour des raisons d'hygiène et de santé publique, les produits suivants <strong>ne peuvent être retournés</strong> si le sceau/emballage est ouvert :</p>
-            <ul>
-                <li>Masques de sommeil (NeuroRest G2)</li>
-                <li>Bandeaux EEG (BrainWave E1) si les électrodes ont été utilisées</li>
-                <li>Dilatateurs nasaux (Oxy-Breather Night)</li>
-                <li>Patchs cutanés (Gravity-Tech Pad, Mood-Track Wearable)</li>
-            </ul>
-            <p class="legal-note"> Ces produits sont éligibles au retour <strong>uniquement si l'emballage est intact</strong>.</p>
-
-            <h3>7.4 Frais de Retour</h3>
-            <ul>
-                <li><strong>France/Belgique</strong> : retour GRATUIT (nous envoyons une étiquette prépayée)</li>
-                <li><strong>Suisse/Europe</strong> : frais de retour à votre charge (estimés 15-30€), remboursés si produit défectueux</li>
-            </ul>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 8 - Garantie Légale et Commerciale</h2>
-            
-            <h3>8.1 Garantie Légale de Conformité (2 Ans)</h3>
-            <p>Tout produit acheté bénéficie de la garantie légale de conformité (articles L217-4 et suivants du Code de la consommation) pendant <strong>2 ans</strong> à compter de la livraison. Cette garantie couvre :</p>
-            <ul>
-                <li>Défauts de fabrication (batterie défectueuse, capteur HS, etc.)</li>
-                <li>Non-conformité par rapport à la description (précision annoncée non respectée)</li>
-            </ul>
-            <p><strong>En cas de défaut</strong> : réparation, remplacement ou remboursement (au choix du client si la réparation est impossible).</p>
-
-            <h3>8.2 Garantie Commerciale SynchroVie (2 Ans)</h3>
-            <p>En plus de la garantie légale, SynchroVie offre une <strong>garantie commerciale étendue</strong> :</p>
-            <ul>
-                <li><strong>Remplacement express</strong> : en cas de panne, nous expédions un produit neuf sous 7-10 jours ouvrables (France/Belgique)</li>
-                <li><strong>Assistance technique gratuite</strong> : support Email/email illimité pendant 2 ans</li>
-                <li><strong>Mise à jour logicielle</strong> : firmware/apps mis à jour gratuitement</li>
-            </ul>
-
-            <h3>8.3 Exclusions de Garantie</h3>
-            <p>La garantie ne couvre PAS :</p>
-            <ul>
-                <li>Dommages résultant d'une utilisation non conforme (chutes, immersion hors norme IP, etc.)</li>
-                <li>Usure normale (batterie après 500 cycles, rayures cosmétiques)</li>
-                <li>Modifications/réparations effectuées par un tiers non agréé</li>
-                <li>Produits achetés auprès de revendeurs non officiels</li>
-            </ul>
-
-            <h3>8.4 Procédure de Garantie</h3>
-            <ol>
-                <li>Contactez notre SAV : <a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a> avec numéro de commande + description du problème</li>
-                <li>Diagnostic à distance (80% des problèmes résolus sans retour)</li>
-                <li>Si retour nécessaire : bon de retour gratuit + produit de remplacement expédié en parallèle</li>
-                <li>Délai total de traitement : 7-10 jours maximum</li>
-            </ol>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 9 - Responsabilité</h2>
-            
-            <h3>9.1 Limitation de Responsabilité</h3>
-            <p>SynchroVie s'engage à fournir des produits conformes et de qualité. Toutefois, notre responsabilité est limitée au <strong>montant de la commande</strong>. Nous ne saurions être tenus responsables de :</p>
-            <ul>
-                <li>Dommages indirects (perte de temps, manque à gagner, etc.)</li>
-                <li>Retards de livraison dus au transporteur (grèves, catastrophes naturelles)</li>
-                <li>Utilisation non conforme aux notices fournies</li>
-            </ul>
-
-            <h3>9.2 Usage Médical</h3>
-            <p class="legal-warning"> <strong>AVERTISSEMENT SANTÉ</strong> : Les dispositifs vendus (bagues connectées, moniteurs ECG, etc.) sont des <strong>outils de suivi et de bien-être</strong>. Ils ne remplacent EN AUCUN CAS un diagnostic médical professionnel. En cas de symptômes (douleur thoracique, essoufflement, etc.), consultez immédiatement un médecin. SynchroVie décline toute responsabilité en cas d'utilisation à des fins de diagnostic médical sans supervision professionnelle.</p>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 10 - Propriété Intellectuelle</h2>
-            <p>Tous les contenus du site (textes, images, logos, vidéos, code source) sont la propriété exclusive de SynchroVie ou de ses partenaires. Toute reproduction, même partielle, est interdite sans autorisation écrite préalable (peine de contrefaçon : 3 ans de prison, 300 000€ d'amende selon le Code de la Propriété Intellectuelle).</p>
-            <p>Les marques citées (Oura, Withings, Apple, etc.) appartiennent à leurs propriétaires respectifs et sont mentionnées à titre comparatif uniquement.</p>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 11 - Données Personnelles</h2>
-            <p>Les données collectées lors de votre commande sont traitées conformément au RGPD. Consultez notre <a href="https://synchro-vie.com/politique-de-confidentialite.html" class="legal-link">Politique de Confidentialité</a> pour le détail de vos droits (accès, rectification, suppression, portabilité).</p>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 12 - Litiges et Médiation</h2>
-            
-            <h3>12.1 Réclamation Amiable</h3>
-            <p>En cas de litige, contactez d'abord notre service client :</p>
-            <ul>
-                <li> Email : <a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a></li>
-                <li> Email : <a  href="mailto:synchrovie@gmail.com">Email Expert</a></li>
-                <li> Délai de réponse : 48h maximum</li>
-            </ul>
-            <p>Nous nous engageons à trouver une solution amiable dans 95% des cas.</p>
-
-            <h3>12.2 Médiation de la Consommation</h3>
-            <p>Si aucun accord n'est trouvé, vous pouvez saisir gratuitement un médiateur de la consommation :</p>
-            <div class="legal-box">
-                <p><strong>Médiateur de la Consommation (France)</strong><br>
-                Centre de Médiation de la Consommation de Conciliateurs de Justice (CM2C)<br>
-                14 rue Saint Jean, 75017 Paris<br>
-                 <a href="https://www.cm2c.net" target="_blank" rel="noopener">www.cm2c.net</a></p>
-            </div>
-
-            <h3>12.3 Droit Applicable et Juridiction</h3>
-            <p>Les présentes CGV sont régies par le droit français (pour les clients européens) ou malien (pour les clients africains). En cas de litige persistant, compétence exclusive des tribunaux du ressort du siège social de SYNCHROVIE, situé à <strong>Paris (France)</strong>, sauf disposition légale impérative contraire.</p>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 13 - Force Majeure</h2>
-            <p>SynchroVie ne saurait être tenue responsable en cas d'impossibilité d'exécuter ses obligations du fait d'un événement de force majeure (guerre, catastrophe naturelle, pandémie, grève générale, cyberattaque, défaillance d'un fournisseur clé, etc.). Dans ce cas, les commandes seront suspendues ou annulées avec remboursement intégral.</p>
-        </section>
-
-        <section class="legal-section">
-            <h2>Article 14 - Modification des CGV</h2>
-            <p>SynchroVie se réserve le droit de modifier ces CGV à tout moment. Les CGV applicables sont celles en vigueur au jour de la commande (version archivée envoyée avec la confirmation de commande). Les modifications n'affectent pas les commandes déjà passées.</p>
-        </section>
-
-        <div class="legal-footer-cta">
-            <h3>Vous Avez lu les CGV. Prêt à Commander ?</h3>
-            <p>Découvrez nos 24 technologies de bio-optimisation.</p>
-            <a href="index.html#boutique" class="btn btn-primary"> Voir la Boutique</a>
-        </div>
-
-        <div class="legal-footer-note">
-            <p><strong> Version imprimable</strong> : <a href="javascript:window.print()" class="legal-link">Imprimer ces CGV</a><br>
-            <strong> Questions juridiques</strong> : <a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a></p>
-        </div>
-    </main>
-
-    <footer>
-        <div class="footer-bottom">
-            <p class="footer-copyright">© 2026 SynchroVie. CGV conformes au Code de la consommation européen.</p>
-        </div>
-    </footer>
-
-    <script src="script.js" defer></script>
+<section class="legal-section">
+<h2>Article 14 - Modification des CGV</h2>
+<p>SynchroVie se réserve le droit de modifier ces CGV à tout moment. Les CGV
+applicables sont celles en vigueur au jour de la commande (version archivée
+envoyée avec la confirmation de commande). Les modifications n'affectent pas les
+commandes déjà passées.</p>
+</section>
+<div class="legal-footer-cta">
+<h3>Vous Avez lu les CGV. Prêt à Commander ?</h3>
+<p>Découvrez nos 24 technologies de bio-optimisation.</p>
+<a href="index.html#boutique" class="btn btn-primary"> Voir la Boutique</a>
+</div>
+<div class="legal-footer-note">
+<p><strong> Version imprimable</strong> : <a href="javascript:window.print()"
+class="legal-link">Imprimer ces CGV</a><br>
+<strong> Questions juridiques</strong> : <a
+href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a></p>
+</div>
+</main>
+<footer>
+<div class="footer-bottom">
+<p class="footer-copyright">© 2026 SynchroVie. CGV conformes au Code de la
+consommation européen.</p>
+</div>
+</footer>
+<script src="script.js" defer></script>
 </body>
 </html>

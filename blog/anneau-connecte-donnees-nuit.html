@@ -2,566 +2,588 @@
 <html lang="fr">
 <head>
 <script>
-// Redirection forcée GitHub Pages → domaine personnalisé (anti duplicate content)
+// Redirection forcée GitHub Pages → domaine personnalisé (anti duplicate
+content)
 (function() {
-  if (window.location.hostname === 'synchrovie.github.io' || window.location.hostname === 'synchroVie.github.io') {
-    var newPath = window.location.pathname.replace(/^\/Boutique-SynchroVie/, '');
-    var newUrl = 'https://synchro-vie.com' + newPath + window.location.search + window.location.hash;
-    window.location.replace(newUrl);
-  }
+if (window.location.hostname === 'synchrovie.github.io' ||
+window.location.hostname === 'synchroVie.github.io') {
+var newPath = window.location.pathname.replace(/^\/Boutique-SynchroVie/, '');
+var newUrl = 'https://synchro-vie.com' + newPath + window.location.search +
+window.location.hash;
+window.location.replace(newUrl);
+}
 })();
 </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7FXCZJQVT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-R7FXCZJQVT');
-    </script>
-  <meta charset="UTF-8">
-<meta name="google-site-verification" content="wV9VVQ2Pq7ktBfdQB5Sqburfdo4EDJpyvpAmfSI2XB4" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anneau connecté : ce que votre doigt mesure la nuit | SynchroVie</title>
-  <meta name="author" content="Diougamady Keita">
-  <meta name="description" content="Fréquence cardiaque, SpO2, HRV, température… Un anneau connecté collecte des dizaines de signaux pendant votre sommeil. Voici ce que ces données signifient vraiment.">
-  <meta name="robots" content="index, follow">
-  <meta name="keywords" content="anneau connecté santé, tracker sommeil, HRV mesure, fréquence cardiaque nuit, SpO2 sommeil, SynchroRing">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="Anneau connecté : ce que votre doigt mesure pendant que vous dormez">
-  <meta property="og:description" content="Fréquence cardiaque, SpO2, HRV, température… Un anneau connecté collecte des dizaines de signaux pendant votre sommeil. Voici ce que ces données signifient vraiment.">
-  <meta property="og:url" content="https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html">
-  <meta property="og:image" content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="SynchroVie">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Anneau connecté : ce que votre doigt mesure la nuit">
-  <meta name="twitter:description" content="Fréquence cardiaque, SpO2, HRV… Voici ce que collecte vraiment un anneau connecté pendant votre sommeil.">
-
-  <link rel="canonical" href="https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html">
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Anneau connecté : ce que votre doigt mesure pendant que vous dormez",
-    "description": "Fréquence cardiaque, SpO2, HRV, température… Un anneau connecté collecte des dizaines de signaux pendant votre sommeil. Voici ce que ces données signifient vraiment.",
-    "image": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "SynchroVie",
-      "url": "https://synchro-vie.com/"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "SynchroVie",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://synchro-vie.com/assets/img/logo-synchrovie.webp"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Quels capteurs contient un anneau connecté et que mesurent-ils ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trois capteurs principaux : la photopléthysmographie (PPG) pour la fréquence cardiaque et la VFC, un accéléromètre 3D pour détecter les micro-mouvements, et un capteur de température cutanée. Ensemble, ils permettent d'estimer les phases de sommeil, la SpO2 et la fréquence respiratoire."
       }
     },
-    "datePublished": "2026-06-20",
-    "dateModified": "2026-06-20",
-    "mainEntityOfPage": {
-      "@type": "WebPage",
-      "@id": "https://synchro-vie.com/blog/anneau-connecte-données-nuit.html"
+    {
+      "@type": "Question",
+      "name": "Un anneau connecté peut-il détecter l'apnée du sommeil ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Il ne peut pas la diagnostiquer, mais il peut repérer des patterns de désaturation en oxygène répétée (SpO2 sous 90%) qui méritent une consultation médicale. Le diagnostic reste réservé à une polysomnographie clinique."
+      }
     },
-    "articleSection": "Biohacking & Suivi de santé",
-    "inLanguage": "fr-FR",
-    "keywords": "anneau connecté, tracker sommeil, HRV, fréquence cardiaque, SpO2, biohacking"
-  }
-  </script>
-
-  <style>
-    /* ── RESET & BASE ── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --clr-bg:        #0d0f14;
-      --clr-surface:   #141720;
-      --clr-border:    #1e2330;
-      --clr-accent:    #00e5c8;
-      --clr-accent2:   #6c6fff;
-      --clr-text:      #dce3f0;
-      --clr-muted:     #7a8499;
-      --clr-heading:   #f0f4ff;
-      --clr-tag-bg:    #1a2035;
-      --font-display:  'Space Grotesk', sans-serif;
-      --font-body:     'Inter', sans-serif;
-      --max-prose:     720px;
-      --radius:        10px;
+    {
+      "@type": "Question",
+      "name": "Quelle est la fiabilité de la détection des phases de sommeil par un anneau connecté ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Les études de validation indépendantes montrent une détection correcte du sommeil profond dans environ 65 à 70% des cas comparé à un polysomnographe clinique — mieux qu'une montre connectée, mais sans la précision d'un examen médical."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "La température cutanée mesurée par l'anneau peut-elle suivre le cycle menstruel ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Oui. Des études sur données anonymisées montrent que la variation de température cutanée après l'ovulation, sous l'effet de la progestérone, permet de suivre les cycles menstruels avec une fiabilité significative."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Comment éviter de devenir obsédé par son score de sommeil quotidien ?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En se concentrant sur la tendance à 30 jours plutôt que sur la nuit isolée, et en limitant le suivi à 2-3 métriques comme la VFC du matin, la SpO2 et la température. La littérature nomme « orthosomnie » l'anxiété liée à la recherche obsessionnelle d'un sommeil parfait."
+      }
     }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      background: var(--clr-bg);
-      color: var(--clr-text);
-      font-family: var(--font-body);
-      font-size: 1rem;
-      line-height: 1.75;
-      -webkit-font-smoothing: antialiased;
+  ]
+}
+</script>
+<!-- Google tag (gtag.js) -->
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=G-R7FXCZJQVT"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-R7FXCZJQVT');
+</script>
+<meta charset="UTF-8">
+<meta name="google-site-verification"
+content="wV9VVQ2Pq7ktBfdQB5Sqburfdo4EDJpyvpAmfSI2XB4" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anneau connecté : ce que votre doigt mesure la nuit | SynchroVie</title>
+<meta name="author" content="Diougamady Keita">
+<meta name="description" content="Fréquence cardiaque, SpO2, HRV, température… Un anneau connecté collecte des dizaines de signaux pendant votre sommeil. Voici ce que ces données signifient vraiment.">
+<meta name="robots" content="index, follow">
+<meta name="keywords" content="anneau connecté santé, tracker sommeil, HRV mesure, fréquence cardiaque nuit, SpO2 sommeil, SynchroRing">
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Anneau connecté : ce que votre doigt mesure pendant que vous dormez">
+<meta property="og:description" content="Fréquence cardiaque, SpO2, HRV, température… Un anneau connecté collecte des dizaines de signaux pendant votre sommeil. Voici ce que ces données signifient vraiment.">
+<meta property="og:url"
+content="https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html">
+<meta property="og:image"
+content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SynchroVie">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anneau connecté : ce que votre doigt mesure la nuit">
+<meta name="twitter:description" content="Fréquence cardiaque, SpO2, HRV… Voici ce que collecte vraiment un anneau connecté pendant votre sommeil.">
+<link rel="canonical"
+href="https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html">
+<link rel="alternate" hreflang="fr-FR" href="https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html">
+<link rel="alternate" hreflang="fr-BE" href="https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html">
+<link rel="alternate" hreflang="fr-CH" href="https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html">
+<link rel="alternate" hreflang="fr-LU" href="https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html">
+<link rel="alternate" hreflang="x-default" href="https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html">
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Anneau connecté : ce que votre doigt mesure pendant que vous\ndormez",
+  "description": "Fréquence cardiaque, SpO2, HRV, température… Un anneau connecté\ncollecte des dizaines de signaux pendant votre sommeil. Voici ce que ces données\nsignifient vraiment.",
+  "image": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+  "author": {
+    "@type": "Organization",
+    "name": "SynchroVie",
+    "url": "https://synchro-vie.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "SynchroVie",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://synchro-vie.com/assets/img/logo-synchrovie.webp"
     }
-
-    /* ── HEADER / NAV ── */
-    .site-header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(13, 15, 20, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--clr-border);
-    }
-
-    .site-header__inner {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .site-logo {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.25rem;
-      color: var(--clr-heading);
-      text-decoration: none;
-      letter-spacing: -0.02em;
-    }
-
-    .site-logo span { color: var(--clr-accent); }
-
-    .site-nav {
-      display: flex;
-      gap: 1.75rem;
-      list-style: none;
-    }
-
-    .site-nav a {
-      color: var(--clr-muted);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .site-nav a:hover { color: var(--clr-text); }
-
-    /* ── ARTICLE HERO ── */
-    .article-hero {
-      max-width: var(--max-prose);
-      margin: 4rem auto 0;
-      padding: 0 1.5rem;
-    }
-
-    .article-tag {
-      display: inline-block;
-      background: var(--clr-tag-bg);
-      color: var(--clr-accent);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.85rem;
-      border-radius: 100px;
-      border: 1px solid rgba(0, 229, 200, 0.2);
-      margin-bottom: 1.5rem;
-    }
-
-    .article-hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(1.85rem, 5vw, 2.75rem);
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--clr-heading);
-      letter-spacing: -0.03em;
-      margin-bottom: 1.25rem;
-    }
-
-    .article-hero h1 em {
-      font-style: normal;
-      color: var(--clr-accent);
-    }
-
-    .article-meta {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      color: var(--clr-muted);
-      font-size: 0.825rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .article-meta span { display: flex; align-items: center; gap: 0.3rem; }
-
-    .article-meta__dot {
-      width: 3px;
-      height: 3px;
-      border-radius: 50%;
-      background: var(--clr-border);
-      display: inline-block;
-    }
-
-    /* ── ARTICLE BODY ── */
-    .article-body {
-      max-width: var(--max-prose);
-      margin: 0 auto;
-      padding: 0 1.5rem 5rem;
-    }
-
-    .article-body p {
-      margin-bottom: 1.5rem;
-      color: var(--clr-text);
-    }
-
-    .article-body h2 {
-      font-family: var(--font-display);
-      font-size: 1.45rem;
-      font-weight: 700;
-      color: var(--clr-heading);
-      margin: 3rem 0 1rem;
-      letter-spacing: -0.02em;
-      padding-bottom: 0.6rem;
-      border-bottom: 1px solid var(--clr-border);
-    }
-
-    .article-body h3 {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--clr-heading);
-      margin: 2rem 0 0.75rem;
-    }
-
-    .article-body strong { color: var(--clr-heading); font-weight: 600; }
-
-    .article-body a {
-      color: var(--clr-accent);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      text-decoration-color: rgba(0, 229, 200, 0.4);
-      transition: text-decoration-color 0.2s;
-    }
-
-    .article-body a:hover { text-decoration-color: var(--clr-accent); }
-
-    /* ── CALLOUT BOX ── */
-    .callout {
-      background: linear-gradient(135deg, rgba(0,229,200,0.06) 0%, rgba(108,111,255,0.06) 100%);
-      border: 1px solid rgba(0, 229, 200, 0.2);
-      border-radius: var(--radius);
-      padding: 1.5rem 1.75rem;
-      margin: 2.25rem 0;
-    }
-
-    .callout__label {
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--clr-accent);
-      margin-bottom: 0.6rem;
-    }
-
-    .callout p {
-      margin: 0;
-      font-size: 0.95rem;
-      color: var(--clr-text);
-    }
-
-    /* ── DATA CARD GRID ── */
-    .data-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin: 2rem 0;
-    }
-
-    .data-card {
-      background: var(--clr-surface);
-      border: 1px solid var(--clr-border);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-    }
-
-    .data-card__icon {
-      font-size: 1.5rem;
-      margin-bottom: 0.6rem;
-      display: block;
-    }
-
-    .data-card__label {
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--clr-muted);
-      margin-bottom: 0.3rem;
-    }
-
-    .data-card__value {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--clr-accent);
-      margin-bottom: 0.25rem;
-    }
-
-    .data-card__desc {
-      font-size: 0.8rem;
-      color: var(--clr-muted);
-      line-height: 1.4;
-    }
-
-    /* ── SIGNAL TABLE ── */
-    .signal-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-      font-size: 0.9rem;
-    }
-
-    .signal-table thead th {
-      text-align: left;
-      padding: 0.75rem 1rem;
-      border-bottom: 1px solid var(--clr-border);
-      color: var(--clr-muted);
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-
-    .signal-table tbody td {
-      padding: 0.85rem 1rem;
-      border-bottom: 1px solid rgba(30,35,48,0.6);
-      vertical-align: top;
-    }
-
-    .signal-table tbody tr:last-child td { border-bottom: none; }
-
-    .signal-table tbody tr:hover { background: rgba(255,255,255,0.02); }
-
-    .signal-name {
-      font-weight: 600;
-      color: var(--clr-heading);
-    }
-
-    .signal-badge {
-      display: inline-block;
-      padding: 0.2rem 0.5rem;
-      border-radius: 4px;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-    }
-
-    .badge--high   { background: rgba(0,229,200,0.12); color: var(--clr-accent); }
-    .badge--medium { background: rgba(108,111,255,0.12); color: var(--clr-accent2); }
-    .badge--low    { background: rgba(122,132,153,0.12); color: var(--clr-muted); }
-
-    /* ── QUOTE BLOCK ── */
-    .pull-quote {
-      border-left: 3px solid var(--clr-accent);
-      padding: 0.5rem 0 0.5rem 1.5rem;
-      margin: 2.5rem 0;
-    }
-
-    .pull-quote p {
-      font-family: var(--font-display);
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: var(--clr-heading);
-      line-height: 1.55;
-      margin: 0;
-    }
-
-    /* ── SOURCE LIST ── */
-    .sources {
-      margin-top: 3.5rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--clr-border);
-    }
-
-    .sources__title {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--clr-muted);
-      margin-bottom: 1rem;
-    }
-
-    .sources ol {
-      padding-left: 1.25rem;
-      font-size: 0.8rem;
-      color: var(--clr-muted);
-      line-height: 1.6;
-    }
-
-    .sources ol li { margin-bottom: 0.4rem; }
-
-    .sources ol a {
-      color: var(--clr-muted);
-      text-decoration: underline;
-      text-decoration-color: var(--clr-border);
-    }
-
-    /* ── CTA BLOCK ── */
-    .cta-block {
-      background: var(--clr-surface);
-      border: 1px solid var(--clr-border);
-      border-radius: 12px;
-      padding: 2rem;
-      margin: 3rem 0;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .cta-block__eyebrow {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--clr-accent);
-    }
-
-    .cta-block h3 {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--clr-heading);
-      margin: 0;
-    }
-
-    .cta-block p {
-      font-size: 0.9rem;
-      color: var(--clr-muted);
-      margin: 0;
-    }
-
-    .cta-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: var(--clr-accent);
-      color: #0d0f14;
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 0.9rem;
-      padding: 0.7rem 1.4rem;
-      border-radius: 8px;
-      text-decoration: none;
-      width: fit-content;
-      transition: opacity 0.2s, transform 0.15s;
-    }
-
-    .cta-btn:hover {
-      opacity: 0.88;
-      transform: translateY(-1px);
-      text-decoration: none;
-    }
-
-    /* ── FOOTER ── */
-    .site-footer {
-      border-top: 1px solid var(--clr-border);
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      color: var(--clr-muted);
-      font-size: 0.825rem;
-    }
-
-    .site-footer a { color: var(--clr-muted); text-decoration: underline; }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 640px) {
-      .site-nav { display: none; }
-      .article-hero h1 { font-size: 1.75rem; }
-      .data-grid { grid-template-columns: 1fr 1fr; }
-      .signal-table { font-size: 0.8rem; }
-      .signal-table thead th,
-      .signal-table tbody td { padding: 0.6rem 0.6rem; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { transition: none !important; animation: none !important; }
-    }
-  </style>
-
+  },
+  "datePublished": "2026-06-20",
+  "dateModified": "2026-06-20",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html"
+  },
+  "articleSection": "Biohacking & Suivi de santé",
+  "inLanguage": "fr-FR",
+  "keywords": "anneau connecté, tracker sommeil, HRV, fréquence cardiaque, SpO2,\nbiohacking"
+}
+</script>
 <style>
-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+/* ── RESET & BASE ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+--clr-bg: #0d0f14;
+--clr-surface: #141720;
+--clr-border: #1e2330;
+--clr-accent: #00e5c8;
+--clr-accent2: #6c6fff;
+--clr-text: #dce3f0;
+--clr-muted: #7a8499;
+--clr-heading: #f0f4ff;
+--clr-tag-bg: #1a2035;
+--font-display: 'Space Grotesk', sans-serif;
+--font-body: 'Inter', sans-serif;
+--max-prose: 720px;
+--radius: 10px;
+}
+html { scroll-behavior: smooth; }
+body {
+background: var(--clr-bg);
+color: var(--clr-text);
+font-family: var(--font-body);
+font-size: 1rem;
+line-height: 1.75;
+-webkit-font-smoothing: antialiased;
+}
+/* ── HEADER / NAV ── */
+.site-header {
+position: sticky;
+top: 0;
+z-index: 100;
+background: rgba(13, 15, 20, 0.92);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--clr-border);
+}
+.site-header__inner {
+max-width: 1100px;
+margin: 0 auto;
+padding: 0 1.5rem;
+height: 60px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.site-logo {
+font-family: var(--font-display);
+font-weight: 700;
+font-size: 1.25rem;
+color: var(--clr-heading);
+text-decoration: none;
+letter-spacing: -0.02em;
+}
+.site-logo span { color: var(--clr-accent); }
+.site-nav {
+display: flex;
+gap: 1.75rem;
+list-style: none;
+}
+.site-nav a {
+color: var(--clr-muted);
+text-decoration: none;
+font-size: 0.875rem;
+font-weight: 500;
+transition: color 0.2s;
+}
+.site-nav a:hover { color: var(--clr-text); }
+/* ── ARTICLE HERO ── */
+.article-hero {
+max-width: var(--max-prose);
+margin: 4rem auto 0;
+padding: 0 1.5rem;
+}
+.article-tag {
+display: inline-block;
+background: var(--clr-tag-bg);
+color: var(--clr-accent);
+font-size: 0.75rem;
+font-weight: 600;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+padding: 0.3rem 0.85rem;
+border-radius: 100px;
+border: 1px solid rgba(0, 229, 200, 0.2);
+margin-bottom: 1.5rem;
+}
+
+.article-hero h1 {
+font-family: var(--font-display);
+font-size: clamp(1.85rem, 5vw, 2.75rem);
+font-weight: 700;
+line-height: 1.2;
+color: var(--clr-heading);
+letter-spacing: -0.03em;
+margin-bottom: 1.25rem;
+}
+.article-hero h1 em {
+font-style: normal;
+color: var(--clr-accent);
+}
+.article-meta {
+display: flex;
+align-items: center;
+gap: 1rem;
+color: var(--clr-muted);
+font-size: 0.825rem;
+margin-bottom: 2.5rem;
+}
+.article-meta span { display: flex; align-items: center; gap: 0.3rem; }
+.article-meta__dot {
+width: 3px;
+height: 3px;
+border-radius: 50%;
+background: var(--clr-border);
+display: inline-block;
+}
+/* ── ARTICLE BODY ── */
+.article-body {
+max-width: var(--max-prose);
+margin: 0 auto;
+padding: 0 1.5rem 5rem;
+}
+.article-body p {
+margin-bottom: 1.5rem;
+color: var(--clr-text);
+}
+.article-body h2 {
+font-family: var(--font-display);
+font-size: 1.45rem;
+font-weight: 700;
+color: var(--clr-heading);
+margin: 3rem 0 1rem;
+letter-spacing: -0.02em;
+padding-bottom: 0.6rem;
+border-bottom: 1px solid var(--clr-border);
+}
+.article-body h3 {
+font-family: var(--font-display);
+font-size: 1.1rem;
+font-weight: 600;
+color: var(--clr-heading);
+margin: 2rem 0 0.75rem;
+}
+.article-body strong { color: var(--clr-heading); font-weight: 600; }
+.article-body a {
+color: var(--clr-accent);
+text-decoration: underline;
+text-underline-offset: 3px;
+text-decoration-color: rgba(0, 229, 200, 0.4);
+transition: text-decoration-color 0.2s;
+}
+.article-body a:hover { text-decoration-color: var(--clr-accent); }
+/* ── CALLOUT BOX ── */
+.callout {
+background: linear-gradient(135deg, rgba(0,229,200,0.06) 0%,
+rgba(108,111,255,0.06) 100%);
+border: 1px solid rgba(0, 229, 200, 0.2);
+border-radius: var(--radius);
+padding: 1.5rem 1.75rem;
+margin: 2.25rem 0;
+}
+.callout__label {
+font-size: 0.7rem;
+font-weight: 700;
+letter-spacing: 0.1em;
+text-transform: uppercase;
+color: var(--clr-accent);
+margin-bottom: 0.6rem;
+}
+.callout p {
+margin: 0;
+font-size: 0.95rem;
+color: var(--clr-text);
+
+}
+/* ── DATA CARD GRID ── */
+.data-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 1rem;
+margin: 2rem 0;
+}
+.data-card {
+background: var(--clr-surface);
+border: 1px solid var(--clr-border);
+border-radius: var(--radius);
+padding: 1.25rem;
+}
+.data-card__icon {
+font-size: 1.5rem;
+margin-bottom: 0.6rem;
+display: block;
+}
+.data-card__label {
+font-size: 0.75rem;
+font-weight: 600;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+color: var(--clr-muted);
+margin-bottom: 0.3rem;
+}
+.data-card__value {
+font-family: var(--font-display);
+font-size: 1.5rem;
+font-weight: 700;
+color: var(--clr-accent);
+margin-bottom: 0.25rem;
+}
+.data-card__desc {
+font-size: 0.8rem;
+color: var(--clr-muted);
+line-height: 1.4;
+}
+/* ── SIGNAL TABLE ── */
+.signal-table {
+width: 100%;
+border-collapse: collapse;
+margin: 2rem 0;
+font-size: 0.9rem;
+}
+.signal-table thead th {
+text-align: left;
+padding: 0.75rem 1rem;
+border-bottom: 1px solid var(--clr-border);
+color: var(--clr-muted);
+font-size: 0.75rem;
+font-weight: 600;
+letter-spacing: 0.05em;
+text-transform: uppercase;
+}
+.signal-table tbody td {
+padding: 0.85rem 1rem;
+border-bottom: 1px solid rgba(30,35,48,0.6);
+vertical-align: top;
+}
+.signal-table tbody tr:last-child td { border-bottom: none; }
+.signal-table tbody tr:hover { background: rgba(255,255,255,0.02); }
+.signal-name {
+font-weight: 600;
+color: var(--clr-heading);
+}
+.signal-badge {
+display: inline-block;
+padding: 0.2rem 0.5rem;
+border-radius: 4px;
+font-size: 0.7rem;
+font-weight: 700;
+letter-spacing: 0.04em;
+}
+.badge--high { background: rgba(0,229,200,0.12); color: var(--clr-accent); }
+.badge--medium { background: rgba(108,111,255,0.12); color: var(--clr-accent2);
+}
+.badge--low { background: rgba(122,132,153,0.12); color: var(--clr-muted); }
+/* ── QUOTE BLOCK ── */
+.pull-quote {
+border-left: 3px solid var(--clr-accent);
+padding: 0.5rem 0 0.5rem 1.5rem;
+margin: 2.5rem 0;
+}
+
+
+.pull-quote p {
+font-family: var(--font-display);
+font-size: 1.15rem;
+font-weight: 500;
+color: var(--clr-heading);
+line-height: 1.55;
+margin: 0;
+}
+/* ── SOURCE LIST ── */
+.sources {
+margin-top: 3.5rem;
+padding-top: 2rem;
+border-top: 1px solid var(--clr-border);
+}
+.sources__title {
+font-size: 0.75rem;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--clr-muted);
+margin-bottom: 1rem;
+}
+.sources ol {
+padding-left: 1.25rem;
+font-size: 0.8rem;
+color: var(--clr-muted);
+line-height: 1.6;
+}
+.sources ol li { margin-bottom: 0.4rem; }
+.sources ol a {
+color: var(--clr-muted);
+text-decoration: underline;
+text-decoration-color: var(--clr-border);
+}
+/* ── CTA BLOCK ── */
+.cta-block {
+background: var(--clr-surface);
+border: 1px solid var(--clr-border);
+border-radius: 12px;
+padding: 2rem;
+margin: 3rem 0;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+}
+.cta-block__eyebrow {
+font-size: 0.75rem;
+font-weight: 700;
+letter-spacing: 0.08em;
+text-transform: uppercase;
+color: var(--clr-accent);
+}
+.cta-block h3 {
+font-family: var(--font-display);
+font-size: 1.25rem;
+font-weight: 700;
+color: var(--clr-heading);
+margin: 0;
+}
+.cta-block p {
+font-size: 0.9rem;
+color: var(--clr-muted);
+margin: 0;
+}
+.cta-btn {
+display: inline-flex;
+align-items: center;
+gap: 0.5rem;
+background: var(--clr-accent);
+color: #0d0f14;
+font-family: var(--font-display);
+font-weight: 700;
+font-size: 0.9rem;
+padding: 0.7rem 1.4rem;
+border-radius: 8px;
+text-decoration: none;
+width: fit-content;
+transition: opacity 0.2s, transform 0.15s;
+}
+.cta-btn:hover {
+opacity: 0.88;
+transform: translateY(-1px);
+text-decoration: none;
+}
+/* ── FOOTER ── */
+.site-footer {
+border-top: 1px solid var(--clr-border);
+padding: 2.5rem 1.5rem;
+text-align: center;
+
+color: var(--clr-muted);
+font-size: 0.825rem;
+}
+.site-footer a { color: var(--clr-muted); text-decoration: underline; }
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+.site-nav { display: none; }
+.article-hero h1 { font-size: 1.75rem; }
+.data-grid { grid-template-columns: 1fr 1fr; }
+.signal-table { font-size: 0.8rem; }
+.signal-table thead th,
+.signal-table tbody td { padding: 0.6rem 0.6rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+* { transition: none !important; animation: none !important; }
+}
+</style>
+<style>
+table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
+max-width: 100%; }
 </style>
 <!-- TikTok Pixel Code Start -->
 <script>
 !function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","ide
+ntify","instances","debug","on","off","once","ready","alias","group","enableCook
+ie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefe
+r=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arg
+uments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.metho
+ds[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
+]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pix el/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._
+t=ttq._t||{},ttq._t[e]=+new
+Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.ge tElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-
-  ttq.load('D9A3IORC77UEFAL2KKS0');
-  ttq.page();
+ttq.load('D9A3IORC77UEFAL2KKS0');
+ttq.page();
 }(window, document, 'ttq');
 </script>
 <!-- TikTok Pixel Code End -->
-  
-  
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#0B2545">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0B2545">
 <link rel="icon" type="image/webp" href="/assets/img/logo-synchrovie.webp">
-  <link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
-  </head>
+<link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
+</head>
 <body>
 
-
 <nav class="main-nav">
-  <a href="https://synchro-vie.com/" class="nav-brand">SYNCHROVIE</a>
-  <div class="nav-links">
-    <a href="../index.html#boutique">Boutique</a>
-    <a href="https://synchro-vie.com/blog.html">Blog</a>
-    <a href="https://synchro-vie.com/faq.html">FAQ</a>
-    <a href="https://synchro-vie.com/contact.html">Contact</a>
-  </div>
-  <a  class="nav-whatsapp"  href="mailto:synchrovie@gmail.com"href="mailto:synchrovie@gmail.com">Email</a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-    <span></span><span></span><span></span>
-    <span class="menu-label">Menu</span>
-  </button>
+<a href="https://synchro-vie.com/" class="nav-brand">SYNCHROVIE</a>
+<div class="nav-links">
+<a href="../index.html#boutique">Boutique</a>
+<a href="https://synchro-vie.com/blog.html">Blog</a>
+<a href="https://synchro-vie.com/faq.html">FAQ</a>
+<a href="https://synchro-vie.com/contact.html">Contact</a>
+</div>
+<a class="nav-whatsapp"
+href="mailto:synchrovie@gmail.com">Email</a>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">
+<span></span><span></span><span></span>
+<span class="menu-label">Menu</span>
+</button>
 </nav>
-<div class="mobile-menu" id="mobileMenu"><button class="menu-close" id="menuClose" aria-label="Fermer">&times;</button><a href="https://synchro-vie.com/">Accueil</a><a href="../index.html#boutique">Boutique</a><a href="https://synchro-vie.com/blog.html">Blog</a><a href="https://synchro-vie.com/faq.html">FAQ</a><a href="https://synchro-vie.com/propos.html">À Propos</a><a href="https://synchro-vie.com/contact.html">Contact</a><a   href="mailto:synchrovie@gmail.com">Email Expert</a></div>
-
-  <!-- ══════════════════════════════════════════
-       HERO ARTICLE
-  ══════════════════════════════════════════ -->
-  <header class="article-hero">
-    <div class="article-tag">Suivi du sommeil</div>
-    <h1>Anneau connecté&nbsp;: ce que votre doigt mesure <em>la nuit</em></h1>
-    <div class="article-meta">
-      <span>Par <strong>SynchroVie</strong></span>
-      <span class="article-meta__dot"></span>
-      <span>20 juin 2026</span>
-      <span class="article-meta__dot"></span>
-      <span>9 min de lecture</span>
-    </div>
-  </header>
+<div class="mobile-menu" id="mobileMenu"><button class="menu-close"
+id="menuClose" aria-label="Fermer">&times;</button><a
+href="https://synchro-vie.com/">Accueil</a><a
+href="../index.html#boutique">Boutique</a><a
+href="https://synchro-vie.com/blog.html">Blog</a><a
+href="https://synchro-vie.com/faq.html">FAQ</a><a
+href="https://synchro-vie.com/propos.html">À Propos</a><a
+href="https://synchro-vie.com/contact.html">Contact</a><a
+href="mailto:synchrovie@gmail.com">Email Expert</a></div>
+<!-- ══════════════════════════════════════════
+HERO ARTICLE
+══════════════════════════════════════════ -->
+<header class="article-hero">
+<div class="article-tag">Suivi du sommeil</div>
+<h1>Anneau connecté&nbsp;: ce que votre doigt mesure <em>la nuit</em></h1>
+<div class="tldr-box" style="background:#0f1b2d;border-left:3px solid #00C9A7;padding:16px 20px;margin:20px 0;border-radius:6px;">
+<strong>En bref :</strong> Un anneau connecté mesure la fréquence cardiaque, la VFC, la SpO2 et la température cutanée grâce à trois capteurs (PPG, accéléromètre, thermomètre). Ces données permettent de repérer des tendances utiles — récupération, désaturation nocturne, cycle hormonal — mais ne remplacent jamais un diagnostic médical. La détection des phases de sommeil reste fiable à 65-70% comparée à un examen clinique.
+</div>
+<div class="article-meta">
+<span>Par <strong>SynchroVie</strong></span>
+<span class="article-meta__dot"></span>
+<span>20 juin 2026</span>
+<span class="article-meta__dot"></span>
+<span>9 min de lecture</span>
+</div>
+</header>
 
 <style>
-.breadcrumb-nav{max-width:1200px;margin:0 auto;padding:12px 24px;font-size:0.82rem;color:#5a7a9e;font-family:'Inter',sans-serif;}
-.breadcrumb-list{display:flex;flex-wrap:wrap;align-items:center;gap:6px;list-style:none;margin:0;padding:0;}
+.breadcrumb-nav{max-width:1200px;margin:0 auto;padding:12px
+24px;font-size:0.82rem;color:#5a7a9e;font-family:'Inter',sans-serif;}
+.breadcrumb-list{display:flex;flex-wrap:wrap;align-items:center;gap:6px;list-sty
+le:none;margin:0;padding:0;}
 .breadcrumb-list li{display:flex;align-items:center;gap:6px;}
 .breadcrumb-list a{color:#3B82F6;text-decoration:none;transition:color 0.2s;}
 .breadcrumb-list a:hover{color:#60A5FA;text-decoration:underline;}
@@ -571,488 +593,590 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 </style>
 <nav class="breadcrumb-nav" aria-label="Fil d'Ariane">
 <ol class="breadcrumb-list">
-<li><a href="https://synchro-vie.com/">Accueil</a><span class="breadcrumb-sep">›</span></li><li><a href="https://synchro-vie.com/blog.html">Blog</a><span class="breadcrumb-sep">›</span></li><li><a href="https://synchro-vie.com/blog.html">Bio-Monitoring</a><span class="breadcrumb-sep">›</span></li><li><span class="breadcrumb-current">Anneau connecté&amp;nbsp;: ce que votre doigt mesure la nuit</span></li>
+<li><a href="https://synchro-vie.com/">Accueil</a><span
+class="breadcrumb-sep">›</span></li><li><a
+href="https://synchro-vie.com/blog.html">Blog</a><span
+class="breadcrumb-sep">›</span></li><li><a
+href="https://synchro-vie.com/blog.html">Bio-Monitoring</a><span
+class="breadcrumb-sep">›</span></li><li><span class="breadcrumb-current">Anneau
+connecté&amp;nbsp;: ce que votre doigt mesure la nuit</span></li>
 </ol>
 </nav>
 
+<!-- ══════════════════════════════════════════
+CORPS DE L'ARTICLE
+══════════════════════════════════════════ -->
+<main>
+<article class="article-body" itemscope itemtype="https://schema.org/Article"
+itemprop="articleBody">
+<!-- ── INTRO : DOULEUR D'ABORD ── -->
+<p>
+Vous vous réveillez fatigué. Pas épuisé comme après une nuit blanche — juste
+cette
+lassitude sourde qui s'installe dès le réveil, sans raison apparente. Vous avez
+dormi
+sept heures. Peut-être huit. Pourtant votre corps fait les comptes autrement.
+</p>
+<p>
+Pendant des années, la réponse à ce problème était une montre-bracelet
+volumineuse, des
+électrodes collées sur le sternum, ou un rendez-vous en clinique du sommeil. Des
+outils
+pensés pour les cas sévères, pas pour quelqu'un qui veut simplement comprendre
+ce qui
+se passe entre 23h et 7h du matin.
+</p>
+<p>
+L'anneau connecté a changé l'équation. Un anneau en titane, quelques capteurs
+optiques
+logés côté intérieur, et c'est tout. Pas de bracelet. Pas de charge quotidienne.
+Pas
+de capteur qui glisse pendant la nuit. Et en retour&nbsp;: un flux continu de
+données
+physiologiques que vous n'auriez jamais pu obtenir chez vous il y a cinq ans.
+</p>
+<p>
+Mais que mesure vraiment cet anneau pendant que vous dormez&nbsp;? Et surtout,
+qu'est-ce
+que ces mesures disent de votre santé — et ce qu'elles ne peuvent pas
+dire&nbsp;?
+</p>
+<!-- ── SECTION 1 : CAPTEURS ── -->
+<h2>1. À l'intérieur de l'anneau&nbsp;: trois capteurs, des milliers de points</h2>
+<p>
+La photopléthysmographie — PPG pour aller vite — est le principe central de
+presque
+tous les anneaux connectés. Des LED (généralement verte, rouge et infrarouge)
+émettent
+de la lumière à travers la peau du doigt. Un photorécepteur mesure la lumière
+qui
+revient. Le volume sanguin dans les capillaires change à chaque battement de
+cœur&nbsp;:
+ce changement de réflexion lumineuse permet de déduire la fréquence cardiaque en
+temps
+réel.
+</p>
+<p>
+Le doigt est un excellent site de mesure. La densité capillaire y est élevée,
+l'anneau
+ne bouge pas pendant le sommeil, et la pression de contact reste constante
+contrairement
+à un bracelet lâche. C'est l'une des raisons pour lesquelles les mesures
+nocturnes d'un
+anneau connecté sont généralement plus fiables que celles d'une montre portée au
+poignet.
+<sup>[1]</sup>
+</p>
+<p>
+À la PPG s'ajoute un accéléromètre 3D — qui détecte les micro-mouvements pendant
+le
+sommeil — et un capteur de température cutanée. Ces trois sources de données
+combinées
+permettent de construire un tableau de bord physiologique nocturne assez
+complet.
+</p>
 
-  <!-- ══════════════════════════════════════════
-       CORPS DE L'ARTICLE
-  ══════════════════════════════════════════ -->
-  <main>
-    <article class="article-body" itemscope itemtype="https://schema.org/Article"
-             itemprop="articleBody">
+<div class="data-grid">
+<div class="data-card">
+<span class="data-card__icon" aria-hidden="true">PPG</span>
+<div class="data-card__label">PPG</div>
+<div class="data-card__value">250 Hz</div>
+<div class="data-card__desc">Fréquence d'échantillonnage typique. Soit 250
+lectures par seconde sur votre flux sanguin.</div>
+</div>
+<div class="data-card">
+<span class="data-card__icon" aria-hidden="true">°C</span>
+<div class="data-card__label">Température</div>
+<div class="data-card__value">±0,1°C</div>
+<div class="data-card__desc">Précision des meilleurs capteurs de température
+cutanée intégrés aux anneaux actuels.</div>
+</div>
+<div class="data-card">
+<span class="data-card__icon" aria-hidden="true">3D</span>
+<div class="data-card__label">Accéléromètre</div>
+<div class="data-card__value">3 axes</div>
+<div class="data-card__desc">Détecte les micro-mouvements pour distinguer le
+sommeil léger, profond et paradoxal.</div>
+</div>
+<div class="data-card">
+<span class="data-card__icon" aria-hidden="true">SpO2</span>
+<div class="data-card__label">SpO2</div>
+<div class="data-card__value">LED rouge</div>
+<div class="data-card__desc">La longueur d'onde rouge + infrarouge permet
+d'estimer la saturation en oxygène du sang.</div>
+</div>
+</div>
+<!-- ── SECTION 2 : DONNÉES CLÉS ── -->
+<h2>2. Les six signaux que votre anneau collecte chaque nuit</h2>
+<p>
+Connaître les capteurs, c'est bien. Savoir ce qu'ils mesurent concrètement — et
+ce que
+ça implique pour votre récupération — c'est ce qui rend ces données utiles.
+</p>
+<table class="signal-table" aria-label="Signaux mesurés par un anneau connecté">
+<thead>
+<tr>
+<th>Signal</th>
+<th>Ce que ça mesure</th>
+<th>Utilité pratique</th>
+<th>Fiabilité</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="signal-name">Fréquence cardiaque</span></td>
+<td>Battements par minute en continu</td>
+<td>Détecter une tachycardie nocturne, suivre la tendance au repos</td>
+<td><span class="signal-badge badge--high">Élevée</span></td>
+</tr>
+<tr>
+<td><span class="signal-name">HRV (variabilité)</span></td>
+<td>Variation entre chaque battement</td>
+<td>Indicateur de récupération du système nerveux autonome</td>
+<td><span class="signal-badge badge--high">Élevée</span></td>
+</tr>
+<tr>
+<td><span class="signal-name">SpO2</span></td>
+<td>Saturation en oxygène du sang</td>
+<td>Signal d'alerte pour apnée du sommeil, altitude, trouble respiratoire</td>
+<td><span class="signal-badge badge--medium">Bonne</span></td>
+</tr>
+<tr>
+<td><span class="signal-name">Température cutanée</span></td>
+<td>Variation par rapport à votre baseline</td>
+<td>Détecter fièvre débutante, ovulation, stress physiologique</td>
+<td><span class="signal-badge badge--high">Élevée</span></td>
+</tr>
+<tr>
+<td><span class="signal-name">Phases de sommeil</span></td>
+<td>Cycles léger / profond / paradoxal</td>
+<td>Comprendre la structure de votre nuit</td>
+<td><span class="signal-badge badge--medium">Bonne</span></td>
+</tr>
+<tr>
+<td><span class="signal-name">Fréquence respiratoire</span></td>
+<td>Cycles respiratoires par minute</td>
+<td>Détection d'anomalies respiratoires nocturnes</td>
+<td><span class="signal-badge badge--low">Estimée</span></td>
+</tr>
+</tbody>
+</table>
+<!-- ── SECTION 3 : HRV ── -->
+<h2>3. La HRV&nbsp;: le signal le plus puissant — et le plus mal compris</h2>
+<p>
+Si vous ne deviez retenir qu'une seule métrique de votre anneau connecté, ce
+serait
+celle-là. La HRV — Heart Rate Variability, ou variabilité de la fréquence
+cardiaque —
+mesure le temps qui s'écoule entre chaque battement.
+</p>
+<p>
 
-      <!-- ── INTRO : DOULEUR D'ABORD ── -->
-      <p>
-        Vous vous réveillez fatigué. Pas épuisé comme après une nuit blanche — juste cette
-        lassitude sourde qui s'installe dès le réveil, sans raison apparente. Vous avez dormi
-        sept heures. Peut-être huit. Pourtant votre corps fait les comptes autrement.
-      </p>
-      <p>
-        Pendant des années, la réponse à ce problème était une montre-bracelet volumineuse, des
-        électrodes collées sur le sternum, ou un rendez-vous en clinique du sommeil. Des outils
-        pensés pour les cas sévères, pas pour quelqu'un qui veut simplement comprendre ce qui
-        se passe entre 23h et 7h du matin.
-      </p>
-      <p>
-        L'anneau connecté a changé l'équation. Un anneau en titane, quelques capteurs optiques
-        logés côté intérieur, et c'est tout. Pas de bracelet. Pas de charge quotidienne. Pas
-        de capteur qui glisse pendant la nuit. Et en retour&nbsp;: un flux continu de données
-        physiologiques que vous n'auriez jamais pu obtenir chez vous il y a cinq ans.
-      </p>
-      <p>
-        Mais que mesure vraiment cet anneau pendant que vous dormez&nbsp;? Et surtout, qu'est-ce
-        que ces mesures disent de votre santé — et ce qu'elles ne peuvent pas dire&nbsp;?
-      </p>
+Contre-intuitivement, un cœur régulier comme un métronome n'est pas un cœur en
+bonne
+santé. Un cœur bien récupéré, géré par un système nerveux autonome en forme,
+présente
+des intervalles qui varient légèrement d'un battement à l'autre. C'est ce qu'on
+appelle la variabilité. Plus elle est élevée, plus votre corps est capable de
+s'adapter
+au stress, à l'effort, aux imprévus.
+</p>
+<div class="pull-quote">
+<p>
+Une HRV basse le matin après une nuit normale, ce n'est pas une donnée anodine.
+C'est votre système nerveux autonome qui envoie un signal&nbsp;: il est en mode
+survie, pas en mode récupération.
+</p>
+</div>
+<p>
+La nuit est le meilleur moment pour mesurer la HRV. Le corps est immobile, les
+interférences sont minimales, et les variations reflètent vraiment l'état du
+système nerveux — pas l'anxiété d'une réunion ou l'effort d'une montée
+d'escalier.
+Les recherches menées sur des populations d'athlètes et de non-athlètes montrent
+qu'une HRV nocturne basse est associée à une récupération incomplète, à un
+risque
+accru de maladie et à de moins bonnes performances cognitives le lendemain.
+<sup>[2]</sup>
+</p>
+<p>
+Ce que votre anneau mesure, c'est le RMSSD — racine carrée de la moyenne des
+carrés
+des différences entre intervalles succèssifs. Un chiffre entre 20 et 100 ms pour
+la
+plupart des adultes, mais ce qui compte n'est pas le chiffre absolu&nbsp;: c'est
+l'écart par rapport à votre propre baseline sur 30 jours.
+</p>
+<div class="callout">
+<div class="callout__label">À savoir</div>
+<p>
+Comparer votre HRV à celle de quelqu'un d'autre n'a aucun sens clinique. Une HRV
+de 35 ms peut être excellente pour une personne sédentaire de 55 ans et
+catastrophique
+pour un coureur de 30 ans. L'indicateur utile, c'est votre tendance sur le
+temps,
+pas la valeur brute d'une nuit isolée.
+</p>
+</div>
+<!-- ── SECTION 4 : SpO2 ── -->
+<h2>4. SpO2&nbsp;: quand la saturation en oxygène devient un signal d'alerte</h2>
+<p>
+Une saturation en oxygène (SpO2) normale pendant le sommeil se situe entre 95 %
+et
+100 %. En dessous de 90 %, on parle de désaturation&nbsp;: le sang ne transporte
+plus
+assez d'oxygène vers les organes et le cerveau.
+</p>
+<p>
+C'est précisément ce qui se passe lors des épisodes d'apnée du sommeil. Les
+voies
+respiratoires se bloquent partiellement, la respiration s'arrête quelques
+secondes,
+le taux d'O2 chute, le cerveau déclenche un micro-réveil pour rétablir la
+respiration.
+Tout cela sans que vous ayez le moindre souvenir au réveil — mais avec des
+conséquences
+réelles&nbsp;: fatigue chronique, pression artérielle élevée, risque
+cardiovasculaire
+accru. <sup>[3]</sup>
+</p>
+<p>
+Un anneau connecté ne diagnostique pas l'apnée du sommeil. Ce n'est pas son rôle
+et ce n'est pas possible avec ce niveau de matériel. Mais il peut détecter des
+patterns de désaturation répétée qui méritent une consultation médicale.
+Certains
+utilisateurs ont découvert une apnée non diagnostiquée depuis des années grâce à
+ce
+type de signal — pas à la suite d'un diagnostic médical, mais parce que les
+données
+ont rendu visible quelque chose qui restait invisible.
+</p>
+<!-- ── SECTION 5 : TEMPÉRATURE ── -->
+<h2>5. La température cutanée&nbsp;: le signal le plus discret, le plus
+révélateur</h2>
+<p>
+C'est probablement la métrique la moins connue et la plus sous-estimée.
+</p>
+<p>
+Pendant le sommeil, la température corporelle suit un cycle précis. Elle baisse
+en
+début de nuit pour favoriser l'endormissement et le sommeil profond, puis
+remonte
+progressivement vers le réveil. Un anneau connecté ne mesure pas votre
+température
+centrale (qui nécessiterait une mesure rectale ou tympanique) mais la variation
+de
 
-      <!-- ── SECTION 1 : CAPTEURS ── -->
-      <h2>À l'intérieur de l'anneau&nbsp;: trois capteurs, des milliers de points</h2>
+température cutanée du doigt par rapport à votre propre baseline.
+</p>
+<p>
+Cette variation est d'une utilité surprenante. Une élévation de 0,5 à 1°C par
+rapport
+à votre baseline peut précéder les symptômes d'une infection de 24 à 48 heures.
+Votre
+doigt sait avant vous que vous êtes en train de tomber malade. Des études sur
+des
+données anonymisées massives montrent également que cette mesure permet de
+suivre les
+cycles menstruels avec une fiabilité significative — la température s'élève
+légèrement
+après l'ovulation sous l'effet de la progestérone. <sup>[4]</sup>
+</p>
+<!-- ── SECTION 6 : PHASES SOMMEIL ── -->
+<h2>6. Phases de sommeil&nbsp;: ce que l'algorithme construit à partir de vos
+signaux</h2>
+<p>
+La mesure des phases de sommeil (sommeil léger, sommeil profond, sommeil
+paradoxal)
+est la promesse la plus visible des trackers de nuit. Et c'est aussi la plus
+nuancée.
+</p>
+<p>
+Un polysomnographe clinique — l'étalon-or du diagnostic du sommeil — mesure
+l'activité
+cérébrale (EEG), les mouvements oculaires (EOG) et le tonus musculaire (EMG). Un
+anneau connecté n'a accès à rien de tout cela. Il fait de l'inférence&nbsp;: il
+croise
+fréquence cardiaque, HRV, fréquence respiratoire estimée et micro-mouvements
+pour
+deviner dans quelle phase vous vous trouvez.
+</p>
+<p>
+Les recherches de validation indépendante — celles menées sans financement des
+fabricants — montrent que les anneaux connectés détectent correctement le
+sommeil
+profond dans environ 65 à 70 % des cas comparés au polysomnographe. C'est mieux
+que les montres, et nettement mieux qu'une estimation à l'intuition — mais ce
+n'est
+pas de la médecine. <sup>[5]</sup>
+</p>
+<div class="callout">
+<div class="callout__label">Ce que ça signifie concrètement</div>
+<p>
+Si votre anneau vous dit que vous avez eu 45 minutes de sommeil profond cette
+nuit,
+la valeur exacte est à prendre avec une marge d'erreur. Mais si elle affiche
+systématiquement moins de 30 minutes sur deux semaines, le signal mérite
+attention —
+même s'il faut une consultation pour en comprendre la cause.
+</p>
+</div>
+<!-- ── SECTION 7 : LIMITES ── -->
+<h2>7. Ce que l'anneau ne peut pas faire — et ce que certains fabricants ne disent
+pas</h2>
+<p>
+La honnêteté est une forme de crédibilité. Voici ce qu'aucun anneau connecté
+actuel
+ne peut faire de façon fiable&nbsp;:
+</p>
+<p>
+<strong>Diagnostiquer.</strong> L'anneau est un outil de surveillance, pas un
+dispositif
+médical. Il peut signaler des anomalies potentielles, pas les confirmer. Toute
+donnée
+préoccupante doit être soumise à un professionnel de santé avant d'agir.
+</p>
+<p>
+<strong>Mesurer la glycémie.</strong> Malgré ce que certaines campagnes
+marketing laissent
+entendre, aucun anneau grand public actuel ne mesure la glycémie de façon non
+invasive
+et fiable. La lumière PPG ne traverse pas suffisamment les tissus pour
+quantifier le
+glucose sanguin avec la précision requise.
+</p>
+<p>
+<strong>Remplacer un bilan médical.</strong> Un score de récupération de 43/100
+deux
+matins de suite n'est pas un diagnostic. C'est un signal qui demande
+interprétation —
+par vous, en connaissant votre contexte, et par un médecin si les signaux
+persistent.
+</p>
+<!-- ── SECTION 8 : UTILISATION RÉELLE ── -->
+<h2>8. Comment utiliser ces données sans en devenir l'esclave</h2>
+<p>
+Un écueil fréquent chez les nouveaux utilisateurs&nbsp;: l'obsession du score.
+Chaque
+matin, avant même de s'étirer, on vérifie le chiffre. Si le score est bon, la
+journée
+commence bien. S'il est mauvais, l'anxiété s'installe. C'est contre-productif et
 
-      <p>
-        La photopléthysmographie — PPG pour aller vite — est le principe central de presque
-        tous les anneaux connectés. Des LED (généralement verte, rouge et infrarouge) émettent
-        de la lumière à travers la peau du doigt. Un photorécepteur mesure la lumière qui
-        revient. Le volume sanguin dans les capillaires change à chaque battement de cœur&nbsp;:
-        ce changement de réflexion lumineuse permet de déduire la fréquence cardiaque en temps
-        réel.
-      </p>
-      <p>
-        Le doigt est un excellent site de mesure. La densité capillaire y est élevée, l'anneau
-        ne bouge pas pendant le sommeil, et la pression de contact reste constante contrairement
-        à un bracelet lâche. C'est l'une des raisons pour lesquelles les mesures nocturnes d'un
-        anneau connecté sont généralement plus fiables que celles d'une montre portée au poignet.
-        <sup>[1]</sup>
-      </p>
-      <p>
-        À la PPG s'ajoute un accéléromètre 3D — qui détecte les micro-mouvements pendant le
-        sommeil — et un capteur de température cutanée. Ces trois sources de données combinées
-        permettent de construire un tableau de bord physiologique nocturne assez complet.
-      </p>
+ça a
+un nom dans la littérature sur la santé connectée&nbsp;: l'orthosomnie —
+l'anxiété
+induite par la recherche obsessionnelle d'un sommeil parfait. <sup>[6]</sup>
+</p>
+<p>
+L'usage intelligent, c'est la tendance sur 30 jours, pas la nuit isolée. C'est
+identifier des patterns&nbsp;: les nuits qui suivent une consommation d'alcool
+sont
+systématiquement moins récupératrices. Les semaines de stress professionnel
+intense
+font baisser la HRV de 20 %. Un repas tardif décale le pic de sommeil profond
+d'une
+heure.
+</p>
+<div class="pull-quote">
+<p>
+Ces données ne valent pas par leur précision absolue. Elles valent parce
+qu'elles
+révèlent des liens de cause à effet que vous n'auriez jamais perçus autrement.
+</p>
+</div>
+<p>
+La règle pratique&nbsp;: choisissez deux ou trois métriques sur lesquelles agir,
+et
+ignorez le reste pendant 60 jours. HRV le matin pour calibrer l'intensité de
+votre
+journée. SpO2 pour surveiller d'éventuelles anomalies respiratoires. Température
+pour attraper les signaux précoces de maladie. Ensuite seulement, si vous voulez
+aller
+plus loin, affinez.
+</p>
+<!-- ── SECTION 9 : CONCLUSION ── -->
+<h2>9. Conclusion</h2>
+<p>
+Un anneau connecté n'est pas un médecin de poche. C'est quelque chose de
+différent —
+et à certains égards plus intéressant&nbsp;: un outil de connaissance de soi
+physiologique
+qui fonctionne pendant que vous dormez, sans effort, sans contrainte.
+</p>
+<p>
+La fréquence cardiaque, la HRV, la SpO2, la température cutanée, les phases de
+sommeil estimées — ce sont autant de fenêtrès sur ce que votre corps fait quand
+vous
+n'êtes pas là pour l'observer. Le tout logé dans un anneau de 4 grammes.
+</p>
+<p>
+La question n'est pas de savoir si ces données sont parfaites. Elles ne le sont
+pas.
+La question est de savoir si elles vous donnent suffisamment d'information pour
+prendre
+de meilleures décisions sur votre sommeil, votre récupération et votre santé. Et
+là,
+pour la plupart des utilisateurs sérieux, la réponse est oui.
+</p>
+<!-- ── CTA ── -->
+<div class="cta-block">
+<div class="cta-block__eyebrow">SynchroVie</div>
+<h3>La SynchroRing X1 — suivi nocturne, toute la nuit</h3>
+<p>
+Fréquence cardiaque, HRV, SpO2, température, phases de sommeil. Autonomie 7
+jours,
+titane grade 5, résistance à l'eau 100 m. Compatible iOS et Android via
+l'application
+SynchroVie.
+</p>
+<a class="cta-btn"
+href="https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html">
+↗ Voir la SynchroRing X1
+</a>
+</div>
+<!-- ── SOURCES ── -->
+<div class="sources">
+<div class="sources__title">Sources</div>
+<ol>
+<li>
+Bent B. et al. (2020). <em>Investigating sources of inaccuracy in wearable
+optical
+heart rate sensors.</em> NPJ Digital Medicine, 3(1), 18.
+</li>
+<li>
+Shaffer F., Ginsberg J.P. (2017). <em>An Overview of Heart Rate Variability
+Metrics
+and Norms.</em> Frontiers in Public Health, 5, 258.
+</li>
+<li>
+Dempsey J.A. et al. (2010). <em>Pathophysiology of sleep apnea.</em>
+Physiological Reviews, 90(1), 47–112.
+</li>
+<li>
+Kellogg R. et al. (2020). <em>Finding the number of menstrual cycles using
+wearable
+devices.</em> NPJ Digital Medicine, 3, 68.
+</li>
+<li>
 
-      <div class="data-grid">
-        <div class="data-card">
-          <span class="data-card__icon" aria-hidden="true">PPG</span>
-          <div class="data-card__label">PPG</div>
-          <div class="data-card__value">250 Hz</div>
-          <div class="data-card__desc">Fréquence d'échantillonnage typique. Soit 250 lectures par seconde sur votre flux sanguin.</div>
-        </div>
-        <div class="data-card">
-          <span class="data-card__icon" aria-hidden="true">°C</span>
-          <div class="data-card__label">Température</div>
-          <div class="data-card__value">±0,1°C</div>
-          <div class="data-card__desc">Précision des meilleurs capteurs de température cutanée intégrés aux anneaux actuels.</div>
-        </div>
-        <div class="data-card">
-          <span class="data-card__icon" aria-hidden="true">3D</span>
-          <div class="data-card__label">Accéléromètre</div>
-          <div class="data-card__value">3 axes</div>
-          <div class="data-card__desc">Détecte les micro-mouvements pour distinguer le sommeil léger, profond et paradoxal.</div>
-        </div>
-        <div class="data-card">
-          <span class="data-card__icon" aria-hidden="true">SpO2</span>
-          <div class="data-card__label">SpO2</div>
-          <div class="data-card__value">LED rouge</div>
-          <div class="data-card__desc">La longueur d'onde rouge + infrarouge permet d'estimer la saturation en oxygène du sang.</div>
-        </div>
-      </div>
-
-      <!-- ── SECTION 2 : DONNÉES CLÉS ── -->
-      <h2>Les six signaux que votre anneau collecte chaque nuit</h2>
-
-      <p>
-        Connaître les capteurs, c'est bien. Savoir ce qu'ils mesurent concrètement — et ce que
-        ça implique pour votre récupération — c'est ce qui rend ces données utiles.
-      </p>
-
-      <table class="signal-table" aria-label="Signaux mesurés par un anneau connecté">
-        <thead>
-          <tr>
-            <th>Signal</th>
-            <th>Ce que ça mesure</th>
-            <th>Utilité pratique</th>
-            <th>Fiabilité</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><span class="signal-name">Fréquence cardiaque</span></td>
-            <td>Battements par minute en continu</td>
-            <td>Détecter une tachycardie nocturne, suivre la tendance au repos</td>
-            <td><span class="signal-badge badge--high">Élevée</span></td>
-          </tr>
-          <tr>
-            <td><span class="signal-name">HRV (variabilité)</span></td>
-            <td>Variation entre chaque battement</td>
-            <td>Indicateur de récupération du système nerveux autonome</td>
-            <td><span class="signal-badge badge--high">Élevée</span></td>
-          </tr>
-          <tr>
-            <td><span class="signal-name">SpO2</span></td>
-            <td>Saturation en oxygène du sang</td>
-            <td>Signal d'alerte pour apnée du sommeil, altitude, trouble respiratoire</td>
-            <td><span class="signal-badge badge--medium">Bonne</span></td>
-          </tr>
-          <tr>
-            <td><span class="signal-name">Température cutanée</span></td>
-            <td>Variation par rapport à votre baseline</td>
-            <td>Détecter fièvre débutante, ovulation, stress physiologique</td>
-            <td><span class="signal-badge badge--high">Élevée</span></td>
-          </tr>
-          <tr>
-            <td><span class="signal-name">Phases de sommeil</span></td>
-            <td>Cycles léger / profond / paradoxal</td>
-            <td>Comprendre la structure de votre nuit</td>
-            <td><span class="signal-badge badge--medium">Bonne</span></td>
-          </tr>
-          <tr>
-            <td><span class="signal-name">Fréquence respiratoire</span></td>
-            <td>Cycles respiratoires par minute</td>
-            <td>Détection d'anomalies respiratoires nocturnes</td>
-            <td><span class="signal-badge badge--low">Estimée</span></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <!-- ── SECTION 3 : HRV ── -->
-      <h2>La HRV&nbsp;: le signal le plus puissant — et le plus mal compris</h2>
-
-      <p>
-        Si vous ne deviez retenir qu'une seule métrique de votre anneau connecté, ce serait
-        celle-là. La HRV — Heart Rate Variability, ou variabilité de la fréquence cardiaque —
-        mesure le temps qui s'écoule entre chaque battement.
-      </p>
-      <p>
-        Contre-intuitivement, un cœur régulier comme un métronome n'est pas un cœur en bonne
-        santé. Un cœur bien récupéré, géré par un système nerveux autonome en forme, présente
-        des intervalles qui varient légèrement d'un battement à l'autre. C'est ce qu'on
-        appelle la variabilité. Plus elle est élevée, plus votre corps est capable de s'adapter
-        au stress, à l'effort, aux imprévus.
-      </p>
-
-      <div class="pull-quote">
-        <p>
-          Une HRV basse le matin après une nuit normale, ce n'est pas une donnée anodine.
-          C'est votre système nerveux autonome qui envoie un signal&nbsp;: il est en mode
-          survie, pas en mode récupération.
-        </p>
-      </div>
-
-      <p>
-        La nuit est le meilleur moment pour mesurer la HRV. Le corps est immobile, les
-        interférences sont minimales, et les variations reflètent vraiment l'état du
-        système nerveux — pas l'anxiété d'une réunion ou l'effort d'une montée d'escalier.
-        Les recherches menées sur des populations d'athlètes et de non-athlètes montrent
-        qu'une HRV nocturne basse est associée à une récupération incomplète, à un risque
-        accru de maladie et à de moins bonnes performances cognitives le lendemain. <sup>[2]</sup>
-      </p>
-      <p>
-        Ce que votre anneau mesure, c'est le RMSSD — racine carrée de la moyenne des carrés
-        des différences entre intervalles succèssifs. Un chiffre entre 20 et 100 ms pour la
-        plupart des adultes, mais ce qui compte n'est pas le chiffre absolu&nbsp;: c'est
-        l'écart par rapport à votre propre baseline sur 30 jours.
-      </p>
-
-      <div class="callout">
-        <div class="callout__label">À savoir</div>
-        <p>
-          Comparer votre HRV à celle de quelqu'un d'autre n'a aucun sens clinique. Une HRV
-          de 35 ms peut être excellente pour une personne sédentaire de 55 ans et catastrophique
-          pour un coureur de 30 ans. L'indicateur utile, c'est votre tendance sur le temps,
-          pas la valeur brute d'une nuit isolée.
-        </p>
-      </div>
-
-      <!-- ── SECTION 4 : SpO2 ── -->
-      <h2>SpO2&nbsp;: quand la saturation en oxygène devient un signal d'alerte</h2>
-
-      <p>
-        Une saturation en oxygène (SpO2) normale pendant le sommeil se situe entre 95 % et
-        100 %. En dessous de 90 %, on parle de désaturation&nbsp;: le sang ne transporte plus
-        assez d'oxygène vers les organes et le cerveau.
-      </p>
-      <p>
-        C'est précisément ce qui se passe lors des épisodes d'apnée du sommeil. Les voies
-        respiratoires se bloquent partiellement, la respiration s'arrête quelques secondes,
-        le taux d'O2 chute, le cerveau déclenche un micro-réveil pour rétablir la respiration.
-        Tout cela sans que vous ayez le moindre souvenir au réveil — mais avec des conséquences
-        réelles&nbsp;: fatigue chronique, pression artérielle élevée, risque cardiovasculaire
-        accru. <sup>[3]</sup>
-      </p>
-      <p>
-        Un anneau connecté ne diagnostique pas l'apnée du sommeil. Ce n'est pas son rôle
-        et ce n'est pas possible avec ce niveau de matériel. Mais il peut détecter des
-        patterns de désaturation répétée qui méritent une consultation médicale. Certains
-        utilisateurs ont découvert une apnée non diagnostiquée depuis des années grâce à ce
-        type de signal — pas à la suite d'un diagnostic médical, mais parce que les données
-        ont rendu visible quelque chose qui restait invisible.
-      </p>
-
-      <!-- ── SECTION 5 : TEMPÉRATURE ── -->
-      <h2>La température cutanée&nbsp;: le signal le plus discret, le plus révélateur</h2>
-
-      <p>
-        C'est probablement la métrique la moins connue et la plus sous-estimée.
-      </p>
-      <p>
-        Pendant le sommeil, la température corporelle suit un cycle précis. Elle baisse en
-        début de nuit pour favoriser l'endormissement et le sommeil profond, puis remonte
-        progressivement vers le réveil. Un anneau connecté ne mesure pas votre température
-        centrale (qui nécessiterait une mesure rectale ou tympanique) mais la variation de
-        température cutanée du doigt par rapport à votre propre baseline.
-      </p>
-      <p>
-        Cette variation est d'une utilité surprenante. Une élévation de 0,5 à 1°C par rapport
-        à votre baseline peut précéder les symptômes d'une infection de 24 à 48 heures. Votre
-        doigt sait avant vous que vous êtes en train de tomber malade. Des études sur des
-        données anonymisées massives montrent également que cette mesure permet de suivre les
-        cycles menstruels avec une fiabilité significative — la température s'élève légèrement
-        après l'ovulation sous l'effet de la progestérone. <sup>[4]</sup>
-      </p>
-
-      <!-- ── SECTION 6 : PHASES SOMMEIL ── -->
-      <h2>Phases de sommeil&nbsp;: ce que l'algorithme construit à partir de vos signaux</h2>
-
-      <p>
-        La mesure des phases de sommeil (sommeil léger, sommeil profond, sommeil paradoxal)
-        est la promesse la plus visible des trackers de nuit. Et c'est aussi la plus nuancée.
-      </p>
-      <p>
-        Un polysomnographe clinique — l'étalon-or du diagnostic du sommeil — mesure l'activité
-        cérébrale (EEG), les mouvements oculaires (EOG) et le tonus musculaire (EMG). Un
-        anneau connecté n'a accès à rien de tout cela. Il fait de l'inférence&nbsp;: il croise
-        fréquence cardiaque, HRV, fréquence respiratoire estimée et micro-mouvements pour
-        deviner dans quelle phase vous vous trouvez.
-      </p>
-      <p>
-        Les recherches de validation indépendante — celles menées sans financement des
-        fabricants — montrent que les anneaux connectés détectent correctement le sommeil
-        profond dans environ 65 à 70 % des cas comparés au polysomnographe. C'est mieux
-        que les montres, et nettement mieux qu'une estimation à l'intuition — mais ce n'est
-        pas de la médecine. <sup>[5]</sup>
-      </p>
-
-      <div class="callout">
-        <div class="callout__label">Ce que ça signifie concrètement</div>
-        <p>
-          Si votre anneau vous dit que vous avez eu 45 minutes de sommeil profond cette nuit,
-          la valeur exacte est à prendre avec une marge d'erreur. Mais si elle affiche
-          systématiquement moins de 30 minutes sur deux semaines, le signal mérite attention —
-          même s'il faut une consultation pour en comprendre la cause.
-        </p>
-      </div>
-
-      <!-- ── SECTION 7 : LIMITES ── -->
-      <h2>Ce que l'anneau ne peut pas faire — et ce que certains fabricants ne disent pas</h2>
-
-      <p>
-        La honnêteté est une forme de crédibilité. Voici ce qu'aucun anneau connecté actuel
-        ne peut faire de façon fiable&nbsp;:
-      </p>
-      <p>
-        <strong>Diagnostiquer.</strong> L'anneau est un outil de surveillance, pas un dispositif
-        médical. Il peut signaler des anomalies potentielles, pas les confirmer. Toute donnée
-        préoccupante doit être soumise à un professionnel de santé avant d'agir.
-      </p>
-      <p>
-        <strong>Mesurer la glycémie.</strong> Malgré ce que certaines campagnes marketing laissent
-        entendre, aucun anneau grand public actuel ne mesure la glycémie de façon non invasive
-        et fiable. La lumière PPG ne traverse pas suffisamment les tissus pour quantifier le
-        glucose sanguin avec la précision requise.
-      </p>
-      <p>
-        <strong>Remplacer un bilan médical.</strong> Un score de récupération de 43/100 deux
-        matins de suite n'est pas un diagnostic. C'est un signal qui demande interprétation —
-        par vous, en connaissant votre contexte, et par un médecin si les signaux persistent.
-      </p>
-
-      <!-- ── SECTION 8 : UTILISATION RÉELLE ── -->
-      <h2>Comment utiliser ces données sans en devenir l'esclave</h2>
-
-      <p>
-        Un écueil fréquent chez les nouveaux utilisateurs&nbsp;: l'obsession du score. Chaque
-        matin, avant même de s'étirer, on vérifie le chiffre. Si le score est bon, la journée
-        commence bien. S'il est mauvais, l'anxiété s'installe. C'est contre-productif et ça a
-        un nom dans la littérature sur la santé connectée&nbsp;: l'orthosomnie — l'anxiété
-        induite par la recherche obsessionnelle d'un sommeil parfait. <sup>[6]</sup>
-      </p>
-      <p>
-        L'usage intelligent, c'est la tendance sur 30 jours, pas la nuit isolée. C'est
-        identifier des patterns&nbsp;: les nuits qui suivent une consommation d'alcool sont
-        systématiquement moins récupératrices. Les semaines de stress professionnel intense
-        font baisser la HRV de 20 %. Un repas tardif décale le pic de sommeil profond d'une
-        heure.
-      </p>
-
-      <div class="pull-quote">
-        <p>
-          Ces données ne valent pas par leur précision absolue. Elles valent parce qu'elles
-          révèlent des liens de cause à effet que vous n'auriez jamais perçus autrement.
-        </p>
-      </div>
-
-      <p>
-        La règle pratique&nbsp;: choisissez deux ou trois métriques sur lesquelles agir, et
-        ignorez le reste pendant 60 jours. HRV le matin pour calibrer l'intensité de votre
-        journée. SpO2 pour surveiller d'éventuelles anomalies respiratoires. Température
-        pour attraper les signaux précoces de maladie. Ensuite seulement, si vous voulez aller
-        plus loin, affinez.
-      </p>
-
-      <!-- ── SECTION 9 : CONCLUSION ── -->
-      <h2>Conclusion</h2>
-
-      <p>
-        Un anneau connecté n'est pas un médecin de poche. C'est quelque chose de différent —
-        et à certains égards plus intéressant&nbsp;: un outil de connaissance de soi physiologique
-        qui fonctionne pendant que vous dormez, sans effort, sans contrainte.
-      </p>
-      <p>
-        La fréquence cardiaque, la HRV, la SpO2, la température cutanée, les phases de
-        sommeil estimées — ce sont autant de fenêtrès sur ce que votre corps fait quand vous
-        n'êtes pas là pour l'observer. Le tout logé dans un anneau de 4 grammes.
-      </p>
-      <p>
-        La question n'est pas de savoir si ces données sont parfaites. Elles ne le sont pas.
-        La question est de savoir si elles vous donnent suffisamment d'information pour prendre
-        de meilleures décisions sur votre sommeil, votre récupération et votre santé. Et là,
-        pour la plupart des utilisateurs sérieux, la réponse est oui.
-      </p>
-
-      <!-- ── CTA ── -->
-      <div class="cta-block">
-        <div class="cta-block__eyebrow">SynchroVie</div>
-        <h3>La SynchroRing X1 — suivi nocturne, toute la nuit</h3>
-        <p>
-          Fréquence cardiaque, HRV, SpO2, température, phases de sommeil. Autonomie 7 jours,
-          titane grade 5, résistance à l'eau 100 m. Compatible iOS et Android via l'application
-          SynchroVie.
-        </p>
-        <a class="cta-btn"
-           href="https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html">
-          ↗ Voir la SynchroRing X1
-        </a>
-      </div>
-
-      <!-- ── SOURCES ── -->
-      <div class="sources">
-        <div class="sources__title">Sources</div>
-        <ol>
-          <li>
-            Bent B. et al. (2020). <em>Investigating sources of inaccuracy in wearable optical
-            heart rate sensors.</em> NPJ Digital Medicine, 3(1), 18.
-          </li>
-          <li>
-            Shaffer F., Ginsberg J.P. (2017). <em>An Overview of Heart Rate Variability Metrics
-            and Norms.</em> Frontiers in Public Health, 5, 258.
-          </li>
-          <li>
-            Dempsey J.A. et al. (2010). <em>Pathophysiology of sleep apnea.</em>
-            Physiological Reviews, 90(1), 47–112.
-          </li>
-          <li>
-            Kellogg R. et al. (2020). <em>Finding the number of menstrual cycles using wearable
-            devices.</em> NPJ Digital Medicine, 3, 68.
-          </li>
-          <li>
-            de Zambotti M. et al. (2019). <em>Wearable sleep technology in clinical and research
-            settings.</em> Medicine & Science in Sports & Exercise, 51(7), 1538–1557.
-          </li>
-          <li>
-            Baron K.G. et al. (2017). <em>Orthosomnia: Are Some Patients Taking the Quantified
-            Self Too Far?</em> Journal of Clinical Sleep Medicine, 13(2), 351–354.
-          </li>
-        </ol>
-      </div>
-
-    </article>
-  
+de Zambotti M. et al. (2019). <em>Wearable sleep technology in clinical and
+research
+settings.</em> Medicine & Science in Sports & Exercise, 51(7), 1538–1557.
+</li>
+<li>
+Baron K.G. et al. (2017). <em>Orthosomnia: Are Some Patients Taking the
+Quantified
+Self Too Far?</em> Journal of Clinical Sleep Medicine, 13(2), 351–354.
+</li>
+</ol>
+</div>
+</article>
 <!-- Guide Gratuit Lead Magnet -->
 <div class="lead-block" style="max-width:800px;margin:40px auto;padding:22px;">
-  <h4>Téléchargez notre guide gratuit</h4>
-  <p>"Les 5 signaux que votre corps envoie avant un burn-out" — découvrez ce que 94% des gens ignorent.</p>
-  <form class="lead-form" id="lead-magnet-form-blog-anneau-connecte-donnees-nuit">
-    <input type="email" name="email" placeholder="Votre email" required>
-    <button type="submit">Recevoir mon guide</button>
-  </form>
+<h4>Téléchargez notre guide gratuit</h4>
+<p>"Les 5 signaux que votre corps envoie avant un burn-out" — découvrez ce que
+94% des gens ignorent.</p>
+<form class="lead-form" id="lead-magnet-form-blog-anneau-connecte-donnees-nuit">
+<input type="email" name="email" placeholder="Votre email" required>
+<button type="submit">Recevoir mon guide</button>
+</form>
 </div>
 </main>
-
 <footer>
-  <div class="footer-grid">
-    <div class="footer-col">
-      <a href="https://synchro-vie.com/" class="nav-brand" style="margin-bottom:8px;display:inline-block;">SYNCHROVIE</a>
-      <p class="footer-tagline">L'ingénierie de la performance humaine.</p>
-      <p class="footer-address">Paris, France</p>
-    </div>
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <a href="https://synchro-vie.com/">Accueil</a>
-      <a href="../index.html#boutique">Boutique</a>
-      <a href="https://synchro-vie.com/blog.html">Blog</a>
-      <a href="https://synchro-vie.com/faq.html">FAQ</a>
-      <a href="https://synchro-vie.com/propos.html">À Propos</a>
-      <a href="https://synchro-vie.com/contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Légal</h4>
-      <a href="https://synchro-vie.com/legal.html">Mentions Légales</a>
-      <a href="https://synchro-vie.com/cgv.html">CGV</a>
-      <a href="https://synchro-vie.com/politique-de-confidentialite.html">Confidentialité</a>
-      <a href="https://synchro-vie.com/cookies.html">Cookies</a>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <a   href="mailto:synchrovie@gmail.com">Email Expert</a>
-      <a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-payment">
-      <span>Paiement sécurisé :</span>
-      <span class="payment-badges"><i class="fa-brands fa-cc-visa" aria-label="Visa"></i> <i class="fa-brands fa-cc-mastercard" aria-label="Mastercard"></i> <i class="fa-brands fa-paypal" aria-label="PayPal"></i></span>
-    </div>
-    <div class="footer-guarantees">Livraison 7-10j Europe — Retours 30j — Garantie 2 ans</div>
-    <p class="footer-copyright">2026 SynchroVie. Tous droits réservés.</p>
-  </div>
+<div class="footer-grid">
+<div class="footer-col">
+<a href="https://synchro-vie.com/" class="nav-brand"
+style="margin-bottom:8px;display:inline-block;">SYNCHROVIE</a>
+<p class="footer-tagline">L'ingénierie de la performance humaine.</p>
+<p class="footer-address">Paris, France</p>
+</div>
+<div class="footer-col">
+<h4>Navigation</h4>
+<a href="https://synchro-vie.com/">Accueil</a>
+<a href="../index.html#boutique">Boutique</a>
+<a href="https://synchro-vie.com/blog.html">Blog</a>
+<a href="https://synchro-vie.com/faq.html">FAQ</a>
+<a href="https://synchro-vie.com/propos.html">À Propos</a>
+<a href="https://synchro-vie.com/contact.html">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Légal</h4>
+<a href="https://synchro-vie.com/legal.html">Mentions Légales</a>
+<a href="https://synchro-vie.com/cgv.html">CGV</a>
+<a href="https://synchro-vie.com/politique-de-confidentialite.html">Confidential
+ité</a>
+<a href="https://synchro-vie.com/cookies.html">Cookies</a>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<a href="mailto:synchrovie@gmail.com">Email Expert</a>
+<a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-payment">
+<span>Paiement sécurisé :</span>
+<span class="payment-badges"><i class="fa-brands fa-cc-visa"
+aria-label="Visa"></i> <i class="fa-brands fa-cc-mastercard"
+aria-label="Mastercard"></i> <i class="fa-brands fa-paypal"
+aria-label="PayPal"></i></span>
+</div>
+<div class="footer-guarantees">Livraison 7-10j Europe — Retours 30j — Garantie 2
+ans</div>
+<p class="footer-copyright">2026 SynchroVie. Tous droits réservés.</p>
+</div>
 </footer>
 
-
-
 <button class="back-to-top" id="backToTop">^</button>
-
 <div class="brevo-overlay" id="brevoOverlay" aria-hidden="true">
-  <div class="brevo-popup" role="dialog" aria-modal="true" aria-labelledby="brevoTitle">
-    <button class="brevo-close" id="brevoClose" aria-label="Fermer">&times;</button>
-    <div class="brevo-popup-inner">
-      <p class="brevo-eyebrow">Lettre SynchroVie</p>
-      <h3 id="brevoTitle" class="brevo-title-desktop">Attendez, avant de partir…</h3>
-      <h3 id="brevoTitleMobile" class="brevo-title-mobile">Un email par semaine, zéro spam</h3>
-      <p class="brevo-subtitle-desktop">Recevez ce que mesurent vraiment vos appareils, les retours d'autrès utilisateurs, et les nouveautés en avant-première. Pas de promo quotidienne, promis.</p>
-      <p class="brevo-subtitle-mobile">Pendant que vous explorez la boutique, laissez votre email : on vous envoie un récap des technologies qui peuvent vous concerner, sans spam.</p>
-      <form class="brevo-form" id="brevoPopupForm">
-        <input type="email" placeholder="Votre email" required aria-label="Votre email">
-        <button type="submit" class="btn btn-primary">Rejoindre</button>
-      </form>
-      <p class="brevo-disclaimer">Désinscription en un clic. <a href="https://synchro-vie.com/politique-de-confidentialite.html">Politique de confidentialité</a>.</p>
-    </div>
-  </div>
+<div class="brevo-popup" role="dialog" aria-modal="true"
+aria-labelledby="brevoTitle">
+<button class="brevo-close" id="brevoClose" aria-label="Fermer">&times;</button>
+<div class="brevo-popup-inner">
+<p class="brevo-eyebrow">Lettre SynchroVie</p>
+<h3 id="brevoTitle" class="brevo-title-desktop">Attendez, avant de partir…</h3>
+<h3 id="brevoTitleMobile" class="brevo-title-mobile">Un email par semaine, zéro
+spam</h3>
+<p class="brevo-subtitle-desktop">Recevez ce que mesurent vraiment vos
+appareils, les retours d'autrès utilisateurs, et les nouveautés en
+avant-première. Pas de promo quotidienne, promis.</p>
+<p class="brevo-subtitle-mobile">Pendant que vous explorez la boutique, laissez
+votre email : on vous envoie un récap des technologies qui peuvent vous
+concerner, sans spam.</p>
+<form class="brevo-form" id="brevoPopupForm">
+<input type="email" placeholder="Votre email" required aria-label="Votre email">
+<button type="submit" class="btn btn-primary">Rejoindre</button>
+</form>
+<p class="brevo-disclaimer">Désinscription en un clic. <a
+href="https://synchro-vie.com/politique-de-confidentialite.html">Politique de
+confidentialité</a>.</p>
 </div>
+</div>
+</div>
+
 
 <script src="../brevo.js" defer></script>
 <script>
 const backToTop = document.getElementById('backToTop');
-window.addEventListener('scroll', () => { backToTop?.classList.toggle('show', window.pageYOffset > 400); }, { passive: true });
-backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+window.addEventListener('scroll', () => { backToTop?.classList.toggle('show',
+window.pageYOffset > 400); }, { passive: true });
+backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior:
+'smooth' }));
 const menuToggle = document.getElementById('menuToggle');
 const mobileMenu = document.getElementById('mobileMenu');
 const menuClose = document.getElementById('menuClose');
 if (menuToggle && mobileMenu) {
-  menuToggle.addEventListener('click', () => { menuToggle.classList.toggle('active'); mobileMenu.classList.toggle('active'); document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : ''; });
-  if (menuClose) { menuClose.addEventListener('click', () => { menuToggle.classList.remove('active'); mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }); }
+menuToggle.addEventListener('click', () => {
+menuToggle.classList.toggle('active'); mobileMenu.classList.toggle('active');
+document.body.style.overflow = mobileMenu.classList.contains('active') ?
+'hidden' : ''; });
+if (menuClose) { menuClose.addEventListener('click', () => {
+menuToggle.classList.remove('active'); mobileMenu.classList.remove('active');
+document.body.style.overflow = ''; }); }
 }
 const header = document.querySelector('.main-nav');
-window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.pageYOffset > 50); }, { passive: true });
+window.addEventListener('scroll', () => { header.classList.toggle('scrolled',
+window.pageYOffset > 50); }, { passive: true });
 </script>
 </body>
 </html>

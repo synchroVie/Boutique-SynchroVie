@@ -2,458 +2,784 @@
 <html lang="fr">
 <head>
 <script>
-// Redirection forcée GitHub Pages → domaine personnalisé (anti duplicate content)
+// Redirection forcée GitHub Pages → domaine personnalisé (anti duplicate
+content)
 (function() {
-  if (window.location.hostname === 'synchrovie.github.io' || window.location.hostname === 'synchroVie.github.io') {
-    var newPath = window.location.pathname.replace(/^\/Boutique-SynchroVie/, '');
-    var newUrl = 'https://synchro-vie.com' + newPath + window.location.search + window.location.hash;
-    window.location.replace(newUrl);
-  }
+if (window.location.hostname === 'synchrovie.github.io' ||
+window.location.hostname === 'synchroVie.github.io') {
+var newPath = window.location.pathname.replace(/^\/Boutique-SynchroVie/, '');
+var newUrl = 'https://synchro-vie.com' + newPath + window.location.search +
+window.location.hash;
+window.location.replace(newUrl);
+}
 })();
 </script>
-  <!-- Google Consent Mode v2 — avant gtag.js -->
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('consent', 'default', {
-      'analytics_storage': 'denied',
-      'ad_storage': 'denied'
-    });
-  </script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7FXCZJQVT"></script>
-  <script>
-    gtag('js', new Date());
-    gtag('config', 'G-R7FXCZJQVT');
-  </script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SynchroVie | Objets connectés santé & biohacking</title>
-  <meta name="description" content="SynchroVie, boutique biohacking francophone. 17 objets connectés santé : sommeil, stress, récupération, métabolisme. Livraison Europe. Expert SynchroVie (email).">
-  <link rel="canonical" href="https://synchro-vie.com/">
-  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-  <meta name="google-site-verification" content="wV9VVQ2Pq7ktBfdQB5Sqburfdo4EDJpyvpAmfSI2XB4" />
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="fr_FR">
-  <meta property="og:site_name" content="SynchroVie">
-  <meta property="og:url" content="https://synchro-vie.com/">
-  <meta property="og:title" content="SynchroVie | Objets connectés santé & biohacking">
-  <meta property="og:description" content="Bagues connectées, tensiomètres, masques à ondes delta, pistolets de massage : les objets qui révèlent ce que votre corps ne dit pas.">
-  <meta property="og:image" content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="SynchroVie | Objets connectés santé & biohacking">
-  <meta name="twitter:description" content="Les objets connectés qui révèlent ce que votre corps ne dit pas.">
-  <meta name="twitter:image" content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
-
-  <!-- JSON-LD Organization + WebSite -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://synchro-vie.com/#organization",
-        "name": "SynchroVie",
-        "url": "https://synchro-vie.com/",
-        "logo": "https://synchro-vie.com/assets/img/logo-synchrovie.webp",
-        "sameAs": [
-          "https://www.facebook.com/synchrovie",
-          "https://www.instagram.com/synchrovie",
-          "https://www.pinterest.com/synchrovie"
-        ]
+<!-- Google Consent Mode v2 — avant gtag.js -->
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('consent', 'default', {
+'analytics_storage': 'denied',
+'ad_storage': 'denied'
+});
+</script>
+<!-- Google tag (gtag.js) -->
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=G-R7FXCZJQVT"></script>
+<script>
+gtag('js', new Date());
+gtag('config', 'G-R7FXCZJQVT');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SynchroVie | Objets connectés santé & biohacking</title>
+<meta name="description" content="SynchroVie, boutique biohacking francophone. 17 objets connectés santé : sommeil, stress, récupération, métabolisme. Livraison Europe. Expert SynchroVie (email).">
+<link rel="canonical" href="https://synchro-vie.com/">
+<link rel="alternate" hreflang="fr-FR" href="https://synchro-vie.com/">
+<link rel="alternate" hreflang="fr-BE" href="https://synchro-vie.com/">
+<link rel="alternate" hreflang="fr-CH" href="https://synchro-vie.com/">
+<link rel="alternate" hreflang="fr-LU" href="https://synchro-vie.com/">
+<link rel="alternate" hreflang="x-default" href="https://synchro-vie.com/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta name="google-site-verification"
+content="wV9VVQ2Pq7ktBfdQB5Sqburfdo4EDJpyvpAmfSI2XB4" />
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="SynchroVie">
+<meta property="og:url" content="https://synchro-vie.com/">
+<meta property="og:title" content="SynchroVie | Objets connectés santé & biohacking">
+<meta property="og:description" content="Bagues connectées, tensiomètres, masques à ondes delta, pistolets de massage : les objets qui révèlent ce que votre corps ne dit pas.">
+<meta property="og:image"
+content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SynchroVie | Objets connectés santé & biohacking">
+<meta name="twitter:description" content="Les objets connectés qui révèlent ce que votre corps ne dit pas.">
+<meta name="twitter:image"
+content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
+<!-- JSON-LD Organization + WebSite -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://synchro-vie.com/#organization",
+      "name": "SynchroVie",
+      "url": "https://synchro-vie.com/",
+      "logo": "https://synchro-vie.com/assets/img/logo-synchrovie.webp",
+      "sameAs": [
+        "https://www.facebook.com/synchrovie",
+        "https://www.instagram.com/synchrovie",
+        "https://www.pinterest.com/synchrovie"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://synchro-vie.com/#website",
+      "name": "SynchroVie",
+      "url": "https://synchro-vie.com/",
+      "publisher": {
+        "@id": "https://synchro-vie.com/#organization"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://synchro-vie.com/#website",
-        "name": "SynchroVie",
-        "url": "https://synchro-vie.com/",
-        "publisher": { "@id": "https://synchro-vie.com/#organization" },
-        "inLanguage": "fr-FR"
-      },
-      {
-        "@type": "ItemList",
-        "@id": "https://synchro-vie.com/#catalogue",
-        "name": "Catalogue SynchroVie 2026",
-        "numberOfItems": 17,
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "SynchroRing X1", "url": "https://synchro-vie.com/produits/bague-connectée-santé-biométrique.html"},
-          {"@type": "ListItem", "position": 2, "name": "B-Pressure Connect", "url": "https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html"},
-          {"@type": "ListItem", "position": 3, "name": "Scale-Master Pro", "url": "https://synchro-vie.com/produits/balance-impedancemetre-connectée.html"},
-          {"@type": "ListItem", "position": 4, "name": "Vitals-Scan Pro", "url": "https://synchro-vie.com/produits/moniteur-ecg-portable-oxygène.html"},
-          {"@type": "ListItem", "position": 5, "name": "Thermo-Sense Ultra", "url": "https://synchro-vie.com/produits/thermometre-infrarouge-médical.html"},
-          {"@type": "ListItem", "position": 6, "name": "NeuroRest G2", "url": "https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html"},
-          {"@type": "ListItem", "position": 7, "name": "SleepTrack Zen", "url": "https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html"},
-          {"@type": "ListItem", "position": 8, "name": "Aura-Light Clock", "url": "https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"},
-          {"@type": "ListItem", "position": 9, "name": "Gravity-Tech Pad", "url": "https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"},
-          {"@type": "ListItem", "position": 10, "name": "ThermoWrap FIR", "url": "https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"},
-          {"@type": "ListItem", "position": 11, "name": "Aura-Ring Calm", "url": "https://synchro-vie.com/produits/bague-contrôlé-cortisol.html"},
-          {"@type": "ListItem", "position": 12, "name": "ElectroBoost S3", "url": "https://synchro-vie.com/produits/stimulateur-musculaire-ems.html"},
-          {"@type": "ListItem", "position": 13, "name": "Posture-Core", "url": "https://synchro-vie.com/produits/correcteur-posture-haptique.html"},
-          {"@type": "ListItem", "position": 14, "name": "Flex-Gun Mini", "url": "https://synchro-vie.com/produits/pistolet-massage-compact.html"},
-          {"@type": "ListItem", "position": 15, "name": "Knee-Tech Support", "url": "https://synchro-vie.com/produits/genouillere-thermique-compressive.html"},
-          {"@type": "ListItem", "position": 16, "name": "Grip-Master Pro", "url": "https://synchro-vie.com/produits/dynamometre-force-digital.html"},
-          {"@type": "ListItem", "position": 17, "name": "LumiRed Pro X1", "url": "https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html"}
-        ]
-      }
-    ]
-  }
-  </script>
-
-  <meta name="theme-color" content="#0B1B3D">
-  <meta name="p:domain_verify" content="6372df3d6408241ceb5122873e4a05b7"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+      "inLanguage": "fr-FR"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://synchro-vie.com/#catalogue",
+      "name": "Catalogue SynchroVie 2026",
+      "numberOfItems": 17,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "SynchroRing X1",
+          "url": "https://synchro-vie.com/produits/bague-connectée-santé-biométrique.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "B-Pressure Connect",
+          "url": "https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Scale-Master Pro",
+          "url": "https://synchro-vie.com/produits/balance-impedancemetre-connectée.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Vitals-Scan Pro",
+          "url": "https://synchro-vie.com/produits/moniteur-ecg-portable-oxygène.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Thermo-Sense Ultra",
+          "url": "https://synchro-vie.com/produits/thermometre-infrarouge-médical.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "NeuroRest G2",
+          "url": "https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "SleepTrack Zen",
+          "url": "https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Aura-Light Clock",
+          "url": "https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Gravity-Tech Pad",
+          "url": "https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "ThermoWrap FIR",
+          "url": "https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "Aura-Ring Calm",
+          "url": "https://synchro-vie.com/produits/bague-contrôlé-cortisol.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "ElectroBoost S3",
+          "url": "https://synchro-vie.com/produits/stimulateur-musculaire-ems.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Posture-Core",
+          "url": "https://synchro-vie.com/produits/correcteur-posture-haptique.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "name": "Flex-Gun Mini",
+          "url": "https://synchro-vie.com/produits/pistolet-massage-compact.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "name": "Knee-Tech Support",
+          "url": "https://synchro-vie.com/produits/genouillere-thermique-compressive.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "name": "Grip-Master Pro",
+          "url": "https://synchro-vie.com/produits/dynamometre-force-digital.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "name": "LumiRed Pro X1",
+          "url": "https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+<meta name="theme-color" content="#0B1B3D">
+<meta name="p:domain_verify" content="6372df3d6408241ceb5122873e4a05b7"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <!-- TikTok Pixel Code Start -->
 <script>
 !function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","ide
+ntify","instances","debug","on","off","once","ready","alias","group","enableCook
+ie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefe
+r=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arg
+uments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.metho
+ds[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
+]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pix el/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._
+t=ttq._t||{},ttq._t[e]=+new
+Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.ge tElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-
-  ttq.load('D9A3IORC77UEFAL2KKS0');
-  ttq.page();
+ttq.load('D9A3IORC77UEFAL2KKS0');
+ttq.page();
 }(window, document, 'ttq');
 </script>
 <!-- TikTok Pixel Code End -->
-  
-  
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#0B2545">
-<link rel="icon" type="image/webp" href="/assets/img/logo-synchrovie.webp">
-  <link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
-  </head>
-<body>
 
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0B2545">
+<link rel="icon" type="image/webp" href="/assets/img/logo-synchrovie.webp">
+<link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
+</head>
+<body>
 <!-- Cookie Banner RGPD -->
 <div class="cookie-banner" id="cookieBanner">
-  <p>Ce site utilisé des cookies de mesure d'audience (Google Analytics) pour comprendre comment vous naviguez et améliorer la boutique. Vos données ne sont jamais vendues. <a href="https://synchro-vie.com/cookies.html">En savoir plus</a>.</p>
-  <div class="cookie-actions">
-    <button class="btn btn-outline btn-sm" id="cookieRefuse">Refuser</button>
-    <button class="btn btn-primary btn-sm" id="cookieAccept">Accepter</button>
-  </div>
-</div>
+<p>Ce site utilisé des cookies de mesure d'audience (Google Analytics) pour
+comprendre comment vous naviguez et améliorer la boutique. Vos données ne sont
+jamais vendues. <a href="https://synchro-vie.com/cookies.html">En savoir
+plus</a>.</p>
+<div class="cookie-actions">
+<button class="btn btn-outline btn-sm" id="cookieRefuse">Refuser</button>
 
+<button class="btn btn-primary btn-sm" id="cookieAccept">Accepter</button>
+</div>
+</div>
 <!-- Social Bar Preuve Sociale -->
 <div class="social-bar">
-  <span class="stars">★★★★★</span>
-  <span class="rating-text">4.7/5 — 47 avis</span>
-  <div class="social-carousel">
-    <div class="social-slide active">"La SynchroRing a révélé mes apnées du sommeil"</div>
-    <div class="social-slide">"Ma tension captée avant le malaise"</div>
-    <div class="social-slide">"Mon père a découvert son arythmie"</div>
-  </div>
+<span class="stars">★★★★★</span>
+<span class="rating-text">4.7/5 — 47 avis</span>
+<div class="social-carousel">
+<div class="social-slide active">"La SynchroRing a révélé mes apnées du
+sommeil"</div>
+<div class="social-slide">"Ma tension captée avant le malaise"</div>
+<div class="social-slide">"Mon père a découvert son arythmie"</div>
+</div>
 </div>
 <!-- Trust Bar — SVG, sans emoji -->
 <div class="trust-bar">
-  <span><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></span> Livraison Europe 7-10j</span>
-  <span><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></span> Paiement sécurisé</span>
-  <span><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 010 8h-1"/></svg></span> Retours 30 jours</span>
-  <span><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span> Garantie 2 ans</span>
-  <span><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.6L22 9.6l-5 4.9 1.2 6.9L12 18l-6.2 3.4L7 14.5 2 9.6l7.1-1z"/></svg></span> 4.7/5 — 47 avis vérifiés</span>
+<span><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24"
+fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5"
+r="2.5"/></svg></span> Livraison Europe 7-10j</span>
+<span><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24"
+fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path
+d="M7 11V7a5 5 0 0110 0v4"/></svg></span> Paiement sécurisé</span>
+<span><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24"
+fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+stroke-linejoin="round"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 010 8h-1"/></svg></span> Retours 30 jours</span>
+<span><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24"
+fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span> Garantie 2 ans</span>
+<span><span class="icon"><svg width="14" height="14" viewBox="0 0 24 24"
+fill="currentColor"><path d="M12 2l2.9 6.6L22 9.6l-5 4.9 1.2 6.9L12 18l-6.2 3.4L7 14.5 2 9.6l7.1-1z"/></svg></span> 4.7/5 — 47 avis vérifiés</span>
 </div>
-
 <!-- Navigation -->
 <nav class="main-nav">
-  <a href="https://synchro-vie.com/" class="nav-brand">SYNCHROVIE</a>
-  <div class="nav-links">
-    <a href="#boutique">Boutique</a>
-    <a href="https://synchro-vie.com/blog.html">Blog</a>
-    <a href="https://synchro-vie.com/faq.html">FAQ</a>
-    <a href="https://synchro-vie.com/contact.html">Contact</a>
-  </div>
-  <a  class="nav-whatsapp"  href="mailto:synchrovie@gmail.com"href="mailto:synchrovie@gmail.com">Email</a>
-  <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-    <span class="menu-label">Menu</span>
-  </button>
+<a href="https://synchro-vie.com/" class="nav-brand">SYNCHROVIE</a>
+<div class="nav-links">
+<a href="#boutique">Boutique</a>
+<a href="https://synchro-vie.com/blog.html">Blog</a>
+<a href="https://synchro-vie.com/faq.html">FAQ</a>
+<a href="https://synchro-vie.com/contact.html">Contact</a>
+</div>
+<a class="nav-whatsapp"
+href="mailto:synchrovie@gmail.com">Email</a>
+<button class="menu-toggle" id="menuToggle" aria-label="Menu">
+<span class="menu-label">Menu</span>
+</button>
 </nav>
-
 <!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu">
-  <button class="menu-close" id="menuClose" aria-label="Fermer">&times;</button>
-  <a href="https://synchro-vie.com/">Accueil</a>
-  <a href="#boutique">Boutique</a>
-  <a href="https://synchro-vie.com/blog.html">Blog</a>
-  <a href="https://synchro-vie.com/faq.html">FAQ</a>
-  <a href="https://synchro-vie.com/propos.html">À Propos</a>
-  <a href="https://synchro-vie.com/contact.html">Contact</a>
-  <a   href="mailto:synchrovie@gmail.com">Email Expert</a>
+<button class="menu-close" id="menuClose" aria-label="Fermer">&times;</button>
+<a href="https://synchro-vie.com/">Accueil</a>
+<a href="#boutique">Boutique</a>
+<a href="https://synchro-vie.com/blog.html">Blog</a>
+<a href="https://synchro-vie.com/faq.html">FAQ</a>
+<a href="https://synchro-vie.com/propos.html">À Propos</a>
+<a href="https://synchro-vie.com/contact.html">Contact</a>
+<a href="mailto:synchrovie@gmail.com">Email Expert</a>
 </div>
-
 <main>
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-img-wrap">
-      <img src="assets/img/hero/hero-synchrovie-2026.webp" alt="Objets connectés SynchroVie pour le suivi de la santé" loading="eager" fetchpriority="high">
-    </div>
-    <div class="hero-content">
-      <h1>SynchroVie : objets connectés santé et biohacking sans abonnement</h1>
-      <h2 class="hero-tagline" style="font-size:1.3rem;color:#E0E7FF;font-weight:400;margin:8px 0 12px;line-height:1.4;">On découvre toujours le problème <span class="highlight">trop tard.</span></h2>
-      <p class="hero-subtitle">Une tension qui grimpe en silence depuis des mois. Des nuits qui ne reposent plus depuis si longtemps que c'est devenu "normal". Un corps qui encaisse, encaisse — jusqu'au jour où il ne peut plus. SynchroVie réunit les objets connectés qui captent ces signaux <strong>avant</strong>, pas après, pour agir au bon moment plutôt que dans l'urgence.</p>
-    </div>
-  </section>
+<!-- Hero -->
+<section class="hero">
+<div class="hero-img-wrap">
+<img src="assets/img/hero/hero-synchrovie-2026.webp" alt="Objets connectés SynchroVie pour le suivi de la santé" loading="eager" fetchpriority="high">
+</div>
+<div class="hero-content">
+<h1>SynchroVie : objets connectés santé et biohacking sans abonnement</h1>
+<h2 class="hero-tagline"
+style="font-size:1.3rem;color:#E0E7FF;font-weight:400;margin:8px 012px;line-height:1.4;">On découvre toujours le problème <span
+class="highlight">trop tard.</span></h2>
+<p class="hero-subtitle">Une tension qui grimpe en silence depuis des mois. Des
+nuits qui ne reposent plus depuis si longtemps que c'est devenu "normal". Un
+corps qui encaisse, encaisse — jusqu'au jour où il ne peut plus. SynchroVie
+réunit les objets connectés qui captent ces signaux <strong>avant</strong>, pas
+après, pour agir au bon moment plutôt que dans l'urgence.</p>
+</div>
+</section>
+<!-- Catégories -->
+<section class="categories-section" id="boutique">
+<h2 class="section-title">Quatre façons de comprendre ce qui se passe
+vraiment</h2>
+<div class="categories-grid">
+<a href="#cat-bio" class="category-card">
+<div class="category-card-img"><img
+src="assets/img/categories/bio-monitoring.webp" alt="Bio-monitoring et santé préventive" loading="lazy"></div>
+<h3>Bio-Monitoring & Santé Préventive</h3>
+<p>Tension, oxygénation, glycémie, rythme cardiaque — les signaux que votre
+corps envoie en silence, bien avant que vous ne sentiez quoi que ce soit.</p>
+<span class="category-count">6 produits</span>
 
-  <!-- Catégories -->
-  <section class="categories-section" id="boutique">
-    <h2 class="section-title">Quatre façons de comprendre ce qui se passe vraiment</h2>
-    <div class="categories-grid">
-      <a href="#cat-bio" class="category-card">
-        <div class="category-card-img"><img src="assets/img/categories/bio-monitoring.webp" alt="Bio-monitoring et santé préventive" loading="lazy"></div>
-        <h3>Bio-Monitoring & Santé Préventive</h3>
-        <p>Tension, oxygénation, glycémie, rythme cardiaque — les signaux que votre corps envoie en silence, bien avant que vous ne sentiez quoi que ce soit.</p>
-        <span class="category-count">6 produits</span>
-      </a>
-      <a href="#cat-sommeil" class="category-card">
-        <div class="category-card-img"><img src="assets/img/categories/neuro-sommeil.webp" alt="Neuro-sommeil et récupération" loading="lazy"></div>
-        <h3>Neuro-Sommeil & Récupération</h3>
-        <p>Le sommeil qui ne répare plus, les nuits qui s'enchaînent sans jamais vraiment recharger. Comprendre ce qui se passe pendant que vous dormez — et enfin agir dessus.</p>
-        <span class="category-count">5 produits</span>
-      </a>
-      <a href="#cat-biofeedback" class="category-card">
-        <div class="category-card-img"><img src="assets/img/categories/biofeedback.webp" alt="Biofeedback et sérénité mentale" loading="lazy"></div>
-        <h3>Biofeedback & Sérénité Mentale</h3>
-        <p>Le stress qu'on porte sans s'en rendre compte, jusqu'à ce qu'il se loge dans les épaules, la mâchoire, le sommeil. Des outils pour le voir venir — et le faire retomber.</p>
-        <span class="category-count">2 produits</span>
-      </a>
-      <a href="#cat-performance" class="category-card">
-        <div class="category-card-img"><img src="assets/img/categories/performance-physique.webp" alt="Performance et équilibre physique" loading="lazy"></div>
-        <h3>Performance & Équilibre Physique</h3>
-        <p>Douleurs qui reviennent, posture qui s'affaisse au fil des heures de bureau, récupération qui traîne après l'effort. De quoi reprendre la main sur votre corps, concrètement.</p>
-        <span class="category-count">7 produits</span>
-      </a>
-    </div>
-  </section>
+</a>
+<a href="#cat-sommeil" class="category-card">
+<div class="category-card-img"><img
+src="assets/img/categories/neuro-sommeil.webp" alt="Neuro-sommeil et récupération" loading="lazy"></div>
+<h3>Neuro-Sommeil & Récupération</h3>
+<p>Le sommeil qui ne répare plus, les nuits qui s'enchaînent sans jamais
+vraiment recharger. Comprendre ce qui se passe pendant que vous dormez — et
+enfin agir dessus.</p>
+<span class="category-count">5 produits</span>
+</a>
+<a href="#cat-biofeedback" class="category-card">
+<div class="category-card-img"><img src="assets/img/categories/biofeedback.webp"
+alt="Biofeedback et sérénité mentale" loading="lazy"></div>
+<h3>Biofeedback & Sérénité Mentale</h3>
+<p>Le stress qu'on porte sans s'en rendre compte, jusqu'à ce qu'il se loge dans
+les épaules, la mâchoire, le sommeil. Des outils pour le voir venir — et le
+faire retomber.</p>
+<span class="category-count">2 produits</span>
+</a>
+<a href="#cat-performance" class="category-card">
+<div class="category-card-img"><img
+src="assets/img/categories/performance-physique.webp" alt="Performance et équilibre physique" loading="lazy"></div>
+<h3>Performance & Équilibre Physique</h3>
+<p>Douleurs qui reviennent, posture qui s'affaisse au fil des heures de bureau,
+récupération qui traîne après l'effort. De quoi reprendre la main sur votre
+corps, concrètement.</p>
+<span class="category-count">7 produits</span>
+</a>
+</div>
+</section>
+<div id="produits">
+<!-- ===== BIO-MONITORING ===== -->
+<section class="cat-section" id="cat-bio">
+<h2 class="cat-title">1. Bio-Monitoring & Santé Préventive</h2>
+<p class="cat-description">Votre corps envoie des signaux bien avant que vous ne
+sentiez quoi que ce soit. Tension qui grimpe, oxygénation qui baisse, rythme
+cardiaque qui s'emballe la nuit — ce sont des données, pas des fatalités. Six
+instruments pour les capter, les lire, et agir au bon moment.</p>
+<div class="grid">
 
-  <div id="produits">
-    <!-- ===== BIO-MONITORING ===== -->
-    <section class="cat-section" id="cat-bio">
-      <h2 class="cat-title">1. Bio-Monitoring & Santé Préventive</h2>
-      <p class="cat-description">Votre corps envoie des signaux bien avant que vous ne sentiez quoi que ce soit. Tension qui grimpe, oxygénation qui baisse, rythme cardiaque qui s'emballe la nuit — ce sont des données, pas des fatalités. Six instruments pour les capter, les lire, et agir au bon moment.</p>
-      <div class="grid">
-        
-        
-      </div>
-    </section>
-  </div>
+</div>
+</section>
+</div>
+<div class="card-grid">
+<article class="card"><a href="https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html"><img
+src="assets/img/produits/bague-connectee-sante-biometrique-1.webp"
+alt="SynchroRing X1 - Bague connectée santé biométrique" class="prod-img"
+loading="lazy"></a><span class="badge-shipping">7-10j</span><span
+class="card-badge-top">Top Vente</span><span class="badge-stock">Il ne reste que
+4 en stock</span><h3><a href="https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html">SynchroRing X1</a></h3><p>Sommeil, fréquence cardiaque,
+SpO2, température — votre nuit décryptée chaque matin, sans rien faire.</p><div
+class="card-footer"><span class="price">458 EUR</span><div
+class="card-actions"><a
+href="https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a href="https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html"><img
+src="assets/img/produits/tensiometre-intelligent-connecte-1.webp"
+alt="B-Pressure Connect - Tensiomètre intelligent connecté" class="prod-img"
+loading="lazy"></a><span class="badge-shipping">7-10j</span><span
+class="badge-stock">Il ne reste que 4 en stock</span><h3><a href="https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html">B-Pressure
+Connect</a></h3><p>Une tension qui grimpe en silence pendant des années.
+Celui-ci, vous le saurez avant qu'elle ne grimpe trop.</p><div
+class="card-footer"><span class="price">98 EUR</span><div
+class="card-actions"><a
+href="https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a href="https://synchro-vie.com/produits/balance-impedancemetre-connectee.html"><img
+src="assets/img/produits/balance-impedancemetre-connectee-1.webp"
+alt="Scale-Master Pro - Balance impédancemètre connectée" class="prod-img"
+loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/balance-impedancemetre-connectee.html">Scale-Master
+Pro</a></h3><p>Le chiffre sur la balance ne dit presque rien. Celle-ci mesure ce
+qui change vraiment : muscle, graisse, eau, os.</p><div
+class="card-footer"><span class="price">168 EUR</span><div
+class="card-actions"><a
+href="https://synchro-vie.com/produits/balance-impedancemetre-connectee.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html"><img
+src="assets/img/produits/moniteur-ecg-portable-oxygene-1.webp" alt="Vitals-Scan Pro - Moniteur ECG portable oxygène" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><span class="badge-stock">Il ne reste que 4
+en stock</span><h3><a href="https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html">Vitals-Scan Pro</a></h3><p>ECG et oxygénation en 30 secondes,
+depuis votre canapé — au lieu d'attendre trois semaines pour un
+rendez-vous.</p><div class="card-footer"><span class="price">169 EUR</span><div
+class="card-actions"><a
+href="https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/thermometre-infrarouge-medical.html"><img
 
-  <div class="card-grid">
-<article class="card"><a href="https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html"><img src="assets/img/produits/bague-connectee-sante-biometrique-1.webp" alt="SynchroRing X1 - Bague connectée santé biométrique" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><span class="card-badge-top">Top Vente</span><span class="badge-stock">Il ne reste que 4 en stock</span><h3><a href="https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html">SynchroRing X1</a></h3><p>Sommeil, fréquence cardiaque, SpO2, température — votre nuit décryptée chaque matin, sans rien faire.</p><div class="card-footer"><span class="price">458 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html"><img src="assets/img/produits/tensiometre-intelligent-connecte-1.webp" alt="B-Pressure Connect - Tensiomètre intelligent connecté" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><span class="badge-stock">Il ne reste que 4 en stock</span><h3><a href="https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html">B-Pressure Connect</a></h3><p>Une tension qui grimpe en silence pendant des années. Celui-ci, vous le saurez avant qu'elle ne grimpe trop.</p><div class="card-footer"><span class="price">98 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/balance-impedancemetre-connectee.html"><img src="assets/img/produits/balance-impedancemetre-connectee-1.webp" alt="Scale-Master Pro - Balance impédancemètre connectée" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/balance-impedancemetre-connectee.html">Scale-Master Pro</a></h3><p>Le chiffre sur la balance ne dit presque rien. Celle-ci mesure ce qui change vraiment : muscle, graisse, eau, os.</p><div class="card-footer"><span class="price">168 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/balance-impedancemetre-connectee.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html"><img src="assets/img/produits/moniteur-ecg-portable-oxygene-1.webp" alt="Vitals-Scan Pro - Moniteur ECG portable oxygène" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><span class="badge-stock">Il ne reste que 4 en stock</span><h3><a href="https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html">Vitals-Scan Pro</a></h3><p>ECG et oxygénation en 30 secondes, depuis votre canapé — au lieu d'attendre trois semaines pour un rendez-vous.</p><div class="card-footer"><span class="price">169 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/thermometre-infrarouge-medical.html"><img src="assets/img/produits/thermometre-infrarouge-medical-1.webp" alt="Thermo-Sense Ultra - Thermomètre infrarouge médical" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/thermometre-infrarouge-medical.html">Thermo-Sense Ultra</a></h3><p>Une fièvre qui monte chez un enfant à 23h. Une lecture en une seconde, sans le réveiller.</p><div class="card-footer"><span class="price">45 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/thermometre-infrarouge-medical.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html"><img src="assets/img/produits/masque-sommeil-ondes-delta-1.webp" alt="NeuroRest G2 - Masque sommeil ondes Delta" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><span class="card-badge-top">Top Vente</span><span class="badge-stock">Il ne reste que 4 en stock</span><h3><a href="https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html">NeuroRest G2</a></h3><p>Les pensées qui tournent en boucle au moment d'éteindre la lumière. Le masque qui aide le cerveau à les lâcher.</p><div class="card-footer"><span class="price">369 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html"><img src="assets/img/produits/capteur-sommeil-sous-matelas-1.webp" alt="SleepTrack Zen - Capteur sommeil sous matelas" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html">SleepTrack Zen</a></h3><p>Pas de bracelet, pas de bague à porter — glissé sous le matelas, il capte chaque cycle de sommeil sans que vous y pensiez.</p><div class="card-footer"><span class="price">149 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"><img src="assets/img/produits/simulateur-aube-crepuscule-1.webp" alt="Aura-Light Clock - Simulateur aube crépuscule" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/simulateur-aube-crepuscule.html">Aura-Light Clock</a></h3><p>Se réveiller en sursaut, dans le noir, l'hiver. Le réveil qui simule l'aube pour que le corps se réveille avant l'alarme.</p><div class="card-footer"><span class="price">78 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/simulateur-aube-crepuscule.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"><img src="assets/img/produits/patch-nuque-auto-chauffant-1.webp" alt="Gravity-Tech Pad - Patch nuque auto-chauffant" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html">Gravity-Tech Pad</a></h3><p>Cette tension qui se loge dans la nuque en fin de journée, à force d'écrans. Une chaleur ciblée qui la fait redescendre.</p><div class="card-footer"><span class="price">269 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"><img src="assets/img/produits/couverture-sauna-infrarouge-1.webp" alt="ThermoWrap FIR - Couverture sauna infrarouge" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/couverture-sauna-infrarouge.html">ThermoWrap FIR</a></h3><p>Le sauna, mais chez vous — une chaleur qui pénètre en profondeur pour détendre les muscles et faire transpirer.</p><div class="card-footer"><span class="price">420 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/couverture-sauna-infrarouge.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/bague-controle-cortisol.html"><img src="assets/img/produits/bague-controle-cortisol-1.webp" alt="Aura-Ring Calm - Bague contrôle cortisol" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/bague-controle-cortisol.html">Aura-Ring Calm</a></h3><p>Le stress qu'on ne sent plus parce qu'on s'y est habitué. Cette bague le détecte avant que le corps ne craque.</p><div class="card-footer"><span class="price">298 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/bague-controle-cortisol.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/stimulateur-musculaire-ems.html"><img src="assets/img/produits/stimulateur-musculaire-ems-1.webp" alt="ElectroBoost S3 - Stimulateur musculaire EMS" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/stimulateur-musculaire-ems.html">ElectroBoost S3</a></h3><p>Pas le temps pour la salle aujourd'hui ? 20 minutes d'électrostimulation ciblée, et les muscles travaillent quand même.</p><div class="card-footer"><span class="price">178 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/stimulateur-musculaire-ems.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/correcteur-posture-haptique.html"><img src="assets/img/produits/correcteur-posture-haptique-1.webp" alt="Posture-Core - Correcteur posture haptique" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/correcteur-posture-haptique.html">Posture-Core</a></h3><p>Le dos qui s'arrondit sans qu'on le remarque, jusqu'au mal de dos du soir. Une vibration discrète vous rappelle de vous redresser.</p><div class="card-footer"><span class="price">68 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/correcteur-posture-haptique.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/pistolet-massage-compact.html"><img src="assets/img/produits/pistolet-massage-compact-1.webp" alt="Flex-Gun Mini - Pistolet massage compact" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><span class="badge-stock">Il ne reste que 4 en stock</span><h3><a href="https://synchro-vie.com/produits/pistolet-massage-compact.html">Flex-Gun Mini</a></h3><p>Les mollets durs après une séance, les épaules nouées après une journée assise. De quoi les défaire en quelques minutes, à la maison.</p><div class="card-footer"><span class="price">158 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/pistolet-massage-compact.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/genouillere-thermique-compressive.html"><img src="assets/img/produits/genouillere-thermique-compressive-1.webp" alt="Knee-Tech Support - Genouillère thermique compressive" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/genouillere-thermique-compressive.html">Knee-Tech Support</a></h3><p>Ce genou qui craque dans les escaliers et qui freine à chaque sortie. Chaleur et compression ciblées pour le soulager au quotidien.</p><div class="card-footer"><span class="price">98 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/genouillere-thermique-compressive.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/dynamometre-force-digital.html"><img src="assets/img/produits/dynamometre-force-digital-1.webp" alt="Grip-Master Pro - Dynamomètre force digital" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/dynamometre-force-digital.html">Grip-Master Pro</a></h3><p>La force de la poigne en dit long sur la récupération globale. De quoi la mesurer, suivre sa progression, et savoir où on en est vraiment.</p><div class="card-footer"><span class="price">88 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/dynamometre-force-digital.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-<article class="card"><a href="https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html"><img src="assets/img/produits/panneau-therapie-lumiere-rouge-1.webp" alt="LumiRed Pro X1 - Panneau thérapie lumière rouge" class="prod-img" loading="lazy"></a><span class="badge-shipping">7-10j</span><span class="card-badge-new">Nouveau</span><h3><a href="https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html">LumiRed Pro X1</a></h3><p>La lumière rouge et proche infrarouge, utilisée en clinique pour la peau et la récupération musculaire — désormais accessible chez vous.</p><div class="card-footer"><span class="price">549 EUR</span><div class="card-actions"><a href="https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html" class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
-      </div>
+src="assets/img/produits/thermometre-infrarouge-medical-1.webp"
+alt="Thermo-Sense Ultra - Thermomètre infrarouge médical" class="prod-img"
+loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/thermometre-infrarouge-medical.html">Thermo-Sense
+Ultra</a></h3><p>Une fièvre qui monte chez un enfant à 23h. Une lecture en une
+seconde, sans le réveiller.</p><div class="card-footer"><span class="price">45
+EUR</span><div class="card-actions"><a
+href="https://synchro-vie.com/produits/thermometre-infrarouge-medical.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html"><img
+src="assets/img/produits/masque-sommeil-ondes-delta-1.webp" alt="NeuroRest G2 - Masque sommeil ondes Delta" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><span class="card-badge-top">Top
+Vente</span><span class="badge-stock">Il ne reste que 4 en stock</span><h3><a hr
+ef="https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html">NeuroRest
+G2</a></h3><p>Les pensées qui tournent en boucle au moment d'éteindre la
+lumière. Le masque qui aide le cerveau à les lâcher.</p><div
+class="card-footer"><span class="price">369 EUR</span><div
+class="card-actions"><a
+href="https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html"><img
+src="assets/img/produits/capteur-sommeil-sous-matelas-1.webp" alt="SleepTrack Zen - Capteur sommeil sous matelas" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html">SleepTrack Zen</a></h3><p>Pas de bracelet,
+pas de bague à porter — glissé sous le matelas, il capte chaque cycle de sommeil
+sans que vous y pensiez.</p><div class="card-footer"><span class="price">149
+EUR</span><div class="card-actions"><a
+href="https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"><img
+src="assets/img/produits/simulateur-aube-crepuscule-1.webp" alt="Aura-Light Clock - Simulateur aube crépuscule" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/simulateur-aube-crepuscule.html">Aura-Light Clock</a></h3><p>Se réveiller en
+sursaut, dans le noir, l'hiver. Le réveil qui simule l'aube pour que le corps se
+réveille avant l'alarme.</p><div class="card-footer"><span class="price">78
+EUR</span><div class="card-actions"><a
+href="https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"><img
+src="assets/img/produits/patch-nuque-auto-chauffant-1.webp" alt="Gravity-Tech Pad - Patch nuque auto-chauffant" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html">Gravity-Tech Pad</a></h3><p>Cette tension qui
+se loge dans la nuque en fin de journée, à force d'écrans. Une chaleur ciblée
+qui la fait redescendre.</p><div class="card-footer"><span class="price">269
+EUR</span><div class="card-actions"><a
+href="https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"><img
+src="assets/img/produits/couverture-sauna-infrarouge-1.webp" alt="ThermoWrap FIR - Couverture sauna infrarouge" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/couverture-sauna-infrarouge.html">ThermoWrap FIR</a></h3><p>Le sauna, mais chez
+vous — une chaleur qui pénètre en profondeur pour détendre les muscles et faire
+transpirer.</p><div class="card-footer"><span class="price">420 EUR</span><div
+class="card-actions"><a
+href="https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/bague-controle-cortisol.html"><img
+src="assets/img/produits/bague-controle-cortisol-1.webp" alt="Aura-Ring Calm - Bague contrôle cortisol" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><h3><a
+href="https://synchro-vie.com/produits/bague-controle-cortisol.html">Aura-Ring
+Calm</a></h3><p>Le stress qu'on ne sent plus parce qu'on s'y est habitué. Cette
+bague le détecte avant que le corps ne craque.</p><div class="card-footer"><span
+class="price">298 EUR</span><div class="card-actions"><a
+href="https://synchro-vie.com/produits/bague-controle-cortisol.html" class="btnbtn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/stimulateur-musculaire-ems.html"><img
+src="assets/img/produits/stimulateur-musculaire-ems-1.webp" alt="ElectroBoost S3 - Stimulateur musculaire EMS" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/stimulateur-musculaire-ems.html">ElectroBoost S3</a></h3><p>Pas le temps pour
+la salle aujourd'hui ? 20 minutes d'électrostimulation ciblée, et les muscles
+travaillent quand même.</p><div class="card-footer"><span class="price">178
+EUR</span><div class="card-actions"><a
+href="https://synchro-vie.com/produits/stimulateur-musculaire-ems.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/correcteur-posture-haptique.html"><img
+src="assets/img/produits/correcteur-posture-haptique-1.webp" alt="Posture-Core - Correcteur posture haptique" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/correcteur-posture-haptique.html">Posture-Core</a></h3><p>Le dos qui s'arrondit
+sans qu'on le remarque, jusqu'au mal de dos du soir. Une vibration discrète vous
+rappelle de vous redresser.</p><div class="card-footer"><span class="price">68
+EUR</span><div class="card-actions"><a
+href="https://synchro-vie.com/produits/correcteur-posture-haptique.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/pistolet-massage-compact.html"><img
+src="assets/img/produits/pistolet-massage-compact-1.webp" alt="Flex-Gun Mini - Pistolet massage compact" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><span class="badge-stock">Il ne reste que 4
+en stock</span><h3><a
+href="https://synchro-vie.com/produits/pistolet-massage-compact.html">Flex-Gun
+Mini</a></h3><p>Les mollets durs après une séance, les épaules nouées après une
+journée assise. De quoi les défaire en quelques minutes, à la maison.</p><div
+class="card-footer"><span class="price">158 EUR</span><div
+class="card-actions"><a
+href="https://synchro-vie.com/produits/pistolet-massage-compact.html" class="btnbtn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a href="https://synchro-vie.com/produits/genouillere-thermique-compressive.html"><img
+src="assets/img/produits/genouillere-thermique-compressive-1.webp"
+alt="Knee-Tech Support - Genouillère thermique compressive" class="prod-img"
+loading="lazy"></a><span class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/genouillere-thermique-compressive.html">Knee-Tech
+Support</a></h3><p>Ce genou qui craque dans les escaliers et qui freine à chaque
+sortie. Chaleur et compression ciblées pour le soulager au quotidien.</p><div
+class="card-footer"><span class="price">98 EUR</span><div
+class="card-actions"><a
+href="https://synchro-vie.com/produits/genouillere-thermique-compressive.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/dynamometre-force-digital.html"><img
+src="assets/img/produits/dynamometre-force-digital-1.webp" alt="Grip-Master Pro - Dynamomètre force digital" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><h3><a href="https://synchro-vie.com/produits/dynamometre-force-digital.html">Grip-Master Pro</a></h3><p>La force de la
+poigne en dit long sur la récupération globale. De quoi la mesurer, suivre sa
+progression, et savoir où on en est vraiment.</p><div class="card-footer"><span
+class="price">88 EUR</span><div class="card-actions"><a
+href="https://synchro-vie.com/produits/dynamometre-force-digital.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+<article class="card"><a
+href="https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html"><img
+src="assets/img/produits/panneau-therapie-lumiere-rouge-1.webp" alt="LumiRed Pro X1 - Panneau thérapie lumière rouge" class="prod-img" loading="lazy"></a><span
+class="badge-shipping">7-10j</span><span
+class="card-badge-new">Nouveau</span><h3><a href="https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html">LumiRed Pro X1</a></h3><p>La lumière
+rouge et proche infrarouge, utilisée en clinique pour la peau et la récupération
+musculaire — désormais accessible chez vous.</p><div class="card-footer"><span
+class="price">549 EUR</span><div class="card-actions"><a
+href="https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html"
+class="btn btn-primary btn-sm">Savoir+ / Commander</a></div></div></article>
+</div>
+<!-- Réassurance -->
+<section class="reassurance-section">
+<div class="reassurance-grid">
+<div class="reassurance-card">
+<div class="reassurance-icon"><svg width="28" height="28" viewBox="0 0 24 24"
+fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
+stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5"
+r="2.5"/></svg></div>
+<h3>Livraison Europe 7-10jours</h3>
+<p>Expédié depuis nos entrepôts européens, avec un numéro de suivi à chaque
+étape — pas de mauvaise surprise sur les délais.</p>
+</div>
+<div class="reassurance-card">
+<div class="reassurance-icon"><svg width="28" height="28" viewBox="0 0 24 24"
+fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
+stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path
+d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+<h3>Paiement 100% sécurisé</h3>
+<p>Vos données bancaires ne transitent jamais par nos serveurs. Chiffrement SSL
+de bout en bout sur chaque commande.</p>
+</div>
+<div class="reassurance-card">
+<div class="reassurance-icon"><svg width="28" height="28" viewBox="0 0 24 24"
+fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
+stroke-linejoin="round"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 010 8h-1"/></svg></div>
+<h3>Retours sous 30 jours</h3>
+<p>Le produit ne convient pas ? Renvoyez-le, remboursé, sans avoir à justifier
+quoi que ce soit.</p>
+</div>
+<div class="reassurance-card">
+<div class="reassurance-icon"><svg width="28" height="28" viewBox="0 0 24 24"
+fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
+stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+<h3>Garantie 2 ans</h3>
+<p>Un défaut de fabrication ? Réparation ou remplacement pris en charge, sans
+frais cachés ni paperasse interminable.</p>
+</div>
+<div class="reassurance-card">
+<div class="reassurance-icon"><svg width="28" height="28" viewBox="0 0 24 24"
+fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round"
+stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
+<h3>Support expert 7j/7</h3>
+<p>Une question avant ou après l'achat ? Une vraie personne vous répond — pas un
+robot, pas un script.</p>
+</div>
+</div>
+</section>
+<!-- Garantie Conversion -->
+<section style="max-width:1140px;margin:0 auto 40px;padding:0 24px;">
 
-  <!-- Réassurance -->
-  <section class="reassurance-section">
-    <div class="reassurance-grid">
-      <div class="reassurance-card">
-        <div class="reassurance-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
-        <h3>Livraison Europe 7-10jours</h3>
-        <p>Expédié depuis nos entrepôts européens, avec un numéro de suivi à chaque étape — pas de mauvaise surprise sur les délais.</p>
-      </div>
-      <div class="reassurance-card">
-        <div class="reassurance-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
-        <h3>Paiement 100% sécurisé</h3>
-        <p>Vos données bancaires ne transitent jamais par nos serveurs. Chiffrement SSL de bout en bout sur chaque commande.</p>
-      </div>
-      <div class="reassurance-card">
-        <div class="reassurance-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 010 8h-1"/></svg></div>
-        <h3>Retours sous 30 jours</h3>
-        <p>Le produit ne convient pas ? Renvoyez-le, remboursé, sans avoir à justifier quoi que ce soit.</p>
-      </div>
-      <div class="reassurance-card">
-        <div class="reassurance-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-        <h3>Garantie 2 ans</h3>
-        <p>Un défaut de fabrication ? Réparation ou remplacement pris en charge, sans frais cachés ni paperasse interminable.</p>
-      </div>
-      <div class="reassurance-card">
-        <div class="reassurance-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#3B82F6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg></div>
-        <h3>Support expert 7j/7</h3>
-        <p>Une question avant ou après l'achat ? Une vraie personne vous répond — pas un robot, pas un script.</p>
-      </div>
-    </div>
-  </section>
+<div class="guarantee-block">
+<p class="guarantee-title">Votre tranquillité d'esprit, notre priorité</p>
+<div class="guarantee-item">
+<div class="guarantee-icon">↺</div>
+<div><strong>30 jours satisfait ou remboursé</strong><span>Testez, mesurez,
+décidez. Remboursement intégral, sans question.</span></div>
+</div>
+<div class="guarantee-item">
+<div class="guarantee-icon">2</div>
+<div><strong>Garantie 2 ans</strong><span>Un problème technique ? On répare ou
+on remplace, sans frais.</span></div>
+</div>
+<div class="guarantee-item">
+<div class="guarantee-icon"> </div>
+<div><strong>Paiement sécurisé</strong><span>Vos données de santé restent
+vôtres.</span></div>
+</div>
+</div>
+</section>
+<!-- Avis Clients -->
+<section class="review-section" id="avis">
+<div class="review-summary">
+<span class="review-stars">★★★★★</span>
+<span class="review-score">4.7/5</span>
+<span class="review-count">moyenne générale — 47 avis vérifiés</span>
+</div>
+<div class="review-card">
+<div class="review-header">
+<span class="review-stars-sm">★★★★★</span>
+<span class="review-verified">Achat vérifié</span>
+</div>
+<p class="review-text">"Après deux mois avec la SynchroRing X1, l'appli m'a
+révélé que mon sommeil profond ne dépassait pas 35 minutes par nuit. J'ai ajusté
+mes habitudes et je suis passé à 1h15. Les données VFC sont un guide précieux
+pour la récupération sportive."</p>
+<div class="review-author"><strong>Hugo Delmas</strong> — France, novembre 2025
+— SynchroRing X1</div>
+</div>
+<div class="review-card">
+<div class="review-header">
+<span class="review-stars-sm">★★★★★</span>
+<span class="review-verified">Achat vérifié</span>
+</div>
+<p class="review-text">"Mon médecin me demandait un relevé de tension matin et
+soir pendant deux semaines. Avec cet appareil, les données étaient exportées
+directement pour la consultation. Précis, simple, et la mallette est pratique
+pour les déplacements."</p>
+<div class="review-author"><strong>Guy Renard</strong> — France, décembre 2025 —
+B-Pressure Connect</div>
+</div>
+<div class="review-card">
+<div class="review-header">
+<span class="review-stars-sm">★★★★★</span>
+<span class="review-verified">Achat vérifié</span>
+</div>
+<p class="review-text">"Je l'utilisé après chaque sortie running sur les mollets
+et les ischios. Discret et silencieux, la batterie tient largement la semaine.
+Le format compact rentre facilement dans le sac de sport. Très bon rapport
+qualité-prix."</p>
+<div class="review-author"><strong>Nicolas Houde</strong> — France, octobre 2025
+— Flex-Gun Mini</div>
+</div>
+</div>
+</section>
+<!-- Autorité Scientifique -->
+<section style="max-width:1140px;margin:0 auto 40px;padding:0 24px;">
+<div class="authority-block">
+<span class="authority-stat">96%</span>
+<p class="authority-stat-label">de nos clients détectent un signal anormal dans
+les 30 premiers jours</p>
+<div class="authority-quote">
+<p>"Je recommande la SynchroRing à mes patients hypertendus depuis 8 mois. Le
+suivi continu des données nocturnes nous permet d'ajuster les traitements avec
+précision."</p>
+<footer>— Témoignage professionnel de santé</footer>
+</div>
+</div>
+</section>
+<!-- Newsletter -->
+<section class="newsletter-section">
+<div class="newsletter-inner">
+<h2>Un email par semaine, zéro spam</h2>
+<p>Ce que mesurent vraiment vos appareils, des retours d'expérience d'autres
+utilisateurs, et les nouveautés en avant-première. Pas de promo quotidienne,
+promis.</p>
+<form class="newsletter-form" id="newsletterForm">
+<input type="email" placeholder="Votre email" required>
+<button type="submit" class="btn btn-primary">Rejoindre</button>
+</form>
+<p class="newsletter-disclaimer">En vous inscrivant, vous acceptez de recevoir
+nos emails. Désinscription en un clic, à tout moment. <a
+href="https://synchro-vie.com/politique-de-confidentialite.html">Politique de
+confidentialité</a>.</p>
+</div>
+</section>
+<!-- Guide Gratuit Lead Magnet -->
 
-  <!-- Garantie Conversion -->
-  <section style="max-width:1140px;margin:0 auto 40px;padding:0 24px;">
-    <div class="guarantee-block">
-      <p class="guarantee-title">Votre tranquillité d'esprit, notre priorité</p>
-      <div class="guarantee-item">
-        <div class="guarantee-icon">↺</div>
-        <div><strong>30 jours satisfait ou remboursé</strong><span>Testez, mesurez, décidez. Remboursement intégral, sans question.</span></div>
-      </div>
-      <div class="guarantee-item">
-        <div class="guarantee-icon">2</div>
-        <div><strong>Garantie 2 ans</strong><span>Un problème technique ? On répare ou on remplace, sans frais.</span></div>
-      </div>
-      <div class="guarantee-item">
-        <div class="guarantee-icon">🔒</div>
-        <div><strong>Paiement sécurisé</strong><span>Vos données de santé restent vôtres.</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Avis Clients -->
-  <section class="review-section" id="avis">
-    <div class="review-summary">
-      <span class="review-stars">★★★★★</span>
-      <span class="review-score">4.7/5</span>
-      <span class="review-count">moyenne générale — 47 avis vérifiés</span>
-    </div>
-    
-      <div class="review-card">
-        <div class="review-header">
-          <span class="review-stars-sm">★★★★★</span>
-          <span class="review-verified">Achat vérifié</span>
-        </div>
-        <p class="review-text">"Après deux mois avec la SynchroRing X1, l'appli m'a révélé que mon sommeil profond ne dépassait pas 35 minutes par nuit. J'ai ajusté mes habitudes et je suis passé à 1h15. Les données VFC sont un guide précieux pour la récupération sportive."</p>
-        <div class="review-author"><strong>Hugo Delmas</strong> — France, novembre 2025 — SynchroRing X1</div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <span class="review-stars-sm">★★★★★</span>
-          <span class="review-verified">Achat vérifié</span>
-        </div>
-        <p class="review-text">"Mon médecin me demandait un relevé de tension matin et soir pendant deux semaines. Avec cet appareil, les données étaient exportées directement pour la consultation. Précis, simple, et la mallette est pratique pour les déplacements."</p>
-        <div class="review-author"><strong>Guy Renard</strong> — France, décembre 2025 — B-Pressure Connect</div>
-      </div>
-      <div class="review-card">
-        <div class="review-header">
-          <span class="review-stars-sm">★★★★★</span>
-          <span class="review-verified">Achat vérifié</span>
-        </div>
-        <p class="review-text">"Je l'utilisé après chaque sortie running sur les mollets et les ischios. Discret et silencieux, la batterie tient largement la semaine. Le format compact rentre facilement dans le sac de sport. Très bon rapport qualité-prix."</p>
-        <div class="review-author"><strong>Nicolas Houde</strong> — France, octobre 2025 — Flex-Gun Mini</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Autorité Scientifique -->
-  <section style="max-width:1140px;margin:0 auto 40px;padding:0 24px;">
-    <div class="authority-block">
-      <span class="authority-stat">96%</span>
-      <p class="authority-stat-label">de nos clients détectent un signal anormal dans les 30 premiers jours</p>
-      <div class="authority-quote">
-        <p>"Je recommande la SynchroRing à mes patients hypertendus depuis 8 mois. Le suivi continu des données nocturnes nous permet d'ajuster les traitements avec précision."</p>
-        <footer>— Témoignage professionnel de santé</footer>
-      </div>
-    </div>
-  </section>
-
-  <!-- Newsletter -->
-  <section class="newsletter-section">
-    <div class="newsletter-inner">
-      <h2>Un email par semaine, zéro spam</h2>
-      <p>Ce que mesurent vraiment vos appareils, des retours d'expérience d'autres utilisateurs, et les nouveautés en avant-première. Pas de promo quotidienne, promis.</p>
-      <form class="newsletter-form" id="newsletterForm">
-        <input type="email" placeholder="Votre email" required>
-        <button type="submit" class="btn btn-primary">Rejoindre</button>
-      </form>
-      <p class="newsletter-disclaimer">En vous inscrivant, vous acceptez de recevoir nos emails. Désinscription en un clic, à tout moment. <a href="https://synchro-vie.com/politique-de-confidentialite.html">Politique de confidentialité</a>.</p>
-    </div>
-  </section>
-
-  <!-- Guide Gratuit Lead Magnet -->
-  <section style="max-width:1140px;margin:0 auto 40px;padding:0 24px;">
-    <div class="lead-block">
-      <h4>Téléchargez notre guide gratuit</h4>
-      <p>"Les 5 signaux que votre corps envoie avant un burn-out" — découvrez ce que 94% des gens ignorent.</p>
-      <form class="lead-form" id="lead-magnet-form-home">
-        <input type="email" name="email" placeholder="Votre email" required>
-        <button type="submit">Recevoir mon guide</button>
-      </form>
-    </div>
-  </section>
+<section style="max-width:1140px;margin:0 auto 40px;padding:0 24px;">
+<div class="lead-block">
+<h4>Téléchargez notre guide gratuit</h4>
+<p>"Les 5 signaux que votre corps envoie avant un burn-out" — découvrez ce que
+94% des gens ignorent.</p>
+<form class="lead-form" id="lead-magnet-form-home">
+<input type="email" name="email" placeholder="Votre email" required>
+<button type="submit">Recevoir mon guide</button>
+</form>
+</div>
+</section>
 </main>
-
 <!-- Footer -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-col">
-      <a href="https://synchro-vie.com/" class="nav-brand" style="margin-bottom:8px;display:inline-block;">SYNCHROVIE</a>
-      <p class="footer-tagline">L'ingénierie de la performance humaine.</p>
-      <p class="footer-address">Paris, France</p>
-    </div>
-    <div class="footer-col">
-      <h4>Navigation</h4>
-      <a href="https://synchro-vie.com/">Accueil</a>
-      <a href="index.html#boutique">Boutique</a>
-      <a href="https://synchro-vie.com/blog.html">Blog</a>
-      <a href="https://synchro-vie.com/faq.html">FAQ</a>
-      <a href="https://synchro-vie.com/propos.html">À Propos</a>
-      <a href="https://synchro-vie.com/contact.html">Contact</a>
-    </div>
-    <div class="footer-col">
-      <h4>Légal</h4>
-      <a href="https://synchro-vie.com/legal.html">Mentions Légales</a>
-      <a href="https://synchro-vie.com/cgv.html">CGV</a>
-      <a href="https://synchro-vie.com/politique-de-confidentialite.html">Confidentialité</a>
-      <a href="https://synchro-vie.com/cookies.html">Cookies</a>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <a   href="mailto:synchrovie@gmail.com">Email Expert</a>
-      <a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-payment">
-      <span>Paiement sécurisé :</span>
-      <span class="payment-badges"><i class="fa-brands fa-cc-visa" aria-label="Visa"></i> <i class="fa-brands fa-cc-mastercard" aria-label="Mastercard"></i> <i class="fa-brands fa-paypal" aria-label="PayPal"></i></span>
-    </div>
-    <div class="footer-guarantees">Livraison 7-10j Europe — Retours 30j — Garantie 2 ans</div>
-    <p class="footer-copyright">2026 SynchroVie. Tous droits réservés.</p>
-  </div>
+<div class="footer-grid">
+<div class="footer-col">
+<a href="https://synchro-vie.com/" class="nav-brand"
+style="margin-bottom:8px;display:inline-block;">SYNCHROVIE</a>
+<p class="footer-tagline">L'ingénierie de la performance humaine.</p>
+<p class="footer-address">Paris, France</p>
+</div>
+<div class="footer-col">
+<h4>Navigation</h4>
+<a href="https://synchro-vie.com/">Accueil</a>
+<a href="index.html#boutique">Boutique</a>
+<a href="https://synchro-vie.com/blog.html">Blog</a>
+<a href="https://synchro-vie.com/faq.html">FAQ</a>
+<a href="https://synchro-vie.com/propos.html">À Propos</a>
+<a href="https://synchro-vie.com/contact.html">Contact</a>
+</div>
+<div class="footer-col">
+<h4>Légal</h4>
+<a href="https://synchro-vie.com/legal.html">Mentions Légales</a>
+<a href="https://synchro-vie.com/cgv.html">CGV</a>
+<a href="https://synchro-vie.com/politique-de-confidentialite.html">Confidential
+ité</a>
+<a href="https://synchro-vie.com/cookies.html">Cookies</a>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<a href="mailto:synchrovie@gmail.com">Email Expert</a>
+<a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-payment">
+<span>Paiement sécurisé :</span>
+<span class="payment-badges"><i class="fa-brands fa-cc-visa"
+aria-label="Visa"></i> <i class="fa-brands fa-cc-mastercard"
+aria-label="Mastercard"></i> <i class="fa-brands fa-paypal"
+aria-label="PayPal"></i></span>
+</div>
+<div class="footer-guarantees">Livraison 7-10j Europe — Retours 30j — Garantie 2
+ans</div>
+<p class="footer-copyright">2026 SynchroVie. Tous droits réservés.</p>
+</div>
 </footer>
 <!-- Back to Top -->
 <button class="back-to-top" id="backToTop">^</button>
-
 <!-- Pop-up Brevo (exit-intent desktop + 60s mobile) -->
 <div class="brevo-overlay" id="brevoOverlay" aria-hidden="true">
-  <div class="brevo-popup" role="dialog" aria-modal="true" aria-labelledby="brevoTitle">
-    <button class="brevo-close" id="brevoClose" aria-label="Fermer">&times;</button>
-    <div class="brevo-popup-inner">
-      <p class="brevo-eyebrow">Lettre SynchroVie</p>
-      <h3 id="brevoTitle" class="brevo-title-desktop">Attendez, avant de partir…</h3>
-      <h3 id="brevoTitleMobile" class="brevo-title-mobile">Un email par semaine, zéro spam</h3>
-      <p class="brevo-subtitle-desktop">Recevez ce que mesurent vraiment vos appareils, les retours d'autres utilisateurs, et les nouveautés en avant-première. Pas de promo quotidienne, promis.</p>
-      <p class="brevo-subtitle-mobile">Pendant que vous explorez la boutique, laissez votre email : on vous envoie un récap des technologies qui peuvent vous concerner, sans spam.</p>
-      <form class="brevo-form" id="brevoPopupForm">
-        <input type="email" placeholder="Votre email" required aria-label="Votre email">
-        <button type="submit" class="btn btn-primary">Rejoindre</button>
-      </form>
-      <p class="brevo-disclaimer">Désinscription en un clic. <a href="https://synchro-vie.com/politique-de-confidentialite.html">Politique de confidentialité</a>.</p>
-    </div>
-  </div>
+<div class="brevo-popup" role="dialog" aria-modal="true"
+aria-labelledby="brevoTitle">
+<button class="brevo-close" id="brevoClose" aria-label="Fermer">&times;</button>
+<div class="brevo-popup-inner">
+<p class="brevo-eyebrow">Lettre SynchroVie</p>
+<h3 id="brevoTitle" class="brevo-title-desktop">Attendez, avant de partir…</h3>
+<h3 id="brevoTitleMobile" class="brevo-title-mobile">Un email par semaine, zéro
+spam</h3>
+<p class="brevo-subtitle-desktop">Recevez ce que mesurent vraiment vos
+appareils, les retours d'autres utilisateurs, et les nouveautés en
+avant-première. Pas de promo quotidienne, promis.</p>
+<p class="brevo-subtitle-mobile">Pendant que vous explorez la boutique, laissez
+votre email : on vous envoie un récap des technologies qui peuvent vous
+concerner, sans spam.</p>
+<form class="brevo-form" id="brevoPopupForm">
+<input type="email" placeholder="Votre email" required aria-label="Votre email">
+<button type="submit" class="btn btn-primary">Rejoindre</button>
+</form>
+<p class="brevo-disclaimer">Désinscription en un clic. <a
+href="https://synchro-vie.com/politique-de-confidentialite.html">Politique de
+confidentialité</a>.</p>
 </div>
-
+</div>
+</div>
 <script src="script.js" defer></script>
 </body>
 </html>

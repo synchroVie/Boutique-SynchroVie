@@ -2,735 +2,861 @@
 <html lang="fr">
 <head>
 <script>
-// Redirection forcée GitHub Pages → domaine personnalisé (anti duplicate content)
+// Redirection forcée GitHub Pages → domaine personnalisé (anti duplicate
+content)
 (function() {
-  if (window.location.hostname === 'synchrovie.github.io' || window.location.hostname === 'synchroVie.github.io') {
-    var newPath = window.location.pathname.replace(/^\/Boutique-SynchroVie/, '');
-    var newUrl = 'https://synchro-vie.com' + newPath + window.location.search + window.location.hash;
-    window.location.replace(newUrl);
-  }
+if (window.location.hostname === 'synchrovie.github.io' ||
+window.location.hostname === 'synchroVie.github.io') {
+var newPath = window.location.pathname.replace(/^\/Boutique-SynchroVie/, '');
+var newUrl = 'https://synchro-vie.com' + newPath + window.location.search +
+window.location.hash;
+window.location.replace(newUrl);
+}
 })();
 </script>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-R7FXCZJQVT"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-R7FXCZJQVT');
-    </script>
-
-    <meta charset="UTF-8">
-<meta name="google-site-verification" content="wV9VVQ2Pq7ktBfdQB5Sqburfdo4EDJpyvpAmfSI2XB4" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Politique de Confidentialité — SynchroVie 2026</title>
-    <meta name="description" content="SynchroVie protège vos données personnelles. Parcourez notre politique RGPD : collecte, utilisation, sécurité et vos droits sur synchro-vie.com.">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://synchro-vie.com/politique-de-confidentialite.html">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Politique de Confidentialité — SynchroVie">
-    <meta property="og:description" content="Protection de vos données personnelles. Politique de confidentialité conforme RGPD. SynchroVie 2026.">
-    <meta property="og:url" content="https://synchro-vie.com/politique-de-confidentialite.html">
-    <meta property="og:site_name" content="SynchroVie">
-    <meta property="og:locale" content="fr_FR">
-    <meta property="og:image" content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
-    <style>
-        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --bg-primary: #0B1B3D;
-            --bg-secondary: #0d2137;
-            --bg-card: rgba(13,33,55,0.85);
-            --cyan: #3B82F6;
-            --green: #00C9A7;
-            --text-primary: #e0e8f0;
-            --text-secondary: #8899b0;
-            --border: rgba(59,130,246,0.08);
-            --radius: 10px;
-        }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            line-height: 1.7;
-            font-size: 16px;
-        }
-        a { color: var(--blue); text-decoration: none; transition: color 0.3s; }
-        a:hover { color: var(--green); }
-
-        /* Trust strip */
-        .trust-strip {
-            background: linear-gradient(135deg, #0d2137 0%, #0B1B3D 100%);
-            border-bottom: 1px solid var(--border);
-            padding: 12px 0;
-        }
-        .trust-strip-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0;
-            flex-wrap: nowrap;
-            padding: 0 20px;
-        }
-        .trust-strip-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            padding: 0 18px;
-            white-space: nowrap;
-            color: #b8c9e0;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-        .trust-strip-item strong { color: var(--blue); font-weight: 700; }
-        .trust-strip-divider { width: 1px; height: 20px; background: rgba(59,130,246,0.1); flex-shrink: 0; }
-
-        /* Header */
-        .header {
-            background: rgba(11,27,61,0.95);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border);
-            padding: 14px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .header-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-        .logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #fff;
-            letter-spacing: 0.08em;
-        }
-        .logo span { color: var(--blue); }
-        .nav-links { display: flex; gap: 20px; }
-        .nav-links a {
-            color: var(--text-secondary);
-            font-size: 0.88rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-links a:hover { color: var(--blue); }
-
-        /* Breadcrumb */
-        .breadcrumb-bar {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 16px 20px;
-        }
-        .breadcrumb {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.82rem;
-            color: var(--text-secondary);
-            flex-wrap: wrap;
-        }
-        .breadcrumb a { color: var(--blue); font-weight: 500; }
-        .breadcrumb a:hover { color: var(--green); }
-        .breadcrumb span { color: var(--text-secondary); }
-
-        /* Main content */
-        .page-container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 0 20px 60px;
-        }
-        .page-header {
-            padding: 40px 0 30px;
-            border-bottom: 1px solid var(--border);
-            margin-bottom: 40px;
-        }
-        .page-header h1 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-        .page-header p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-        .last-update {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: rgba(59,130,246,0.06);
-            border: 1px solid rgba(59,130,246,0.12);
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-size: 0.82rem;
-            color: var(--blue);
-            font-weight: 600;
-            margin-top: 16px;
-        }
-
-        /* Section styling */
-        .legal-section {
-            margin-bottom: 40px;
-        }
-        .legal-section h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 16px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--border);
-        }
-        .legal-section h3 {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--blue);
-            margin-top: 20px;
-            margin-bottom: 10px;
-        }
-        .legal-section p {
-            color: var(--text-primary);
-            margin-bottom: 14px;
-            line-height: 1.75;
-        }
-        .legal-section ul {
-            list-style: none;
-            margin-bottom: 14px;
-            padding-left: 0;
-        }
-        .legal-section ul li {
-            position: relative;
-            padding-left: 22px;
-            margin-bottom: 8px;
-            color: var(--text-primary);
-            line-height: 1.65;
-        }
-        .legal-section ul li::before {
-            content: '';
-            position: absolute;
-            left: 4px;
-            top: 10px;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: var(--blue);
-        }
-        .highlight-box {
-            background: rgba(59,130,246,0.04);
-            border: 1px solid rgba(59,130,246,0.1);
-            border-radius: var(--radius);
-            padding: 20px 24px;
-            margin: 20px 0;
-        }
-        .highlight-box p { margin-bottom: 8px; }
-        .highlight-box strong { color: var(--blue); }
-
-        .contact-box {
-            background: linear-gradient(135deg, rgba(59,130,246,0.06) 0%, rgba(0,201,167,0.04) 100%);
-            border: 1px solid rgba(59,130,246,0.12);
-            border-radius: var(--radius);
-            padding: 24px;
-            margin: 24px 0;
-        }
-        .contact-box h3 {
-            color: var(--blue);
-            margin-top: 0;
-        }
-        .contact-box a { color: var(--green); font-weight: 600; }
-
-        /* Table */
-        .legal-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0;
-            font-size: 0.9rem;
-        }
-        .legal-table th, .legal-table td {
-            padding: 12px 16px;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-        .legal-table th {
-            background: rgba(59,130,246,0.06);
-            color: var(--blue);
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.04em;
-        }
-        .legal-table td {
-            color: var(--text-primary);
-        }
-
-        /* Footer */
-        .footer {
-            background: #060e20;
-            border-top: 1px solid var(--border);
-            padding: 40px 20px 20px;
-        }
-        .footer-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        .footer-logo {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 10px;
-        }
-        .footer-tagline { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 6px; }
-        .footer-address { color: var(--text-secondary); font-size: 0.82rem; }
-        .footer-col h4 {
-            color: var(--blue);
-            font-size: 0.85rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-        }
-        .footer-col a {
-            display: block;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-            margin-bottom: 8px;
-            transition: color 0.3s;
-        }
-        .footer-col a:hover { color: var(--blue); }
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-        }
-        .footer-guarantees {
-            color: var(--text-secondary);
-            font-size: 0.82rem;
-            margin-bottom: 10px;
-        }
-        .footer-copyright {
-            color: var(--text-secondary);
-            font-size: 0.78rem;
-        }
-
-        /* Email float */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 24px;
-            right: 24px;
-            width: 56px;
-            height: 56px;
-            background: #25D366;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.35);
-            z-index: 999;
-            transition: transform 0.3s;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); }
-
-        @media (max-width: 768px) {
-            .trust-strip-inner { flex-wrap: wrap; justify-content: center; gap: 6px; }
-            .trust-strip-item { padding: 4px 10px; font-size: 0.72rem; }
-            .trust-strip-divider { display: none; }
-            .nav-links { display: none; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
-            .page-header h1 { font-size: 1.6rem; }
-            .legal-section h2 { font-size: 1.15rem; }
-            .legal-table { font-size: 0.8rem; }
-            .legal-table th, .legal-table td { padding: 8px 10px; }
-        }
-        @media (max-width: 480px) {
-            .footer-grid { grid-template-columns: 1fr; }
-        }
-    
-.payment-badges { display: flex; align-items: center; gap: 14px; background: #ffffff; padding: 10px 16px; border-radius: 8px; width: fit-content; margin-top: 8px; }
-.payment-badges i { font-size: 26px; color: #0B1B3D; transition: color 0.2s ease; }
-.payment-badges i:hover { color: #3B82F6; }
-
-</style>
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Politique de Confidentialité — SynchroVie 2026">
-    <meta name="twitter:description" content="Politique de confidentialité SynchroVie 2026. Comment nous protégeons vos données personnelles, vos droits RGPD et nos engagements en matière de vie privée.">
-    <meta name="twitter:image" content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
-
+<!-- Google tag (gtag.js) -->
+<script async
+src="https://www.googletagmanager.com/gtag/js?id=G-R7FXCZJQVT"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-R7FXCZJQVT');
+</script>
+<meta charset="UTF-8">
+<meta name="google-site-verification"
+content="wV9VVQ2Pq7ktBfdQB5Sqburfdo4EDJpyvpAmfSI2XB4" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de Confidentialité — SynchroVie 2026</title>
+<meta name="description" content="SynchroVie protège vos données personnelles. Parcourez notre politique RGPD : collecte, utilisation, sécurité et vos droits sur synchro-vie.com.">
+<meta name="robots" content="index, follow">
+<link rel="canonical"
+href="https://synchro-vie.com/politique-de-confidentialite.html">
+<link rel="alternate" hreflang="fr-FR" href="https://synchro-vie.com/politique-de-confidentialite.html">
+<link rel="alternate" hreflang="fr-BE" href="https://synchro-vie.com/politique-de-confidentialite.html">
+<link rel="alternate" hreflang="fr-CH" href="https://synchro-vie.com/politique-de-confidentialite.html">
+<link rel="alternate" hreflang="fr-LU" href="https://synchro-vie.com/politique-de-confidentialite.html">
+<link rel="alternate" hreflang="x-default" href="https://synchro-vie.com/politique-de-confidentialite.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Politique de Confidentialité — SynchroVie">
+<meta property="og:description" content="Protection de vos données personnelles. Politique de confidentialité conforme RGPD. SynchroVie 2026.">
+<meta property="og:url"
+content="https://synchro-vie.com/politique-de-confidentialite.html">
+<meta property="og:site_name" content="SynchroVie">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:image"
+content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 <style>
-table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; max-width: 100%; }
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+--bg-primary: #0B1B3D;
+--bg-secondary: #0d2137;
+--bg-card: rgba(13,33,55,0.85);
+--cyan: #3B82F6;
+--green: #00C9A7;
+--text-primary: #e0e8f0;
+--text-secondary: #8899b0;
+--border: rgba(59,130,246,0.08);
+--radius: 10px;
+}
+body {
+font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+background: var(--bg-primary);
+color: var(--text-primary);
+line-height: 1.7;
+font-size: 16px;
+}
+a { color: var(--blue); text-decoration: none; transition: color 0.3s; }
+a:hover { color: var(--green); }
+/* Trust strip */
+.trust-strip {
+background: linear-gradient(135deg, #0d2137 0%, #0B1B3D 100%);
+border-bottom: 1px solid var(--border);
+padding: 12px 0;
+}
+.trust-strip-inner {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 0;
+flex-wrap: nowrap;
+padding: 0 20px;
+}
+.trust-strip-item {
+display: flex;
+align-items: center;
+gap: 6px;
+padding: 0 18px;
+white-space: nowrap;
+color: #b8c9e0;
+font-size: 0.8rem;
+font-weight: 500;
+
+
+}
+.trust-strip-item strong { color: var(--blue); font-weight: 700; }
+.trust-strip-divider { width: 1px; height: 20px; background:
+rgba(59,130,246,0.1); flex-shrink: 0; }
+/* Header */
+.header {
+background: rgba(11,27,61,0.95);
+backdrop-filter: blur(12px);
+border-bottom: 1px solid var(--border);
+padding: 14px 0;
+position: sticky;
+top: 0;
+z-index: 100;
+}
+.header-inner {
+max-width: 1200px;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+}
+.logo {
+font-family: 'Space Grotesk', sans-serif;
+font-size: 1.4rem;
+font-weight: 700;
+color: #fff;
+letter-spacing: 0.08em;
+}
+.logo span { color: var(--blue); }
+.nav-links { display: flex; gap: 20px; }
+.nav-links a {
+color: var(--text-secondary);
+font-size: 0.88rem;
+font-weight: 500;
+transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--blue); }
+/* Breadcrumb */
+.breadcrumb-bar {
+max-width: 1200px;
+margin: 0 auto;
+padding: 16px 20px;
+}
+.breadcrumb {
+display: flex;
+align-items: center;
+gap: 8px;
+font-size: 0.82rem;
+color: var(--text-secondary);
+flex-wrap: wrap;
+}
+.breadcrumb a { color: var(--blue); font-weight: 500; }
+.breadcrumb a:hover { color: var(--green); }
+.breadcrumb span { color: var(--text-secondary); }
+/* Main content */
+.page-container {
+max-width: 900px;
+margin: 0 auto;
+padding: 0 20px 60px;
+}
+.page-header {
+padding: 40px 0 30px;
+border-bottom: 1px solid var(--border);
+margin-bottom: 40px;
+}
+.page-header h1 {
+font-family: 'Space Grotesk', sans-serif;
+font-size: 2.2rem;
+font-weight: 700;
+color: #fff;
+margin-bottom: 10px;
+}
+.page-header p {
+color: var(--text-secondary);
+font-size: 0.95rem;
+}
+.last-update {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+background: rgba(59,130,246,0.06);
+border: 1px solid rgba(59,130,246,0.12);
+padding: 6px 14px;
+border-radius: 6px;
+font-size: 0.82rem;
+color: var(--blue);
+font-weight: 600;
+margin-top: 16px;
+}
+/* Section styling */
+.legal-section {
+margin-bottom: 40px;
+}
+.legal-section h2 {
+font-family: 'Space Grotesk', sans-serif;
+font-size: 1.35rem;
+
+font-weight: 700;
+color: #fff;
+margin-bottom: 16px;
+padding-bottom: 10px;
+border-bottom: 1px solid var(--border);
+}
+.legal-section h3 {
+font-size: 1.05rem;
+font-weight: 600;
+color: var(--blue);
+margin-top: 20px;
+margin-bottom: 10px;
+}
+.legal-section p {
+color: var(--text-primary);
+margin-bottom: 14px;
+line-height: 1.75;
+}
+.legal-section ul {
+list-style: none;
+margin-bottom: 14px;
+padding-left: 0;
+}
+.legal-section ul li {
+position: relative;
+padding-left: 22px;
+margin-bottom: 8px;
+color: var(--text-primary);
+line-height: 1.65;
+}
+.legal-section ul li::before {
+content: '';
+position: absolute;
+left: 4px;
+top: 10px;
+width: 6px;
+height: 6px;
+border-radius: 50%;
+background: var(--blue);
+}
+.highlight-box {
+background: rgba(59,130,246,0.04);
+border: 1px solid rgba(59,130,246,0.1);
+border-radius: var(--radius);
+padding: 20px 24px;
+margin: 20px 0;
+}
+.highlight-box p { margin-bottom: 8px; }
+.highlight-box strong { color: var(--blue); }
+.contact-box {
+background: linear-gradient(135deg, rgba(59,130,246,0.06) 0%,
+rgba(0,201,167,0.04) 100%);
+border: 1px solid rgba(59,130,246,0.12);
+border-radius: var(--radius);
+padding: 24px;
+margin: 24px 0;
+}
+.contact-box h3 {
+color: var(--blue);
+margin-top: 0;
+}
+.contact-box a { color: var(--green); font-weight: 600; }
+/* Table */
+.legal-table {
+width: 100%;
+border-collapse: collapse;
+margin: 16px 0;
+font-size: 0.9rem;
+}
+.legal-table th, .legal-table td {
+padding: 12px 16px;
+text-align: left;
+border-bottom: 1px solid var(--border);
+}
+.legal-table th {
+background: rgba(59,130,246,0.06);
+color: var(--blue);
+font-weight: 600;
+font-size: 0.85rem;
+text-transform: uppercase;
+letter-spacing: 0.04em;
+}
+.legal-table td {
+color: var(--text-primary);
+}
+/* Footer */
+.footer {
+background: #060e20;
+border-top: 1px solid var(--border);
+padding: 40px 20px 20px;
+}
+.footer-grid {
+max-width: 1200px;
+margin: 0 auto;
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 30px;
+margin-bottom: 30px;
+
+}
+.footer-logo {
+font-family: 'Space Grotesk', sans-serif;
+font-size: 1.2rem;
+font-weight: 700;
+color: #fff;
+margin-bottom: 10px;
+}
+.footer-tagline { color: var(--text-secondary); font-size: 0.85rem;
+margin-bottom: 6px; }
+.footer-address { color: var(--text-secondary); font-size: 0.82rem; }
+.footer-col h4 {
+color: var(--blue);
+font-size: 0.85rem;
+font-weight: 700;
+margin-bottom: 12px;
+text-transform: uppercase;
+letter-spacing: 0.06em;
+}
+.footer-col a {
+display: block;
+color: var(--text-secondary);
+font-size: 0.85rem;
+margin-bottom: 8px;
+transition: color 0.3s;
+}
+.footer-col a:hover { color: var(--blue); }
+.footer-bottom {
+max-width: 1200px;
+margin: 0 auto;
+text-align: center;
+padding-top: 20px;
+border-top: 1px solid var(--border);
+}
+.footer-guarantees {
+color: var(--text-secondary);
+font-size: 0.82rem;
+margin-bottom: 10px;
+}
+.footer-copyright {
+color: var(--text-secondary);
+font-size: 0.78rem;
+}
+/* Email float */
+.whatsapp-float {
+position: fixed;
+bottom: 24px;
+right: 24px;
+width: 56px;
+height: 56px;
+background: #25D366;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow: 0 4px 20px rgba(37,211,102,0.35);
+z-index: 999;
+transition: transform 0.3s;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+@media (max-width: 768px) {
+.trust-strip-inner { flex-wrap: wrap; justify-content: center; gap: 6px; }
+.trust-strip-item { padding: 4px 10px; font-size: 0.72rem; }
+.trust-strip-divider { display: none; }
+.nav-links { display: none; }
+.footer-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+.page-header h1 { font-size: 1.6rem; }
+.legal-section h2 { font-size: 1.15rem; }
+.legal-table { font-size: 0.8rem; }
+.legal-table th, .legal-table td { padding: 8px 10px; }
+}
+@media (max-width: 480px) {
+.footer-grid { grid-template-columns: 1fr; }
+}
+.payment-badges { display: flex; align-items: center; gap: 14px; background:
+#ffffff; padding: 10px 16px; border-radius: 8px; width: fit-content; margin-top:
+8px; }
+.payment-badges i { font-size: 26px; color: #0B1B3D; transition: color 0.2s
+ease; }
+.payment-badges i:hover { color: #3B82F6; }
+</style>
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Politique de Confidentialité — SynchroVie 2026">
+<meta name="twitter:description" content="Politique de confidentialité SynchroVie 2026. Comment nous protégeons vos données personnelles, vos droits RGPD et nos engagements en matière de vie privée.">
+<meta name="twitter:image"
+content="https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp">
+<style>
+table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch;
+max-width: 100%; }
 </style>
 <!-- TikTok Pixel Code Start -->
 <script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
-  ttq.load('D9A3IORC77UEFAL2KKS0');
-  ttq.page();
+!function (w, d, t) {
+w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","ide
+ntify","instances","debug","on","off","once","ready","alias","group","enableCook
+ie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefe
+r=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arg
+uments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.metho
+ds[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
+]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pix el/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._
+t=ttq._t||{},ttq._t[e]=+new
+Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.ge tElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+ttq.load('D9A3IORC77UEFAL2KKS0');
+ttq.page();
 }(window, document, 'ttq');
 </script>
 <!-- TikTok Pixel Code End -->
-  
-  
-  
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#0B2545">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0B2545">
 <link rel="icon" type="image/webp" href="/assets/img/logo-synchrovie.webp">
-  <link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
-  </head>
+<link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
+</head>
 <body>
+<!-- Bandeau confiance -->
+<div class="trust-strip">
+<div class="trust-strip-inner">
+<div class="trust-strip-item">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7"
+stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle
+cx="18.5" cy="18.5" r="2.5"/></svg>
+<span><strong>Livraison Express</strong> 7-10j Europe</span>
+</div>
+<div class="trust-strip-divider"></div>
+<div class="trust-strip-item">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7"
+stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+<span><strong>Paiement Sécurisé</strong> SSL 256-bit</span>
+</div>
+<div class="trust-strip-divider"></div>
+<div class="trust-strip-item">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7"
+stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline
+points="22 4 12 14.01 9 11.01"/></svg>
+<span><strong>Garantie 2 Ans</strong> Satisfaction assurée</span>
+</div>
+<div class="trust-strip-divider"></div>
+<div class="trust-strip-item">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7"
+stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+<span><strong>Support Expert</strong> Email 24/7</span>
+</div>
+</div>
+</div>
+<!-- Header -->
+<header class="header">
+<div class="header-inner">
+<a href="https://synchro-vie.com/" class="logo">SYNCHRO<span>VIE</span></a>
+<nav class="nav-links">
+<a href="https://synchro-vie.com/">Accueil</a>
+<a href="index.html#boutique">Boutique</a>
+<a href="https://synchro-vie.com/blog.html">Blog</a>
+<a href="https://synchro-vie.com/faq.html">FAQ</a>
+<a href="https://synchro-vie.com/contact.html">Contact</a>
+</nav>
+</div>
+</header>
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+<div class="breadcrumb">
+<a href="https://synchro-vie.com/">Accueil</a>
+<span>›</span>
+<span>Politique de Confidentialité</span>
+</div>
+</div>
+<!-- Contenu principal -->
+<div class="page-container">
+<div class="page-header">
+<h1>Politique de Confidentialité</h1>
+<p>SynchroVie s'engage à protéger la vie privée de chaque visiteur et client.
+Cette politique détaille nos pratiques de collecte, d'utilisation et de
+protection de vos données personnelles.</p>
+<div class="last-update">
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline
+points="12 6 12 12 16 14"/></svg>
+Dernière mise à jour : 1er janvier 2026
 
-    <!-- Bandeau confiance -->
-    <div class="trust-strip">
-        <div class="trust-strip-inner">
-            <div class="trust-strip-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                <span><strong>Livraison Express</strong> 7-10j Europe</span>
-            </div>
-            <div class="trust-strip-divider"></div>
-            <div class="trust-strip-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                <span><strong>Paiement Sécurisé</strong> SSL 256-bit</span>
-            </div>
-            <div class="trust-strip-divider"></div>
-            <div class="trust-strip-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                <span><strong>Garantie 2 Ans</strong> Satisfaction assurée</span>
-            </div>
-            <div class="trust-strip-divider"></div>
-            <div class="trust-strip-item">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C9A7" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span><strong>Support Expert</strong> Email 24/7</span>
-            </div>
-        </div>
-    </div>
+</div>
+</div>
+<!-- Article 1 -->
+<section class="legal-section">
+<h2>1. Responsable du Traitement</h2>
+<p>Le responsable du traitement des données personnelles est la société
+SynchroVie, fondée par Diougamady Keita, dont le siège social est situé à Paris,
+France. Vous pouvez joindre le responsable du traitement par les moyens suivants
+:</p>
+<div class="contact-box">
+<h3>Coordonnées du Responsable</h3>
+<p><strong>Email :</strong> <a
+href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a></p>
+<p><strong>Téléphone :</strong> <a href="mailto:contact@synchro-vie.com"
+style="color: var(--blue);">Nous contacter</a></p>
+<p><strong>Email :</strong> <a href="mailto:synchrovie@gmail.com">Email
+Expert</a></p>
+<p><strong>Adresse :</strong> Paris, France</p>
+</div>
+<p>Pour toute question relative à cette politique ou au traitement de vos
+données, le service client est disponible 7j/7 par email ou Email, avec un temps
+de réponse moyen inférieur à 2 heures.</p>
+</section>
+<!-- Article 2 -->
+<section class="legal-section">
+<h2>2. Données Personnelles Collectées</h2>
+<p>SynchroVie collecte uniquement les données strictement nécessaires au bon
+fonctionnement de ses services. Aucune donnée n'est collectée à votre insu ou
+sans justification légitime. Les catégories de données traitées sont les
+suivantes :</p>
+<h3>2.1 Données fournies directement</h3>
+<ul>
+<li>Nom, prénom et adresse email (lors de la création de compte, d'une commande
+ou de l'inscription à la newsletter)</li>
+<li>Adresse de livraison et/ou de facturation</li>
+<li>Numéro de téléphone (pour le suivi de commande et le support client)</li>
+<li>Données de paiement (traitées exclusivement par nos partenaires certifiés
+PCI-DSS — SynchroVie ne stocke aucune donnée bancaire sur ses serveurs)</li>
+<li>Messages et demandes envoyés via le formulaire de contact, Email ou l'email
+de support</li>
+</ul>
+<h3>2.2 Données collectées automatiquement</h3>
+<ul>
+<li>Adresse IP et type de navigateur (pour la sécurité et l'amélioration du
+site)</li>
+<li>Pages visitées, durée de visite et interactions avec le site (via cookies
+analytiques, voir article 5)</li>
+<li>Données de terminal (système d'exploitation, résolution d'écran)</li>
+<li>Informations de localisation approximative (pays/région, basée sur
+l'IP)</li>
+</ul>
+<h3>2.3 Données issues de l'utilisation des produits</h3>
+<p>Les technologies de bio-optimisation vendues par SynchroVie (bagues
+biométriques, capteurs de sommeil, moniteurs ECG, etc.) peuvent générer des
+données de santé connectée. Ces données de santé sont traitées exclusivement par
+les applications associées à chaque produit, conformément aux politiques de
+confidentialité de leurs fabricants respectifs. SynchroVie ne collecte, ne
+stocke ni n'accède à vos données biométriques ou de santé générées par les
+produits. Seules les données de commande (produit acheté, date, prix) sont
+conservées par SynchroVie.</p>
+</section>
+<!-- Article 3 -->
+<section class="legal-section">
+<h2>3. Finalités du Traitement</h2>
+<p>Vos données personnelles sont traitées pour des finalités précises, légitimes
+et proportionnées. Aucune utilisation détournée ou non documentée n'est
+effectuée. Les finalités principales sont :</p>
+<table class="legal-table">
+<thead>
+<tr>
+<th>Finalité</th>
+<th>Base légale</th>
+<th>Données concernées</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gestion des commandes et livraisons</td>
+<td>Exécution contractuelle (Art. 6.1.b RGPD)</td>
+<td>Nom, adresse, email, téléphone</td>
+</tr>
+<tr>
+<td>Traitement des paiements</td>
+<td>Exécution contractuelle (Art. 6.1.b RGPD)</td>
+<td>Données de paiement (via prestataires)</td>
+</tr>
+<tr>
+<td>Service client et support technique</td>
+<td>Intérêt légitime (Art. 6.1.f RGPD)</td>
+<td>Email, téléphone, messages</td>
+</tr>
+<tr>
+<td>Envoi de la newsletter</td>
+<td>Consentement (Art. 6.1.a RGPD)</td>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="header-inner">
-            <a href="https://synchro-vie.com/" class="logo">SYNCHRO<span>VIE</span></a>
-            <nav class="nav-links">
-                <a href="https://synchro-vie.com/">Accueil</a>
-                <a href="index.html#boutique">Boutique</a>
-                <a href="https://synchro-vie.com/blog.html">Blog</a>
-                <a href="https://synchro-vie.com/faq.html">FAQ</a>
-                <a href="https://synchro-vie.com/contact.html">Contact</a>
-            </nav>
-        </div>
-    </header>
+<td>Email</td>
+</tr>
+<tr>
+<td>Analyse et amélioration du site</td>
+<td>Intérêt légitime (Art. 6.1.f RGPD)</td>
+<td>Données de navigation (cookies anonymisés)</td>
+</tr>
+<tr>
+<td>Conformité aux obligations légales</td>
+<td>Obligation légale (Art. 6.1.c RGPD)</td>
+<td>Données de facturation, logs</td>
+</tr>
+</tbody>
+</table>
+</section>
+<!-- Article 4 -->
+<section class="legal-section">
+<h2>4. Durée de Conservation des Données</h2>
+<p>SynchroVie conserve vos données personnelles uniquement pendant la durée
+nécessaire aux finalités pour lesquelles elles ont été collectées. Les durées de
+conservation sont les suivantes :</p>
+<ul>
+<li><strong>Données de commande et facturation :</strong> 5 ans à compter de la
+livraison, conformément aux obligations comptables et fiscales applicables</li>
+<li><strong>Données de compte client :</strong> durée de l'inscription + 3 ans
+après la dernière connexion ou la dernière commande</li>
+<li><strong>Email newsletter :</strong> jusqu'au désabonnement par l'utilisateur
+(lien de désinscription en 1 clic dans chaque email)</li>
+<li><strong>Messages de support client :</strong> 2 ans après la clôture du
+dossier</li>
+<li><strong>Données de navigation (cookies) :</strong> 13 mois maximum à compter
+du dépôt sur votre terminal</li>
+<li><strong>Logs de sécurité :</strong> 12 mois</li>
+</ul>
+<p>Au-delà de ces durées, les données sont supprimées ou anonymisées de manière
+irréversible, sauf obligation légale imposant une conservation
+supplémentaire.</p>
+</section>
+<!-- Article 5 -->
+<section class="legal-section">
+<h2>5. Cookies et Technologies de Suivi</h2>
+<p>Le site SynchroVie utilisé des cookies pour assurer son bon fonctionnement,
+analyser le trafic et améliorer l'expérience utilisateur. Un cookie est un petit
+fichier texte déposé sur votre terminal lors de votre visite. Vous pouvez à tout
+moment modifier vos préférences en matière de cookies.</p>
+<h4>Outils de mesure d'audience et marketing</h4>
+<p>Ce site utilisé les outils suivants, soumis à votre consentement préalable
+(gérable via notre bandeau cookies) :</p>
+<ul>
+<li><strong>Google Analytics 4</strong> (avec Consent Mode v2) — mesure
+d'audience anonymisée, respect du consentement utilisateur.</li>
+<li><strong>TikTok Pixel</strong> (ID : D9A3IORC77UEFAL2KKS0) — mesure de
+conversion publicitaire.</li>
+<li><strong>Brevo</strong> — envoi de newsletters et emails transactionnels, sur
+inscription volontaire (liste ID 5).</li>
+</ul>
+<p>Ces outils déposent des cookies soumis à votre consentement, gérable via le
+bandeau de cookies affiché à votre première visite. Vous pouvez retirer votre
+consentement à tout moment.</p>
+<h3>5.1 Cookies strictement nécessaires</h3>
+<p>Ces cookies sont indispensables au fonctionnement du site et ne nécessitent
+pas votre consentement. Ils permettent notamment la gestion du panier d'achat,
+la session utilisateur et la sécurité du site.</p>
+<h3>5.2 Cookies analytiques</h3>
+<p>Des cookies analytiques (Google Analytics ou équivalent) peuvent être déposés
+pour mesurer l'audience du site, les pages les plus visitées et les taux de
+conversion. Ces données sont anonymisées et agrégées. Ils nécessitent votre
+consentement préalable.</p>
+<h3>5.3 Cookies marketing</h3>
+<p>Des cookies marketing peuvent être utilisés pour personnaliser les publicités
+et les offres affichées sur le site, en fonction de votre navigation. Ils
+nécessitent votre consentement explicite.</p>
+<div class="highlight-box">
+<p><strong>Gestion de vos préférences :</strong> Vous pouvez à tout moment
+accepter, refuser ou modifier vos préférences en matière de cookies via le
+bandeau de consentement affiché lors de votre première visite ou en vous rendant
+sur la page <a href="https://synchro-vie.com/cookies.html">Gestion des
+Cookies</a>.</p>
+<p><strong>Navigation sans cookies :</strong> Vous pouvez également configurer
+votre navigateur pour bloquer les cookies ou vous signaler leur dépôt. Certaines
+fonctionnalités du site pourraient être limitées dans ce cas.</p>
+</div>
+</section>
+<!-- Article 6 -->
+<section class="legal-section">
+<h2>6. Partage et Transfert des Données</h2>
+<p>SynchroVie ne vend, ne loue et ne cède jamais vos données personnelles à des
+tiers à des fins commerciales. Les données sont partagées uniquement avec les
+partenaires strictement nécessaires au fonctionnement des services, dans le
+respect du RGPD :</p>
+<ul>
+<li><strong>Prestataires de paiement :</strong> PayPal et les établissements
+bancaires partenaires (Visa, Mastercard) (données bancaires traitées en PCI-DSS,
 
-    <!-- Breadcrumb -->
-    <div class="breadcrumb-bar">
-        <div class="breadcrumb">
-            <a href="https://synchro-vie.com/">Accueil</a>
-            <span>›</span>
-            <span>Politique de Confidentialité</span>
-        </div>
-    </div>
+jamais stockées par SynchroVie)</li>
+<li><strong>Prestataires de livraison :</strong> transporteurs partenaires pour
+l'expédition et le suivi des colis (nom, adresse, téléphone)</li>
+<li><strong>Hébergeur du site :</strong> GitHub Pages (hébergement statique, pas
+de données personnelles stockées côté serveur)</li>
+<li><strong>Outils d'analyse :</strong> Google Analytics (données anonymisées,
+si consentement accordé)</li>
+<li><strong>Plateformes de communication :</strong> Email (Meta) pour le support
+client — les échanges sont soumis à la politique de confidentialité de
+Email</li>
+</ul>
+<p>Aucun transfert de données hors de l'Espace Économique Européen (EEE) n'est
+effectué, sauf nécessité technique liée à nos prestataires d'hébergement ou de
+paiement, auquel cas des garanties appropriées (clauses contractuelles types,
+décision d'adéquation) sont mises en place conformément à l'article 46 du
+RGPD.</p>
+</section>
+<!-- Article 7 -->
+<section class="legal-section">
+<h2>7. Sécurité des Données</h2>
+<p>SynchroVie met en œuvre des mesures techniques et organisationnelles
+appropriées pour protéger vos données personnelles contre tout accès non
+autorisé, altération, divulgation ou destruction. Ces mesures comprennent :</p>
+<ul>
+<li>Chiffrement SSL/TLS 256 bits sur l'ensemble du site (HTTPS obligatoire)</li>
+<li>Authentification sécurisée pour l'accès aux comptes</li>
+<li>Aucun stockage de données bancaires sur les serveurs de SynchroVie</li>
+<li>Hébergement sur GitHub Pages (infrastructure statique, pas de base de
+données côté serveur vulnérable)</li>
+<li>Revue régulière des pratiques de sécurité et des accès</li>
+<li>Formation des collaborateurs aux bonnes pratiques de protection des
+données</li>
+</ul>
+<p>Malgré ces précautions, aucune transmission de données sur Internet ne peut
+être garantie à 100 %. En cas de violation de données susceptible d'affecter vos
+droits et libertés, SynchroVie vous en informera dans les 72 heures suivant la
+découverte, conformément à l'article 33 du RGPD, et notifiera la CNIL si
+applicable.</p>
+</section>
+<!-- Article 8 -->
+<section class="legal-section">
+<h2>8. Vos Droits en Vertu du RGPD</h2>
+<p>Conformément au Règlement Général sur la Protection des Données (RGPD —
+Règlement UE 2016/679), vous disposez des droits suivants concernant vos données
+personnelles :</p>
+<table class="legal-table">
+<thead>
+<tr>
+<th>Droit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Droit d'accès</strong></td>
+<td>Obtenir une copie de toutes les données personnelles que SynchroVie détient
+sur vous</td>
+</tr>
+<tr>
+<td><strong>Droit de rectification</strong></td>
+<td>Demander la correction de données inexactes ou incomplètes</td>
+</tr>
+<tr>
+<td><strong>Droit à l'effacement</strong></td>
+<td>Demander la suppression de vos données, sous réserve des obligations légales
+de conservation</td>
+</tr>
+<tr>
+<td><strong>Droit à la limitation</strong></td>
+<td>Demander la suspension du traitement de certaines données pendant la
+vérification d'une contestation</td>
+</tr>
+<tr>
+<td><strong>Droit à la portabilité</strong></td>
+<td>Recevoir vos données dans un format structuré et couramment utilisé pour les
+transférer à un autre responsable</td>
+</tr>
+<tr>
+<td><strong>Droit d'opposition</strong></td>
+<td>Vous opposer au traitement de vos données fondé sur l'intérêt légitime, y
+compris le profilage</td>
+</tr>
+<tr>
+<td><strong>Droit de retrait du consentement</strong></td>
+<td>Retirer votre consentement à tout moment pour les traitements fondés sur le
+consentement (newsletter, cookies marketing) sans affecter la licéité des
+traitements antérieurs</td>
+</tr>
+</tbody>
+</table>
+<div class="contact-box">
+<h3>Exercer vos droits</h3>
+<p>Pour exercer l'un de ces droits, contactez-nous par email à <a
+href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a> ou par <a
+href="mailto:synchrovie@gmail.com">Email</a> en précisant l'objet « Données
+personnelles — Exercice de droits ». Une réponse vous sera adressée sous 30
+jours maximum. Un justificatif d'identité pourra vous être demandé.</p>
+</div>
 
-    <!-- Contenu principal -->
-    <div class="page-container">
-        <div class="page-header">
-            <h1>Politique de Confidentialité</h1>
-            <p>SynchroVie s'engage à protéger la vie privée de chaque visiteur et client. Cette politique détaille nos pratiques de collecte, d'utilisation et de protection de vos données personnelles.</p>
-            <div class="last-update">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                Dernière mise à jour : 1er janvier 2026
-            </div>
-        </div>
-
-        <!-- Article 1 -->
-        <section class="legal-section">
-            <h2>1. Responsable du Traitement</h2>
-            <p>Le responsable du traitement des données personnelles est la société SynchroVie, fondée par Diougamady Keita, dont le siège social est situé à Paris, France. Vous pouvez joindre le responsable du traitement par les moyens suivants :</p>
-            <div class="contact-box">
-                <h3>Coordonnées du Responsable</h3>
-                <p><strong>Email :</strong> <a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a></p>
-                <p><strong>Téléphone :</strong> <a href="mailto:contact@synchro-vie.com" style="color: var(--blue);">Nous contacter</a></p>
-                <p><strong>Email :</strong> <a   href="mailto:synchrovie@gmail.com">Email Expert</a></p>
-                <p><strong>Adresse :</strong> Paris, France</p>
-            </div>
-            <p>Pour toute question relative à cette politique ou au traitement de vos données, le service client est disponible 7j/7 par email ou Email, avec un temps de réponse moyen inférieur à 2 heures.</p>
-        </section>
-
-        <!-- Article 2 -->
-        <section class="legal-section">
-            <h2>2. Données Personnelles Collectées</h2>
-            <p>SynchroVie collecte uniquement les données strictement nécessaires au bon fonctionnement de ses services. Aucune donnée n'est collectée à votre insu ou sans justification légitime. Les catégories de données traitées sont les suivantes :</p>
-
-            <h3>2.1 Données fournies directement</h3>
-            <ul>
-                <li>Nom, prénom et adresse email (lors de la création de compte, d'une commande ou de l'inscription à la newsletter)</li>
-                <li>Adresse de livraison et/ou de facturation</li>
-                <li>Numéro de téléphone (pour le suivi de commande et le support client)</li>
-                <li>Données de paiement (traitées exclusivement par nos partenaires certifiés PCI-DSS — SynchroVie ne stocke aucune donnée bancaire sur ses serveurs)</li>
-                <li>Messages et demandes envoyés via le formulaire de contact, Email ou l'email de support</li>
-            </ul>
-
-            <h3>2.2 Données collectées automatiquement</h3>
-            <ul>
-                <li>Adresse IP et type de navigateur (pour la sécurité et l'amélioration du site)</li>
-                <li>Pages visitées, durée de visite et interactions avec le site (via cookies analytiques, voir article 5)</li>
-                <li>Données de terminal (système d'exploitation, résolution d'écran)</li>
-                <li>Informations de localisation approximative (pays/région, basée sur l'IP)</li>
-            </ul>
-
-            <h3>2.3 Données issues de l'utilisation des produits</h3>
-            <p>Les technologies de bio-optimisation vendues par SynchroVie (bagues biométriques, capteurs de sommeil, moniteurs ECG, etc.) peuvent générer des données de santé connectée. Ces données de santé sont traitées exclusivement par les applications associées à chaque produit, conformément aux politiques de confidentialité de leurs fabricants respectifs. SynchroVie ne collecte, ne stocke ni n'accède à vos données biométriques ou de santé générées par les produits. Seules les données de commande (produit acheté, date, prix) sont conservées par SynchroVie.</p>
-        </section>
-
-        <!-- Article 3 -->
-        <section class="legal-section">
-            <h2>3. Finalités du Traitement</h2>
-            <p>Vos données personnelles sont traitées pour des finalités précises, légitimes et proportionnées. Aucune utilisation détournée ou non documentée n'est effectuée. Les finalités principales sont :</p>
-
-            <table class="legal-table">
-                <thead>
-                    <tr>
-                        <th>Finalité</th>
-                        <th>Base légale</th>
-                        <th>Données concernées</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Gestion des commandes et livraisons</td>
-                        <td>Exécution contractuelle (Art. 6.1.b RGPD)</td>
-                        <td>Nom, adresse, email, téléphone</td>
-                    </tr>
-                    <tr>
-                        <td>Traitement des paiements</td>
-                        <td>Exécution contractuelle (Art. 6.1.b RGPD)</td>
-                        <td>Données de paiement (via prestataires)</td>
-                    </tr>
-                    <tr>
-                        <td>Service client et support technique</td>
-                        <td>Intérêt légitime (Art. 6.1.f RGPD)</td>
-                        <td>Email, téléphone, messages</td>
-                    </tr>
-                    <tr>
-                        <td>Envoi de la newsletter</td>
-                        <td>Consentement (Art. 6.1.a RGPD)</td>
-                        <td>Email</td>
-                    </tr>
-                    <tr>
-                        <td>Analyse et amélioration du site</td>
-                        <td>Intérêt légitime (Art. 6.1.f RGPD)</td>
-                        <td>Données de navigation (cookies anonymisés)</td>
-                    </tr>
-                    <tr>
-                        <td>Conformité aux obligations légales</td>
-                        <td>Obligation légale (Art. 6.1.c RGPD)</td>
-                        <td>Données de facturation, logs</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <!-- Article 4 -->
-        <section class="legal-section">
-            <h2>4. Durée de Conservation des Données</h2>
-            <p>SynchroVie conserve vos données personnelles uniquement pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées. Les durées de conservation sont les suivantes :</p>
-            <ul>
-                <li><strong>Données de commande et facturation :</strong> 5 ans à compter de la livraison, conformément aux obligations comptables et fiscales applicables</li>
-                <li><strong>Données de compte client :</strong> durée de l'inscription + 3 ans après la dernière connexion ou la dernière commande</li>
-                <li><strong>Email newsletter :</strong> jusqu'au désabonnement par l'utilisateur (lien de désinscription en 1 clic dans chaque email)</li>
-                <li><strong>Messages de support client :</strong> 2 ans après la clôture du dossier</li>
-                <li><strong>Données de navigation (cookies) :</strong> 13 mois maximum à compter du dépôt sur votre terminal</li>
-                <li><strong>Logs de sécurité :</strong> 12 mois</li>
-            </ul>
-            <p>Au-delà de ces durées, les données sont supprimées ou anonymisées de manière irréversible, sauf obligation légale imposant une conservation supplémentaire.</p>
-        </section>
-
-        <!-- Article 5 -->
-        <section class="legal-section">
-            <h2>5. Cookies et Technologies de Suivi</h2>
-            <p>Le site SynchroVie utilisé des cookies pour assurer son bon fonctionnement, analyser le trafic et améliorer l'expérience utilisateur. Un cookie est un petit fichier texte déposé sur votre terminal lors de votre visite. Vous pouvez à tout moment modifier vos préférences en matière de cookies.</p>
-
-            <h4>Outils de mesure d'audience et marketing</h4>
-            <p>Ce site utilisé les outils suivants, soumis à votre consentement préalable (gérable via notre bandeau cookies) :</p>
-            <ul>
-                <li><strong>Google Analytics 4</strong> (avec Consent Mode v2) — mesure d'audience anonymisée, respect du consentement utilisateur.</li>
-                <li><strong>TikTok Pixel</strong> (ID : D9A3IORC77UEFAL2KKS0) — mesure de conversion publicitaire.</li>
-                <li><strong>Brevo</strong> — envoi de newsletters et emails transactionnels, sur inscription volontaire (liste ID 5).</li>
-            </ul>
-            <p>Ces outils déposent des cookies soumis à votre consentement, gérable via le bandeau de cookies affiché à votre première visite. Vous pouvez retirer votre consentement à tout moment.</p>
-
-            <h3>5.1 Cookies strictement nécessaires</h3>
-            <p>Ces cookies sont indispensables au fonctionnement du site et ne nécessitent pas votre consentement. Ils permettent notamment la gestion du panier d'achat, la session utilisateur et la sécurité du site.</p>
-
-            <h3>5.2 Cookies analytiques</h3>
-            <p>Des cookies analytiques (Google Analytics ou équivalent) peuvent être déposés pour mesurer l'audience du site, les pages les plus visitées et les taux de conversion. Ces données sont anonymisées et agrégées. Ils nécessitent votre consentement préalable.</p>
-
-            <h3>5.3 Cookies marketing</h3>
-            <p>Des cookies marketing peuvent être utilisés pour personnaliser les publicités et les offres affichées sur le site, en fonction de votre navigation. Ils nécessitent votre consentement explicite.</p>
-
-            <div class="highlight-box">
-                <p><strong>Gestion de vos préférences :</strong> Vous pouvez à tout moment accepter, refuser ou modifier vos préférences en matière de cookies via le bandeau de consentement affiché lors de votre première visite ou en vous rendant sur la page <a href="https://synchro-vie.com/cookies.html">Gestion des Cookies</a>.</p>
-                <p><strong>Navigation sans cookies :</strong> Vous pouvez également configurer votre navigateur pour bloquer les cookies ou vous signaler leur dépôt. Certaines fonctionnalités du site pourraient être limitées dans ce cas.</p>
-            </div>
-        </section>
-
-        <!-- Article 6 -->
-        <section class="legal-section">
-            <h2>6. Partage et Transfert des Données</h2>
-            <p>SynchroVie ne vend, ne loue et ne cède jamais vos données personnelles à des tiers à des fins commerciales. Les données sont partagées uniquement avec les partenaires strictement nécessaires au fonctionnement des services, dans le respect du RGPD :</p>
-            <ul>
-                <li><strong>Prestataires de paiement :</strong> PayPal et les établissements bancaires partenaires (Visa, Mastercard) (données bancaires traitées en PCI-DSS, jamais stockées par SynchroVie)</li>
-                <li><strong>Prestataires de livraison :</strong> transporteurs partenaires pour l'expédition et le suivi des colis (nom, adresse, téléphone)</li>
-                <li><strong>Hébergeur du site :</strong> GitHub Pages (hébergement statique, pas de données personnelles stockées côté serveur)</li>
-                <li><strong>Outils d'analyse :</strong> Google Analytics (données anonymisées, si consentement accordé)</li>
-                <li><strong>Plateformes de communication :</strong> Email (Meta) pour le support client — les échanges sont soumis à la politique de confidentialité de Email</li>
-            </ul>
-            <p>Aucun transfert de données hors de l'Espace Économique Européen (EEE) n'est effectué, sauf nécessité technique liée à nos prestataires d'hébergement ou de paiement, auquel cas des garanties appropriées (clauses contractuelles types, décision d'adéquation) sont mises en place conformément à l'article 46 du RGPD.</p>
-        </section>
-
-        <!-- Article 7 -->
-        <section class="legal-section">
-            <h2>7. Sécurité des Données</h2>
-            <p>SynchroVie met en œuvre des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre tout accès non autorisé, altération, divulgation ou destruction. Ces mesures comprennent :</p>
-            <ul>
-                <li>Chiffrement SSL/TLS 256 bits sur l'ensemble du site (HTTPS obligatoire)</li>
-                <li>Authentification sécurisée pour l'accès aux comptes</li>
-                <li>Aucun stockage de données bancaires sur les serveurs de SynchroVie</li>
-                <li>Hébergement sur GitHub Pages (infrastructure statique, pas de base de données côté serveur vulnérable)</li>
-                <li>Revue régulière des pratiques de sécurité et des accès</li>
-                <li>Formation des collaborateurs aux bonnes pratiques de protection des données</li>
-            </ul>
-            <p>Malgré ces précautions, aucune transmission de données sur Internet ne peut être garantie à 100 %. En cas de violation de données susceptible d'affecter vos droits et libertés, SynchroVie vous en informera dans les 72 heures suivant la découverte, conformément à l'article 33 du RGPD, et notifiera la CNIL si applicable.</p>
-        </section>
-
-        <!-- Article 8 -->
-        <section class="legal-section">
-            <h2>8. Vos Droits en Vertu du RGPD</h2>
-            <p>Conformément au Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679), vous disposez des droits suivants concernant vos données personnelles :</p>
-
-            <table class="legal-table">
-                <thead>
-                    <tr>
-                        <th>Droit</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Droit d'accès</strong></td>
-                        <td>Obtenir une copie de toutes les données personnelles que SynchroVie détient sur vous</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Droit de rectification</strong></td>
-                        <td>Demander la correction de données inexactes ou incomplètes</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Droit à l'effacement</strong></td>
-                        <td>Demander la suppression de vos données, sous réserve des obligations légales de conservation</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Droit à la limitation</strong></td>
-                        <td>Demander la suspension du traitement de certaines données pendant la vérification d'une contestation</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Droit à la portabilité</strong></td>
-                        <td>Recevoir vos données dans un format structuré et couramment utilisé pour les transférer à un autre responsable</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Droit d'opposition</strong></td>
-                        <td>Vous opposer au traitement de vos données fondé sur l'intérêt légitime, y compris le profilage</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Droit de retrait du consentement</strong></td>
-                        <td>Retirer votre consentement à tout moment pour les traitements fondés sur le consentement (newsletter, cookies marketing) sans affecter la licéité des traitements antérieurs</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="contact-box">
-                <h3>Exercer vos droits</h3>
-                <p>Pour exercer l'un de ces droits, contactez-nous par email à <a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a> ou par <a   href="mailto:synchrovie@gmail.com">Email</a> en précisant l'objet « Données personnelles — Exercice de droits ». Une réponse vous sera adressée sous 30 jours maximum. Un justificatif d'identité pourra vous être demandé.</p>
-            </div>
-
-            <p>Si vous estimez que le traitement de vos données personnelles constitue une violation du RGPD, vous avez le droit d'introduire une réclamation auprès de la Commission Nationale de l'Informatique et des Libertés (CNIL) ou de l'autorité de contrôle de votre pays de résidence au sein de l'Union Européenne.</p>
-        </section>
-
-        <!-- Article 9 -->
-        <section class="legal-section">
-            <h2>9. Données des Mineurs</h2>
-            <p>Les services de SynchroVie ne sont pas destinés aux personnes de moins de 16 ans. Nous ne collectons pas sciemment de données personnelles auprès de mineurs. Si vous êtes un parent ou un tuteur et que vous constatez que votre enfant nous a fourni des données personnelles sans votre consentement, contactez-nous immédiatement à <a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a>. Nous prendrons les mesures nécessaires pour supprimer ces données dans les plus brefs délais.</p>
-        </section>
-
-        <!-- Article 10 -->
-        <section class="legal-section">
-            <h2>10. Liens vers des Sites Tiers</h2>
-            <p>Le site SynchroVie peut contenir des liens vers des sites web de partenaires, de fabricants ou d'autres tiers. Ces sites ont leurs propres politiques de confidentialité, indépendantes de la nôtre. SynchroVie décline toute responsabilité quant aux pratiques de protection des données de ces sites externes. Nous vous invitons à consulter les politiques de confidentialité de chaque site que vous visitez avant d'y fournir des informations personnelles.</p>
-        </section>
-
-        <!-- Article 11 -->
-        <section class="legal-section">
-            <h2>11. Modifications de cette Politique</h2>
-            <p>SynchroVie se réserve le droit de modifier la présente politique de confidentialité à tout moment afin de l'adapter aux évolutions légales, réglementaires ou techniques, ou pour refléter les changements dans nos pratiques de traitement des données. En cas de modification substantielle, une notification sera affichée sur le site et/ou envoyée par email aux clients enregistrés. La date de dernière mise à jour figurant en tête de cette politique vous permet de vérifier sa version en vigueur. L'utilisation continue du site après la publication des modifications vaut acceptation de la politique révisée.</p>
-        </section>
-
-        <!-- Article 12 -->
-        <section class="legal-section">
-            <h2>12. Droit Applicable et Juridiction</h2>
-            <p>La présente politique de confidentialité est régie par le droit français et le Règlement Général sur la Protection des Données (RGPD — Règlement UE 2016/679). En cas de litige relatif au traitement de vos données personnelles, les tribunaux compétents seront ceux du ressort du siège social de SynchroVie, sous réserve des dispositions impératives applicables en matière de protection des consommateurs dans votre pays de résidence.</p>
-        </section>
-
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-grid">
-            <div class="footer-col">
-                <div class="footer-logo">SYNCHROVIE</div>
-                <p class="footer-tagline">L'ingénierie de la performance humaine.</p>
-                <p class="footer-address">Paris, France</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <a href="https://synchro-vie.com/">Accueil</a>
-                <a href="index.html#boutique">Boutique</a>
-                <a href="https://synchro-vie.com/blog.html">Blog</a>
-                <a href="https://synchro-vie.com/faq.html">FAQ</a>
-                <a href="https://synchro-vie.com/propos.html">À Propos</a>
-            </div>
-            <div class="footer-col">
-                <h4>Légal</h4>
-                <a href="https://synchro-vie.com/legal.html">Mentions Légales</a>
-                <a href="https://synchro-vie.com/cgv.html">Conditions Générales de Vente</a>
-                <a href="https://synchro-vie.com/politique-de-confidentialite.html">Politique de Confidentialité</a>
-                <a href="https://synchro-vie.com/cookies.html">Gestion des Cookies</a>
-            </div>
-            <div class="footer-col">
-                <h4>Contact</h4>
-                <a href="mailto:contact@synchro-vie.com" style="color: var(--blue);">Nous contacter</a>
-                <a   href="mailto:synchrovie@gmail.com">Email</a>
-                <a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="footer-guarantees">Livraison 7-10j Europe — Retours 14j — Garantie 2 ans</div>
-            <p class="footer-copyright">2026 SynchroVie. Tous droits réservés. Fondé par Diougamady Keita.</p>
-        </div>
-    </footer>
+<p>Si vous estimez que le traitement de vos données personnelles constitue une
+violation du RGPD, vous avez le droit d'introduire une réclamation auprès de la
+Commission Nationale de l'Informatique et des Libertés (CNIL) ou de l'autorité
+de contrôle de votre pays de résidence au sein de l'Union Européenne.</p>
+</section>
+<!-- Article 9 -->
+<section class="legal-section">
+<h2>9. Données des Mineurs</h2>
+<p>Les services de SynchroVie ne sont pas destinés aux personnes de moins de 16
+ans. Nous ne collectons pas sciemment de données personnelles auprès de mineurs.
+Si vous êtes un parent ou un tuteur et que vous constatez que votre enfant nous
+a fourni des données personnelles sans votre consentement, contactez-nous
+immédiatement à <a
+href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a>. Nous
+prendrons les mesures nécessaires pour supprimer ces données dans les plus brefs
+délais.</p>
+</section>
+<!-- Article 10 -->
+<section class="legal-section">
+<h2>10. Liens vers des Sites Tiers</h2>
+<p>Le site SynchroVie peut contenir des liens vers des sites web de partenaires,
+de fabricants ou d'autres tiers. Ces sites ont leurs propres politiques de
+confidentialité, indépendantes de la nôtre. SynchroVie décline toute
+responsabilité quant aux pratiques de protection des données de ces sites
+externes. Nous vous invitons à consulter les politiques de confidentialité de
+chaque site que vous visitez avant d'y fournir des informations
+personnelles.</p>
+</section>
+<!-- Article 11 -->
+<section class="legal-section">
+<h2>11. Modifications de cette Politique</h2>
+<p>SynchroVie se réserve le droit de modifier la présente politique de
+confidentialité à tout moment afin de l'adapter aux évolutions légales,
+réglementaires ou techniques, ou pour refléter les changements dans nos
+pratiques de traitement des données. En cas de modification substantielle, une
+notification sera affichée sur le site et/ou envoyée par email aux clients
+enregistrés. La date de dernière mise à jour figurant en tête de cette politique
+vous permet de vérifier sa version en vigueur. L'utilisation continue du site
+après la publication des modifications vaut acceptation de la politique
+révisée.</p>
+</section>
+<!-- Article 12 -->
+<section class="legal-section">
+<h2>12. Droit Applicable et Juridiction</h2>
+<p>La présente politique de confidentialité est régie par le droit français et
+le Règlement Général sur la Protection des Données (RGPD — Règlement UE
+2016/679). En cas de litige relatif au traitement de vos données personnelles,
+les tribunaux compétents seront ceux du ressort du siège social de SynchroVie,
+sous réserve des dispositions impératives applicables en matière de protection
+des consommateurs dans votre pays de résidence.</p>
+</section>
+</div>
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-grid">
+<div class="footer-col">
+<div class="footer-logo">SYNCHROVIE</div>
+<p class="footer-tagline">L'ingénierie de la performance humaine.</p>
+<p class="footer-address">Paris, France</p>
+</div>
+<div class="footer-col">
+<h4>Navigation</h4>
+<a href="https://synchro-vie.com/">Accueil</a>
+<a href="index.html#boutique">Boutique</a>
+<a href="https://synchro-vie.com/blog.html">Blog</a>
+<a href="https://synchro-vie.com/faq.html">FAQ</a>
+<a href="https://synchro-vie.com/propos.html">À Propos</a>
+</div>
+<div class="footer-col">
+<h4>Légal</h4>
+<a href="https://synchro-vie.com/legal.html">Mentions Légales</a>
+<a href="https://synchro-vie.com/cgv.html">Conditions Générales de Vente</a>
+<a href="https://synchro-vie.com/politique-de-confidentialite.html">Politique de
+Confidentialité</a>
+<a href="https://synchro-vie.com/cookies.html">Gestion des Cookies</a>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<a href="mailto:contact@synchro-vie.com" style="color: var(--blue);">Nous
+contacter</a>
+<a href="mailto:synchrovie@gmail.com">Email</a>
+<a href="mailto:contact@synchro-vie.com">contact@synchro-vie.com</a>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="footer-guarantees">Livraison 7-10j Europe — Retours 14j — Garantie 2
+ans</div>
+<p class="footer-copyright">2026 SynchroVie. Tous droits réservés. Fondé par
+Diougamady Keita.</p>
+</div>
+</footer>
 </body>
 </html>
