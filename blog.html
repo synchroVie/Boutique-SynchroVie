@@ -497,7 +497,7 @@ background: var(--blue);
 transition: var(--transition);
 }
 .nav-desktop a:hover::after { width: 100%; }
-.whatsapp-link {
+.contact-link {
 display: flex;
 align-items: center;
 gap: 6px;
@@ -510,13 +510,13 @@ font-weight: 600;
 font-size: 0.82rem;
 transition: var(--transition);
 }
-.whatsapp-link:hover {
+.contact-link:hover {
 background: #1fb855;
 transform: translateY(-1px);
 box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
 }
-.whatsapp-link::after { display: none !important; }
-.whatsapp-link svg { width: 18px; height: 18px; }
+.contact-link::after { display: none !important; }
+.contact-link svg { width: 18px; height: 18px; }
 .mobile-toggle {
 display: none;
 background: none;
@@ -1091,7 +1091,7 @@ transition: var(--transition);
 }
 .footer-bottom-links a:hover { color: var(--blue); }
 /* ── Email Float ── */
-.whatsapp-float {
+.contact-float {
 position: fixed;
 
 bottom: 24px;
@@ -1107,14 +1107,14 @@ justify-content: center;
 box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
 text-decoration: none;
 transition: var(--transition);
-animation: whatsapp-pulse 2s infinite;
+animation: contact-pulse 2s infinite;
 }
-.whatsapp-float:hover {
+.contact-float:hover {
 transform: scale(1.1);
 box-shadow: 0 6px 28px rgba(37, 211, 102, 0.5);
 }
-.whatsapp-float svg { width: 28px; height: 28px; fill: var(--white); }
-@keyframes whatsapp-pulse {
+.contact-float svg { width: 28px; height: 28px; fill: var(--white); }
+@keyframes contact-pulse {
 0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
 50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4), 0 0 0 10px rgba(37, 211,
 102, 0.1); }
@@ -1256,7 +1256,7 @@ stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 
 <a href="https://synchro-vie.com/faq.html">FAQ</a>
 <a href="https://synchro-vie.com/contact.html">Contact</a>
 </nav>
-<a href="mailto:synchrovie@gmail.com" class="whatsapp-link">
+<a href="mailto:synchrovie@gmail.com" class="contact-link">
 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
 stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
 Email

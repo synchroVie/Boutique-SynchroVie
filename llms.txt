@@ -1,22 +1,113 @@
 # SynchroVie
-> Boutique e-commerce francophone spécialisée dans les objets connectés santé et
-biohacking, sans abonnement.
-## Catalogue
-17 produits organisés en 4 familles :
-- Bio-Monitoring (SynchroRing X1, B-Pressure Connect, Scale-Master Pro,
-Vitals-Scan Pro, Thermo-Sense Ultra)
-- Neuro-Sommeil (NeuroRest G2, SleepTrack Zen, Aura-Light Clock)
-- Biofeedback (Aura-Ring Calm, Gravity-Tech Pad)
-- Performance (ThermoWrap FIR, ElectroBoost S3, Posture-Core, Flex-Gun Mini,
-Knee-Tech Support, Grip-Master Pro, LumiRed Pro X1)
-## Contenu éditorial
-23 articles blog sur la variabilité de la fréquence cardiaque (VFC), le sommeil
-profond, le cortisol, la récupération musculaire et la photobiomodulation.
-## Zones de livraison
-France, Belgique, Suisse, Luxembourg. Délai 7-10 jours ouvrables.
-## Contact
-Email : synchrovie@gmail.com
-## URL
-Site : https://synchro-vie.com
-Sitemap : https://synchro-vie.com/sitemap.xml
 
+> Boutique e-commerce francophone spécialisée dans les objets connectés santé
+> et biohacking, sans abonnement. Catalogue de 17 produits, 23 articles
+> éditoriaux, sources scientifiques vérifiées.
+
+## Catalogue
+
+17 produits organisés en 4 familles :
+
+- Bio-Monitoring : SynchroRing X1 (458 EUR), B-Pressure Connect (120 EUR),
+  Scale-Master Pro (168 EUR), Vitals-Scan Pro (169 EUR), Thermo-Sense Ultra (45 EUR)
+- Neuro-Sommeil : NeuroRest G2 (369 EUR), SleepTrack Zen (149 EUR),
+  Aura-Light Clock (78 EUR)
+- Biofeedback : Aura-Ring Calm (298 EUR), Gravity-Tech Pad (269 EUR)
+- Performance : ThermoWrap FIR (420 EUR), ElectroBoost S3 (178 EUR),
+  Posture-Core (68 EUR), Flex-Gun Mini (158 EUR), Knee-Tech Support (98 EUR),
+  Grip-Master Pro (88 EUR), LumiRed Pro X1 (549 EUR)
+
+## Contenu éditorial
+
+23 articles blog francophones sur la variabilité de la fréquence cardiaque (VFC),
+le sommeil profond, le cortisol, la récupération musculaire, la
+photobiomodulation, le biofeedback et le biohacking respiratoire.
+
+Liste complète : [https://synchro-vie.com/blog.html](https://synchro-vie.com/blog.html)
+
+## Zones de livraison
+
+France, Belgique, Suisse, Luxembourg. Délai 7 à 10 jours ouvrables.
+Retours acceptés sous 30 jours (emballage intact, sauf produits d'hygiène).
+Garantie 2 ans incluse sur tous les produits.
+
+## Sources scientifiques citées
+
+Les articles SynchroVie s'appuient sur 15 références scientifiques
+vérifiables (DOI et PubMed) :
+
+- [Bio Psychophysiology 2007 — VFC et stress](https://doi.org/10.1016/j.biopsycho.2007.10.001)
+- [Clinical Nutrition 2011 — Magnésium et cortisol](https://doi.org/10.1016/j.clnu.2011.06.003)
+- [JACC 2020 — Wearables cardiaques](https://doi.org/10.1016/j.jacc.2020.01.055)
+- [JACC 2020 — HTA et auto-mesure](https://doi.org/10.1016/j.jacc.2020.07.010)
+- [Nature 2006 — Sommeil et métabolisme](https://doi.org/10.1038/nature05488)
+- [Nature Digital Medicine 2020 — Capteurs santé](https://doi.org/10.1038/s41746-020-0226-6)
+- [Frontiers Public Health 2017 — Respiration nasale](https://doi.org/10.3389/fpubh.2017.00258)
+- [Annals Internal Medicine 2007 — Self-monitoring tension](https://doi.org/10.7326/0003-4819-146-12-200706190-00007)
+- [AHA Hypertension 2023 — Tension nocturne](https://ahajournals.org/doi/10.1161/HYPERTENSIONAHA.122.19996)
+- [Nature BPJ 2024 — Variabilité tensionnelle](https://nature.com/articles/s41371-024-00909-2)
+- [PubMed 36219384 — Photobiomodulation LED](https://pubmed.ncbi.nlm.nih.gov/36219384)
+- [PubMed 40895095 — Récupération musculaire 2025](https://pubmed.ncbi.nlm.nih.gov/40895095)
+- [PubMed 41716901 — EMS et performance](https://pubmed.ncbi.nlm.nih.gov/41716901)
+- [Journal Sport Rehabilitation — Récupération](https://journals.humankinetics.com/view/journals/jsr/jsr-overview.xml)
+- [NSCA Strength Conditioning Research — EMS](https://journals.lww.com/nsca-jscr)
+
+## Manifest PWA
+
+Le site est installable comme application web progressive :
+
+- [Manifest](https://synchro-vie.com/manifest.json)
+- Thème : bleu nuit #0B2545 sur fond #050d1e
+- Polices : Inter (corps) + Space Grotesk (titres)
+- Installation mobile et desktop possible
+
+## Méthode de paiement
+
+Paiement sécurisé via PayPal Hosted Buttons. 17 boutons dédiés
+(1 par produit) avec hostedButtonId unique. Redirection automatique
+vers [https://synchro-vie.com/merci.html](https://synchro-vie.com/merci.html)
+après transaction. Visa, MasterCard et PayPal acceptés.
+
+## Contact
+
+- Email expert : synchrovie@gmail.com (réponse sous 24h)
+- Email générique : contact@synchro-vie.com
+- Disponible 24h/24, 7j/7 par email
+
+## URLs
+
+- Site : [https://synchro-vie.com](https://synchro-vie.com)
+- Sitemap : [https://synchro-vie.com/sitemap.xml](https://synchro-vie.com/sitemap.xml)
+- Blog : [https://synchro-vie.com/blog.html](https://synchro-vie.com/blog.html)
+- Boutique : [https://synchro-vie.com/#boutique](https://synchro-vie.com/#boutique)
+- FAQ : [https://synchro-vie.com/faq.html](https://synchro-vie.com/faq.html)
+- À propos : [https://synchro-vie.com/propos.html](https://synchro-vie.com/propos.html)
+- Contact : [https://synchro-vie.com/contact.html](https://synchro-vie.com/contact.html)
+- CGV : [https://synchro-vie.com/cgv.html](https://synchro-vie.com/cgv.html)
+- Mentions légales : [https://synchro-vie.com/legal.html](https://synchro-vie.com/legal.html)
+- Politique de confidentialité : [https://synchro-vie.com/politique-de-confidentialite.html](https://synchro-vie.com/politique-de-confidentialite.html)
+- Cookies : [https://synchro-vie.com/cookies.html](https://synchro-vie.com/cookies.html)
+- Merci (post-paiement) : [https://synchro-vie.com/merci.html](https://synchro-vie.com/merci.html)
+
+## Hébergement
+
+GitHub Pages sur dépôt public. Domaine personnalisé via CNAME.
+Site statique HTML/CSS/JS pur — pas de framework, pas de CMS,
+pas de backend. Build et déploiement automatiques via GitHub Actions.
+
+## Workflows automatisés
+
+5 workflows GitHub Actions pour le SEO et la veille :
+- Agent 1 : génération hebdomadaire de briefs éditoriaux
+- Agent 2 : monitoring SEO des positions et indexation
+- Agent 3 : auto-update du sitemap.xml
+- Agent 5 : veille SEO (algorithmes Google, balises, indexation)
+- Agent 6 : veille concurrence (surveillance prix et contenus)
+
+## Identité éditoriale
+
+Voix SynchroVie : données avant opinions, sources scientifiques obligatoires,
+phrases courtes (max 20 mots), vocabulaire accessible (Flesch > 50).
+Pas de hype ("révolutionnaire", "miracle", "magique"). Chaque article
+suit la structure : douleur avant promesse, H2 numérotés, conclusion
+actionnable, CTA produit naturel.
