@@ -702,7 +702,7 @@ footer {
 .footer-guarantees { font-size: 0.82rem; margin-bottom: 12px; }
 .footer-copyright { font-size: 0.75rem; color: var(--gray); }
 
-/* ===== WHATSAPP FLOAT ===== */
+/* ===== CONTACT FLOAT ===== */
 .contact-float {
   position: fixed;
   bottom: 24px;

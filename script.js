@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const product = btn.dataset.product;
             const price = btn.dataset.price;
             const waText = encodeURIComponent(`Bonjour Synchrovie, je souhaite commander le ${product} à ${price} EUR`);
-            window.open(`https://wa.me/22360625155?text=${waText}`, '_blank');
+            window.open(`mailto:contact@synchro-vie.com?subject=Commande SynchroVie&body=${waText}`, '_blank');
         });
     });
 

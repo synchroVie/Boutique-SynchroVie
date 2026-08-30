@@ -1146,7 +1146,7 @@ const qty = document.getElementById('qtyInput').value;
 const total = UNIT_PRICE * parseInt(qty);
 const waText = encodeURIComponent('Bonjour SynchroVie, je souhaite commander ' +
 qty + 'x ' + product + ' à ' + price + ' EUR/unité (total: ' + total + ' EUR)');
-window.open('https://wa.me/22360625155?text=' + waText, '_blank');
+window.open('mailto:contact@synchro-vie.com?subject=Commande SynchroVie&body=' + waText, '_blank');
 });
 const backToTop = document.getElementById('backToTop');
 window.addEventListener('scroll', () => { backToTop?.classList.toggle('show',
