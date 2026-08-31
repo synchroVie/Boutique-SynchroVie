@@ -1176,7 +1176,7 @@ s=this.src;var i=lbImgs.indexOf(s.replace(/.*\/produits\//,'../assets/img/produi
 ts/'));if(i<0)i=0;openLightbox(i);});
 function toggleFaq(btn){btn.classList.toggle('open');var
 ans=btn.nextElementSibling;ans.classList.toggle('open');}
-var unitPrice=139;var currentQty=1;
+var unitPrice=68;var currentQty=1;
 function changeQty(d){var n=currentQty+d;if(n<1)n=1;if(n>10)n=10;currentQty=n;do
 cument.getElementById('qtyValue').textContent=n;document.getElementById('qtyTota
 l').textContent=(unitPrice*n).toLocaleString('fr-FR')+'
