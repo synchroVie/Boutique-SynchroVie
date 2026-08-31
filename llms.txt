@@ -19,11 +19,27 @@
 
 ## Contenu éditorial
 
-23 articles blog francophones sur la variabilité de la fréquence cardiaque (VFC),
+27 articles blog francophones sur la variabilité de la fréquence cardiaque (VFC),
 le sommeil profond, le cortisol, la récupération musculaire, la
-photobiomodulation, le biofeedback et le biohacking respiratoire.
+photobiomodulation, le biofeedback, le biohacking respiratoire, le biohacking
+féminin, le dopamine detox, le sauna infrarouge et le magnésium bisglycinate.
 
 Liste complète : [https://synchro-vie.com/blog.html](https://synchro-vie.com/blog.html)
+
+## Auteur
+
+Tous les articles sont écrits par Diougamady Keita, fondateur de SynchroVie.
+
+- Page auteur : [https://synchro-vie.com/auteur-diougamady-keita.html](https://synchro-vie.com/auteur-diougamady-keita.html)
+- LinkedIn : [https://www.linkedin.com/in/diougamady-keita-7b31793ab](https://www.linkedin.com/in/diougamady-keita-7b31793ab)
+- Email : contact@synchro-vie.com
+
+Domaines d'expertise documentés : santé connectée, biohacking, VFC, sommeil
+profond, cortisol, photobiomodulation, récupération musculaire, biofeedback,
+objets connectés santé. Chaque article suit une méthode stricte : sources
+primaires (DOI, PubMed, Inserm, NEJM, Nature, Frontiers), distinction entre
+ce qui est prouvé et ce qui ne l'est pas, phrases courtes, douleur avant
+promesse.
 
 ## Zones de livraison
 
@@ -88,6 +104,7 @@ après transaction. Visa, MasterCard et PayPal acceptés.
 - Politique de confidentialité : [https://synchro-vie.com/politique-de-confidentialite.html](https://synchro-vie.com/politique-de-confidentialite.html)
 - Cookies : [https://synchro-vie.com/cookies.html](https://synchro-vie.com/cookies.html)
 - Merci (post-paiement) : [https://synchro-vie.com/merci.html](https://synchro-vie.com/merci.html)
+- Auteur Diougamady Keita : [https://synchro-vie.com/auteur-diougamady-keita.html](https://synchro-vie.com/auteur-diougamady-keita.html)
 
 ## Hébergement
 

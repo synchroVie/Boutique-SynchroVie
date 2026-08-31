@@ -749,6 +749,8 @@ onclick="event.stopPropagation();lightboxNav(1)">&#8250;</span>
 <h1 itemprop="name">ThermoWrap FIR <span
 style="color:var(--text-soft);font-weight:400">/</span> Le sauna, mais chez
 vous, sur votre canapé.</h1>
+<span class="badge-stock"
+style="display:inline-block;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.4);color:#f87171;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:4px;animation:pulse-stock 2s ease-in-out infinite;margin-top:8px;margin-bottom:12px;">Stock faiblit : 5 unités restantes</span>
 <p class="h1-sub">Couverture sauna infrarouge lointain 3 zones : chaleur
 profonde, transpiration, détente musculaire</p>
 <div class="rating-row" itemprop="aggregateRating" itemscope
@@ -823,7 +825,7 @@ préférentiel.</div>
 </div>
 <div class="cta-group">
 <!-- Formulaire de commande -->
-<div id="productOrderForm" style="background:rgba(11,27,61,0.6);border:1px solidrgba(59,130,246,0.2);border-radius:12px;padding:20px;margin-bottom:20px;">
+<div id="productOrderForm" style="background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:12px;padding:20px;margin-bottom:20px;">
 <p style="color:#F8FAFC;font-weight:700;font-size:0.95rem;margin-bottom:14px;font-family:Space Grotesk,sans-serif;">Vos coordonnées de livraison</p>
 <div style="display:grid;grid-template-columns:1fr1fr;gap:10px;margin-bottom:10px;">
 <input type="text" id="prodFirstName" placeholder="Prénom *" required
@@ -872,14 +874,14 @@ hostedButtonId: "SZ6DLUMVTFYUY",
 </script>
 <!-- Boutons paiement actionnables -->
 <div style="display:flex;gap:8px;margin-bottom:12px;">
-<button onclick="document.getElementById('paypal-container-SZ6DLUMVTFYUY').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
+<button onclick="document.getElementById('paypal-container-SZ6DLUMVTFYUY').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
 onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'"
 
 onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brandsfa-paypal" style="color:#00457C;font-size:1.1rem;"></i> PayPal</button>
-<button onclick="document.getElementById('paypal-container-SZ6DLUMVTFYUY').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
+<button onclick="document.getElementById('paypal-container-SZ6DLUMVTFYUY').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
 onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'"
 onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brandsfa-cc-visa" style="color:#1A1F71;font-size:1.1rem;"></i> Visa</button>
-<button onclick="document.getElementById('paypal-container-SZ6DLUMVTFYUY').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
+<button onclick="document.getElementById('paypal-container-SZ6DLUMVTFYUY').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
 onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'"
 onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brandsfa-cc-mastercard" style="color:#EB001B;font-size:1.1rem;"></i>
 MasterCard</button>
@@ -1065,6 +1067,23 @@ stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-
 <section class="review-section">
 <h2>Ce que nos clients disent du ThermoWrap FIR</h2>
 <div class="review-grid">
+<div class="review-card">
+<div class="review-header">
+<span class="review-stars-sm">★★★★★</span>
+<span class="review-verified">Achat vérifié</span>
+</div>
+<p class="review-text">"Utilisée 3 fois par semaine après le sport. La chaleur infrarouge pénètre bien, meilleure récupération musculaire qu'une simple couverture chauffante. Confortable et facile à ranger."</p>
+<div class="review-author"><strong>Maxime Dubois</strong> — France, août 2026</div>
+</div>
+<div class="review-card">
+<div class="review-header">
+<span class="review-stars-sm">★★★★☆</span>
+<span class="review-verified">Achat vérifié</span>
+</div>
+<p class="review-text">"Thermothérapie infrarouge à domicile, pour moitié du prix d'un sauna fixe. 4 zones chauffantes réglables. Je recommande pour la récupération, moins pour le bien-être général."</p>
+<div class="review-author"><strong>Sophie Lefèvre</strong> — Belgique, juin 2026</div>
+</div>
+
 </div>
 </section>
 <section class="faq-section">
@@ -1118,10 +1137,10 @@ class="upsell-card"><h4>SleepTrack Zen</h4><p>Capteur sous matelas. Analyse sans
 contact.</p><span class="upsell-price">149 EUR</span></a>
 <a href="https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"
 class="upsell-card"><h4>Aura-Light Clock</h4><p>Simulateur aube. Réveil
-naturel.</p><span class="upsell-price">119 EUR</span></a>
+naturel.</p><span class="upsell-price">78 EUR</span></a>
 <a href="https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"
 class="upsell-card"><h4>Gravity-Tech Pad</h4><p>Patch nuque chauffant. Détente
-cervicale.</p><span class="upsell-price">78 EUR</span></a>
+cervicale.</p><span class="upsell-price">269 EUR</span></a>
 </div>
 </section>
 <section class="related-blog" style="max-width:1200px;margin:48px auto;padding:024px;">

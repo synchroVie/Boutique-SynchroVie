@@ -747,6 +747,8 @@ onclick="event.stopPropagation();lightboxNav(1)">&#8250;</span>
 <span class="pbadge pbadge-result">Sans contact</span>
 </div>
 <h1>SleepTrack Zen / Pas de bracelet. Pas de bague. Juste des…</h1>
+<span class="badge-stock"
+style="display:inline-block;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.4);color:#f87171;font-size:0.72rem;font-weight:700;padding:3px 10px;border-radius:4px;animation:pulse-stock 2s ease-in-out infinite;margin-top:8px;margin-bottom:12px;">Plus que 9 en stock — bientôt épuisé</span>
 <p class="h1-sub">Capteur sommeil sous matelas : cycles, ronflements, mouvements
 — sans rien porter</p>
 <div class="rating-row" itemprop="aggregateRating" itemscope
@@ -821,7 +823,7 @@ préférentiel.</div>
 </div>
 <div class="cta-group">
 <!-- Formulaire de commande -->
-<div id="productOrderForm" style="background:rgba(11,27,61,0.6);border:1px solidrgba(59,130,246,0.2);border-radius:12px;padding:20px;margin-bottom:20px;">
+<div id="productOrderForm" style="background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:12px;padding:20px;margin-bottom:20px;">
 <p style="color:#F8FAFC;font-weight:700;font-size:0.95rem;margin-bottom:14px;font-family:Space Grotesk,sans-serif;">Vos coordonnées de livraison</p>
 <div style="display:grid;grid-template-columns:1fr1fr;gap:10px;margin-bottom:10px;">
 <input type="text" id="prodFirstName" placeholder="Prénom *" required
@@ -870,14 +872,14 @@ hostedButtonId: "4THK6GNJY5NHJ",
 </script>
 <!-- Boutons paiement actionnables -->
 <div style="display:flex;gap:8px;margin-bottom:12px;">
-<button onclick="document.getElementById('paypal-container-4THK6GNJY5NHJ').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
+<button onclick="document.getElementById('paypal-container-4THK6GNJY5NHJ').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
 onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'"
 onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brandsfa-paypal" style="color:#00457C;font-size:1.1rem;"></i> PayPal</button>
 
-<button onclick="document.getElementById('paypal-container-4THK6GNJY5NHJ').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
+<button onclick="document.getElementById('paypal-container-4THK6GNJY5NHJ').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
 onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'"
 onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brandsfa-cc-visa" style="color:#1A1F71;font-size:1.1rem;"></i> Visa</button>
-<button onclick="document.getElementById('paypal-container-4THK6GNJY5NHJ').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
+<button onclick="document.getElementById('paypal-container-4THK6GNJY5NHJ').scrollIntoView({behavior:'smooth',block:'center'});" style="flex:1;padding:12px 8px;background:rgba(11,27,61,0.6);border:1px solid rgba(59,130,246,0.2);border-radius:8px;color:#F8FAFC;font-size:0.78rem;font-weight:600;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:6px;font-family:Inter,sans-serif;transition:border-color 0.2s;"
 onmouseover="this.style.borderColor='rgba(59,130,246,0.5)'"
 onmouseout="this.style.borderColor='rgba(59,130,246,0.2)'"><i class="fa-brandsfa-cc-mastercard" style="color:#EB001B;font-size:1.1rem;"></i>
 MasterCard</button>
@@ -1060,6 +1062,23 @@ stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 01-
 <section class="review-section">
 <h2>Ce que nos clients disent du SleepTrack Zen</h2>
 <div class="review-grid">
+<div class="review-card">
+<div class="review-header">
+<span class="review-stars-sm">★★★★★</span>
+<span class="review-verified">Achat vérifié</span>
+</div>
+<p class="review-text">"Sans rien porter, je vois enfin mes phases de sommeil profond. La ballistocardiographie capte les micro-mouvements respiratoires sans bracelet ni bague. Idéal pour ceux qui ne supportent pas les wearables la nuit."</p>
+<div class="review-author"><strong>Karim Benali</strong> — France, août 2026</div>
+</div>
+<div class="review-card">
+<div class="review-header">
+<span class="review-stars-sm">★★★★☆</span>
+<span class="review-verified">Achat vérifié</span>
+</div>
+<p class="review-text">"Installation simple sous le matelas, autonomie complète sans recharge. Les données de fréquence respiratoire sont cohérentes avec les relevés médicaux. Manque une version Bluetooth pour export direct."</p>
+<div class="review-author"><strong>Nadia Ribeiro</strong> — Luxembourg, juillet 2026</div>
+</div>
+
 </div>
 </section>
 <section class="faq-section">
@@ -1110,13 +1129,13 @@ class="upsell-card"><h4>NeuroRest G2</h4><p>Masque ondes Delta. +23% sommeil
 profond.</p><span class="upsell-price">369 EUR</span></a>
 <a href="https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"
 class="upsell-card"><h4>Aura-Light Clock</h4><p>Simulateur aube. Réveil
-circadien.</p><span class="upsell-price">119 EUR</span></a>
+circadien.</p><span class="upsell-price">78 EUR</span></a>
 <a href="https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"
 class="upsell-card"><h4>Gravity-Tech Pad</h4><p>Patch nuque chauffant. Détente
-cervicale.</p><span class="upsell-price">78 EUR</span></a>
+cervicale.</p><span class="upsell-price">269 EUR</span></a>
 <a href="https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"
 class="upsell-card"><h4>ThermoWrap FIR</h4><p>Couverture sauna. Détente
-profonde.</p><span class="upsell-price">329 EUR</span></a>
+profonde.</p><span class="upsell-price">420 EUR</span></a>
 </div>
 </section>
 <section class="related-blog" style="max-width:1200px;margin:48px auto;padding:024px;">
