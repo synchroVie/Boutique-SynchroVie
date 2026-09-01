@@ -415,17 +415,15 @@ nav.main-nav {
   z-index: 2;
 }
 .card .badge-stock {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
+  display: inline-block;
   background: rgba(239, 68, 68, 0.15);
   border: 1px solid rgba(239, 68, 68, 0.4);
   color: #f87171;
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  padding: 3px 10px;
+  padding: 4px 10px;
   border-radius: 4px;
-  z-index: 2;
+  margin: 8px 0 4px 0;
   animation: pulse-stock 2s ease-in-out infinite;
 }
 @keyframes pulse-stock {
