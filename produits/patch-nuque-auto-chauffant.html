@@ -542,8 +542,7 @@ gin-bottom:10px;font-style:italic}
 ba(0,0,0,0.92);backdrop-filter:blur(8px);justify-content:center;align-items:cent
 er;cursor:zoom-out;animation:lbFadeIn .25s ease}
 .lightbox-overlay.active{display:flex}
-.lightbox-overlay
-img{max-width:90vw;max-height:90vh;border-radius:12px;box-shadow:0 20px 60px
+.lightbox-overlay img{width:min(95vw,95vh);max-height:90vh;object-fit:contain;border-radius:12px;box-shadow:0 20px 60px
 rgba(0,0,0,0.4);animation:lbZoomIn .3s cubic-bezier(0.34,1.56,0.64,1)}
 .lightbox-close{position:absolute;top:24px;right:32px;color:#fff;font-size:2rem;
 cursor:pointer;z-index:10000;width:44px;height:44px;display:flex;align-items:cen
@@ -587,6 +586,49 @@ ing:0 20px 40px}
 .result-number{font-size:2.4rem}
 .upsell-grid{grid-template-columns:1fr}
 }
+
+.back-home-btn {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 998;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: rgba(11, 27, 61, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-radius: 8px;
+  color: #F8FAFC;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.back-home-btn:hover {
+  background: rgba(59, 130, 246, 0.9);
+  border-color: #3B82F6;
+  transform: translateY(-2px);
+}
+.back-home-btn svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+@media (max-width: 480px) {
+  .back-home-btn {
+    bottom: 12px;
+    left: 12px;
+    padding: 8px 12px;
+    font-size: 0.78rem;
+  }
+}
+
 </style>
 <!-- TikTok Pixel Code Start -->
 <script>
@@ -1299,5 +1341,9 @@ confidentialité</a>.</p>
 </div>
 </div>
 <script src="../comments.js" defer></script>
+<a href="https://synchro-vie.com/" class="back-home-btn" aria-label="Retour à l'accueil">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+<span>Accueil</span>
+</a>
 </body>
 </html>
