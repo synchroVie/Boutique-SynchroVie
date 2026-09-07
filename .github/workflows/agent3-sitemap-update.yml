@@ -45,18 +45,26 @@ jobs:
             echo "  </url>"
 
             # Pages racine (sauf index.html déjà fait, et sauf commander.html qui est noindex)
-            for f in blog.html contact.html faq.html cgv.html cookies.html legal.html propos.html politique-de-confidentialite.html; do
+            for f in blog.html contact.html faq.html cgv.html cookies.html legal.html propos.html politique-de-confidentialite.html bio-monitoring.html neuro-sommeil.html biofeedback.html performance.html auteur-diougamady-keita.html promotions.html; do
               if [ -f "$f" ]; then
                 # Skip les fichiers redirect (noindex)
                 if grep -q 'noindex' "$f" 2>/dev/null; then
                   echo "  <!-- Skip noindex: $f -->"
                   continue
                 fi
-                # CGV et légal : priorité plus faible
+                # Priorités par type de page
                 case "$f" in
                   cgv.html|cookies.html|legal.html|politique-de-confidentialite.html)
                     PRIORITY="0.3"
                     CHANGEFREQ="yearly"
+                    ;;
+                  bio-monitoring.html|neuro-sommeil.html|biofeedback.html|performance.html)
+                    PRIORITY="0.9"
+                    CHANGEFREQ="weekly"
+                    ;;
+                  auteur-diougamady-keita.html)
+                    PRIORITY="0.7"
+                    CHANGEFREQ="weekly"
                     ;;
                   *)
                     PRIORITY="0.8"
