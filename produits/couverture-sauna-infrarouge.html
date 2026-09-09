@@ -762,15 +762,15 @@ href="mailto:synchrovie@gmail.com">Email Expert</a></div>
 <div class="gallery" aria-label="Galerie photos ThermoWrap FIR">
 <div class="gallery-main">
 <img id="img-main"
-src="../assets/img/produits/couverture-sauna-infrarouge-1.webp" alt="ThermoWrap FIR" height="600" loading="eager" fetchpriority="high">
+src="../assets/img/produits/couverture-sauna-infrarouge-1.webp" alt="ThermoWrap FIR" loading="lazy">
 </div>
 <div class="gallery-thumbs">
 <img src="../assets/img/produits/couverture-sauna-infrarouge-1.webp"
-alt="ThermoWrap FIR vue 1" class="active" loading="lazy" onclick="switchImg(this,'../assets/img/produits/couverture-sauna-infrarouge-1.webp','ThermoWrap FIR vue1');openLightbox('../assets/img/produits/couverture-sauna-infrarouge-1.webp')"><img src="../assets/img/produits/couverture-sauna-infrarouge-2.webp"
-alt="ThermoWrap FIR vue 2" loading="lazy" onclick="switchImg(this,'../assets/img/produits/couverture-sauna-infrarouge-2.webp','ThermoWrap FIR vue 2');openLightbox('../assets/img/produits/couverture-sauna-infrarouge-2.webp')"><img
+alt="ThermoWrap FIR vue 1" class="active" loading="lazy" onclick="switchImg(this,'../assets/img/produits/couverture-sauna-infrarouge-1.webp','ThermoWrap FIR vue1');openLightbox(0)"><img src="../assets/img/produits/couverture-sauna-infrarouge-2.webp"
+alt="ThermoWrap FIR vue 2" loading="lazy" onclick="switchImg(this,'../assets/img/produits/couverture-sauna-infrarouge-2.webp','ThermoWrap FIR vue 2');openLightbox(1)"><img
 
-src="../assets/img/produits/couverture-sauna-infrarouge-3.webp" alt="ThermoWrap FIR vue 3" loading="lazy" onclick="switchImg(this,'../assets/img/produits/couverture-sauna-infrarouge-3.webp','ThermoWrap FIR vue 3');openLightbox('../assets/img/produits/couverture-sauna-infrarouge-3.webp')"><img
-src="../assets/img/produits/couverture-sauna-infrarouge-4.webp" alt="ThermoWrap FIR vue 4" loading="lazy" onclick="switchImg(this,'../assets/img/produits/couverture-sauna-infrarouge-4.webp','ThermoWrap FIR vue 4');openLightbox('../assets/img/produits/couverture-sauna-infrarouge-4.webp')">
+src="../assets/img/produits/couverture-sauna-infrarouge-3.webp" alt="ThermoWrap FIR vue 3" loading="lazy" onclick="switchImg(this,'../assets/img/produits/couverture-sauna-infrarouge-3.webp','ThermoWrap FIR vue 3');openLightbox(2)"><img
+src="../assets/img/produits/couverture-sauna-infrarouge-4.webp" alt="ThermoWrap FIR vue 4" loading="lazy" onclick="switchImg(this,'../assets/img/produits/couverture-sauna-infrarouge-4.webp','ThermoWrap FIR vue 4');openLightbox(3)">
 </div>
 </div>
 <div class="lightbox-overlay" id="lightboxOverlay"
@@ -1264,40 +1264,45 @@ document.querySelectorAll('.faq-q').forEach(function(b){b.classList.remove('open
 if(!isOpen){btn.classList.add('open');btn.setAttribute('aria-expanded','true');a
 nswer.classList.add('open');}
 }
-// Lightbox
-var lightboxImages=[];var lightboxIndex=0;
-function initLightbox(){
-var thumbs=document.querySelectorAll('.gallery-thumbs img');
-lightboxImages=[];
-thumbs.forEach(function(img){var src=img.getAttribute('onclick');if(src){var mat
-ch=src.match(/'([^']+)'/);if(match)lightboxImages.push(match[1]);}else{lightboxI
-mages.push(img.src);}});
-var mainImg=document.getElementById('img-main');
-if(mainImg){mainImg.style.cursor='zoom-in';mainImg.addEventListener('click',func
-tion(){openLightbox(mainImg.src);});}
+const allImages = [];
+document.querySelectorAll('.gallery-thumbs img').forEach(t => {
+const match = t.getAttribute('onclick')?.match(/'([^']+)'/);
+if (match) allImages.push(match[1]);
+});
+let lbIndex = 0;
+document.getElementById('img-main')?.addEventListener('click', function() {
+lbIndex = allImages.indexOf(this.src);
+if (lbIndex === -1) lbIndex = 0;
+openLightbox(lbIndex);
+});
+function openLightbox(idx) {
+lbIndex = idx;
+document.getElementById('lightboxImg').src = allImages[idx];
+document.getElementById('lightboxCounter').textContent = (idx + 1) + ' / ' +
+allImages.length;
+document.getElementById('lightboxOverlay').classList.add('active');
+document.body.style.overflow = 'hidden';
 }
-function openLightbox(src){
-if(lightboxImages.length===0)initLightbox();
-var overlay=document.getElementById('lightboxOverlay');var
-img=document.getElementById('lightboxImg');var
-counter=document.getElementById('lightboxCounter');
-img.src=src;lightboxIndex=lightboxImages.indexOf(src);if(lightboxIndex<0)lightbo
-xIndex=0;
-counter.textContent=(lightboxIndex+1)+' / '+lightboxImages.length;
-overlay.classList.add('active');document.body.style.overflow='hidden';
+function closeLightbox(e) {
+if (e.target.id === 'lightboxOverlay' ||
+e.target.closest('.lightbox-close')) {
+document.getElementById('lightboxOverlay').classList.remove('active');
+document.body.style.overflow = '';
 }
-function closeLightbox(e){if(e.target.classList.contains('lightbox-overlay')||e.
-target.classList.contains('lightbox-close')){document.getElementById('lightboxOv
-erlay').classList.remove('active');document.body.style.overflow='';}}
-function lightboxNav(dir){if(lightboxImages.length===0)return;lightboxIndex=(lig
-htboxIndex+dir+lightboxImages.length)%lightboxImages.length;document.getElementB
-yId('lightboxImg').src=lightboxImages[lightboxIndex];document.getElementById('li
-ghtboxCounter').textContent=(lightboxIndex+1)+' / '+lightboxImages.length;}
-document.addEventListener('keydown',function(e){if(!document.getElementById('lig
-htboxOverlay').classList.contains('active'))return;if(e.key==='Escape'){document
-.getElementById('lightboxOverlay').classList.remove('active');document.body.styl
-e.overflow='';}if(e.key==='ArrowLeft')lightboxNav(-1);if(e.key==='ArrowRight')li
-ghtboxNav(1);});
+}
+function lightboxNav(dir) {
+lbIndex = (lbIndex + dir + allImages.length) % allImages.length;
+document.getElementById('lightboxImg').src = allImages[lbIndex];
+document.getElementById('lightboxCounter').textContent = (lbIndex + 1) + ' / ' +
+allImages.length;
+}
+document.addEventListener('keydown', (e) => {
+if (!document.getElementById('lightboxOverlay')?.classList.contains('active'))
+return;
+if (e.key === 'Escape') closeLightbox({target: {id: 'lightboxOverlay'}});
+if (e.key === 'ArrowLeft') lightboxNav(-1);
+if (e.key === 'ArrowRight') lightboxNav(1);
+});
 initLightbox();
 // Qty selector
 var unitPrice=420;var currentQty=1;
