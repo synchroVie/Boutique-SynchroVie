@@ -1015,57 +1015,7 @@ onclick="event.stopPropagation();lightboxNav(-1)">&#8249;</span><img
 id="lightboxImg" src="" alt="Zoom"><span class="lightbox-nav lightbox-next"
 onclick="event.stopPropagation();lightboxNav(1)">&#8250;</span><span
 class="lightbox-counter" id="lightboxCounter"></span></div>
-<script>
-var lbImgs=['../assets/img/produits/panneau-therapie-lumiere-rouge-1.webp','../a
-ssets/img/produits/panneau-therapie-lumiere-rouge-2.webp','../assets/img/produit
-s/panneau-therapie-lumiere-rouge-3.webp','../assets/img/produits/panneau-therapi
-e-lumiere-rouge-4.webp'];
-var lbIdx=0;function switchImg(el,src,alt){document.getElementById('img-main').s
-rc=src;document.getElementById('img-main').alt=alt;document.querySelectorAll('.g
-allery-thumbs img').forEach(function(t){t.classList.remove('active')});el.classL
-ist.add('active');}
-function openLightbox(idx){lbIdx=idx;document.getElementById('lightboxOverlay').
-classList.add('active');document.getElementById('lightboxImg').src=lbImgs[lbIdx]
-;document.getElementById('lightboxCounter').textContent=(lbIdx+1)+'/'+lbImgs.len
-gth;document.body.style.overflow='hidden';}
-function closeLightbox(e){if(e.target===document.getElementById('lightboxOverlay
-')||e.target.closest('.lightbox-close')){document.getElementById('ligh
-tboxOverlay').classList.remove('active');document.body.style.overflow='';}}
-function lightboxNav(dir){lbIdx=(lbIdx+dir+lbImgs.length)%lbImgs.length;document
-.getElementById('lightboxImg').src=lbImgs[lbIdx];document.getElementById('lightb
-oxCounter').textContent=(lbIdx+1)+'/'+lbImgs.length;}
-document.addEventListener('keydown',function(e){if(!document.getElementById('lig
-htboxOverlay').classList.contains('active'))return;if(e.key==='Escape')closeLigh
-tbox({target:document.getElementById('lightboxOverlay')});if(e.key==='ArrowLeft'
-)lightboxNav(-1);if(e.key==='ArrowRight')lightboxNav(1);});
-document.getElementById('img-main').addEventListener('click',function(){var
-s=this.src;var i=lbImgs.indexOf(s.replace(/.*\/produits\//,'../assets/img/produi
-ts/'));if(i<0)i=0;openLightbox(i);});
-function toggleFaq(btn){btn.classList.toggle('open');var
-ans=btn.nextElementSibling;ans.classList.toggle('open');}
-var unitPrice=549;var currentQty=1;function changeQty(d){var n=currentQty+d;if(n
-<1)n=1;if(n>10)n=10;currentQty=n;document.getElementById('qtyValue').textContent
-=n;document.getElementById('qtyTotal').textContent=(unitPrice*n).toLocaleString(
-'fr-FR')+'
-EUR';document.getElementById('qtyNote').style.display=n>=2?'block':'none';var
-ctaBtn=document.getElementById('ctaBtn');if(ctaBtn){var txt=ctaBtn.innerHTML;txt
-=txt.replace(/\d[\d\s]*EUR/,(unitPrice*n).toLocaleString('fr-FR')+'
-EUR');ctaBtn.innerHTML=txt;}}
-window.addEventListener('scroll',function(){var btn=document.getElementById('bac
-kToTop');if(window.scrollY>400)btn.classList.add('show');else btn.classList.remo
-
-ve('show');});document.getElementById('backToTop').addEventListener('click',func
-tion(){window.scrollTo({top:0,behavior:'smooth'});});
-(function(){var banner=document.getElementById('cookieBanner');var
-acceptBtn=document.getElementById('cookieAccept');var refuseBtn=document.getElem
-entById('cookieRefuse');if(localStorage.getItem('cookie_consent')){banner.style.
-display='none';return;}setTimeout(function(){banner.classList.add('show');},800)
-;acceptBtn.addEventListener('click',function(){localStorage.setItem('cookie_cons
-ent','accepted');gtag('consent','update',{'analytics_storage':'granted','ad_stor
-age':'granted'});banner.classList.remove('show');});refuseBtn.addEventListener('
-click',function(){localStorage.setItem('cookie_consent','refused');banner.classL
-ist.remove('show');});})();
-</script>
+<script>var lbImgs=['../assets/img/produits/panneau-therapie-lumiere-rouge-1.webp','../assets/img/produits/panneau-therapie-lumiere-rouge-2.webp','../assets/img/produits/panneau-therapie-lumiere-rouge-3.webp','../assets/img/produits/panneau-therapie-lumiere-rouge-4.webp'];var lbIdx=0;function switchImg(el,src,alt){document.getElementById('img-main').src=src;document.getElementById('img-main').alt=alt;document.querySelectorAll('.gallery-thumbs img').forEach(function(t){t.classList.remove('active')});el.classList.add('active');}function openLightbox(idx){lbIdx=idx;document.getElementById('lightboxOverlay').classList.add('active');document.getElementById('lightboxImg').src=lbImgs[lbIdx];document.getElementById('lightboxCounter').textContent=(lbIdx+1)+'/'+lbImgs.length;document.body.style.overflow='hidden';}function closeLightbox(e){if(e.target===document.getElementById('lightboxOverlay')||e.target.closest('.lightbox-close')){document.getElementById('lightboxOverlay').classList.remove('active');document.body.style.overflow='';}}function lightboxNav(dir){lbIdx=(lbIdx+dir+lbImgs.length)%lbImgs.length;document.getElementById('lightboxImg').src=lbImgs[lbIdx];document.getElementById('lightboxCounter').textContent=(lbIdx+1)+'/'+lbImgs.length;}document.addEventListener('keydown',function(e){if(!document.getElementById('lightboxOverlay').classList.contains('active'))return;if(e.key==='Escape')closeLightbox({target:document.getElementById('lightboxOverlay')});if(e.key==='ArrowLeft')lightboxNav(-1);if(e.key==='ArrowRight')lightboxNav(1);});document.getElementById('img-main').addEventListener('click',function(){vars=this.src;var i=lbImgs.indexOf(s.replace(/.*\/produits\//,'../assets/img/produits/'));if(i<0)i=0;openLightbox(i);});function toggleFaq(btn){btn.classList.toggle('open');varans=btn.nextElementSibling;ans.classList.toggle('open');}var unitPrice=549;var currentQty=1;function changeQty(d){var n=currentQty+d;if(n<1)n=1;if(n>10)n=10;currentQty=n;document.getElementById('qtyValue').textContent=n;document.getElementById('qtyTotal').textContent=(unitPrice*n).toLocaleString('fr-FR')+'EUR';document.getElementById('qtyNote').style.display=n>=2?'block':'none';varctaBtn=document.getElementById('ctaBtn');if(ctaBtn){var txt=ctaBtn.innerHTML;txt=txt.replace(/\d[\d\s]*EUR/,(unitPrice*n).toLocaleString('fr-FR')+'EUR');ctaBtn.innerHTML=txt;}}window.addEventListener('scroll',function(){var btn=document.getElementById('backToTop');if(window.scrollY>400)btn.classList.add('show');else btn.classList.remove('show');});document.getElementById('backToTop').addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'});});(function(){var banner=document.getElementById('cookieBanner');varacceptBtn=document.getElementById('cookieAccept');var refuseBtn=document.getElementById('cookieRefuse');if(localStorage.getItem('cookie_consent')){banner.style.display='none';return;}setTimeout(function(){banner.classList.add('show');},800);acceptBtn.addEventListener('click',function(){localStorage.setItem('cookie_consent','accepted');gtag('consent','update',{'analytics_storage':'granted','ad_storage':'granted'});banner.classList.remove('show');});refuseBtn.addEventListener('click',function(){localStorage.setItem('cookie_consent','refused');banner.classList.remove('show');});})();</script>
 <script src="../brevo.js" defer></script>
 <!-- Pop-up Brevo (exit-intent desktop + 60s mobile) -->
 <div class="brevo-overlay" id="brevoOverlay" aria-hidden="true">
