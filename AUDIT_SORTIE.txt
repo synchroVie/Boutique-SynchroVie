@@ -1,0 +1,3907 @@
+========================================================================
+AUDIT SYNCHROVIE — 66 fichiers HTML — SORTIE BRUTE
+========================================================================
+------------------------------------------------------------------------
+{
+ "fichier": "404.html",
+ "titre": "Page introuvable — SynchroVie",
+ "meta_desc": "Cette page n'existe pas ou plus. Retrouvez nos objets connectés santé et biohacking, notre blog et nos coordonnées.",
+ "robots": "noindex, follow",
+ "gverif": "oui",
+ "og_title": "Page introuvable — SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/404.html",
+ "hreflang": [],
+ "jsonld_types": [],
+ "h1": [
+  "Cette page n'existe pas (encore)."
+ ],
+ "h2": [],
+ "nb_h3": 0,
+ "liens_blog": 0,
+ "liens_produits": 2,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 103,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "auteur-diougamady-keita.html",
+ "titre": "Diougamady Keita — Fondateur de SynchroVie | Bio et parcours",
+ "meta_desc": "Diougamady Keita, fondateur de SynchroVie. Parcours, expertise en santé connectée et biohacking, motivation derrière la création de la boutique francophone d'objets connectés sans abonnement.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Diougamady Keita — Fondateur de SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/auteur-diougamady-keita.webp",
+ "canonical": "https://synchro-vie.com/auteur-diougamady-keita.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/auteur-diougamady-keita.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/auteur-diougamady-keita.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/auteur-diougamady-keita.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/auteur-diougamady-keita.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/auteur-diougamady-keita.html"
+  ]
+ ],
+ "jsonld_types": [
+  "ProfilePage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Diougamady Keita"
+ ],
+ "h2": [
+  "Parcours et motivation",
+  "Approche éditoriale",
+  "Expertise documentée",
+  "La sélection produit SynchroVie",
+  "Articles récents"
+ ],
+ "nb_h3": 1,
+ "liens_blog": 6,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 540,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "bio-monitoring.html",
+ "titre": "Bio-Monitoring & Santé Préventive — Guide 2026 | SynchroVie",
+ "meta_desc": "Bio-monitoring : 5 produits connectés pour suivre VFC, tension, composition corporelle, ECG et température. Guide comparatif et sources scientifiques.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Bio-Monitoring & Santé Préventive — Guide 2026 | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/categories/bio-monitoring.webp",
+ "canonical": "https://synchro-vie.com/bio-monitoring.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/bio-monitoring.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/bio-monitoring.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/bio-monitoring.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/bio-monitoring.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/bio-monitoring.html"
+  ]
+ ],
+ "jsonld_types": [
+  "CollectionPage",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Bio-Monitoring & Santé Préventive"
+ ],
+ "h2": [
+  "5 produits dans la famille Bio-Monitoring",
+  "Articles à lire pour approfondir",
+  "Questions fréquentes sur Bio-Monitoring",
+  "Prêt à optimiser votre bio-monitoring ?"
+ ],
+ "nb_h3": 10,
+ "liens_blog": 8,
+ "liens_produits": 5,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "458",
+  "120",
+  "168",
+  "169",
+  "45"
+ ],
+ "nb_mots": 449,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "biofeedback.html",
+ "titre": "Biofeedback & Sérénité Mentale — Guide 2026 | SynchroVie",
+ "meta_desc": "Biofeedback : 2 produits pour visualiser et réguler votre stress via VFC et thermothérapie vagale. Bague Aura-Ring Calm + patch Gravity-Tech. Guide comparatif.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Biofeedback & Sérénité Mentale — Guide 2026 | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/categories/biofeedback.webp",
+ "canonical": "https://synchro-vie.com/biofeedback.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/biofeedback.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/biofeedback.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/biofeedback.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/biofeedback.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/biofeedback.html"
+  ]
+ ],
+ "jsonld_types": [
+  "CollectionPage",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Biofeedback & Sérénité Mentale"
+ ],
+ "h2": [
+  "2 produits dans la famille Biofeedback",
+  "Articles à lire pour approfondir",
+  "Questions fréquentes sur Biofeedback",
+  "Prêt à optimiser votre biofeedback ?"
+ ],
+ "nb_h3": 7,
+ "liens_blog": 7,
+ "liens_produits": 2,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "298",
+  "269"
+ ],
+ "nb_mots": 400,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog.html",
+ "titre": "Le Journal de la Bio-Optimisation | SynchroVie",
+ "meta_desc": "Articles d'experts en bio-optimisation, sommeil profond, suivi biometrique, coherence cardiaque et performance physique. SynchroVie, votre partenaire sante.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Le Journal de la Bio-Optimisation | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Blog"
+ ],
+ "h1": [
+  "Le Journal de la Bio-Optimisation — Blog biohacking & santé connectée"
+ ],
+ "h2": [
+  "Derniers articles",
+  "Passez de la lecture a l'action",
+  "Pourquoi nos clients font confiance à SynchroVie",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 29,
+ "liens_blog": 30,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1513,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "cgv.html",
+ "titre": "CGV - Conditions Générales de Vente | SynchroVie",
+ "meta_desc": "Conditions générales de vente SynchroVie : commande, livraison Europe 7-10j, retour sous 30 jours, garantie 2 ans. Transparence totale sur vos achats de technologies santé.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "CGV - Conditions Générales de Vente | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/cgv.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/cgv.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/cgv.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/cgv.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/cgv.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/cgv.html"
+  ]
+ ],
+ "jsonld_types": [],
+ "h1": [
+  "Conditions Générales de Vente (CGV)"
+ ],
+ "h2": [
+  "Article 1 - Informations Légales",
+  "Article 2 - Champ d'Application",
+  "Article 3 - Produits et Prix",
+  "Article 4 - Commande",
+  "Article 5 - Paiement",
+  "Article 6 - Livraison",
+  "Article 7 - Droit de Rétractation (14 Jours)",
+  "Article 8 - Garantie Légale et Commerciale",
+  "Article 9 - Responsabilité",
+  "Article 10 - Propriété Intellectuelle",
+  "Article 11 - Données Personnelles",
+  "Article 12 - Litiges et Médiation",
+  "Article 13 - Force Majeure",
+  "Article 14 - Modification des CGV"
+ ],
+ "nb_h3": 27,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1719,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "commander.html",
+ "titre": "Redirection vers SynchroVie",
+ "meta_desc": "ABSENT",
+ "robots": "noindex, follow",
+ "gverif": "oui",
+ "og_title": "",
+ "og_img": "",
+ "canonical": "https://synchro-vie.com/",
+ "hreflang": [],
+ "jsonld_types": [],
+ "h1": [],
+ "h2": [],
+ "nb_h3": 0,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 5,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "contact.html",
+ "titre": "Contact | SynchroVie — Nous Contacter",
+ "meta_desc": "Contactez SynchroVie par email. Notre équipe d'experts vous répond sous 24h pour vous accompagner dans votre choix.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Contact | SynchroVie — Nous Contacter",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/contact.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/contact.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/contact.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/contact.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/contact.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/contact.html"
+  ]
+ ],
+ "jsonld_types": [],
+ "h1": [
+  "Contactez SynchroVie"
+ ],
+ "h2": [
+  "Envoyez-nous un message"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 167,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "cookies.html",
+ "titre": "Politique de Gestion des Cookies | SynchroVie",
+ "meta_desc": "Comment SynchroVie utilise les cookies : types, finalités, durée, paramétrage. Contrôlez vos préférences en toute transparence.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Politique de Gestion des Cookies | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/cookies.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/cookies.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/cookies.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/cookies.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/cookies.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/cookies.html"
+  ]
+ ],
+ "jsonld_types": [],
+ "h1": [
+  "Politique de Gestion des Cookies"
+ ],
+ "h2": [
+  "1. Cookies Utilisés par SynchroVie",
+  "2. Comment Gérer Vos Cookies",
+  "3. Cookies Tiers et Partenaires",
+  "4. Durée de Conservation",
+  "5. Transferts Internationaux",
+  "6. Vos Droits RGPD",
+  "7. Modifications de Cette Politique"
+ ],
+ "nb_h3": 7,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 798,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "faq.html",
+ "titre": "FAQ | SynchroVie — Questions Fréquentes",
+ "meta_desc": "Retrouvez les réponses à toutes vos questions sur SynchroVie : livraison, retours, garantie, paiement, compatibilité des produits et support technique.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "FAQ | SynchroVie — Questions Fréquentes",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/faq.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/faq.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/faq.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/faq.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/faq.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/faq.html"
+  ]
+ ],
+ "jsonld_types": [
+  "FAQPage"
+ ],
+ "h1": [
+  "Questions Fréquentes"
+ ],
+ "h2": [
+  "Commande & Livraison",
+  "Retours & Garantie",
+  "Utilisation & Compatibilité",
+  "Paiement",
+  "Vous ne trouvez pas votre réponse ?",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 14,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 544,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "index.html",
+ "titre": "SynchroVie | Objets connectés santé & biohacking",
+ "meta_desc": "SynchroVie, boutique biohacking francophone. 17 objets connectés santé : sommeil, stress, récupération, métabolisme. Livraison Europe. Expert SynchroVie (email).",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large",
+ "gverif": "oui",
+ "og_title": "SynchroVie | Objets connectés santé & biohacking",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Organization",
+   "WebSite",
+   "ItemList"
+  ]
+ ],
+ "h1": [
+  "SynchroVie : objets connectés santé et biohacking sans abonnement"
+ ],
+ "h2": [
+  "On découvre toujours le problème trop tard.",
+  "Quatre façons de comprendre ce qui se passe vraiment",
+  "1. Bio-Monitoring & Santé Préventive",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 28,
+ "liens_blog": 0,
+ "liens_produits": 50,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1345,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "legal.html",
+ "titre": "Mentions légales, CGV, Confidentialité & Cookies | SynchroVie",
+ "meta_desc": "Mentions légales, Conditions générales de vente, politique de confidentialite et gestion des cookies du site SynchroVie.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Mentions légales, CGV, Confidentialité & Cookies | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/legal.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/legal.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/legal.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/legal.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/legal.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/legal.html"
+  ]
+ ],
+ "jsonld_types": [],
+ "h1": [
+  "Mentions légales & Conditions générales"
+ ],
+ "h2": [
+  "1. Mentions légales",
+  "2. Conditions générales de vente (CGV)",
+  "3. Politique de Confidentialité",
+  "4. Gestion des Cookies"
+ ],
+ "nb_h3": 17,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 872,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "merci.html",
+ "titre": "Merci pour votre commande | SynchroVie",
+ "meta_desc": "Votre paiement a bien été reçu. SynchroVie vous remercie pour votre confiance. Détails de la commande, livraison et support après-achat.",
+ "robots": "noindex, follow",
+ "gverif": "oui",
+ "og_title": "Merci pour votre commande | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/merci.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/merci.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/merci.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/merci.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/merci.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/merci.html"
+  ]
+ ],
+ "jsonld_types": [
+  "WebPage"
+ ],
+ "h1": [
+  "Merci pour votre commande"
+ ],
+ "h2": [
+  "1 Et maintenant ?",
+  "2 Conseils de démarrage",
+  "3 Besoin d'aide ?"
+ ],
+ "nb_h3": 0,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 300,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "neuro-sommeil.html",
+ "titre": "Neuro-Sommeil & Récupération — Guide 2026 | SynchroVie",
+ "meta_desc": "Neuro-sommeil : 3 produits pour optimiser le sommeil profond et les ondes delta. Masque à ondes delta, capteur sous-matelas, simulateur d'aube. Guide comparatif.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Neuro-Sommeil & Récupération — Guide 2026 | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/categories/neuro-sommeil.webp",
+ "canonical": "https://synchro-vie.com/neuro-sommeil.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/neuro-sommeil.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/neuro-sommeil.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/neuro-sommeil.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/neuro-sommeil.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/neuro-sommeil.html"
+  ]
+ ],
+ "jsonld_types": [
+  "CollectionPage",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Neuro-Sommeil & Récupération"
+ ],
+ "h2": [
+  "3 produits dans la famille Neuro-Sommeil",
+  "Articles à lire pour approfondir",
+  "Questions fréquentes sur Neuro-Sommeil",
+  "Prêt à optimiser votre neuro-sommeil ?"
+ ],
+ "nb_h3": 8,
+ "liens_blog": 5,
+ "liens_produits": 3,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "369",
+  "149",
+  "78"
+ ],
+ "nb_mots": 391,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "performance.html",
+ "titre": "Performance & Équilibre Physique — Guide 2026 | SynchroVie",
+ "meta_desc": "Performance : 7 produits pour la récupération musculaire, force, posture et photobiomodulation. Sauna infrarouge, EMS, pistolet massage, panneau LED. Guide comparatif.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Performance & Équilibre Physique — Guide 2026 | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/categories/performance.webp",
+ "canonical": "https://synchro-vie.com/performance.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/performance.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/performance.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/performance.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/performance.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/performance.html"
+  ]
+ ],
+ "jsonld_types": [
+  "CollectionPage",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Performance & Équilibre Physique"
+ ],
+ "h2": [
+  "7 produits dans la famille Performance",
+  "Articles à lire pour approfondir",
+  "Questions fréquentes sur Performance",
+  "Prêt à optimiser votre performance ?"
+ ],
+ "nb_h3": 12,
+ "liens_blog": 6,
+ "liens_produits": 7,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "420",
+  "178",
+  "68",
+  "158",
+  "98",
+  "88",
+  "549"
+ ],
+ "nb_mots": 459,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "politique-de-confidentialite.html",
+ "titre": "Politique de Confidentialité — SynchroVie 2026",
+ "meta_desc": "SynchroVie protège vos données personnelles. Parcourez notre politique RGPD : collecte, utilisation, sécurité et vos droits sur synchro-vie.com.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Politique de Confidentialité — SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/politique-de-confidentialite.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/politique-de-confidentialite.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/politique-de-confidentialite.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/politique-de-confidentialite.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/politique-de-confidentialite.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/politique-de-confidentialite.html"
+  ]
+ ],
+ "jsonld_types": [],
+ "h1": [
+  "Politique de Confidentialité"
+ ],
+ "h2": [
+  "1. Responsable du Traitement",
+  "2. Données Personnelles Collectées",
+  "3. Finalités du Traitement",
+  "4. Durée de Conservation des Données",
+  "5. Cookies et Technologies de Suivi",
+  "6. Partage et Transfert des Données",
+  "7. Sécurité des Données",
+  "8. Vos Droits en Vertu du RGPD",
+  "9. Données des Mineurs",
+  "10. Liens vers des Sites Tiers",
+  "11. Modifications de cette Politique",
+  "12. Droit Applicable et Juridiction"
+ ],
+ "nb_h3": 8,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1889,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "promotions.html",
+ "titre": "Black Friday 2026 SynchroVie — Jusqu'à -30% sur le Biohacking",
+ "meta_desc": "Black Friday SynchroVie 2026 : jusqu'à -30% sur 8 produits biohacking sélectionnés. Offres valables du 24 au 30 novembre. Stock limité.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large",
+ "gverif": "oui",
+ "og_title": "Black Friday 2026 SynchroVie — Jusqu'à -30% sur le Biohacking",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/promotions.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/promotions.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/promotions.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/promotions.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/promotions.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/promotions.html"
+  ]
+ ],
+ "jsonld_types": [
+  "SaleEvent"
+ ],
+ "h1": [
+  "Biohacking en promotionjusqu'à -30%"
+ ],
+ "h2": [
+  "6 offres Black Friday",
+  "Comment profiter du Black Friday SynchroVie ?",
+  "Conditions des offres",
+  "Questions fréquentes"
+ ],
+ "nb_h3": 8,
+ "liens_blog": 0,
+ "liens_produits": 6,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 509,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "propos.html",
+ "titre": "À Propos | SynchroVie — Ingénierie de la Performance Humaine",
+ "meta_desc": "SynchroVie : mission, équipe et engagements. 17 objets connectés santé, fondée par Diougamady Keita à Paris, au service de la francophonie européenne.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "À Propos | SynchroVie — Ingénierie de la Performance Humaine",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/propos.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/propos.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/propos.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/propos.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/propos.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/propos.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "AboutPage",
+   "BreadcrumbList"
+  ]
+ ],
+ "h1": [
+  "SynchroVie : la boutique biohacking francophone fondée par Diougamady Keita"
+ ],
+ "h2": [
+  "À l'ère où la technologie n'a presque pas de limite, votre santé…",
+  "Notre mission",
+  "Comment SynchroVie a démarré",
+  "Nos engagements",
+  "Ce qui guide nos choix",
+  "L'équipe SynchroVie",
+  "Ce que disent les clients",
+  "Une question sur un produit ?",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 12,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1115,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/bague-connectee-sante-biometrique.html",
+ "titre": "SynchroRing X1 — Bague Connectée Santé Biométrique | SynchroVie",
+ "meta_desc": "Suivez VFC, sommeil, SpO2 et cycle menstruel avec la SynchroRing X1. Étanche IPX8, SOS intégré, sans abonnement. Livraison en Europe. Commandez →",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "SynchroRing X1 — Bague Connectée Santé Biométrique | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-1.webp",
+ "canonical": "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage",
+   "BreadcrumbList"
+  ]
+ ],
+ "h1": [
+  "SynchroRing X1 — Bague Connectée Santé sans Abonnement (VFC, Sommeil, SpO2)"
+ ],
+ "h2": [
+  "Pour approfondir",
+  "Portez-la. Oubliez-la. Elle travaille.",
+  "Pourquoi choisir la SynchroRing X1",
+  "Questions fréquentes",
+  "Avis clients",
+  "Complétez votre suivi bio-monitoring"
+ ],
+ "nb_h3": 11,
+ "liens_blog": 2,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "458"
+ ],
+ "nb_mots": 1863,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/bague-controle-cortisol.html",
+ "titre": "Bague Contrôle Cortisol — Aura-Ring Calm | SynchroVie",
+ "meta_desc": "Le stress qu'on ne sent plus. La bague, si. Détection stress en temps réel, score de sérénité, exercices respiration guidés. 298 EUR.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Aura-Ring Calm | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-1.webp",
+ "canonical": "https://synchro-vie.com/produits/bague-controle-cortisol.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/bague-controle-cortisol.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/bague-controle-cortisol.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/bague-controle-cortisol.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/bague-controle-cortisol.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/bague-controle-cortisol.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ ],
+ "h1": [
+  "Aura-Ring Calm / Le stress qu'on ne sent plus. La bague, si."
+ ],
+ "h2": [
+  "Le stress est devenu invisible. Jusqu'à ce que le corps craque.",
+  "Ce que nos clients disent du Aura-Ring Calm",
+  "Vos questions sur le Aura-Ring Calm",
+  "Complétez votre protocole",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 2,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "298.00"
+ ],
+ "nb_mots": 1296,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/balance-impedancemetre-connectee.html",
+ "titre": "Scale-Master Pro — Balance Impédancemètre Connectée | SynchroVie",
+ "meta_desc": "Scale-Master Pro : balance impédancemètre connectée avec 13 indicateurs corps, 8 utilisateurs, électrodes ITO haute précision. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Scale-Master Pro — Balance Impédancemètre Connectée | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/balance-impedancemetre-connectee-1.webp",
+ "canonical": "https://synchro-vie.com/produits/balance-impedancemetre-connectee.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/balance-impedancemetre-connectee.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/balance-impedancemetre-connectee.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/balance-impedancemetre-connectee.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/balance-impedancemetre-connectee.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/balance-impedancemetre-connectee.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage"
+  ]
+ ],
+ "h1": [
+  "Scale-Master Pro / Le chiffre ne dit rien. Celle-ci, oui."
+ ],
+ "h2": [
+  "Le poids, c'est 10% de l'histoire. Le reste, la Scale-Master Pro le raconte.",
+  "Questions fréquentes",
+  "Avis clients",
+  "Complétez votre suivi bio-monitoring",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 1,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "168"
+ ],
+ "nb_mots": 1370,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/capteur-sommeil-sous-matelas.html",
+ "titre": "Capteur Sommeil Sous Matelas — SleepTrack Zen | SynchroVie",
+ "meta_desc": "Pas de bracelet, pas de bague — le SleepTrack Zen capte vos cycles de sommeil, ronflements et FC nocturne sans rien porter. Compatible tous matelas. 149 EUR.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "SleepTrack Zen | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/capteur-sommeil-sous-matelas-1.webp",
+ "canonical": "https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ ],
+ "h1": [
+  "SleepTrack Zen / Pas de bracelet. Pas de bague. Juste des…"
+ ],
+ "h2": [
+  "Vous portez un bracelet la nuit. Vous le retirez à 3h du matin.",
+  "Ce que nos clients disent du SleepTrack Zen",
+  "Vos questions sur le SleepTrack Zen",
+  "Complétez votre protocole",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 2,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "149.00"
+ ],
+ "nb_mots": 1246,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/correcteur-posture-haptique.html",
+ "titre": "Posture-Core — Correcteur Posture Haptique | SynchroVie",
+ "meta_desc": "Posture-Core : correcteur posture haptique avec capteur d'inclinaison, vibrations discrètes et app de suivi. 68 EUR. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Posture-Core — Correcteur Posture Haptique | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/correcteur-posture-haptique-1.webp",
+ "canonical": "https://synchro-vie.com/produits/correcteur-posture-haptique.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/correcteur-posture-haptique.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/correcteur-posture-haptique.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/correcteur-posture-haptique.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/correcteur-posture-haptique.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/correcteur-posture-haptique.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage",
+   "BreadcrumbList"
+  ]
+ ],
+ "h1": [
+  "Posture-Core / Le dos qui s'arrondit tout seul. Maintenant,…"
+ ],
+ "h2": [
+  "Le dos qui s'arrondit tout seul. Maintenant, quelque chose vous prévient.",
+  "Ce que disent nos clients",
+  "Questions fréquentes sur le Posture-Core",
+  "Ils ont aussi choisi...",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 1,
+ "liens_produits": 5,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "68"
+ ],
+ "nb_mots": 1403,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/couverture-sauna-infrarouge.html",
+ "titre": "Couverture Sauna Infrarouge — ThermoWrap FIR | SynchroVie",
+ "meta_desc": "Le sauna, mais chez vous. Couverture infrarouge lointain 3 zones, FIR 4-16μm, 9 niveaux, télécommande. 420 EUR. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "ThermoWrap FIR | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/couverture-sauna-infrarouge-1.webp",
+ "canonical": "https://synchro-vie.com/produits/couverture-sauna-infrarouge.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/couverture-sauna-infrarouge.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ ],
+ "h1": [
+  "ThermoWrap FIR / Le sauna, mais chez vous, sur votre canapé."
+ ],
+ "h2": [
+  "Le sauna, c'est bien. Y aller trois fois par semaine, c'est une autre histoire.",
+  "Ce que nos clients disent du ThermoWrap FIR",
+  "Vos questions sur le ThermoWrap FIR",
+  "Complétez votre protocole",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 1,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "420"
+ ],
+ "nb_mots": 1251,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/dynamometre-force-digital.html",
+ "titre": "Grip-Master Pro — Dynamomètre Force Digital | SynchroVie",
+ "meta_desc": "Grip-Master Pro : dynamomètre force digital 180kg, mesure précise 0.2kg, mémoire intégrée, écran LED, progression suivie. 88 EUR. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Grip-Master Pro — Dynamomètre Force Digital | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/dynamometre-force-digital-1.webp",
+ "canonical": "https://synchro-vie.com/produits/dynamometre-force-digital.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/dynamometre-force-digital.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/dynamometre-force-digital.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/dynamometre-force-digital.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/dynamometre-force-digital.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/dynamometre-force-digital.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage",
+   "BreadcrumbList"
+  ]
+ ],
+ "h1": [
+  "Grip-Master Pro / La force de la poigne en dit long sur votre…"
+ ],
+ "h2": [
+  "La force de la poigne en dit long sur votre récupération.",
+  "Ce que disent nos clients",
+  "Questions fréquentes sur le Grip-Master Pro",
+  "Ils ont aussi choisi...",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 1,
+ "liens_produits": 5,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "88"
+ ],
+ "nb_mots": 1226,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/genouillere-thermique-compressive.html",
+ "titre": "Knee-Tech Support — Genouillère Thermique Compressive | SynchroVie",
+ "meta_desc": "Knee-Tech Support : genouillère thermique compressive, 3 niveaux de chaleur, compression réglable, batteries USB-C incluses. 98 EUR. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Knee-Tech Support — Genouillère Thermique Compressive | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/genouillere-thermique-compressive-1.webp",
+ "canonical": "https://synchro-vie.com/produits/genouillere-thermique-compressive.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/genouillere-thermique-compressive.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/genouillere-thermique-compressive.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/genouillere-thermique-compressive.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/genouillere-thermique-compressive.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/genouillere-thermique-compressive.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage",
+   "BreadcrumbList"
+  ]
+ ],
+ "h1": [
+  "Knee-Tech Support / Ce genou qui craque dans les escaliers. De…"
+ ],
+ "h2": [
+  "Ce genou qui craque dans les escaliers. De quoi le soulager au quotidien.",
+  "Ce que disent nos clients",
+  "Questions fréquentes sur la Knee-Tech Support",
+  "Ils ont aussi choisi...",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 1,
+ "liens_produits": 5,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "98"
+ ],
+ "nb_mots": 1284,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/masque-sommeil-ondes-delta.html",
+ "titre": "Masque Sommeil Ondes Delta — NeuroRest G2 | SynchroVie",
+ "meta_desc": "Vous vous réveillez fatigué malgré 7h de sommeil ? Le NeuroRest G2 augmente votre sommeil profond de +23% en 14 nuits. Ondes Delta, ANC, mousse mémoire. 369 EUR.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "NeuroRest G2 — +23% de sommeil profond en 14 nuits",
+ "og_img": "https://synchro-vie.com/assets/img/produits/masque-sommeil-ondes-delta-1.webp",
+ "canonical": "https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ ],
+ "h1": [
+  "NeuroRest G2 / Le sommeil qui ne réparait plus. Maintenant, oui."
+ ],
+ "h2": [
+  "Vous faites vos 7 heures. Vous vous levez quand même à plat.",
+  "Ce que nos clients disent du NeuroRest G2",
+  "Vos questions sur le NeuroRest G2",
+  "Optimisez encore votre protocole sommeil",
+  "Pour approfondir"
+ ],
+ "nb_h3": 6,
+ "liens_blog": 2,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "369.00"
+ ],
+ "nb_mots": 1520,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/moniteur-ecg-portable-oxygene.html",
+ "titre": "Vitals-Scan Pro — Moniteur ECG Portable + Oxymètre | SynchroVie",
+ "meta_desc": "Vitals-Scan Pro : moniteur ECG portable avec oxymètre intégré. ECG 12 dérivations en 30s, détection fibrillation auriculaire, SpO2. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Vitals-Scan Pro — Moniteur ECG Portable + Oxymètre | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/moniteur-ecg-portable-oxygene-1.webp",
+ "canonical": "https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage"
+  ]
+ ],
+ "h1": [
+  "Vitals-Scan Pro / Un ECG en 30 secondes, depuis votre canapé."
+ ],
+ "h2": [
+  "Votre cœur ne vous prévient pas toujours. Maintenant, vous pouvez l'écouter.",
+  "Questions fréquentes",
+  "Avis clients",
+  "Complétez votre suivi bio-monitoring",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 2,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "169"
+ ],
+ "nb_mots": 1362,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/panneau-therapie-lumiere-rouge.html",
+ "titre": "LumiRed Pro X1 — Panneau Thérapie Lumière Rouge | SynchroVie",
+ "meta_desc": "LumiRed Pro X1 : panneau thérapie lumière rouge full body, 2400W, 480 LEDs, 5 longueurs d'onde, CE/FCC. 549 EUR. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "LumiRed Pro X1 — Panneau Thérapie Lumière Rouge | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/panneau-therapie-lumiere-rouge-1.webp",
+ "canonical": "https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage",
+   "BreadcrumbList"
+  ]
+ ],
+ "h1": [
+  "LumiRed Pro X1 / La lumière rouge des cliniques. Maintenant chez vous."
+ ],
+ "h2": [
+  "La lumière rouge des cliniques. Maintenant chez vous.",
+  "Ce que disent nos clients",
+  "Questions fréquentes sur le LumiRed Pro X1",
+  "Ils ont aussi choisi...",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 1,
+ "liens_produits": 5,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "549"
+ ],
+ "nb_mots": 1284,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/patch-nuque-auto-chauffant.html",
+ "titre": "Patch Nuque Auto-Chauffant — Gravity-Tech Pad | SynchroVie",
+ "meta_desc": "Cette tension dans la nuque, enfin quelque chose pour la faire lâcher. 3 niveaux de chaleur, massage vibration 5 modes, USB-C. 269 EUR.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Gravity-Tech Pad | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/patch-nuque-auto-chauffant-1.webp",
+ "canonical": "https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ ],
+ "h1": [
+  "Gravity-Tech Pad / Cette tension dans la nuque, enfin quelque…"
+ ],
+ "h2": [
+  "Cette nuque qui bloque en fin de journée. Tous les jours.",
+  "Ce que nos clients disent du Gravity-Tech Pad",
+  "Vos questions sur le Gravity-Tech Pad",
+  "Complétez votre protocole",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 1,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "269"
+ ],
+ "nb_mots": 1235,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/pistolet-massage-compact.html",
+ "titre": "Flex-Gun Mini — Pistolet Massage Compact | SynchroVie",
+ "meta_desc": "Flex-Gun Mini : pistolet massage compact 450g, 4 embouts, 6h autonomie, 3 vitesses, ultra-silencieux. 158 EUR. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Flex-Gun Mini — Pistolet Massage Compact | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/pistolet-massage-compact-1.webp",
+ "canonical": "https://synchro-vie.com/produits/pistolet-massage-compact.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/pistolet-massage-compact.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/pistolet-massage-compact.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/pistolet-massage-compact.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/pistolet-massage-compact.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/pistolet-massage-compact.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage",
+   "BreadcrumbList"
+  ]
+ ],
+ "h1": [
+  "Flex-Gun Mini / Les noeuds dans les épaules, les mollets durs.…"
+ ],
+ "h2": [
+  "Les noeuds dans les épaules, les mollets durs. Défaits en quelques minutes.",
+  "Ce que disent nos clients",
+  "Questions fréquentes sur le Flex-Gun Mini",
+  "Ils ont aussi choisi...",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 1,
+ "liens_produits": 5,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "158"
+ ],
+ "nb_mots": 1247,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/simulateur-aube-crepuscule.html",
+ "titre": "Simulateur Aube Crépuscule — Aura-Light Clock | SynchroVie",
+ "meta_desc": "Se réveiller en sursaut, c'est fini. L'Aura-Light Clock simule l'aube pendant 30 min pour un réveil naturel. 7 sons, radio FM, 7 alarmes. 78 EUR.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Aura-Light Clock | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/simulateur-aube-crepuscule-1.webp",
+ "canonical": "https://synchro-vie.com/produits/simulateur-aube-crepuscule.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/simulateur-aube-crepuscule.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "BreadcrumbList",
+   "FAQPage"
+  ]
+ ],
+ "h1": [
+  "Aura-Light Clock / Se réveiller en sursaut, c'est fini."
+ ],
+ "h2": [
+  "Ce réveil qui vous arrache au sommeil profond, chaque matin.",
+  "Ce que nos clients disent du Aura-Light Clock",
+  "Vos questions sur le Aura-Light Clock",
+  "Complétez votre protocole",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 1,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "78"
+ ],
+ "nb_mots": 1214,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/stimulateur-musculaire-ems.html",
+ "titre": "ElectroBoost S3 — Stimulateur Musculaire EMS | SynchroVie",
+ "meta_desc": "ElectroBoost S3 : stimulateur musculaire EMS, 6 modes, 15 intensités, 12 électrodes. Récupération et renforcement à domicile. 178 EUR. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "ElectroBoost S3 — Stimulateur Musculaire EMS | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/stimulateur-musculaire-ems-1.webp",
+ "canonical": "https://synchro-vie.com/produits/stimulateur-musculaire-ems.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/stimulateur-musculaire-ems.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/stimulateur-musculaire-ems.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/stimulateur-musculaire-ems.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/stimulateur-musculaire-ems.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/stimulateur-musculaire-ems.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage",
+   "BreadcrumbList"
+  ]
+ ],
+ "h1": [
+  "ElectroBoost S3 / Pas le temps pour la salle ? Vos muscles…"
+ ],
+ "h2": [
+  "Pas le temps pour la salle ? Vos muscles travaillent quand même.",
+  "Ce que disent nos clients",
+  "Questions fréquentes sur l'ElectroBoost S3",
+  "Ils ont aussi choisi...",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 2,
+ "liens_produits": 5,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "178"
+ ],
+ "nb_mots": 1454,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/tensiometre-intelligent-connecte.html",
+ "titre": "B-Pressure Connect — Tensiomètre Intelligent Connecté | SynchroVie",
+ "meta_desc": "B-Pressure Connect : tensiomètre brassard connecté avec mesures automatiques 3x/jour, historique partagable, alarmes personnalisées. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "B-Pressure Connect — Tensiomètre Intelligent Connecté | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/tensiometre-intelligent-connecte-1.webp",
+ "canonical": "https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage"
+  ]
+ ],
+ "h1": [
+  "B-Pressure Connect / Votre tension, enfin sous surveillance."
+ ],
+ "h2": [
+  "L'hypertension, le tueur silencieux que vous pouvez enfin surveiller",
+  "Questions fréquentes",
+  "Avis clients",
+  "Complétez votre suivi bio-monitoring",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 2,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "120"
+ ],
+ "nb_mots": 1292,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "produits/thermometre-infrarouge-medical.html",
+ "titre": "Thermo-Sense Ultra — Thermomètre Infrarouge Médical | SynchroVie",
+ "meta_desc": "Thermo-Sense Ultra : thermomètre infrarouge médical avec lecture frontale en 1 seconde, sans contact, silencieux. Certification CE médical. Livraison offerte.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Thermo-Sense Ultra — Thermomètre Infrarouge Médical | SynchroVie",
+ "og_img": "https://synchro-vie.com/assets/img/produits/thermometre-infrarouge-medical-1.webp",
+ "canonical": "https://synchro-vie.com/produits/thermometre-infrarouge-medical.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/produits/thermometre-infrarouge-medical.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/produits/thermometre-infrarouge-medical.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/produits/thermometre-infrarouge-medical.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/produits/thermometre-infrarouge-medical.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/produits/thermometre-infrarouge-medical.html"
+  ]
+ ],
+ "jsonld_types": [
+  [
+   "Product",
+   "FAQPage"
+  ]
+ ],
+ "h1": [
+  "Thermo-Sense Ultra / Une fièvre à 23h. Une lecture en une seconde."
+ ],
+ "h2": [
+  "Quand la fièvre monte la nuit, chaque seconde compte.",
+  "Questions fréquentes",
+  "Avis clients",
+  "Complétez votre suivi bio-monitoring",
+  "Pour approfondir"
+ ],
+ "nb_h3": 5,
+ "liens_blog": 1,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [
+  "45"
+ ],
+ "nb_mots": 1303,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/abonnement-bague-connectee-donnees-sante.html",
+ "titre": "Abonnement bague connectée : que valent les données santé ?",
+ "meta_desc": "Abonnement bague connectée : que valent les données santé mesurées ? VFC, SpO2, sommeil — on décortique ce qui est utile et ce qui est marketing.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Abonnement bague connectée : que valent les données santé ?",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/abonnement-bague-connectee-donnees-sante.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/abonnement-bague-connectee-donnees-sante.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/abonnement-bague-connectee-donnees-sante.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/abonnement-bague-connectee-donnees-sante.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/abonnement-bague-connectee-donnees-sante.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/abonnement-bague-connectee-donnees-sante.html"
+  ]
+ ],
+ "jsonld_types": [
+  "FAQPage",
+  "Article",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Vos Données de Santé Sont-Elles En Otage ? Pourquoi l'Abonnement…"
+ ],
+ "h2": [
+  "1. Ce que personne ne vous dit avant d'acheter une bague biométrique",
+  "2. Bague Connectée vs Montre Connectée : Le Vrai Comparatif",
+  "3. Pourquoi la précision VFC est l'étalon-or du bio-monitoring",
+  "4. La SynchroRing X1 : ce qu'elle fait différemment, sans fioriture",
+  "5. Les questions que tout le monde pose (et les réponses honnêtes)",
+  "6. Le calcul que vous devez faire avant d'acheter quoi que ce soit",
+  "Écrit par Diougamady Keita",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 9,
+ "liens_blog": 4,
+ "liens_produits": 1,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1909,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/anneau-connecte-donnees-nuit.html",
+ "titre": "Anneau connecté : ce que votre doigt mesure la nuit | SynchroVie",
+ "meta_desc": "Fréquence cardiaque, SpO2, HRV, température… Un anneau connecté collecte des dizaines de signaux pendant votre sommeil. Voici ce que ces données signifient vraiment.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Anneau connecté : ce que votre doigt mesure pendant que vous dormez",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/anneau-connecte-donnees-nuit.html"
+  ]
+ ],
+ "jsonld_types": [
+  "FAQPage",
+  "Article",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Anneau connecté : ce que votre doigt mesure la nuit"
+ ],
+ "h2": [
+  "1. À l'intérieur de l'anneau : trois capteurs, des milliers de points",
+  "2. Les six signaux que votre anneau collecte chaque nuit",
+  "3. La HRV : le signal le plus puissant — et le plus mal compris",
+  "4. SpO2 : quand la saturation en oxygène devient un signal d'alerte",
+  "5. La température cutanée : le signal le plus discret, le plus révélateur",
+  "6. Phases de sommeil : ce que l'algorithme construit à partir de vos signaux",
+  "7. Ce que l'anneau ne peut pas faire — et ce que certains fabricants ne disent pas",
+  "8. Comment utiliser ces données sans en devenir l'esclave",
+  "9. Conclusion",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 4,
+ "liens_blog": 1,
+ "liens_produits": 1,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2392,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/bague-controle-cortisol-stress-invisible-mesurable.html",
+ "titre": "Cortisol et Performance : Comment la Bague de Contrôle du Stress…",
+ "meta_desc": "Le cortisol est l'hormone du stress qui sabote votre sommeil, votre poids et vos performances. La bague de contrôle du cortisol mesure et optimise votre rythme.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Cortisol et Performance : Comment la Bague de Contrôle du Stress Optimise Votre Journée",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/bague-controle-cortisol-stress-invisible-mesurable.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/bague-controle-cortisol-stress-invisible-mesurable.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/bague-controle-cortisol-stress-invisible-mesurable.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/bague-controle-cortisol-stress-invisible-mesurable.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/bague-controle-cortisol-stress-invisible-mesurable.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/bague-controle-cortisol-stress-invisible-mesurable.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Cortisol et Performance : Comment la Bague de Contrôle du Stress…"
+ ],
+ "h2": [
+  "1. Cortisol : l'hormone qui peut vous sauver ou vous détruire",
+  "2. Le rythme cortisol : pourquoi le timing est tout",
+  "3. Cortisol élevé le soir : le cauchemar métabolique",
+  "4. Comment la bague Aura-Ring Calm estime votre cortisol",
+  "5. Technologies SynchroVie pour le contrôle du cortisol",
+  "6. Protocole cortisol : réinitialiser votre rythme en 14 jours",
+  "7. Passer à l'action : rendez votre stress visible",
+  "Écrit par Diougamady Keita",
+  "Complétez votre écosystème anti-stress",
+  "Pourquoi choisir SynchroVie",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 11,
+ "liens_blog": 2,
+ "liens_produits": 5,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 3580,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/balance-impedancemetre-comprendre-composition-corporelle.html",
+ "titre": "Balance impédancemètre : comprendre votre composition corporelle",
+ "meta_desc": "Balance impédancemètre : ce que mesurent vraiment les pourcentages de masse grasse, musculaire et hydrique. Comprenez vos données pour agir efficacement.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Comprendre Sa Composition Corporelle : Pourquoi la Balance Impédancemètre Est Indispensable",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/balance-impedancemetre-comprendre-composition-corporelle.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/balance-impedancemetre-comprendre-composition-corporelle.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/balance-impedancemetre-comprendre-composition-corporelle.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/balance-impedancemetre-comprendre-composition-corporelle.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/balance-impedancemetre-comprendre-composition-corporelle.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/balance-impedancemetre-comprendre-composition-corporelle.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Comprendre Sa Composition Corporelle : Pourquoi la Balance…"
+ ],
+ "h2": [
+  "1. Pourquoi votre poids ne dit pas la vérité sur votre santé",
+  "2. Les 14 métriques qui comptent vraiment",
+  "3. Gras viscéral : l'ennemi invisible que votre balance classique ignore",
+  "4. Comment fonctionne la bio-impédancemétrie",
+  "5. Technologies SynchroVie pour la composition corporelle",
+  "6. Tableau comparatif : les outils de composition corporelle",
+  "7. Protocole de suivi : mesurer au bon moment",
+  "8. Passer à l'action : de la mesure à la transformation",
+  "Écrit par Diougamady Keita",
+  "Complétez votre suivi santé",
+  "Pourquoi choisir SynchroVie",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 20,
+ "liens_blog": 2,
+ "liens_produits": 12,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 3753,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/bio-monitoring-sante-connectee-erreur-diagnostic.html",
+ "titre": "Bio-Monitoring Santé Connectée : Corriger une Erreur de…",
+ "meta_desc": "Erreur de diagnostic pendant des mois ? La VFC continue et le bio-monitoring sante connectee vous donnent les donnees objectives pour affiner votre diagnostic.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Bio-Monitoring Santé Connectée : Comment Vos Données Biométriques Peuvent Corriger une Erreur de Diagnostic",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/bio-monitoring-sante-connectee-erreur-diagnostic.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/bio-monitoring-sante-connectee-erreur-diagnostic.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/bio-monitoring-sante-connectee-erreur-diagnostic.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/bio-monitoring-sante-connectee-erreur-diagnostic.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/bio-monitoring-sante-connectee-erreur-diagnostic.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/bio-monitoring-sante-connectee-erreur-diagnostic.html"
+  ]
+ ],
+ "jsonld_types": [
+  "FAQPage",
+  "BlogPosting",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Bio-Monitoring Santé Connectée : Comment Vos Données…"
+ ],
+ "h2": [
+  "1. Quand votre corps dit une chose et votre dossier médical en dit une autre",
+  "2. Deux ans. C'est le temps qu'a dure l'erreur.",
+  "3. La VFC : le marqueur biologique que votre psychiatre n'utilisé pas (encore)",
+  "4. La SynchroRing X1 : votre allie de bio-monitoring santé connectée au quotidien",
+  "5. Comment construire votre dossier de contre-expertise (sans confrontation)",
+  "6. Les pièges a eviter dans le bio-monitoring santé connectée",
+  "7. Le bio-monitoring comme droit du patient",
+  "8. Reprenez le contrôlé de vos données. Reprenez le contrôlé de votre santé.",
+  "Écrit par Diougamady Keita",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 15,
+ "liens_blog": 1,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1784,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/biofeedback-gestion-stress-rythme-cardiaque.html",
+ "titre": "Biofeedback Gestion Stress : Reprenez le Controle de Votre…",
+ "meta_desc": "Le biofeedback de gestion du stress vous permet de visualiser et maitriser votre rythme cardiaque en temps reel. Sans medicament. Sans attendre. 3 minutes suffisent.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Biofeedback Gestion Stress : Reprenez le Controle de Votre Rythme Cardiaque en Temps Reel",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/biofeedback-gestion-stress-rythme-cardiaque.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/biofeedback-gestion-stress-rythme-cardiaque.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/biofeedback-gestion-stress-rythme-cardiaque.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/biofeedback-gestion-stress-rythme-cardiaque.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/biofeedback-gestion-stress-rythme-cardiaque.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/biofeedback-gestion-stress-rythme-cardiaque.html"
+  ]
+ ],
+ "jsonld_types": [
+  "HowTo",
+  "FAQPage",
+  "BlogPosting",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Biofeedback Gestion Stress : Reprenez le Controle de Votre…"
+ ],
+ "h2": [
+  "1. Votre coeur parle. Apprenez a répondre.",
+  "2. « Le coeur va plus lentement, mais des fois il monte un petit peu »",
+  "3. Comment fonctionne le biofeedback cardiaque (sans jargon inutile)",
+  "4. Pratiquer la cohérence cardiaque sans appareil dédié",
+  "5. L-Theanine et biofeedback : la combinaison que personne ne vous prescrit",
+  "6. Le protocole quotidien en 15 minutes",
+  "7. Ce que 30 jours de biofeedback changent — concretement",
+  "8. Le biofeedback n'est pas de la meditation. Et c'est pour ca qu'il fonctionne.",
+  "9. Votre stress est mesurable. Votre solution devrait l'être aussi.",
+  "Écrit par Diougamady Keita",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 11,
+ "liens_blog": 1,
+ "liens_produits": 1,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1757,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/biohacking-feminin-cycle-menstruel-vfc.html",
+ "titre": "Biohacking féminin : ce que la VFC révèle sur votre cycle",
+ "meta_desc": "La VFC baisse naturellement en phase lutéale sous l'effet de la progestérone — ce n'est pas un signe de mauvaise récupération, contrairement à ce que su...",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Biohacking féminin : ce que la VFC révèle sur votre cycle",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/biohacking-feminin-cycle-menstruel-vfc.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/biohacking-feminin-cycle-menstruel-vfc.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/biohacking-feminin-cycle-menstruel-vfc.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/biohacking-feminin-cycle-menstruel-vfc.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/biohacking-feminin-cycle-menstruel-vfc.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/biohacking-feminin-cycle-menstruel-vfc.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Biohacking féminin : ce que la VFC révèle sur votre cycle"
+ ],
+ "h2": [
+  "1. Le signal que la plupart des trackers ignorent",
+  "2. Ce qui se passe réellement dans votre corps d'une phase à l'autre",
+  "3. La VFC qui baisse n'est pas un problème à résoudre",
+  "4. Ce qui change à l'approche de la périménopause",
+  "5. La température, le signal qui aide à se repérer",
+  "6. Comment lire ses propres données sans se comparer à une moyenne",
+  "7. Ce que ça change concrètement pour l'entraînement",
+  "8. Le protocole pour construire sa propre ligne de base",
+  "Questions fréquentes",
+  "Sources",
+  "Sources",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 2,
+ "liens_blog": 1,
+ "liens_produits": 1,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1920,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/biohacking-performance-physique-respiration-nasale.html",
+ "titre": "Biohacking Performance Physique : Respiration Nasale Nocturne | S…",
+ "meta_desc": "La respiration nasale nocturne booste l'oxygénation de 25 % grâce à l'oxyde nitrique. Voici comment la restaurer naturellement quand les médicaments ou la congestion la perturbent.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Biohacking Performance Physique : Comment la Respiration Nasale Nocturne Change Tout",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/biohacking-performance-physique-respiration-nasale.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/biohacking-performance-physique-respiration-nasale.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/biohacking-performance-physique-respiration-nasale.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/biohacking-performance-physique-respiration-nasale.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/biohacking-performance-physique-respiration-nasale.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/biohacking-performance-physique-respiration-nasale.html"
+  ]
+ ],
+ "jsonld_types": [
+  "FAQPage",
+  "BlogPosting",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Biohacking Performance Physique : Comment la Respiration Nasale…"
+ ],
+ "h2": [
+  "1. Le goulot d'etranglement que vous ignorez",
+  "2. Le problème que personne ne prend au sérieux",
+  "3. Pourquoi la respiration buccale nocturne détruit votre performance",
+  "4. Rétablir la respiration nasale sans dispositif",
+  "5. Le protocole de biohacking respiratoire nocturne",
+  "6. L'angle que les biohackers négligent",
+  "7. Pour les athlètes : les chiffres qui comptent",
+  "8. L'éléphant dans la pièce : vos médicaments bouchent votre nez",
+  "9. Respirez mieux cette nuit. Performez mieux demain.",
+  "Écrit par Diougamady Keita",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 13,
+ "liens_blog": 1,
+ "liens_produits": 1,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1833,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/comment-interpreter-frequence-cardiaque.html",
+ "titre": "Comment interpréter votre fréquence cardiaque pour mieux surveiller votre santé",
+ "meta_desc": "Comprenez comment interpréter votre fréquence cardiaque au repos, à l'effort et pendant le sommeil. Zones cardio, VFC, seuils d'alerte et conseils pratiques.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Comment interpréter votre fréquence cardiaque pour mieux surveiller votre santé",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/comment-interpreter-frequence-cardiaque.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/comment-interpreter-frequence-cardiaque.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/comment-interpreter-frequence-cardiaque.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/comment-interpreter-frequence-cardiaque.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/comment-interpreter-frequence-cardiaque.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/comment-interpreter-frequence-cardiaque.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Comment interpréter votre fréquence cardiaque pour mieux surveiller votre santé"
+ ],
+ "h2": [
+  "1. Qu'est-ce que la fréquence cardiaque, au juste ?",
+  "2. Fréquence cardiaque au repos : les repères",
+  "3. Et chez les sportifs ?",
+  "4. Fréquence cardiaque maximale : comment l'estimer",
+  "5. Les zones de fréquence cardiaque à l'effort",
+  "6. La variabilité de la fréquence cardiaque (VFC), l'indicateur qu'on oublie souvent",
+  "7. Quand la fréquence cardiaque doit-elle vous alerter ?",
+  "8. Comment mesurer sa fréquence cardiaque au quotidien",
+  "Questions fréquentes",
+  "En résumé",
+  "Sources utilisées",
+  "Écrit par Diougamady Keita",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 14,
+ "liens_blog": 1,
+ "liens_produits": 2,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2844,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/correcteur-posture-haptique-reeduquer-dos-intelligemment.html",
+ "titre": "Posture et Performance : Pourquoi le Correcteur Haptique…",
+ "meta_desc": "Correcteur de posture intelligent : comment rééduquer son dos efficacement. Retour haptique, suivi connecté, résultats en 21 jours.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Posture et Performance : Pourquoi le Correcteur Haptique Remplace le Kiné",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/correcteur-posture-haptique-reeduquer-dos-intelligemment.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/correcteur-posture-haptique-reeduquer-dos-intelligemment.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/correcteur-posture-haptique-reeduquer-dos-intelligemment.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/correcteur-posture-haptique-reeduquer-dos-intelligemment.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/correcteur-posture-haptique-reeduquer-dos-intelligemment.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/correcteur-posture-haptique-reeduquer-dos-intelligemment.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Posture et Performance : Pourquoi le Correcteur Haptique…"
+ ],
+ "h2": [
+  "1. Mal de dos : la 2e cause de consultation en France",
+  "2. Pourquoi les correcteurs de posture classiques échouent",
+  "3. Le biofeedback haptique : rééducation inconsciente 24h/24",
+  "4. Comment le capteur d'inclinaison détecte les mauvaises postures",
+  "5. Technologies SynchroVie pour la posture et la biomécanique",
+  "6. Pourquoi choisir SynchroVie",
+  "Un email par semaine, zéro spam",
+  "7. Pour aller plus loin",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 6,
+ "liens_blog": 2,
+ "liens_produits": 6,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2243,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/cortisol-eleve-fatigue-chronique-invisible.html",
+ "titre": "Cortisol élevé : la cause invisible de votre épuisement | SynchroVie",
+ "meta_desc": "Le cortisol élevé est souvent invisible. Comprenez les signes cachés de la fatigue chronique liée au stress et comment la bague connectée peut vous aider à le détecter.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Cortisol élevé : la cause invisible de votre épuisement",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/cortisol-eleve-fatigue-chronique-invisible.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/cortisol-eleve-fatigue-chronique-invisible.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/cortisol-eleve-fatigue-chronique-invisible.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/cortisol-eleve-fatigue-chronique-invisible.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/cortisol-eleve-fatigue-chronique-invisible.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/cortisol-eleve-fatigue-chronique-invisible.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Cortisol invisible : pourquoi vous vous sentez épuisé sans…"
+ ],
+ "h2": [
+  "1. La cause cachée : le cortisol élevé et la fatigue chronique",
+  "2. Pourquoi les solutions classiques échouent",
+  "3. La technologie qui change la donne : le biofeedback stress continu",
+  "4. Comment utiliser le biofeedback cortisol concrètement",
+  "5. Ce que vous allez ressentir : le retour de l'énergie stable",
+  "Pour aller plus loin",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 3,
+ "liens_blog": 2,
+ "liens_produits": 2,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2638,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/cortisol-invisible-fatigue-chronique-2026.html",
+ "titre": "",
+ "meta_desc": "ABSENT",
+ "robots": "noindex, follow",
+ "gverif": "oui",
+ "og_title": "",
+ "og_img": "",
+ "canonical": "https://synchro-vie.com/blog/cortisol-eleve-fatigue-chronique-invisible.html",
+ "hreflang": [],
+ "jsonld_types": [],
+ "h1": [],
+ "h2": [],
+ "nb_h3": 0,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 9,
+ "anomalies": []
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/dopamine-detox-mythe-neurosciences.html",
+ "titre": "Dopamine detox : ce que les neurosciences en disent vraiment",
+ "meta_desc": "La dopamine n'est pas l'hormone du plaisir mais un signal d'apprentissage et de motivation — un ",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Dopamine detox : ce que les neurosciences en disent vraiment",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/dopamine-detox-mythe-neurosciences.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/dopamine-detox-mythe-neurosciences.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/dopamine-detox-mythe-neurosciences.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/dopamine-detox-mythe-neurosciences.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/dopamine-detox-mythe-neurosciences.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/dopamine-detox-mythe-neurosciences.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Dopamine detox : ce que les neurosciences en disent vraiment"
+ ],
+ "h2": [
+  "1. Le mythe de la dopamine detox qui circule",
+  "2. Ce que la dopamine fait réellement",
+  "3. Pourquoi on ne peut pas la \"réinitialiser\" en un jour",
+  "4. Le vrai mécanisme derrière l'addiction aux réseaux sociaux",
+  "5. Ce qui influence réellement vos récepteurs dopaminergiques",
+  "6. Le protocole qui a un vrai appui scientifique",
+  "7. Le risque de l'abstinence totale",
+  "Questions fréquentes",
+  "Sources",
+  "Sources",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 2,
+ "liens_blog": 1,
+ "liens_produits": 1,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1542,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/guide-bague-connectee-biometrique.html",
+ "titre": "Bague Connectée Santé : Le Guide Complet du Suivi Biométrique en…",
+ "meta_desc": "Guide complet 2026 : comment choisir sa bague connectée biométrique ? Comparatif SynchroRing X1, Oura Ring, Circular. Prix, fonctionnalités, sans abonnement.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Bague Connectée Santé : Le Guide Complet du Suivi Biométrique",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/guide-bague-connectee-biometrique.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/guide-bague-connectee-biometrique.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/guide-bague-connectee-biometrique.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/guide-bague-connectee-biometrique.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/guide-bague-connectee-biometrique.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/guide-bague-connectee-biometrique.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Bague Connectée Santé : le guide complet pour choisir en 2026"
+ ],
+ "h2": [
+  "1. Vous comptez vos pas, mais vous passez a cote de la métrique qui compte vraiment",
+  "2. Le coût réel d'un suivi de santé superficiel",
+  "3. Qu'est-ce que la VFC et pourquoi est-elle cruciale ?",
+  "4. Comment fonctionne la SynchroRing X1",
+  "5. Le suivi du sommeil qui fait veritablement la différence",
+  "6. Cas d'utilisation concrets : sportifs, professionnels, vigilance cardio",
+  "7. Bagues vs montres vs ceintures : quelle précision ?",
+  "8. Pour aller plus loin",
+  "Écrit par Diougamady Keita",
+  "Composez votre ecosystème de santé SynchroVie",
+  "Pourquoi des milliers d'utilisateurs font confiance a SynchroVie",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 15,
+ "liens_blog": 5,
+ "liens_produits": 9,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 3043,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/magnesium-bisglycinate-sommeil-cortisol.html",
+ "titre": "Magnésium bisglycinate : ce que dit vraiment la science sur le sommeil",
+ "meta_desc": "La plus grande étude jamais menée sur le magnésium bisglycinate et le sommeil (2025) montre un effet réel mais modeste — et concentré chez les personnes...",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Magnésium bisglycinate : ce que dit vraiment la science sur le sommeil",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/magnesium-bisglycinate-sommeil-cortisol.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/magnesium-bisglycinate-sommeil-cortisol.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/magnesium-bisglycinate-sommeil-cortisol.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/magnesium-bisglycinate-sommeil-cortisol.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/magnesium-bisglycinate-sommeil-cortisol.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/magnesium-bisglycinate-sommeil-cortisol.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Magnésium bisglycinate : ce que dit vraiment la science sur le sommeil"
+ ],
+ "h2": [
+  "1. Ce que l'étude la plus rigoureuse a vraiment trouvé",
+  "2. Le détail qui change tout : qui en bénéficie vraiment",
+  "3. Pourquoi la forme bisglycinate plutôt qu'une autre",
+  "4. Le lien réel avec le cortisol",
+  "5. Et la glycine, dans tout ça ?",
+  "6. Le dosage à retenir",
+  "7. Comment savoir si ça vaut le coup pour vous",
+  "Questions fréquentes",
+  "Sources",
+  "Sources",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 2,
+ "liens_blog": 1,
+ "liens_produits": 1,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1517,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/optimisation-sommeil-profond-micro-reveils.html",
+ "titre": "Optimisation Sommeil Profond : Comment Eliminer les…",
+ "meta_desc": "Les micro-réveils sabotent votre sommeil profond sans que vous le sachiez. Apprenez à les détecter et les éliminer pour des nuits réparatrices.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Optimisation Sommeil Profond : Comment Eliminer les Micro-Reveils Invisibles",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/optimisation-sommeil-profond-micro-reveils.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/optimisation-sommeil-profond-micro-reveils.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/optimisation-sommeil-profond-micro-reveils.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/optimisation-sommeil-profond-micro-reveils.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/optimisation-sommeil-profond-micro-reveils.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/optimisation-sommeil-profond-micro-reveils.html"
+  ]
+ ],
+ "jsonld_types": [
+  "BlogPosting",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Optimisation du Sommeil Profond : Comment Eliminer les…"
+ ],
+ "h2": [
+  "1. La réponse courte que personne ne vous donne",
+  "2. 43 micro-réveils par heure : le chiffre qui change tout",
+  "3. L'échec programme des solutions chimiques",
+  "4. La strategie en deux phases : Detecter, puis Neutraliser",
+  "5. Ce que les données changent dans votre relation avec votre médecin",
+  "6. Les trois erreurs qui maintiennent vos micro-réveils",
+  "7. Un protocole concret en 30 jours",
+  "8. Pour qui cette approche fonctionne — et pour qui elle ne suffit pas",
+  "9. Arretez de dormir. Commencez a recuperer.",
+  "10. Pour aller plus loin",
+  "Écrit par Diougamady Keita",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 11,
+ "liens_blog": 1,
+ "liens_produits": 2,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2153,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/performance-physique-stimulation-ems.html",
+ "titre": "Stimulation EMS et Performance Physique : Ce Que la Science Dit…",
+ "meta_desc": "La stimulation EMS booste la performance physique et accélère la récupération. Protocoles, bénéfices scientifiques et choix de l'appareil adapté.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Stimulation EMS et Performance Physique : Ce Que la Science Dit Vraiment",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/performance-physique-stimulation-ems.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/performance-physique-stimulation-ems.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/performance-physique-stimulation-ems.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/performance-physique-stimulation-ems.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/performance-physique-stimulation-ems.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/performance-physique-stimulation-ems.html"
+  ]
+ ],
+ "jsonld_types": [
+  "HowTo",
+  "Article",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Stimulation EMS et Performance Physique : Ce Que la Science Dit…"
+ ],
+ "h2": [
+  "1. Le plateau de performance : pourquoi vous stagnez",
+  "2. La frustration de s'entrainer sans resultats",
+  "3. La science de la stimulation EMS",
+  "4. Stimulateur Musculaire ElectroBoost S3",
+  "5. Correcteur Posture Haptique Posture-Core",
+  "6. Pistolet Massage Compact Flex-Gun Mini",
+  "7. Genouillere Thermique Compressive Knee-Tech Support",
+  "8. Dynamomêtre Force Digital Grip-Master",
+  "9. Construire votre stack performance",
+  "10. Tableau comparatif : objectif, produit, investissement",
+  "11. Pour aller plus loin",
+  "Écrit par Diougamady Keita",
+  "Articles qui pourraient vous intéressér",
+  "Pourquoi faire confiance a SynchroVie ?",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 4,
+ "liens_blog": 5,
+ "liens_produits": 23,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2450,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/photobiomodulation-irradiance-panneau-led.html",
+ "titre": "Photobiomodulation : pourquoi votre panneau LED ne fait rien",
+ "meta_desc": "Photobiomodulation : comprendre l'irradiance d'un panneau LED rouge. Bénéfices peau, récupération, bien-être. Guide d'achat 2026.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Photobiomodulation : Pourquoi Votre Panneau LED à 50€ Ne Fait Rien",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/photobiomodulation-irradiance-panneau-led.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/photobiomodulation-irradiance-panneau-led.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/photobiomodulation-irradiance-panneau-led.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/photobiomodulation-irradiance-panneau-led.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/photobiomodulation-irradiance-panneau-led.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/photobiomodulation-irradiance-panneau-led.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Votre Panneau LED à 50€ Ne Fait Strictement Rien à Vos Cellules.…"
+ ],
+ "h2": [
+  "1. La physique qui sépare un gadget d'un dispositif médical",
+  "2. Ce que la photobiomodulation fait réellement quand elle est correctement dosée",
+  "3. Le marché actuel : ce que les grandes marques ne vous disent pas",
+  "4. Panneau Pro vs Gadget Low-Cost : Le Vrai Comparatif",
+  "5. LumiRed Pro X1 : la physique qui justifie le prix",
+  "6. Protocole LumiRed Pro X1 — Récupération, Performance et Santé",
+  "7. Ce que vous devez savoir avant d'acheter",
+  "8. Le calcul que les biohackers sérieux font",
+  "9. Pour aller plus loin",
+  "Écrit par Diougamady Keita",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 13,
+ "liens_blog": 4,
+ "liens_produits": 2,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2570,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/pistolet-massage-science-recuperation.html",
+ "titre": "Pistolet de massage : ce que dit vraiment la science de la récupération",
+ "meta_desc": "Le massage percussif réduit les courbatures et améliore la flexibilité — mais n'a aucun effet démontré sur la force musculaire. Ce que disent vraiment les études randomisées.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Pistolet de massage : ce que dit vraiment la science de la récupération",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/pistolet-massage-science-recuperation.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/pistolet-massage-science-recuperation.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/pistolet-massage-science-recuperation.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/pistolet-massage-science-recuperation.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/pistolet-massage-science-recuperation.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/pistolet-massage-science-recuperation.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Pistolet de massage : ce que dit vraiment la science de la récupération"
+ ],
+ "h2": [
+  "1. Ce que le massage percussif fait vraiment",
+  "2. Ce qu'il ne fait pas : la force musculaire",
+  "3. La durée de séance change le résultat",
+  "4. Un usage déjà répandu chez les athlètes de haut niveau",
+  "5. Le protocole selon l'objectif",
+  "6. Un usage qui dépasse le sport : la rééducation",
+  "Sources",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 4,
+ "liens_blog": 3,
+ "liens_produits": 1,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1272,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/recuperation-musculaire-protocoles-athletes-pro.html",
+ "titre": "Récupération musculaire : les protocoles des athlètes pro | SynchroVie",
+ "meta_desc": "Protocoles de récupération musculaire des athlètes professionnels : EMS, photobiomodulation, cryothérapie, sommeil. Comment adapter ces méthodes à votre niveau.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Récupération musculaire : les protocoles des athlètes pro",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/recuperation-musculaire-protocoles-athletes-pro.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/recuperation-musculaire-protocoles-athletes-pro.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/recuperation-musculaire-protocoles-athletes-pro.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/recuperation-musculaire-protocoles-athletes-pro.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/recuperation-musculaire-protocoles-athletes-pro.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/recuperation-musculaire-protocoles-athletes-pro.html"
+  ]
+ ],
+ "jsonld_types": [
+  "HowTo",
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Récupération musculaire : ce que les athlètes pro font (et que…"
+ ],
+ "h2": [
+  "1. L'inflammation musculaire : mécanisme réel, pas simple courbature",
+  "2. Récupération passive et étirements : ce que les données disent vraiment",
+  "3. EMS récupération : la physiologie derrière l'efficacité",
+  "4. Protocole complet : fréquences, durées et timing selon les cycles d'entraînement",
+  "5. La ligne chronologique des effets : ce qui se passe dans votre corps",
+  "Ce que vous faites dans les 2 heures après l'effort définit vos progrès des 48 heures suivantes",
+  "Pour aller plus loin",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 13,
+ "liens_blog": 1,
+ "liens_produits": 3,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2112,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/recuperation-musculaire-technologies-2026.html",
+ "titre": "",
+ "meta_desc": "ABSENT",
+ "robots": "noindex, follow",
+ "gverif": "oui",
+ "og_title": "",
+ "og_img": "",
+ "canonical": "https://synchro-vie.com/blog/recuperation-musculaire-protocoles-athletes-pro.html",
+ "hreflang": [],
+ "jsonld_types": [],
+ "h1": [],
+ "h2": [],
+ "nb_h3": 0,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 8,
+ "anomalies": []
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/recuperation-musculaire-technologies-pointe-athletes.html",
+ "titre": "Récupération Musculaire 2026 : Les Technologies Qui Accélèrent…",
+ "meta_desc": "Les technologies de pointe pour la récupération musculaire : EMS, lumière rouge, cryothérapie, compression. Ce qui fonctionne vraiment en 2026.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Récupération Musculaire 2026 : Les Technologies Qui Accélèrent la Guérison de 40%",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/recuperation-musculaire-technologies-pointe-athletes.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/recuperation-musculaire-technologies-pointe-athletes.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/recuperation-musculaire-technologies-pointe-athletes.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/recuperation-musculaire-technologies-pointe-athletes.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/recuperation-musculaire-technologies-pointe-athletes.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/recuperation-musculaire-technologies-pointe-athletes.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Récupération Musculaire 2026 : Les Technologies Qui Accélèrent…"
+ ],
+ "h2": [
+  "1. Récupération : le facteur X que 90% des athlètes négligent",
+  "2. Les 3 phases de la réparation musculaire",
+  "3. EMS et récupération : ce que les études cliniques montrent",
+  "4. Percussion thérapeutique : mécanobiologie en action",
+  "5. Technologies SynchroVie pour la récupération",
+  "6. Tableau comparatif des technologies de récupération",
+  "7. Protocole récupération : du sportif au sédentaire actif",
+  "8. Passer à l'action : votre récupération commence maintenant",
+  "9. Pour aller plus loin",
+  "Écrit par Diougamady Keita",
+  "Complétez votre arsenal récupération",
+  "Pourquoi choisir SynchroVie",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 16,
+ "liens_blog": 2,
+ "liens_produits": 15,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 3775,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/rythme-cardiaque-tension-arterielle-nocturne-sommeil.html",
+ "titre": "Rythme cardiaque et tension artérielle nocturne : guide 2026 | SynchroVie",
+ "meta_desc": "Pourquoi le rythme cardiaque et la tension baissent-ils la nuit ? Quelles valeurs sont normales ? Guide sourcé 2026 pour interpréter vos données connectées.",
+ "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+ "gverif": "oui",
+ "og_title": "Rythme cardiaque et tension artérielle nocturne : guide complet 2026",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/rythme-cardiaque-tension-arterielle-nocturne-sommeil.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/rythme-cardiaque-tension-arterielle-nocturne-sommeil.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/rythme-cardiaque-tension-arterielle-nocturne-sommeil.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/rythme-cardiaque-tension-arterielle-nocturne-sommeil.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/rythme-cardiaque-tension-arterielle-nocturne-sommeil.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/rythme-cardiaque-tension-arterielle-nocturne-sommeil.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Rythme cardiaque et tension artérielle nocturne : ce que vos mesures révèlent sur votre sommeil"
+ ],
+ "h2": [
+  "1. Fréquence cardiaque et tension artérielle : deux paramètres à ne pas confondre",
+  "2. Pourquoi le rythme cardiaque baisse-t-il pendant le sommeil ?",
+  "3. Quelle fréquence cardiaque est normale pendant le sommeil ?",
+  "4. Pourquoi la tension artérielle baisse-t-elle pendant la nuit ? (dipping)",
+  "5. Non-dipping, reverse dipping : quand la tension ne baisse pas assez",
+  "6. Fréquence cardiaque élevée pendant la nuit : causes et interprétation",
+  "7. Apnée du sommeil : le lien avec rythme cardiaque et tension",
+  "8. Comment mesurer réellement sa tension artérielle nocturne",
+  "9. Que mesurent réellement les objets connectés SynchroVie ?",
+  "10. Interpréter ses données nocturnes : tendances plutôt que valeurs isolées",
+  "Questions fréquentes",
+  "Aller plus loin avec SynchroVie",
+  "Sources",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 45,
+ "liens_blog": 5,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2921,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/sauna-infrarouge-cortisol-post-exercice.html",
+ "titre": "Sauna infrarouge et cortisol : ce que la science dit vraiment",
+ "meta_desc": "Contrairement au discours marketing habituel, le sauna infrarouge post-effort n'abaisse pas le cortisol à court terme — il l'élève légèrement, selon une...",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Sauna infrarouge et cortisol : ce que la science dit vraiment",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/sauna-infrarouge-cortisol-post-exercice.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/sauna-infrarouge-cortisol-post-exercice.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/sauna-infrarouge-cortisol-post-exercice.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/sauna-infrarouge-cortisol-post-exercice.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/sauna-infrarouge-cortisol-post-exercice.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/sauna-infrarouge-cortisol-post-exercice.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "BreadcrumbList",
+  "FAQPage"
+ ],
+ "h1": [
+  "Sauna infrarouge et cortisol : ce que la science dit vraiment"
+ ],
+ "h2": [
+  "1. Ce que le sauna infrarouge fait réellement au cortisol",
+  "2. Alors pourquoi tant d'articles promettent l'inverse ?",
+  "3. Ce que le sauna améliore quand même",
+  "4. L'adaptation sur 6 semaines, la vraie clé de lecture",
+  "5. Un terrain différent : la fatigue chronique",
+  "6. Le protocole selon l'objectif visé",
+  "7. Comment savoir si ça fonctionne pour vous",
+  "Questions fréquentes",
+  "Sources",
+  "Sources",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 2,
+ "liens_blog": 1,
+ "liens_produits": 1,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 1546,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/sommeil-profond-90-premieres-minutes.html",
+ "titre": "Redirection - SynchroVie",
+ "meta_desc": "ABSENT",
+ "robots": "noindex, follow",
+ "gverif": "oui",
+ "og_title": "",
+ "og_img": "",
+ "canonical": "https://synchro-vie.com/blog/sommeil-profond-ondes-delta-2026.html",
+ "hreflang": [],
+ "jsonld_types": [],
+ "h1": [],
+ "h2": [],
+ "nb_h3": 0,
+ "liens_blog": 0,
+ "liens_produits": 0,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 23,
+ "anomalies": []
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/sommeil-profond-ondes-delta-2026.html",
+ "titre": "Sommeil profond et ondes delta : les 90 premières minutes…",
+ "meta_desc": "Ondes delta et sommeil profond : tout comprendre en 2026. Rôle physiologique, comment les optimiser, technologies de suivi et stimulation.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Sommeil profond et ondes delta : les 90 premières minutes décident de tout",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/sommeil-profond-ondes-delta-2026.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/sommeil-profond-ondes-delta-2026.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/sommeil-profond-ondes-delta-2026.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/sommeil-profond-ondes-delta-2026.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/sommeil-profond-ondes-delta-2026.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/sommeil-profond-ondes-delta-2026.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Sommeil profond et ondes delta : les 90 premières minutes…"
+ ],
+ "h2": [
+  "1. La vraie cause de la fatigue matinale : un déséquilibre physiologique, pas une dette de sommeil",
+  "2. Pourquoi les solutions habituélles n'y changent rien",
+  "3. La science des ondes delta : ce qui se passe réellement dans votre cerveau la nuit",
+  "4. Les 90 premières minutes : la fenêtre critique que la plupart des gens sabotent sans le savoir",
+  "5. Le protocole concret : comment préparer le terrain pour les ondes delta",
+  "6. Ce que vous pouvez faire ce soir",
+  "7. Masque Sommeil Ondes Delta",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 10,
+ "liens_blog": 2,
+ "liens_produits": 4,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2524,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/surveiller-coeur-domicile-moniteur-ecg-portable.html",
+ "titre": "Sûrveiller Son Cœur à Domicile : Le Moniteur ECG Portable Change…",
+ "meta_desc": "Surveiller son cœur à domicile : guide du moniteur ECG portable. Détection précoce, fiabilité, quand consulter. Comparatif 2026.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Surveiller Son Cœur à Domicile : Le Moniteur ECG Portable Change Tout",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/surveiller-coeur-domicile-moniteur-ecg-portable.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/surveiller-coeur-domicile-moniteur-ecg-portable.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/surveiller-coeur-domicile-moniteur-ecg-portable.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/surveiller-coeur-domicile-moniteur-ecg-portable.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/surveiller-coeur-domicile-moniteur-ecg-portable.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/surveiller-coeur-domicile-moniteur-ecg-portable.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Sûrveiller Son Cœur à Domicile : Le Moniteur ECG Portable Change Tout"
+ ],
+ "h2": [
+  "1. Pourquoi 1 Français sur 4 mourra d'une maladie cardiovasculaire",
+  "2. ECG à l'hôpital vs ECG à domicile : le paradigme change",
+  "3. Fibrillation auriculaire : le tueur silencieux que l'ECG détecte",
+  "4. Comment fonctionne un moniteur ECG portable",
+  "5. Technologies SynchroVie pour la surveillance cardiaque",
+  "6. Tableau comparatif des dispositifs cardiaques",
+  "7. Quand consulter : les signaux d'alerte à ne pas ignorer",
+  "8. Passer à l'action pour votre cœur",
+  "9. Pour aller plus loin",
+  "Écrit par Diougamady Keita",
+  "Complétez votre suivi santé",
+  "Pourquoi choisir SynchroVie",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 14,
+ "liens_blog": 4,
+ "liens_produits": 14,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 3453,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/technologies-neuro-sommeil-2026.html",
+ "titre": "Technologies Neuro-Sommeil : Comment +23% de Sommeil Profond en…",
+ "meta_desc": "Technologies neuro-sommeil 2026 : stimulation cérébrale, ondes delta, neurofeedback. Les innovations qui révolutionnent la qualité du sommeil.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Technologies Neuro-Sommeil : Comment +23% de Sommeil Profond en 2 Semaines",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/technologies-neuro-sommeil-2026.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/technologies-neuro-sommeil-2026.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/technologies-neuro-sommeil-2026.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/technologies-neuro-sommeil-2026.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/technologies-neuro-sommeil-2026.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/technologies-neuro-sommeil-2026.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Technologies Neuro-Sommeil : Comment +23% de Sommeil Profond en…"
+ ],
+ "h2": [
+  "Sommaire",
+  "1. La crise du sommeil : un enjeu de santé publique majeur",
+  "2. Pourquoi les solutions traditionnelles echouent",
+  "3. Tableau comparatif des solutions neuro-sommeil",
+  "4. Comment combiner ces technologies pour un effet maximal",
+  "5. Passer a l'action pour vos nuits",
+  "6. Pour aller plus loin",
+  "7. Références et sources",
+  "Écrit par Diougamady Keita",
+  "Produits complementaires",
+  "Pourquoi faire confiance a SynchroVie",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 24,
+ "liens_blog": 4,
+ "liens_produits": 23,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2960,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/tension-arterielle-connectee-5-erreurs-mesures.html",
+ "titre": "Tension Artérielle Connectée : Les 5 Erreurs Qui Faussent Vos…",
+ "meta_desc": "5 erreurs fatales lors de la mesure de la tension artérielle connectée. Éviter les faux résultats et surveiller sa tension correctement à domicile.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Tension Artérielle Connectée : Les 5 Erreurs Qui Faussent Vos Mesures",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/tension-arterielle-connectee-5-erreurs-mesures.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/tension-arterielle-connectee-5-erreurs-mesures.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/tension-arterielle-connectee-5-erreurs-mesures.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/tension-arterielle-connectee-5-erreurs-mesures.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/tension-arterielle-connectee-5-erreurs-mesures.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/tension-arterielle-connectee-5-erreurs-mesures.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Tension Artérielle Connectée : Les 5 Erreurs Qui Faussent Vos…"
+ ],
+ "h2": [
+  "1. Hypertension : le tueur silencieux qui affecte 1 Français sur 3",
+  "2. Les 5 erreurs qui faussent vos mesures de tension",
+  "3. Pourquoi le double brassard change tout",
+  "4. Détection automatique de la fibrillation auriculaire",
+  "5. Technologies SynchroVie pour la tension artérielle",
+  "6. Tableau comparatif : les 3 appareils de surveillance tensionnelle",
+  "7. Protocole de mesure fiable en 7 étapes",
+  "8. Passer à l'action : prenez le contrôle de votre tension",
+  "9. Pour aller plus loin",
+  "Écrit par Diougamady Keita",
+  "Complétez votre suivi cardiovasculaire",
+  "Pourquoi choisir SynchroVie",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 20,
+ "liens_blog": 2,
+ "liens_produits": 16,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 4184,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/vfc-biomarqueur-longevite-2026.html",
+ "titre": "VFC : le biomarqueur qui change tout en 2026",
+ "meta_desc": "VFC : le biomarqueur de longévité à suivre en 2026. Variabilité de la fréquence cardiaque, interprétation, comment l'améliorer pour vivre plus longtemps.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "Variabilité fréquence cardiaque : le biomarqueur clé en 2026",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/vfc-biomarqueur-longevite-2026.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/vfc-biomarqueur-longevite-2026.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/vfc-biomarqueur-longevite-2026.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/vfc-biomarqueur-longevite-2026.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/vfc-biomarqueur-longevite-2026.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/vfc-biomarqueur-longevite-2026.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "Variabilité fréquence cardiaque : le biomarqueur qui change tout…"
+ ],
+ "h2": [
+  "1. Ce que la VFC mesure vraiment",
+  "2. Pourquoi votre VFC baisse sans signal d'alerte visible",
+  "3. Ce que la recherche médicale confirme en 2026",
+  "4. VFC et biohacking : ce que les pratiquants font différemment",
+  "5. Stimulation du nerf vague : le raccourci parasympathique",
+  "6. Comment mesurer sa VFC sans s'y perdre",
+  "7. VFC et récupération cardiaque : lire le signal avant de pousser",
+  "8. Ce que la VFC ne fait pas",
+  "9. Biomarqueurs de longévité au-delà de la VFC",
+  "10. Agir directement sur le nerf vague",
+  "Sources",
+  "Écrit par Diougamady Keita"
+ ],
+ "nb_h3": 10,
+ "liens_blog": 4,
+ "liens_produits": 2,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 2666,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
+------------------------------------------------------------------------
+{
+ "fichier": "blog/vfc-variabilite-frequence-cardiaque-biomarqueur-longevite.html",
+ "titre": "VFC : le biomarqueur de longévité à connaître",
+ "meta_desc": "Variabilité de la fréquence cardiaque (VFC) : biomarqueur scientifique de longévité. Comment interpréter ses données et agir pour améliorer sa santé.",
+ "robots": "index, follow",
+ "gverif": "oui",
+ "og_title": "VFC et Longévité : Pourquoi la Variabilité de la Fréquence Cardiaque Est Votre Meilleur Indicateur de Sante",
+ "og_img": "https://synchro-vie.com/assets/img/hero/og-image-synchrovie.webp",
+ "canonical": "https://synchro-vie.com/blog/vfc-variabilite-frequence-cardiaque-biomarqueur-longevite.html",
+ "hreflang": [
+  [
+   "fr-FR",
+   "https://synchro-vie.com/blog/vfc-variabilite-frequence-cardiaque-biomarqueur-longevite.html"
+  ],
+  [
+   "fr-BE",
+   "https://synchro-vie.com/blog/vfc-variabilite-frequence-cardiaque-biomarqueur-longevite.html"
+  ],
+  [
+   "fr-CH",
+   "https://synchro-vie.com/blog/vfc-variabilite-frequence-cardiaque-biomarqueur-longevite.html"
+  ],
+  [
+   "fr-LU",
+   "https://synchro-vie.com/blog/vfc-variabilite-frequence-cardiaque-biomarqueur-longevite.html"
+  ],
+  [
+   "x-default",
+   "https://synchro-vie.com/blog/vfc-variabilite-frequence-cardiaque-biomarqueur-longevite.html"
+  ]
+ ],
+ "jsonld_types": [
+  "Article",
+  "FAQPage",
+  "HowTo",
+  "BreadcrumbList"
+ ],
+ "h1": [
+  "VFC et Longévité : pourquoi la variabilité cardiaque est le biomarqueur n°1"
+ ],
+ "h2": [
+  "1. Qu'est-ce que la VFC et pourquoi elle compte plus que le rythme cardiaque",
+  "2. La science derriere la VFC : ton système nerveux en chiffres",
+  "3. VFC basse : le signal d'alarme que la plupart ignorent",
+  "4. Comment mesurer sa VFC avec précision médicale",
+  "5. 7 facteurs qui detruisent votre VFC (et comment les corriger)",
+  "6. Technologies SynchroVie pour optimiser votre VFC",
+  "7. Tableau comparatif des solutions VFC",
+  "8. Protocole VFC : 30 jours pour transformer votre santé",
+  "9. Passer a l'action",
+  "10. Pour aller plus loin",
+  "Écrit par Diougamady Keita",
+  "Complètez votre suivi santé",
+  "Pourquoi choisir SynchroVie",
+  "Un email par semaine, zéro spam"
+ ],
+ "nb_h3": 22,
+ "liens_blog": 3,
+ "liens_produits": 14,
+ "liens_relatifs": [],
+ "img_sans_alt": 0,
+ "prices_jsonld": [],
+ "nb_mots": 3644,
+ "anomalies": [
+  "TRACE_GITHUB.IO"
+ ]
+}
