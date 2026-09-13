@@ -78,6 +78,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ---- Brevo Pop-up (exit-intent desktop + 60s mobile) ----
+    // Initialisation en requestIdleCallback pour ne pas bloquer le rendu
+    function initBrevoPopup() {
     const overlay = document.getElementById('brevoOverlay');
     if (!overlay) return;
 
@@ -176,5 +178,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.background = '';
             }, 3000);
         });
+    }
+    } // fin initBrevoPopup
+
+    // Lancer le popup en requestIdleCallback (non bloquant)
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(initBrevoPopup, { timeout: 3000 });
+    } else {
+        setTimeout(initBrevoPopup, 1000);
     }
 });

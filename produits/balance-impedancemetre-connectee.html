@@ -1125,11 +1125,15 @@ const match = t.getAttribute('onclick')?.match(/'([^']+)'/);
 if (match) allImages.push(match[1]);
 });
 let lbIndex = 0;
-document.getElementById('img-main')?.addEventListener('click', function() {
+if('requestIdleCallback' in window){requestIdleCallback(function(){document.getElementById('img-main')?.addEventListener('click', function() {
 lbIndex = allImages.indexOf(this.src);
 if (lbIndex === -1) lbIndex = 0;
 openLightbox(lbIndex);
-});
+});})}else{document.getElementById('img-main')?.addEventListener('click', function() {
+lbIndex = allImages.indexOf(this.src);
+if (lbIndex === -1) lbIndex = 0;
+openLightbox(lbIndex);
+});}
 function openLightbox(idx) {
 lbIndex = idx;
 document.getElementById('lightboxImg').src = allImages[idx];

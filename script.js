@@ -671,10 +671,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }, 4000);
 })();
 
-// Variation du nombre de viewers (Bloc 2)
+// Variation du nombre de viewers (Bloc 2) — mise à jour toutes les 30-60s
 document.querySelectorAll('.live-viewers .live-count-text, #live-count-text').forEach(el => {
   const base = 8 + Math.floor(Math.random() * 12);
   el.textContent = base + ' personnes consultent ce produit en ce moment';
+  // Mise à jour périodique avec variation ±2
+  setInterval(() => {
+    const variation = Math.floor(Math.random() * 5) - 2;
+    const newCount = Math.max(3, base + variation);
+    el.textContent = newCount + ' personnes consultent ce produit en ce moment';
+  }, 30000 + Math.floor(Math.random() * 30000)); // 30-60s
 });
 
 // Lead Magnet Form (Bloc 6) — toutes les pages
