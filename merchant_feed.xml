@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<title>SynchroVie - Produits</title>
+<link>https://synchro-vie.com/</link>
+<description>Boutique e-commerce francophone spécialisée en santé connectée et biohacking.</description>
+  <item>
+    <title>SynchroRing X1</title>
+    <link>https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html</link>
+    <g:id>G-SYNCHRO-X1</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>458.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Bio-Monitoring</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html</g:link>
+  </item>
+  <item>
+    <title>Aura-Ring Calm</title>
+    <link>https://synchro-vie.com/produits/bague-controle-cortisol.html</link>
+    <g:id>G-SYNCHRO-ARC</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>298.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Biofeedback</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/bague-controle-cortisol.html</g:link>
+  </item>
+  <item>
+    <title>Scale-Master Pro</title>
+    <link>https://synchro-vie.com/produits/balance-impedancemetre-connectee.html</link>
+    <g:id>G-SYNCHRO-SMP</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>168.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Bio-Monitoring</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/balance-impedancemetre-connectee-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/balance-impedancemetre-connectee.html</g:link>
+  </item>
+  <item>
+    <title>SleepTrack Zen</title>
+    <link>https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html</link>
+    <g:id>G-SYNCHRO-STZ</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>149.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Neuro-Sommeil</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/capteur-sommeil-sous-matelas-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html</g:link>
+  </item>
+  <item>
+    <title>Posture-Core</title>
+    <link>https://synchro-vie.com/produits/correcteur-posture-haptique.html</link>
+    <g:id>G-SYNCHRO-PC</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>68.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Performance</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/correcteur-posture-haptique-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/correcteur-posture-haptique.html</g:link>
+  </item>
+  <item>
+    <title>ThermoWrap FIR</title>
+    <link>https://synchro-vie.com/produits/couverture-sauna-infrarouge.html</link>
+    <g:id>G-SYNCHRO-TWF</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>420.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Performance</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/couverture-sauna-infrarouge-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/couverture-sauna-infrarouge.html</g:link>
+  </item>
+  <item>
+    <title>Grip-Master Pro</title>
+    <link>https://synchro-vie.com/produits/dynamometre-force-digital.html</link>
+    <g:id>G-SYNCHRO-GMP</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>88.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Performance</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/dynamometre-force-digital-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/dynamometre-force-digital.html</g:link>
+  </item>
+  <item>
+    <title>Knee-Tech Support</title>
+    <link>https://synchro-vie.com/produits/genouillere-thermique-compressive.html</link>
+    <g:id>G-SYNCHRO-KTS</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>98.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Performance</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/genouillere-thermique-compressive-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/genouillere-thermique-compressive.html</g:link>
+  </item>
+  <item>
+    <title>NeuroRest G2</title>
+    <link>https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html</link>
+    <g:id>G-SYNCHRO-NR2</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>369.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Neuro-Sommeil</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/masque-sommeil-ondes-delta-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html</g:link>
+  </item>
+  <item>
+    <title>Vitals-Scan Pro</title>
+    <link>https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html</link>
+    <g:id>G-SYNCHRO-VSP</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>169.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Bio-Monitoring</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/moniteur-ecg-portable-oxygene-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html</g:link>
+  </item>
+  <item>
+    <title>LumiRed Pro X1</title>
+    <link>https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html</link>
+    <g:id>G-SYNCHRO-LPX</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>549.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Performance</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/panneau-therapie-lumiere-rouge-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html</g:link>
+  </item>
+  <item>
+    <title>Gravity-Tech Pad</title>
+    <link>https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html</link>
+    <g:id>G-SYNCHRO-GTP</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>269.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Biofeedback</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/patch-nuque-auto-chauffant-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html</g:link>
+  </item>
+  <item>
+    <title>Flex-Gun Mini</title>
+    <link>https://synchro-vie.com/produits/pistolet-massage-compact.html</link>
+    <g:id>G-SYNCHRO-FGM</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>158.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Performance</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/pistolet-massage-compact-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/pistolet-massage-compact.html</g:link>
+  </item>
+  <item>
+    <title>Aura-Light Clock</title>
+    <link>https://synchro-vie.com/produits/simulateur-aube-crepuscule.html</link>
+    <g:id>G-SYNCHRO-ALC</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>78.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Neuro-Sommeil</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/simulateur-aube-crepuscule-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/simulateur-aube-crepuscule.html</g:link>
+  </item>
+  <item>
+    <title>ElectroBoost S3</title>
+    <link>https://synchro-vie.com/produits/stimulateur-musculaire-ems.html</link>
+    <g:id>G-SYNCHRO-EBS</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>178.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Performance</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/stimulateur-musculaire-ems-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/stimulateur-musculaire-ems.html</g:link>
+  </item>
+  <item>
+    <title>B-Pressure Connect</title>
+    <link>https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html</link>
+    <g:id>G-SYNCHRO-BPC</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>120.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Bio-Monitoring</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/tensiometre-intelligent-connecte-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html</g:link>
+  </item>
+  <item>
+    <title>Thermo-Sense Ultra</title>
+    <link>https://synchro-vie.com/produits/thermometre-infrarouge-medical.html</link>
+    <g:id>G-SYNCHRO-TSU</g:id>
+    <g:availability>in_stock</g:availability>
+    <g:price>45.00 EUR</g:price>
+    <g:brand>SynchroVie</g:brand>
+    <g:condition>new</g:condition>
+    <g:product_type>Bio-Monitoring</g:product_type>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/thermometre-infrarouge-medical-1.webp</g:image_link>
+    <g:link>https://synchro-vie.com/produits/thermometre-infrarouge-medical.html</g:link>
+  </item>
+</channel>
+</rss>
