@@ -287,6 +287,8 @@ content="https://synchro-vie.com/produits/correcteur-posture-haptique.html">
 }
 </script>
 <meta name="theme-color" content="#0B1B3D">
+<link rel="preconnect" href="https://www.paypal.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
@@ -593,10 +595,10 @@ ttq.page();
 <!-- TikTok Pixel Code End -->
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0B2545">
-<script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&components=hosted-buttons&disable-funding=venmo&currency=EUR" defer></script>
 <link rel="icon" type="image/webp" href="/assets/img/logo-synchrovie.webp">
 <link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
 </head>
@@ -705,9 +707,9 @@ href="mailto:contact@synchro-vie.com">Email Expert</a></div>
 <!-- Gallery -->
 <div class="gallery" aria-label="Galerie photos Posture-Core">
 <div class="gallery-main">
-<img id="img-main"
+<img fetchpriority="high" id="img-main"
 src="../assets/img/produits/correcteur-posture-haptique-1.webp"
-alt="Posture-Core — correcteur posture haptique" loading="lazy">
+alt="Posture-Core — correcteur posture haptique" loading="eager">
 </div>
 <div class="gallery-thumbs">
 <img src="../assets/img/produits/correcteur-posture-haptique-1.webp"

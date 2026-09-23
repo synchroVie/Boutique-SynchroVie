@@ -524,7 +524,7 @@ text-align: center; gap: 10px; } .upsell-grid { grid-template-columns: repeat(2,
 
 </style>
 
-<script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&components=hosted-buttons&disable-funding=venmo&currency=EUR"></script>
+<script src="https://www.paypal.com/sdk/js?client-id=BAA_pXEvL6MT9InsFwEO-e9YSJYdM28ydD2CRwos5pTsDj4tutPDJXo8ikpV2KiXXeiTQVGvQKRsGIqKx8&components=hosted-buttons&disable-funding=venmo&currency=EUR" defer></script>
 <!-- TikTok Pixel Code Start -->
 <script>
 !function (w, d, t) {
@@ -547,7 +547,7 @@ ttq.page();
 <!-- TikTok Pixel Code End -->
 
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 <link rel="manifest" href="/manifest.json">
 <meta name="theme-color" content="#0B2545">
 <link rel="icon" type="image/webp" href="/assets/img/logo-synchrovie.webp">
@@ -651,9 +651,9 @@ href="../index.html#cat-bio">Bio-Monitoring</a><span>/</span>SynchroRing X1
 <!-- Gallery -->
 <div class="gallery">
 <div class="gallery-main">
-<img id="img-main"
+<img fetchpriority="high" id="img-main"
 src="../assets/img/produits/bague-connectee-sante-biometrique-1.webp"
-alt="SynchroRing X1 — Bague connectée santé biométrique" loading="lazy">
+alt="SynchroRing X1 — Bague connectée santé biométrique" loading="eager">
 </div>
 <div class="gallery-thumbs">
 <img src="../assets/img/produits/bague-connectee-sante-biometrique-1.webp"
