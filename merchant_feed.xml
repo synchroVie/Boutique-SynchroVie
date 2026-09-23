@@ -3,210 +3,279 @@
 <channel>
 <title>SynchroVie - Produits</title>
 <link>https://synchro-vie.com/</link>
-<description>Boutique e-commerce francophone spécialisée en santé connectée et biohacking.</description>
+<description>Boutique e-commerce francophone spécialisée en santé connectée et biohacking. 17 produits sans abonnement.</description>
+<atom:link href="https://synchro-vie.com/merchant_feed.xml" rel="self" type="application/rss+xml"/>
   <item>
     <title>SynchroRing X1</title>
     <link>https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html</link>
+    <description>Suivez VFC, sommeil, SpO2 et cycle menstruel avec la SynchroRing X1. Étanche IPX8, SOS intégré, sans abonnement. Livraison en Europe. Commandez →</description>
     <g:id>G-SYNCHRO-X1</g:id>
+    <g:title>SynchroRing X1</g:title>
+    <g:description>Suivez VFC, sommeil, SpO2 et cycle menstruel avec la SynchroRing X1. Étanche IPX8, SOS intégré, sans abonnement. Livraison en Europe. Commandez →</g:description>
+    <g:link>https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>458.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Bio-Monitoring</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/bague-connectee-sante-biometrique-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/bague-connectee-sante-biometrique.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>Aura-Ring Calm</title>
     <link>https://synchro-vie.com/produits/bague-controle-cortisol.html</link>
+    <description>Aura-Ring Calm : bague cortisol + stress en temps réel. Détection du stress, score de sérénité, exercices de respiration guidés. VFC continue. 298 EUR.</description>
     <g:id>G-SYNCHRO-ARC</g:id>
+    <g:title>Aura-Ring Calm</g:title>
+    <g:description>Aura-Ring Calm : bague cortisol + stress en temps réel. Détection du stress, score de sérénité, exercices de respiration guidés. VFC continue. 298 EUR.</g:description>
+    <g:link>https://synchro-vie.com/produits/bague-controle-cortisol.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>298.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Biofeedback</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/bague-controle-cortisol-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/bague-controle-cortisol.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>Scale-Master Pro</title>
     <link>https://synchro-vie.com/produits/balance-impedancemetre-connectee.html</link>
+    <description>Scale-Master Pro : balance impédancemètre connectée avec 13 indicateurs corps, 8 utilisateurs, électrodes ITO haute précision. Livraison offerte.</description>
     <g:id>G-SYNCHRO-SMP</g:id>
+    <g:title>Scale-Master Pro</g:title>
+    <g:description>Scale-Master Pro : balance impédancemètre connectée avec 13 indicateurs corps, 8 utilisateurs, électrodes ITO haute précision. Livraison offerte.</g:description>
+    <g:link>https://synchro-vie.com/produits/balance-impedancemetre-connectee.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/balance-impedancemetre-connectee-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>168.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Bio-Monitoring</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/balance-impedancemetre-connectee-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/balance-impedancemetre-connectee.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>SleepTrack Zen</title>
     <link>https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html</link>
+    <description>Pas de bracelet, pas de bague — le SleepTrack Zen capte vos cycles de sommeil, ronflements et FC nocturne sans rien porter. Compatible tous matelas. 149 EUR.</description>
     <g:id>G-SYNCHRO-STZ</g:id>
+    <g:title>SleepTrack Zen</g:title>
+    <g:description>Pas de bracelet, pas de bague — le SleepTrack Zen capte vos cycles de sommeil, ronflements et FC nocturne sans rien porter. Compatible tous matelas. 149 EUR.</g:description>
+    <g:link>https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/capteur-sommeil-sous-matelas-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>149.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Neuro-Sommeil</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/capteur-sommeil-sous-matelas-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/capteur-sommeil-sous-matelas.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>Posture-Core</title>
     <link>https://synchro-vie.com/produits/correcteur-posture-haptique.html</link>
+    <description>Posture-Core : correcteur posture haptique avec capteur d'inclinaison, vibrations discrètes et app de suivi. 68 EUR. Livraison offerte.</description>
     <g:id>G-SYNCHRO-PC</g:id>
+    <g:title>Posture-Core</g:title>
+    <g:description>Posture-Core : correcteur posture haptique avec capteur d'inclinaison, vibrations discrètes et app de suivi. 68 EUR. Livraison offerte.</g:description>
+    <g:link>https://synchro-vie.com/produits/correcteur-posture-haptique.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/correcteur-posture-haptique-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>68.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Performance</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/correcteur-posture-haptique-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/correcteur-posture-haptique.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>ThermoWrap FIR</title>
     <link>https://synchro-vie.com/produits/couverture-sauna-infrarouge.html</link>
+    <description>Le sauna, mais chez vous. Couverture infrarouge lointain 3 zones, FIR 4-16μm, 9 niveaux, télécommande. 420 EUR. Livraison offerte.</description>
     <g:id>G-SYNCHRO-TWF</g:id>
+    <g:title>ThermoWrap FIR</g:title>
+    <g:description>Le sauna, mais chez vous. Couverture infrarouge lointain 3 zones, FIR 4-16μm, 9 niveaux, télécommande. 420 EUR. Livraison offerte.</g:description>
+    <g:link>https://synchro-vie.com/produits/couverture-sauna-infrarouge.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/couverture-sauna-infrarouge-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>420.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Performance</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/couverture-sauna-infrarouge-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/couverture-sauna-infrarouge.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>Grip-Master Pro</title>
     <link>https://synchro-vie.com/produits/dynamometre-force-digital.html</link>
+    <description>Grip-Master Pro : dynamomètre force digital 180kg, mesure précise 0.2kg, mémoire intégrée, écran LED, progression suivie. 88 EUR. Livraison offerte.</description>
     <g:id>G-SYNCHRO-GMP</g:id>
+    <g:title>Grip-Master Pro</g:title>
+    <g:description>Grip-Master Pro : dynamomètre force digital 180kg, mesure précise 0.2kg, mémoire intégrée, écran LED, progression suivie. 88 EUR. Livraison offerte.</g:description>
+    <g:link>https://synchro-vie.com/produits/dynamometre-force-digital.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/dynamometre-force-digital-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>88.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Performance</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/dynamometre-force-digital-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/dynamometre-force-digital.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>Knee-Tech Support</title>
     <link>https://synchro-vie.com/produits/genouillere-thermique-compressive.html</link>
+    <description>Knee-Tech Support : genouillère thermique compressive, 3 niveaux de chaleur, compression réglable, batteries USB-C incluses. 98 EUR. Livraison offerte.</description>
     <g:id>G-SYNCHRO-KTS</g:id>
+    <g:title>Knee-Tech Support</g:title>
+    <g:description>Knee-Tech Support : genouillère thermique compressive, 3 niveaux de chaleur, compression réglable, batteries USB-C incluses. 98 EUR. Livraison offerte.</g:description>
+    <g:link>https://synchro-vie.com/produits/genouillere-thermique-compressive.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/genouillere-thermique-compressive-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>98.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Performance</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/genouillere-thermique-compressive-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/genouillere-thermique-compressive.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>NeuroRest G2</title>
     <link>https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html</link>
-    <g:id>G-SYNCHRO-NR2</g:id>
+    <description>Vous vous réveillez fatigué malgré 7h de sommeil ? Le NeuroRest G2 augmente votre sommeil profond de +23% en 14 nuits. Ondes Delta, ANC, mousse mémoire. 369 EUR.</description>
+    <g:id>G-SYNCHRO-NRG</g:id>
+    <g:title>NeuroRest G2</g:title>
+    <g:description>Vous vous réveillez fatigué malgré 7h de sommeil ? Le NeuroRest G2 augmente votre sommeil profond de +23% en 14 nuits. Ondes Delta, ANC, mousse mémoire. 369 EUR.</g:description>
+    <g:link>https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/masque-sommeil-ondes-delta-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>369.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Neuro-Sommeil</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/masque-sommeil-ondes-delta-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/masque-sommeil-ondes-delta.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>Vitals-Scan Pro</title>
     <link>https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html</link>
+    <description>Vitals-Scan Pro : moniteur ECG portable avec oxymètre intégré. ECG 12 dérivations en 30s, détection fibrillation auriculaire, SpO2. Livraison offerte.</description>
     <g:id>G-SYNCHRO-VSP</g:id>
+    <g:title>Vitals-Scan Pro</g:title>
+    <g:description>Vitals-Scan Pro : moniteur ECG portable avec oxymètre intégré. ECG 12 dérivations en 30s, détection fibrillation auriculaire, SpO2. Livraison offerte.</g:description>
+    <g:link>https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/moniteur-ecg-portable-oxygene-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>169.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Bio-Monitoring</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/moniteur-ecg-portable-oxygene-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/moniteur-ecg-portable-oxygene.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>LumiRed Pro X1</title>
     <link>https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html</link>
-    <g:id>G-SYNCHRO-LPX</g:id>
+    <description>LumiRed Pro X1 : panneau thérapie lumière rouge full body, 2400W, 480 LEDs, 5 longueurs d'onde, CE/FCC. 549 EUR. Livraison offerte.</description>
+    <g:id>G-SYNCHRO-LRX</g:id>
+    <g:title>LumiRed Pro X1</g:title>
+    <g:description>LumiRed Pro X1 : panneau thérapie lumière rouge full body, 2400W, 480 LEDs, 5 longueurs d'onde, CE/FCC. 549 EUR. Livraison offerte.</g:description>
+    <g:link>https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/panneau-therapie-lumiere-rouge-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>549.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Performance</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/panneau-therapie-lumiere-rouge-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/panneau-therapie-lumiere-rouge.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>Gravity-Tech Pad</title>
     <link>https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html</link>
+    <description>Cette tension dans la nuque, enfin quelque chose pour la faire lâcher. 3 niveaux de chaleur, massage vibration 5 modes, USB-C. 269 EUR.</description>
     <g:id>G-SYNCHRO-GTP</g:id>
+    <g:title>Gravity-Tech Pad</g:title>
+    <g:description>Cette tension dans la nuque, enfin quelque chose pour la faire lâcher. 3 niveaux de chaleur, massage vibration 5 modes, USB-C. 269 EUR.</g:description>
+    <g:link>https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/patch-nuque-auto-chauffant-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>269.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Biofeedback</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/patch-nuque-auto-chauffant-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/patch-nuque-auto-chauffant.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>Flex-Gun Mini</title>
     <link>https://synchro-vie.com/produits/pistolet-massage-compact.html</link>
+    <description>Flex-Gun Mini : pistolet massage compact 450g, 4 embouts, 6h autonomie, 3 vitesses, ultra-silencieux. 158 EUR. Livraison offerte.</description>
     <g:id>G-SYNCHRO-FGM</g:id>
+    <g:title>Flex-Gun Mini</g:title>
+    <g:description>Flex-Gun Mini : pistolet massage compact 450g, 4 embouts, 6h autonomie, 3 vitesses, ultra-silencieux. 158 EUR. Livraison offerte.</g:description>
+    <g:link>https://synchro-vie.com/produits/pistolet-massage-compact.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/pistolet-massage-compact-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>158.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Performance</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/pistolet-massage-compact-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/pistolet-massage-compact.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>Aura-Light Clock</title>
     <link>https://synchro-vie.com/produits/simulateur-aube-crepuscule.html</link>
+    <description>Se réveiller en sursaut, c'est fini. L'Aura-Light Clock simule l'aube pendant 30 min pour un réveil naturel. 7 sons, radio FM, 7 alarmes. 78 EUR.</description>
     <g:id>G-SYNCHRO-ALC</g:id>
+    <g:title>Aura-Light Clock</g:title>
+    <g:description>Se réveiller en sursaut, c'est fini. L'Aura-Light Clock simule l'aube pendant 30 min pour un réveil naturel. 7 sons, radio FM, 7 alarmes. 78 EUR.</g:description>
+    <g:link>https://synchro-vie.com/produits/simulateur-aube-crepuscule.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/simulateur-aube-crepuscule-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>78.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Neuro-Sommeil</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/simulateur-aube-crepuscule-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/simulateur-aube-crepuscule.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>ElectroBoost S3</title>
     <link>https://synchro-vie.com/produits/stimulateur-musculaire-ems.html</link>
+    <description>ElectroBoost S3 : stimulateur musculaire EMS, 6 modes, 15 intensités, 12 électrodes. Récupération et renforcement à domicile. 178 EUR. Livraison offerte.</description>
     <g:id>G-SYNCHRO-EBS</g:id>
+    <g:title>ElectroBoost S3</g:title>
+    <g:description>ElectroBoost S3 : stimulateur musculaire EMS, 6 modes, 15 intensités, 12 électrodes. Récupération et renforcement à domicile. 178 EUR. Livraison offerte.</g:description>
+    <g:link>https://synchro-vie.com/produits/stimulateur-musculaire-ems.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/stimulateur-musculaire-ems-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>178.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Performance</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/stimulateur-musculaire-ems-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/stimulateur-musculaire-ems.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>B-Pressure Connect</title>
     <link>https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html</link>
+    <description>B-Pressure Connect : tensiomètre connecté avec enregistrement automatique 3x/jour, historique partagable, alarmes personnalisées. Certifié médical CE/FDA. 120 EUR.</description>
     <g:id>G-SYNCHRO-BPC</g:id>
+    <g:title>B-Pressure Connect</g:title>
+    <g:description>B-Pressure Connect : tensiomètre connecté avec enregistrement automatique 3x/jour, historique partagable, alarmes personnalisées. Certifié médical CE/FDA. 120 EUR.</g:description>
+    <g:link>https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/tensiometre-intelligent-connecte-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>120.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Bio-Monitoring</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/tensiometre-intelligent-connecte-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/tensiometre-intelligent-connecte.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
   <item>
     <title>Thermo-Sense Ultra</title>
     <link>https://synchro-vie.com/produits/thermometre-infrarouge-medical.html</link>
+    <description>Thermo-Sense Ultra : thermomètre infrarouge médical avec lecture frontale en 1 seconde, sans contact, silencieux. Certification CE médical. Livraison offerte.</description>
     <g:id>G-SYNCHRO-TSU</g:id>
+    <g:title>Thermo-Sense Ultra</g:title>
+    <g:description>Thermo-Sense Ultra : thermomètre infrarouge médical avec lecture frontale en 1 seconde, sans contact, silencieux. Certification CE médical. Livraison offerte.</g:description>
+    <g:link>https://synchro-vie.com/produits/thermometre-infrarouge-medical.html</g:link>
+    <g:image_link>https://synchro-vie.com/assets/img/produits/thermometre-infrarouge-medical-1.webp</g:image_link>
     <g:availability>in_stock</g:availability>
     <g:price>45.00 EUR</g:price>
     <g:brand>SynchroVie</g:brand>
     <g:condition>new</g:condition>
     <g:product_type>Bio-Monitoring</g:product_type>
-    <g:image_link>https://synchro-vie.com/assets/img/produits/thermometre-infrarouge-medical-1.webp</g:image_link>
-    <g:link>https://synchro-vie.com/produits/thermometre-infrarouge-medical.html</g:link>
+    <g:identifier_exists>no</g:identifier_exists>
   </item>
 </channel>
 </rss>
