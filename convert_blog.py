@@ -879,7 +879,7 @@ def build_header():
     return '''<!-- ============ HEADER ============ -->
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
-    <a href="https://synchrovie.github.io/Boutique-SynchroVie/" class="logo-link" aria-label="Accueil Synchrovie">
+    <a href="https://synchro-vie.com/" class="logo-link" aria-label="Accueil Synchrovie">
       <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
         <circle cx="16" cy="16" r="14" stroke="url(#logoGrad)" stroke-width="2.5"/>
         <path d="M10 16 L14 20 L22 12" stroke="url(#logoGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -888,9 +888,9 @@ def build_header():
       <span class="logo-text">SYNCHROVIE</span>
     </a>
     <nav class="nav-links" aria-label="Navigation principale">
-      <a href="https://synchrovie.github.io/Boutique-SynchroVie/">Accueil</a>
-      <a href="https://synchrovie.github.io/Boutique-SynchroVie/#produits">Produits</a>
-      <a href="https://synchrovie.github.io/Boutique-SynchroVie/blog/">Blog</a>
+      <a href="https://synchro-vie.com/">Accueil</a>
+      <a href="https://synchro-vie.com/#produits">Produits</a>
+      <a href="https://synchro-vie.com/blog/">Blog</a>
       <a href="https://wa.me/22360625155?text=Bonjour%20Synchrovie%2C%20conseil%20bague%20biom%C3%A9trique" target="_blank" rel="noopener">Contact</a>
     </nav>
   </div>
@@ -902,12 +902,12 @@ def build_breadcrumb(current_text):
     return f'''<nav class="breadcrumb-wrap" aria-label="Fil d'Ariane">
   <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="https://synchrovie.github.io/Boutique-SynchroVie/"><span itemprop="name">Accueil</span></a>
+      <a itemprop="item" href="https://synchro-vie.com/"><span itemprop="name">Accueil</span></a>
       <meta itemprop="position" content="1"/>
     </li>
     <span class="sep" aria-hidden="true">›</span>
     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-      <a itemprop="item" href="https://synchrovie.github.io/Boutique-SynchroVie/blog/"><span itemprop="name">Blog</span></a>
+      <a itemprop="item" href="https://synchro-vie.com/blog/"><span itemprop="name">Blog</span></a>
       <meta itemprop="position" content="2"/>
     </li>
     <span class="sep" aria-hidden="true">›</span>
@@ -977,11 +977,11 @@ def build_footer():
   <div class="footer-inner">
     <div class="footer-logo">SYNCHROVIE</div>
     <div class="footer-links">
-      <a href="https://synchrovie.github.io/Boutique-SynchroVie/">Accueil</a>
-      <a href="https://synchrovie.github.io/Boutique-SynchroVie/#produits">Produits</a>
-      <a href="https://synchrovie.github.io/Boutique-SynchroVie/blog/">Blog</a>
-      <a href="https://synchrovie.github.io/Boutique-SynchroVie/faq.html">FAQ</a>
-      <a href="https://synchrovie.github.io/Boutique-SynchroVie/contact.html">Contact</a>
+      <a href="https://synchro-vie.com/">Accueil</a>
+      <a href="https://synchro-vie.com/#produits">Produits</a>
+      <a href="https://synchro-vie.com/blog/">Blog</a>
+      <a href="https://synchro-vie.com/faq.html">FAQ</a>
+      <a href="https://synchro-vie.com/contact.html">Contact</a>
     </div>
     <p class="footer-copy">&copy; 2026 Synchrovie. Tous droits reserves.</p>
   </div>
