@@ -2295,3 +2295,22 @@ body {
 
 /* Fin Leviers de Conversion */
 
+
+/* Product mobile overflow guard (pages with inline gallery CSS) */
+html, body { overflow-x: hidden; }
+img { max-width: 100%; }
+.gallery, .gallery-main, .gallery-main img, .product-wrapper, .product-info {
+  max-width: 100%;
+}
+@media (max-width: 900px) {
+  .product-wrapper {
+    grid-template-columns: 1fr !important;
+    padding: 24px 16px !important;
+    gap: 24px !important;
+  }
+  .gallery { position: static !important; }
+  .gallery-main { aspect-ratio: 1; overflow: hidden; }
+  .gallery-main img { width: 100% !important; height: 100%; object-fit: cover; }
+  .nav-links { display: none !important; }
+  .menu-toggle { display: flex !important; }
+}
