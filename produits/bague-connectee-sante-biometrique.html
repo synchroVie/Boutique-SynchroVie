@@ -319,7 +319,27 @@ ttq.page();
 <link rel="apple-touch-icon" href="/assets/img/logo-synchrovie.webp">
 </head>
 <body>
-<style>.breadcrumb-nav{max-width:1200px;margin:0 auto;padding:12px 24px;font-size:0.82rem;color:#5a7a9e;font-family:'Inter',sans-serif;}.breadcrumb-list{display:flex;flex-wrap:wrap;align-items:center;gap:6px;list-sty le:none;margin:0;padding:0;}.breadcrumb-list li{display:flex;align-items:center;gap:6px;}.breadcrumb-list a{color:#3B82F6;text-decoration:none;transition:color 0.2s;}.breadcrumb-list a:hover{color:#60A5FA;text-decoration:underline;}.breadcrumb-sep{color:#4a5568;font-size:0.75rem;}.breadcrumb-current{color:#E0E7FF;font-weight:500;}@media(max-width:768px){.breadcrumb-nav{padding:10px 16px;font-size:0.78rem;}}</style>
+<style>.breadcrumb-nav{max-width:1200px;margin:0 auto;padding:12px 24px;font-size:0.82rem;color:#5a7a9e;font-family:'Inter',sans-serif;}.breadcrumb-list{display:flex;flex-wrap:wrap;align-items:center;gap:6px;list-sty le:none;margin:0;padding:0;}.breadcrumb-list li{display:flex;align-items:center;gap:6px;}.breadcrumb-list a{color:#3B82F6;text-decoration:none;transition:color 0.2s;}.breadcrumb-list a:hover{color:#60A5FA;text-decoration:underline;}.breadcrumb-sep{color:#4a5568;font-size:0.75rem;}.breadcrumb-current{color:#E0E7FF;font-weight:500;}@media(max-width:768px){.breadcrumb-nav{padding:10px 16px;font-size:0.78rem;}}
+.proof-row{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:0 0 18px}
+.proof-avatars{display:flex;align-items:center}
+.proof-avatars img{width:36px;height:36px;border-radius:50%;object-fit:cover;border:2px solid #0B1B3D;margin-left:-10px;background:#071126}
+.proof-avatars img:first-child{margin-left:0}
+.proof-meta{display:flex;flex-direction:column;gap:2px}
+.proof-meta .stars{color:#FFB800;letter-spacing:1px;font-size:0.95rem;line-height:1}
+.proof-meta .proof-text{font-size:0.85rem;color:var(--text-soft)}
+.proof-meta .proof-text strong{color:var(--white)}
+.trust-mini{display:flex;flex-wrap:wrap;gap:10px 16px;margin:0 0 20px;padding:0;list-style:none}
+.trust-mini li{font-size:0.78rem;color:var(--text-soft);display:flex;align-items:center;gap:6px}
+.trust-mini li svg{flex-shrink:0;color:var(--green-ok)}
+.review-card{background:var(--indigo);border:1px solid var(--border);border-radius:var(--radius);padding:22px;margin-bottom:16px}
+.review-card-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.review-photo{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid rgba(59,130,246,0.35);flex-shrink:0}
+.review-who{display:flex;flex-direction:column;gap:2px}
+.review-who strong{color:var(--white);font-size:0.92rem}
+.review-who span{color:var(--text-soft);font-size:0.78rem}
+.review-grid-sv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:900px){.review-grid-sv{grid-template-columns:1fr}}
+</style>
 <nav class="breadcrumb-nav" aria-label="Fil d'Ariane">
 <ol class="breadcrumb-list">
 <li><a href="https://synchro-vie.com/">Accueil</a><span
@@ -440,10 +460,23 @@ moment</span>
 </div>
 <p class="h1-sub">VFC · Sommeil · SpO2 · Cycle menstruel · SOS · 24 jours
 d'autonomie · Sans abonnement</p>
-<div class="rating-row">
-<span class="stars"></span>
-<span class="rating-text"><strong>4.8</strong>/5 — +2 000 clients</span>
+<div class="proof-row">
+<div class="proof-avatars">
+<img src="../assets/img/avis/hugo-delmas.webp" alt="" width="36" height="36">
+<img src="../assets/img/avis/camille-fournier.webp" alt="" width="36" height="36">
+<img src="../assets/img/avis/client-lea.webp" alt="" width="36" height="36">
+<img src="../assets/img/avis/raphael-ndiaye.webp" alt="" width="36" height="36">
 </div>
+<div class="proof-meta">
+<span class="stars">★★★★★</span>
+<span class="proof-text"><strong>4.8/5</strong> · +2 000 clients</span>
+</div>
+</div>
+<ul class="trust-mini">
+<li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Livraison Europe 7-10j</li>
+<li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 14l-4-4 4-4"/><path d="M5 10h11a4 4 0 010 8h-1"/></svg> Retours 30 jours</li>
+<li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg> Paiement carte / PayPal</li>
+</ul>
 <div class="result-banner">
 <div class="result-number">5-7j</div>
 <div class="result-text">
@@ -840,43 +873,40 @@ la bague est à portée du téléphone.</div>
 <span class="count">moyenne générale — +2 000 clients</span>
 </div>
 
+<div class="review-grid-sv">
 <div class="review-card">
-<div class="review-header">
+<div class="review-card-top">
+<img class="review-photo" src="../assets/img/avis/hugo-delmas.webp" alt="Hugo Delmas" width="52" height="52">
+<div class="review-who">
+<strong>Hugo Delmas</strong>
+<span>France · novembre 2025 · Achat vérifié</span>
 <span class="review-stars-sm">★★★★★</span>
-<span class="review-verified">Achat vérifié</span>
 </div>
-<p class="review-text">"Après un épisode de fatigue chronique cet automne, mon
-médecin m'a recommandé un suivi continu. En six semaines avec cette bague, j'ai
-découvert que mon sommeil profond ne dépassait pas 40 minutes par nuit.
-Aujourd'hui, après ajustements, je suis à 1h20. Les données sont claires,
-l'appli est fluide."</p>
-<div class="review-author"><strong>Hugo Delmas</strong> — France, novembre
-2025</div>
+</div>
+<p class="review-text">"Après un épisode de fatigue chronique cet automne, mon médecin m'a recommandé un suivi continu. En six semaines avec cette bague, j'ai découvert que mon sommeil profond ne dépassait pas 40 minutes par nuit. Aujourd'hui, après ajustements, je suis à 1h20. Les données sont claires, l'appli est fluide."</p>
 </div>
 <div class="review-card">
-<div class="review-header">
+<div class="review-card-top">
+<img class="review-photo" src="../assets/img/avis/camille-fournier.webp" alt="Camille Fournier" width="52" height="52">
+<div class="review-who">
+<strong>Camille Fournier</strong>
+<span>France · janvier 2026 · Achat vérifié</span>
 <span class="review-stars-sm">★★★★★</span>
-<span class="review-verified">Achat vérifié</span>
 </div>
-<p class="review-text">"Cardiologue, je cherchais un outil fiable pour le suivi
-nocturne de mes patients à distance. La précision des tracés de fréquence
-cardiaque est surprenante pour un dispositif de cette taille. Trois de mes
-patients l'utilisent maintenant en complément de leur suivi classique."</p>
-<div class="review-author"><strong>Camille Fournier</strong> — France, janvier
-2026</div>
+</div>
+<p class="review-text">"Cardiologue, je cherchais un outil fiable pour le suivi nocturne de mes patients à distance. La précision des tracés de fréquence cardiaque est surprenante pour un dispositif de cette taille. Trois de mes patients l'utilisent maintenant en complément de leur suivi classique."</p>
 </div>
 <div class="review-card">
-<div class="review-header">
+<div class="review-card-top">
+<img class="review-photo" src="../assets/img/avis/raphael-ndiaye.webp" alt="Raphaël Ndiaye" width="52" height="52">
+<div class="review-who">
+<strong>Raphaël Ndiaye</strong>
+<span>France · avril 2026 · Achat vérifié</span>
 <span class="review-stars-sm">★★★★☆</span>
-<span class="review-verified">Achat vérifié</span>
 </div>
-<p class="review-text">"Très satisfait du suivi SpO2 et de la température
-cutanée. L'application est bien pensée et les notifications sont pertinentes.
-Seul point à améliorer : le choix de taille demande de bien mesurer son doigt au
-
-préalable."</p>
-<div class="review-author"><strong>Raphaël Ndiaye</strong> — France, avril
-2026</div>
+</div>
+<p class="review-text">"Très satisfait du suivi SpO2 et de la température cutanée. L'application est bien pensée et les notifications sont pertinentes. Seul point à améliorer : le choix de taille demande de bien mesurer son doigt au préalable."</p>
+</div>
 </div>
 </div>
 </div>
